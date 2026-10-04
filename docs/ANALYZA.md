@@ -138,7 +138,7 @@ Bossové a minibossové se počítají stejně. Pasivní zvířata a ryby se po�
 | ID | Kdo | Co | Výstup |
 |---|---|---|---|
 | VC-1 | GL (zai / GLM) | stažení a parsování wiki: biomy, jednotky, obrázky | `scripts/wiki/*.mjs`, `data/raw/`, `data/biomes.json`, `data/creatures.json`, `img/creatures/`, `img/biomes/`, `data/report.md` |
-| VC-2 | GL (zai / GLM) | zbraně, materiály, výpočet doporučení, balík dat | `data/weapons.json`, `data/materials.json`, `data/recommendations.json`, `data/data.js`, `img/weapons/` |
+| VC-2 | GM (agy / Flash), původně GL — došla kvóta Z.ai | zbraně, materiály, výpočet doporučení, balík dat | `data/weapons.json`, `data/materials.json`, `data/recommendations.json`, `data/data.js`, `img/weapons/` |
 | VC-3 | GM (agy / Flash) | web nad hotovými daty | `index.html`, `assets/app.js`, `assets/styles.css` |
 | — | orchestrátor (Opus) | zadání, přejímka, `data/overrides.json`, test v prohlížeči, merge, push | |
 

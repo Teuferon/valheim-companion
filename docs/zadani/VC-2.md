@@ -39,7 +39,7 @@ KROK 1: zbraně a materiály (`scripts/wiki/fetch-weapons.mjs`), commit
 - Tier zbraně = max tier materiálů z `materials 1`. Má-li některý materiál `tier: null`, zbraň má `tier: null` a jde do reportu.
 - Ikony zbraní: šířka 96 → `img/weapons/<id>.png`.
 - Zkouška: `node scripts/wiki/fetch-weapons.mjs 2>&1 | tail -30`. Druhý běh bez sítě a bez změn.
-- Commit: `git add scripts/wiki/fetch-weapons.mjs package.json` → `VC-2: weapon and material fetcher [GL]`, pak `git add data/weapons.json data/materials.json data/report-weapons.md data/raw img/weapons` → `VC-2: weapon data [GL]`
+- Commit: `git add scripts/wiki/fetch-weapons.mjs package.json` → `VC-2: weapon and material fetcher [GM/flash]`, pak `git add data/weapons.json data/materials.json data/report-weapons.md data/raw img/weapons` → `VC-2: weapon data [GM/flash]`
 
 KROK 2: doporučení (`scripts/recommend.mjs`) a testy, commit
 - Čisté funkce:
@@ -61,20 +61,20 @@ KROK 2: doporučení (`scripts/recommend.mjs`) a testy, commit
   - Jinak `"No elemental weakness — best raw option: <nejlepší melee> (<score>)."`
   - Je-li jednotka imunní na nějaký typ, přidej `" Immune to <Typ>."`
 - `main`: pro každý biom a každou jednotku v `biome.creatures.*` spočítej doporučení a zapiš `data/recommendations.json`.
-- Testy (`node --test scripts/`): aspoň 10 asercí na syntetických datech, např.:
+- Testy (`node --test 'scripts/**/*.test.mjs'`): aspoň 10 asercí na syntetických datech, např.:
   - zbraň s fire 10 proti veryweak fire → 20
   - spirit bez uvedení → 0
   - tier filtr nedoporučí zbraň vyššího tieru
   - melee top 3 mají různé kategorie
-- Commit: `VC-2: deterministic weapon recommendations [GL]`
+- Commit: `VC-2: deterministic weapon recommendations [GM/flash]`
 
 KROK 3: balík (`scripts/build-data.mjs`), commit
 - Složí `data/data.js` podle DATA-SCHEMA: `creatures` a `weapons` jako objekty podle `id`, `generatedAt` = čas posledního běhu stahování (vezmi ho z `data/report.md`, nebo z času změny `data/creatures.json`).
 - Ověř, že každé `weapon` id v doporučeních existuje ve `weapons` a každá jednotka v biomech existuje v `creatures`. Chyba = exit 1.
-- Commit: `VC-2: data bundle for the site [GL]`
+- Commit: `VC-2: data bundle for the site [GM/flash]`
 
 HOTOVO, KDYŽ:
-- `node --test scripts/` projde
+- `node --test 'scripts/**/*.test.mjs'` projde
 - `npm run data` doběhne a druhý běh nic nezmění
 - `black-forest:greydwarf` → v `arrows` je Fire Arrow do top 3 a nic z tier > 2 nikde
 - `mountain:stone-golem` → v `melee` je krumpáč nebo blunt zbraň na 1. místě (golem je slabý na pickaxe/blunt podle wiki; pokud wiki říká jinak, napiš to do reportu)

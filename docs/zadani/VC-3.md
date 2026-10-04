@@ -83,10 +83,10 @@ VZHLED:
 - Plynulé otevírání akordeonu (CSS, krátké). `prefers-reduced-motion` animace vypne.
 
 KROKY A COMMITY:
-1. `index.html` + `assets/styles.css` (kostra, hlavička, akordeon biomů s hlavičkami) → `VC-3: page shell and biome accordion [GM]`
-2. Karta jednotky (přepínač hvězdiček, útoky, modifikátory) → `VC-3: creature cards [GM]`
-3. Doporučení, sekce zbraní biomu, detaily → `VC-3: weapon recommendations and biome weapons [GM]`
-4. Hledání, filtr, legenda, patička, `localStorage`, favicon, ladění na mobil → `VC-3: search, filters, legend, polish [GM]`
+1. `index.html` + `assets/styles.css` (kostra, hlavička, akordeon biomů s hlavičkami) → `VC-3: page shell and biome accordion [GM/flash]`
+2. Karta jednotky (přepínač hvězdiček, útoky, modifikátory) → `VC-3: creature cards [GM/flash]`
+3. Doporučení, sekce zbraní biomu, detaily → `VC-3: weapon recommendations and biome weapons [GM/flash]`
+4. Hledání, filtr, legenda, patička, `localStorage`, favicon, ladění na mobil → `VC-3: search, filters, legend, polish [GM/flash]`
 
 ZKOUŠKA (po každém kroku):
 - `node --check assets/app.js`
