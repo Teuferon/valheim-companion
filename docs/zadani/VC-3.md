@@ -25,6 +25,7 @@ TECHNIKA (závazné):
   - ⛔ `fetch()`, ⛔ `type="module"`, ⛔ import
   - data jsou v `<script src="data/data.js"></script>`, kód v `<script src="assets/app.js" defer></script>`
 - ⛔ frameworky, ⛔ CDN, ⛔ externí fonty. Čistý HTML + CSS + vanilla JS (ES2022, jeden soubor, IIFE nebo `'use strict'` na začátku).
+- CSP na serveru (`deploy/security-headers.conf`) je `script-src 'self'`: ⛔ inline `<script>` a ⛔ atributy `onclick=` apod. Události jen přes `addEventListener`.
 - Bezpečnost: texty z dat vkládej přes `textContent` / `createElement`, ⛔ `innerHTML` s daty.
 - `localStorage` jen v try/catch. Web musí fungovat i bez něj.
 - Obrázky `loading="lazy"`, `alt` = jméno. Při chybějícím obrázku (`null`) ukaž placeholder s iniciálou.

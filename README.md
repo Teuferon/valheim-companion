@@ -7,6 +7,26 @@ Each creature shows images per star level, stats, weaknesses and resistances, an
 
 Open `index.html` in a browser (double-click). No server or build step is needed.
 
+## Docker / EasyPanel
+
+The image is plain `nginx:stable-alpine` serving the static files. There is no build stage.
+
+EasyPanel (App service):
+
+1. **Source**: this GitHub repository, branch `main`.
+2. **Build**: Dockerfile, path `Dockerfile`, build path `/`.
+3. **Domains**: target port **80**, protocol HTTP, enable HTTPS.
+4. **Deploy**. No environment variables, volumes or database. Health check: `/healthz`.
+
+Locally:
+
+```sh
+docker compose up --build -d   # http://localhost:8080
+```
+
+Only `index.html`, `assets/`, `data/data.js` and `img/` go into the image (`.dockerignore` is a whitelist).
+nginx config is in `deploy/`. It sets a strict CSP (`script-src 'self'`), so the page must not use inline scripts or `on*=` attributes.
+
 ## Data
 
 Data comes from the [Valheim Wiki](https://valheim.weirdgloop.org) (CC BY-SA 4.0).

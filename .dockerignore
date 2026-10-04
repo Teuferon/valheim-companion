@@ -1,0 +1,8 @@
+# Whitelist: only what the image needs.
+*
+!Dockerfile
+!deploy/
+!index.html
+!assets/
+!data/data.js
+!img/
