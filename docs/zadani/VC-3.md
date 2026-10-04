@@ -50,8 +50,10 @@ CO MÁ WEB UMĚT:
 4. Karta jednotky (grid, na desktopu 2–3 sloupce, na mobilu 1):
    - Obrázek (poměr 1:1, `object-fit: contain`, tmavé pozadí).
    - Je-li `hasStars`, segmentový přepínač ☆ / ★ / ★★ (0/1/2). Přepíná obrázek, HP a útoky jen v té kartě.
-   - Jméno a štítky: Boss, Miniboss, Passive, Tameable, Weak points.
-   - HP (velké číslo; u fází `healthText` jako podtext).
+   - Jméno a štítky: Boss, Miniboss, Passive, Tameable.
+   - Slabé body (`weakPoints`, jen když nejsou prázdné): řádek „Weak point: Head — Pierce ×2“ ve stejných barevných čipech jako modifikátory.
+   - HP (velké číslo; u fází a částí `healthText` jako podtext). Má-li hvězda `healthByBiome`, ukaž HP pro aktuální biom (`healthByBiome[biomeId]`).
+   - `stars` může mít 1–3 prvky a nemusí začínat nulou (Lord Reto má jen ★★). Přepínač ukazuje jen úrovně, které v `stars` jsou. Při jediné úrovni > 0 ukaž štítek „Always ★★“.
    - **Attacks**: seznam `name` + čipy poškození podle typu. Při prázdném `damage` ukaž `raw`.
    - **Weaknesses & resistances**: čipy pro každý typ z `recommendations[...].modifiers` s hodnotou ≠ 1. Barva podle stupně: ×2 sytě zelená, ×1.5 zelená, ×1.25 světle zelená, ×0.75 světle oranžová, ×0.5 oranžová, ×0.25 červená, ×0 šedá přeškrtnutá. Text čipu: `Fire ×2`.
      Pod nimi drobně `otherImmunities` („Also immune: Stagger“).

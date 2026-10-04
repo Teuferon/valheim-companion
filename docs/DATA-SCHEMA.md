@@ -48,7 +48,7 @@ Stupně (`ModTier`): `veryweak` (2), `weak` (1.5), `slightlyweak` (1.25), `neutr
     "faction": "Forest",
     "behavior": "Aggressive",
     "tameable": false,
-    "weakPoints": false,
+    "weakPoints": [],
     "stagger": "30%",
     "hasStars": true,
     "stars": [
@@ -79,8 +79,10 @@ Stupně (`ModTier`): `veryweak` (2), `weak` (1.5), `slightlyweak` (1.25), `neutr
 Pravidla:
 - `kind`: `boss` | `miniboss` | `hostile` | `passive` | `fish`, podle sekce biomu, ve které je jednotka poprvé (nejnižší `order`).
 - `biomes`: všechny biomy, ve kterých je jednotka uvedená, seřazené podle `order`.
-- `stars`: vždy aspoň prvek `star: 0`. `hasStars = true`, právě když infobox má `health 1star`. Pak `stars` má 3 prvky. Chybí-li obrázek pro 1★/2★, použije se obrázek 0★.
-- `health`: číslo. Při fázích (`10000 + 7000 + 30000`) je to součet a `healthText` je původní text bez wiki značek. Nečíselné HP → `health: null`.
+- `stars`: jen úrovně, které infobox skutečně uvádí (má neprázdné `health Nstar` nebo `damage Nstar`), seřazené podle `star`. Může tedy mít 1, 2 nebo 3 prvky a nemusí začínat nulou (Lord Reto má jen `star: 2`). `hasStars = stars.length > 1`. Chybí-li obrázek pro danou úroveň, použije se obrázek nejbližší nižší úrovně, jinak první dostupný.
+- `health`: číslo. Čárky a mezery v tisících se ignorují (`12,500` → 12500). Fáze (`10000 + 7000 + 30000`) a části (`* Thungr: 4200 * Zil: 2400`) se sečtou a `healthText` je původní text bez wiki značek (víc řádků oddělených `\n`). Nečíselné HP → `health: null`.
+- `healthByBiome`: jen když řádky HP začínají názvem biomu (`Meadows: 30`, Skeleton). Je to objekt `{ "<biomeId>": číslo }` a `health` je pak `null`. Jinak pole chybí.
+- `weakPoints`: `[{ "part": "Head", "modifiers": { "pierce": "veryweak" } }]` z polí `weak point`, `wp veryweak`, `wp weak`, `wp resistant`… Žádný slabý bod → `[]`.
 - `attacks[].name`: u vnořených seznamů složené z rodiče a potomka (`"Axe – Cleave"`), u fází s předponou (`"Phase 1 – Chain Slam"`). `damage` obsahuje jen typy z `DamageType`. `raw` je řádek bez wiki značek. Nejde-li řádek rozparsovat, `damage: {}` a `raw` se vyplní.
 - `modifiers`: jen typy, které infobox výslovně uvádí. Výchozí hodnoty z `docs/ANALYZA.md` § 4 doplňuje až výpočet v VC-2, ⛔ ne tento soubor.
 - `spawns`: řádky ze `{{spawn row|type=…|limit=…}}` převedené na čistý text. Žádná šablona → `[]`.
