@@ -4,7 +4,7 @@ Statický web, který ukazuje všechny jednotky Valheimu (bossy, minibossy, nep�
 Každý biom je **zavřený** (ochrana proti spoilerům), po kliknutí se rozbalí.
 U každé jednotky jsou obrázky, staty po hvězdičkách, slabiny/resisty a **doporučené zbraně a munice**, které se dají mít nejpozději v tom biomu.
 
-- Repo: `pawlig/valheim-companion` (private). Hosting žádný: web se otevírá dvojklikem na `index.html` (`file://`).
+- Repo: `pawlig/valheim-companion` (public). Web se otevírá dvojklikem na `index.html` (`file://`), jde ho ale hostovat i jako statickou stránku.
 - Jazyk webu: **vše anglicky**. Dokumentace a zadání pro agenty česky.
 - Stav hry: Valheim 1.0 včetně **Deep North**.
 
