@@ -136,6 +136,7 @@ test('cleanText', () => {
   assert.equal(cleanText('x <small>tiny</small> y'), 'x tiny y');
   assert.equal(cleanText('a&nbsp;b'), 'a b');
   assert.equal(cleanText('{{Item link|Resin}} and {{tl|stuff}}'), 'Resin and');
+  assert.equal(cleanText('Crow 0S.png\n<!-- hidden\ncomment -->visible'), 'Crow 0S.png\nvisible', 'comments removed');
   assert.equal(cleanText('  spaced   out  '), 'spaced out');
 });
 
@@ -207,6 +208,25 @@ test('parseAttacks: phase headings and (x22) multipliers (Kall Fimbulbringer)', 
   assert.deepEqual(attacks[2].damage, { blunt: 100, frost: 100, chop: 100, pickaxe: 100 }, '(x22) ignored');
 });
 
+test('parseInfobox: underscore template names ({{Infobox_creature}})', () => {
+  const wikitext = '{{Infobox_creature\n| title = Bat\n| health 0star = 30\n| veryweak = Fire\n}}';
+  const info = parseInfobox(wikitext, 'creature');
+  assert.equal(info['title'], 'Bat');
+  assert.equal(info['health 0star'], '30');
+});
+
+test('parseAttacks: type-first damage, "+" separator, markup in names', () => {
+  const attacks = parseAttacks(
+    '* Spit: Fire 80, Poison 18\n* Fireball: 130 Fire + 100 Fire\n* Attach: 50 Pierce every 0.5s\n* 0',
+  );
+  assert.deepEqual(attacks[0].damage, { fire: 80, poison: 18 });
+  assert.deepEqual(attacks[1].damage, { fire: 130 }, 'keeps the larger of "+"-joined hits');
+  assert.deepEqual(attacks[2].damage, { pierce: 50 }, 'trailing words tolerated');
+  assert.equal(attacks.length, 3, 'bare number "0" is not an attack');
+  const nowiki = parseAttacks('* <nowiki>Fire</nowiki> mage – Fireball: 130 Fire')[0];
+  assert.equal(nowiki.name, 'Fire mage – Fireball', 'HTML tags stripped from names');
+});
+
 test('parseHealth', () => {
   assert.equal(parseHealth('40'), 40);
   assert.equal(parseHealth(' 10000 +&nbsp;7000 +&nbsp;30000 '), 47000, 'phases summed');
@@ -252,6 +272,8 @@ test('parseImage', () => {
     'first gallery image',
   );
   assert.equal(parseImage('[[File:Abomination.png|thumb|Abomination]]'), 'Abomination.png');
+  assert.equal(parseImage('Zil_&_Thungr.png'), 'Zil & Thungr.png', 'underscores are not file-title syntax');
+  assert.equal(parseImage('Crow 0S.png\n<!--'), 'Crow 0S.png', 'trailing HTML comment stripped');
   assert.equal(parseImage('  '), null);
   assert.equal(parseImage(undefined), null);
 });
