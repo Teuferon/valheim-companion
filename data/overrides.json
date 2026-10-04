@@ -1,0 +1,18 @@
+{
+  "creatures": {
+    "frysling": { "biomes": ["deep-north"], "kind": "hostile", "reason": "No location on wiki; drops Frostcore (Deep North) and throws frost snowballs." },
+    "chicken": { "biomes": ["plains"], "kind": "passive", "reason": "Hatches from eggs, which come from Plains-tier progression (Fuling villages / Haldor after Yagluth)." },
+    "hen": { "biomes": ["plains"], "kind": "passive", "reason": "Grown chicken, see chicken." }
+  },
+  "materials": {},
+  "exclude": {
+    "creatures": ["fish", "hive", "the-hive", "riktig-fuling", "spirit-caller", "staff-of-the-wild", "frost-blob"],
+    "weapons": []
+  },
+  "_notes": {
+    "fish": "Umbrella page of the fishing mechanic, not a creature.",
+    "hive / the-hive / riktig-fuling": "Console-only creatures (wiki: 'can only be spawned via Console Commands').",
+    "spirit-caller / staff-of-the-wild": "Weapons whose summons have creature infoboxes.",
+    "frost-blob": "Only spawned by the player's Blob Bomb: Frost, not a natural creature."
+  }
+}

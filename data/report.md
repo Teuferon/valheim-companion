@@ -9,26 +9,18 @@ Source: valheim.weirdgloop.org (MediaWiki API). No dates on purpose: the report 
 | Meadows | 1 | 0 | 3 | 2 | 2 | 8 |
 | Black Forest | 1 | 1 | 8 | 3 | 3 | 16 |
 | Swamp | 1 | 0 | 11 | 0 | 1 | 13 |
-| Ocean | 0 | 0 | 1 | 3 | 3 | 7 |
+| Ocean | 0 | 0 | 1 | 2 | 3 | 6 |
 | Mountain | 1 | 1 | 9 | 0 | 1 | 12 |
-| Plains | 1 | 1 | 7 | 1 | 1 | 11 |
+| Plains | 1 | 1 | 7 | 3 | 1 | 13 |
 | Mistlands | 1 | 0 | 6 | 3 | 2 | 12 |
 | Ashlands | 1 | 1 | 11 | 2 | 1 | 16 |
-| Deep North | 1 | 0 | 16 | 2 | 1 | 20 |
+| Deep North | 1 | 0 | 17 | 2 | 1 | 21 |
 
-By kind: boss 10, miniboss 4, hostile 72, passive 15, fish 12, total 113.
+By kind: boss 8, miniboss 4, hostile 69, passive 13, fish 12, total 106.
 
 ## Creatures without biome
 
-- Chicken (location: n/a)
-- Frost Blob (location: n/a)
-- Frysling (location: n/a)
-- Hen (location: n/a)
-- Hive (location: n/a)
-- Riktig Fuling (location: n/a)
-- Spirit Caller (location: n/a)
-- Staff of the Wild (location: n/a)
-- The Hive (location: n/a)
+(none)
 
 ## Pages without {{infobox creature}}
 

@@ -107,7 +107,6 @@
         "serpent"
       ],
       "passive": [
-        "fish",
         "gull",
         "leviathan"
       ],
@@ -173,7 +172,9 @@
         "vile"
       ],
       "passive": [
-        "gull"
+        "chicken",
+        "gull",
+        "hen"
       ],
       "fish": [
         "grouper"
@@ -265,6 +266,7 @@
         "elaking",
         "eyeless-one",
         "fallen-warrior",
+        "frysling",
         "gammeltroll",
         "greydwarf-deep-north",
         "greydwarf-shaman-deep-north",

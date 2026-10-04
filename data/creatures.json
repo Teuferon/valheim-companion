@@ -1812,7 +1812,9 @@
       "Chicken"
     ],
     "kind": "passive",
-    "biomes": [],
+    "biomes": [
+      "plains"
+    ],
     "faction": "Animal",
     "behavior": null,
     "tameable": true,
@@ -3453,120 +3455,6 @@
     "description": "Fenrings are aggressive creatures found in the Mountains during the night. Their appearance is distinctly werewolf-like, standing on two legs with a black fur coat. Unlike their Frost cave counterparts, Fenrings only walk on their"
   },
   {
-    "id": "fish",
-    "name": "Fish",
-    "wiki": "https://valheim.weirdgloop.org/w/Fish",
-    "gameIds": [
-      "Fish1, Fish2, Fish3, Fish4_cave, Fish5, Fish6, Fish7, Fish8, Fish9, Fish10, Fish11, Fish12"
-    ],
-    "kind": "passive",
-    "biomes": [
-      "ocean"
-    ],
-    "faction": null,
-    "behavior": null,
-    "tameable": false,
-    "weakPoints": false,
-    "stagger": null,
-    "hasStars": false,
-    "stars": [
-      {
-        "star": 0,
-        "image": "img/creatures/fish-0.png",
-        "health": 1,
-        "healthText": "1",
-        "attacks": []
-      }
-    ],
-    "abilities": [
-      "Swims"
-    ],
-    "modifiers": {},
-    "otherImmunities": [
-      "All"
-    ],
-    "drops": [
-      "Perch",
-      "Pike",
-      "Tuna",
-      "Trollfish",
-      "Giant Herring",
-      "Tetra",
-      "Grouper",
-      "Anglerfish",
-      "Pufferfish",
-      "Coral Cod",
-      "Magmafish",
-      "Northern Salmon"
-    ],
-    "trophy": null,
-    "summon": null,
-    "location": "* Rivers\n* Ocean\n* Frost Caves\n* Shoreline of any biome",
-    "spawns": [],
-    "description": "Fish are passive creatures found in shores, lakes and Oceans. They can be obtained through Fishing, or picked up when washed"
-  },
-  {
-    "id": "frost-blob",
-    "name": "Frost Blob",
-    "wiki": "https://valheim.weirdgloop.org/w/Frost_Blob",
-    "gameIds": [
-      "BlobFrost"
-    ],
-    "kind": "hostile",
-    "biomes": [],
-    "faction": "Mountain",
-    "behavior": null,
-    "tameable": false,
-    "weakPoints": false,
-    "stagger": null,
-    "hasStars": false,
-    "stars": [
-      {
-        "star": 0,
-        "image": "img/creatures/frost-blob-0.png",
-        "health": 50,
-        "healthText": "50",
-        "attacks": [
-          {
-            "name": "100 Frost",
-            "damage": {},
-            "raw": "100 Frost"
-          }
-        ]
-      }
-    ],
-    "abilities": [
-      "Frost AoE (2s)"
-    ],
-    "modifiers": {
-      "blunt": "weak",
-      "fire": "weak",
-      "lightning": "weak",
-      "slash": "resistant",
-      "pierce": "resistant",
-      "frost": "veryresistant",
-      "poison": "immune",
-      "chop": "immune",
-      "pickaxe": "immune"
-    },
-    "otherImmunities": [
-      "Stagger"
-    ],
-    "drops": [
-      "Crystal"
-    ],
-    "trophy": {
-      "name": "Frost Blob Trophy",
-      "image": "img/creatures/frost-blob-trophy.png"
-    },
-    "summon": null,
-    "location": null,
-    "spawns": [
-      "When a Blob bomb: Frost is used"
-    ],
-    "description": "Frost Blobs are aggressive creatures spawned by throwing a Blob bomb:"
-  },
-  {
     "id": "frysling",
     "name": "Frysling",
     "wiki": "https://valheim.weirdgloop.org/w/Frysling",
@@ -3574,7 +3462,9 @@
       "Frysling"
     ],
     "kind": "hostile",
-    "biomes": [],
+    "biomes": [
+      "deep-north"
+    ],
     "faction": null,
     "behavior": null,
     "tameable": false,
@@ -5221,7 +5111,9 @@
       "Hen"
     ],
     "kind": "passive",
-    "biomes": [],
+    "biomes": [
+      "plains"
+    ],
     "faction": "Animal",
     "behavior": null,
     "tameable": true,
@@ -5388,76 +5280,6 @@
       "Jotun Invasions (limit 2)"
     ],
     "description": "Hexen are aggressive creatures found in Mörkhalla and during Jotun Invasions. They fly around and cast damaging"
-  },
-  {
-    "id": "hive",
-    "name": "Hive",
-    "wiki": "https://valheim.weirdgloop.org/w/Hive",
-    "gameIds": [
-      "Hive"
-    ],
-    "kind": "boss",
-    "biomes": [],
-    "faction": "Boss",
-    "behavior": null,
-    "tameable": false,
-    "weakPoints": false,
-    "stagger": null,
-    "hasStars": false,
-    "stars": [
-      {
-        "star": 0,
-        "image": null,
-        "health": 10000,
-        "healthText": "10000",
-        "attacks": [
-          {
-            "name": "100 Blunt, 90 Spirit, 1000 Chop, 1000 Pickaxe",
-            "damage": {},
-            "raw": "100 Blunt, 90 Spirit, 1000 Chop, 1000 Pickaxe"
-          },
-          {
-            "name": "200 Spirit",
-            "damage": {},
-            "raw": "200 Spirit"
-          },
-          {
-            "name": "200 Spirit, 200 Chop, 200 Pickaxe",
-            "damage": {},
-            "raw": "200 Spirit, 200 Chop, 200 Pickaxe"
-          }
-        ]
-      }
-    ],
-    "abilities": [
-      "Melee",
-      "AoE",
-      "Spawn",
-      "Ranged"
-    ],
-    "modifiers": {
-      "blunt": "weak",
-      "frost": "weak",
-      "slash": "resistant",
-      "pierce": "veryresistant",
-      "fire": "veryresistant",
-      "poison": "immune"
-    },
-    "otherImmunities": [
-      "Stagger"
-    ],
-    "drops": [
-      "The Queen Trophy",
-      "Majestic Carapace"
-    ],
-    "trophy": {
-      "name": "The Queen trophy",
-      "image": "img/creatures/hive-trophy.png"
-    },
-    "summon": null,
-    "location": null,
-    "spawns": [],
-    "description": "Hive will charge up with a thick green cloud before releasing a wave of ooze. This is signaled when he leans"
   },
   {
     "id": "imprisoned-dvergr",
@@ -7440,48 +7262,6 @@
     "description": "Rancid remains are aggressive creatures found in Burial Chambers. They are, as their name suggests, human skeletal remains which have since been resurrected from the dead. Rancid remains are also slightly larger and stronger than regular Skeletons. Their hits inflict"
   },
   {
-    "id": "riktig-fuling",
-    "name": "Riktig Fuling",
-    "wiki": "https://valheim.weirdgloop.org/w/Riktig_Fuling",
-    "gameIds": [
-      "Goblin_Gem"
-    ],
-    "kind": "passive",
-    "biomes": [],
-    "faction": "Forest",
-    "behavior": null,
-    "tameable": false,
-    "weakPoints": false,
-    "stagger": null,
-    "hasStars": false,
-    "stars": [
-      {
-        "star": 0,
-        "image": null,
-        "health": 1000,
-        "healthText": "1000",
-        "attacks": []
-      }
-    ],
-    "abilities": [],
-    "modifiers": {
-      "spirit": "immune"
-    },
-    "otherImmunities": [
-      "Stagger"
-    ],
-    "drops": [
-      "Bloodstone",
-      "Iolite",
-      "Jade"
-    ],
-    "trophy": null,
-    "summon": null,
-    "location": null,
-    "spawns": [],
-    "description": "Riktig Fulings are passive creatures can only be spawned via Console"
-  },
-  {
     "id": "seal",
     "name": "Seal",
     "wiki": "https://valheim.weirdgloop.org/w/Seal",
@@ -8476,142 +8256,6 @@
     "description": "Skugg are ballistae made of bone and are found in"
   },
   {
-    "id": "spirit-caller",
-    "name": "Spirit Caller",
-    "wiki": "https://valheim.weirdgloop.org/w/Spirit_Caller",
-    "gameIds": [
-      "Bjorn_spiritcaller"
-    ],
-    "kind": "hostile",
-    "biomes": [],
-    "faction": "Players",
-    "behavior": null,
-    "tameable": false,
-    "weakPoints": false,
-    "stagger": "30%",
-    "hasStars": false,
-    "stars": [
-      {
-        "star": 0,
-        "image": "img/creatures/spirit-caller-0.png",
-        "health": 1500,
-        "healthText": "1500",
-        "attacks": [
-          {
-            "name": "Bite",
-            "damage": {
-              "pierce": 100
-            },
-            "raw": "Bite: 100 Pierce"
-          },
-          {
-            "name": "Claws",
-            "damage": {
-              "slash": 90,
-              "chop": 40
-            },
-            "raw": "Claws: 90 Slash, 40 Chop"
-          },
-          {
-            "name": "Slam",
-            "damage": {
-              "blunt": 100,
-              "chop": 40,
-              "pickaxe": 40
-            },
-            "raw": "Slam: 100 Blunt, 40 Chop, 40 Pickaxe"
-          },
-          {
-            "name": "Swipe combo, right",
-            "damage": {
-              "slash": 50,
-              "chop": 40
-            },
-            "raw": "Swipe combo, right: 50 Slash, 40 Chop"
-          },
-          {
-            "name": "Swipe left",
-            "damage": {
-              "slash": 25,
-              "chop": 40
-            },
-            "raw": "Swipe left: 25 Slash, 40 Chop"
-          }
-        ]
-      }
-    ],
-    "abilities": [
-      "Bite (4 seconds)",
-      "Claws (4 seconds)",
-      "Slam (12 seconds)",
-      "Swipe combo, right (4 seconds each for 2 variants)",
-      "Swipe left (4 seconds)"
-    ],
-    "modifiers": {
-      "fire": "weak",
-      "pierce": "resistant",
-      "blunt": "resistant",
-      "frost": "resistant",
-      "spirit": "immune"
-    },
-    "otherImmunities": [],
-    "drops": [],
-    "trophy": null,
-    "summon": null,
-    "location": null,
-    "spawns": [],
-    "description": "}} }} }} }} }} Spirit Caller is a Deep North Blood magic summoning"
-  },
-  {
-    "id": "staff-of-the-wild",
-    "name": "Staff of the Wild",
-    "wiki": "https://valheim.weirdgloop.org/w/Staff_of_the_Wild",
-    "gameIds": [
-      "staff_greenroots_tentaroot"
-    ],
-    "kind": "hostile",
-    "biomes": [],
-    "faction": "Player",
-    "behavior": null,
-    "tameable": false,
-    "weakPoints": false,
-    "stagger": null,
-    "hasStars": false,
-    "stars": [
-      {
-        "star": 0,
-        "image": "img/creatures/staff-of-the-wild-0.png",
-        "health": 250,
-        "healthText": "250",
-        "attacks": [
-          {
-            "name": "70 Blunt, 40 poison, 20 Chop, 20 Pickaxe (40 knockback, 4x backstab)",
-            "damage": {},
-            "raw": "70 Blunt, 40 poison, 20 Chop, 20 Pickaxe (40 knockback, 4x backstab)"
-          }
-        ]
-      }
-    ],
-    "abilities": [
-      "10% chance to immobilize enemy for 10 seconds"
-    ],
-    "modifiers": {
-      "fire": "resistant",
-      "poison": "immune",
-      "chop": "immune",
-      "pickaxe": "immune"
-    },
-    "otherImmunities": [
-      "Stagger"
-    ],
-    "drops": [],
-    "trophy": null,
-    "summon": null,
-    "location": null,
-    "spawns": [],
-    "description": "}} Staff of the Wild is a magic weapon that summons"
-  },
-  {
     "id": "stone-golem",
     "name": "Stone Golem",
     "wiki": "https://valheim.weirdgloop.org/w/Stone_Golem",
@@ -8913,54 +8557,6 @@
     "location": "* Black Forest",
     "spawns": [],
     "description": "The Elder is the second boss. He appears as a towering humanoid tree-like entity with multiple thin branches sprouting out of his slender, bark-covered"
-  },
-  {
-    "id": "the-hive",
-    "name": "The Hive",
-    "wiki": "https://valheim.weirdgloop.org/w/The_Hive",
-    "gameIds": [
-      "TheHive"
-    ],
-    "kind": "boss",
-    "biomes": [],
-    "faction": "Boss",
-    "behavior": null,
-    "tameable": false,
-    "weakPoints": false,
-    "stagger": null,
-    "hasStars": false,
-    "stars": [
-      {
-        "star": 0,
-        "image": "img/creatures/the-hive-0.png",
-        "health": 5000,
-        "healthText": "5000",
-        "attacks": []
-      }
-    ],
-    "abilities": [],
-    "modifiers": {
-      "blunt": "immune",
-      "slash": "immune",
-      "pierce": "immune",
-      "fire": "immune",
-      "frost": "immune",
-      "lightning": "immune",
-      "poison": "immune",
-      "spirit": "immune"
-    },
-    "otherImmunities": [
-      "Stagger"
-    ],
-    "drops": [
-      "Drake Trophy",
-      "Freeze Gland"
-    ],
-    "trophy": null,
-    "summon": null,
-    "location": null,
-    "spawns": [],
-    "description": "The Hive is a boss which is only available via Console"
   },
   {
     "id": "the-queen",
