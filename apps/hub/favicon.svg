@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="shieldGrad" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#343d48"/>
+      <stop offset="70%" stop-color="#181d23"/>
+      <stop offset="100%" stop-color="#0f1216"/>
+    </radialGradient>
+    <linearGradient id="rimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ecc068"/>
+      <stop offset="50%" stop-color="#d9a441"/>
+      <stop offset="100%" stop-color="#8a5a1e"/>
+    </linearGradient>
+  </defs>
+  <!-- Shield Outer Rim -->
+  <circle cx="32" cy="32" r="30" fill="url(#shieldGrad)" stroke="url(#rimGrad)" stroke-width="3.5"/>
+  <!-- Inner Rim Inset -->
+  <circle cx="32" cy="32" r="24" fill="none" stroke="#2b333c" stroke-width="1.2" stroke-dasharray="4 2"/>
+  <!-- Central Boss Rim -->
+  <circle cx="32" cy="32" r="10" fill="#181d23" stroke="url(#rimGrad)" stroke-width="2.5"/>
+  <!-- Central Boss Rivet -->
+  <circle cx="32" cy="32" r="4" fill="#d9a441"/>
+  <!-- Norse Algiz Rune (Protection) in amber -->
+  <path d="M32 24 L32 8 M32 16 L22 8 M32 16 L42 8" stroke="#d9a441" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Bottom Cross Rune -->
+  <path d="M32 40 L32 56 M26 48 L38 48" stroke="#d9a441" stroke-width="2" stroke-linecap="round"/>
+  <!-- Left & Right Iron Rivets -->
+  <circle cx="10" cy="32" r="1.5" fill="#d9a441"/>
+  <circle cx="54" cy="32" r="1.5" fill="#d9a441"/>
+</svg>
