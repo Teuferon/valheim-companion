@@ -2,6 +2,10 @@
   "type": "module",
   "scripts": {
     "fetch:creatures": "node scripts/wiki/fetch-creatures.mjs",
+    "fetch:weapons": "node scripts/wiki/fetch-weapons.mjs",
+    "recommend": "node scripts/recommend.mjs",
+    "build:data": "node scripts/build-data.mjs",
+    "data": "node scripts/wiki/fetch-weapons.mjs && node scripts/recommend.mjs && node scripts/build-data.mjs",
     "test": "node --test 'scripts/**/*.test.mjs'"
   }
 }

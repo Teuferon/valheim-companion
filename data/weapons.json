@@ -1,0 +1,6248 @@
+[
+  {
+    "id": "abyssal-harpoon",
+    "name": "Abyssal Harpoon",
+    "wiki": "https://valheim.weirdgloop.org/w/Abyssal_Harpoon",
+    "gameId": "SpearChitin",
+    "category": "spear",
+    "hands": "1h",
+    "type": "Spear",
+    "image": "img/weapons/abyssal-harpoon.png",
+    "station": "Workbench",
+    "stationLevel": 2,
+    "maxQuality": 1,
+    "damage": {
+      "pierce": 10
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 10
+    },
+    "stamina": 15,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Finewood",
+        "amount": 8
+      },
+      {
+        "name": "Chitin",
+        "amount": 30
+      },
+      {
+        "name": "Leather Scraps",
+        "amount": 3
+      }
+    ],
+    "quantity": null,
+    "tier": 3,
+    "biome": "ocean",
+    "description": "The ocean's wrath."
+  },
+  {
+    "id": "abyssal-razor",
+    "name": "Abyssal Razor",
+    "wiki": "https://valheim.weirdgloop.org/w/Abyssal_Razor",
+    "gameId": "KnifeChitin",
+    "category": "knife",
+    "hands": "1h",
+    "type": "Knife",
+    "image": "img/weapons/abyssal-razor.png",
+    "station": "Workbench",
+    "stationLevel": 2,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 20,
+      "pierce": 20
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 20,
+      "pierce": 20
+    },
+    "stamina": 8,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Finewood",
+        "amount": 4
+      },
+      {
+        "name": "Chitin",
+        "amount": 20
+      },
+      {
+        "name": "Leather Scraps",
+        "amount": 2
+      }
+    ],
+    "quantity": null,
+    "tier": 3,
+    "biome": "ocean",
+    "description": "A knife from the deep."
+  },
+  {
+    "id": "ancient-bark-spear",
+    "name": "Ancient Bark Spear",
+    "wiki": "https://valheim.weirdgloop.org/w/Ancient_Bark_Spear",
+    "gameId": "SpearElderbark",
+    "category": "spear",
+    "hands": "1h",
+    "type": "Spear",
+    "image": "img/weapons/ancient-bark-spear.png",
+    "station": "Forge",
+    "stationLevel": 3,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 55
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 55
+    },
+    "stamina": 10,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Troll Hide",
+        "amount": 4
+      },
+      {
+        "name": "Iron",
+        "amount": 10
+      },
+      {
+        "name": "Ancient Bark",
+        "amount": 10
+      }
+    ],
+    "quantity": null,
+    "tier": 3,
+    "biome": "swamp",
+    "description": "Despite its gnarled look, this spear is strong and perfectly balanced."
+  },
+  {
+    "id": "antler-pickaxe",
+    "name": "Antler Pickaxe",
+    "wiki": "https://valheim.weirdgloop.org/w/Antler_Pickaxe",
+    "gameId": "PickaxeAntler",
+    "category": "pickaxe",
+    "hands": "2h",
+    "type": "Pickaxe",
+    "image": "img/weapons/antler-pickaxe.png",
+    "station": "Workbench",
+    "stationLevel": 1,
+    "maxQuality": 1,
+    "damage": {
+      "pierce": 18,
+      "pickaxe": 18
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 18,
+      "pickaxe": 18
+    },
+    "stamina": 6,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 10
+      },
+      {
+        "name": "Hard Antler",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 1,
+    "biome": "meadows",
+    "description": "This tool is hard enough to crack even the most stubborn rocks."
+  },
+  {
+    "id": "arbalest",
+    "name": "Arbalest",
+    "wiki": "https://valheim.weirdgloop.org/w/Arbalest",
+    "gameId": "CrossbowArbalest",
+    "category": "crossbow",
+    "hands": "2h",
+    "type": "Crossbow",
+    "image": "img/weapons/arbalest.png",
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 200
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 200
+    },
+    "stamina": 1,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 10
+      },
+      {
+        "name": "Iron",
+        "amount": 8
+      },
+      {
+        "name": "Root",
+        "amount": 4
+      }
+    ],
+    "quantity": null,
+    "tier": 3,
+    "biome": "swamp",
+    "description": "A slow but powerful weapon."
+  },
+  {
+    "id": "ash-fang",
+    "name": "Ash Fang",
+    "wiki": "https://valheim.weirdgloop.org/w/Ash_Fang",
+    "gameId": "BowAshlands",
+    "category": "bow",
+    "hands": "2h",
+    "type": "Bow",
+    "image": "img/weapons/ash-fang.png",
+    "station": "Black Forge",
+    "stationLevel": 3,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 82
+    },
+    "perLevel": {
+      "pierce": 4,
+      "spirit": 5
+    },
+    "damageMax": {
+      "pierce": 94
+    },
+    "stamina": 14,
+    "knockback": 25,
+    "materials": [
+      {
+        "name": "Ashwood",
+        "amount": 10
+      },
+      {
+        "name": "Charred Bone",
+        "amount": 16
+      },
+      {
+        "name": "Flametal",
+        "amount": 5
+      },
+      {
+        "name": "Bonemaw Tooth",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "Risen again from the ashes, this bow holds unyielding strength."
+  },
+  {
+    "id": "bare-fists",
+    "name": "Bare Fists",
+    "wiki": "https://valheim.weirdgloop.org/w/Bare_Fists",
+    "gameId": "PlayerUnarmed",
+    "category": "fists",
+    "hands": "1h",
+    "type": "Fists",
+    "image": "img/weapons/bare-fists.png",
+    "station": "Always available",
+    "stationLevel": null,
+    "maxQuality": 1,
+    "damage": {
+      "blunt": 5
+    },
+    "perLevel": {},
+    "damageMax": {
+      "blunt": 5
+    },
+    "stamina": 4,
+    "knockback": 40,
+    "materials": [],
+    "quantity": null,
+    "tier": 1,
+    "biome": "meadows",
+    "description": ""
+  },
+  {
+    "id": "battleaxe",
+    "name": "Battleaxe",
+    "wiki": "https://valheim.weirdgloop.org/w/Battleaxe",
+    "gameId": "Battleaxe",
+    "category": "battleaxe",
+    "hands": "2h",
+    "type": "Axe 2h",
+    "image": "img/weapons/battleaxe.png",
+    "station": "Forge",
+    "stationLevel": 2,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 70,
+      "chop": 40
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 70,
+      "chop": 40
+    },
+    "stamina": 16,
+    "knockback": 70,
+    "materials": [
+      {
+        "name": "Ancient Bark",
+        "amount": 30
+      },
+      {
+        "name": "Iron",
+        "amount": 35
+      },
+      {
+        "name": "Leather Scraps",
+        "amount": 4
+      }
+    ],
+    "quantity": null,
+    "tier": 3,
+    "biome": "swamp",
+    "description": "Skull-splitter, a warrior's joy."
+  },
+  {
+    "id": "berserkir-axes",
+    "name": "Berserkir Axes",
+    "wiki": "https://valheim.weirdgloop.org/w/Berserkir_Axes",
+    "gameId": "AxeBerzerkr",
+    "category": "axe",
+    "hands": "2h",
+    "type": "axe dw",
+    "image": "img/weapons/berserkir-axes.png",
+    "station": "Black Forge",
+    "stationLevel": 3,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 140,
+      "chop": 80
+    },
+    "perLevel": {
+      "slash": 5,
+      "chop": 3
+    },
+    "damageMax": {
+      "slash": 155,
+      "chop": 89
+    },
+    "stamina": 16,
+    "knockback": 20,
+    "materials": [
+      {
+        "name": "Charred Bone",
+        "amount": 15
+      },
+      {
+        "name": "Flametal",
+        "amount": 24
+      },
+      {
+        "name": "Asksvin Hide",
+        "amount": 3
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "Let your rage take over and face the slaughter."
+  },
+  {
+    "id": "bile-bomb",
+    "name": "Bile Bomb",
+    "wiki": "https://valheim.weirdgloop.org/w/Bile_Bomb",
+    "gameId": "BombBile",
+    "category": "bomb",
+    "hands": null,
+    "type": "Bomb",
+    "image": "img/weapons/bile-bomb.png",
+    "station": "Workbench",
+    "stationLevel": 1,
+    "maxQuality": 1,
+    "damage": {
+      "blunt": 5
+    },
+    "perLevel": {},
+    "damageMax": {
+      "blunt": 5
+    },
+    "stamina": 8,
+    "knockback": 40,
+    "materials": [
+      {
+        "name": "Sap",
+        "amount": 1
+      },
+      {
+        "name": "Bilebag",
+        "amount": 1
+      },
+      {
+        "name": "Resin",
+        "amount": 3
+      }
+    ],
+    "quantity": 3,
+    "tier": 6,
+    "biome": "mistlands",
+    "description": "Handle with care."
+  },
+  {
+    "id": "black-metal-atgeir",
+    "name": "Black Metal Atgeir",
+    "wiki": "https://valheim.weirdgloop.org/w/Black_Metal_Atgeir",
+    "gameId": "AtgeirBlackmetal",
+    "category": "polearm",
+    "hands": "2h",
+    "type": "Polearm",
+    "image": "img/weapons/black-metal-atgeir.png",
+    "station": "Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 105
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 105
+    },
+    "stamina": 18,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Finewood",
+        "amount": 10
+      },
+      {
+        "name": "Black Metal",
+        "amount": 30
+      },
+      {
+        "name": "Linen Thread",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 5,
+    "biome": "plains",
+    "description": "A vicious hewing-axe of almost unbreakable black metal."
+  },
+  {
+    "id": "black-metal-axe",
+    "name": "Black Metal Axe",
+    "wiki": "https://valheim.weirdgloop.org/w/Black_Metal_Axe",
+    "gameId": "AxeBlackMetal",
+    "category": "axe",
+    "hands": "1h",
+    "type": "Axe 1h",
+    "image": "img/weapons/black-metal-axe.png",
+    "station": "Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 100,
+      "chop": 60
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 100,
+      "chop": 60
+    },
+    "stamina": 14,
+    "knockback": 60,
+    "materials": [
+      {
+        "name": "Finewood",
+        "amount": 6
+      },
+      {
+        "name": "Black Metal",
+        "amount": 20
+      },
+      {
+        "name": "Linen Thread",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 5,
+    "biome": "plains",
+    "description": "A perfectly-balanced axe forged from dark metal with an emerald sheen."
+  },
+  {
+    "id": "black-metal-battleaxe",
+    "name": "Black Metal Battleaxe",
+    "wiki": "https://valheim.weirdgloop.org/w/Black_Metal_Battleaxe",
+    "gameId": "BattleaxeBlackmetal",
+    "category": "battleaxe",
+    "hands": "2h",
+    "type": "Axe 2h",
+    "image": "img/weapons/black-metal-battleaxe.png",
+    "station": "Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 110,
+      "chop": 60
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 110,
+      "chop": 60
+    },
+    "stamina": 20,
+    "knockback": 70,
+    "materials": [
+      {
+        "name": "Linen",
+        "amount": 5
+      },
+      {
+        "name": "Black Metal",
+        "amount": 30
+      },
+      {
+        "name": "Finewood",
+        "amount": 10
+      }
+    ],
+    "quantity": null,
+    "tier": 5,
+    "biome": "plains",
+    "description": "Green shall be the last thing your foes see before you cleave them in half."
+  },
+  {
+    "id": "black-metal-bolt",
+    "name": "Black Metal Bolt",
+    "wiki": "https://valheim.weirdgloop.org/w/Black_Metal_Bolt",
+    "gameId": "BoltBlackmetal",
+    "category": "bolt",
+    "hands": null,
+    "type": "Bolt",
+    "image": "img/weapons/black-metal-bolt.png",
+    "station": "Black Forge",
+    "stationLevel": 2,
+    "maxQuality": 1,
+    "damage": {
+      "pierce": 62
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 62
+    },
+    "stamina": null,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 8
+      },
+      {
+        "name": "Black Metal",
+        "amount": 2
+      },
+      {
+        "name": "Feathers",
+        "amount": 2
+      }
+    ],
+    "quantity": 20,
+    "tier": 5,
+    "biome": "plains",
+    "description": "A sleek bolt of dark metal."
+  },
+  {
+    "id": "black-metal-knife",
+    "name": "Black Metal Knife",
+    "wiki": "https://valheim.weirdgloop.org/w/Black_Metal_Knife",
+    "gameId": "KnifeBlackMetal",
+    "category": "knife",
+    "hands": "1h",
+    "type": "Knife",
+    "image": "img/weapons/black-metal-knife.png",
+    "station": "Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 34,
+      "pierce": 34
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 34,
+      "pierce": 34
+    },
+    "stamina": 12,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Finewood",
+        "amount": 4
+      },
+      {
+        "name": "Black Metal",
+        "amount": 10
+      },
+      {
+        "name": "Linen Thread",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 5,
+    "biome": "plains",
+    "description": "A darkling blade. Strong and sharp."
+  },
+  {
+    "id": "black-metal-pickaxe",
+    "name": "Black Metal Pickaxe",
+    "wiki": "https://valheim.weirdgloop.org/w/Black_Metal_Pickaxe",
+    "gameId": "PickaxeBlackMetal",
+    "category": "pickaxe",
+    "hands": "2h",
+    "type": "Pickaxe",
+    "image": "img/weapons/black-metal-pickaxe.png",
+    "station": "Forge",
+    "stationLevel": 2,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 49,
+      "pickaxe": 49
+    },
+    "perLevel": {
+      "pierce": 5,
+      "pickaxe": 5
+    },
+    "damageMax": {
+      "pierce": 64,
+      "pickaxe": 64
+    },
+    "stamina": 14,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Yggdrasil Wood",
+        "amount": 3
+      },
+      {
+        "name": "Black Metal",
+        "amount": 25
+      }
+    ],
+    "quantity": null,
+    "tier": 6,
+    "biome": "mistlands",
+    "description": "A good strong pick of glistening dark metal."
+  },
+  {
+    "id": "black-metal-sword",
+    "name": "Black Metal Sword",
+    "wiki": "https://valheim.weirdgloop.org/w/Black_Metal_Sword",
+    "gameId": "SwordBlackmetal",
+    "category": "sword",
+    "hands": "1h",
+    "type": "Sword",
+    "image": "img/weapons/black-metal-sword.png",
+    "station": "Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 95
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 95
+    },
+    "stamina": 14,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Finewood",
+        "amount": 2
+      },
+      {
+        "name": "Black Metal",
+        "amount": 20
+      },
+      {
+        "name": "Linen Thread",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 5,
+    "biome": "plains",
+    "description": "A thing of death and beauty. It catches the light with a greenish glow."
+  },
+  {
+    "id": "bleeding-berserkir-axes",
+    "name": "Bleeding Berserkir Axes",
+    "wiki": "https://valheim.weirdgloop.org/w/Bleeding_Berserkir_Axes",
+    "gameId": "AxeBerzerkrBlood",
+    "category": "axe",
+    "hands": "2h",
+    "type": "axe dw",
+    "image": "img/weapons/bleeding-berserkir-axes.png",
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 140,
+      "chop": 80
+    },
+    "perLevel": {
+      "slash": 5,
+      "chop": 3
+    },
+    "damageMax": {
+      "slash": 155,
+      "chop": 89
+    },
+    "stamina": 16,
+    "knockback": 20,
+    "materials": [
+      {
+        "name": "Berserkir Axes",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 5
+      },
+      {
+        "name": "Bloodstone",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "The closer you are to death, the harder you are sure to hit."
+  },
+  {
+    "id": "blood-fang",
+    "name": "Blood Fang",
+    "wiki": "https://valheim.weirdgloop.org/w/Blood_Fang",
+    "gameId": "BowAshlandsBlood",
+    "category": "bow",
+    "hands": "2h",
+    "type": "Bow",
+    "image": "img/weapons/blood-fang.png",
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 82
+    },
+    "perLevel": {
+      "pierce": 4,
+      "spirit": 5
+    },
+    "damageMax": {
+      "pierce": 94
+    },
+    "stamina": 14,
+    "knockback": 25,
+    "materials": [
+      {
+        "name": "Ash Fang",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 5
+      },
+      {
+        "name": "Bloodstone",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "Arrows loosed from this bow will tear into flesh with unmatched ferocity."
+  },
+  {
+    "id": "bloodgeon",
+    "name": "Bloodgeon",
+    "wiki": "https://valheim.weirdgloop.org/w/Bloodgeon",
+    "gameId": "MaceEldnerBlood",
+    "category": "club",
+    "hands": "1h",
+    "type": "Club 1h",
+    "image": "img/weapons/bloodgeon.png",
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "blunt": 135
+    },
+    "perLevel": {
+      "blunt": 6
+    },
+    "damageMax": {
+      "blunt": 153
+    },
+    "stamina": 16,
+    "knockback": 100,
+    "materials": [
+      {
+        "name": "Flametal Mace",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 8
+      },
+      {
+        "name": "Bloodstone",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "The blood all but soaks into this mace, and it always yearns for more."
+  },
+  {
+    "id": "bloodgold-arrow",
+    "name": "Bloodgold Arrow",
+    "wiki": "https://valheim.weirdgloop.org/w/Bloodgold_Arrow",
+    "gameId": "ArrowBloodGold",
+    "category": "arrow",
+    "hands": null,
+    "type": "Arrow",
+    "image": "img/weapons/bloodgold-arrow.png",
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "maxQuality": 1,
+    "damage": {
+      "pierce": 100
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 100
+    },
+    "stamina": null,
+    "knockback": 15,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 1
+      },
+      {
+        "name": "Feathers",
+        "amount": 2
+      },
+      {
+        "name": "Timberwood",
+        "amount": 8
+      }
+    ],
+    "quantity": 20,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "An arrow forged of perhaps the hardest materials in this world..."
+  },
+  {
+    "id": "bloodgold-bolt",
+    "name": "Bloodgold Bolt",
+    "wiki": "https://valheim.weirdgloop.org/w/Bloodgold_Bolt",
+    "gameId": "BoltBloodGold",
+    "category": "bolt",
+    "hands": null,
+    "type": "Bolts",
+    "image": "img/weapons/bloodgold-bolt.png",
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "maxQuality": 1,
+    "damage": {
+      "pierce": 92
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 92
+    },
+    "stamina": null,
+    "knockback": 15,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 1
+      },
+      {
+        "name": "Feathers",
+        "amount": 2
+      },
+      {
+        "name": "Timberwood",
+        "amount": 8
+      }
+    ],
+    "quantity": 20,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "A bolt forged of perhaps the hardest materials in this world..."
+  },
+  {
+    "id": "bone-bolt",
+    "name": "Bone Bolt",
+    "wiki": "https://valheim.weirdgloop.org/w/Bone_Bolt",
+    "gameId": "BoltBone",
+    "category": "bolt",
+    "hands": null,
+    "type": "Bolt",
+    "image": "img/weapons/bone-bolt.png",
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "maxQuality": 1,
+    "damage": {
+      "pierce": 32
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 32
+    },
+    "stamina": null,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Bone Fragments",
+        "amount": 8
+      },
+      {
+        "name": "Feathers",
+        "amount": 2
+      }
+    ],
+    "quantity": 20,
+    "tier": 2,
+    "biome": "black-forest",
+    "description": "A crude bolt of yellowed bone."
+  },
+  {
+    "id": "bronze-atgeir",
+    "name": "Bronze Atgeir",
+    "wiki": "https://valheim.weirdgloop.org/w/Bronze_Atgeir",
+    "gameId": "AtgeirBronze",
+    "category": "polearm",
+    "hands": "2h",
+    "type": "Polearm",
+    "image": null,
+    "station": "Forge",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 45
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 45
+    },
+    "stamina": 12,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 10
+      },
+      {
+        "name": "Bronze",
+        "amount": 8
+      },
+      {
+        "name": "Leather Scraps",
+        "amount": 2
+      }
+    ],
+    "quantity": null,
+    "tier": 2,
+    "biome": "black-forest",
+    "description": "A true warrior's tool."
+  },
+  {
+    "id": "bronze-axe",
+    "name": "Bronze Axe",
+    "wiki": "https://valheim.weirdgloop.org/w/Bronze_Axe",
+    "gameId": "AxeBronze",
+    "category": "axe",
+    "hands": "1h",
+    "type": "Axe 1h",
+    "image": "img/weapons/bronze-axe.png",
+    "station": "Forge",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 40,
+      "chop": 40
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 40,
+      "chop": 40
+    },
+    "stamina": 8,
+    "knockback": 50,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 4
+      },
+      {
+        "name": "Bronze",
+        "amount": 8
+      },
+      {
+        "name": "Leather Scraps",
+        "amount": 2
+      }
+    ],
+    "quantity": null,
+    "tier": 2,
+    "biome": "black-forest",
+    "description": "A bright and burnished blade, curved like a smile."
+  },
+  {
+    "id": "bronze-mace",
+    "name": "Bronze Mace",
+    "wiki": "https://valheim.weirdgloop.org/w/Bronze_Mace",
+    "gameId": "MaceBronze",
+    "category": "club",
+    "hands": "1h",
+    "type": "Club 1h",
+    "image": "img/weapons/bronze-mace.png",
+    "station": "Forge",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "blunt": 35
+    },
+    "perLevel": {},
+    "damageMax": {
+      "blunt": 35
+    },
+    "stamina": 8,
+    "knockback": 80,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 4
+      },
+      {
+        "name": "Bronze",
+        "amount": 8
+      },
+      {
+        "name": "Leather Scraps",
+        "amount": 3
+      }
+    ],
+    "quantity": null,
+    "tier": 2,
+    "biome": "black-forest",
+    "description": "A headache on a stick."
+  },
+  {
+    "id": "bronze-pickaxe",
+    "name": "Bronze Pickaxe",
+    "wiki": "https://valheim.weirdgloop.org/w/Bronze_Pickaxe",
+    "gameId": "PickaxeBronze",
+    "category": "pickaxe",
+    "hands": "2h",
+    "type": "Pickaxe",
+    "image": "img/weapons/bronze-pickaxe.png",
+    "station": "Forge",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 25,
+      "pickaxe": 25
+    },
+    "perLevel": {
+      "pickaxe": 4
+    },
+    "damageMax": {
+      "pierce": 25,
+      "pickaxe": 37
+    },
+    "stamina": 8,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Corewood",
+        "amount": 3
+      },
+      {
+        "name": "Bronze",
+        "amount": 10
+      }
+    ],
+    "quantity": null,
+    "tier": 2,
+    "biome": "black-forest",
+    "description": "A good bronze pick. Can break very hard rocks."
+  },
+  {
+    "id": "bronze-spear",
+    "name": "Bronze Spear",
+    "wiki": "https://valheim.weirdgloop.org/w/Bronze_Spear",
+    "gameId": "SpearBronze",
+    "category": "spear",
+    "hands": "1h",
+    "type": "Spear",
+    "image": "img/weapons/bronze-spear.png",
+    "station": "Forge",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 35
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 35
+    },
+    "stamina": 8,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 5
+      },
+      {
+        "name": "Bronze",
+        "amount": 6
+      },
+      {
+        "name": "Deer Hide",
+        "amount": 2
+      }
+    ],
+    "quantity": null,
+    "tier": 2,
+    "biome": "black-forest",
+    "description": "A sturdy spear with a head of burnished bronze."
+  },
+  {
+    "id": "bronze-sword",
+    "name": "Bronze Sword",
+    "wiki": "https://valheim.weirdgloop.org/w/Bronze_Sword",
+    "gameId": "SwordBronze",
+    "category": "sword",
+    "hands": "1h",
+    "type": "Sword",
+    "image": "img/weapons/bronze-sword.png",
+    "station": "Forge",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 35
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 35
+    },
+    "stamina": 8,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 2
+      },
+      {
+        "name": "Bronze",
+        "amount": 8
+      },
+      {
+        "name": "Leather Scraps",
+        "amount": 2
+      }
+    ],
+    "quantity": null,
+    "tier": 2,
+    "biome": "black-forest",
+    "description": "Blood-drinker. A thirsty friend."
+  },
+  {
+    "id": "bronzehead-arrow",
+    "name": "Bronzehead Arrow",
+    "wiki": "https://valheim.weirdgloop.org/w/Bronzehead_Arrow",
+    "gameId": "ArrowBronze",
+    "category": "arrow",
+    "hands": null,
+    "type": "Arrow",
+    "image": "img/weapons/bronzehead-arrow.png",
+    "station": "Forge",
+    "stationLevel": 1,
+    "maxQuality": 1,
+    "damage": {
+      "pierce": 32
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 32
+    },
+    "stamina": null,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 8
+      },
+      {
+        "name": "Bronze",
+        "amount": 1
+      },
+      {
+        "name": "Feathers",
+        "amount": 2
+      }
+    ],
+    "quantity": 20,
+    "tier": 2,
+    "biome": "black-forest",
+    "description": "Sharper than flint. A sleek messenger of death."
+  },
+  {
+    "id": "brutal-slayer",
+    "name": "Brutal Slayer",
+    "wiki": "https://valheim.weirdgloop.org/w/Brutal_Slayer",
+    "gameId": "THSwordSlayerBlood",
+    "category": "sword",
+    "hands": "2h",
+    "type": "Sword 2h",
+    "image": "img/weapons/brutal-slayer.png",
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 170
+    },
+    "perLevel": {
+      "slash": 6
+    },
+    "damageMax": {
+      "slash": 188
+    },
+    "stamina": 20,
+    "knockback": 55,
+    "materials": [
+      {
+        "name": "Slayer",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 15
+      },
+      {
+        "name": "Bloodstone",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "If it bleeds, you can kill it."
+  },
+  {
+    "id": "carapace-arrow",
+    "name": "Carapace Arrow",
+    "wiki": "https://valheim.weirdgloop.org/w/Carapace_Arrow",
+    "gameId": "ArrowCarapace",
+    "category": "arrow",
+    "hands": null,
+    "type": "Arrow",
+    "image": "img/weapons/carapace-arrow.png",
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "maxQuality": 1,
+    "damage": {
+      "pierce": 72
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 72
+    },
+    "stamina": null,
+    "knockback": 15,
+    "materials": [
+      {
+        "name": "Carapace",
+        "amount": 4
+      },
+      {
+        "name": "Feathers",
+        "amount": 2
+      },
+      {
+        "name": "Wood",
+        "amount": 8
+      }
+    ],
+    "quantity": 20,
+    "tier": 6,
+    "biome": "mistlands",
+    "description": "Heavy and pointy, this one's gonna hurt."
+  },
+  {
+    "id": "carapace-bolt",
+    "name": "Carapace Bolt",
+    "wiki": "https://valheim.weirdgloop.org/w/Carapace_Bolt",
+    "gameId": "BoltCarapace",
+    "category": "bolt",
+    "hands": null,
+    "type": "Bolt",
+    "image": "img/weapons/carapace-bolt.png",
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "maxQuality": 1,
+    "damage": {
+      "pierce": 72
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 72
+    },
+    "stamina": null,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 8
+      },
+      {
+        "name": "Carapace",
+        "amount": 2
+      },
+      {
+        "name": "Feathers",
+        "amount": 2
+      }
+    ],
+    "quantity": 20,
+    "tier": 6,
+    "biome": "mistlands",
+    "description": "A heavy and solid bolt."
+  },
+  {
+    "id": "carapace-spear",
+    "name": "Carapace Spear",
+    "wiki": "https://valheim.weirdgloop.org/w/Carapace_Spear",
+    "gameId": "SpearCarapace",
+    "category": "spear",
+    "hands": "1h",
+    "type": "Spear",
+    "image": "img/weapons/carapace-spear.png",
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 115
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 115
+    },
+    "stamina": 16,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Yggdrasil Wood",
+        "amount": 10
+      },
+      {
+        "name": "Carapace",
+        "amount": 4
+      },
+      {
+        "name": "Mandible",
+        "amount": 2
+      }
+    ],
+    "quantity": null,
+    "tier": 6,
+    "biome": "mistlands",
+    "description": "Sharpened to jagged perfection, this spear is sure to be deadly."
+  },
+  {
+    "id": "charred-arrow",
+    "name": "Charred Arrow",
+    "wiki": "https://valheim.weirdgloop.org/w/Charred_Arrow",
+    "gameId": "ArrowCharred",
+    "category": "arrow",
+    "hands": null,
+    "type": "Arrow",
+    "image": "img/weapons/charred-arrow.png",
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "maxQuality": 1,
+    "damage": {
+      "pierce": 82
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 82
+    },
+    "stamina": null,
+    "knockback": 15,
+    "materials": [
+      {
+        "name": "Charred Bone",
+        "amount": 4
+      },
+      {
+        "name": "Feathers",
+        "amount": 2
+      },
+      {
+        "name": "Ashwood",
+        "amount": 8
+      }
+    ],
+    "quantity": 20,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "This arrow has been whittled into shape from a charred femur, and it's as hard as any metal."
+  },
+  {
+    "id": "charred-bolt",
+    "name": "Charred Bolt",
+    "wiki": "https://valheim.weirdgloop.org/w/Charred_Bolt",
+    "gameId": "BoltCharred",
+    "category": "bolt",
+    "hands": null,
+    "type": "Bolts",
+    "image": "img/weapons/charred-bolt.png",
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "maxQuality": 1,
+    "damage": {
+      "pierce": 82
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 82
+    },
+    "stamina": null,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Ashwood",
+        "amount": 8
+      },
+      {
+        "name": "Charred Bone",
+        "amount": 2
+      },
+      {
+        "name": "Feathers",
+        "amount": 2
+      }
+    ],
+    "quantity": 20,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "A sturdy bone from a forearm, shaped into a deadly bolt."
+  },
+  {
+    "id": "club",
+    "name": "Club",
+    "wiki": "https://valheim.weirdgloop.org/w/Club",
+    "gameId": "Club",
+    "category": "club",
+    "hands": "1h",
+    "type": "Club 1h",
+    "image": "img/weapons/club.png",
+    "station": "Player crafting menu",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "blunt": 12
+    },
+    "perLevel": {},
+    "damageMax": {
+      "blunt": 12
+    },
+    "stamina": 6,
+    "knockback": 30,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 6
+      }
+    ],
+    "quantity": null,
+    "tier": 1,
+    "biome": "meadows",
+    "description": "A crude but useful weapon."
+  },
+  {
+    "id": "copper-knife",
+    "name": "Copper Knife",
+    "wiki": "https://valheim.weirdgloop.org/w/Copper_Knife",
+    "gameId": "KnifeCopper",
+    "category": "knife",
+    "hands": "1h",
+    "type": "Knife",
+    "image": "img/weapons/copper-knife.png",
+    "station": "Forge",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 12,
+      "pierce": 12
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 12,
+      "pierce": 12
+    },
+    "stamina": 6,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 2
+      },
+      {
+        "name": "Copper",
+        "amount": 8
+      }
+    ],
+    "quantity": null,
+    "tier": 2,
+    "biome": "black-forest",
+    "description": "A glittering copper knife."
+  },
+  {
+    "id": "crude-bow",
+    "name": "Crude Bow",
+    "wiki": "https://valheim.weirdgloop.org/w/Crude_Bow",
+    "gameId": "Bow",
+    "category": "bow",
+    "hands": "2h",
+    "type": "Bow",
+    "image": "img/weapons/crude-bow.png",
+    "station": "Workbench",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 22
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 22
+    },
+    "stamina": 4,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 10
+      },
+      {
+        "name": "Leather Scraps",
+        "amount": 8
+      }
+    ],
+    "quantity": null,
+    "tier": 1,
+    "biome": "meadows",
+    "description": "A crude but functional bow."
+  },
+  {
+    "id": "crystal-battleaxe",
+    "name": "Crystal Battleaxe",
+    "wiki": "https://valheim.weirdgloop.org/w/Crystal_Battleaxe",
+    "gameId": "BattleaxeCrystal",
+    "category": "battleaxe",
+    "hands": "2h",
+    "type": "Axe 2h",
+    "image": "img/weapons/crystal-battleaxe.png",
+    "station": "Forge",
+    "stationLevel": 3,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 90,
+      "chop": 50,
+      "spirit": 30
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 90,
+      "chop": 50,
+      "spirit": 30
+    },
+    "stamina": 18,
+    "knockback": 70,
+    "materials": [
+      {
+        "name": "Ancient Bark",
+        "amount": 40
+      },
+      {
+        "name": "Silver",
+        "amount": 30
+      },
+      {
+        "name": "Crystal",
+        "amount": 10
+      }
+    ],
+    "quantity": null,
+    "tier": 4,
+    "biome": "mountain",
+    "description": "It's see-through and tears through."
+  },
+  {
+    "id": "demolisher",
+    "name": "Demolisher",
+    "wiki": "https://valheim.weirdgloop.org/w/Demolisher",
+    "gameId": "SledgeDemolisher",
+    "category": "sledge",
+    "hands": "2h",
+    "type": "Club 2h",
+    "image": "img/weapons/demolisher.png",
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "blunt": 145
+    },
+    "perLevel": {},
+    "damageMax": {
+      "blunt": 145
+    },
+    "stamina": 28,
+    "knockback": 210,
+    "materials": [
+      {
+        "name": "Yggdrasil Wood",
+        "amount": 10
+      },
+      {
+        "name": "Iron",
+        "amount": 20
+      },
+      {
+        "name": "Refined Eitr",
+        "amount": 10
+      }
+    ],
+    "quantity": null,
+    "tier": 6,
+    "biome": "mistlands",
+    "description": "This mighty sledge yearns to wreak havoc."
+  },
+  {
+    "id": "draugr-fang",
+    "name": "Draugr Fang",
+    "wiki": "https://valheim.weirdgloop.org/w/Draugr_Fang",
+    "gameId": "BowDraugrFang",
+    "category": "bow",
+    "hands": "2h",
+    "type": "Bow",
+    "image": "img/weapons/draugr-fang.png",
+    "station": "Forge",
+    "stationLevel": 2,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 47,
+      "poison": 5
+    },
+    "perLevel": {
+      "poison": 5
+    },
+    "damageMax": {
+      "pierce": 47,
+      "poison": 20
+    },
+    "stamina": 10,
+    "knockback": 20,
+    "materials": [
+      {
+        "name": "Ancient Bark",
+        "amount": 10
+      },
+      {
+        "name": "Silver",
+        "amount": 20
+      },
+      {
+        "name": "Deer Hide",
+        "amount": 2
+      },
+      {
+        "name": "Guck",
+        "amount": 10
+      }
+    ],
+    "quantity": null,
+    "tier": 4,
+    "biome": "mountain",
+    "description": "Dark wood strung with glistening sinew. A vicious thing."
+  },
+  {
+    "id": "dundr",
+    "name": "Dundr",
+    "wiki": "https://valheim.weirdgloop.org/w/Dundr",
+    "gameId": "StaffLightning",
+    "category": "magic",
+    "hands": "2h",
+    "type": "Elemental magic",
+    "image": null,
+    "station": "Galdr Table",
+    "stationLevel": 2,
+    "maxQuality": 4,
+    "damage": {
+      "lightning": 20
+    },
+    "perLevel": {
+      "lightning": 3
+    },
+    "damageMax": {
+      "lightning": 29
+    },
+    "stamina": null,
+    "knockback": 210,
+    "materials": [
+      {
+        "name": "Ashwood",
+        "amount": 10
+      },
+      {
+        "name": "Flametal",
+        "amount": 4
+      },
+      {
+        "name": "Celestial Feather",
+        "amount": 3
+      },
+      {
+        "name": "Bloodstone",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "What happens next may shock you."
+  },
+  {
+    "id": "dyrnwyn",
+    "name": "Dyrnwyn",
+    "wiki": "https://valheim.weirdgloop.org/w/Dyrnwyn",
+    "gameId": "SwordDyrnwyn",
+    "category": "sword",
+    "hands": "1h",
+    "type": "Sword",
+    "image": "img/weapons/dyrnwyn.png",
+    "station": "Black forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 145,
+      "fire": 10
+    },
+    "perLevel": {
+      "slash": 6
+    },
+    "damageMax": {
+      "slash": 163,
+      "fire": 10
+    },
+    "stamina": 16,
+    "knockback": 40,
+    "materials": [
+      {
+        "name": "Dyrnwyn hilt fragment",
+        "amount": 1
+      },
+      {
+        "name": "Dyrnwyn blade fragment",
+        "amount": 1
+      },
+      {
+        "name": "Dyrnwyn tip fragment",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 20
+      },
+      {
+        "name": "Bloodstone",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "The sword that was broken is whole once more. Its flames burn hot, fuelled by the memories of ancient warriors."
+  },
+  {
+    "id": "early-axes",
+    "name": "Early Axes",
+    "wiki": "https://valheim.weirdgloop.org/w/Early_Axes",
+    "gameId": "AxeEarly",
+    "category": "axe",
+    "hands": "2h",
+    "type": "axe dw",
+    "image": "img/weapons/early-axes.png",
+    "station": "Workbench",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 30,
+      "chop": 35
+    },
+    "perLevel": {
+      "slash": 5,
+      "chop": 3
+    },
+    "damageMax": {
+      "slash": 45,
+      "chop": 44
+    },
+    "stamina": 6,
+    "knockback": 20,
+    "materials": [
+      {
+        "name": "Curious Axe Head",
+        "amount": 1
+      },
+      {
+        "name": "Mysterious Axe Head",
+        "amount": 1
+      },
+      {
+        "name": "Wood",
+        "amount": 4
+      }
+    ],
+    "quantity": null,
+    "tier": 1,
+    "biome": "meadows",
+    "description": "Mighty weapons from long ago, from a time when the world was still young and incomplete..."
+  },
+  {
+    "id": "echo-spike",
+    "name": "Echo Spike",
+    "wiki": "https://valheim.weirdgloop.org/w/Echo_Spike",
+    "gameId": "StaffOrbofAhri",
+    "category": "magic",
+    "hands": "2h",
+    "type": "Blood magic",
+    "image": "img/weapons/echo-spike.png",
+    "station": "Frost Foundry",
+    "stationLevel": 3,
+    "maxQuality": 4,
+    "damage": {
+      "fire": 50,
+      "frost": 50
+    },
+    "perLevel": {},
+    "damageMax": {
+      "fire": 50,
+      "frost": 50
+    },
+    "stamina": null,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Cast Echo Spike",
+        "amount": 1
+      },
+      {
+        "name": "Liquid Frost",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "A chill that goes right through to the bone."
+  },
+  {
+    "id": "ember-charge",
+    "name": "Ember Charge",
+    "wiki": "https://valheim.weirdgloop.org/w/Ember_Charge",
+    "gameId": "BombDynamite",
+    "category": "bomb",
+    "hands": null,
+    "type": "Bomb",
+    "image": "img/weapons/ember-charge.png",
+    "station": "Workbench",
+    "stationLevel": 1,
+    "maxQuality": 1,
+    "damage": {
+      "blunt": 140,
+      "chop": 100,
+      "pickaxe": 50
+    },
+    "perLevel": {},
+    "damageMax": {
+      "blunt": 140,
+      "chop": 100,
+      "pickaxe": 50
+    },
+    "stamina": 8,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Seal Pelt",
+        "amount": 2
+      },
+      {
+        "name": "Embers",
+        "amount": 1
+      }
+    ],
+    "quantity": 10,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "Trapped embers, ready to burst. Caution is advised."
+  },
+  {
+    "id": "fang-spear",
+    "name": "Fang Spear",
+    "wiki": "https://valheim.weirdgloop.org/w/Fang_Spear",
+    "gameId": "SpearWolfFang",
+    "category": "spear",
+    "hands": "1h",
+    "type": "Spear",
+    "image": "img/weapons/fang-spear.png",
+    "station": "Forge",
+    "stationLevel": 3,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 75
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 75
+    },
+    "stamina": 12,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Ancient Bark",
+        "amount": 10
+      },
+      {
+        "name": "Wolf Fang",
+        "amount": 4
+      },
+      {
+        "name": "Leather Scraps",
+        "amount": 2
+      },
+      {
+        "name": "Silver",
+        "amount": 2
+      }
+    ],
+    "quantity": null,
+    "tier": 4,
+    "biome": "mountain",
+    "description": "Even in death, the wolf's tooth aches for flesh."
+  },
+  {
+    "id": "finewood-bow",
+    "name": "Finewood Bow",
+    "wiki": "https://valheim.weirdgloop.org/w/Finewood_Bow",
+    "gameId": "BowFineWood",
+    "category": "bow",
+    "hands": "2h",
+    "type": "Bow",
+    "image": "img/weapons/finewood-bow.png",
+    "station": "Workbench",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 32
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 32
+    },
+    "stamina": 6,
+    "knockback": 5,
+    "materials": [
+      {
+        "name": "Finewood",
+        "amount": 10
+      },
+      {
+        "name": "Corewood",
+        "amount": 10
+      },
+      {
+        "name": "Deer Hide",
+        "amount": 2
+      }
+    ],
+    "quantity": null,
+    "tier": 2,
+    "biome": "black-forest",
+    "description": "A simple bow of strong and supple wood."
+  },
+  {
+    "id": "fire-arrow",
+    "name": "Fire Arrow",
+    "wiki": "https://valheim.weirdgloop.org/w/Fire_Arrow",
+    "gameId": "ArrowFire",
+    "category": "arrow",
+    "hands": null,
+    "type": "Arrow",
+    "image": "img/weapons/fire-arrow.png",
+    "station": "Workbench",
+    "stationLevel": 2,
+    "maxQuality": 1,
+    "damage": {
+      "pierce": 11,
+      "fire": 22
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 11,
+      "fire": 22
+    },
+    "stamina": null,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 8
+      },
+      {
+        "name": "Resin",
+        "amount": 8
+      },
+      {
+        "name": "Feathers",
+        "amount": 2
+      }
+    ],
+    "quantity": 20,
+    "tier": 1,
+    "biome": "meadows",
+    "description": "This arrow burns whatever it pierces."
+  },
+  {
+    "id": "flametal-mace",
+    "name": "Flametal Mace",
+    "wiki": "https://valheim.weirdgloop.org/w/Flametal_Mace",
+    "gameId": "MaceEldner",
+    "category": "club",
+    "hands": "1h",
+    "type": "Club 1h",
+    "image": "img/weapons/flametal-mace.png",
+    "station": "Black Forge",
+    "stationLevel": 3,
+    "maxQuality": 4,
+    "damage": {
+      "blunt": 135
+    },
+    "perLevel": {
+      "blunt": 6
+    },
+    "damageMax": {
+      "blunt": 153
+    },
+    "stamina": 16,
+    "knockback": 100,
+    "materials": [
+      {
+        "name": "Charred Bone",
+        "amount": 10
+      },
+      {
+        "name": "Flametal",
+        "amount": 15
+      },
+      {
+        "name": "Sulfur",
+        "amount": 5
+      },
+      {
+        "name": "Asksvin Hide",
+        "amount": 3
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "Dense yet spiked flametal, perfect for bashing enemy faces in."
+  },
+  {
+    "id": "flint-axe",
+    "name": "Flint Axe",
+    "wiki": "https://valheim.weirdgloop.org/w/Flint_Axe",
+    "gameId": "AxeFlint",
+    "category": "axe",
+    "hands": "1h",
+    "type": "Axe",
+    "image": "img/weapons/flint-axe.png",
+    "station": "Workbench",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 20,
+      "chop": 30
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 20,
+      "chop": 30
+    },
+    "stamina": 6,
+    "knockback": 50,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 4
+      },
+      {
+        "name": "Flint",
+        "amount": 6
+      }
+    ],
+    "quantity": null,
+    "tier": 1,
+    "biome": "meadows",
+    "description": "Sharper than stone."
+  },
+  {
+    "id": "flint-knife",
+    "name": "Flint Knife",
+    "wiki": "https://valheim.weirdgloop.org/w/Flint_Knife",
+    "gameId": "KnifeFlint",
+    "category": "knife",
+    "hands": "1h",
+    "type": "Knife",
+    "image": "img/weapons/flint-knife.png",
+    "station": "Workbench",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 5,
+      "pierce": 5
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 5,
+      "pierce": 5
+    },
+    "stamina": 4,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 2
+      },
+      {
+        "name": "Flint",
+        "amount": 4
+      },
+      {
+        "name": "Leather Scraps",
+        "amount": 2
+      }
+    ],
+    "quantity": null,
+    "tier": 1,
+    "biome": "meadows",
+    "description": "Sharpened flint. A reliable tool."
+  },
+  {
+    "id": "flint-spear",
+    "name": "Flint Spear",
+    "wiki": "https://valheim.weirdgloop.org/w/Flint_Spear",
+    "gameId": "SpearFlint",
+    "category": "spear",
+    "hands": "1h",
+    "type": "Spear",
+    "image": "img/weapons/flint-spear.png",
+    "station": "Workbench",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 20
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 20
+    },
+    "stamina": 6,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 5
+      },
+      {
+        "name": "Flint",
+        "amount": 10
+      },
+      {
+        "name": "Leather Scraps",
+        "amount": 2
+      }
+    ],
+    "quantity": null,
+    "tier": 1,
+    "biome": "meadows",
+    "description": "If your eye marks a thing for death, let your arm send the messenger."
+  },
+  {
+    "id": "flinthead-arrow",
+    "name": "Flinthead Arrow",
+    "wiki": "https://valheim.weirdgloop.org/w/Flinthead_Arrow",
+    "gameId": "ArrowFlint",
+    "category": "arrow",
+    "hands": null,
+    "type": "Arrow",
+    "image": "img/weapons/flinthead-arrow.png",
+    "station": "Workbench",
+    "stationLevel": 2,
+    "maxQuality": 1,
+    "damage": {
+      "pierce": 27
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 27
+    },
+    "stamina": null,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 8
+      },
+      {
+        "name": "Flint",
+        "amount": 2
+      },
+      {
+        "name": "Feathers",
+        "amount": 2
+      }
+    ],
+    "quantity": 20,
+    "tier": 1,
+    "biome": "meadows",
+    "description": "A hide-breaker with a head of flint."
+  },
+  {
+    "id": "frost-arrow",
+    "name": "Frost Arrow",
+    "wiki": "https://valheim.weirdgloop.org/w/Frost_Arrow",
+    "gameId": "ArrowFrost",
+    "category": "arrow",
+    "hands": null,
+    "type": "Arrow",
+    "image": "img/weapons/frost-arrow.png",
+    "station": "Workbench",
+    "stationLevel": 4,
+    "maxQuality": 1,
+    "damage": {
+      "pierce": 26,
+      "frost": 52
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 26,
+      "frost": 52
+    },
+    "stamina": null,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 8
+      },
+      {
+        "name": "Obsidian",
+        "amount": 4
+      },
+      {
+        "name": "Feathers",
+        "amount": 2
+      },
+      {
+        "name": "Freeze Gland",
+        "amount": 1
+      }
+    ],
+    "quantity": 20,
+    "tier": 4,
+    "biome": "mountain",
+    "description": "A shard of piercing ice."
+  },
+  {
+    "id": "frostfire-atgeir",
+    "name": "Frostfire Atgeir",
+    "wiki": "https://valheim.weirdgloop.org/w/Frostfire_Atgeir",
+    "gameId": "AtgeirGold_FrostFire",
+    "category": "polearm",
+    "hands": "2h",
+    "type": "Polearm",
+    "image": "img/weapons/frostfire-atgeir.png",
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 148,
+      "fire": 12,
+      "frost": 88
+    },
+    "perLevel": {
+      "pierce": 10,
+      "fire": 3,
+      "frost": 3
+    },
+    "damageMax": {
+      "pierce": 178,
+      "fire": 21,
+      "frost": 97
+    },
+    "stamina": 20,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Atgeir",
+        "amount": 1
+      },
+      {
+        "name": "Frostfire Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "Let the flames begin to devour, while the ice claims whatever remains."
+  },
+  {
+    "id": "frostfire-axe",
+    "name": "Frostfire Axe",
+    "wiki": "https://valheim.weirdgloop.org/w/Frostfire_Axe",
+    "gameId": "AxeGold_FrostFire",
+    "category": "axe",
+    "hands": "1h",
+    "type": "Axe 1h",
+    "image": "img/weapons/frostfire-axe.png",
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 144,
+      "chop": 90,
+      "fire": 12,
+      "frost": 88
+    },
+    "perLevel": {
+      "slash": 10,
+      "chop": 3,
+      "fire": 3,
+      "frost": 3
+    },
+    "damageMax": {
+      "slash": 174,
+      "chop": 99,
+      "fire": 21,
+      "frost": 97
+    },
+    "stamina": 16,
+    "knockback": 60,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Axe",
+        "amount": 1
+      },
+      {
+        "name": "Frostfire Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "Burn it all to the ground, or freeze it in an eternal moment of destruction..."
+  },
+  {
+    "id": "frostfire-bow",
+    "name": "Frostfire Bow",
+    "wiki": "https://valheim.weirdgloop.org/w/Frostfire_Bow",
+    "gameId": "BowGold_FrostFire",
+    "category": "bow",
+    "hands": "2h",
+    "type": "Bow",
+    "image": null,
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 68,
+      "fire": 12,
+      "frost": 88,
+      "spirit": 10
+    },
+    "perLevel": {
+      "pierce": 8,
+      "fire": 3,
+      "frost": 3,
+      "spirit": 5
+    },
+    "damageMax": {
+      "pierce": 92,
+      "fire": 21,
+      "frost": 97,
+      "spirit": 25
+    },
+    "stamina": 14,
+    "knockback": 25,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Bow",
+        "amount": 1
+      },
+      {
+        "name": "Frostfire Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "Keep your head cool as you draw, and then let your fury loose with your arrows."
+  },
+  {
+    "id": "frostfire-crossbow",
+    "name": "Frostfire Crossbow",
+    "wiki": "https://valheim.weirdgloop.org/w/Frostfire_Crossbow",
+    "gameId": "CrossbowGold_FrostFire",
+    "category": "crossbow",
+    "hands": "2h",
+    "type": "Crossbow",
+    "image": null,
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 232,
+      "chop": 180,
+      "fire": 12,
+      "frost": 88
+    },
+    "perLevel": {
+      "pierce": 8,
+      "chop": 5,
+      "fire": 3,
+      "frost": 3
+    },
+    "damageMax": {
+      "pierce": 256,
+      "chop": 195,
+      "fire": 21,
+      "frost": 97
+    },
+    "stamina": null,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Crossbow",
+        "amount": 1
+      },
+      {
+        "name": "Frostfire Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "If your enemies don't freeze as you take aim, they are sure to do so once they are hit."
+  },
+  {
+    "id": "frostfire-dagger",
+    "name": "Frostfire Dagger",
+    "wiki": "https://valheim.weirdgloop.org/w/Frostfire_Dagger",
+    "gameId": "KnifeGold_FrostFire",
+    "category": "knife",
+    "hands": "1h",
+    "type": "knife",
+    "image": null,
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 62,
+      "pierce": 62,
+      "fire": 10,
+      "frost": 88
+    },
+    "perLevel": {
+      "slash": 5,
+      "pierce": 5,
+      "fire": 3,
+      "frost": 3
+    },
+    "damageMax": {
+      "slash": 77,
+      "pierce": 77,
+      "fire": 19,
+      "frost": 97
+    },
+    "stamina": 14,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Dagger",
+        "amount": 1
+      },
+      {
+        "name": "Frostfire Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "A cut from this blade stings like ice, then burns like the flame."
+  },
+  {
+    "id": "frostfire-greataxe",
+    "name": "Frostfire Greataxe",
+    "wiki": "https://valheim.weirdgloop.org/w/Frostfire_Greataxe",
+    "gameId": "BattleaxeGold_FrostFire",
+    "category": "battleaxe",
+    "hands": "2h",
+    "type": "axe 2h",
+    "image": null,
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 154,
+      "chop": 40,
+      "fire": 12,
+      "frost": 88
+    },
+    "perLevel": {
+      "slash": 10,
+      "chop": 2.5,
+      "fire": 3,
+      "frost": 3
+    },
+    "damageMax": {
+      "slash": 184,
+      "chop": 47.5,
+      "fire": 21,
+      "frost": 97
+    },
+    "stamina": 22,
+    "knockback": 70,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Greataxe",
+        "amount": 1
+      },
+      {
+        "name": "Frostfire Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "Strike your foes with a frozen inferno!"
+  },
+  {
+    "id": "frostfire-greatsword",
+    "name": "Frostfire Greatsword",
+    "wiki": "https://valheim.weirdgloop.org/w/Frostfire_Greatsword",
+    "gameId": "THSwordGold_FrostFire",
+    "category": "sword",
+    "hands": "2h",
+    "type": "sword 2h",
+    "image": null,
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 186,
+      "fire": 12,
+      "frost": 88
+    },
+    "perLevel": {
+      "slash": 10,
+      "fire": 3,
+      "frost": 3
+    },
+    "damageMax": {
+      "slash": 216,
+      "fire": 21,
+      "frost": 97
+    },
+    "stamina": 20,
+    "knockback": 55,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Greatsword",
+        "amount": 1
+      },
+      {
+        "name": "Frostfire Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "The choice between a fiery end and a frozen one is simple: Both at the same time."
+  },
+  {
+    "id": "frostfire-mace",
+    "name": "Frostfire Mace",
+    "wiki": "https://valheim.weirdgloop.org/w/Frostfire_Mace",
+    "gameId": "MaceGold_FrostFire",
+    "category": "club",
+    "hands": "1h",
+    "type": "Club 1h",
+    "image": null,
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "blunt": 142,
+      "fire": 12,
+      "frost": 88
+    },
+    "perLevel": {
+      "blunt": 10,
+      "fire": 3,
+      "frost": 3
+    },
+    "damageMax": {
+      "blunt": 172,
+      "fire": 21,
+      "frost": 97
+    },
+    "stamina": 16,
+    "knockback": 90,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Mace",
+        "amount": 1
+      },
+      {
+        "name": "Frostfire Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "Are those sparks that fly as this weapon finds its impact, or are they shards of ice?"
+  },
+  {
+    "id": "frostfire-sledge",
+    "name": "Frostfire Sledge",
+    "wiki": "https://valheim.weirdgloop.org/w/Frostfire_Sledge",
+    "gameId": "SledgeGold_FrostFire",
+    "category": "sledge",
+    "hands": "2h",
+    "type": "Club 2h",
+    "image": null,
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "blunt": 200,
+      "fire": 12,
+      "frost": 88
+    },
+    "perLevel": {
+      "blunt": 10,
+      "fire": 3,
+      "frost": 3
+    },
+    "damageMax": {
+      "blunt": 230,
+      "fire": 21,
+      "frost": 97
+    },
+    "stamina": 28,
+    "knockback": 210,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Sledge",
+        "amount": 1
+      },
+      {
+        "name": "Frostfire Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "Is it so cold that it's burning, or so hot that it's freezing?"
+  },
+  {
+    "id": "frostfire-spear",
+    "name": "Frostfire Spear",
+    "wiki": "https://valheim.weirdgloop.org/w/Frostfire_Spear",
+    "gameId": "SpearGold_FrostFire",
+    "category": "spear",
+    "hands": "1h",
+    "type": "Spear",
+    "image": null,
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 148,
+      "fire": 12,
+      "frost": 88
+    },
+    "perLevel": {
+      "pierce": 10,
+      "fire": 3,
+      "frost": 3
+    },
+    "damageMax": {
+      "pierce": 178,
+      "fire": 21,
+      "frost": 97
+    },
+    "stamina": 16,
+    "knockback": 20,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Spear",
+        "amount": 1
+      },
+      {
+        "name": "Frostfire Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "Dipped in frozen flames, this spear spells certain doom."
+  },
+  {
+    "id": "frostfire-sword",
+    "name": "Frostfire Sword",
+    "wiki": "https://valheim.weirdgloop.org/w/Frostfire_Sword",
+    "gameId": "SwordGold_FrostFire",
+    "category": "sword",
+    "hands": "1h",
+    "type": "Sword",
+    "image": "img/weapons/frostfire-sword.png",
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 138,
+      "fire": 12,
+      "frost": 88
+    },
+    "perLevel": {
+      "slash": 10,
+      "fire": 3,
+      "frost": 3
+    },
+    "damageMax": {
+      "slash": 168,
+      "fire": 21,
+      "frost": 97
+    },
+    "stamina": 16,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Sword",
+        "amount": 1
+      },
+      {
+        "name": "Frostfire Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "Flames dance along this blade, but are they hot or cold?"
+  },
+  {
+    "id": "frostner",
+    "name": "Frostner",
+    "wiki": "https://valheim.weirdgloop.org/w/Frostner",
+    "gameId": "MaceSilver",
+    "category": "club",
+    "hands": "1h",
+    "type": "Club 1h",
+    "image": "img/weapons/frostner.png",
+    "station": "Forge",
+    "stationLevel": 3,
+    "maxQuality": 4,
+    "damage": {
+      "blunt": 35,
+      "frost": 40,
+      "spirit": 20
+    },
+    "perLevel": {
+      "blunt": 0,
+      "frost": 6
+    },
+    "damageMax": {
+      "blunt": 35,
+      "frost": 58,
+      "spirit": 20
+    },
+    "stamina": 12,
+    "knockback": 100,
+    "materials": [
+      {
+        "name": "Ancient Bark",
+        "amount": 10
+      },
+      {
+        "name": "Silver",
+        "amount": 30
+      },
+      {
+        "name": "Ymir Flesh",
+        "amount": 5
+      },
+      {
+        "name": "Freeze Gland",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 4,
+    "biome": "mountain",
+    "description": "The dead fear silver. Remind them why."
+  },
+  {
+    "id": "himminafl",
+    "name": "Himminafl",
+    "wiki": "https://valheim.weirdgloop.org/w/Himminafl",
+    "gameId": "AtgeirHimminAfl",
+    "category": "polearm",
+    "hands": "2h",
+    "type": "Polearm",
+    "image": null,
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 85,
+      "lightning": 40
+    },
+    "perLevel": {
+      "pierce": 0,
+      "lightning": 6
+    },
+    "damageMax": {
+      "pierce": 85,
+      "lightning": 58
+    },
+    "stamina": 20,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Yggdrasil Wood",
+        "amount": 10
+      },
+      {
+        "name": "Refined Eitr",
+        "amount": 15
+      },
+      {
+        "name": "Silver",
+        "amount": 5
+      },
+      {
+        "name": "Mandible",
+        "amount": 2
+      }
+    ],
+    "quantity": null,
+    "tier": 6,
+    "biome": "mistlands",
+    "description": "It might not be a hammer, but Thor himself would still approve of this weapon."
+  },
+  {
+    "id": "huntsman-bow",
+    "name": "Huntsman Bow",
+    "wiki": "https://valheim.weirdgloop.org/w/Huntsman_Bow",
+    "gameId": "BowHuntsman",
+    "category": "bow",
+    "hands": "2h",
+    "type": "Bow",
+    "image": "img/weapons/huntsman-bow.png",
+    "station": "Forge",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 42
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 42
+    },
+    "stamina": 8,
+    "knockback": 10,
+    "materials": [
+      {
+        "name": "Finewood",
+        "amount": 10
+      },
+      {
+        "name": "Iron",
+        "amount": 20
+      },
+      {
+        "name": "Feathers",
+        "amount": 10
+      },
+      {
+        "name": "Deer Hide",
+        "amount": 2
+      }
+    ],
+    "quantity": null,
+    "tier": 3,
+    "biome": "swamp",
+    "description": "Finely worked and strung. A huntsman's joy."
+  },
+  {
+    "id": "iron-atgeir",
+    "name": "Iron Atgeir",
+    "wiki": "https://valheim.weirdgloop.org/w/Iron_Atgeir",
+    "gameId": "AtgeirIron",
+    "category": "polearm",
+    "hands": "2h",
+    "type": "Polearm",
+    "image": "img/weapons/iron-atgeir.png",
+    "station": "Forge",
+    "stationLevel": 2,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 65
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 65
+    },
+    "stamina": 14,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 10
+      },
+      {
+        "name": "Iron",
+        "amount": 30
+      },
+      {
+        "name": "Leather Scraps",
+        "amount": 2
+      }
+    ],
+    "quantity": null,
+    "tier": 3,
+    "biome": "swamp",
+    "description": "Blood-drinker, skull-cracker, death-bringer."
+  },
+  {
+    "id": "iron-axe",
+    "name": "Iron Axe",
+    "wiki": "https://valheim.weirdgloop.org/w/Iron_Axe",
+    "gameId": "AxeIron",
+    "category": "axe",
+    "hands": "1h",
+    "type": "Axe 1h",
+    "image": "img/weapons/iron-axe.png",
+    "station": "Forge",
+    "stationLevel": 2,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 60,
+      "chop": 50
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 60,
+      "chop": 50
+    },
+    "stamina": 10,
+    "knockback": 50,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 4
+      },
+      {
+        "name": "Iron",
+        "amount": 20
+      },
+      {
+        "name": "Leather Scraps",
+        "amount": 2
+      }
+    ],
+    "quantity": null,
+    "tier": 3,
+    "biome": "swamp",
+    "description": "Sharp and strong, a woodcutter's friend."
+  },
+  {
+    "id": "iron-bolt",
+    "name": "Iron Bolt",
+    "wiki": "https://valheim.weirdgloop.org/w/Iron_Bolt",
+    "gameId": "BoltIron",
+    "category": "bolt",
+    "hands": null,
+    "type": "Bolt",
+    "image": "img/weapons/iron-bolt.png",
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "maxQuality": 1,
+    "damage": {
+      "pierce": 42
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 42
+    },
+    "stamina": null,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 8
+      },
+      {
+        "name": "Iron",
+        "amount": 1
+      },
+      {
+        "name": "Feathers",
+        "amount": 2
+      }
+    ],
+    "quantity": 20,
+    "tier": 3,
+    "biome": "swamp",
+    "description": "A sturdy iron missile."
+  },
+  {
+    "id": "iron-mace",
+    "name": "Iron Mace",
+    "wiki": "https://valheim.weirdgloop.org/w/Iron_Mace",
+    "gameId": "MaceIron",
+    "category": "club",
+    "hands": "1h",
+    "type": "Club 1h",
+    "image": "img/weapons/iron-mace.png",
+    "station": "Forge",
+    "stationLevel": 2,
+    "maxQuality": 4,
+    "damage": {
+      "blunt": 55
+    },
+    "perLevel": {},
+    "damageMax": {
+      "blunt": 55
+    },
+    "stamina": 10,
+    "knockback": 90,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 4
+      },
+      {
+        "name": "Iron",
+        "amount": 20
+      },
+      {
+        "name": "Leather Scraps",
+        "amount": 3
+      }
+    ],
+    "quantity": null,
+    "tier": 3,
+    "biome": "swamp",
+    "description": "A fist-sized lump of iron on a wooden shaft."
+  },
+  {
+    "id": "iron-pickaxe",
+    "name": "Iron Pickaxe",
+    "wiki": "https://valheim.weirdgloop.org/w/Iron_Pickaxe",
+    "gameId": "PickaxeIron",
+    "category": "pickaxe",
+    "hands": "2h",
+    "type": "Pickaxe",
+    "image": "img/weapons/iron-pickaxe.png",
+    "station": "Forge",
+    "stationLevel": 2,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 33,
+      "pickaxe": 33
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 33,
+      "pickaxe": 33
+    },
+    "stamina": 10,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Corewood",
+        "amount": 3
+      },
+      {
+        "name": "Iron",
+        "amount": 20
+      }
+    ],
+    "quantity": null,
+    "tier": 3,
+    "biome": "swamp",
+    "description": "A sturdy tool of hardened iron."
+  },
+  {
+    "id": "iron-sledge",
+    "name": "Iron Sledge",
+    "wiki": "https://valheim.weirdgloop.org/w/Iron_Sledge",
+    "gameId": "SledgeIron",
+    "category": "sledge",
+    "hands": "2h",
+    "type": "Club 2h",
+    "image": "img/weapons/iron-sledge.png",
+    "station": "Forge",
+    "stationLevel": 2,
+    "maxQuality": 4,
+    "damage": {
+      "blunt": 55
+    },
+    "perLevel": {},
+    "damageMax": {
+      "blunt": 55
+    },
+    "stamina": 20,
+    "knockback": 200,
+    "materials": [
+      {
+        "name": "Ancient Bark",
+        "amount": 10
+      },
+      {
+        "name": "Iron",
+        "amount": 30
+      },
+      {
+        "name": "Ymir Flesh",
+        "amount": 4
+      },
+      {
+        "name": "Draugr Elite Trophy",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 3,
+    "biome": "swamp",
+    "description": "A mighty hammer, worthy of a champion."
+  },
+  {
+    "id": "iron-sword",
+    "name": "Iron Sword",
+    "wiki": "https://valheim.weirdgloop.org/w/Iron_Sword",
+    "gameId": "SwordIron",
+    "category": "sword",
+    "hands": "1h",
+    "type": "Sword",
+    "image": "img/weapons/iron-sword.png",
+    "station": "Forge",
+    "stationLevel": 2,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 55
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 55
+    },
+    "stamina": 10,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 2
+      },
+      {
+        "name": "Iron",
+        "amount": 20
+      },
+      {
+        "name": "Leather Scraps",
+        "amount": 3
+      }
+    ],
+    "quantity": null,
+    "tier": 3,
+    "biome": "swamp",
+    "description": "The straight line between life and death runs along the edge of this blade."
+  },
+  {
+    "id": "ironhead-arrow",
+    "name": "Ironhead Arrow",
+    "wiki": "https://valheim.weirdgloop.org/w/Ironhead_Arrow",
+    "gameId": "ArrowIron",
+    "category": "arrow",
+    "hands": null,
+    "type": "Arrow",
+    "image": "img/weapons/ironhead-arrow.png",
+    "station": "Forge",
+    "stationLevel": 2,
+    "maxQuality": 1,
+    "damage": {
+      "pierce": 42
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 42
+    },
+    "stamina": null,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 8
+      },
+      {
+        "name": "Iron",
+        "amount": 1
+      },
+      {
+        "name": "Feathers",
+        "amount": 2
+      }
+    ],
+    "quantity": 20,
+    "tier": 3,
+    "biome": "swamp",
+    "description": "Capped with iron and flighted with dark feathers."
+  },
+  {
+    "id": "jotun-bane",
+    "name": "Jotun Bane",
+    "wiki": "https://valheim.weirdgloop.org/w/Jotun_Bane",
+    "gameId": "AxeJotunBane",
+    "category": "axe",
+    "hands": "1h",
+    "type": "Axe 1h",
+    "image": "img/weapons/jotun-bane.png",
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 80,
+      "chop": 70,
+      "poison": 40
+    },
+    "perLevel": {
+      "slash": 5,
+      "poison": 0
+    },
+    "damageMax": {
+      "slash": 95,
+      "chop": 70,
+      "poison": 40
+    },
+    "stamina": 16,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Yggdrasil Wood",
+        "amount": 5
+      },
+      {
+        "name": "Iron",
+        "amount": 15
+      },
+      {
+        "name": "Bilebag",
+        "amount": 3
+      },
+      {
+        "name": "Refined Eitr",
+        "amount": 10
+      }
+    ],
+    "quantity": null,
+    "tier": 6,
+    "biome": "mistlands",
+    "description": "Not even the giants of old could weather the poisonous bite of this weapon."
+  },
+  {
+    "id": "klossen",
+    "name": "Klossen",
+    "wiki": "https://valheim.weirdgloop.org/w/Klossen",
+    "gameId": "MaceEldnerNature",
+    "category": "club",
+    "hands": "1h",
+    "type": "Club 1h",
+    "image": "img/weapons/klossen.png",
+    "station": "Black forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "blunt": 135,
+      "poison": 10
+    },
+    "perLevel": {
+      "blunt": 6
+    },
+    "damageMax": {
+      "blunt": 153,
+      "poison": 10
+    },
+    "stamina": 16,
+    "knockback": 100,
+    "materials": [
+      {
+        "name": "Flametal Mace",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 8
+      },
+      {
+        "name": "Jade",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "If the force of your blow isn't enough to knock your enemies to the ground, perhaps the primal roots will hold them down for you."
+  },
+  {
+    "id": "krom",
+    "name": "Krom",
+    "wiki": "https://valheim.weirdgloop.org/w/Krom",
+    "gameId": "THSwordKrom",
+    "category": "sword",
+    "hands": "2h",
+    "type": "Sword 2h",
+    "image": "img/weapons/krom.png",
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 150
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 150
+    },
+    "stamina": 20,
+    "knockback": 55,
+    "materials": [
+      {
+        "name": "Iron",
+        "amount": 30
+      },
+      {
+        "name": "Bronze",
+        "amount": 20
+      },
+      {
+        "name": "Scale Hide",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 6,
+    "biome": "mistlands",
+    "description": "As deadly as it is shiny, and it's very shiny."
+  },
+  {
+    "id": "lightning-strike",
+    "name": "Lightning Strike",
+    "wiki": "https://valheim.weirdgloop.org/w/Lightning_Strike",
+    "gameId": "StaffThunderBlood",
+    "category": "magic",
+    "hands": "2h",
+    "type": "Elemental magic",
+    "image": "img/weapons/lightning-strike.png",
+    "station": "Frost Foundry",
+    "stationLevel": 3,
+    "maxQuality": 4,
+    "damage": {
+      "lightning": 300
+    },
+    "perLevel": {},
+    "damageMax": {
+      "lightning": 300
+    },
+    "stamina": null,
+    "knockback": 10,
+    "materials": [
+      {
+        "name": "Cast Lightning Strike",
+        "amount": 1
+      },
+      {
+        "name": "Liquid Frost",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "Simply point, and you shall summon the wrath of the sky."
+  },
+  {
+    "id": "mistwalker",
+    "name": "Mistwalker",
+    "wiki": "https://valheim.weirdgloop.org/w/Mistwalker",
+    "gameId": "SwordMistwalker",
+    "category": "sword",
+    "hands": "1h",
+    "type": "Sword",
+    "image": "img/weapons/mistwalker.png",
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 75,
+      "frost": 40
+    },
+    "perLevel": {
+      "slash": 0,
+      "frost": 6,
+      "spirit": 5
+    },
+    "damageMax": {
+      "slash": 75,
+      "frost": 58
+    },
+    "stamina": 16,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Finewood",
+        "amount": 3
+      },
+      {
+        "name": "Iron",
+        "amount": 15
+      },
+      {
+        "name": "Refined Eitr",
+        "amount": 10
+      },
+      {
+        "name": "Wisp",
+        "amount": 3
+      }
+    ],
+    "quantity": null,
+    "tier": 6,
+    "biome": "mistlands",
+    "description": "The faint glow seems to slice through the mist."
+  },
+  {
+    "id": "needle-arrow",
+    "name": "Needle Arrow",
+    "wiki": "https://valheim.weirdgloop.org/w/Needle_Arrow",
+    "gameId": "ArrowNeedle",
+    "category": "arrow",
+    "hands": null,
+    "type": "Arrow",
+    "image": "img/weapons/needle-arrow.png",
+    "station": "Workbench",
+    "stationLevel": 4,
+    "maxQuality": 1,
+    "damage": {
+      "pierce": 62
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 62
+    },
+    "stamina": null,
+    "knockback": 15,
+    "materials": [
+      {
+        "name": "Needle",
+        "amount": 4
+      },
+      {
+        "name": "Feathers",
+        "amount": 2
+      }
+    ],
+    "quantity": 20,
+    "tier": 5,
+    "biome": "plains",
+    "description": "The final stitch."
+  },
+  {
+    "id": "nidhogg",
+    "name": "Nidhögg",
+    "wiki": "https://valheim.weirdgloop.org/w/Nidh%C3%B6gg",
+    "gameId": "SwordNiedhogg",
+    "category": "sword",
+    "hands": "1h",
+    "type": "Sword",
+    "image": "img/weapons/nidhogg.png",
+    "station": "Black forge",
+    "stationLevel": 3,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 135
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 135
+    },
+    "stamina": 16,
+    "knockback": 40,
+    "materials": [
+      {
+        "name": "Charred Bone",
+        "amount": 3
+      },
+      {
+        "name": "Flametal",
+        "amount": 12
+      },
+      {
+        "name": "Asksvin Hide",
+        "amount": 2
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "Named after the evil dragon that dwells by the roots of the world tree, this sword heralds doom for those who cross its path."
+  },
+  {
+    "id": "nidhogg-the-bleeding",
+    "name": "Nidhögg the Bleeding",
+    "wiki": "https://valheim.weirdgloop.org/w/Nidh%C3%B6gg_the_Bleeding",
+    "gameId": "SwordNiedhoggBlood",
+    "category": "sword",
+    "hands": "1h",
+    "type": "Sword",
+    "image": "img/weapons/nidhogg-the-bleeding.png",
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 135
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 135
+    },
+    "stamina": 16,
+    "knockback": 40,
+    "materials": [
+      {
+        "name": "Nidhögg",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 6
+      },
+      {
+        "name": "Bloodstone",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "If you bleed, your foes are sure to do so as well."
+  },
+  {
+    "id": "nidhogg-the-primal",
+    "name": "Nidhögg the Primal",
+    "wiki": "https://valheim.weirdgloop.org/w/Nidh%C3%B6gg_the_Primal",
+    "gameId": "SwordNiedhoggNature",
+    "category": "sword",
+    "hands": "1h",
+    "type": "Sword",
+    "image": "img/weapons/nidhogg-the-primal.png",
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 135,
+      "poison": 10
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 135,
+      "poison": 10
+    },
+    "stamina": 16,
+    "knockback": 40,
+    "materials": [
+      {
+        "name": "Nidhögg",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 6
+      },
+      {
+        "name": "Jade",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "Tangle your foes in roots, like the namesake of this blade."
+  },
+  {
+    "id": "nidhogg-the-thundering",
+    "name": "Nidhögg the Thundering",
+    "wiki": "https://valheim.weirdgloop.org/w/Nidh%C3%B6gg_the_Thundering",
+    "gameId": "SwordNiedhoggLightning",
+    "category": "sword",
+    "hands": "1h",
+    "type": "Sword",
+    "image": "img/weapons/nidhogg-the-thundering.png",
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 135,
+      "lightning": 10
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 135,
+      "lightning": 10
+    },
+    "stamina": 16,
+    "knockback": 40,
+    "materials": [
+      {
+        "name": "Nidhögg",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 6
+      },
+      {
+        "name": "Iolite",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "The power of lightning dances along the blade of this sword, a promise of the pain to come."
+  },
+  {
+    "id": "nord-atgeir",
+    "name": "Nord Atgeir",
+    "wiki": "https://valheim.weirdgloop.org/w/Nord_Atgeir",
+    "gameId": "AtgeirGold",
+    "category": "polearm",
+    "hands": "2h",
+    "type": "Polearm",
+    "image": "img/weapons/nord-atgeir.png",
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 182
+    },
+    "perLevel": {
+      "pierce": 10
+    },
+    "damageMax": {
+      "pierce": 212
+    },
+    "stamina": 20,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Cast Nord Atgeir",
+        "amount": 1
+      },
+      {
+        "name": "Liquid Frost",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "The edge of this weapon is as deadly as it is shiny."
+  },
+  {
+    "id": "nord-axe",
+    "name": "Nord Axe",
+    "wiki": "https://valheim.weirdgloop.org/w/Nord_Axe",
+    "gameId": "AxeGold",
+    "category": "axe",
+    "hands": "1h",
+    "type": "Axe 1h",
+    "image": "img/weapons/nord-axe.png",
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 176,
+      "chop": 90
+    },
+    "perLevel": {
+      "slash": 10
+    },
+    "damageMax": {
+      "slash": 206,
+      "chop": 90
+    },
+    "stamina": 16,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Cast Nord Axe",
+        "amount": 1
+      },
+      {
+        "name": "Liquid Frost",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "A finely detailed axe, for finely cutting down your enemies."
+  },
+  {
+    "id": "nord-bow",
+    "name": "Nord Bow",
+    "wiki": "https://valheim.weirdgloop.org/w/Nord_Bow",
+    "gameId": "BowGold",
+    "category": "bow",
+    "hands": "2h",
+    "type": "Bow",
+    "image": "img/weapons/nord-bow.png",
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 100,
+      "spirit": 10
+    },
+    "perLevel": {
+      "pierce": 8,
+      "spirit": 12
+    },
+    "damageMax": {
+      "pierce": 124,
+      "spirit": 46
+    },
+    "stamina": 14,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Cast Nord Bow",
+        "amount": 1
+      },
+      {
+        "name": "Liquid Frost",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "This bow shall find its target with a golden precision."
+  },
+  {
+    "id": "nord-crossbow",
+    "name": "Nord Crossbow",
+    "wiki": "https://valheim.weirdgloop.org/w/Nord_Crossbow",
+    "gameId": "CrossbowGold",
+    "category": "crossbow",
+    "hands": "2h",
+    "type": "Crossbow",
+    "image": "img/weapons/nord-crossbow.png",
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 264,
+      "chop": 180
+    },
+    "perLevel": {
+      "pierce": 8,
+      "chop": 5
+    },
+    "damageMax": {
+      "pierce": 288,
+      "chop": 195
+    },
+    "stamina": null,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Cast Nord Crossbow",
+        "amount": 1
+      },
+      {
+        "name": "Liquid Frost",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "An incredible force is bound to this weapon, waiting to be unleashed."
+  },
+  {
+    "id": "nord-dagger",
+    "name": "Nord Dagger",
+    "wiki": "https://valheim.weirdgloop.org/w/Nord_Dagger",
+    "gameId": "KnifeGold",
+    "category": "knife",
+    "hands": "1h",
+    "type": "Knife",
+    "image": "img/weapons/nord-dagger.png",
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 75,
+      "pierce": 75
+    },
+    "perLevel": {
+      "slash": 5,
+      "pierce": 5
+    },
+    "damageMax": {
+      "slash": 90,
+      "pierce": 90
+    },
+    "stamina": 14,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Cast Nord Dagger",
+        "amount": 1
+      },
+      {
+        "name": "Liquid Frost",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "A flash of gold is the last thing your foes will ever see."
+  },
+  {
+    "id": "nord-greataxe",
+    "name": "Nord Greataxe",
+    "wiki": "https://valheim.weirdgloop.org/w/Nord_Greataxe",
+    "gameId": "BattleaxeGold",
+    "category": "battleaxe",
+    "hands": "2h",
+    "type": "Axe 2h",
+    "image": "img/weapons/nord-greataxe.png",
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 188,
+      "chop": 40
+    },
+    "perLevel": {
+      "slash": 10,
+      "chop": 2.5
+    },
+    "damageMax": {
+      "slash": 218,
+      "chop": 47.5
+    },
+    "stamina": 22,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Cast Nord Greataxe",
+        "amount": 1
+      },
+      {
+        "name": "Liquid Frost",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "A mighty axe fit for a mighty warrior."
+  },
+  {
+    "id": "nord-greatsword",
+    "name": "Nord Greatsword",
+    "wiki": "https://valheim.weirdgloop.org/w/Nord_Greatsword",
+    "gameId": "THSwordGold",
+    "category": "sword",
+    "hands": "2h",
+    "type": "Sword 2H",
+    "image": "img/weapons/nord-greatsword.png",
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 210
+    },
+    "perLevel": {
+      "slash": 10
+    },
+    "damageMax": {
+      "slash": 240
+    },
+    "stamina": 20,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Cast Nord Greatsword",
+        "amount": 1
+      },
+      {
+        "name": "Liquid Frost",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "A striking weapon, both visually and lethally."
+  },
+  {
+    "id": "nord-mace",
+    "name": "Nord Mace",
+    "wiki": "https://valheim.weirdgloop.org/w/Nord_Mace",
+    "gameId": "MaceGold",
+    "category": "club",
+    "hands": "1h",
+    "type": "Club 1h",
+    "image": "img/weapons/nord-mace.png",
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "blunt": 170
+    },
+    "perLevel": {
+      "blunt": 10
+    },
+    "damageMax": {
+      "blunt": 200
+    },
+    "stamina": 16,
+    "knockback": 90,
+    "materials": [
+      {
+        "name": "Cast Nord Mace",
+        "amount": 1
+      },
+      {
+        "name": "Liquid Frost",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "Hit hard and fast, and leave your foe no time to recover."
+  },
+  {
+    "id": "nord-sledge",
+    "name": "Nord Sledge",
+    "wiki": "https://valheim.weirdgloop.org/w/Nord_Sledge",
+    "gameId": "SledgeGold",
+    "category": "sledge",
+    "hands": "2h",
+    "type": "Club 2h",
+    "image": "img/weapons/nord-sledge.png",
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "blunt": 225
+    },
+    "perLevel": {
+      "blunt": 10
+    },
+    "damageMax": {
+      "blunt": 255
+    },
+    "stamina": 28,
+    "knockback": 210,
+    "materials": [
+      {
+        "name": "Cast Nord Sledge",
+        "amount": 1
+      },
+      {
+        "name": "Liquid Frost",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "With this weapon, your blows will be heavy as that of a troll."
+  },
+  {
+    "id": "nord-spear",
+    "name": "Nord Spear",
+    "wiki": "https://valheim.weirdgloop.org/w/Nord_Spear",
+    "gameId": "SpearGold",
+    "category": "spear",
+    "hands": "1h",
+    "type": "Spear",
+    "image": "img/weapons/nord-spear.png",
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 170
+    },
+    "perLevel": {
+      "pierce": 10
+    },
+    "damageMax": {
+      "pierce": 200
+    },
+    "stamina": 16,
+    "knockback": 20,
+    "materials": [
+      {
+        "name": "Cast Nord Spear",
+        "amount": 1
+      },
+      {
+        "name": "Liquid Frost",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "A golden opportunity to strike."
+  },
+  {
+    "id": "nord-sword",
+    "name": "Nord Sword",
+    "wiki": "https://valheim.weirdgloop.org/w/Nord_Sword",
+    "gameId": "SwordGold",
+    "category": "sword",
+    "hands": "1h",
+    "type": "Sword",
+    "image": "img/weapons/nord-sword.png",
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 170
+    },
+    "perLevel": {
+      "slash": 10
+    },
+    "damageMax": {
+      "slash": 200
+    },
+    "stamina": 16,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Cast Nord Sword",
+        "amount": 1
+      },
+      {
+        "name": "Liquid Frost",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "Even in the faintest sunlight, this weapon glimmers."
+  },
+  {
+    "id": "northern-vengeance",
+    "name": "Northern Vengeance",
+    "wiki": "https://valheim.weirdgloop.org/w/Northern_Vengeance",
+    "gameId": "StaffFrostOrbs",
+    "category": "magic",
+    "hands": "2h",
+    "type": "Blood Magic",
+    "image": "img/weapons/northern-vengeance.png",
+    "station": "Frost Foundry",
+    "stationLevel": 3,
+    "maxQuality": 4,
+    "damage": {
+      "frost": 75
+    },
+    "perLevel": {
+      "frost": 8
+    },
+    "damageMax": {
+      "frost": 99
+    },
+    "stamina": null,
+    "knockback": 10,
+    "materials": [
+      {
+        "name": "Cast Northern Vengeance",
+        "amount": 1
+      },
+      {
+        "name": "Liquid Frost",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "A caged snowflake, endless patterns emerging from within..."
+  },
+  {
+    "id": "obsidian-arrow",
+    "name": "Obsidian Arrow",
+    "wiki": "https://valheim.weirdgloop.org/w/Obsidian_Arrow",
+    "gameId": "ArrowObsidian",
+    "category": "arrow",
+    "hands": null,
+    "type": "Arrow",
+    "image": "img/weapons/obsidian-arrow.png",
+    "station": "Workbench",
+    "stationLevel": 3,
+    "maxQuality": 1,
+    "damage": {
+      "pierce": 52
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 52
+    },
+    "stamina": null,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 8
+      },
+      {
+        "name": "Obsidian",
+        "amount": 4
+      },
+      {
+        "name": "Feathers",
+        "amount": 2
+      }
+    ],
+    "quantity": 20,
+    "tier": 4,
+    "biome": "mountain",
+    "description": "A sliver of darkness."
+  },
+  {
+    "id": "ooze-bomb",
+    "name": "Ooze Bomb",
+    "wiki": "https://valheim.weirdgloop.org/w/Ooze_Bomb",
+    "gameId": "BombOoze",
+    "category": "bomb",
+    "hands": null,
+    "type": "Bomb",
+    "image": "img/weapons/ooze-bomb.png",
+    "station": "Workbench",
+    "stationLevel": 1,
+    "maxQuality": 1,
+    "damage": {
+      "blunt": 5
+    },
+    "perLevel": {},
+    "damageMax": {
+      "blunt": 5
+    },
+    "stamina": 8,
+    "knockback": 40,
+    "materials": [
+      {
+        "name": "Leather Scraps",
+        "amount": 5
+      },
+      {
+        "name": "Ooze",
+        "amount": 5
+      },
+      {
+        "name": "Resin",
+        "amount": 3
+      }
+    ],
+    "quantity": 5,
+    "tier": 3,
+    "biome": "swamp",
+    "description": "The stench is unbearable..."
+  },
+  {
+    "id": "poison-arrow",
+    "name": "Poison Arrow",
+    "wiki": "https://valheim.weirdgloop.org/w/Poison_Arrow",
+    "gameId": "ArrowPoison",
+    "category": "arrow",
+    "hands": null,
+    "type": "Arrow",
+    "image": "img/weapons/poison-arrow.png",
+    "station": "Workbench",
+    "stationLevel": 3,
+    "maxQuality": 1,
+    "damage": {
+      "pierce": 26,
+      "poison": 52
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 26,
+      "poison": 52
+    },
+    "stamina": null,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 8
+      },
+      {
+        "name": "Obsidian",
+        "amount": 4
+      },
+      {
+        "name": "Feathers",
+        "amount": 2
+      },
+      {
+        "name": "Ooze",
+        "amount": 2
+      }
+    ],
+    "quantity": 20,
+    "tier": 4,
+    "biome": "mountain",
+    "description": "A bitter sting from afar."
+  },
+  {
+    "id": "porcupine",
+    "name": "Porcupine",
+    "wiki": "https://valheim.weirdgloop.org/w/Porcupine",
+    "gameId": "MaceNeedle",
+    "category": "club",
+    "hands": "1h",
+    "type": "Club 1h",
+    "image": "img/weapons/porcupine.png",
+    "station": "Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "blunt": 50,
+      "pierce": 45
+    },
+    "perLevel": {
+      "blunt": 0,
+      "pierce": 6
+    },
+    "damageMax": {
+      "blunt": 50,
+      "pierce": 63
+    },
+    "stamina": 14,
+    "knockback": 100,
+    "materials": [
+      {
+        "name": "Finewood",
+        "amount": 5
+      },
+      {
+        "name": "Iron",
+        "amount": 20
+      },
+      {
+        "name": "Needle",
+        "amount": 5
+      },
+      {
+        "name": "Linen Thread",
+        "amount": 10
+      }
+    ],
+    "quantity": null,
+    "tier": 5,
+    "biome": "plains",
+    "description": "A deadly weapon, bristling with fiendish spikes."
+  },
+  {
+    "id": "primal-berserkir-axes",
+    "name": "Primal Berserkir Axes",
+    "wiki": "https://valheim.weirdgloop.org/w/Primal_Berserkir_Axes",
+    "gameId": "AxeBerzerkrNature",
+    "category": "axe",
+    "hands": "2h",
+    "type": "axe dw",
+    "image": "img/weapons/primal-berserkir-axes.png",
+    "station": "Black forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 140,
+      "chop": 80,
+      "poison": 10
+    },
+    "perLevel": {
+      "slash": 5,
+      "chop": 3
+    },
+    "damageMax": {
+      "slash": 155,
+      "chop": 89,
+      "poison": 10
+    },
+    "stamina": 16,
+    "knockback": 20,
+    "materials": [
+      {
+        "name": "Berserkir Axes",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 5
+      },
+      {
+        "name": "Jade",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "Your most primal instincts take over, and the nature around you reaches out to aid you."
+  },
+  {
+    "id": "primal-slayer",
+    "name": "Primal Slayer",
+    "wiki": "https://valheim.weirdgloop.org/w/Primal_Slayer",
+    "gameId": "THSwordSlayerNature",
+    "category": "sword",
+    "hands": "2h",
+    "type": "Sword 2h",
+    "image": "img/weapons/primal-slayer.png",
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 170,
+      "poison": 10
+    },
+    "perLevel": {
+      "slash": 6
+    },
+    "damageMax": {
+      "slash": 188,
+      "poison": 10
+    },
+    "stamina": 20,
+    "knockback": 55,
+    "materials": [
+      {
+        "name": "Slayer",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 15
+      },
+      {
+        "name": "Jade",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "The blade works in tandem with the primal forces of the world, seeking death and slaughter."
+  },
+  {
+    "id": "ripper",
+    "name": "Ripper",
+    "wiki": "https://valheim.weirdgloop.org/w/Ripper",
+    "gameId": "CrossbowRipper",
+    "category": "crossbow",
+    "hands": "2h",
+    "type": "Crossbow",
+    "image": "img/weapons/ripper.png",
+    "station": "Black Forge",
+    "stationLevel": 3,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 220,
+      "chop": 160
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 220,
+      "chop": 160
+    },
+    "stamina": null,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Ashwood",
+        "amount": 10
+      },
+      {
+        "name": "Flametal",
+        "amount": 8
+      },
+      {
+        "name": "Morgen Sinew",
+        "amount": 2
+      },
+      {
+        "name": "Bonemaw Tooth",
+        "amount": 4
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "Rips your foes apart, simple as that."
+  },
+  {
+    "id": "root-fang",
+    "name": "Root Fang",
+    "wiki": "https://valheim.weirdgloop.org/w/Root_Fang",
+    "gameId": "BowAshlandsRoot",
+    "category": "bow",
+    "hands": "2h",
+    "type": "Bow",
+    "image": null,
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 82,
+      "poison": 10
+    },
+    "perLevel": {
+      "pierce": 4,
+      "spirit": 5
+    },
+    "damageMax": {
+      "pierce": 94,
+      "poison": 10
+    },
+    "stamina": 14,
+    "knockback": 25,
+    "materials": [
+      {
+        "name": "Ash Fang",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 5
+      },
+      {
+        "name": "Jade",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "Like the twisting branch was made to seek the sun, this bow was made to seek the slaughter."
+  },
+  {
+    "id": "root-ripper",
+    "name": "Root Ripper",
+    "wiki": "https://valheim.weirdgloop.org/w/Root_Ripper",
+    "gameId": "CrossbowRipperNature",
+    "category": "crossbow",
+    "hands": "2h",
+    "type": "Crossbow",
+    "image": "img/weapons/root-ripper.png",
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 220,
+      "poison": 10
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 220,
+      "poison": 10
+    },
+    "stamina": 1,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Ripper",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 8
+      },
+      {
+        "name": "Jade",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "If the bolt doesn't pin your foe in place, the roots surging up from the ground surely will."
+  },
+  {
+    "id": "scourging-slayer",
+    "name": "Scourging Slayer",
+    "wiki": "https://valheim.weirdgloop.org/w/Scourging_Slayer",
+    "gameId": "THSwordSlayerLightning",
+    "category": "sword",
+    "hands": "2h",
+    "type": "Sword 2h",
+    "image": "img/weapons/scourging-slayer.png",
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 170,
+      "lightning": 10
+    },
+    "perLevel": {
+      "slash": 6
+    },
+    "damageMax": {
+      "slash": 188,
+      "lightning": 10
+    },
+    "stamina": 20,
+    "knockback": 55,
+    "materials": [
+      {
+        "name": "Slayer",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 15
+      },
+      {
+        "name": "Iolite",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "The lightning bound into this blade is erratic, ever searching for something to strike."
+  },
+  {
+    "id": "silver-arrow",
+    "name": "Silver Arrow",
+    "wiki": "https://valheim.weirdgloop.org/w/Silver_Arrow",
+    "gameId": "ArrowSilver",
+    "category": "arrow",
+    "hands": null,
+    "type": "Arrow",
+    "image": "img/weapons/silver-arrow.png",
+    "station": "Forge",
+    "stationLevel": 3,
+    "maxQuality": 1,
+    "damage": {
+      "pierce": 52,
+      "spirit": 20
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 52,
+      "spirit": 20
+    },
+    "stamina": null,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 8
+      },
+      {
+        "name": "Silver",
+        "amount": 1
+      },
+      {
+        "name": "Feathers",
+        "amount": 2
+      }
+    ],
+    "quantity": 20,
+    "tier": 4,
+    "biome": "mountain",
+    "description": "A needle to calm restless spirits."
+  },
+  {
+    "id": "silver-knife",
+    "name": "Silver Knife",
+    "wiki": "https://valheim.weirdgloop.org/w/Silver_Knife",
+    "gameId": "KnifeSilver",
+    "category": "knife",
+    "hands": "1h",
+    "type": "Knife",
+    "image": "img/weapons/silver-knife.png",
+    "station": "Forge",
+    "stationLevel": 3,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 25,
+      "pierce": 25,
+      "spirit": 12
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 25,
+      "pierce": 25,
+      "spirit": 12
+    },
+    "stamina": 10,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 2
+      },
+      {
+        "name": "Silver",
+        "amount": 10
+      },
+      {
+        "name": "Leather Scraps",
+        "amount": 3
+      },
+      {
+        "name": "Iron",
+        "amount": 2
+      }
+    ],
+    "quantity": null,
+    "tier": 4,
+    "biome": "mountain",
+    "description": "A savage piece of pain."
+  },
+  {
+    "id": "silver-sword",
+    "name": "Silver Sword",
+    "wiki": "https://valheim.weirdgloop.org/w/Silver_Sword",
+    "gameId": "SwordSilver",
+    "category": "sword",
+    "hands": "1h",
+    "type": "Sword",
+    "image": "img/weapons/silver-sword.png",
+    "station": "Forge",
+    "stationLevel": 3,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 75,
+      "spirit": 30
+    },
+    "perLevel": {
+      "spirit": 5
+    },
+    "damageMax": {
+      "slash": 75,
+      "spirit": 45
+    },
+    "stamina": 12,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 2
+      },
+      {
+        "name": "Silver",
+        "amount": 40
+      },
+      {
+        "name": "Leather Scraps",
+        "amount": 3
+      },
+      {
+        "name": "Iron",
+        "amount": 5
+      }
+    ],
+    "quantity": null,
+    "tier": 4,
+    "biome": "mountain",
+    "description": "Purest of metals, nothing unclean can abide its touch."
+  },
+  {
+    "id": "skoll-and-hati",
+    "name": "Skoll and Hati",
+    "wiki": "https://valheim.weirdgloop.org/w/Skoll_and_Hati",
+    "gameId": "KnifeSkollAndHati",
+    "category": "knife",
+    "hands": "2h",
+    "type": "Knife 2h",
+    "image": "img/weapons/skoll-and-hati.png",
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 45,
+      "pierce": 45
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 45,
+      "pierce": 45
+    },
+    "stamina": 14,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Finewood",
+        "amount": 4
+      },
+      {
+        "name": "Iron",
+        "amount": 10
+      },
+      {
+        "name": "Black Metal",
+        "amount": 10
+      }
+    ],
+    "quantity": null,
+    "tier": 5,
+    "biome": "plains",
+    "description": "Stab once for those who've betrayed you, and twice for those you hate."
+  },
+  {
+    "id": "skull-splittur",
+    "name": "Skull Splittur",
+    "wiki": "https://valheim.weirdgloop.org/w/Skull_Splittur",
+    "gameId": "BattleaxeSkullSplittur",
+    "category": "battleaxe",
+    "hands": "2h",
+    "type": "Axe 2h",
+    "image": "img/weapons/skull-splittur.png",
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 130,
+      "chop": 70
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 130,
+      "chop": 70
+    },
+    "stamina": 22,
+    "knockback": 70,
+    "materials": [
+      {
+        "name": "Yggdrasil Wood",
+        "amount": 15
+      },
+      {
+        "name": "Iron",
+        "amount": 30
+      },
+      {
+        "name": "Refined Eitr",
+        "amount": 10
+      }
+    ],
+    "quantity": null,
+    "tier": 6,
+    "biome": "mistlands",
+    "description": "Will find skulls to split even in the thickest of mists."
+  },
+  {
+    "id": "slayer",
+    "name": "Slayer",
+    "wiki": "https://valheim.weirdgloop.org/w/Slayer",
+    "gameId": "THSwordSlayer",
+    "category": "sword",
+    "hands": "2h",
+    "type": "Sword 2h",
+    "image": "img/weapons/slayer.png",
+    "station": "Black Forge",
+    "stationLevel": 3,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 170
+    },
+    "perLevel": {
+      "slash": 6
+    },
+    "damageMax": {
+      "slash": 188
+    },
+    "stamina": 20,
+    "knockback": 55,
+    "materials": [
+      {
+        "name": "Flametal",
+        "amount": 30
+      },
+      {
+        "name": "Asksvin Hide",
+        "amount": 5
+      },
+      {
+        "name": "Morgen Sinew",
+        "amount": 3
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "This mighty blade thirsts for the blood of foes."
+  },
+  {
+    "id": "smoke-bomb",
+    "name": "Smoke Bomb",
+    "wiki": "https://valheim.weirdgloop.org/w/Smoke_Bomb",
+    "gameId": "BombSmoke",
+    "category": "bomb",
+    "hands": null,
+    "type": "Bomb",
+    "image": "img/weapons/smoke-bomb.png",
+    "station": "Workbench",
+    "stationLevel": 1,
+    "maxQuality": 1,
+    "damage": {
+      "blunt": 5
+    },
+    "perLevel": {},
+    "damageMax": {
+      "blunt": 5
+    },
+    "stamina": 8,
+    "knockback": 40,
+    "materials": [
+      {
+        "name": "Smoke Puff",
+        "amount": 1
+      },
+      {
+        "name": "Asksvin Bladder",
+        "amount": 1
+      }
+    ],
+    "quantity": 10,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "Everyone knows you can't breathe in the smoke."
+  },
+  {
+    "id": "spinesnap",
+    "name": "Spinesnap",
+    "wiki": "https://valheim.weirdgloop.org/w/Spinesnap",
+    "gameId": "BowSpineSnap",
+    "category": "bow",
+    "hands": "2h",
+    "type": "Bow",
+    "image": "img/weapons/spinesnap.png",
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 72,
+      "spirit": 5
+    },
+    "perLevel": {
+      "pierce": 4,
+      "spirit": 5
+    },
+    "damageMax": {
+      "pierce": 84,
+      "spirit": 20
+    },
+    "stamina": 14,
+    "knockback": 25,
+    "materials": [
+      {
+        "name": "Finewood",
+        "amount": 10
+      },
+      {
+        "name": "Bone Fragments",
+        "amount": 40
+      },
+      {
+        "name": "Refined Eitr",
+        "amount": 10
+      }
+    ],
+    "quantity": null,
+    "tier": 6,
+    "biome": "mistlands",
+    "description": "Using this bow is backbreaking work but so worth it."
+  },
+  {
+    "id": "splitnir",
+    "name": "Splitnir",
+    "wiki": "https://valheim.weirdgloop.org/w/Splitnir",
+    "gameId": "SpearSplitner",
+    "category": "spear",
+    "hands": "1h",
+    "type": "Spear",
+    "image": "img/weapons/splitnir.png",
+    "station": "Black forge",
+    "stationLevel": 3,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 135
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 135
+    },
+    "stamina": 16,
+    "knockback": 20,
+    "materials": [
+      {
+        "name": "Ashwood",
+        "amount": 10
+      },
+      {
+        "name": "Flametal",
+        "amount": 6
+      },
+      {
+        "name": "Asksvin Hide",
+        "amount": 2
+      },
+      {
+        "name": "Bonemaw Tooth",
+        "amount": 3
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "Split your enemies' hearts in two."
+  },
+  {
+    "id": "splitnir-the-bleeding",
+    "name": "Splitnir the Bleeding",
+    "wiki": "https://valheim.weirdgloop.org/w/Splitnir_the_Bleeding",
+    "gameId": "SpearSplitner_Blood",
+    "category": "spear",
+    "hands": "1h",
+    "type": "Spear",
+    "image": "img/weapons/splitnir-the-bleeding.png",
+    "station": "Black forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 135
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 135
+    },
+    "stamina": 16,
+    "knockback": 20,
+    "materials": [
+      {
+        "name": "Splitnir",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 6
+      },
+      {
+        "name": "Bloodstone",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "A small sacrifice must be made for every battle..."
+  },
+  {
+    "id": "splitnir-the-primal",
+    "name": "Splitnir the Primal",
+    "wiki": "https://valheim.weirdgloop.org/w/Splitnir_the_Primal",
+    "gameId": "SpearSplitner_Nature",
+    "category": "spear",
+    "hands": "1h",
+    "type": "Spear",
+    "image": "img/weapons/splitnir-the-primal.png",
+    "station": "Black forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 135,
+      "poison": 10
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 135,
+      "poison": 10
+    },
+    "stamina": 16,
+    "knockback": 20,
+    "materials": [
+      {
+        "name": "Splitnir",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 6
+      },
+      {
+        "name": "Jade",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "Nature's forces burst through the ground wherever this spear strikes."
+  },
+  {
+    "id": "splitnir-the-storming",
+    "name": "Splitnir the Storming",
+    "wiki": "https://valheim.weirdgloop.org/w/Splitnir_the_Storming",
+    "gameId": "SpearSplitner_Lightning",
+    "category": "spear",
+    "hands": "1h",
+    "type": "Spear",
+    "image": "img/weapons/splitnir-the-storming.png",
+    "station": "Black forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 135
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 135
+    },
+    "stamina": 16,
+    "knockback": 20,
+    "materials": [
+      {
+        "name": "Splitnir",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 6
+      },
+      {
+        "name": "Iolite",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "Let the crack of thunder split the air."
+  },
+  {
+    "id": "staff-of-embers",
+    "name": "Staff of Embers",
+    "wiki": "https://valheim.weirdgloop.org/w/Staff_of_Embers",
+    "gameId": "StaffFireball",
+    "category": "magic",
+    "hands": "2h",
+    "type": "Elemental magic",
+    "image": null,
+    "station": "Galdr Table",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "blunt": 120,
+      "fire": 120
+    },
+    "perLevel": {
+      "fire": 6
+    },
+    "damageMax": {
+      "blunt": 120,
+      "fire": 138
+    },
+    "stamina": null,
+    "knockback": 100,
+    "materials": [
+      {
+        "name": "Yggdrasil Wood",
+        "amount": 20
+      },
+      {
+        "name": "Surtling Core",
+        "amount": 4
+      },
+      {
+        "name": "Refined Eitr",
+        "amount": 16
+      }
+    ],
+    "quantity": null,
+    "tier": 6,
+    "biome": "mistlands",
+    "description": "The sweltering heat of Muspelheim seems almost pathetic when compared to what this staff can do..."
+  },
+  {
+    "id": "staff-of-fracturing",
+    "name": "Staff of Fracturing",
+    "wiki": "https://valheim.weirdgloop.org/w/Staff_of_Fracturing",
+    "gameId": "StaffClusterbomb",
+    "category": "magic",
+    "hands": "2h",
+    "type": "Elemental magic",
+    "image": null,
+    "station": "Galdr Table",
+    "stationLevel": 2,
+    "maxQuality": 4,
+    "damage": {
+      "blunt": 12,
+      "fire": 12
+    },
+    "perLevel": {
+      "fire": 6
+    },
+    "damageMax": {
+      "blunt": 12,
+      "fire": 30
+    },
+    "stamina": null,
+    "knockback": 100,
+    "materials": [
+      {
+        "name": "Charred Bone",
+        "amount": 15
+      },
+      {
+        "name": "Ashwood",
+        "amount": 5
+      },
+      {
+        "name": "Proustite Powder",
+        "amount": 8
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "Only those with patience and focus will be able to harness the true power of this staff."
+  },
+  {
+    "id": "staff-of-frost",
+    "name": "Staff of Frost",
+    "wiki": "https://valheim.weirdgloop.org/w/Staff_of_Frost",
+    "gameId": "StaffIceShards",
+    "category": "magic",
+    "hands": "2h",
+    "type": "Elemental magic",
+    "image": null,
+    "station": "Galdr Table",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "frost": 30
+    },
+    "perLevel": {
+      "frost": 2
+    },
+    "damageMax": {
+      "frost": 36
+    },
+    "stamina": null,
+    "knockback": 10,
+    "materials": [
+      {
+        "name": "Yggdrasil Wood",
+        "amount": 20
+      },
+      {
+        "name": "Freeze Gland",
+        "amount": 4
+      },
+      {
+        "name": "Refined Eitr",
+        "amount": 16
+      }
+    ],
+    "quantity": null,
+    "tier": 6,
+    "biome": "mistlands",
+    "description": "A staff as cold as the three-year winter that will herald the end of times."
+  },
+  {
+    "id": "staff-of-the-wild",
+    "name": "Staff of the Wild",
+    "wiki": "https://valheim.weirdgloop.org/w/Staff_of_the_Wild",
+    "gameId": "StaffGreenRoots",
+    "category": "magic",
+    "hands": "2h",
+    "type": "Elemental magic",
+    "image": "img/weapons/staff-of-the-wild.png",
+    "station": "Galdr Table",
+    "stationLevel": 2,
+    "maxQuality": 4,
+    "damage": {
+      "blunt": 20,
+      "poison": 20
+    },
+    "perLevel": {
+      "blunt": 20,
+      "poison": 20
+    },
+    "damageMax": {
+      "blunt": 80,
+      "poison": 80
+    },
+    "stamina": null,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Ashwood",
+        "amount": 15
+      },
+      {
+        "name": "Fiddlehead",
+        "amount": 10
+      },
+      {
+        "name": "Celestial Feather",
+        "amount": 3
+      },
+      {
+        "name": "Jade",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "Ancient natural forces lie curled and dormant within this staff, ready to be unleashed."
+  },
+  {
+    "id": "stagbreaker",
+    "name": "Stagbreaker",
+    "wiki": "https://valheim.weirdgloop.org/w/Stagbreaker",
+    "gameId": "SledgeStagbreaker",
+    "category": "sledge",
+    "hands": "2h",
+    "type": "Club 2h",
+    "image": "img/weapons/stagbreaker.png",
+    "station": "Workbench",
+    "stationLevel": 2,
+    "maxQuality": 4,
+    "damage": {
+      "blunt": 20,
+      "pierce": 5
+    },
+    "perLevel": {},
+    "damageMax": {
+      "blunt": 20,
+      "pierce": 5
+    },
+    "stamina": 12,
+    "knockback": 150,
+    "materials": [
+      {
+        "name": "Corewood",
+        "amount": 20
+      },
+      {
+        "name": "Deer Trophy",
+        "amount": 5
+      },
+      {
+        "name": "Leather Scraps",
+        "amount": 2
+      }
+    ],
+    "quantity": null,
+    "tier": 2,
+    "biome": "black-forest",
+    "description": "A weapon worthy of the Gods! If you get hit with this, you'll know it…"
+  },
+  {
+    "id": "stone-axe",
+    "name": "Stone Axe",
+    "wiki": "https://valheim.weirdgloop.org/w/Stone_Axe",
+    "gameId": "AxeStone",
+    "category": "axe",
+    "hands": "1h",
+    "type": "Axe 1h",
+    "image": "img/weapons/stone-axe.png",
+    "station": "Player crafting menu",
+    "stationLevel": 1,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 15,
+      "chop": 20
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 15,
+      "chop": 20
+    },
+    "stamina": 6,
+    "knockback": 50,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 5
+      },
+      {
+        "name": "Stone",
+        "amount": 4
+      }
+    ],
+    "quantity": null,
+    "tier": 1,
+    "biome": "meadows",
+    "description": "A crude axe for tree-felling."
+  },
+  {
+    "id": "storm-fang",
+    "name": "Storm Fang",
+    "wiki": "https://valheim.weirdgloop.org/w/Storm_Fang",
+    "gameId": "BowAshlandsStorm",
+    "category": "bow",
+    "hands": "2h",
+    "type": "Bow",
+    "image": null,
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 82,
+      "lightning": 10
+    },
+    "perLevel": {
+      "pierce": 4,
+      "spirit": 5
+    },
+    "damageMax": {
+      "pierce": 94,
+      "lightning": 10
+    },
+    "stamina": 14,
+    "knockback": 25,
+    "materials": [
+      {
+        "name": "Ash Fang",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 5
+      },
+      {
+        "name": "Iolite",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "Let your arrows fly as swift as the lightning strikes."
+  },
+  {
+    "id": "storm-ripper",
+    "name": "Storm Ripper",
+    "wiki": "https://valheim.weirdgloop.org/w/Storm_Ripper",
+    "gameId": "CrossbowRipperLightning",
+    "category": "crossbow",
+    "hands": "2h",
+    "type": "Crossbow",
+    "image": "img/weapons/storm-ripper.png",
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 220,
+      "lightning": 10
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 220,
+      "lightning": 10
+    },
+    "stamina": 1,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Ripper",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 8
+      },
+      {
+        "name": "Iolite",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "The bolts will tear through your enemies like a particularly nasty gale."
+  },
+  {
+    "id": "storm-star",
+    "name": "Storm Star",
+    "wiki": "https://valheim.weirdgloop.org/w/Storm_Star",
+    "gameId": "MaceEldnerLightning",
+    "category": "club",
+    "hands": "1h",
+    "type": "Club 1h",
+    "image": "img/weapons/storm-star.png",
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "blunt": 135,
+      "lightning": 10
+    },
+    "perLevel": {
+      "blunt": 6
+    },
+    "damageMax": {
+      "blunt": 153,
+      "lightning": 10
+    },
+    "stamina": 16,
+    "knockback": 100,
+    "materials": [
+      {
+        "name": "Flametal Mace",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 8
+      },
+      {
+        "name": "Iolite",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "Particularly effective on cloudy mornings."
+  },
+  {
+    "id": "thunderblood-atgeir",
+    "name": "Thunderblood Atgeir",
+    "wiki": "https://valheim.weirdgloop.org/w/Thunderblood_Atgeir",
+    "gameId": "AtgeirGold_BloodLightning",
+    "category": "polearm",
+    "hands": "2h",
+    "type": "Polearm",
+    "image": "img/weapons/thunderblood-atgeir.png",
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 192,
+      "lightning": 45
+    },
+    "perLevel": {
+      "pierce": 10,
+      "lightning": 5
+    },
+    "damageMax": {
+      "pierce": 222,
+      "lightning": 60
+    },
+    "stamina": 20,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Atgeir",
+        "amount": 1
+      },
+      {
+        "name": "Thunderblood Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "The heavens shall sound their praise as you make your enemies bleed."
+  },
+  {
+    "id": "thunderblood-axe",
+    "name": "Thunderblood Axe",
+    "wiki": "https://valheim.weirdgloop.org/w/Thunderblood_Axe",
+    "gameId": "AxeGold_BloodLightning",
+    "category": "axe",
+    "hands": "1h",
+    "type": "Axe 1h",
+    "image": null,
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 186,
+      "chop": 90,
+      "lightning": 45
+    },
+    "perLevel": {
+      "slash": 10,
+      "chop": 3,
+      "lightning": 5
+    },
+    "damageMax": {
+      "slash": 216,
+      "chop": 99,
+      "lightning": 60
+    },
+    "stamina": 16,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Axe",
+        "amount": 1
+      },
+      {
+        "name": "Thunderblood Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "As this axe cuts through wood and blood alike, a resounding thunderous crack shall be heard throughout the land."
+  },
+  {
+    "id": "thunderblood-bow",
+    "name": "Thunderblood Bow",
+    "wiki": "https://valheim.weirdgloop.org/w/Thunderblood_Bow",
+    "gameId": "BowGold_BloodLightning",
+    "category": "bow",
+    "hands": "2h",
+    "type": "Bow",
+    "image": null,
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 110,
+      "lightning": 45,
+      "spirit": 10
+    },
+    "perLevel": {
+      "pierce": 8,
+      "lightning": 5,
+      "spirit": 5
+    },
+    "damageMax": {
+      "pierce": 134,
+      "lightning": 60,
+      "spirit": 25
+    },
+    "stamina": 14,
+    "knockback": 25,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Bow",
+        "amount": 1
+      },
+      {
+        "name": "Thunderblood Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "Lightning dances along the string, waiting to be unleashed."
+  },
+  {
+    "id": "thunderblood-crossbow",
+    "name": "Thunderblood Crossbow",
+    "wiki": "https://valheim.weirdgloop.org/w/Thunderblood_Crossbow",
+    "gameId": "CrossbowGold_BloodLightning",
+    "category": "crossbow",
+    "hands": "2h",
+    "type": "Crossbow",
+    "image": null,
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 274,
+      "chop": 180,
+      "lightning": 45
+    },
+    "perLevel": {
+      "pierce": 8,
+      "chop": 5,
+      "lightning": 5
+    },
+    "damageMax": {
+      "pierce": 298,
+      "chop": 195,
+      "lightning": 60
+    },
+    "stamina": null,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Crossbow",
+        "amount": 1
+      },
+      {
+        "name": "Thunderblood Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "The bow is pulled taut with unreleased power, like the air before a lightning strike."
+  },
+  {
+    "id": "thunderblood-dagger",
+    "name": "Thunderblood Dagger",
+    "wiki": "https://valheim.weirdgloop.org/w/Thunderblood_Dagger",
+    "gameId": "KnifeGold_BloodLightning",
+    "category": "knife",
+    "hands": "1h",
+    "type": "Knife",
+    "image": null,
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 80,
+      "pierce": 80,
+      "lightning": 45
+    },
+    "perLevel": {
+      "slash": 5,
+      "pierce": 5
+    },
+    "damageMax": {
+      "slash": 95,
+      "pierce": 95,
+      "lightning": 45
+    },
+    "stamina": 14,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Dagger",
+        "amount": 1
+      },
+      {
+        "name": "Thunderblood Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "The blade is already bloodied, yet it sparks in want of more."
+  },
+  {
+    "id": "thunderblood-greataxe",
+    "name": "Thunderblood Greataxe",
+    "wiki": "https://valheim.weirdgloop.org/w/Thunderblood_Greataxe",
+    "gameId": "BattleaxeGold_BloodLightning",
+    "category": "battleaxe",
+    "hands": "2h",
+    "type": "axe 2h",
+    "image": null,
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 198,
+      "chop": 40,
+      "lightning": 45
+    },
+    "perLevel": {
+      "slash": 10,
+      "chop": 2.5,
+      "lightning": 5
+    },
+    "damageMax": {
+      "slash": 228,
+      "chop": 47.5,
+      "lightning": 60
+    },
+    "stamina": 22,
+    "knockback": 70,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Greataxe",
+        "amount": 1
+      },
+      {
+        "name": "Thunderblood Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "As you cleave your foes in two, their blood shall sing like a thunderstorm."
+  },
+  {
+    "id": "thunderblood-greatsword",
+    "name": "Thunderblood Greatsword",
+    "wiki": "https://valheim.weirdgloop.org/w/Thunderblood_Greatsword",
+    "gameId": "THSwordGold_BloodLightning",
+    "category": "sword",
+    "hands": "2h",
+    "type": "sword 2h",
+    "image": null,
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 220,
+      "lightning": 45
+    },
+    "perLevel": {
+      "slash": 10,
+      "lightning": 5
+    },
+    "damageMax": {
+      "slash": 250,
+      "lightning": 60
+    },
+    "stamina": 20,
+    "knockback": 55,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Greatsword",
+        "amount": 1
+      },
+      {
+        "name": "Thunderblood Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "Anyone wielding this weapon is sure to be very frightening indeed."
+  },
+  {
+    "id": "thunderblood-mace",
+    "name": "Thunderblood Mace",
+    "wiki": "https://valheim.weirdgloop.org/w/Thunderblood_Mace",
+    "gameId": "MaceGold_BloodLightning",
+    "category": "club",
+    "hands": "1h",
+    "type": "Club",
+    "image": null,
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "blunt": 180,
+      "lightning": 45
+    },
+    "perLevel": {
+      "blunt": 10,
+      "lightning": 5
+    },
+    "damageMax": {
+      "blunt": 210,
+      "lightning": 60
+    },
+    "stamina": 16,
+    "knockback": 90,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Mace",
+        "amount": 1
+      },
+      {
+        "name": "Thunderblood Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "A weapon to rival perhaps even that of the thunder god himself..."
+  },
+  {
+    "id": "thunderblood-sledge",
+    "name": "Thunderblood Sledge",
+    "wiki": "https://valheim.weirdgloop.org/w/Thunderblood_Sledge",
+    "gameId": "SledgeGold_BloodLightning",
+    "category": "sledge",
+    "hands": "2h",
+    "type": "Club 2h",
+    "image": null,
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "blunt": 235,
+      "lightning": 45
+    },
+    "perLevel": {
+      "blunt": 10,
+      "lightning": 5
+    },
+    "damageMax": {
+      "blunt": 265,
+      "lightning": 60
+    },
+    "stamina": 28,
+    "knockback": 210,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Sledge",
+        "amount": 1
+      },
+      {
+        "name": "Thunderblood Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "As this weapon strikes true, the blow shall echo throughout the world..."
+  },
+  {
+    "id": "thunderblood-spear",
+    "name": "Thunderblood Spear",
+    "wiki": "https://valheim.weirdgloop.org/w/Thunderblood_Spear",
+    "gameId": "SpearGold_BloodLightning",
+    "category": "spear",
+    "hands": "1h",
+    "type": "Spear",
+    "image": null,
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 180,
+      "lightning": 45
+    },
+    "perLevel": {
+      "pierce": 10,
+      "lightning": 5
+    },
+    "damageMax": {
+      "pierce": 210,
+      "lightning": 60
+    },
+    "stamina": 16,
+    "knockback": 20,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Spear",
+        "amount": 1
+      },
+      {
+        "name": "Thunderblood Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "May it strike like lightning, quick and fierce."
+  },
+  {
+    "id": "thunderblood-sword",
+    "name": "Thunderblood Sword",
+    "wiki": "https://valheim.weirdgloop.org/w/Thunderblood_Sword",
+    "gameId": "SwordGold_BloodLightning",
+    "category": "sword",
+    "hands": "1h",
+    "type": "Sword",
+    "image": "img/weapons/thunderblood-sword.png",
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 180,
+      "lightning": 45
+    },
+    "perLevel": {
+      "slash": 10,
+      "lightning": 5
+    },
+    "damageMax": {
+      "slash": 210,
+      "lightning": 60
+    },
+    "stamina": 16,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Bloodgold",
+        "amount": 20
+      },
+      {
+        "name": "Nord Sword",
+        "amount": 1
+      },
+      {
+        "name": "Thunderblood Essence",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 8,
+    "biome": "deep-north",
+    "description": "As the blood runs along the blade, it awakens the storm within."
+  },
+  {
+    "id": "thundering-berserkir-axes",
+    "name": "Thundering Berserkir Axes",
+    "wiki": "https://valheim.weirdgloop.org/w/Thundering_Berserkir_Axes",
+    "gameId": "AxeBerzerkrLightning",
+    "category": "axe",
+    "hands": "2h",
+    "type": "axe dw",
+    "image": "img/weapons/thundering-berserkir-axes.png",
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "slash": 140,
+      "chop": 80,
+      "lightning": 10
+    },
+    "perLevel": {
+      "slash": 5,
+      "chop": 3
+    },
+    "damageMax": {
+      "slash": 155,
+      "chop": 89,
+      "lightning": 10
+    },
+    "stamina": 16,
+    "knockback": 20,
+    "materials": [
+      {
+        "name": "Berserkir Axes",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 5
+      },
+      {
+        "name": "Iolite",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "Carnage spreads around you when you wield these axes, such that Thor himself would be proud."
+  },
+  {
+    "id": "trollstav",
+    "name": "Trollstav",
+    "wiki": "https://valheim.weirdgloop.org/w/Trollstav",
+    "gameId": "StaffRedTroll",
+    "category": "magic",
+    "hands": "2h",
+    "type": "Blood magic",
+    "image": "img/weapons/trollstav.png",
+    "station": "Galdr Table",
+    "stationLevel": 2,
+    "maxQuality": 4,
+    "damage": {
+      "chop": 100,
+      "pickaxe": 100,
+      "fire": 300
+    },
+    "perLevel": {},
+    "damageMax": {
+      "chop": 100,
+      "pickaxe": 100,
+      "fire": 300
+    },
+    "stamina": null,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Charred Bone",
+        "amount": 15
+      },
+      {
+        "name": "Troll Trophy",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 3
+      },
+      {
+        "name": "Bloodstone",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "Summons a raging beast to cause death and destruction."
+  },
+  {
+    "id": "voidcaller",
+    "name": "Voidcaller",
+    "wiki": "https://valheim.weirdgloop.org/w/Voidcaller",
+    "gameId": "KnifeVoid",
+    "category": "knife",
+    "hands": "1h",
+    "type": "Knife",
+    "image": null,
+    "station": "The Void",
+    "stationLevel": null,
+    "maxQuality": 1,
+    "damage": {
+      "slash": 12,
+      "pierce": 12
+    },
+    "perLevel": {},
+    "damageMax": {
+      "slash": 12,
+      "pierce": 12
+    },
+    "stamina": 6,
+    "knockback": 10,
+    "materials": [],
+    "quantity": null,
+    "tier": null,
+    "biome": null,
+    "description": "Who shall answer the call of the Void?"
+  },
+  {
+    "id": "wood-arrow",
+    "name": "Wood Arrow",
+    "wiki": "https://valheim.weirdgloop.org/w/Wood_Arrow",
+    "gameId": "ArrowWood",
+    "category": "arrow",
+    "hands": null,
+    "type": "Arrow",
+    "image": "img/weapons/wood-arrow.png",
+    "station": "Workbench",
+    "stationLevel": 1,
+    "maxQuality": 1,
+    "damage": {
+      "pierce": 22
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 22
+    },
+    "stamina": null,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Wood",
+        "amount": 8
+      }
+    ],
+    "quantity": 20,
+    "tier": 1,
+    "biome": "meadows",
+    "description": "An arrow of sharpened wood."
+  },
+  {
+    "id": "wound-ripper",
+    "name": "Wound Ripper",
+    "wiki": "https://valheim.weirdgloop.org/w/Wound_Ripper",
+    "gameId": "CrossbowRipperBlood",
+    "category": "crossbow",
+    "hands": "2h",
+    "type": "Crossbow",
+    "image": "img/weapons/wound-ripper.png",
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "maxQuality": 4,
+    "damage": {
+      "pierce": 220
+    },
+    "perLevel": {},
+    "damageMax": {
+      "pierce": 220
+    },
+    "stamina": 1,
+    "knockback": null,
+    "materials": [
+      {
+        "name": "Ripper",
+        "amount": 1
+      },
+      {
+        "name": "Flametal",
+        "amount": 8
+      },
+      {
+        "name": "Bloodstone",
+        "amount": 1
+      }
+    ],
+    "quantity": null,
+    "tier": 7,
+    "biome": "ashlands",
+    "description": "Ready to rend your enemies to pieces."
+  }
+]
