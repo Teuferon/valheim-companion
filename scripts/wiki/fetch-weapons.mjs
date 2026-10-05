@@ -9,7 +9,7 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { api } from './api.mjs';
+import { api, MwApi } from './api.mjs';
 import { cleanText, parseImage, parseInfobox, parseLinks, parseTemplates, slug } from './wikitext.mjs';
 
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
@@ -20,6 +20,11 @@ const WEAPON_IMG_WIDTH = 96;
 const abs = (rel) => path.join(REPO_ROOT, rel);
 const byCodepoint = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 const wikiPageUrl = (title) => `${WIKI_URL}/w/${encodeURIComponent(title.replace(/ /g, '_'))}`;
+
+function lowercaseExceptFirst(s) {
+  if (!s) return '';
+  return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
+}
 
 const DAMAGE_TYPES = ['blunt', 'slash', 'pierce', 'chop', 'pickaxe', 'fire', 'frost', 'lightning', 'poison', 'spirit'];
 
@@ -267,6 +272,7 @@ async function main() {
     weaponsByTier: {},
     unresolvedMaterials: [],
     weaponsWithNullTier: [],
+    weaponsWithoutImage: [],
   };
 
   const parsedWeapons = [];
@@ -363,6 +369,18 @@ async function main() {
       damageMax[dt] = baseVal + step * (maxQuality - 1);
     }
 
+    let imageRaw = ib.image;
+    if (imageRaw && typeof imageRaw === 'string') {
+      imageRaw = imageRaw.replace(/\{\{PAGENAME\}\}/gi, title);
+    }
+    if (!imageRaw && wt.includes('tabber')) {
+      const tabberMatch = wt.match(/\|\s*image\s*=\s*([^\r\n|}]+)/i);
+      if (tabberMatch) {
+        imageRaw = tabberMatch[1].trim().replace(/\{\{PAGENAME\}\}/gi, title);
+      }
+    }
+    const imageFile = parseImage(imageRaw);
+
     parsedWeapons.push({
       id: weaponSlug,
       name: cleanText(title),
@@ -371,7 +389,7 @@ async function main() {
       category,
       hands: determineHands(category, ib.type, ib.wielding),
       type: cleanText(ib.type),
-      imageFile: parseImage(ib.image),
+      imageFile,
       image: null,
       station: ib.source ? cleanText(ib.source) : null,
       stationLevel: ib['crafting level'] ? parseInt(ib['crafting level'], 10) || null : null,
@@ -631,39 +649,59 @@ async function main() {
   const weaponsDir = abs('img/weapons');
   mkdirSync(weaponsDir, { recursive: true });
 
-  const imageFilesToFetch = [];
   for (const w of parsedWeapons) {
-    if (w.imageFile && !existsSync(path.join(weaponsDir, `${w.id}.png`))) {
-      imageFilesToFetch.push(w.imageFile);
+    const dest = path.join(weaponsDir, `${w.id}.png`);
+    if (existsSync(dest)) {
+      w.image = `img/weapons/${w.id}.png`;
     }
   }
 
-  if (imageFilesToFetch.length > 0) {
-    console.log(`resolving URLs for ${imageFilesToFetch.length} new weapon images…`);
-    const imageUrls = await api.getImageUrls(imageFilesToFetch, WEAPON_IMG_WIDTH);
+  const resolveImageBatch = async (items, getFileName, client) => {
+    const needed = items.filter((w) => !w.image);
+    if (needed.length === 0) return;
+    const fileMap = new Map();
+    for (const w of needed) {
+      const fn = getFileName(w);
+      if (fn) fileMap.set(w, fn);
+    }
+    const filesToQuery = [...new Set(fileMap.values())];
+    if (filesToQuery.length === 0) return;
 
-    console.log(`downloading weapon images…`);
-    for (const w of parsedWeapons) {
-      const dest = path.join(weaponsDir, `${w.id}.png`);
-      if (existsSync(dest)) {
-        w.image = `img/weapons/${w.id}.png`;
-        continue;
-      }
-      if (w.imageFile && imageUrls[w.imageFile]) {
-        await api.download(imageUrls[w.imageFile], dest);
+    const urls = await client.getImageUrls(filesToQuery, WEAPON_IMG_WIDTH);
+    for (const [w, fn] of fileMap.entries()) {
+      if (w.image) continue;
+      const url = urls[fn];
+      if (url) {
+        const dest = path.join(weaponsDir, `${w.id}.png`);
+        await client.download(url, dest);
         if (existsSync(dest)) {
           w.image = `img/weapons/${w.id}.png`;
         }
       }
     }
-  } else {
-    for (const w of parsedWeapons) {
-      const dest = path.join(weaponsDir, `${w.id}.png`);
-      if (existsSync(dest)) {
-        w.image = `img/weapons/${w.id}.png`;
-      }
-    }
+  };
+
+  // Step 1: field `image` from infobox (including inside tabber)
+  await resolveImageBatch(parsedWeapons, (w) => w.imageFile, api);
+
+  // Step 2: File:<Title>.png via weirdgloop
+  await resolveImageBatch(parsedWeapons, (w) => `${w.name}.png`, api);
+
+  // Step 3: File:<Title with lowercase except first letter>.png via weirdgloop
+  await resolveImageBatch(parsedWeapons, (w) => `${lowercaseExceptFirst(w.name)}.png`, api);
+
+  // Step 4: same names via https://valheim.fandom.com/api.php
+  const stillMissing = parsedWeapons.filter((w) => !w.image);
+  if (stillMissing.length > 0) {
+    const fandomApi = new MwApi({ baseUrl: 'https://valheim.fandom.com/api.php' });
+    await resolveImageBatch(stillMissing, (w) => w.imageFile, fandomApi);
+    await resolveImageBatch(stillMissing, (w) => `${w.name}.png`, fandomApi);
+    await resolveImageBatch(stillMissing, (w) => `${lowercaseExceptFirst(w.name)}.png`, fandomApi);
   }
+
+  // Record weapons without image for the report
+  const missingFinal = parsedWeapons.filter((w) => !w.image);
+  report.weaponsWithoutImage = missingFinal.map((w) => w.name);
 
   // Delete temp imageFile property
   for (const w of parsedWeapons) {
@@ -709,6 +747,16 @@ function renderReport(report, weapons, materials) {
     lines.push('(none)', '');
   } else {
     for (const name of report.weaponsWithNullTier.sort(byCodepoint)) {
+      lines.push(`- ${name}`);
+    }
+    lines.push('');
+  }
+
+  lines.push('## Missing weapon icons', '');
+  if (report.weaponsWithoutImage.length === 0) {
+    lines.push('(none)', '');
+  } else {
+    for (const name of report.weaponsWithoutImage.sort(byCodepoint)) {
       lines.push(`- ${name}`);
     }
     lines.push('');
