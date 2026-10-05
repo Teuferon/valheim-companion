@@ -94,9 +94,12 @@ export function score(damage, mods) {
   return Math.round(s);
 }
 
-export function rawDamage(damage) {
+export function rawDamage(damage, mods) {
   let r = 0;
-  for (const val of Object.values(damage ?? {})) {
+  for (const [dt, val] of Object.entries(damage ?? {})) {
+    if ((dt === 'chop' || dt === 'pickaxe') && mods && (mods[dt] ?? 0) === 0) {
+      continue;
+    }
     r += val || 0;
   }
   return Math.round(r);
@@ -118,13 +121,16 @@ export function rangedScore(launcher, ammo, mods) {
   return Math.round(total);
 }
 
-export function rangedRaw(launcher, ammo) {
+export function rangedRaw(launcher, ammo, mods) {
   const launcherPierce = launcher?.damageMax?.pierce ?? 0;
   const ammoPierce = ammo?.damageMax?.pierce ?? 0;
   let total = launcherPierce + ammoPierce;
 
   for (const dt of DAMAGE_TYPES) {
     if (dt === 'pierce') continue;
+    if ((dt === 'chop' || dt === 'pickaxe') && mods && (mods[dt] ?? 0) === 0) {
+      continue;
+    }
     total += (ammo?.damageMax?.[dt] ?? 0) + (launcher?.damageMax?.[dt] ?? 0);
   }
   return Math.round(total);
@@ -133,6 +139,9 @@ export function rangedRaw(launcher, ammo) {
 export function buildNotes(damage, mods) {
   const notes = [];
   for (const [dt, val] of Object.entries(damage ?? {})) {
+    if ((dt === 'chop' || dt === 'pickaxe') && (mods?.[dt] ?? 0) === 0) {
+      continue;
+    }
     if (val > 0 && mods?.[dt] != null && mods[dt] !== 1) {
       notes.push({ mult: mods[dt], text: `\u00d7${mods[dt]} ${capitalize(dt)}` });
     }
@@ -168,7 +177,7 @@ export function recommendFor(creature, biome, weapons) {
 
   const scoredMelee = meleeCandidates.map((w) => {
     const s = score(w.damageMax, mods);
-    const r = rawDamage(w.damageMax);
+    const r = rawDamage(w.damageMax, mods);
     const notes = buildNotes(w.damageMax, mods);
     return { weapon: w.id, name: w.name, category: w.category, tier: w.tier, score: s, raw: r, notes };
   });
@@ -211,7 +220,7 @@ export function recommendFor(creature, biome, weapons) {
     const scoredArrows = arrows.map((a) => {
       const s = rangedScore(bestBow.rawWeapon, a, mods);
       const combinedDmg = buildCombinedRangedDamage(bestBow.rawWeapon, a);
-      const r = rawDamage(combinedDmg);
+      const r = rawDamage(combinedDmg, mods);
       const notes = buildNotes(combinedDmg, mods);
       return { weapon: a.id, name: a.name, tier: a.tier, score: s, raw: r, notes };
     });
@@ -220,7 +229,8 @@ export function recommendFor(creature, biome, weapons) {
       if (a.tier !== b.tier) return a.tier - b.tier;
       return byCodepoint(a.name, b.name);
     });
-    arrowList = scoredArrows.slice(0, 3).map((a) => ({ weapon: a.weapon, score: a.score, raw: a.raw, notes: a.notes }));
+    const effectiveArrows = scoredArrows.filter((a) => a.score >= 0.5 * a.raw);
+    arrowList = effectiveArrows.slice(0, 3).map((a) => ({ weapon: a.weapon, score: a.score, raw: a.raw, notes: a.notes }));
   }
 
   // 3. Crossbow + top 2 bolts
@@ -245,7 +255,7 @@ export function recommendFor(creature, biome, weapons) {
     const scoredBolts = bolts.map((b) => {
       const s = rangedScore(bestCrossbow.rawWeapon, b, mods);
       const combinedDmg = buildCombinedRangedDamage(bestCrossbow.rawWeapon, b);
-      const r = rawDamage(combinedDmg);
+      const r = rawDamage(combinedDmg, mods);
       const notes = buildNotes(combinedDmg, mods);
       return { weapon: b.id, name: b.name, tier: b.tier, score: s, raw: r, notes };
     });
@@ -254,7 +264,8 @@ export function recommendFor(creature, biome, weapons) {
       if (a.tier !== b.tier) return a.tier - b.tier;
       return byCodepoint(a.name, b.name);
     });
-    boltList = scoredBolts.slice(0, 2).map((b) => ({ weapon: b.weapon, score: b.score, raw: b.raw, notes: b.notes }));
+    const effectiveBolts = scoredBolts.filter((b) => b.score >= 0.5 * b.raw);
+    boltList = effectiveBolts.slice(0, 2).map((b) => ({ weapon: b.weapon, score: b.score, raw: b.raw, notes: b.notes }));
   }
 
   // 4. Magic top 1
@@ -263,7 +274,7 @@ export function recommendFor(creature, biome, weapons) {
   if (magics.length > 0) {
     const scoredMagic = magics.map((m) => {
       const s = score(m.damageMax, mods);
-      const r = rawDamage(m.damageMax);
+      const r = rawDamage(m.damageMax, mods);
       const notes = buildNotes(m.damageMax, mods);
       return { weapon: m.id, name: m.name, tier: m.tier, score: s, raw: r, notes };
     });
@@ -272,7 +283,10 @@ export function recommendFor(creature, biome, weapons) {
       if (a.tier !== b.tier) return a.tier - b.tier;
       return byCodepoint(a.name, b.name);
     });
-    magicObj = { weapon: scoredMagic[0].weapon, score: scoredMagic[0].score, raw: scoredMagic[0].raw, notes: scoredMagic[0].notes };
+    const effectiveMagic = scoredMagic.filter((m) => m.score >= 0.5 * m.raw);
+    if (effectiveMagic.length > 0) {
+      magicObj = { weapon: effectiveMagic[0].weapon, score: effectiveMagic[0].score, raw: effectiveMagic[0].raw, notes: effectiveMagic[0].notes };
+    }
   }
 
   // 5. Bomb top 1
@@ -281,7 +295,7 @@ export function recommendFor(creature, biome, weapons) {
   if (bombs.length > 0) {
     const scoredBombs = bombs.map((b) => {
       const s = score(b.damageMax, mods);
-      const r = rawDamage(b.damageMax);
+      const r = rawDamage(b.damageMax, mods);
       const notes = buildNotes(b.damageMax, mods);
       return { weapon: b.id, name: b.name, tier: b.tier, score: s, raw: r, notes };
     });
@@ -290,7 +304,10 @@ export function recommendFor(creature, biome, weapons) {
       if (a.tier !== b.tier) return a.tier - b.tier;
       return byCodepoint(a.name, b.name);
     });
-    bombObj = { weapon: scoredBombs[0].weapon, score: scoredBombs[0].score, raw: scoredBombs[0].raw, notes: scoredBombs[0].notes };
+    const effectiveBombs = scoredBombs.filter((b) => b.score >= 0.5 * b.raw);
+    if (effectiveBombs.length > 0) {
+      bombObj = { weapon: effectiveBombs[0].weapon, score: effectiveBombs[0].score, raw: effectiveBombs[0].raw, notes: effectiveBombs[0].notes };
+    }
   }
 
   // 6. Avoid: combat damage types with mult <= 0.5 present on candidate weapons
@@ -311,8 +328,8 @@ export function recommendFor(creature, biome, weapons) {
   // 7. Tip
   let bestWeakType = null;
   let maxWeakMult = 1;
-  for (const dt of COMBAT_DAMAGE_TYPES) {
-    if (mods[dt] > maxWeakMult && mods[dt] >= 1.5) {
+  for (const dt of DAMAGE_TYPES) {
+    if (mods[dt] > maxWeakMult && mods[dt] > 1) {
       maxWeakMult = mods[dt];
       bestWeakType = dt;
     }

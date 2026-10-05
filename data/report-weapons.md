@@ -41,6 +41,10 @@ Source: valheim.weirdgloop.org (MediaWiki API). No dates on purpose: the report 
 
 - Voidcaller
 
+## Missing weapon icons
+
+(none)
+
 ## Unresolved materials
 
 (none)

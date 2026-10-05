@@ -11154,7 +11154,7 @@ window.VC_DATA = {
       "category": "polearm",
       "hands": "2h",
       "type": "Polearm",
-      "image": null,
+      "image": "img/weapons/bronze-atgeir.png",
       "station": "Forge",
       "stationLevel": 1,
       "maxQuality": 4,
@@ -11916,7 +11916,7 @@ window.VC_DATA = {
       "category": "magic",
       "hands": "2h",
       "type": "Elemental magic",
-      "image": null,
+      "image": "img/weapons/dundr.png",
       "station": "Galdr Table",
       "stationLevel": 2,
       "maxQuality": 4,
@@ -12614,7 +12614,7 @@ window.VC_DATA = {
       "category": "bow",
       "hands": "2h",
       "type": "Bow",
-      "image": null,
+      "image": "img/weapons/frostfire-bow.png",
       "station": "Black Forge",
       "stationLevel": 4,
       "maxQuality": 4,
@@ -12665,7 +12665,7 @@ window.VC_DATA = {
       "category": "crossbow",
       "hands": "2h",
       "type": "Crossbow",
-      "image": null,
+      "image": "img/weapons/frostfire-crossbow.png",
       "station": "Black Forge",
       "stationLevel": 4,
       "maxQuality": 4,
@@ -12716,7 +12716,7 @@ window.VC_DATA = {
       "category": "knife",
       "hands": "1h",
       "type": "knife",
-      "image": null,
+      "image": "img/weapons/frostfire-dagger.png",
       "station": "Black Forge",
       "stationLevel": 4,
       "maxQuality": 4,
@@ -12767,7 +12767,7 @@ window.VC_DATA = {
       "category": "battleaxe",
       "hands": "2h",
       "type": "axe 2h",
-      "image": null,
+      "image": "img/weapons/frostfire-greataxe.png",
       "station": "Black Forge",
       "stationLevel": 4,
       "maxQuality": 4,
@@ -12818,7 +12818,7 @@ window.VC_DATA = {
       "category": "sword",
       "hands": "2h",
       "type": "sword 2h",
-      "image": null,
+      "image": "img/weapons/frostfire-greatsword.png",
       "station": "Black Forge",
       "stationLevel": 4,
       "maxQuality": 4,
@@ -12866,7 +12866,7 @@ window.VC_DATA = {
       "category": "club",
       "hands": "1h",
       "type": "Club 1h",
-      "image": null,
+      "image": "img/weapons/frostfire-mace.png",
       "station": "Black Forge",
       "stationLevel": 4,
       "maxQuality": 4,
@@ -12914,7 +12914,7 @@ window.VC_DATA = {
       "category": "sledge",
       "hands": "2h",
       "type": "Club 2h",
-      "image": null,
+      "image": "img/weapons/frostfire-sledge.png",
       "station": "Black Forge",
       "stationLevel": 4,
       "maxQuality": 4,
@@ -12962,7 +12962,7 @@ window.VC_DATA = {
       "category": "spear",
       "hands": "1h",
       "type": "Spear",
-      "image": null,
+      "image": "img/weapons/frostfire-spear.png",
       "station": "Black Forge",
       "stationLevel": 4,
       "maxQuality": 4,
@@ -13109,7 +13109,7 @@ window.VC_DATA = {
       "category": "polearm",
       "hands": "2h",
       "type": "Polearm",
-      "image": null,
+      "image": "img/weapons/himminafl.png",
       "station": "Black Forge",
       "stationLevel": 1,
       "maxQuality": 4,
@@ -14729,7 +14729,7 @@ window.VC_DATA = {
       "category": "bow",
       "hands": "2h",
       "type": "Bow",
-      "image": null,
+      "image": "img/weapons/root-fang.png",
       "station": "Black Forge",
       "stationLevel": 4,
       "maxQuality": 4,
@@ -15371,7 +15371,7 @@ window.VC_DATA = {
       "category": "magic",
       "hands": "2h",
       "type": "Elemental magic",
-      "image": null,
+      "image": "img/weapons/staff-of-embers.png",
       "station": "Galdr Table",
       "stationLevel": 1,
       "maxQuality": 4,
@@ -15415,7 +15415,7 @@ window.VC_DATA = {
       "category": "magic",
       "hands": "2h",
       "type": "Elemental magic",
-      "image": null,
+      "image": "img/weapons/staff-of-fracturing.png",
       "station": "Galdr Table",
       "stationLevel": 2,
       "maxQuality": 4,
@@ -15459,7 +15459,7 @@ window.VC_DATA = {
       "category": "magic",
       "hands": "2h",
       "type": "Elemental magic",
-      "image": null,
+      "image": "img/weapons/staff-of-frost.png",
       "station": "Galdr Table",
       "stationLevel": 1,
       "maxQuality": 4,
@@ -15630,7 +15630,7 @@ window.VC_DATA = {
       "category": "bow",
       "hands": "2h",
       "type": "Bow",
-      "image": null,
+      "image": "img/weapons/storm-fang.png",
       "station": "Black Forge",
       "stationLevel": 4,
       "maxQuality": 4,
@@ -15806,7 +15806,7 @@ window.VC_DATA = {
       "category": "axe",
       "hands": "1h",
       "type": "Axe 1h",
-      "image": null,
+      "image": "img/weapons/thunderblood-axe.png",
       "station": "Black Forge",
       "stationLevel": 4,
       "maxQuality": 4,
@@ -15854,7 +15854,7 @@ window.VC_DATA = {
       "category": "bow",
       "hands": "2h",
       "type": "Bow",
-      "image": null,
+      "image": "img/weapons/thunderblood-bow.png",
       "station": "Black Forge",
       "stationLevel": 4,
       "maxQuality": 4,
@@ -15902,7 +15902,7 @@ window.VC_DATA = {
       "category": "crossbow",
       "hands": "2h",
       "type": "Crossbow",
-      "image": null,
+      "image": "img/weapons/thunderblood-crossbow.png",
       "station": "Black Forge",
       "stationLevel": 4,
       "maxQuality": 4,
@@ -15950,7 +15950,7 @@ window.VC_DATA = {
       "category": "knife",
       "hands": "1h",
       "type": "Knife",
-      "image": null,
+      "image": "img/weapons/thunderblood-dagger.png",
       "station": "Black Forge",
       "stationLevel": 4,
       "maxQuality": 4,
@@ -15997,7 +15997,7 @@ window.VC_DATA = {
       "category": "battleaxe",
       "hands": "2h",
       "type": "axe 2h",
-      "image": null,
+      "image": "img/weapons/thunderblood-greataxe.png",
       "station": "Black Forge",
       "stationLevel": 4,
       "maxQuality": 4,
@@ -16045,7 +16045,7 @@ window.VC_DATA = {
       "category": "sword",
       "hands": "2h",
       "type": "sword 2h",
-      "image": null,
+      "image": "img/weapons/thunderblood-greatsword.png",
       "station": "Black Forge",
       "stationLevel": 4,
       "maxQuality": 4,
@@ -16090,7 +16090,7 @@ window.VC_DATA = {
       "category": "club",
       "hands": "1h",
       "type": "Club",
-      "image": null,
+      "image": "img/weapons/thunderblood-mace.png",
       "station": "Black Forge",
       "stationLevel": 4,
       "maxQuality": 4,
@@ -16135,7 +16135,7 @@ window.VC_DATA = {
       "category": "sledge",
       "hands": "2h",
       "type": "Club 2h",
-      "image": null,
+      "image": "img/weapons/thunderblood-sledge.png",
       "station": "Black Forge",
       "stationLevel": 4,
       "maxQuality": 4,
@@ -16180,7 +16180,7 @@ window.VC_DATA = {
       "category": "spear",
       "hands": "1h",
       "type": "Spear",
-      "image": null,
+      "image": "img/weapons/thunderblood-spear.png",
       "station": "Black Forge",
       "stationLevel": 4,
       "maxQuality": 4,
@@ -16365,7 +16365,7 @@ window.VC_DATA = {
       "category": "knife",
       "hands": "1h",
       "type": "Knife",
-      "image": null,
+      "image": "img/weapons/voidcaller.png",
       "station": "The Void",
       "stationLevel": null,
       "maxQuality": 1,
@@ -16478,10 +16478,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "flint-spear",
@@ -16545,10 +16543,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "flint-spear",
@@ -16612,10 +16608,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "flint-spear",
@@ -16679,10 +16673,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "flint-spear",
@@ -16748,10 +16740,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "flint-spear",
@@ -16815,10 +16805,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "flint-spear",
@@ -16884,10 +16872,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "flint-spear",
@@ -16951,10 +16937,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "flint-spear",
@@ -17018,10 +17002,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "bronze-sword",
@@ -17111,10 +17093,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "bronze-sword",
@@ -17187,10 +17167,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "bronze-atgeir",
@@ -17254,10 +17232,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "bronze-atgeir",
@@ -17321,10 +17297,9 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 23,
-          "raw": 89,
+          "raw": 45,
           "notes": [
-            "×0.5 Slash",
-            "×0 Chop"
+            "×0.5 Slash"
           ]
         },
         {
@@ -17412,10 +17387,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "bronze-atgeir",
@@ -17481,10 +17454,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "bronze-atgeir",
@@ -17550,10 +17521,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "bronze-atgeir",
@@ -17619,10 +17588,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "bronze-atgeir",
@@ -17686,10 +17653,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "bronze-atgeir",
@@ -17753,10 +17718,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "bronze-atgeir",
@@ -17828,10 +17791,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "bronze-sword",
@@ -17909,10 +17870,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "bronze-sword",
@@ -17982,10 +17941,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "bronze-atgeir",
@@ -18067,10 +18024,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         }
       ],
       "bow": {
@@ -18133,10 +18088,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 45,
-          "raw": 89,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 45,
+          "notes": []
         },
         {
           "weapon": "bronze-atgeir",
@@ -18200,18 +18153,14 @@ window.VC_DATA = {
         {
           "weapon": "battleaxe",
           "score": 70,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 70,
+          "notes": []
         },
         {
           "weapon": "iron-axe",
           "score": 60,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 60,
+          "notes": []
         },
         {
           "weapon": "iron-sword",
@@ -18233,46 +18182,13 @@ window.VC_DATA = {
             "×1.5 Fire",
             "×0.25 Pierce"
           ]
-        },
-        {
-          "weapon": "ironhead-arrow",
-          "score": 21,
-          "raw": 84,
-          "notes": [
-            "×0.25 Pierce"
-          ]
-        },
-        {
-          "weapon": "bronzehead-arrow",
-          "score": 19,
-          "raw": 74,
-          "notes": [
-            "×0.25 Pierce"
-          ]
         }
       ],
       "crossbow": {
         "weapon": "arbalest",
         "score": 50
       },
-      "bolts": [
-        {
-          "weapon": "iron-bolt",
-          "score": 61,
-          "raw": 242,
-          "notes": [
-            "×0.25 Pierce"
-          ]
-        },
-        {
-          "weapon": "bone-bolt",
-          "score": 58,
-          "raw": 232,
-          "notes": [
-            "×0.25 Pierce"
-          ]
-        }
-      ],
+      "bolts": [],
       "magic": null,
       "bomb": {
         "weapon": "ooze-bomb",
@@ -18328,10 +18244,9 @@ window.VC_DATA = {
         {
           "weapon": "battleaxe",
           "score": 35,
-          "raw": 110,
+          "raw": 70,
           "notes": [
-            "×0.5 Slash",
-            "×0 Chop"
+            "×0.5 Slash"
           ]
         }
       ],
@@ -18447,10 +18362,9 @@ window.VC_DATA = {
         {
           "weapon": "battleaxe",
           "score": 35,
-          "raw": 110,
+          "raw": 70,
           "notes": [
-            "×0.5 Slash",
-            "×0 Chop"
+            "×0.5 Slash"
           ]
         }
       ],
@@ -18458,55 +18372,12 @@ window.VC_DATA = {
         "weapon": "huntsman-bow",
         "score": 11
       },
-      "arrows": [
-        {
-          "weapon": "ironhead-arrow",
-          "score": 21,
-          "raw": 84,
-          "notes": [
-            "×0.25 Pierce"
-          ]
-        },
-        {
-          "weapon": "fire-arrow",
-          "score": 19,
-          "raw": 75,
-          "notes": [
-            "×0.25 Fire",
-            "×0.25 Pierce"
-          ]
-        },
-        {
-          "weapon": "bronzehead-arrow",
-          "score": 19,
-          "raw": 74,
-          "notes": [
-            "×0.25 Pierce"
-          ]
-        }
-      ],
+      "arrows": [],
       "crossbow": {
         "weapon": "arbalest",
         "score": 50
       },
-      "bolts": [
-        {
-          "weapon": "iron-bolt",
-          "score": 61,
-          "raw": 242,
-          "notes": [
-            "×0.25 Pierce"
-          ]
-        },
-        {
-          "weapon": "bone-bolt",
-          "score": 58,
-          "raw": 232,
-          "notes": [
-            "×0.25 Pierce"
-          ]
-        }
-      ],
+      "bolts": [],
       "magic": null,
       "bomb": {
         "weapon": "ooze-bomb",
@@ -18550,10 +18421,8 @@ window.VC_DATA = {
         {
           "weapon": "battleaxe",
           "score": 70,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 70,
+          "notes": []
         },
         {
           "weapon": "iron-atgeir",
@@ -18564,10 +18433,8 @@ window.VC_DATA = {
         {
           "weapon": "iron-axe",
           "score": 60,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 60,
+          "notes": []
         }
       ],
       "bow": {
@@ -18645,10 +18512,8 @@ window.VC_DATA = {
         {
           "weapon": "battleaxe",
           "score": 70,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 70,
+          "notes": []
         },
         {
           "weapon": "iron-atgeir",
@@ -18659,10 +18524,8 @@ window.VC_DATA = {
         {
           "weapon": "iron-axe",
           "score": 60,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 60,
+          "notes": []
         }
       ],
       "bow": {
@@ -18740,10 +18603,8 @@ window.VC_DATA = {
         {
           "weapon": "battleaxe",
           "score": 70,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 70,
+          "notes": []
         },
         {
           "weapon": "iron-atgeir",
@@ -18754,10 +18615,8 @@ window.VC_DATA = {
         {
           "weapon": "iron-axe",
           "score": 60,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 60,
+          "notes": []
         }
       ],
       "bow": {
@@ -18922,10 +18781,8 @@ window.VC_DATA = {
         {
           "weapon": "battleaxe",
           "score": 70,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 70,
+          "notes": []
         },
         {
           "weapon": "iron-atgeir",
@@ -18936,10 +18793,8 @@ window.VC_DATA = {
         {
           "weapon": "iron-axe",
           "score": 60,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 60,
+          "notes": []
         }
       ],
       "bow": {
@@ -19033,10 +18888,9 @@ window.VC_DATA = {
         {
           "weapon": "battleaxe",
           "score": 35,
-          "raw": 110,
+          "raw": 70,
           "notes": [
-            "×0.5 Slash",
-            "×0 Chop"
+            "×0.5 Slash"
           ]
         }
       ],
@@ -19152,10 +19006,8 @@ window.VC_DATA = {
         {
           "weapon": "battleaxe",
           "score": 70,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 70,
+          "notes": []
         }
       ],
       "bow": {
@@ -19246,10 +19098,8 @@ window.VC_DATA = {
         {
           "weapon": "battleaxe",
           "score": 70,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 70,
+          "notes": []
         },
         {
           "weapon": "iron-atgeir",
@@ -19260,10 +19110,8 @@ window.VC_DATA = {
         {
           "weapon": "iron-axe",
           "score": 60,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 60,
+          "notes": []
         }
       ],
       "bow": {
@@ -19341,10 +19189,9 @@ window.VC_DATA = {
         {
           "weapon": "battleaxe",
           "score": 35,
-          "raw": 110,
+          "raw": 70,
           "notes": [
-            "×0.5 Slash",
-            "×0 Chop"
+            "×0.5 Slash"
           ]
         },
         {
@@ -19358,10 +19205,9 @@ window.VC_DATA = {
         {
           "weapon": "iron-axe",
           "score": 30,
-          "raw": 110,
+          "raw": 60,
           "notes": [
-            "×0.5 Slash",
-            "×0 Chop"
+            "×0.5 Slash"
           ]
         }
       ],
@@ -19461,19 +19307,17 @@ window.VC_DATA = {
         {
           "weapon": "battleaxe",
           "score": 105,
-          "raw": 110,
+          "raw": 70,
           "notes": [
-            "×1.5 Slash",
-            "×0 Chop"
+            "×1.5 Slash"
           ]
         },
         {
           "weapon": "iron-axe",
           "score": 90,
-          "raw": 110,
+          "raw": 60,
           "notes": [
-            "×1.5 Slash",
-            "×0 Chop"
+            "×1.5 Slash"
           ]
         },
         {
@@ -19566,10 +19410,8 @@ window.VC_DATA = {
         {
           "weapon": "battleaxe",
           "score": 70,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 70,
+          "notes": []
         },
         {
           "weapon": "iron-atgeir",
@@ -19580,10 +19422,8 @@ window.VC_DATA = {
         {
           "weapon": "iron-axe",
           "score": 60,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 60,
+          "notes": []
         }
       ],
       "bow": {
@@ -19656,10 +19496,8 @@ window.VC_DATA = {
         {
           "weapon": "battleaxe",
           "score": 70,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 70,
+          "notes": []
         },
         {
           "weapon": "iron-atgeir",
@@ -19670,10 +19508,8 @@ window.VC_DATA = {
         {
           "weapon": "iron-axe",
           "score": 60,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 60,
+          "notes": []
         }
       ],
       "bow": {
@@ -19746,10 +19582,8 @@ window.VC_DATA = {
         {
           "weapon": "battleaxe",
           "score": 70,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 70,
+          "notes": []
         },
         {
           "weapon": "iron-atgeir",
@@ -19760,10 +19594,8 @@ window.VC_DATA = {
         {
           "weapon": "iron-axe",
           "score": 60,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 60,
+          "notes": []
         }
       ],
       "bow": {
@@ -19836,10 +19668,8 @@ window.VC_DATA = {
         {
           "weapon": "battleaxe",
           "score": 70,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 70,
+          "notes": []
         },
         {
           "weapon": "iron-atgeir",
@@ -19850,10 +19680,8 @@ window.VC_DATA = {
         {
           "weapon": "iron-axe",
           "score": 60,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 60,
+          "notes": []
         }
       ],
       "bow": {
@@ -19926,10 +19754,8 @@ window.VC_DATA = {
         {
           "weapon": "battleaxe",
           "score": 70,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 70,
+          "notes": []
         },
         {
           "weapon": "iron-atgeir",
@@ -19940,10 +19766,8 @@ window.VC_DATA = {
         {
           "weapon": "iron-axe",
           "score": 60,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 60,
+          "notes": []
         }
       ],
       "bow": {
@@ -20021,10 +19845,8 @@ window.VC_DATA = {
         {
           "weapon": "battleaxe",
           "score": 70,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 70,
+          "notes": []
         },
         {
           "weapon": "iron-atgeir",
@@ -20035,10 +19857,8 @@ window.VC_DATA = {
         {
           "weapon": "iron-axe",
           "score": 60,
-          "raw": 110,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 60,
+          "notes": []
         }
       ],
       "bow": {
@@ -20120,11 +19940,10 @@ window.VC_DATA = {
         {
           "weapon": "crystal-battleaxe",
           "score": 90,
-          "raw": 170,
+          "raw": 120,
           "notes": [
             "×1.5 Spirit",
-            "×0.5 Slash",
-            "×0 Chop"
+            "×0.5 Slash"
           ]
         },
         {
@@ -20159,15 +19978,6 @@ window.VC_DATA = {
           "raw": 100,
           "notes": [
             "×1.5 Fire",
-            "×0.5 Pierce",
-            "×0 Poison"
-          ]
-        },
-        {
-          "weapon": "obsidian-arrow",
-          "score": 50,
-          "raw": 119,
-          "notes": [
             "×0.5 Pierce",
             "×0 Poison"
           ]
@@ -20254,9 +20064,8 @@ window.VC_DATA = {
         {
           "weapon": "crystal-battleaxe",
           "score": 90,
-          "raw": 170,
+          "raw": 120,
           "notes": [
-            "×0 Chop",
             "×0 Spirit"
           ]
         },
@@ -20352,9 +20161,8 @@ window.VC_DATA = {
         {
           "weapon": "crystal-battleaxe",
           "score": 90,
-          "raw": 170,
+          "raw": 120,
           "notes": [
-            "×0 Chop",
             "×0 Spirit"
           ]
         },
@@ -20462,9 +20270,8 @@ window.VC_DATA = {
         {
           "weapon": "crystal-battleaxe",
           "score": 90,
-          "raw": 170,
+          "raw": 120,
           "notes": [
-            "×0 Chop",
             "×0 Spirit"
           ]
         },
@@ -20573,9 +20380,8 @@ window.VC_DATA = {
         {
           "weapon": "crystal-battleaxe",
           "score": 90,
-          "raw": 170,
+          "raw": 120,
           "notes": [
-            "×0 Chop",
             "×0 Spirit"
           ]
         },
@@ -20671,9 +20477,8 @@ window.VC_DATA = {
         {
           "weapon": "crystal-battleaxe",
           "score": 90,
-          "raw": 170,
+          "raw": 120,
           "notes": [
-            "×0 Chop",
             "×0 Spirit"
           ]
         },
@@ -20773,9 +20578,8 @@ window.VC_DATA = {
         {
           "weapon": "crystal-battleaxe",
           "score": 90,
-          "raw": 170,
+          "raw": 120,
           "notes": [
-            "×0 Chop",
             "×0 Spirit"
           ]
         },
@@ -20875,9 +20679,8 @@ window.VC_DATA = {
         {
           "weapon": "crystal-battleaxe",
           "score": 90,
-          "raw": 170,
+          "raw": 120,
           "notes": [
-            "×0 Chop",
             "×0 Spirit"
           ]
         },
@@ -20904,30 +20707,11 @@ window.VC_DATA = {
       },
       "arrows": [
         {
-          "weapon": "frost-arrow",
-          "score": 63,
-          "raw": 145,
-          "notes": [
-            "×0.5 Frost",
-            "×0.5 Pierce",
-            "×0 Poison"
-          ]
-        },
-        {
           "weapon": "fire-arrow",
           "score": 62,
           "raw": 100,
           "notes": [
             "×1.5 Fire",
-            "×0.5 Pierce",
-            "×0 Poison"
-          ]
-        },
-        {
-          "weapon": "obsidian-arrow",
-          "score": 50,
-          "raw": 119,
-          "notes": [
             "×0.5 Pierce",
             "×0 Poison"
           ]
@@ -21025,36 +20809,7 @@ window.VC_DATA = {
         "weapon": "draugr-fang",
         "score": 24
       },
-      "arrows": [
-        {
-          "weapon": "obsidian-arrow",
-          "score": 50,
-          "raw": 119,
-          "notes": [
-            "×0.5 Pierce",
-            "×0 Poison"
-          ]
-        },
-        {
-          "weapon": "silver-arrow",
-          "score": 50,
-          "raw": 139,
-          "notes": [
-            "×0.5 Pierce",
-            "×0 Poison",
-            "×0 Spirit"
-          ]
-        },
-        {
-          "weapon": "ironhead-arrow",
-          "score": 45,
-          "raw": 109,
-          "notes": [
-            "×0.5 Pierce",
-            "×0 Poison"
-          ]
-        }
-      ],
+      "arrows": [],
       "crossbow": {
         "weapon": "arbalest",
         "score": 100
@@ -21110,7 +20865,7 @@ window.VC_DATA = {
           "mult": 0.5
         }
       ],
-      "tip": "No elemental weakness — best raw option: Bronze Pickaxe (87). Immune to Fire, Frost, Poison, Spirit."
+      "tip": "Very weak to Pickaxe (×2): Bronze Pickaxe hits for 87 effective. Immune to Fire, Frost, Poison, Spirit."
     },
     "mountain:tetra": {
       "gearTier": 4,
@@ -21138,9 +20893,8 @@ window.VC_DATA = {
         {
           "weapon": "crystal-battleaxe",
           "score": 90,
-          "raw": 170,
+          "raw": 120,
           "notes": [
-            "×0 Chop",
             "×0 Spirit"
           ]
         },
@@ -21234,9 +20988,8 @@ window.VC_DATA = {
         {
           "weapon": "crystal-battleaxe",
           "score": 90,
-          "raw": 170,
+          "raw": 120,
           "notes": [
-            "×0 Chop",
             "×0 Spirit"
           ]
         },
@@ -21340,9 +21093,8 @@ window.VC_DATA = {
         {
           "weapon": "crystal-battleaxe",
           "score": 90,
-          "raw": 170,
+          "raw": 120,
           "notes": [
-            "×0 Chop",
             "×0 Spirit"
           ]
         },
@@ -21434,10 +21186,8 @@ window.VC_DATA = {
         {
           "weapon": "black-metal-battleaxe",
           "score": 110,
-          "raw": 170,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 110,
+          "notes": []
         },
         {
           "weapon": "black-metal-atgeir",
@@ -21527,10 +21277,8 @@ window.VC_DATA = {
         {
           "weapon": "black-metal-battleaxe",
           "score": 110,
-          "raw": 170,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 110,
+          "notes": []
         },
         {
           "weapon": "black-metal-atgeir",
@@ -21620,10 +21368,8 @@ window.VC_DATA = {
         {
           "weapon": "black-metal-battleaxe",
           "score": 110,
-          "raw": 170,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 110,
+          "notes": []
         },
         {
           "weapon": "black-metal-atgeir",
@@ -21713,10 +21459,8 @@ window.VC_DATA = {
         {
           "weapon": "black-metal-battleaxe",
           "score": 110,
-          "raw": 170,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 110,
+          "notes": []
         },
         {
           "weapon": "black-metal-atgeir",
@@ -21806,10 +21550,8 @@ window.VC_DATA = {
         {
           "weapon": "black-metal-battleaxe",
           "score": 110,
-          "raw": 170,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 110,
+          "notes": []
         },
         {
           "weapon": "black-metal-atgeir",
@@ -21899,10 +21641,8 @@ window.VC_DATA = {
         {
           "weapon": "black-metal-battleaxe",
           "score": 110,
-          "raw": 170,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 110,
+          "notes": []
         },
         {
           "weapon": "black-metal-atgeir",
@@ -22003,10 +21743,9 @@ window.VC_DATA = {
         {
           "weapon": "black-metal-battleaxe",
           "score": 55,
-          "raw": 170,
+          "raw": 110,
           "notes": [
-            "×0.5 Slash",
-            "×0 Chop"
+            "×0.5 Slash"
           ]
         }
       ],
@@ -22016,30 +21755,11 @@ window.VC_DATA = {
       },
       "arrows": [
         {
-          "weapon": "frost-arrow",
-          "score": 63,
-          "raw": 145,
-          "notes": [
-            "×0.5 Frost",
-            "×0.5 Pierce",
-            "×0 Poison"
-          ]
-        },
-        {
           "weapon": "fire-arrow",
           "score": 62,
           "raw": 100,
           "notes": [
             "×1.5 Fire",
-            "×0.5 Pierce",
-            "×0 Poison"
-          ]
-        },
-        {
-          "weapon": "needle-arrow",
-          "score": 55,
-          "raw": 129,
-          "notes": [
             "×0.5 Pierce",
             "×0 Poison"
           ]
@@ -22124,10 +21844,8 @@ window.VC_DATA = {
         {
           "weapon": "black-metal-battleaxe",
           "score": 110,
-          "raw": 170,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 110,
+          "notes": []
         },
         {
           "weapon": "black-metal-atgeir",
@@ -22217,10 +21935,8 @@ window.VC_DATA = {
         {
           "weapon": "black-metal-battleaxe",
           "score": 110,
-          "raw": 170,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 110,
+          "notes": []
         },
         {
           "weapon": "black-metal-atgeir",
@@ -22422,11 +22138,10 @@ window.VC_DATA = {
         {
           "weapon": "crystal-battleaxe",
           "score": 90,
-          "raw": 170,
+          "raw": 120,
           "notes": [
             "×1.5 Spirit",
-            "×0.5 Slash",
-            "×0 Chop"
+            "×0.5 Slash"
           ]
         },
         {
@@ -22451,16 +22166,6 @@ window.VC_DATA = {
           "raw": 139,
           "notes": [
             "×1.5 Spirit",
-            "×0.5 Pierce",
-            "×0 Poison"
-          ]
-        },
-        {
-          "weapon": "frost-arrow",
-          "score": 63,
-          "raw": 145,
-          "notes": [
-            "×0.5 Frost",
             "×0.5 Pierce",
             "×0 Poison"
           ]
@@ -22549,18 +22254,14 @@ window.VC_DATA = {
         {
           "weapon": "black-metal-battleaxe",
           "score": 110,
-          "raw": 170,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 110,
+          "notes": []
         },
         {
           "weapon": "black-metal-axe",
           "score": 100,
-          "raw": 160,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 100,
+          "notes": []
         },
         {
           "weapon": "black-metal-sword",
@@ -22573,58 +22274,12 @@ window.VC_DATA = {
         "weapon": "draugr-fang",
         "score": 12
       },
-      "arrows": [
-        {
-          "weapon": "frost-arrow",
-          "score": 70,
-          "raw": 145,
-          "notes": [
-            "×0.25 Pierce",
-            "×0 Poison"
-          ]
-        },
-        {
-          "weapon": "needle-arrow",
-          "score": 27,
-          "raw": 129,
-          "notes": [
-            "×0.25 Pierce",
-            "×0 Poison"
-          ]
-        },
-        {
-          "weapon": "fire-arrow",
-          "score": 26,
-          "raw": 100,
-          "notes": [
-            "×0.5 Fire",
-            "×0.25 Pierce",
-            "×0 Poison"
-          ]
-        }
-      ],
+      "arrows": [],
       "crossbow": {
         "weapon": "arbalest",
         "score": 50
       },
-      "bolts": [
-        {
-          "weapon": "black-metal-bolt",
-          "score": 66,
-          "raw": 262,
-          "notes": [
-            "×0.25 Pierce"
-          ]
-        },
-        {
-          "weapon": "iron-bolt",
-          "score": 61,
-          "raw": 242,
-          "notes": [
-            "×0.25 Pierce"
-          ]
-        }
-      ],
+      "bolts": [],
       "magic": null,
       "bomb": {
         "weapon": "ooze-bomb",
@@ -22676,10 +22331,8 @@ window.VC_DATA = {
         {
           "weapon": "black-metal-battleaxe",
           "score": 110,
-          "raw": 170,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 110,
+          "notes": []
         },
         {
           "weapon": "black-metal-atgeir",
@@ -23509,10 +23162,9 @@ window.VC_DATA = {
         {
           "weapon": "jotun-bane",
           "score": 88,
-          "raw": 205,
+          "raw": 135,
           "notes": [
-            "×0.5 Slash",
-            "×0 Chop"
+            "×0.5 Slash"
           ]
         }
       ],
@@ -23540,9 +23192,9 @@ window.VC_DATA = {
           ]
         },
         {
-          "weapon": "carapace-arrow",
-          "score": 78,
-          "raw": 176,
+          "weapon": "fire-arrow",
+          "score": 70,
+          "raw": 137,
           "notes": [
             "×0.5 Pierce",
             "×0 Spirit"
@@ -23641,10 +23293,9 @@ window.VC_DATA = {
         {
           "weapon": "jotun-bane",
           "score": 88,
-          "raw": 205,
+          "raw": 135,
           "notes": [
-            "×0.5 Slash",
-            "×0 Chop"
+            "×0.5 Slash"
           ]
         }
       ],
@@ -23672,9 +23323,9 @@ window.VC_DATA = {
           ]
         },
         {
-          "weapon": "carapace-arrow",
-          "score": 78,
-          "raw": 176,
+          "weapon": "fire-arrow",
+          "score": 70,
+          "raw": 137,
           "notes": [
             "×0.5 Pierce",
             "×0 Spirit"
@@ -23773,10 +23424,9 @@ window.VC_DATA = {
         {
           "weapon": "jotun-bane",
           "score": 88,
-          "raw": 205,
+          "raw": 135,
           "notes": [
-            "×0.5 Slash",
-            "×0 Chop"
+            "×0.5 Slash"
           ]
         }
       ],
@@ -23804,9 +23454,9 @@ window.VC_DATA = {
           ]
         },
         {
-          "weapon": "carapace-arrow",
-          "score": 78,
-          "raw": 176,
+          "weapon": "fire-arrow",
+          "score": 70,
+          "raw": 137,
           "notes": [
             "×0.5 Pierce",
             "×0 Spirit"
@@ -23901,10 +23551,8 @@ window.VC_DATA = {
         {
           "weapon": "jotun-bane",
           "score": 135,
-          "raw": 205,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 135,
+          "notes": []
         }
       ],
       "bow": {
@@ -23931,9 +23579,9 @@ window.VC_DATA = {
           ]
         },
         {
-          "weapon": "carapace-arrow",
-          "score": 78,
-          "raw": 176,
+          "weapon": "fire-arrow",
+          "score": 70,
+          "raw": 137,
           "notes": [
             "×0.5 Pierce",
             "×0 Spirit"
@@ -24123,10 +23771,8 @@ window.VC_DATA = {
         {
           "weapon": "primal-berserkir-axes",
           "score": 165,
-          "raw": 254,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 165,
+          "notes": []
         },
         {
           "weapon": "klossen",
@@ -24167,28 +23813,21 @@ window.VC_DATA = {
         {
           "weapon": "charred-bolt",
           "score": 302,
-          "raw": 462,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 302,
+          "notes": []
         },
         {
           "weapon": "carapace-bolt",
           "score": 292,
-          "raw": 452,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 292,
+          "notes": []
         }
       ],
       "magic": {
         "weapon": "trollstav",
         "score": 300,
-        "raw": 500,
-        "notes": [
-          "×0 Chop",
-          "×0 Pickaxe"
-        ]
+        "raw": 300,
+        "notes": []
       },
       "bomb": {
         "weapon": "ooze-bomb",
@@ -24228,10 +23867,8 @@ window.VC_DATA = {
         {
           "weapon": "primal-berserkir-axes",
           "score": 165,
-          "raw": 254,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 165,
+          "notes": []
         },
         {
           "weapon": "klossen",
@@ -24272,28 +23909,21 @@ window.VC_DATA = {
         {
           "weapon": "charred-bolt",
           "score": 302,
-          "raw": 462,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 302,
+          "notes": []
         },
         {
           "weapon": "carapace-bolt",
           "score": 292,
-          "raw": 452,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 292,
+          "notes": []
         }
       ],
       "magic": {
         "weapon": "trollstav",
         "score": 300,
-        "raw": 500,
-        "notes": [
-          "×0 Chop",
-          "×0 Pickaxe"
-        ]
+        "raw": 300,
+        "notes": []
       },
       "bomb": {
         "weapon": "ooze-bomb",
@@ -24333,10 +23963,8 @@ window.VC_DATA = {
         {
           "weapon": "thundering-berserkir-axes",
           "score": 165,
-          "raw": 254,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 165,
+          "notes": []
         },
         {
           "weapon": "storm-star",
@@ -24377,18 +24005,14 @@ window.VC_DATA = {
         {
           "weapon": "charred-bolt",
           "score": 302,
-          "raw": 462,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 302,
+          "notes": []
         },
         {
           "weapon": "carapace-bolt",
           "score": 292,
-          "raw": 452,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 292,
+          "notes": []
         }
       ],
       "magic": {
@@ -24445,10 +24069,8 @@ window.VC_DATA = {
         {
           "weapon": "thundering-berserkir-axes",
           "score": 165,
-          "raw": 254,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 165,
+          "notes": []
         },
         {
           "weapon": "storm-star",
@@ -24491,26 +24113,22 @@ window.VC_DATA = {
         {
           "weapon": "charred-bolt",
           "score": 302,
-          "raw": 462,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 302,
+          "notes": []
         },
         {
           "weapon": "carapace-bolt",
           "score": 292,
-          "raw": 452,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 292,
+          "notes": []
         }
       ],
       "magic": {
-        "weapon": "staff-of-embers",
+        "weapon": "staff-of-the-wild",
         "score": 120,
-        "raw": 258,
+        "raw": 160,
         "notes": [
-          "×0 Fire"
+          "×0.5 Poison"
         ]
       },
       "bomb": {
@@ -24559,10 +24177,8 @@ window.VC_DATA = {
         {
           "weapon": "thundering-berserkir-axes",
           "score": 165,
-          "raw": 254,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 165,
+          "notes": []
         },
         {
           "weapon": "storm-star",
@@ -24610,19 +24226,17 @@ window.VC_DATA = {
         {
           "weapon": "charred-bolt",
           "score": 151,
-          "raw": 462,
+          "raw": 302,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         },
         {
           "weapon": "carapace-bolt",
           "score": 146,
-          "raw": 452,
+          "raw": 292,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         }
       ],
@@ -24680,10 +24294,8 @@ window.VC_DATA = {
         {
           "weapon": "thundering-berserkir-axes",
           "score": 165,
-          "raw": 254,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 165,
+          "notes": []
         },
         {
           "weapon": "storm-star",
@@ -24731,19 +24343,17 @@ window.VC_DATA = {
         {
           "weapon": "charred-bolt",
           "score": 151,
-          "raw": 462,
+          "raw": 302,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         },
         {
           "weapon": "carapace-bolt",
           "score": 146,
-          "raw": 452,
+          "raw": 292,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         }
       ],
@@ -24801,10 +24411,8 @@ window.VC_DATA = {
         {
           "weapon": "thundering-berserkir-axes",
           "score": 165,
-          "raw": 254,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 165,
+          "notes": []
         },
         {
           "weapon": "storm-star",
@@ -24853,19 +24461,17 @@ window.VC_DATA = {
         {
           "weapon": "charred-bolt",
           "score": 151,
-          "raw": 462,
+          "raw": 302,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         },
         {
           "weapon": "carapace-bolt",
           "score": 146,
-          "raw": 452,
+          "raw": 292,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         }
       ],
@@ -24927,10 +24533,8 @@ window.VC_DATA = {
         {
           "weapon": "thundering-berserkir-axes",
           "score": 165,
-          "raw": 254,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 165,
+          "notes": []
         },
         {
           "weapon": "storm-star",
@@ -24978,19 +24582,17 @@ window.VC_DATA = {
         {
           "weapon": "charred-bolt",
           "score": 151,
-          "raw": 462,
+          "raw": 302,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         },
         {
           "weapon": "carapace-bolt",
           "score": 146,
-          "raw": 452,
+          "raw": 292,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         }
       ],
@@ -25048,10 +24650,8 @@ window.VC_DATA = {
         {
           "weapon": "primal-berserkir-axes",
           "score": 165,
-          "raw": 254,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 165,
+          "notes": []
         },
         {
           "weapon": "klossen",
@@ -25098,19 +24698,17 @@ window.VC_DATA = {
         {
           "weapon": "charred-bolt",
           "score": 151,
-          "raw": 462,
+          "raw": 302,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         },
         {
           "weapon": "carapace-bolt",
           "score": 146,
-          "raw": 452,
+          "raw": 292,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         }
       ],
@@ -25166,10 +24764,8 @@ window.VC_DATA = {
         {
           "weapon": "thundering-berserkir-axes",
           "score": 165,
-          "raw": 254,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 165,
+          "notes": []
         },
         {
           "weapon": "storm-star",
@@ -25212,18 +24808,14 @@ window.VC_DATA = {
         {
           "weapon": "charred-bolt",
           "score": 302,
-          "raw": 462,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 302,
+          "notes": []
         },
         {
           "weapon": "carapace-bolt",
           "score": 292,
-          "raw": 452,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 292,
+          "notes": []
         }
       ],
       "magic": {
@@ -25333,19 +24925,17 @@ window.VC_DATA = {
         {
           "weapon": "charred-bolt",
           "score": 151,
-          "raw": 462,
+          "raw": 302,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         },
         {
           "weapon": "carapace-bolt",
           "score": 146,
-          "raw": 452,
+          "raw": 292,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         }
       ],
@@ -25410,10 +25000,8 @@ window.VC_DATA = {
         {
           "weapon": "thundering-berserkir-axes",
           "score": 165,
-          "raw": 254,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 165,
+          "notes": []
         },
         {
           "weapon": "storm-star",
@@ -25462,19 +25050,17 @@ window.VC_DATA = {
         {
           "weapon": "charred-bolt",
           "score": 151,
-          "raw": 462,
+          "raw": 302,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         },
         {
           "weapon": "carapace-bolt",
           "score": 146,
-          "raw": 452,
+          "raw": 292,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         }
       ],
@@ -25536,10 +25122,8 @@ window.VC_DATA = {
         {
           "weapon": "primal-berserkir-axes",
           "score": 165,
-          "raw": 254,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 165,
+          "notes": []
         },
         {
           "weapon": "klossen",
@@ -25580,28 +25164,21 @@ window.VC_DATA = {
         {
           "weapon": "charred-bolt",
           "score": 302,
-          "raw": 462,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 302,
+          "notes": []
         },
         {
           "weapon": "carapace-bolt",
           "score": 292,
-          "raw": 452,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 292,
+          "notes": []
         }
       ],
       "magic": {
         "weapon": "trollstav",
         "score": 300,
-        "raw": 500,
-        "notes": [
-          "×0 Chop",
-          "×0 Pickaxe"
-        ]
+        "raw": 300,
+        "notes": []
       },
       "bomb": {
         "weapon": "ooze-bomb",
@@ -25653,11 +25230,10 @@ window.VC_DATA = {
         {
           "weapon": "thundering-berserkir-axes",
           "score": 93,
-          "raw": 254,
+          "raw": 165,
           "notes": [
             "×1.5 Lightning",
-            "×0.5 Slash",
-            "×0 Chop"
+            "×0.5 Slash"
           ]
         }
       ],
@@ -25699,30 +25275,26 @@ window.VC_DATA = {
         {
           "weapon": "charred-bolt",
           "score": 151,
-          "raw": 462,
+          "raw": 302,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         },
         {
           "weapon": "carapace-bolt",
           "score": 146,
-          "raw": 452,
+          "raw": 292,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         }
       ],
       "magic": {
         "weapon": "trollstav",
         "score": 150,
-        "raw": 500,
+        "raw": 300,
         "notes": [
-          "×0.5 Fire",
-          "×0 Chop",
-          "×0 Pickaxe"
+          "×0.5 Fire"
         ]
       },
       "bomb": {
@@ -25783,10 +25355,9 @@ window.VC_DATA = {
         {
           "weapon": "thundering-berserkir-axes",
           "score": 160,
-          "raw": 254,
+          "raw": 165,
           "notes": [
-            "×0.5 Lightning",
-            "×0 Chop"
+            "×0.5 Lightning"
           ]
         },
         {
@@ -25836,30 +25407,27 @@ window.VC_DATA = {
         {
           "weapon": "charred-bolt",
           "score": 151,
-          "raw": 462,
+          "raw": 302,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         },
         {
           "weapon": "carapace-bolt",
           "score": 146,
-          "raw": 452,
+          "raw": 292,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         }
       ],
       "magic": {
         "weapon": "trollstav",
         "score": 200,
-        "raw": 500,
+        "raw": 400,
         "notes": [
           "×0.5 Fire",
-          "×0.5 Pickaxe",
-          "×0 Chop"
+          "×0.5 Pickaxe"
         ]
       },
       "bomb": {
@@ -25916,10 +25484,8 @@ window.VC_DATA = {
         {
           "weapon": "thundering-berserkir-axes",
           "score": 165,
-          "raw": 254,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 165,
+          "notes": []
         },
         {
           "weapon": "storm-star",
@@ -25962,28 +25528,21 @@ window.VC_DATA = {
         {
           "weapon": "charred-bolt",
           "score": 302,
-          "raw": 462,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 302,
+          "notes": []
         },
         {
           "weapon": "carapace-bolt",
           "score": 292,
-          "raw": 452,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 292,
+          "notes": []
         }
       ],
       "magic": {
         "weapon": "trollstav",
         "score": 300,
-        "raw": 500,
-        "notes": [
-          "×0 Chop",
-          "×0 Pickaxe"
-        ]
+        "raw": 300,
+        "notes": []
       },
       "bomb": {
         "weapon": "ooze-bomb",
@@ -26055,26 +25614,6 @@ window.VC_DATA = {
       },
       "arrows": [
         {
-          "weapon": "bloodgold-arrow",
-          "score": 147,
-          "raw": 319,
-          "notes": [
-            "×0.5 Lightning",
-            "×0.5 Pierce",
-            "×0 Spirit"
-          ]
-        },
-        {
-          "weapon": "charred-arrow",
-          "score": 138,
-          "raw": 301,
-          "notes": [
-            "×0.5 Lightning",
-            "×0.5 Pierce",
-            "×0 Spirit"
-          ]
-        },
-        {
           "weapon": "fire-arrow",
           "score": 136,
           "raw": 252,
@@ -26113,19 +25652,17 @@ window.VC_DATA = {
       "magic": {
         "weapon": "trollstav",
         "score": 550,
-        "raw": 500,
+        "raw": 400,
         "notes": [
-          "×1.5 Fire",
-          "×0 Pickaxe"
+          "×1.5 Fire"
         ]
       },
       "bomb": {
         "weapon": "ember-charge",
         "score": 170,
-        "raw": 290,
+        "raw": 240,
         "notes": [
-          "×0.5 Blunt",
-          "×0 Pickaxe"
+          "×0.5 Blunt"
         ]
       },
       "avoid": [
@@ -26190,10 +25727,8 @@ window.VC_DATA = {
         {
           "weapon": "frostfire-greataxe",
           "score": 302,
-          "raw": 350,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 302,
+          "notes": []
         }
       ],
       "bow": {
@@ -26234,37 +25769,27 @@ window.VC_DATA = {
         {
           "weapon": "bloodgold-bolt",
           "score": 450,
-          "raw": 645,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 450,
+          "notes": []
         },
         {
           "weapon": "charred-bolt",
           "score": 440,
-          "raw": 635,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 440,
+          "notes": []
         }
       ],
       "magic": {
         "weapon": "trollstav",
         "score": 300,
-        "raw": 500,
-        "notes": [
-          "×0 Chop",
-          "×0 Pickaxe"
-        ]
+        "raw": 300,
+        "notes": []
       },
       "bomb": {
         "weapon": "ember-charge",
         "score": 140,
-        "raw": 290,
-        "notes": [
-          "×0 Chop",
-          "×0 Pickaxe"
-        ]
+        "raw": 140,
+        "notes": []
       },
       "avoid": [
         {
@@ -26304,10 +25829,8 @@ window.VC_DATA = {
         {
           "weapon": "thunderblood-greataxe",
           "score": 288,
-          "raw": 336,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 288,
+          "notes": []
         }
       ],
       "bow": {
@@ -26348,38 +25871,29 @@ window.VC_DATA = {
         {
           "weapon": "bloodgold-bolt",
           "score": 450,
-          "raw": 645,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 450,
+          "notes": []
         },
         {
           "weapon": "charred-bolt",
           "score": 440,
-          "raw": 635,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 440,
+          "notes": []
         }
       ],
       "magic": {
         "weapon": "trollstav",
         "score": 450,
-        "raw": 500,
+        "raw": 300,
         "notes": [
-          "×1.5 Fire",
-          "×0 Chop",
-          "×0 Pickaxe"
+          "×1.5 Fire"
         ]
       },
       "bomb": {
         "weapon": "ember-charge",
         "score": 140,
-        "raw": 290,
-        "notes": [
-          "×0 Chop",
-          "×0 Pickaxe"
-        ]
+        "raw": 140,
+        "notes": []
       },
       "avoid": [
         {
@@ -26423,10 +25937,8 @@ window.VC_DATA = {
         {
           "weapon": "thunderblood-greataxe",
           "score": 288,
-          "raw": 336,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 288,
+          "notes": []
         }
       ],
       "bow": {
@@ -26467,37 +25979,27 @@ window.VC_DATA = {
         {
           "weapon": "bloodgold-bolt",
           "score": 450,
-          "raw": 645,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 450,
+          "notes": []
         },
         {
           "weapon": "charred-bolt",
           "score": 440,
-          "raw": 635,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 440,
+          "notes": []
         }
       ],
       "magic": {
         "weapon": "trollstav",
         "score": 300,
-        "raw": 500,
-        "notes": [
-          "×0 Chop",
-          "×0 Pickaxe"
-        ]
+        "raw": 300,
+        "notes": []
       },
       "bomb": {
         "weapon": "ember-charge",
         "score": 140,
-        "raw": 290,
-        "notes": [
-          "×0 Chop",
-          "×0 Pickaxe"
-        ]
+        "raw": 140,
+        "notes": []
       },
       "avoid": [
         {
@@ -26547,11 +26049,10 @@ window.VC_DATA = {
         {
           "weapon": "frostfire-greataxe",
           "score": 200,
-          "raw": 350,
+          "raw": 302,
           "notes": [
             "×0.5 Fire",
-            "×0.5 Slash",
-            "×0 Chop"
+            "×0.5 Slash"
           ]
         }
       ],
@@ -26596,19 +26097,17 @@ window.VC_DATA = {
         {
           "weapon": "bloodgold-bolt",
           "score": 255,
-          "raw": 645,
+          "raw": 450,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         },
         {
           "weapon": "charred-bolt",
           "score": 250,
-          "raw": 635,
+          "raw": 440,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         }
       ],
@@ -26621,11 +26120,9 @@ window.VC_DATA = {
       "bomb": {
         "weapon": "ember-charge",
         "score": 70,
-        "raw": 290,
+        "raw": 140,
         "notes": [
-          "×0.5 Blunt",
-          "×0 Chop",
-          "×0 Pickaxe"
+          "×0.5 Blunt"
         ]
       },
       "avoid": [
@@ -26688,10 +26185,9 @@ window.VC_DATA = {
         {
           "weapon": "frostfire-greataxe",
           "score": 330,
-          "raw": 350,
+          "raw": 302,
           "notes": [
             "×1.5 Frost",
-            "×0 Chop",
             "×0 Fire"
           ]
         }
@@ -26735,18 +26231,14 @@ window.VC_DATA = {
         {
           "weapon": "bloodgold-bolt",
           "score": 450,
-          "raw": 645,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 450,
+          "notes": []
         },
         {
           "weapon": "charred-bolt",
           "score": 440,
-          "raw": 635,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 440,
+          "notes": []
         }
       ],
       "magic": {
@@ -26758,11 +26250,8 @@ window.VC_DATA = {
       "bomb": {
         "weapon": "ember-charge",
         "score": 140,
-        "raw": 290,
-        "notes": [
-          "×0 Chop",
-          "×0 Pickaxe"
-        ]
+        "raw": 140,
+        "notes": []
       },
       "avoid": [
         {
@@ -26814,10 +26303,9 @@ window.VC_DATA = {
         {
           "weapon": "thunderblood-greataxe",
           "score": 174,
-          "raw": 336,
+          "raw": 288,
           "notes": [
-            "×0.5 Slash",
-            "×0 Chop"
+            "×0.5 Slash"
           ]
         }
       ],
@@ -26862,19 +26350,17 @@ window.VC_DATA = {
         {
           "weapon": "bloodgold-bolt",
           "score": 255,
-          "raw": 645,
+          "raw": 450,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         },
         {
           "weapon": "charred-bolt",
           "score": 250,
-          "raw": 635,
+          "raw": 440,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         }
       ],
@@ -26887,11 +26373,10 @@ window.VC_DATA = {
       "bomb": {
         "weapon": "ember-charge",
         "score": 145,
-        "raw": 290,
+        "raw": 190,
         "notes": [
           "×1.5 Pickaxe",
-          "×0.5 Blunt",
-          "×0 Chop"
+          "×0.5 Blunt"
         ]
       },
       "avoid": [
@@ -26920,7 +26405,7 @@ window.VC_DATA = {
           "mult": 0.5
         }
       ],
-      "tip": "No elemental weakness — best raw option: Thunderblood Sledge (193). Immune to Fire, Spirit."
+      "tip": "Weak to Pickaxe (×1.5): Trollstav hits for 150 effective. Immune to Fire, Spirit."
     },
     "deep-north:greydwarf-deep-north": {
       "gearTier": 8,
@@ -26956,10 +26441,9 @@ window.VC_DATA = {
         {
           "weapon": "frostfire-greataxe",
           "score": 323,
-          "raw": 350,
+          "raw": 302,
           "notes": [
-            "×2 Fire",
-            "×0 Chop"
+            "×2 Fire"
           ]
         }
       ],
@@ -27001,38 +26485,29 @@ window.VC_DATA = {
         {
           "weapon": "bloodgold-bolt",
           "score": 450,
-          "raw": 645,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 450,
+          "notes": []
         },
         {
           "weapon": "charred-bolt",
           "score": 440,
-          "raw": 635,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 440,
+          "notes": []
         }
       ],
       "magic": {
         "weapon": "trollstav",
         "score": 600,
-        "raw": 500,
+        "raw": 300,
         "notes": [
-          "×2 Fire",
-          "×0 Chop",
-          "×0 Pickaxe"
+          "×2 Fire"
         ]
       },
       "bomb": {
         "weapon": "ember-charge",
         "score": 140,
-        "raw": 290,
-        "notes": [
-          "×0 Chop",
-          "×0 Pickaxe"
-        ]
+        "raw": 140,
+        "notes": []
       },
       "avoid": [
         {
@@ -27080,10 +26555,9 @@ window.VC_DATA = {
         {
           "weapon": "frostfire-greataxe",
           "score": 323,
-          "raw": 350,
+          "raw": 302,
           "notes": [
-            "×2 Fire",
-            "×0 Chop"
+            "×2 Fire"
           ]
         }
       ],
@@ -27125,38 +26599,29 @@ window.VC_DATA = {
         {
           "weapon": "bloodgold-bolt",
           "score": 450,
-          "raw": 645,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 450,
+          "notes": []
         },
         {
           "weapon": "charred-bolt",
           "score": 440,
-          "raw": 635,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 440,
+          "notes": []
         }
       ],
       "magic": {
         "weapon": "trollstav",
         "score": 600,
-        "raw": 500,
+        "raw": 300,
         "notes": [
-          "×2 Fire",
-          "×0 Chop",
-          "×0 Pickaxe"
+          "×2 Fire"
         ]
       },
       "bomb": {
         "weapon": "ember-charge",
         "score": 140,
-        "raw": 290,
-        "notes": [
-          "×0 Chop",
-          "×0 Pickaxe"
-        ]
+        "raw": 140,
+        "notes": []
       },
       "avoid": [
         {
@@ -27200,10 +26665,8 @@ window.VC_DATA = {
         {
           "weapon": "thunderblood-greataxe",
           "score": 288,
-          "raw": 336,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 288,
+          "notes": []
         }
       ],
       "bow": {
@@ -27244,38 +26707,29 @@ window.VC_DATA = {
         {
           "weapon": "bloodgold-bolt",
           "score": 450,
-          "raw": 645,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 450,
+          "notes": []
         },
         {
           "weapon": "charred-bolt",
           "score": 440,
-          "raw": 635,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 440,
+          "notes": []
         }
       ],
       "magic": {
         "weapon": "trollstav",
         "score": 450,
-        "raw": 500,
+        "raw": 300,
         "notes": [
-          "×1.5 Fire",
-          "×0 Chop",
-          "×0 Pickaxe"
+          "×1.5 Fire"
         ]
       },
       "bomb": {
         "weapon": "ember-charge",
         "score": 140,
-        "raw": 290,
-        "notes": [
-          "×0 Chop",
-          "×0 Pickaxe"
-        ]
+        "raw": 140,
+        "notes": []
       },
       "avoid": [
         {
@@ -27323,10 +26777,8 @@ window.VC_DATA = {
         {
           "weapon": "frostfire-greataxe",
           "score": 302,
-          "raw": 350,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 302,
+          "notes": []
         }
       ],
       "bow": {
@@ -27367,37 +26819,27 @@ window.VC_DATA = {
         {
           "weapon": "bloodgold-bolt",
           "score": 450,
-          "raw": 645,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 450,
+          "notes": []
         },
         {
           "weapon": "charred-bolt",
           "score": 440,
-          "raw": 635,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 440,
+          "notes": []
         }
       ],
       "magic": {
         "weapon": "trollstav",
         "score": 300,
-        "raw": 500,
-        "notes": [
-          "×0 Chop",
-          "×0 Pickaxe"
-        ]
+        "raw": 300,
+        "notes": []
       },
       "bomb": {
         "weapon": "ember-charge",
         "score": 140,
-        "raw": 290,
-        "notes": [
-          "×0 Chop",
-          "×0 Pickaxe"
-        ]
+        "raw": 140,
+        "notes": []
       },
       "avoid": [
         {
@@ -27441,10 +26883,9 @@ window.VC_DATA = {
         {
           "weapon": "thunderblood-greataxe",
           "score": 258,
-          "raw": 336,
+          "raw": 288,
           "notes": [
-            "×0.5 Lightning",
-            "×0 Chop"
+            "×0.5 Lightning"
           ]
         }
       ],
@@ -27462,26 +26903,6 @@ window.VC_DATA = {
             "×0.5 Pierce",
             "×0 Spirit"
           ]
-        },
-        {
-          "weapon": "bloodgold-arrow",
-          "score": 147,
-          "raw": 319,
-          "notes": [
-            "×0.5 Lightning",
-            "×0.5 Pierce",
-            "×0 Spirit"
-          ]
-        },
-        {
-          "weapon": "charred-arrow",
-          "score": 138,
-          "raw": 301,
-          "notes": [
-            "×0.5 Lightning",
-            "×0.5 Pierce",
-            "×0 Spirit"
-          ]
         }
       ],
       "crossbow": {
@@ -27492,21 +26913,19 @@ window.VC_DATA = {
         {
           "weapon": "bloodgold-bolt",
           "score": 225,
-          "raw": 645,
+          "raw": 450,
           "notes": [
             "×0.5 Lightning",
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         },
         {
           "weapon": "charred-bolt",
           "score": 220,
-          "raw": 635,
+          "raw": 440,
           "notes": [
             "×0.5 Lightning",
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         }
       ],
@@ -27521,11 +26940,8 @@ window.VC_DATA = {
       "bomb": {
         "weapon": "ember-charge",
         "score": 140,
-        "raw": 290,
-        "notes": [
-          "×0 Chop",
-          "×0 Pickaxe"
-        ]
+        "raw": 140,
+        "notes": []
       },
       "avoid": [
         {
@@ -27581,10 +26997,8 @@ window.VC_DATA = {
         {
           "weapon": "thunderblood-greataxe",
           "score": 288,
-          "raw": 336,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 288,
+          "notes": []
         }
       ],
       "bow": {
@@ -27628,39 +27042,31 @@ window.VC_DATA = {
         {
           "weapon": "bloodgold-bolt",
           "score": 255,
-          "raw": 645,
+          "raw": 450,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         },
         {
           "weapon": "charred-bolt",
           "score": 250,
-          "raw": 635,
+          "raw": 440,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         }
       ],
       "magic": {
         "weapon": "trollstav",
         "score": 300,
-        "raw": 500,
-        "notes": [
-          "×0 Chop",
-          "×0 Pickaxe"
-        ]
+        "raw": 300,
+        "notes": []
       },
       "bomb": {
         "weapon": "ember-charge",
         "score": 140,
-        "raw": 290,
-        "notes": [
-          "×0 Chop",
-          "×0 Pickaxe"
-        ]
+        "raw": 140,
+        "notes": []
       },
       "avoid": [
         {
@@ -27758,38 +27164,30 @@ window.VC_DATA = {
         {
           "weapon": "bloodgold-bolt",
           "score": 450,
-          "raw": 645,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 450,
+          "notes": []
         },
         {
           "weapon": "charred-bolt",
           "score": 440,
-          "raw": 635,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 440,
+          "notes": []
         }
       ],
       "magic": {
         "weapon": "trollstav",
         "score": 450,
-        "raw": 500,
+        "raw": 300,
         "notes": [
-          "×1.5 Fire",
-          "×0 Chop",
-          "×0 Pickaxe"
+          "×1.5 Fire"
         ]
       },
       "bomb": {
         "weapon": "ember-charge",
         "score": 70,
-        "raw": 290,
+        "raw": 140,
         "notes": [
-          "×0.5 Blunt",
-          "×0 Chop",
-          "×0 Pickaxe"
+          "×0.5 Blunt"
         ]
       },
       "avoid": [
@@ -27888,38 +27286,30 @@ window.VC_DATA = {
         {
           "weapon": "bloodgold-bolt",
           "score": 450,
-          "raw": 645,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 450,
+          "notes": []
         },
         {
           "weapon": "charred-bolt",
           "score": 440,
-          "raw": 635,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 440,
+          "notes": []
         }
       ],
       "magic": {
         "weapon": "trollstav",
         "score": 450,
-        "raw": 500,
+        "raw": 300,
         "notes": [
-          "×1.5 Fire",
-          "×0 Chop",
-          "×0 Pickaxe"
+          "×1.5 Fire"
         ]
       },
       "bomb": {
         "weapon": "ember-charge",
         "score": 70,
-        "raw": 290,
+        "raw": 140,
         "notes": [
-          "×0.5 Blunt",
-          "×0 Chop",
-          "×0 Pickaxe"
+          "×0.5 Blunt"
         ]
       },
       "avoid": [
@@ -27972,10 +27362,8 @@ window.VC_DATA = {
         {
           "weapon": "frostfire-greataxe",
           "score": 302,
-          "raw": 350,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 302,
+          "notes": []
         }
       ],
       "bow": {
@@ -28016,37 +27404,27 @@ window.VC_DATA = {
         {
           "weapon": "bloodgold-bolt",
           "score": 450,
-          "raw": 645,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 450,
+          "notes": []
         },
         {
           "weapon": "charred-bolt",
           "score": 440,
-          "raw": 635,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 440,
+          "notes": []
         }
       ],
       "magic": {
         "weapon": "trollstav",
         "score": 300,
-        "raw": 500,
-        "notes": [
-          "×0 Chop",
-          "×0 Pickaxe"
-        ]
+        "raw": 300,
+        "notes": []
       },
       "bomb": {
         "weapon": "ember-charge",
         "score": 140,
-        "raw": 290,
-        "notes": [
-          "×0 Chop",
-          "×0 Pickaxe"
-        ]
+        "raw": 140,
+        "notes": []
       },
       "avoid": [
         {
@@ -28090,10 +27468,9 @@ window.VC_DATA = {
         {
           "weapon": "frostfire-greataxe",
           "score": 313,
-          "raw": 350,
+          "raw": 302,
           "notes": [
-            "×1.5 Fire",
-            "×0 Chop"
+            "×1.5 Fire"
           ]
         }
       ],
@@ -28135,38 +27512,29 @@ window.VC_DATA = {
         {
           "weapon": "bloodgold-bolt",
           "score": 450,
-          "raw": 645,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 450,
+          "notes": []
         },
         {
           "weapon": "charred-bolt",
           "score": 440,
-          "raw": 635,
-          "notes": [
-            "×0 Chop"
-          ]
+          "raw": 440,
+          "notes": []
         }
       ],
       "magic": {
         "weapon": "trollstav",
         "score": 450,
-        "raw": 500,
+        "raw": 300,
         "notes": [
-          "×1.5 Fire",
-          "×0 Chop",
-          "×0 Pickaxe"
+          "×1.5 Fire"
         ]
       },
       "bomb": {
         "weapon": "ember-charge",
         "score": 140,
-        "raw": 290,
-        "notes": [
-          "×0 Chop",
-          "×0 Pickaxe"
-        ]
+        "raw": 140,
+        "notes": []
       },
       "avoid": [
         {
@@ -28210,9 +27578,8 @@ window.VC_DATA = {
         {
           "weapon": "early-axes",
           "score": 0,
-          "raw": 89,
+          "raw": 45,
           "notes": [
-            "×0 Chop",
             "×0 Slash"
           ]
         }
@@ -28221,72 +27588,14 @@ window.VC_DATA = {
         "weapon": "crude-bow",
         "score": 0
       },
-      "arrows": [
-        {
-          "weapon": "fire-arrow",
-          "score": 0,
-          "raw": 55,
-          "notes": [
-            "×0 Fire",
-            "×0 Pierce"
-          ]
-        },
-        {
-          "weapon": "flinthead-arrow",
-          "score": 0,
-          "raw": 49,
-          "notes": [
-            "×0 Pierce"
-          ]
-        },
-        {
-          "weapon": "wood-arrow",
-          "score": 0,
-          "raw": 44,
-          "notes": [
-            "×0 Pierce"
-          ]
-        }
-      ],
+      "arrows": [],
       "crossbow": {
         "weapon": "arbalest",
         "score": 0
       },
-      "bolts": [
-        {
-          "weapon": "bone-bolt",
-          "score": 0,
-          "raw": 232,
-          "notes": [
-            "×0 Pierce"
-          ]
-        },
-        {
-          "weapon": "iron-bolt",
-          "score": 0,
-          "raw": 242,
-          "notes": [
-            "×0 Pierce"
-          ]
-        }
-      ],
-      "magic": {
-        "weapon": "staff-of-embers",
-        "score": 0,
-        "raw": 258,
-        "notes": [
-          "×0 Blunt",
-          "×0 Fire"
-        ]
-      },
-      "bomb": {
-        "weapon": "ooze-bomb",
-        "score": 0,
-        "raw": 5,
-        "notes": [
-          "×0 Blunt"
-        ]
-      },
+      "bolts": [],
+      "magic": null,
+      "bomb": null,
       "avoid": [
         {
           "type": "blunt",
@@ -28414,21 +27723,19 @@ window.VC_DATA = {
         {
           "weapon": "bloodgold-bolt",
           "score": 285,
-          "raw": 645,
+          "raw": 450,
           "notes": [
             "×1.5 Lightning",
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         },
         {
           "weapon": "charred-bolt",
           "score": 280,
-          "raw": 635,
+          "raw": 440,
           "notes": [
             "×1.5 Lightning",
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         }
       ],
@@ -28443,11 +27750,9 @@ window.VC_DATA = {
       "bomb": {
         "weapon": "ember-charge",
         "score": 210,
-        "raw": 290,
+        "raw": 140,
         "notes": [
-          "×1.5 Blunt",
-          "×0 Chop",
-          "×0 Pickaxe"
+          "×1.5 Blunt"
         ]
       },
       "avoid": [
@@ -28554,40 +27859,34 @@ window.VC_DATA = {
         {
           "weapon": "bloodgold-bolt",
           "score": 255,
-          "raw": 645,
+          "raw": 450,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         },
         {
           "weapon": "charred-bolt",
           "score": 250,
-          "raw": 635,
+          "raw": 440,
           "notes": [
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         }
       ],
       "magic": {
         "weapon": "trollstav",
         "score": 450,
-        "raw": 500,
+        "raw": 300,
         "notes": [
-          "×1.5 Fire",
-          "×0 Chop",
-          "×0 Pickaxe"
+          "×1.5 Fire"
         ]
       },
       "bomb": {
         "weapon": "ember-charge",
         "score": 210,
-        "raw": 290,
+        "raw": 140,
         "notes": [
-          "×1.5 Blunt",
-          "×0 Chop",
-          "×0 Pickaxe"
+          "×1.5 Blunt"
         ]
       },
       "avoid": [
@@ -28701,21 +28000,19 @@ window.VC_DATA = {
         {
           "weapon": "bloodgold-bolt",
           "score": 285,
-          "raw": 645,
+          "raw": 450,
           "notes": [
             "×1.5 Lightning",
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         },
         {
           "weapon": "charred-bolt",
           "score": 280,
-          "raw": 635,
+          "raw": 440,
           "notes": [
             "×1.5 Lightning",
-            "×0.5 Pierce",
-            "×0 Chop"
+            "×0.5 Pierce"
           ]
         }
       ],
@@ -28730,11 +28027,9 @@ window.VC_DATA = {
       "bomb": {
         "weapon": "ember-charge",
         "score": 210,
-        "raw": 290,
+        "raw": 140,
         "notes": [
-          "×1.5 Blunt",
-          "×0 Chop",
-          "×0 Pickaxe"
+          "×1.5 Blunt"
         ]
       },
       "avoid": [
