@@ -200,6 +200,49 @@ function determineHands(category, typeStr, wieldingStr) {
   return '1h';
 }
 
+function determineSkill(category, typeStr) {
+  switch (category) {
+    case 'sword':
+      return 'swords';
+    case 'axe':
+    case 'battleaxe':
+      return 'axes';
+    case 'club':
+    case 'sledge':
+      return 'clubs';
+    case 'spear':
+      return 'spears';
+    case 'polearm':
+      return 'polearms';
+    case 'knife':
+      return 'knives';
+    case 'fists':
+      return 'fists';
+    case 'pickaxe':
+      return 'pickaxes';
+    case 'bow':
+    case 'arrow':
+      return 'bows';
+    case 'crossbow':
+    case 'bolt':
+      return 'crossbows';
+    case 'magic':
+      return (typeStr || '').toLowerCase().includes('blood') ? 'blood-magic' : 'elemental-magic';
+    case 'bomb':
+      return null;
+    default:
+      return null;
+  }
+}
+
+function parseBackstab(val) {
+  if (val == null || val === '') return null;
+  const match = String(val).match(/(\d+(?:\.\d+)?)/);
+  if (!match) return null;
+  const num = parseFloat(match[1]);
+  return Number.isFinite(num) ? num : null;
+}
+
 function parseRecipe(text) {
   if (!text) return [];
   const lines = text.split('\n');
@@ -399,6 +442,8 @@ async function main() {
       damageMax,
       stamina: ib.stamina ? parseInt(ib.stamina, 10) || null : null,
       knockback: ib.knockback ? parseInt(ib.knockback, 10) || null : null,
+      skill: determineSkill(category, ib.type),
+      backstab: parseBackstab(ib.backstab),
       materials,
       quantity: ib.quantity ? parseInt(ib.quantity, 10) || null : null,
       tier: null,
