@@ -1,0 +1,17 @@
+.git
+.idea
+.agents
+.codex
+node_modules
+**/node_modules
+**/dist
+**/dist-static
+**/.wrangler
+**/.next
+**/*.tsbuildinfo
+**/.env*
+**/.git
+**/tests
+**/.openai
+**/README.md
+docs
