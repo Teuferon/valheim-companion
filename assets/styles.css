@@ -404,7 +404,7 @@ body {
 /* Creature Cards Grid */
 .creatures-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
   gap: 18px;
 }
 
@@ -419,6 +419,13 @@ body {
   gap: 14px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   transition: border-color 0.15s ease;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.creature-card,
+.creature-card * {
+  min-width: 0;
 }
 
 .creature-card:hover {
@@ -1271,3 +1278,26 @@ body {
     font-size: 0.85rem;
   }
 }
+
+@media (max-width: 520px) {
+  .attack-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .attack-name {
+    width: 100%;
+  }
+
+  .attack-damages {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .attack-raw {
+    width: 100%;
+  }
+}
+
