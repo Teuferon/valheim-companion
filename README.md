@@ -1,15 +1,41 @@
 # Valheim Companion
 
-Every Valheim creature and boss, grouped by biome and spoiler-free: each biome stays collapsed until you open it.
-Each creature shows images per star level, stats, weaknesses and resistances, and the best weapons and ammo you can have by that biome.
+Tools for your Valheim journey:
+- **Bestiary**: Every creature and boss, grouped by biome and spoiler-free: each biome stays collapsed until you open it. Stats, weaknesses and the best weapons for your progress.
+- **Sign Editor (Runopis)**: Rich-text editor for Valheim signs with colors, formatting, live preview and copy to game in 13 languages.
 
-## Usage
+## Project Structure
 
-Open `index.html` in a browser (double-click). No server or build step is needed.
+- `apps/hub/`: Main landing / hub page (`/`)
+- `apps/bestiary/`: Bestiary static application (`/bestiary/`)
+- `apps/signs/`: Runopis sign editor SPA (`/signs/`)
+- `data/`: Extracted wiki data (biomes, creatures, weapons, recommendations)
+- `scripts/`: Data fetching, calculation, build and preview scripts
+- `deploy/`: nginx configuration and security headers
+
+## Building & Preview
+
+Build the entire site into `dist/`:
+
+```sh
+npm run build
+```
+
+Preview locally with nginx-like routing and CSP:
+
+```sh
+npm run preview     # http://localhost:8080
+```
+
+Run tests:
+
+```sh
+npm test
+```
 
 ## Docker / EasyPanel
 
-The image is plain `nginx:stable-alpine` serving the static files. There is no build stage.
+Multi-stage build compiles `apps/signs`, then `nginx:stable-alpine` serves the hub and all sections.
 
 EasyPanel (App service):
 
@@ -24,17 +50,15 @@ Locally:
 docker compose up --build -d   # http://localhost:8080
 ```
 
-Only `index.html`, `assets/`, `data/data.js` and `img/` go into the image (`.dockerignore` is a whitelist).
-nginx config is in `deploy/`. It sets a strict CSP (`script-src 'self'`), so the page must not use inline scripts or `on*=` attributes.
+`deploy/nginx.conf` sets strict security headers and location routing for `/`, `/bestiary/` and `/signs/`.
 
 ## Data
 
 Data comes from the [Valheim Wiki](https://valheim.weirdgloop.org) (CC BY-SA 4.0).
 
 ```sh
-npm run fetch:creatures   # biomes, creatures, images  -> data/*.json, img/
-npm run data              # weapons, recommendations, data/data.js
-npm test
+npm run fetch:creatures   # biomes, creatures, images  -> data/*.json, apps/bestiary/img/
+npm run data              # weapons, recommendations, apps/bestiary/data/data.js
 ```
 
 Manual fixes go in `data/overrides.json`.
@@ -43,4 +67,4 @@ Manual fixes go in `data/overrides.json`.
 
 - `docs/ANALYZA.md`: analysis, sources, recommendation algorithm
 - `docs/DATA-SCHEMA.md`: data format
-- `docs/zadani/`: task specs for the worker agents (VC-1 data, VC-2 recommendations, VC-3 frontend)
+- `docs/zadani/`: task specs for the worker agents

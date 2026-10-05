@@ -1,11 +1,13 @@
 {
   "type": "module",
   "scripts": {
+    "build": "npm --prefix apps/signs run build && node scripts/build-site.mjs",
+    "preview": "node scripts/preview.mjs",
+    "test": "node --test 'scripts/**/*.test.mjs' && npm --prefix apps/signs test",
     "fetch:creatures": "node scripts/wiki/fetch-creatures.mjs",
     "fetch:weapons": "node scripts/wiki/fetch-weapons.mjs",
     "recommend": "node scripts/recommend.mjs",
     "build:data": "node scripts/build-data.mjs",
-    "data": "node scripts/wiki/fetch-weapons.mjs && node scripts/recommend.mjs && node scripts/build-data.mjs",
-    "test": "node --test 'scripts/**/*.test.mjs'"
+    "data": "node scripts/wiki/fetch-weapons.mjs && node scripts/recommend.mjs && node scripts/build-data.mjs"
   }
 }

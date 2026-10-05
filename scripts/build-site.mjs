@@ -1,0 +1,51 @@
+// Assembles the final site into dist/ for deployment or preview.
+// Follows VC-4 architecture:
+//   dist/          <- apps/hub/*
+//   dist/bestiary/ <- apps/bestiary/{index.html, assets, data/data.js, img}
+//   dist/signs/    <- apps/signs/dist-static/*
+
+import { cpSync, existsSync, mkdirSync, rmSync } from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const DIST_DIR = path.join(REPO_ROOT, 'dist');
+const HUB_DIR = path.join(REPO_ROOT, 'apps', 'hub');
+const BESTIARY_DIR = path.join(REPO_ROOT, 'apps', 'bestiary');
+const SIGNS_DIST = path.join(REPO_ROOT, 'apps', 'signs', 'dist-static');
+
+export function buildSite() {
+  if (!existsSync(SIGNS_DIST)) {
+    console.error('Error: apps/signs/dist-static does not exist.');
+    console.error('Please build Runopis first: npm --prefix apps/signs run build');
+    process.exit(1);
+  }
+
+  console.log('assembling dist/…');
+  rmSync(DIST_DIR, { recursive: true, force: true });
+  mkdirSync(DIST_DIR, { recursive: true });
+
+  // 1. apps/hub/* -> dist/
+  cpSync(HUB_DIR, DIST_DIR, { recursive: true });
+
+  // 2. apps/bestiary/{index.html, assets, data/data.js, img} -> dist/bestiary/
+  const bestiaryDist = path.join(DIST_DIR, 'bestiary');
+  mkdirSync(bestiaryDist, { recursive: true });
+  mkdirSync(path.join(bestiaryDist, 'data'), { recursive: true });
+
+  cpSync(path.join(BESTIARY_DIR, 'index.html'), path.join(bestiaryDist, 'index.html'));
+  cpSync(path.join(BESTIARY_DIR, 'assets'), path.join(bestiaryDist, 'assets'), { recursive: true });
+  cpSync(path.join(BESTIARY_DIR, 'data', 'data.js'), path.join(bestiaryDist, 'data', 'data.js'));
+  cpSync(path.join(BESTIARY_DIR, 'img'), path.join(bestiaryDist, 'img'), { recursive: true });
+
+  // 3. apps/signs/dist-static/* -> dist/signs/
+  const signsDistTarget = path.join(DIST_DIR, 'signs');
+  mkdirSync(signsDistTarget, { recursive: true });
+  cpSync(SIGNS_DIST, signsDistTarget, { recursive: true });
+
+  console.log('done: site assembled in dist/');
+}
+
+if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {
+  buildSite();
+}
