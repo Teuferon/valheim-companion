@@ -29,3 +29,16 @@ ZKOUŠKA:
 COMMIT: `git add scripts/recommend.mjs scripts/recommend.test.mjs data/recommendations.json data/data.js` → `VC-2b: tool damage, pickaxe weakness in tips, drop ineffective picks [GL]`
 KDYŽ COKOLIV NESEDÍ: napiš to do závěrečné odpovědi a skonči.
 NAKONEC stručně: hash · výpis ze ZKOUŠKY · `git status --short` (prázdné).
+
+---
+DOPLNĚK (po přejímce VC-3): **chybějící ikony zbraní**
+4. 26 ze 147 zbraní má `image: null` (např. `bronze-atgeir`, `dundr`, všechny `frostfire-*`). Pravděpodobná příčina: infobox je uvnitř `<tabber>` nebo se soubor jmenuje jinak než `image` v infoboxu.
+   Rozšiř ROZSAH o `scripts/wiki/fetch-weapons.mjs`, `data/weapons.json`, `data/report-weapons.md` a `img/weapons/**`.
+   Pro každou zbraň bez obrázku zkus postupně:
+   1. pole `image` z infoboxu (i uvnitř tabberu)
+   2. `File:<Název>.png`
+   3. `File:<Název s malými písmeny kromě prvního>.png`
+   4. stejné názvy přes `https://valheim.fandom.com/api.php`
+   Co nevyjde, zapiš do reportu.
+   ZKOUŠKA navíc: `node -e "console.log(require('./data/weapons.json').filter(w=>!w.image).length)"` vrátí ≤ 3.
+   Commit zvlášť: `VC-2b: missing weapon icons [GL]`.
