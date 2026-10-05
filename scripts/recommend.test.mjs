@@ -4,6 +4,8 @@ import assert from 'node:assert/strict';
 import {
   effectiveModifiers,
   score,
+  rawDamage,
+  buildNotes,
   rangedScore,
   recommendFor,
 } from './recommend.mjs';
@@ -186,4 +188,167 @@ test('tie-breaking: prefers lower tier, then alphabetical name on score tie', ()
   assert.equal(rec.melee[0].weapon, 'club-t1');
   assert.equal(rec.melee[1].weapon, 'spear-t1-a');
   assert.equal(rec.melee[2].weapon, 'sword-t3');
+});
+
+test('tool damage: chop and pickaxe excluded from raw and notes when multiplier is 0', () => {
+  const draugr = { modifiers: { fire: 'resistant', poison: 'immune' } };
+  const mods = effectiveModifiers(draugr);
+  const battleaxeDamage = { slash: 70, chop: 40 };
+
+  // rawDamage should exclude chop because mods.chop is 0
+  assert.equal(rawDamage(battleaxeDamage, mods), 70);
+
+  // buildNotes should exclude chop because mods.chop is 0
+  const notes = buildNotes(battleaxeDamage, mods);
+  assert.deepEqual(notes, []);
+});
+
+test('tool damage: pickaxe included in raw and notes when multiplier > 0', () => {
+  const golem = { modifiers: { pickaxe: 'veryweak', blunt: 'neutral', slash: 'resistant', pierce: 'resistant' } };
+  const mods = effectiveModifiers(golem);
+  const pickaxeDamage = { pickaxe: 37, pierce: 25 };
+
+  // rawDamage should include pickaxe (37 + 25 = 62)
+  assert.equal(rawDamage(pickaxeDamage, mods), 62);
+
+  // buildNotes should include "×2 Pickaxe"
+  const notes = buildNotes(pickaxeDamage, mods);
+  assert.ok(notes.includes('×2 Pickaxe'));
+  assert.ok(notes.includes('×0.5 Pierce'));
+});
+
+test('tip formatting: finds pickaxe weakness and excludes chop/pickaxe from immunities', () => {
+  const golem = {
+    id: 'stone-golem',
+    modifiers: {
+      pickaxe: 'veryweak',
+      blunt: 'neutral',
+      slash: 'resistant',
+      pierce: 'resistant',
+      fire: 'immune',
+      frost: 'immune',
+      poison: 'immune',
+      spirit: 'immune',
+    },
+  };
+  const biome = { id: 'mountain', gearTier: 4 };
+  const weapons = [
+    {
+      id: 'bronze-pickaxe',
+      name: 'Bronze Pickaxe',
+      category: 'pickaxe',
+      tier: 2,
+      damageMax: { pickaxe: 37, pierce: 25 },
+    },
+    {
+      id: 'iron-mace',
+      name: 'Iron Mace',
+      category: 'club',
+      tier: 3,
+      damageMax: { blunt: 55 },
+    },
+  ];
+
+  const rec = recommendFor(golem, biome, weapons);
+  assert.equal(
+    rec.tip,
+    'Very weak to Pickaxe (×2): Bronze Pickaxe hits for 87 effective. Immune to Fire, Frost, Poison, Spirit.'
+  );
+  assert.ok(!rec.tip.includes('Chop'));
+  assert.ok(!rec.tip.includes('Immune to Pickaxe'));
+});
+
+test('ineffective recommendations: drops magic and bomb when score < 0.5 * raw', () => {
+  const fireResistant = {
+    id: 'fire-resistant-creature',
+    modifiers: { fire: 'veryresistant', blunt: 'veryresistant' },
+  };
+  const biome = { id: 'ashlands', gearTier: 7 };
+  const weapons = [
+    {
+      id: 'staff-of-embers',
+      name: 'Staff of Embers',
+      category: 'magic',
+      tier: 6,
+      damageMax: { blunt: 10, fire: 100 },
+    },
+    {
+      id: 'test-bomb',
+      name: 'Heavy Bomb',
+      category: 'bomb',
+      tier: 6,
+      damageMax: { blunt: 100 },
+    },
+  ];
+
+  const rec = recommendFor(fireResistant, biome, weapons);
+  // score for staff: 10*0.25 + 100*0.25 = 2.5 + 25 = 28. raw = 110. 28 < 0.5 * 110 -> null
+  assert.equal(rec.magic, null);
+  // score for bomb: 100*0.25 = 25. raw = 100. 25 < 50 -> null
+  assert.equal(rec.bomb, null);
+});
+
+test('ineffective recommendations: filters out arrows and bolts with score < 0.5 * raw', () => {
+  const pierceResistant = {
+    id: 'bonemass',
+    modifiers: { pierce: 'veryresistant' },
+  };
+  const biome = { id: 'swamp', gearTier: 3 };
+  const weapons = [
+    {
+      id: 'finewood-bow',
+      name: 'Finewood Bow',
+      category: 'bow',
+      tier: 2,
+      damageMax: { pierce: 32 },
+    },
+    {
+      id: 'ironhead-arrow',
+      name: 'Ironhead Arrow',
+      category: 'arrow',
+      tier: 3,
+      damageMax: { pierce: 42 },
+    },
+    {
+      id: 'arbalest',
+      name: 'Arbalest',
+      category: 'crossbow',
+      tier: 3,
+      damageMax: { pierce: 200 },
+    },
+    {
+      id: 'iron-bolt',
+      name: 'Iron Bolt',
+      category: 'bolt',
+      tier: 3,
+      damageMax: { pierce: 42 },
+    },
+  ];
+
+  const rec = recommendFor(pierceResistant, biome, weapons);
+  // All arrows and bolts have pierce only, mods.pierce is 0.25, score < 0.5 * raw
+  assert.deepEqual(rec.arrows, []);
+  assert.deepEqual(rec.bolts, []);
+});
+
+test('recommendFor end-to-end: draugr in swamp has battleaxe raw 70 and empty notes', () => {
+  const draugr = {
+    id: 'draugr',
+    modifiers: { fire: 'resistant', poison: 'immune' },
+  };
+  const biome = { id: 'swamp', gearTier: 3 };
+  const weapons = [
+    {
+      id: 'battleaxe',
+      name: 'Battleaxe',
+      category: 'battleaxe',
+      tier: 3,
+      damageMax: { slash: 70, chop: 40 },
+    },
+  ];
+
+  const rec = recommendFor(draugr, biome, weapons);
+  assert.equal(rec.melee[0].weapon, 'battleaxe');
+  assert.equal(rec.melee[0].raw, 70);
+  assert.deepEqual(rec.melee[0].notes, []);
 });
