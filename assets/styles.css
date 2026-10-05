@@ -1,0 +1,1248 @@
+/* Valheim Companion Stylesheet */
+:root {
+  /* Nordic dark theme colors */
+  --bg-page: #0f1216;
+  --bg-card: #181d23;
+  --bg-card-sub: #21272f;
+  --bg-card-hover: #262e37;
+  --border-color: #2e3742;
+  --border-focus: #d9a441;
+
+  --accent-gold: #d9a441;
+  --accent-gold-hover: #ecc068;
+  --accent-gold-dim: rgba(217, 164, 65, 0.15);
+
+  --text-main: #e8e4da;
+  --text-muted: #9ba3af;
+  --text-dim: #717b88;
+  --text-danger: #e57373;
+
+  /* Damage types */
+  --dmg-blunt: #b0a295;
+  --dmg-slash: #e06d3b;
+  --dmg-pierce: #d4af37;
+  --dmg-chop: #946946;
+  --dmg-pickaxe: #7d8b99;
+  --dmg-fire: #ff643d;
+  --dmg-frost: #4fc3f7;
+  --dmg-lightning: #00e5ff;
+  --dmg-poison: #76c043;
+  --dmg-spirit: #ce93d8;
+
+  /* Modifier tiers */
+  --mod-veryweak: #137333;       /* x2 deep green */
+  --mod-weak: #1e8e3e;           /* x1.5 green */
+  --mod-slightlyweak: #4bb368;   /* x1.25 light green */
+  --mod-neutral: #5f6368;        /* x1 neutral */
+  --mod-slightlyresistant: #d47e2f; /* x0.75 light orange */
+  --mod-resistant: #d9531e;      /* x0.5 orange */
+  --mod-veryresistant: #c5221f;  /* x0.25 red */
+  --mod-immune: #474e57;         /* x0 gray */
+
+  /* Fonts */
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  min-height: 100vh;
+  padding: 0 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 0 60px;
+}
+
+/* Header */
+.page-header {
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 20px;
+}
+
+.header-main {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header-title {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.header-subtitle {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Controls Toolbar */
+.header-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls-search-kind {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  flex: 1 1 540px;
+}
+
+.search-box {
+  flex: 1 1 220px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 8px 12px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.search-box input:focus {
+  border-color: var(--border-focus);
+}
+
+.kind-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  background-color: var(--bg-card);
+  padding: 3px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+}
+
+.filter-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.filter-btn:hover {
+  color: var(--text-main);
+  background-color: var(--bg-card-sub);
+}
+
+.filter-btn.active {
+  background-color: var(--accent-gold);
+  color: #0f1216;
+  font-weight: 600;
+}
+
+.controls-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  padding: 7px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.action-btn:hover {
+  background-color: var(--bg-card-sub);
+  border-color: var(--accent-gold);
+}
+
+.action-btn-danger {
+  color: var(--text-danger);
+}
+
+.action-btn-danger:hover {
+  border-color: var(--text-danger);
+  background-color: rgba(229, 115, 115, 0.1);
+}
+
+/* Legend Section */
+.legend-section {
+  margin-bottom: 24px;
+}
+
+.legend-details {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+}
+
+.legend-details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--accent-gold);
+  user-select: none;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.legend-details summary:hover {
+  color: var(--accent-gold-hover);
+}
+
+.legend-body {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-color);
+  padding-top: 12px;
+}
+
+.legend-group-title {
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  align-items: center;
+}
+
+.legend-note {
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Biomes Accordion */
+.biomes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.biome-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.biome-card:hover {
+  border-color: #3f4b59;
+}
+
+.biome-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: #14181e;
+  background-size: cover;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+  border: none;
+  color: var(--text-main);
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+  min-height: 72px;
+}
+
+.biome-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(15, 18, 22, 0.95) 0%, rgba(15, 18, 22, 0.78) 50%, rgba(15, 18, 22, 0.95) 100%);
+  pointer-events: none;
+}
+
+.biome-header-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.biome-order-badge {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--accent-gold-dim);
+  color: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.biome-name {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: 0.02em;
+}
+
+.biome-count-badge {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.biome-chevron {
+  position: relative;
+  z-index: 1;
+  color: var(--accent-gold);
+  font-size: 1.3rem;
+  transition: transform 0.25s ease;
+  user-select: none;
+}
+
+.biome-header[aria-expanded="true"] .biome-chevron {
+  transform: rotate(180deg);
+}
+
+/* Accordion Smooth Transition */
+.biome-content-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s ease-out;
+}
+
+.biome-content-wrapper.open {
+  grid-template-rows: 1fr;
+}
+
+.biome-content {
+  overflow: hidden;
+}
+
+.biome-content-inner {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Biome Sections (Bosses, Hostile, Passive, Fish, Weapons) */
+.biome-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-count {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: var(--text-muted);
+}
+
+/* Creature Cards Grid */
+.creatures-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 18px;
+}
+
+/* Creature Card */
+.creature-card {
+  background-color: var(--bg-card-sub);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: border-color 0.15s ease;
+}
+
+.creature-card:hover {
+  border-color: #424f5d;
+}
+
+.card-top {
+  display: flex;
+  gap: 14px;
+}
+
+.card-image-box {
+  width: 96px;
+  height: 96px;
+  min-width: 96px;
+  background-color: #0c0e12;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  aspect-ratio: 1 / 1;
+}
+
+.image-placeholder {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  opacity: 0.6;
+}
+
+.card-header-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.card-name {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.25;
+}
+
+/* Badges */
+.card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.badge-boss {
+  background-color: rgba(229, 115, 115, 0.2);
+  color: #ff8a80;
+  border: 1px solid rgba(255, 138, 128, 0.4);
+}
+
+.badge-miniboss {
+  background-color: rgba(255, 179, 0, 0.2);
+  color: #ffca28;
+  border: 1px solid rgba(255, 202, 40, 0.4);
+}
+
+.badge-passive {
+  background-color: rgba(129, 199, 132, 0.2);
+  color: #a5d6a7;
+  border: 1px solid rgba(165, 214, 167, 0.4);
+}
+
+.badge-tameable {
+  background-color: rgba(100, 181, 246, 0.2);
+  color: #90caf9;
+  border: 1px solid rgba(144, 202, 249, 0.4);
+}
+
+.badge-always-stars {
+  background-color: rgba(217, 164, 65, 0.2);
+  color: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
+}
+
+/* Star Selector */
+.star-selector {
+  display: inline-flex;
+  gap: 2px;
+  background-color: #12161b;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 2px;
+  align-self: flex-start;
+}
+
+.star-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  padding: 2px 7px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.star-btn:hover {
+  color: var(--accent-gold);
+}
+
+.star-btn.active {
+  background-color: var(--accent-gold);
+  color: #0f1216;
+  font-weight: 700;
+}
+
+/* Weak points */
+.weak-points-box {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-left: 3px solid var(--accent-gold);
+  padding: 6px 10px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.weak-point-label {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* HP Display */
+.health-display {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.health-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.health-value {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #e57373;
+}
+
+.health-subtext {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: pre-line;
+}
+
+/* Attacks */
+.card-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card-section-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.attacks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.attack-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  gap: 8px;
+}
+
+.attack-name {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.attack-damages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: flex-end;
+}
+
+.attack-raw {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Damage Chips */
+.dmg-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.dmg-chip-blunt { background-color: var(--dmg-blunt); color: #1c1c1c; text-shadow: none; }
+.dmg-chip-slash { background-color: var(--dmg-slash); }
+.dmg-chip-pierce { background-color: var(--dmg-pierce); color: #1c1c1c; text-shadow: none; }
+.dmg-chip-chop { background-color: var(--dmg-chop); }
+.dmg-chip-pickaxe { background-color: var(--dmg-pickaxe); }
+.dmg-chip-fire { background-color: var(--dmg-fire); }
+.dmg-chip-frost { background-color: var(--dmg-frost); color: #0c1a24; text-shadow: none; }
+.dmg-chip-lightning { background-color: var(--dmg-lightning); color: #051923; text-shadow: none; }
+.dmg-chip-poison { background-color: var(--dmg-poison); color: #0c1a0c; text-shadow: none; }
+.dmg-chip-spirit { background-color: var(--dmg-spirit); color: #1f0b24; text-shadow: none; }
+
+/* Modifier Chips */
+.modifiers-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.mod-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.mod-chip-2 { background-color: var(--mod-veryweak); }
+.mod-chip-1_5 { background-color: var(--mod-weak); }
+.mod-chip-1_25 { background-color: var(--mod-slightlyweak); color: #0f1216; }
+.mod-chip-1 { background-color: var(--mod-neutral); }
+.mod-chip-0_75 { background-color: var(--mod-slightlyresistant); }
+.mod-chip-0_5 { background-color: var(--mod-resistant); }
+.mod-chip-0_25 { background-color: var(--mod-veryresistant); }
+.mod-chip-0 {
+  background-color: var(--mod-immune);
+  color: #adb5bd;
+  text-decoration: line-through;
+}
+
+.other-immunities {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 2px;
+}
+
+/* Best Weapons Section */
+.recommendations-box {
+  background-color: #12161c;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rec-tip {
+  background-color: rgba(217, 164, 65, 0.12);
+  border-left: 3px solid var(--accent-gold);
+  padding: 6px 10px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.83rem;
+  color: var(--text-main);
+  line-height: 1.35;
+}
+
+.rec-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rec-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.rec-group-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+
+.weapon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-sm);
+  padding: 5px 8px;
+  color: var(--text-main);
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  transition: all 0.15s ease;
+  width: 100%;
+}
+
+.weapon-btn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent-gold);
+}
+
+.weapon-btn-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.weapon-btn-icon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  object-fit: contain;
+  background-color: #0c0e12;
+  border-radius: 2px;
+}
+
+.weapon-btn-name {
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.weapon-btn-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.weapon-score {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+
+.rec-notes {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.rec-note-chip {
+  font-size: 0.7rem;
+  padding: 1px 4px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  color: var(--text-muted);
+}
+
+.rec-avoid-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.rec-avoid-label {
+  font-weight: 600;
+  color: var(--text-danger);
+}
+
+/* Also found in */
+.also-found-box {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.also-found-label {
+  font-weight: 600;
+  color: var(--text-dim);
+}
+
+/* Creature Details */
+.creature-details {
+  border-top: 1px solid var(--border-color);
+  padding-top: 8px;
+}
+
+.creature-details summary {
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  user-select: none;
+}
+
+.creature-details summary:hover {
+  color: var(--accent-gold-hover);
+}
+
+.details-content {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.details-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.details-key {
+  font-weight: 600;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+}
+
+.details-val {
+  color: var(--text-main);
+  line-height: 1.35;
+}
+
+.trophy-val {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trophy-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  background-color: #0c0e12;
+  border-radius: 2px;
+  border: 1px solid var(--border-color);
+}
+
+.wiki-link {
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.wiki-link:hover {
+  text-decoration: underline;
+}
+
+/* Fish Compact Grid */
+.fish-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.fish-tile {
+  background-color: var(--bg-card-sub);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.fish-tile:hover {
+  border-color: var(--accent-gold);
+  background-color: var(--bg-card-hover);
+}
+
+.fish-tile.expanded {
+  border-color: var(--accent-gold);
+  grid-column: 1 / -1;
+  display: block;
+}
+
+.fish-thumb {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  background-color: #0c0e12;
+  border-radius: var(--radius-sm);
+  object-fit: contain;
+}
+
+.fish-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.fish-name {
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+
+.fish-hp {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* Biome Weapons Section */
+.biome-weapons-details {
+  background-color: #13171d;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+}
+
+.biome-weapons-details summary {
+  cursor: pointer;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  user-select: none;
+}
+
+.weapons-table-wrapper {
+  margin-top: 14px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.weapons-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  min-width: 580px;
+}
+
+.weapons-table th {
+  text-align: left;
+  padding: 8px 10px;
+  background-color: #191f27;
+  color: var(--text-dim);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.weapons-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  vertical-align: middle;
+}
+
+.weapon-category-header td {
+  background-color: rgba(217, 164, 65, 0.08);
+  color: var(--accent-gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  padding-top: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(217, 164, 65, 0.2);
+}
+
+.weapon-cell-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.weapon-cell-item:hover .weapon-cell-name {
+  color: var(--accent-gold);
+}
+
+.weapon-cell-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  background-color: #0c0e12;
+  border-radius: 2px;
+}
+
+.weapon-cell-name {
+  font-weight: 600;
+  color: var(--text-main);
+  transition: color 0.15s ease;
+}
+
+.weapon-materials {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* Weapon Modal */
+.weapon-modal {
+  margin: auto;
+  border: 1px solid var(--accent-gold);
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  border-radius: var(--radius-md);
+  padding: 0;
+  max-width: 480px;
+  width: 90vw;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.weapon-modal::backdrop {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(2px);
+}
+
+.modal-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.modal-icon {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  background-color: #0c0e12;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+}
+
+.modal-title-box {
+  flex: 1;
+}
+
+.modal-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+
+.modal-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.modal-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+}
+
+.modal-close-btn:hover {
+  color: var(--text-main);
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+
+.modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.modal-field-title {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+
+.modal-field-val {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+/* Footer */
+.page-footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  text-align: center;
+  line-height: 1.6;
+}
+
+.page-footer a {
+  color: var(--text-muted);
+  text-decoration: underline;
+}
+
+.page-footer a:hover {
+  color: var(--accent-gold);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 1.8rem;
+  }
+  .controls-search-kind {
+    flex: 1 1 100%;
+  }
+  .kind-filter {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+  }
+  .controls-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .creatures-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0 12px;
+  }
+  .page-wrapper {
+    padding: 16px 0 40px;
+  }
+  .header-title {
+    font-size: 1.5rem;
+  }
+  .header-subtitle {
+    font-size: 0.9rem;
+  }
+  .biome-header {
+    padding: 12px 14px;
+    min-height: 60px;
+  }
+  .biome-name {
+    font-size: 1.2rem;
+  }
+  .biome-content-inner {
+    padding: 14px 10px;
+  }
+  .action-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
