@@ -246,3 +246,20 @@ Nová sekce `/armourer/` (`apps/armourer/`, statický web jako Bestiary). Ukazuj
   - `theme-color`, `apple-touch-icon` (PNG 180×180) a `site.webmanifest`
 - Obrázky 1200×630 PNG: jedna šablona (`apps/hub/og/card.html`) s logem (runový štít), nadpisem fontem Norse a pozadím biomu. Pro každou sekci vlastní varianta. Renderuje se headless Chromem skriptem `scripts/render-og.mjs` a výsledné PNG se commitují.
 - Absolutní adresa webu je v jednom místě, `site.config.json` → `{ "siteUrl": "https://…" }`. Meta tagy se do HTML vkládají skriptem `scripts/apply-meta.mjs` (idempotentně, mezi komentáře `<!-- meta:start -->` a `<!-- meta:end -->`), aby šla doména změnit na jednom místě.
+
+## 12. Rychlost útoku a DPS (VC-10)
+
+Ověřeno 6. 10. 2026. Infobox zbraně rychlost útoku nemá. Je ve **vykreslené stránce** (`action=parse&prop=text`), kterou dopočítává šablona podle typu zbraně. Bloky:
+- `Primary attack | <typ> | <dmg> … | Backstab | 3x | … | Stamina | 16 | … | Attack speed | 2.46 s (0.86 + 0.70 + 0.90) | Chain last hit | 2x damage, +20% knockback | Hitbox | …, no multitarget penalty`
+- `Secondary attack | <typ> | <dmg (už vynásobené)> | … | Stamina | 32 | … | Attack speed | 1.84 s`
+- Luk: `Stamina | 8 / s | … | Attack speed | 0.8 s + 2.5 s draw time`
+- Kuše (`Arbalest`) ani hole čas útoku nemají.
+
+**Model:**
+- Primární útok: komba se počítají jako n úderů s časem T (součet segmentů). Poslední úder ×`chainLast` (2). Poškození komba = `perHit × (n − 1 + chainLast)` a `DPS = to / T`. Útok bez komba (sledge: `1.7 s`) má n = 1.
+- Sekundární útok: `secMult = sekundární dmg / primární dmg` (na q1, součet typů). `DPS = perHit × secMult / Tsec`.
+- Luk: `T = shot + draw × (1 − 0.8 × L/100)` (skill Bows až −80 % natažení). `DPS = perHit / T`.
+- Kuše: jen pokud se najde čas přebití (stránka *Crossbows*), `T = shot + reload × (1 − 0.5 × L/100)`. Jinak DPS `null` a řadí se podle poškození za zásah.
+- Stamina za sekundu: `stamina × n / T × (1 − 0.33 × L/100)`, u luku `X / s` × stejný koeficient.
+- Backstab: hodnota z vykreslené stránky má přednost před infoboxem i výchozí hodnotou.
+- Řazení: nové nastavení hráče `rankBy: 'dps' | 'hit'`, výchozí `'dps'`. Každá zbraň má lepší z primárního a sekundárního DPS (`bestMode`). Zbraň bez DPS se při `'dps'` řadí na konec své skupiny.
