@@ -130,6 +130,22 @@
     }
   }
 
+  function getStoredArmoryAll() {
+    try {
+      return localStorage.getItem('vc.armoryAll') === 'true';
+    } catch {
+      return false;
+    }
+  }
+
+  function setStoredArmoryAll(val) {
+    try {
+      localStorage.setItem('vc.armoryAll', String(val));
+    } catch {
+      // LocalStorage unavailable, ignore
+    }
+  }
+
   // ---------------------------------------------------------------------------
   // Player character settings (VC-5)
   // ---------------------------------------------------------------------------
@@ -254,6 +270,7 @@
   const playerFirstVisit = loadedPlayerState ? loadedPlayerState.firstVisit : false;
 
   let cardRefreshTimer = null;
+  let armoryController = null;
 
   /**
    * Debounced refresh of everything already rendered that depends on the
@@ -280,6 +297,9 @@
         sectionEl.refreshForPlayer();
       }
     });
+    if (armoryController && typeof armoryController.refresh === 'function') {
+      armoryController.refresh();
+    }
   }
 
   /**
@@ -1377,6 +1397,50 @@
   }
 
   /**
+   * Compute average per-hit damage for a weapon with player settings without creature modifiers.
+   * For arrows and bolts, pairs with the best available launcher (bow/crossbow) of equal or lower tier.
+   * @param {object} weapon
+   * @param {object} data
+   * @param {object} player
+   * @returns {object|null}
+   */
+  function computeWeaponAvgHit(weapon, data, player) {
+    if (!window.VCRank || !player || !weapon) return null;
+    const basePlayer = { ...player, sneak: false, staggered: false };
+    const allWeapons = data?.weapons ? Object.values(data.weapons) : [];
+
+    if (weapon.category === 'arrow') {
+      const ammoTier = weapon.tier ?? Infinity;
+      const bows = allWeapons.filter(w => w.category === 'bow' && w.tier !== null && w.tier <= ammoTier);
+      if (bows.length > 0) {
+        bows.sort((a, b) => {
+          const aHit = window.VCRank.perHit(a, null, null, basePlayer);
+          const bHit = window.VCRank.perHit(b, null, null, basePlayer);
+          if (bHit.avg !== aHit.avg) return bHit.avg - aHit.avg;
+          if (a.tier !== b.tier) return a.tier - b.tier;
+          return a.name.localeCompare(b.name);
+        });
+        return window.VCRank.perHit(bows[0], weapon, null, basePlayer);
+      }
+    } else if (weapon.category === 'bolt') {
+      const ammoTier = weapon.tier ?? Infinity;
+      const crossbows = allWeapons.filter(w => w.category === 'crossbow' && w.tier !== null && w.tier <= ammoTier);
+      if (crossbows.length > 0) {
+        crossbows.sort((a, b) => {
+          const aHit = window.VCRank.perHit(a, null, null, basePlayer);
+          const bHit = window.VCRank.perHit(b, null, null, basePlayer);
+          if (bHit.avg !== aHit.avg) return bHit.avg - aHit.avg;
+          if (a.tier !== b.tier) return a.tier - b.tier;
+          return a.name.localeCompare(b.name);
+        });
+        return window.VCRank.perHit(crossbows[0], weapon, null, basePlayer);
+      }
+    }
+
+    return window.VCRank.perHit(weapon, null, null, basePlayer);
+  }
+
+  /**
    * Create collapsible "Weapons & ammo from this biome" section
    * @param {object} biome
    * @param {object} data
@@ -1488,13 +1552,17 @@
     // multipliers (sneak, stagger) are excluded because they are not typical hits.
     const updateYourAvg = () => {
       if (!window.VCRank || !playerState) return;
-      const basePlayer = { ...playerState, sneak: false, staggered: false };
       for (const { cell, weapon } of yourAvgCells) {
-        const hit = window.VCRank.perHit(weapon, null, null, basePlayer);
-        cell.textContent = String(Math.round(hit.avg));
-        cell.title = hit.min !== hit.max
-          ? Math.round(hit.min) + '–' + Math.round(hit.max) + ' per hit'
-          : String(Math.round(hit.avg));
+        const hit = computeWeaponAvgHit(weapon, data, playerState);
+        if (hit) {
+          const avgVal = Math.round(hit.avg);
+          cell.textContent = String(avgVal);
+          cell.title = hit.min !== hit.max
+            ? Math.round(hit.min) + '–' + Math.round(hit.max) + ' per hit'
+            : String(avgVal);
+        } else {
+          cell.textContent = '—';
+        }
       }
     };
     section.refreshForPlayer = updateYourAvg;
@@ -1746,6 +1814,461 @@
   }
 
   /**
+   * Build the Armory section (VC-6)
+   * Lists all weapons and ammo with live damage calculations, search, category filter,
+   * damage type filter, column sorting, and spoiler-aware visibility.
+   * @param {HTMLElement} container
+   * @param {object} data
+   * @returns {{ refresh: function }}
+   */
+  function buildArmorySection(container, data) {
+    if (!container || !data || !data.weapons) return null;
+    container.textContent = '';
+
+    // Header
+    const header = el('div', 'armory-header');
+    header.appendChild(el('h2', 'armory-title', 'Armory'));
+    header.appendChild(el('p', 'armory-subtitle', 'Every weapon and ammo, with your damage.'));
+    container.appendChild(header);
+
+    // State
+    let sortColumn = 'biome';
+    let sortDirection = 'asc';
+    let searchQuery = '';
+    let selectedCategory = 'all';
+    let selectedDamageType = null;
+
+    // Controls
+    const controls = el('div', 'armory-controls');
+
+    // Controls Row 1: Search, Category select, Spoiler toggle
+    const row1 = el('div', 'armory-controls-row');
+
+    // Search box
+    const searchBox = el('div', 'armory-search-box');
+    const searchInput = el('input');
+    searchInput.type = 'search';
+    searchInput.id = 'armory-search';
+    searchInput.placeholder = 'Search weapons…';
+    searchInput.setAttribute('aria-label', 'Search weapons by name');
+    searchBox.appendChild(searchInput);
+    row1.appendChild(searchBox);
+
+    // Category filter dropdown
+    const categorySelect = el('select', 'armory-select');
+    categorySelect.id = 'armory-category-filter';
+    categorySelect.setAttribute('aria-label', 'Filter weapons by category');
+
+    const CATEGORY_OPTIONS = [
+      { value: 'all', label: 'All' },
+      { value: 'swords', label: 'Swords' },
+      { value: 'axes', label: 'Axes' },
+      { value: 'clubs', label: 'Clubs' },
+      { value: 'spears', label: 'Spears' },
+      { value: 'polearms', label: 'Polearms' },
+      { value: 'knives', label: 'Knives' },
+      { value: 'fists', label: 'Fists' },
+      { value: 'pickaxes', label: 'Pickaxes' },
+      { value: 'bows', label: 'Bows' },
+      { value: 'crossbows', label: 'Crossbows' },
+      { value: 'arrows', label: 'Arrows' },
+      { value: 'bolts', label: 'Bolts' },
+      { value: 'magic', label: 'Magic' },
+      { value: 'bombs', label: 'Bombs' },
+    ];
+
+    CATEGORY_OPTIONS.forEach(opt => {
+      const optionEl = el('option', null, opt.label);
+      optionEl.value = opt.value;
+      categorySelect.appendChild(optionEl);
+    });
+    row1.appendChild(categorySelect);
+
+    // Spoiler toggle
+    const toggleLabel = el('label', 'armory-toggle-label');
+    const toggleAllCheckbox = el('input');
+    toggleAllCheckbox.type = 'checkbox';
+    toggleAllCheckbox.id = 'armory-toggle-all';
+    toggleAllCheckbox.checked = getStoredArmoryAll();
+    toggleLabel.appendChild(toggleAllCheckbox);
+    toggleLabel.appendChild(el('span', null, 'Show all weapons (spoilers)'));
+    row1.appendChild(toggleLabel);
+
+    controls.appendChild(row1);
+
+    // Controls Row 2: Damage type chips
+    const row2 = el('div', 'armory-controls-row');
+    const damageChipsDiv = el('div', 'armory-damage-chips');
+    damageChipsDiv.appendChild(el('span', 'armory-damage-label', 'Damage:'));
+
+    const DAMAGE_CHIP_TYPES = ['fire', 'frost', 'lightning', 'poison', 'spirit', 'pierce', 'blunt', 'slash'];
+    const chipButtons = [];
+
+    DAMAGE_CHIP_TYPES.forEach(dt => {
+      const chipBtn = el('button', 'armory-chip-btn', capitalize(dt));
+      chipBtn.type = 'button';
+      chipBtn.dataset.damage = dt;
+      chipBtn.addEventListener('click', () => {
+        if (selectedDamageType === dt) {
+          selectedDamageType = null;
+          chipBtn.classList.remove('active');
+        } else {
+          selectedDamageType = dt;
+          chipButtons.forEach(b => b.classList.remove('active'));
+          chipBtn.classList.add('active');
+        }
+        renderTableBody();
+      });
+      chipButtons.push(chipBtn);
+      damageChipsDiv.appendChild(chipBtn);
+    });
+    row2.appendChild(damageChipsDiv);
+    controls.appendChild(row2);
+
+    container.appendChild(controls);
+
+    // Table
+    const tableWrapper = el('div', 'armory-table-wrapper');
+    const table = el('table', 'armory-table');
+
+    const thead = el('thead');
+    const headRow = el('tr');
+
+    const headerCols = [
+      { key: null, label: '', cls: 'armory-col-icon' },
+      { key: 'name', label: 'Name', cls: 'armory-col-name sortable' },
+      { key: null, label: 'Category', cls: '' },
+      { key: null, label: 'Skill', cls: '' },
+      { key: 'biome', label: 'Biome (Tier)', cls: 'sortable' },
+      { key: null, label: 'Damage', cls: '' },
+      { key: 'yourAvg', label: 'Your avg', cls: 'sortable', title: 'Average per-hit damage with your skills, difficulty and upgrade level (no creature modifiers)' },
+      { key: 'stamina', label: 'Stamina', cls: 'sortable' },
+      { key: null, label: 'Backstab', cls: '' },
+      { key: null, label: 'Materials', cls: '' },
+    ];
+
+    const sortThMap = {};
+
+    headerCols.forEach(col => {
+      const th = el('th', col.cls || null);
+      if (col.title) th.title = col.title;
+
+      if (col.key) {
+        th.setAttribute('tabindex', '0');
+        th.setAttribute('role', 'columnheader');
+        const textSpan = el('span', null, col.label);
+        const sortSpan = el('span', 'armory-sort-indicator');
+        th.appendChild(textSpan);
+        th.appendChild(sortSpan);
+        sortThMap[col.key] = { th, sortSpan };
+
+        const handleSort = () => {
+          if (sortColumn === col.key) {
+            sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+          } else {
+            sortColumn = col.key;
+            sortDirection = col.key === 'yourAvg' ? 'desc' : 'asc';
+          }
+          updateSortHeaderIndicators();
+          renderTableBody();
+        };
+
+        th.addEventListener('click', handleSort);
+        th.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleSort();
+          }
+        });
+      } else {
+        th.textContent = col.label;
+      }
+      headRow.appendChild(th);
+    });
+
+    thead.appendChild(headRow);
+    table.appendChild(thead);
+
+    const tbody = el('tbody');
+    table.appendChild(tbody);
+    tableWrapper.appendChild(table);
+    container.appendChild(tableWrapper);
+
+    function updateSortHeaderIndicators() {
+      for (const [key, { th, sortSpan }] of Object.entries(sortThMap)) {
+        if (sortColumn === key) {
+          th.setAttribute('aria-sort', sortDirection === 'asc' ? 'ascending' : 'descending');
+          sortSpan.textContent = sortDirection === 'asc' ? ' ▲' : ' ▼';
+        } else {
+          th.setAttribute('aria-sort', 'none');
+          sortSpan.textContent = '';
+        }
+      }
+    }
+
+    function matchesCategory(w, cat) {
+      if (cat === 'all') return true;
+      switch (cat) {
+        case 'swords': return w.category === 'sword';
+        case 'axes': return w.category === 'axe' || w.category === 'battleaxe';
+        case 'clubs': return w.category === 'club' || w.category === 'sledge';
+        case 'spears': return w.category === 'spear';
+        case 'polearms': return w.category === 'polearm';
+        case 'knives': return w.category === 'knife';
+        case 'fists': return w.category === 'fists';
+        case 'pickaxes': return w.category === 'pickaxe';
+        case 'bows': return w.category === 'bow';
+        case 'crossbows': return w.category === 'crossbow';
+        case 'arrows': return w.category === 'arrow';
+        case 'bolts': return w.category === 'bolt';
+        case 'magic': return w.category === 'magic';
+        case 'bombs': return w.category === 'bomb';
+        default: return true;
+      }
+    }
+
+    function matchesDamageType(w, dt) {
+      if (!dt) return true;
+      return (w.damageMax?.[dt] ?? 0) > 0 || (w.damage?.[dt] ?? 0) > 0;
+    }
+
+    function createWeaponRow(w, hit) {
+      const row = el('tr', 'armory-row');
+
+      // 1. Icon
+      const iconTd = el('td', 'armory-col-icon');
+      iconTd.appendChild(createImage(w.image, w.name, 'armory-weapon-icon', w.name.charAt(0)));
+      row.appendChild(iconTd);
+
+      // 2. Name
+      const nameTd = el('td', 'armory-col-name', w.name);
+      row.appendChild(nameTd);
+
+      // 3. Category
+      row.appendChild(el('td', null, capitalize(w.category)));
+
+      // 4. Skill
+      const skillText = w.skill ? capitalize(w.skill.replace('-', ' ')) : '—';
+      row.appendChild(el('td', null, skillText));
+
+      // 5. Biome (Tier)
+      let biomeText = 'Special';
+      if (w.biome) {
+        const b = data.biomes?.find(x => x.id === w.biome);
+        const bName = b ? b.name : capitalize(w.biome);
+        biomeText = w.tier != null ? bName + ' (' + w.tier + ')' : bName;
+      }
+      row.appendChild(el('td', null, biomeText));
+
+      // 6. Damage
+      const dmgTd = el('td');
+      const dmgDiv = el('div', 'attack-damages');
+      const dmgEntries = w.damageMax ? Object.entries(w.damageMax) : [];
+      let hasDmg = false;
+      dmgEntries.forEach(([t, v]) => {
+        if (v > 0 && t !== 'chop' && t !== 'pickaxe') {
+          hasDmg = true;
+          dmgDiv.appendChild(el('span', 'dmg-chip dmg-chip-' + t, v + ' ' + capitalize(t)));
+        }
+      });
+      if (hasDmg) {
+        dmgTd.appendChild(dmgDiv);
+      } else {
+        dmgTd.textContent = '—';
+      }
+      row.appendChild(dmgTd);
+
+      // 7. Your avg
+      const avgTd = el('td', 'weapon-your-avg');
+      if (hit) {
+        const avgVal = Math.round(hit.avg);
+        avgTd.textContent = String(avgVal);
+        avgTd.title = hit.min !== hit.max
+          ? Math.round(hit.min) + '–' + Math.round(hit.max) + ' per hit'
+          : String(avgVal);
+      } else {
+        avgTd.textContent = '—';
+      }
+      row.appendChild(avgTd);
+
+      // 8. Stamina
+      row.appendChild(el('td', null, w.stamina !== null && w.stamina !== undefined ? String(w.stamina) : '—'));
+
+      // 9. Backstab
+      const bsTd = el('td');
+      if (w.backstab != null) {
+        bsTd.textContent = w.backstab + '×';
+      } else {
+        const defVal = window.VCRank?.DEFAULT_BACKSTAB?.[w.category] ?? 3;
+        bsTd.textContent = defVal + '× ';
+        bsTd.appendChild(el('span', 'armory-backstab-default', '(default)'));
+      }
+      row.appendChild(bsTd);
+
+      // 10. Materials
+      const matTd = el('td', 'weapon-materials');
+      if (w.materials && w.materials.length > 0) {
+        matTd.textContent = w.materials.map(m => m.name + (m.amount ? ' ×' + m.amount : '')).join(', ');
+      } else {
+        matTd.textContent = '—';
+      }
+      row.appendChild(matTd);
+
+      row.addEventListener('click', () => openWeaponModal(w, data));
+      return row;
+    }
+
+    function createLockedRow(biome, count) {
+      const tr = el('tr', 'armory-locked-row');
+      const td = el('td');
+      td.colSpan = 10;
+      td.textContent = '🔒 ' + count + ' weapons from ' + biome.name + ' — open the biome to reveal';
+      tr.appendChild(td);
+      return tr;
+    }
+
+    function renderTableBody() {
+      tbody.textContent = '';
+      const openBiomes = new Set(getStoredOpenBiomes());
+      const showAll = getStoredArmoryAll();
+      const allWeapons = Object.values(data.weapons);
+
+      // Filter visible weapons
+      const visible = [];
+      for (const w of allWeapons) {
+        // Spoilers
+        if (!showAll) {
+          if (!w.biome) continue; // "Special" (biome: null) only with toggle
+          if (!openBiomes.has(w.biome)) continue;
+        }
+        // Filters
+        if (!matchesCategory(w, selectedCategory)) continue;
+        if (selectedDamageType && !matchesDamageType(w, selectedDamageType)) continue;
+        if (searchQuery && !w.name.toLowerCase().includes(searchQuery)) continue;
+
+        const hit = computeWeaponAvgHit(w, data, playerState);
+        visible.push({
+          weapon: w,
+          hit,
+          avg: hit ? Math.round(hit.avg) : 0,
+        });
+      }
+
+      if (sortColumn === 'biome') {
+        const sortedBiomes = [...data.biomes].sort((a, b) => a.order - b.order);
+        if (sortDirection === 'desc') sortedBiomes.reverse();
+
+        // If desc, Special comes first when showAll is true
+        if (showAll && sortDirection === 'desc') {
+          const specialItems = visible.filter(it => !it.weapon.biome);
+          specialItems.sort((a, b) => b.weapon.name.localeCompare(a.weapon.name));
+          specialItems.forEach(it => tbody.appendChild(createWeaponRow(it.weapon, it.hit)));
+        }
+
+        sortedBiomes.forEach(biome => {
+          if (showAll || openBiomes.has(biome.id)) {
+            const biomeItems = visible.filter(it => it.weapon.biome === biome.id);
+            biomeItems.sort((a, b) => {
+              return sortDirection === 'asc'
+                ? a.weapon.name.localeCompare(b.weapon.name)
+                : b.weapon.name.localeCompare(a.weapon.name);
+            });
+            biomeItems.forEach(it => tbody.appendChild(createWeaponRow(it.weapon, it.hit)));
+          } else {
+            // Locked biome
+            const count = allWeapons.filter(w => w.biome === biome.id).length;
+            if (count > 0) {
+              tbody.appendChild(createLockedRow(biome, count));
+            }
+          }
+        });
+
+        // If asc, Special comes at the end when showAll is true
+        if (showAll && sortDirection === 'asc') {
+          const specialItems = visible.filter(it => !it.weapon.biome);
+          specialItems.sort((a, b) => a.weapon.name.localeCompare(b.weapon.name));
+          specialItems.forEach(it => tbody.appendChild(createWeaponRow(it.weapon, it.hit)));
+        }
+      } else {
+        // Sorted by name, yourAvg, or stamina
+        visible.sort((a, b) => {
+          if (sortColumn === 'name') {
+            return sortDirection === 'asc'
+              ? a.weapon.name.localeCompare(b.weapon.name)
+              : b.weapon.name.localeCompare(a.weapon.name);
+          }
+          if (sortColumn === 'yourAvg') {
+            const diff = a.avg - b.avg;
+            return sortDirection === 'asc'
+              ? (diff || a.weapon.name.localeCompare(b.weapon.name))
+              : (-diff || a.weapon.name.localeCompare(b.weapon.name));
+          }
+          if (sortColumn === 'stamina') {
+            const aStam = a.weapon.stamina !== null && a.weapon.stamina !== undefined ? a.weapon.stamina : (sortDirection === 'asc' ? 9999 : -1);
+            const bStam = b.weapon.stamina !== null && b.weapon.stamina !== undefined ? b.weapon.stamina : (sortDirection === 'asc' ? 9999 : -1);
+            const diff = aStam - bStam;
+            return sortDirection === 'asc'
+              ? (diff || a.weapon.name.localeCompare(b.weapon.name))
+              : (-diff || a.weapon.name.localeCompare(b.weapon.name));
+          }
+          return 0;
+        });
+
+        visible.forEach(it => tbody.appendChild(createWeaponRow(it.weapon, it.hit)));
+
+        // Append locked biome rows at the bottom
+        if (!showAll) {
+          const sortedBiomes = [...data.biomes].sort((a, b) => a.order - b.order);
+          sortedBiomes.forEach(biome => {
+            if (!openBiomes.has(biome.id)) {
+              const count = allWeapons.filter(w => w.biome === biome.id).length;
+              if (count > 0) {
+                tbody.appendChild(createLockedRow(biome, count));
+              }
+            }
+          });
+        }
+      }
+
+      if (tbody.children.length === 0) {
+        const emptyTr = el('tr', 'armory-empty-row');
+        const emptyTd = el('td');
+        emptyTd.colSpan = 10;
+        emptyTd.textContent = 'No weapons found matching your criteria.';
+        emptyTr.appendChild(emptyTd);
+        tbody.appendChild(emptyTr);
+      }
+    }
+
+    // Input listeners
+    searchInput.addEventListener('input', () => {
+      searchQuery = searchInput.value.trim().toLowerCase();
+      renderTableBody();
+    });
+
+    categorySelect.addEventListener('change', () => {
+      selectedCategory = categorySelect.value;
+      renderTableBody();
+    });
+
+    toggleAllCheckbox.addEventListener('change', () => {
+      setStoredArmoryAll(toggleAllCheckbox.checked);
+      renderTableBody();
+    });
+
+    // Initial render
+    updateSortHeaderIndicators();
+    renderTableBody();
+
+    return {
+      refresh() {
+        toggleAllCheckbox.checked = getStoredArmoryAll();
+        renderTableBody();
+      },
+    };
+  }
+
+  /**
    * Build Footer Section
    * @param {HTMLElement} footer
    * @param {object} data
@@ -1794,6 +2317,12 @@
 
     // Build Footer
     buildFooter(document.getElementById('page-footer'), data);
+
+    // Build Armory Section (VC-6)
+    const armoryContainer = document.getElementById('armory-section');
+    if (armoryContainer) {
+      armoryController = buildArmorySection(armoryContainer, data);
+    }
 
     const biomesContainer = document.getElementById('biomes-container');
     if (!biomesContainer) return;
@@ -1879,6 +2408,7 @@
           .filter(c => c.querySelector('.biome-header[aria-expanded="true"]'))
           .map(c => c.dataset.biomeId);
         setStoredOpenBiomes(currentlyOpen);
+        if (armoryController) armoryController.refresh();
       });
 
       card.appendChild(headerBtn);
@@ -1921,6 +2451,7 @@
           }
         });
         setStoredOpenBiomes([]);
+        if (armoryController) armoryController.refresh();
       });
     }
 
@@ -1939,6 +2470,7 @@
           }
         });
         clearStoredOpenBiomes();
+        if (armoryController) armoryController.refresh();
       });
     }
   }
