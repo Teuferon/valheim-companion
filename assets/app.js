@@ -895,6 +895,111 @@
   }
 
   /**
+   * Render biome content (bosses, hostile, passive, fish, weapons) on first open
+   * @param {object} biome
+   * @param {HTMLElement} contentWrapper
+   * @param {object} data
+   */
+  function renderBiomeContent(biome, contentWrapper, data) {
+    if (contentWrapper.firstElementChild) return;
+
+    const content = el('div', 'biome-content');
+    const contentInner = el('div', 'biome-content-inner');
+
+    // Populate sections: Bosses, Hostile, Passive, Fish, Biome Weapons
+    const bCreatures = biome.creatures || {};
+
+    // 1. Bosses (+ Minibosses)
+    const bossesList = [...(bCreatures.boss || []), ...(bCreatures.miniboss || [])];
+    if (bossesList.length > 0) {
+      const bossSection = el('section', 'biome-section biome-section-bosses');
+      const bossTitle = el('h3', 'section-title');
+      bossTitle.appendChild(document.createTextNode('Bosses '));
+      bossTitle.appendChild(el('span', 'section-count', '(' + bossesList.length + ')'));
+      bossSection.appendChild(bossTitle);
+
+      const bossGrid = el('div', 'creatures-grid');
+      bossesList.forEach(cId => {
+        const creature = data.creatures[cId];
+        if (creature) {
+          bossGrid.appendChild(createCreatureCard(creature, biome, data));
+        }
+      });
+      bossSection.appendChild(bossGrid);
+      contentInner.appendChild(bossSection);
+    }
+
+    // 2. Hostile
+    const hostileList = bCreatures.hostile || [];
+    if (hostileList.length > 0) {
+      const hostileSection = el('section', 'biome-section biome-section-hostile');
+      const hostileTitle = el('h3', 'section-title');
+      hostileTitle.appendChild(document.createTextNode('Hostile '));
+      hostileTitle.appendChild(el('span', 'section-count', '(' + hostileList.length + ')'));
+      hostileSection.appendChild(hostileTitle);
+
+      const hostileGrid = el('div', 'creatures-grid');
+      hostileList.forEach(cId => {
+        const creature = data.creatures[cId];
+        if (creature) {
+          hostileGrid.appendChild(createCreatureCard(creature, biome, data));
+        }
+      });
+      hostileSection.appendChild(hostileGrid);
+      contentInner.appendChild(hostileSection);
+    }
+
+    // 3. Passive
+    const passiveList = bCreatures.passive || [];
+    if (passiveList.length > 0) {
+      const passiveSection = el('section', 'biome-section biome-section-passive');
+      const passiveTitle = el('h3', 'section-title');
+      passiveTitle.appendChild(document.createTextNode('Passive '));
+      passiveTitle.appendChild(el('span', 'section-count', '(' + passiveList.length + ')'));
+      passiveSection.appendChild(passiveTitle);
+
+      const passiveGrid = el('div', 'creatures-grid');
+      passiveList.forEach(cId => {
+        const creature = data.creatures[cId];
+        if (creature) {
+          passiveGrid.appendChild(createCreatureCard(creature, biome, data));
+        }
+      });
+      passiveSection.appendChild(passiveGrid);
+      contentInner.appendChild(passiveSection);
+    }
+
+    // 4. Fish (compact tiles, expandable on click)
+    const fishList = bCreatures.fish || [];
+    if (fishList.length > 0) {
+      const fishSection = el('section', 'biome-section biome-section-fish');
+      const fishTitle = el('h3', 'section-title');
+      fishTitle.appendChild(document.createTextNode('Fish '));
+      fishTitle.appendChild(el('span', 'section-count', '(' + fishList.length + ')'));
+      fishSection.appendChild(fishTitle);
+
+      const fishGrid = el('div', 'fish-grid');
+      fishList.forEach(cId => {
+        const creature = data.creatures[cId];
+        if (creature) {
+          fishGrid.appendChild(createFishTile(creature, biome, data));
+        }
+      });
+      fishSection.appendChild(fishGrid);
+      contentInner.appendChild(fishSection);
+    }
+
+    // 5. Weapons & ammo from this biome
+    const weaponsSection = createBiomeWeaponsSection(biome, data);
+    if (weaponsSection) {
+      contentInner.appendChild(weaponsSection);
+    }
+
+    content.appendChild(contentInner);
+    contentWrapper.appendChild(content);
+  }
+
+  /**
    * Filter visible creatures in a specific biome card based on search and kind filter
    * @param {HTMLElement} biomeCard
    * @param {string} searchQuery
@@ -1131,100 +1236,11 @@
       contentWrapper.setAttribute('role', 'region');
       contentWrapper.setAttribute('aria-labelledby', 'biome-header-' + biome.id);
 
-      const content = el('div', 'biome-content');
-      const contentInner = el('div', 'biome-content-inner');
-
-      // Populate sections: Bosses, Hostile, Passive, Fish, Biome Weapons
-      const bCreatures = biome.creatures || {};
-
-      // 1. Bosses (+ Minibosses)
-      const bossesList = [...(bCreatures.boss || []), ...(bCreatures.miniboss || [])];
-      if (bossesList.length > 0) {
-        const bossSection = el('section', 'biome-section biome-section-bosses');
-        const bossTitle = el('h3', 'section-title');
-        bossTitle.appendChild(document.createTextNode('Bosses '));
-        bossTitle.appendChild(el('span', 'section-count', '(' + bossesList.length + ')'));
-        bossSection.appendChild(bossTitle);
-
-        const bossGrid = el('div', 'creatures-grid');
-        bossesList.forEach(cId => {
-          const creature = data.creatures[cId];
-          if (creature) {
-            bossGrid.appendChild(createCreatureCard(creature, biome, data));
-          }
-        });
-        bossSection.appendChild(bossGrid);
-        contentInner.appendChild(bossSection);
+      if (isOpenInitial) {
+        renderBiomeContent(biome, contentWrapper, data);
+      } else {
+        contentWrapper.setAttribute('inert', '');
       }
-
-      // 2. Hostile
-      const hostileList = bCreatures.hostile || [];
-      if (hostileList.length > 0) {
-        const hostileSection = el('section', 'biome-section biome-section-hostile');
-        const hostileTitle = el('h3', 'section-title');
-        hostileTitle.appendChild(document.createTextNode('Hostile '));
-        hostileTitle.appendChild(el('span', 'section-count', '(' + hostileList.length + ')'));
-        hostileSection.appendChild(hostileTitle);
-
-        const hostileGrid = el('div', 'creatures-grid');
-        hostileList.forEach(cId => {
-          const creature = data.creatures[cId];
-          if (creature) {
-            hostileGrid.appendChild(createCreatureCard(creature, biome, data));
-          }
-        });
-        hostileSection.appendChild(hostileGrid);
-        contentInner.appendChild(hostileSection);
-      }
-
-      // 3. Passive
-      const passiveList = bCreatures.passive || [];
-      if (passiveList.length > 0) {
-        const passiveSection = el('section', 'biome-section biome-section-passive');
-        const passiveTitle = el('h3', 'section-title');
-        passiveTitle.appendChild(document.createTextNode('Passive '));
-        passiveTitle.appendChild(el('span', 'section-count', '(' + passiveList.length + ')'));
-        passiveSection.appendChild(passiveTitle);
-
-        const passiveGrid = el('div', 'creatures-grid');
-        passiveList.forEach(cId => {
-          const creature = data.creatures[cId];
-          if (creature) {
-            passiveGrid.appendChild(createCreatureCard(creature, biome, data));
-          }
-        });
-        passiveSection.appendChild(passiveGrid);
-        contentInner.appendChild(passiveSection);
-      }
-
-      // 4. Fish (compact tiles, expandable on click)
-      const fishList = bCreatures.fish || [];
-      if (fishList.length > 0) {
-        const fishSection = el('section', 'biome-section biome-section-fish');
-        const fishTitle = el('h3', 'section-title');
-        fishTitle.appendChild(document.createTextNode('Fish '));
-        fishTitle.appendChild(el('span', 'section-count', '(' + fishList.length + ')'));
-        fishSection.appendChild(fishTitle);
-
-        const fishGrid = el('div', 'fish-grid');
-        fishList.forEach(cId => {
-          const creature = data.creatures[cId];
-          if (creature) {
-            fishGrid.appendChild(createFishTile(creature, biome, data));
-          }
-        });
-        fishSection.appendChild(fishGrid);
-        contentInner.appendChild(fishSection);
-      }
-
-      // 5. Weapons & ammo from this biome
-      const weaponsSection = createBiomeWeaponsSection(biome, data);
-      if (weaponsSection) {
-        contentInner.appendChild(weaponsSection);
-      }
-
-      content.appendChild(contentInner);
-      contentWrapper.appendChild(content);
 
       // Accordion toggle click handler
       headerBtn.addEventListener('click', function () {
@@ -1232,6 +1248,8 @@
         const nextState = !isExpanded;
         headerBtn.setAttribute('aria-expanded', String(nextState));
         if (nextState) {
+          renderBiomeContent(biome, contentWrapper, data);
+          contentWrapper.removeAttribute('inert');
           contentWrapper.classList.add('open');
           // Apply current search / kind filter to newly opened biome
           const searchInput = document.getElementById('creature-search');
@@ -1240,6 +1258,7 @@
           const kindFilter = activeFilterBtn ? activeFilterBtn.dataset.kind : 'all';
           applyFiltersToBiome(card, searchQuery, kindFilter);
         } else {
+          contentWrapper.setAttribute('inert', '');
           contentWrapper.classList.remove('open');
         }
 
@@ -1284,7 +1303,10 @@
           const headerBtn = card.querySelector('.biome-header');
           const contentWrapper = card.querySelector('.biome-content-wrapper');
           if (headerBtn) headerBtn.setAttribute('aria-expanded', 'false');
-          if (contentWrapper) contentWrapper.classList.remove('open');
+          if (contentWrapper) {
+            contentWrapper.classList.remove('open');
+            contentWrapper.setAttribute('inert', '');
+          }
         });
         setStoredOpenBiomes([]);
       });
@@ -1299,7 +1321,10 @@
           const headerBtn = card.querySelector('.biome-header');
           const contentWrapper = card.querySelector('.biome-content-wrapper');
           if (headerBtn) headerBtn.setAttribute('aria-expanded', 'false');
-          if (contentWrapper) contentWrapper.classList.remove('open');
+          if (contentWrapper) {
+            contentWrapper.classList.remove('open');
+            contentWrapper.setAttribute('inert', '');
+          }
         });
         clearStoredOpenBiomes();
       });
