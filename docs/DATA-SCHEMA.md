@@ -118,6 +118,8 @@ Pravidla:
     "damageMax": { "blunt": 35, "frost": 58, "spirit": 20 },
     "stamina": 12,
     "knockback": 100,
+    "skill": "clubs",
+    "backstab": 3,
     "materials": [{ "name": "Silver", "amount": 30 }],
     "tier": 4,
     "biome": "mountain",
@@ -125,6 +127,9 @@ Pravidla:
   }
 ]
 ```
+
+`skill` (od VC-5): `swords` | `axes` | `clubs` | `spears` | `polearms` | `knives` | `fists` | `pickaxes` | `bows` | `crossbows` | `elemental-magic` | `blood-magic` | `null` (bomby). Mapování podle ANALYZA § 9.
+`backstab` (od VC-5): číslo z pole infoboxu `backstab` (`"3x"` → 3), chybí-li → `null`.
 
 `category`: `sword` | `axe` | `club` | `spear` | `polearm` | `knife` | `battleaxe` | `sledge` | `fists` | `pickaxe` | `bow` | `crossbow` | `arrow` | `bolt` | `magic` | `bomb`. Zbraně, které se nedoporučují (štíty, missiles…), ⛔ do souboru nepatří.
 U šípů a šipek je `damage` poškození šípu, `maxQuality: 1`, `materials` je recept na jednu dávku a `quantity` je počet kusů z receptu.
@@ -178,6 +183,8 @@ window.VC_DATA = {
 ```
 
 Generuje ho `node scripts/build-data.mjs` z JSONů. ⛔ Ručně se needituje.
+
+Od VC-5 se doporučení počítají **v prohlížeči** podle nastavení hráče (`apps/bestiary/assets/rank.js`). Klíč `recommendations` v `data.js` proto zmizí. `data/recommendations.json` dál vzniká pro testy a report s výchozím hráčem (`VCRank.DEFAULT_PLAYER`).
 
 ## `data/overrides.json` (orchestrátor)
 

@@ -144,3 +144,62 @@ Bossové a minibossové se počítají stejně. Pasivní zvířata a ryby se po�
 
 Úlohy jdou **za sebou** (na Macu smí běžet jen jeden GM/GL). VC-3 potřebuje hotové `data/data.js` z VC-2.
 Schéma dat, které sdílí všechny tři úlohy, je v `docs/DATA-SCHEMA.md`.
+
+## 8. Rozcestník a sekce (od 5. 10. 2026)
+
+Valheim Companion je rozcestník a nástroje jsou pod ním jako sekce:
+
+| URL | Sekce | Zdroj v repu |
+|---|---|---|
+| `/` | rozcestník (anglicky) | `apps/hub/` |
+| `/bestiary/` | **Bestiary**: jednotky, slabiny, doporučené zbraně | `apps/bestiary/` (statický web) + `scripts/` + `data/` |
+| `/signs/` | **Sign Editor (Runopis)**: editor cedulí, 13 jazyků | `apps/signs/` (React 19 + Vite, převzato z `pawlig/valheim-signs` přes `git subtree` i s historií) |
+
+- Další nástroje přibydou jako `apps/<nazev>/` a `/<nazev>/` a dostanou kartu v rozcestníku.
+- Každá sekce má nahoře odkaz zpět na rozcestník („Valheim Companion“).
+- Runopis se staví s `base: '/signs/'`. Varianta pro Cloudflare / vinext / OpenAI Sites se ruší, zůstává jen statický Vite build.
+- Docker: v první fázi Node postaví Runopis, nginx pak servíruje `apps/hub` → `/`, `apps/bestiary` → `/bestiary/` a build Runopisu → `/signs/`.
+  Lokálně: `npm run build` složí stejné rozložení do `dist/` a `npm run preview` ho servíruje i s CSP.
+- Stará appka `valheim-signs.teuferon.click` se vypne a repo `pawlig/valheim-signs` se smaže (rozhodnutí Pavla). Obojí udělá orchestrátor nebo Pavel až po ověření nové verze.
+
+## 9. Postava hráče: skilly a další faktory (VC-5)
+
+Ověřeno na wiki 5. 10. 2026 (*Damage mechanics*, *Skills*, *World Modifiers*, *Creature level*, *Status effects*).
+
+**Vzorec poškození:** `damage = listed × skillFactor × multipliers × difficulty`.
+- `skillFactor` je náhodný v rozsahu `min = 0.25 + 0.006·L`, `max = min(0.55 + 0.006·L, 1.0)`, kde L = skill 0–100.
+  Průměr: 0.40 na L0, 0.85 na L75, 0.925 na L100. Web počítá s průměrem a rozsah ukazuje v tooltipu.
+- Luk a šíp: `(luk + šíp) × skillFactor(Bows)`. Kuše a šipka: skill Crossbows.
+- Skill podle kategorie zbraně:
+  - sword → Swords
+  - axe, battleaxe → Axes
+  - club, sledge → Clubs
+  - spear → Spears
+  - polearm → Polearms
+  - knife → Knives
+  - fists → Fists
+  - pickaxe → Pickaxes
+  - bow, arrow → Bows
+  - crossbow, bolt → Crossbows
+  - magic → Elemental magic, nebo Blood magic, když to říká `type` v infoboxu
+  - bomb → bez skillu (faktor 1)
+- **Obtížnost světa** (World modifier *Combat*), poškození hráče: Very easy 125 %, Easy 110 %, Normal 100 %, Hard 85 %, Very hard 70 %.
+- **Víc hráčů:** každý další hráč do 100 m přidá nepříteli +30 % efektivního HP, maximálně 5 hráčů (tedy +120 %).
+- **Hvězdy:** +100 % HP a +50 % poškození za úroveň. HP už jsou v datech po hvězdách.
+- **Situační násobiče:**
+  - stagger (po parry nebo nahromaděném staggeru) ×2
+  - backstab na nic netušícího nepřítele: násobič zbraně z infoboxu (`backstab`, 2×–6×)
+  - třetí úder komba ×2 a sekundární útoky 0.5×–3× web nepočítá; skóre je **za úder primárním útokem**, ne DPS
+  - zásah víc cílů najednou dává penalizaci, web ji nepočítá
+- **Bonusy ze setů** (přičítají se ke skillu, strop 100):
+  - Root set: Bows +15
+  - Lox fur set: Bows +15
+  - Fenris set: Fists +15
+- **Bonusy ze setů k poškození:**
+  - Bear set (Berserk): +10 % Slash a Chop
+  - Vanguard set: +10 % Pierce
+- Nezapočítává se (zmínit v legendě):
+  - dočasný buff od Dvergr Mage (+20 %)
+  - Thunderblood / Bloodgold bonus za chybějící HP
+  - otrava a hoření jako DoT (počítají se nominální hodnotou)
+  - zbroj nepřítele (nepřátelé zbroj nemají)
