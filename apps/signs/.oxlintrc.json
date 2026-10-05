@@ -7,8 +7,7 @@
     "oxc",
     "react",
     "import",
-    "jsx-a11y",
-    "nextjs"
+    "jsx-a11y"
   ],
   "categories": {
     "correctness": "error"
@@ -28,8 +27,10 @@
     "out/**",
     "build/**",
     "dist/**",
+    "dist-static/**",
     "coverage/**",
-    "next-env.d.ts"
+    "components/ui/**",
+    "hooks/use-mobile.ts"
   ],
   "rules": {
     "no-array-constructor": "error",
