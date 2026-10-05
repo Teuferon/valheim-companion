@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 
 import {
   effectiveModifiers,
@@ -402,6 +403,60 @@ test('sneak: attack with knife having backstab 6 multiplies damage by 6', () => 
   const hitNormal = perHit(knife, null, creature, playerNormal);
   const hitSneak = perHit(knife, null, creature, playerSneak);
   assert.equal(hitSneak.avg, hitNormal.avg * 6);
+  assert.ok(hitSneak.notes.includes('Sneak ×6'));
+});
+
+test('sneak: Bronze Atgeir without backstab in data defaults to x3 multiplier and notes Sneak ×3', () => {
+  const creature = { modifiers: {} };
+  const weapons = JSON.parse(readFileSync(new URL('../data/weapons.json', import.meta.url), 'utf8'));
+  const bronzeAtgeir = weapons.find((w) => w.id === 'bronze-atgeir');
+  assert.ok(bronzeAtgeir, 'Bronze Atgeir should exist in weapons.json');
+  assert.equal(bronzeAtgeir.backstab, null, 'Bronze Atgeir has no backstab in data');
+
+  const playerNormal = { ...DEFAULT_PLAYER, sneak: false };
+  const playerSneak = { ...DEFAULT_PLAYER, sneak: true };
+  const hitNormal = perHit(bronzeAtgeir, null, creature, playerNormal);
+  const hitSneak = perHit(bronzeAtgeir, null, creature, playerSneak);
+
+  assert.ok(Math.abs(hitSneak.avg - hitNormal.avg * 3) < 1e-9);
+  assert.ok(hitSneak.notes.includes('Sneak ×3'));
+});
+
+test('sneak: knife without backstab value defaults to x6 multiplier and notes Sneak ×6', () => {
+  const creature = { modifiers: {} };
+  const knife = { category: 'knife', skill: 'knives', damage: { slash: 50 } };
+  const playerNormal = { ...DEFAULT_PLAYER, sneak: false };
+  const playerSneak = { ...DEFAULT_PLAYER, sneak: true };
+  const hitNormal = perHit(knife, null, creature, playerNormal);
+  const hitSneak = perHit(knife, null, creature, playerSneak);
+
+  assert.equal(hitSneak.avg, hitNormal.avg * 6);
+  assert.ok(hitSneak.notes.includes('Sneak ×6'));
+});
+
+test('sneak: weapon with explicit backstab 4 uses x4 multiplier and notes Sneak ×4', () => {
+  const creature = { modifiers: {} };
+  const weapon = { category: 'sword', skill: 'swords', backstab: 4, damage: { slash: 50 } };
+  const playerNormal = { ...DEFAULT_PLAYER, sneak: false };
+  const playerSneak = { ...DEFAULT_PLAYER, sneak: true };
+  const hitNormal = perHit(weapon, null, creature, playerNormal);
+  const hitSneak = perHit(weapon, null, creature, playerSneak);
+
+  assert.equal(hitSneak.avg, hitNormal.avg * 4);
+  assert.ok(hitSneak.notes.includes('Sneak ×4'));
+});
+
+test('sneak: bow launcher backstab applies to combined bow+arrow attack, ignoring arrow backstab', () => {
+  const creature = { modifiers: {} };
+  const bow = { category: 'bow', skill: 'bows', damage: { pierce: 30 } };
+  const arrow = { category: 'arrow', skill: 'bows', backstab: 10, damage: { pierce: 20 } };
+  const playerNormal = { ...DEFAULT_PLAYER, sneak: false };
+  const playerSneak = { ...DEFAULT_PLAYER, sneak: true };
+  const hitNormal = perHit(bow, arrow, creature, playerNormal);
+  const hitSneak = perHit(bow, arrow, creature, playerSneak);
+
+  assert.equal(hitSneak.avg, hitNormal.avg * 3);
+  assert.ok(hitSneak.notes.includes('Sneak ×3'));
 });
 
 test('staggered: staggered target doubles damage (x2)', () => {
