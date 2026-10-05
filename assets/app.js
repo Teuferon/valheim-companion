@@ -101,6 +101,36 @@
   }
 
   /**
+   * LocalStorage helpers with try/catch
+   */
+  function getStoredOpenBiomes() {
+    try {
+      const raw = localStorage.getItem('vc.openBiomes');
+      if (!raw) return [];
+      const parsed = JSON.parse(raw);
+      return Array.isArray(parsed) ? parsed : [];
+    } catch {
+      return [];
+    }
+  }
+
+  function setStoredOpenBiomes(openIds) {
+    try {
+      localStorage.setItem('vc.openBiomes', JSON.stringify(openIds));
+    } catch {
+      // LocalStorage unavailable, ignore
+    }
+  }
+
+  function clearStoredOpenBiomes() {
+    try {
+      localStorage.removeItem('vc.openBiomes');
+    } catch {
+      // LocalStorage unavailable, ignore
+    }
+  }
+
+  /**
    * Open weapon modal dialog with full weapon statistics
    * @param {object} weapon
    * @param {object} data
@@ -719,7 +749,7 @@
     tile.setAttribute('role', 'button');
     tile.setAttribute('tabindex', '0');
     tile.setAttribute('aria-expanded', 'false');
-    tile.setAttribute('aria-label', creature.name + ', click to expand details');
+    tile.setAttribute('aria-label', creature.name + ', click to toggle details');
 
     const star0 = (creature.stars && creature.stars[0]) || {};
     const thumb = createImage(star0.image, creature.name, 'fish-thumb', creature.name.charAt(0));
@@ -733,18 +763,19 @@
 
     wrapper.appendChild(tile);
 
-    // Full card element (created once on demand or lazily)
     let fullCard = null;
 
     const toggleFish = () => {
       const isExpanded = tile.getAttribute('aria-expanded') === 'true';
       if (isExpanded) {
         tile.setAttribute('aria-expanded', 'false');
+        wrapper.classList.remove('expanded');
         if (fullCard && fullCard.parentElement) {
           wrapper.removeChild(fullCard);
         }
       } else {
         tile.setAttribute('aria-expanded', 'true');
+        wrapper.classList.add('expanded');
         if (!fullCard) {
           fullCard = createCreatureCard(creature, biome, data);
         }
@@ -864,6 +895,171 @@
   }
 
   /**
+   * Filter visible creatures in a specific biome card based on search and kind filter
+   * @param {HTMLElement} biomeCard
+   * @param {string} searchQuery
+   * @param {string} kindFilter
+   */
+  function applyFiltersToBiome(biomeCard, searchQuery, kindFilter) {
+    if (!biomeCard) return;
+
+    const sections = biomeCard.querySelectorAll('.biome-section');
+    let totalVisibleCreaturesInBiome = 0;
+
+    sections.forEach(section => {
+      const items = section.querySelectorAll('.creature-card, .fish-wrapper');
+      let visibleInSection = 0;
+
+      items.forEach(item => {
+        const name = (item.dataset.creatureName || '').toLowerCase();
+        const kind = item.dataset.creatureKind || '';
+
+        const matchesSearch = !searchQuery || name.includes(searchQuery);
+        let matchesKind = true;
+        if (kindFilter && kindFilter !== 'all') {
+          if (kindFilter === 'boss') {
+            matchesKind = (kind === 'boss' || kind === 'miniboss');
+          } else {
+            matchesKind = (kind === kindFilter);
+          }
+        }
+
+        const isVisible = matchesSearch && matchesKind;
+        item.style.display = isVisible ? '' : 'none';
+        if (isVisible) {
+          visibleInSection++;
+          totalVisibleCreaturesInBiome++;
+        }
+      });
+
+      section.style.display = visibleInSection > 0 ? '' : 'none';
+    });
+
+    // Check if entire content has zero creatures matching
+    const contentInner = biomeCard.querySelector('.biome-content-inner');
+    if (contentInner) {
+      let emptyMsg = contentInner.querySelector('.no-results-msg');
+      if (totalVisibleCreaturesInBiome === 0 && (searchQuery || (kindFilter && kindFilter !== 'all'))) {
+        if (!emptyMsg) {
+          emptyMsg = el('p', 'no-results-msg', 'No creatures match your search or kind filter in this biome.');
+          // Insert before weapons section if present
+          const weaponsSec = contentInner.querySelector('.biome-weapons-details');
+          if (weaponsSec) {
+            contentInner.insertBefore(emptyMsg, weaponsSec);
+          } else {
+            contentInner.appendChild(emptyMsg);
+          }
+        }
+      } else if (emptyMsg) {
+        emptyMsg.remove();
+      }
+    }
+  }
+
+  /**
+   * Filter creatures across all currently open biomes
+   */
+  function applyFiltersToAllOpenBiomes() {
+    const searchInput = document.getElementById('creature-search');
+    const searchQuery = searchInput ? searchInput.value.trim().toLowerCase() : '';
+
+    const activeFilterBtn = document.querySelector('.filter-btn.active');
+    const kindFilter = activeFilterBtn ? activeFilterBtn.dataset.kind : 'all';
+
+    const openCards = document.querySelectorAll('.biome-card');
+    openCards.forEach(card => {
+      const headerBtn = card.querySelector('.biome-header');
+      if (headerBtn && headerBtn.getAttribute('aria-expanded') === 'true') {
+        applyFiltersToBiome(card, searchQuery, kindFilter);
+      }
+    });
+  }
+
+  /**
+   * Build Legend Section
+   * @param {HTMLElement} container
+   */
+  function buildLegend(container) {
+    if (!container) return;
+    container.textContent = '';
+
+    const details = el('details', 'legend-details');
+    const summary = el('summary', null, 'Legend & Damage Mechanics');
+    details.appendChild(summary);
+
+    const body = el('div', 'legend-body');
+
+    // Damage Types Group
+    const dmgGroup = el('div', 'legend-group');
+    dmgGroup.appendChild(el('div', 'legend-group-title', 'Damage Types'));
+    const dmgItems = el('div', 'legend-items');
+    const damageTypes = [
+      'blunt', 'slash', 'pierce', 'chop', 'pickaxe',
+      'fire', 'frost', 'lightning', 'poison', 'spirit'
+    ];
+    damageTypes.forEach(t => {
+      dmgItems.appendChild(el('span', 'dmg-chip dmg-chip-' + t, capitalize(t)));
+    });
+    dmgGroup.appendChild(dmgItems);
+    body.appendChild(dmgGroup);
+
+    // Multipliers Group
+    const modGroup = el('div', 'legend-group');
+    modGroup.appendChild(el('div', 'legend-group-title', 'Weakness & Resistance Multipliers'));
+    const modItems = el('div', 'legend-items');
+    const tiers = [
+      { mult: 2, label: '×2 Very Weak', cls: 'mod-chip-2' },
+      { mult: 1.5, label: '×1.5 Weak', cls: 'mod-chip-1_5' },
+      { mult: 1.25, label: '×1.25 Slightly Weak', cls: 'mod-chip-1_25' },
+      { mult: 1, label: '×1 Neutral', cls: 'mod-chip-1' },
+      { mult: 0.75, label: '×0.75 Slightly Resistant', cls: 'mod-chip-0_75' },
+      { mult: 0.5, label: '×0.5 Resistant', cls: 'mod-chip-0_5' },
+      { mult: 0.25, label: '×0.25 Very Resistant', cls: 'mod-chip-0_25' },
+      { mult: 0, label: '×0 Immune', cls: 'mod-chip-0' }
+    ];
+    tiers.forEach(item => {
+      modItems.appendChild(el('span', 'mod-chip ' + item.cls, item.label));
+    });
+    modGroup.appendChild(modItems);
+    body.appendChild(modGroup);
+
+    // Note
+    const note = el('p', 'legend-note', 'Scores = per-hit damage at max upgrade quality vs. this creature; fire/poison DoT counted at face value.');
+    body.appendChild(note);
+
+    details.appendChild(body);
+    container.appendChild(details);
+  }
+
+  /**
+   * Build Footer Section
+   * @param {HTMLElement} footer
+   * @param {object} data
+   */
+  function buildFooter(footer, data) {
+    if (!footer) return;
+    footer.textContent = '';
+
+    const p1 = el('p');
+    p1.appendChild(document.createTextNode('Data: '));
+
+    const wikiA = el('a', null, 'Valheim Wiki (valheim.weirdgloop.org)');
+    wikiA.href = 'https://valheim.weirdgloop.org';
+    wikiA.target = '_blank';
+    wikiA.rel = 'noopener noreferrer';
+    p1.appendChild(wikiA);
+
+    p1.appendChild(document.createTextNode(', CC BY-SA 4.0 · generated '));
+
+    const genDate = data.generatedAt ? data.generatedAt.slice(0, 10) : '2026-10-05';
+    p1.appendChild(document.createTextNode(genDate));
+    footer.appendChild(p1);
+
+    const p2 = el('p', null, 'Fan project, not affiliated with Iron Gate.');
+    footer.appendChild(p2);
+  }
+
+  /**
    * Main App Initialization
    */
   function initApp() {
@@ -876,8 +1072,17 @@
       return;
     }
 
+    // Build Legend
+    buildLegend(document.getElementById('legend-section'));
+
+    // Build Footer
+    buildFooter(document.getElementById('page-footer'), data);
+
     const biomesContainer = document.getElementById('biomes-container');
     if (!biomesContainer) return;
+
+    // Read stored open biomes from localStorage
+    const savedOpenBiomes = new Set(getStoredOpenBiomes());
 
     // Sort biomes by order
     const sortedBiomes = [...data.biomes].sort((a, b) => a.order - b.order);
@@ -890,10 +1095,13 @@
       // Calculate total creatures
       const creaturesCount = Object.values(biome.creatures || {}).flat().length;
 
+      // Check if previously open
+      const isOpenInitial = savedOpenBiomes.has(biome.id);
+
       // Header button
       const headerBtn = el('button', 'biome-header');
       headerBtn.type = 'button';
-      headerBtn.setAttribute('aria-expanded', 'false');
+      headerBtn.setAttribute('aria-expanded', String(isOpenInitial));
       headerBtn.setAttribute('aria-controls', 'biome-content-' + biome.id);
       headerBtn.id = 'biome-header-' + biome.id;
 
@@ -918,7 +1126,7 @@
       headerBtn.appendChild(chevron);
 
       // Content wrapper for smooth animation
-      const contentWrapper = el('div', 'biome-content-wrapper');
+      const contentWrapper = el('div', 'biome-content-wrapper' + (isOpenInitial ? ' open' : ''));
       contentWrapper.id = 'biome-content-' + biome.id;
       contentWrapper.setAttribute('role', 'region');
       contentWrapper.setAttribute('aria-labelledby', 'biome-header-' + biome.id);
@@ -1025,15 +1233,77 @@
         headerBtn.setAttribute('aria-expanded', String(nextState));
         if (nextState) {
           contentWrapper.classList.add('open');
+          // Apply current search / kind filter to newly opened biome
+          const searchInput = document.getElementById('creature-search');
+          const searchQuery = searchInput ? searchInput.value.trim().toLowerCase() : '';
+          const activeFilterBtn = document.querySelector('.filter-btn.active');
+          const kindFilter = activeFilterBtn ? activeFilterBtn.dataset.kind : 'all';
+          applyFiltersToBiome(card, searchQuery, kindFilter);
         } else {
           contentWrapper.classList.remove('open');
         }
+
+        // Save open biomes in localStorage
+        const currentlyOpen = Array.from(document.querySelectorAll('.biome-card'))
+          .filter(c => c.querySelector('.biome-header[aria-expanded="true"]'))
+          .map(c => c.dataset.biomeId);
+        setStoredOpenBiomes(currentlyOpen);
       });
 
       card.appendChild(headerBtn);
       card.appendChild(contentWrapper);
       biomesContainer.appendChild(card);
+
+      if (isOpenInitial) {
+        applyFiltersToBiome(card, '', 'all');
+      }
     });
+
+    // Search Box Listener
+    const searchInput = document.getElementById('creature-search');
+    if (searchInput) {
+      searchInput.addEventListener('input', applyFiltersToAllOpenBiomes);
+    }
+
+    // Kind Filter Buttons
+    const filterButtons = document.querySelectorAll('.kind-filter .filter-btn');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', function () {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyFiltersToAllOpenBiomes();
+      });
+    });
+
+    // Collapse All Button
+    const collapseAllBtn = document.getElementById('btn-collapse-all');
+    if (collapseAllBtn) {
+      collapseAllBtn.addEventListener('click', function () {
+        const allCards = document.querySelectorAll('.biome-card');
+        allCards.forEach(card => {
+          const headerBtn = card.querySelector('.biome-header');
+          const contentWrapper = card.querySelector('.biome-content-wrapper');
+          if (headerBtn) headerBtn.setAttribute('aria-expanded', 'false');
+          if (contentWrapper) contentWrapper.classList.remove('open');
+        });
+        setStoredOpenBiomes([]);
+      });
+    }
+
+    // Reset Spoiler Progress Button
+    const resetProgressBtn = document.getElementById('btn-reset-progress');
+    if (resetProgressBtn) {
+      resetProgressBtn.addEventListener('click', function () {
+        const allCards = document.querySelectorAll('.biome-card');
+        allCards.forEach(card => {
+          const headerBtn = card.querySelector('.biome-header');
+          const contentWrapper = card.querySelector('.biome-content-wrapper');
+          if (headerBtn) headerBtn.setAttribute('aria-expanded', 'false');
+          if (contentWrapper) contentWrapper.classList.remove('open');
+        });
+        clearStoredOpenBiomes();
+      });
+    }
   }
 
   if (document.readyState === 'loading') {

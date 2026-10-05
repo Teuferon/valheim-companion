@@ -934,6 +934,16 @@ body {
   gap: 12px;
 }
 
+.fish-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fish-wrapper.expanded {
+  grid-column: 1 / -1;
+}
+
 .fish-tile {
   background-color: var(--bg-card-sub);
   border: 1px solid var(--border-color);
@@ -952,10 +962,8 @@ body {
   background-color: var(--bg-card-hover);
 }
 
-.fish-tile.expanded {
+.fish-wrapper.expanded .fish-tile {
   border-color: var(--accent-gold);
-  grid-column: 1 / -1;
-  display: block;
 }
 
 .fish-thumb {
@@ -1188,6 +1196,17 @@ body {
   color: var(--accent-gold);
 }
 
+.no-results-msg {
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 18px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--border-color);
+  margin-top: 8px;
+}
+
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -1208,10 +1227,12 @@ body {
     flex-wrap: nowrap;
     overflow-x: auto;
     width: 100%;
+    -webkit-overflow-scrolling: touch;
   }
   .controls-actions {
     width: 100%;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
   .creatures-grid {
     grid-template-columns: 1fr;
@@ -1220,7 +1241,7 @@ body {
 
 @media (max-width: 480px) {
   body {
-    padding: 0 12px;
+    padding: 0 16px;
   }
   .page-wrapper {
     padding: 16px 0 40px;
@@ -1241,8 +1262,12 @@ body {
   .biome-content-inner {
     padding: 14px 10px;
   }
+  .controls-actions {
+    flex-direction: column;
+  }
   .action-btn {
-    padding: 6px 10px;
-    font-size: 0.8rem;
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 0.85rem;
   }
 }
