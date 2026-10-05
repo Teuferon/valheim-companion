@@ -130,6 +130,484 @@
     }
   }
 
+  // ---------------------------------------------------------------------------
+  // Player character settings (VC-5)
+  // ---------------------------------------------------------------------------
+
+  const PLAYER_STORAGE_KEY = 'vc.player';
+
+  const DIFFICULTY_OPTIONS = [
+    { id: 'veryeasy', label: 'Very easy (125 %)', short: 'Very easy' },
+    { id: 'easy', label: 'Easy (110 %)', short: 'Easy' },
+    { id: 'normal', label: 'Normal (100 %)', short: 'Normal' },
+    { id: 'hard', label: 'Hard (85 %)', short: 'Hard' },
+    { id: 'veryhard', label: 'Very hard (70 %)', short: 'Very hard' },
+  ];
+
+  const SET_LABELS = {
+    root: 'Root set (+15 Bows)',
+    lox: 'Lox fur set (+15 Bows)',
+    fenris: 'Fenris set (+15 Fists)',
+    bear: 'Bear set (+10 % Slash/Chop)',
+    vanguard: 'Vanguard set (+10 % Pierce)',
+  };
+
+  function clampInt(val, min, max, fallback) {
+    const n = Math.round(Number(val));
+    if (!Number.isFinite(n)) return fallback;
+    return Math.max(min, Math.min(max, n));
+  }
+
+  function defaultPlayer() {
+    return JSON.parse(JSON.stringify(window.VCRank.DEFAULT_PLAYER));
+  }
+
+  /**
+   * Replace unknown or corrupted values with DEFAULT_PLAYER values
+   * @param {object} raw
+   * @returns {object}
+   */
+  function sanitizePlayer(raw) {
+    const player = defaultPlayer();
+    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return player;
+
+    if (raw.skills && typeof raw.skills === 'object' && !Array.isArray(raw.skills)) {
+      for (const s of window.VCRank.SKILLS) {
+        const v = raw.skills[s.id];
+        if (v !== undefined && v !== null && Number.isFinite(Number(v))) {
+          player.skills[s.id] = clampInt(v, 0, 100, 50);
+        }
+      }
+    }
+
+    if (
+      typeof raw.difficulty === 'string' &&
+      Object.prototype.hasOwnProperty.call(window.VCRank.DIFFICULTY, raw.difficulty)
+    ) {
+      player.difficulty = raw.difficulty;
+    }
+
+    if (raw.players !== undefined && raw.players !== null && Number.isFinite(Number(raw.players))) {
+      player.players = clampInt(raw.players, 1, 5, 1);
+    }
+
+    if (raw.quality === 'max') {
+      player.quality = 'max';
+    } else if (raw.quality !== undefined && raw.quality !== null && Number.isFinite(Number(raw.quality))) {
+      player.quality = clampInt(raw.quality, 1, 4, 4);
+    }
+
+    if (Array.isArray(raw.sets)) {
+      const valid = new Set(Object.keys(window.VCRank.SET_BONUSES));
+      player.sets = [...new Set(raw.sets.filter((s) => typeof s === 'string' && valid.has(s)))];
+    }
+
+    player.sneak = raw.sneak === true;
+    player.staggered = raw.staggered === true;
+
+    return player;
+  }
+
+  /**
+   * Load player state from localStorage; firstVisit is true when the key
+   * has never been written (panel starts expanded in that case)
+   */
+  function loadPlayerState() {
+    try {
+      const raw = localStorage.getItem(PLAYER_STORAGE_KEY);
+      if (raw === null) {
+        return { player: defaultPlayer(), firstVisit: true };
+      }
+      return { player: sanitizePlayer(JSON.parse(raw)), firstVisit: false };
+    } catch {
+      return { player: defaultPlayer(), firstVisit: false };
+    }
+  }
+
+  function savePlayerState(player) {
+    try {
+      localStorage.setItem(PLAYER_STORAGE_KEY, JSON.stringify(player));
+    } catch {
+      // LocalStorage unavailable, ignore
+    }
+  }
+
+  /**
+   * Sum of active armor set skill bonuses for a skill id
+   * @param {object} player
+   * @param {string} skillId
+   * @returns {number}
+   */
+  function skillBonusSum(player, skillId) {
+    let sum = 0;
+    for (const setId of player.sets) {
+      const bonus = window.VCRank.SET_BONUSES[setId];
+      if (bonus && bonus.type === 'skill' && bonus.skill === skillId) {
+        sum += bonus.amount;
+      }
+    }
+    return sum;
+  }
+
+  const loadedPlayerState = window.VCRank ? loadPlayerState() : null;
+  const playerState = loadedPlayerState ? loadedPlayerState.player : null;
+  const playerFirstVisit = loadedPlayerState ? loadedPlayerState.firstVisit : false;
+
+  let cardRefreshTimer = null;
+
+  /**
+   * Debounced refresh of everything already rendered that depends on the
+   * player character settings (creature cards, biome weapon tables)
+   */
+  function scheduleCardRefresh() {
+    if (cardRefreshTimer) {
+      clearTimeout(cardRefreshTimer);
+    }
+    cardRefreshTimer = setTimeout(() => {
+      cardRefreshTimer = null;
+      refreshRenderedCards();
+    }, 150);
+  }
+
+  function refreshRenderedCards() {
+    document.querySelectorAll('.creature-card').forEach((cardEl) => {
+      if (typeof cardEl.refreshForPlayer === 'function') {
+        cardEl.refreshForPlayer();
+      }
+    });
+    document.querySelectorAll('.biome-weapons-details').forEach((sectionEl) => {
+      if (typeof sectionEl.refreshForPlayer === 'function') {
+        sectionEl.refreshForPlayer();
+      }
+    });
+  }
+
+  /**
+   * Build the "Your character" settings panel
+   * @param {HTMLElement} container
+   * @param {boolean} [openInitial] Expand the panel on first visit
+   */
+  function buildCharacterPanel(container, openInitial) {
+    if (!container || !window.VCRank || !playerState) return;
+    container.textContent = '';
+
+    const player = playerState;
+    const skillInputs = {}; // skill id -> { range, number, badge }
+    const setCheckboxes = {}; // set id -> checkbox
+    let difficultySelect = null;
+    let playersSelect = null;
+    let qualitySelect = null;
+    let sneakCheckbox = null;
+    let staggeredCheckbox = null;
+    let summaryEl = null;
+
+    const updateCharacterSummary = () => {
+      const skills = window.VCRank.SKILLS;
+      const avg = Math.round(skills.reduce((acc, s) => acc + player.skills[s.id], 0) / skills.length);
+      const diffLabel = DIFFICULTY_OPTIONS.find((d) => d.id === player.difficulty);
+      const playersStr = player.players + (player.players === 1 ? ' player' : ' players');
+      const qualityStr = player.quality === 'max' ? 'Max quality' : 'Quality ' + player.quality;
+      summaryEl.textContent =
+        'Your character · avg skill ' + avg +
+        ' · ' + (diffLabel ? diffLabel.short : 'Normal') +
+        ' · ' + playersStr +
+        ' · ' + qualityStr;
+    };
+
+    const updateSkillBadges = () => {
+      for (const s of window.VCRank.SKILLS) {
+        const inputs = skillInputs[s.id];
+        if (!inputs) continue;
+        const base = player.skills[s.id];
+        const effective = window.VCRank.effectiveSkill(player, s.id);
+        if (effective !== base) {
+          inputs.badge.textContent = '+' + skillBonusSum(player, s.id) + ' → ' + effective;
+        } else {
+          inputs.badge.textContent = '';
+        }
+      }
+    };
+
+    const onPlayerChange = () => {
+      savePlayerState(player);
+      updateCharacterSummary();
+      updateSkillBadges();
+      scheduleCardRefresh();
+    };
+
+    const syncSkillInputs = () => {
+      for (const s of window.VCRank.SKILLS) {
+        const inputs = skillInputs[s.id];
+        const v = String(player.skills[s.id]);
+        inputs.range.value = v;
+        inputs.number.value = v;
+      }
+    };
+
+    const syncAllInputs = () => {
+      syncSkillInputs();
+      for (const setId of Object.keys(setCheckboxes)) {
+        setCheckboxes[setId].checked = player.sets.includes(setId);
+      }
+      if (difficultySelect) difficultySelect.value = player.difficulty;
+      if (playersSelect) playersSelect.value = String(player.players);
+      if (qualitySelect) qualitySelect.value = String(player.quality);
+      if (sneakCheckbox) sneakCheckbox.checked = player.sneak;
+      if (staggeredCheckbox) staggeredCheckbox.checked = player.staggered;
+    };
+
+    const details = el('details', 'character-panel');
+    if (openInitial) {
+      details.setAttribute('open', '');
+    }
+    summaryEl = el('summary', 'character-summary');
+    details.appendChild(summaryEl);
+
+    const body = el('div', 'character-body');
+
+    // Weapon skills
+    const skillsBlock = el('div', 'character-block');
+    skillsBlock.appendChild(el('span', 'character-block-title', 'Weapon skills'));
+
+    const setAllRow = el('div', 'set-all-row');
+    setAllRow.appendChild(el('span', 'set-all-label', 'Set all'));
+    const setAllRange = document.createElement('input');
+    setAllRange.type = 'range';
+    setAllRange.min = '0';
+    setAllRange.max = '100';
+    setAllRange.value = '50';
+    setAllRange.className = 'set-all-range';
+    setAllRange.setAttribute('aria-label', 'Set all skills value');
+    const setAllVal = el('span', 'set-all-val', '50');
+    setAllRange.addEventListener('input', () => {
+      setAllVal.textContent = setAllRange.value;
+    });
+    const applyAllBtn = el('button', 'action-btn', 'Apply to all');
+    applyAllBtn.type = 'button';
+    applyAllBtn.addEventListener('click', () => {
+      const v = clampInt(setAllRange.value, 0, 100, 50);
+      for (const s of window.VCRank.SKILLS) {
+        player.skills[s.id] = v;
+      }
+      syncSkillInputs();
+      onPlayerChange();
+    });
+    setAllRow.appendChild(setAllRange);
+    setAllRow.appendChild(setAllVal);
+    setAllRow.appendChild(applyAllBtn);
+    skillsBlock.appendChild(setAllRow);
+
+    const skillsGrid = el('div', 'skills-grid');
+    for (const s of window.VCRank.SKILLS) {
+      const row = el('div', 'skill-row');
+      row.appendChild(el('span', 'skill-name', s.name));
+
+      const range = document.createElement('input');
+      range.type = 'range';
+      range.min = '0';
+      range.max = '100';
+      range.value = String(player.skills[s.id]);
+      range.className = 'skill-range';
+      range.id = 'skill-range-' + s.id;
+      range.setAttribute('aria-label', s.name + ' skill');
+
+      const numBox = el('div', 'skill-number-box');
+      const number = document.createElement('input');
+      number.type = 'number';
+      number.min = '0';
+      number.max = '100';
+      number.value = String(player.skills[s.id]);
+      number.className = 'skill-number';
+      number.id = 'skill-number-' + s.id;
+      number.setAttribute('aria-label', s.name + ' skill level');
+      const badge = el('span', 'skill-effective-badge');
+      numBox.appendChild(number);
+      numBox.appendChild(badge);
+
+      range.addEventListener('input', () => {
+        number.value = range.value;
+        player.skills[s.id] = clampInt(range.value, 0, 100, player.skills[s.id]);
+        onPlayerChange();
+      });
+      number.addEventListener('input', () => {
+        const v = Number(number.value);
+        if (Number.isFinite(v)) {
+          const c = clampInt(v, 0, 100, player.skills[s.id]);
+          player.skills[s.id] = c;
+          range.value = String(c);
+          onPlayerChange();
+        }
+      });
+      number.addEventListener('change', () => {
+        number.value = String(player.skills[s.id]);
+      });
+
+      row.appendChild(range);
+      row.appendChild(numBox);
+      skillsGrid.appendChild(row);
+      skillInputs[s.id] = { range, number, badge };
+    }
+    skillsBlock.appendChild(skillsGrid);
+    body.appendChild(skillsBlock);
+
+    // Armor set bonuses
+    const setBlock = el('div', 'character-block');
+    setBlock.appendChild(el('span', 'character-block-title', 'Armor set bonuses'));
+    const setBoxes = el('div', 'character-checkboxes');
+    for (const setId of Object.keys(window.VCRank.SET_BONUSES)) {
+      const label = el('label', 'char-checkbox-label');
+      const cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.checked = player.sets.includes(setId);
+      cb.addEventListener('change', () => {
+        if (cb.checked) {
+          if (!player.sets.includes(setId)) player.sets.push(setId);
+        } else {
+          player.sets = player.sets.filter((x) => x !== setId);
+        }
+        onPlayerChange();
+      });
+      label.appendChild(cb);
+      label.appendChild(document.createTextNode(SET_LABELS[setId] || setId));
+      setBoxes.appendChild(label);
+      setCheckboxes[setId] = cb;
+    }
+    setBlock.appendChild(setBoxes);
+    body.appendChild(setBlock);
+
+    // World (difficulty + players)
+    const worldBlock = el('div', 'character-block');
+    worldBlock.appendChild(el('span', 'character-block-title', 'World'));
+    const worldRow = el('div', 'character-fields-row');
+
+    const diffGroup = el('div', 'char-field-group');
+    diffGroup.appendChild(el('span', 'char-field-label', 'Combat difficulty'));
+    difficultySelect = document.createElement('select');
+    difficultySelect.className = 'char-select';
+    difficultySelect.setAttribute('aria-label', 'Combat difficulty');
+    DIFFICULTY_OPTIONS.forEach((opt) => {
+      const option = el('option', null, opt.label);
+      option.value = opt.id;
+      difficultySelect.appendChild(option);
+    });
+    difficultySelect.value = player.difficulty;
+    difficultySelect.addEventListener('change', () => {
+      player.difficulty = difficultySelect.value;
+      onPlayerChange();
+    });
+    diffGroup.appendChild(difficultySelect);
+    worldRow.appendChild(diffGroup);
+
+    const playersGroup = el('div', 'char-field-group');
+    playersGroup.appendChild(el('span', 'char-field-label', 'Players nearby'));
+    playersSelect = document.createElement('select');
+    playersSelect.className = 'char-select';
+    playersSelect.setAttribute('aria-label', 'Players nearby');
+    for (let n = 1; n <= 5; n++) {
+      const option = el('option', null, String(n));
+      option.value = String(n);
+      playersSelect.appendChild(option);
+    }
+    playersSelect.value = String(player.players);
+    playersSelect.addEventListener('change', () => {
+      player.players = clampInt(playersSelect.value, 1, 5, 1);
+      onPlayerChange();
+    });
+    playersGroup.appendChild(playersSelect);
+    playersGroup.appendChild(el('span', 'char-field-hint', '+30 % enemy HP per extra player'));
+    worldRow.appendChild(playersGroup);
+
+    worldBlock.appendChild(worldRow);
+    body.appendChild(worldBlock);
+
+    // Weapons (upgrade level)
+    const weaponsBlock = el('div', 'character-block');
+    weaponsBlock.appendChild(el('span', 'character-block-title', 'Weapons'));
+    const weaponsRow = el('div', 'character-fields-row');
+    const qualityGroup = el('div', 'char-field-group');
+    qualityGroup.appendChild(el('span', 'char-field-label', 'Upgrade level'));
+    qualitySelect = document.createElement('select');
+    qualitySelect.className = 'char-select';
+    qualitySelect.setAttribute('aria-label', 'Upgrade level');
+    const maxOption = el('option', null, 'Max');
+    maxOption.value = 'max';
+    qualitySelect.appendChild(maxOption);
+    for (let q = 1; q <= 4; q++) {
+      const option = el('option', null, String(q));
+      option.value = String(q);
+      qualitySelect.appendChild(option);
+    }
+    qualitySelect.value = String(player.quality);
+    qualitySelect.addEventListener('change', () => {
+      const v = qualitySelect.value;
+      player.quality = v === 'max' ? 'max' : clampInt(v, 1, 4, 4);
+      onPlayerChange();
+    });
+    qualityGroup.appendChild(qualitySelect);
+    weaponsRow.appendChild(qualityGroup);
+    weaponsBlock.appendChild(weaponsRow);
+    body.appendChild(weaponsBlock);
+
+    // Situational
+    const sitBlock = el('div', 'character-block');
+    sitBlock.appendChild(el('span', 'character-block-title', 'Situational'));
+    const sitBoxes = el('div', 'character-checkboxes');
+
+    const sneakLabel = el('label', 'char-checkbox-label');
+    sneakCheckbox = document.createElement('input');
+    sneakCheckbox.type = 'checkbox';
+    sneakCheckbox.checked = player.sneak;
+    sneakCheckbox.addEventListener('change', () => {
+      player.sneak = sneakCheckbox.checked;
+      onPlayerChange();
+    });
+    sneakLabel.appendChild(sneakCheckbox);
+    sneakLabel.appendChild(document.createTextNode('Sneak attack (backstab)'));
+    sitBoxes.appendChild(sneakLabel);
+
+    const staggeredLabel = el('label', 'char-checkbox-label');
+    staggeredCheckbox = document.createElement('input');
+    staggeredCheckbox.type = 'checkbox';
+    staggeredCheckbox.checked = player.staggered;
+    staggeredCheckbox.addEventListener('change', () => {
+      player.staggered = staggeredCheckbox.checked;
+      onPlayerChange();
+    });
+    staggeredLabel.appendChild(staggeredCheckbox);
+    staggeredLabel.appendChild(document.createTextNode('Enemy staggered (×2)'));
+    sitBoxes.appendChild(staggeredLabel);
+
+    sitBlock.appendChild(sitBoxes);
+    body.appendChild(sitBlock);
+
+    // Actions
+    const actions = el('div', 'character-actions');
+    const resetBtn = el('button', 'action-btn', 'Reset to defaults');
+    resetBtn.type = 'button';
+    resetBtn.addEventListener('click', () => {
+      const fresh = defaultPlayer();
+      for (const s of window.VCRank.SKILLS) {
+        player.skills[s.id] = fresh.skills[s.id];
+      }
+      player.difficulty = fresh.difficulty;
+      player.players = fresh.players;
+      player.quality = fresh.quality;
+      player.sets = [...fresh.sets];
+      player.sneak = fresh.sneak;
+      player.staggered = fresh.staggered;
+      syncAllInputs();
+      onPlayerChange();
+    });
+    actions.appendChild(resetBtn);
+    body.appendChild(actions);
+
+    details.appendChild(body);
+    container.appendChild(details);
+
+    updateCharacterSummary();
+    updateSkillBadges();
+  }
+
   /**
    * Open weapon modal dialog with full weapon statistics
    * @param {object} weapon
@@ -1232,6 +1710,9 @@
       }
       return;
     }
+
+    // Build "Your character" panel (VC-5)
+    buildCharacterPanel(document.getElementById('character-section'), playerFirstVisit);
 
     // Build Legend
     buildLegend(document.getElementById('legend-section'));
