@@ -130,6 +130,484 @@
     }
   }
 
+  // ---------------------------------------------------------------------------
+  // Player character settings (VC-5)
+  // ---------------------------------------------------------------------------
+
+  const PLAYER_STORAGE_KEY = 'vc.player';
+
+  const DIFFICULTY_OPTIONS = [
+    { id: 'veryeasy', label: 'Very easy (125 %)', short: 'Very easy' },
+    { id: 'easy', label: 'Easy (110 %)', short: 'Easy' },
+    { id: 'normal', label: 'Normal (100 %)', short: 'Normal' },
+    { id: 'hard', label: 'Hard (85 %)', short: 'Hard' },
+    { id: 'veryhard', label: 'Very hard (70 %)', short: 'Very hard' },
+  ];
+
+  const SET_LABELS = {
+    root: 'Root set (+15 Bows)',
+    lox: 'Lox fur set (+15 Bows)',
+    fenris: 'Fenris set (+15 Fists)',
+    bear: 'Bear set (+10 % Slash/Chop)',
+    vanguard: 'Vanguard set (+10 % Pierce)',
+  };
+
+  function clampInt(val, min, max, fallback) {
+    const n = Math.round(Number(val));
+    if (!Number.isFinite(n)) return fallback;
+    return Math.max(min, Math.min(max, n));
+  }
+
+  function defaultPlayer() {
+    return JSON.parse(JSON.stringify(window.VCRank.DEFAULT_PLAYER));
+  }
+
+  /**
+   * Replace unknown or corrupted values with DEFAULT_PLAYER values
+   * @param {object} raw
+   * @returns {object}
+   */
+  function sanitizePlayer(raw) {
+    const player = defaultPlayer();
+    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return player;
+
+    if (raw.skills && typeof raw.skills === 'object' && !Array.isArray(raw.skills)) {
+      for (const s of window.VCRank.SKILLS) {
+        const v = raw.skills[s.id];
+        if (v !== undefined && v !== null && Number.isFinite(Number(v))) {
+          player.skills[s.id] = clampInt(v, 0, 100, 50);
+        }
+      }
+    }
+
+    if (
+      typeof raw.difficulty === 'string' &&
+      Object.prototype.hasOwnProperty.call(window.VCRank.DIFFICULTY, raw.difficulty)
+    ) {
+      player.difficulty = raw.difficulty;
+    }
+
+    if (raw.players !== undefined && raw.players !== null && Number.isFinite(Number(raw.players))) {
+      player.players = clampInt(raw.players, 1, 5, 1);
+    }
+
+    if (raw.quality === 'max') {
+      player.quality = 'max';
+    } else if (raw.quality !== undefined && raw.quality !== null && Number.isFinite(Number(raw.quality))) {
+      player.quality = clampInt(raw.quality, 1, 4, 4);
+    }
+
+    if (Array.isArray(raw.sets)) {
+      const valid = new Set(Object.keys(window.VCRank.SET_BONUSES));
+      player.sets = [...new Set(raw.sets.filter((s) => typeof s === 'string' && valid.has(s)))];
+    }
+
+    player.sneak = raw.sneak === true;
+    player.staggered = raw.staggered === true;
+
+    return player;
+  }
+
+  /**
+   * Load player state from localStorage; firstVisit is true when the key
+   * has never been written (panel starts expanded in that case)
+   */
+  function loadPlayerState() {
+    try {
+      const raw = localStorage.getItem(PLAYER_STORAGE_KEY);
+      if (raw === null) {
+        return { player: defaultPlayer(), firstVisit: true };
+      }
+      return { player: sanitizePlayer(JSON.parse(raw)), firstVisit: false };
+    } catch {
+      return { player: defaultPlayer(), firstVisit: false };
+    }
+  }
+
+  function savePlayerState(player) {
+    try {
+      localStorage.setItem(PLAYER_STORAGE_KEY, JSON.stringify(player));
+    } catch {
+      // LocalStorage unavailable, ignore
+    }
+  }
+
+  /**
+   * Sum of active armor set skill bonuses for a skill id
+   * @param {object} player
+   * @param {string} skillId
+   * @returns {number}
+   */
+  function skillBonusSum(player, skillId) {
+    let sum = 0;
+    for (const setId of player.sets) {
+      const bonus = window.VCRank.SET_BONUSES[setId];
+      if (bonus && bonus.type === 'skill' && bonus.skill === skillId) {
+        sum += bonus.amount;
+      }
+    }
+    return sum;
+  }
+
+  const loadedPlayerState = window.VCRank ? loadPlayerState() : null;
+  const playerState = loadedPlayerState ? loadedPlayerState.player : null;
+  const playerFirstVisit = loadedPlayerState ? loadedPlayerState.firstVisit : false;
+
+  let cardRefreshTimer = null;
+
+  /**
+   * Debounced refresh of everything already rendered that depends on the
+   * player character settings (creature cards, biome weapon tables)
+   */
+  function scheduleCardRefresh() {
+    if (cardRefreshTimer) {
+      clearTimeout(cardRefreshTimer);
+    }
+    cardRefreshTimer = setTimeout(() => {
+      cardRefreshTimer = null;
+      refreshRenderedCards();
+    }, 150);
+  }
+
+  function refreshRenderedCards() {
+    document.querySelectorAll('.creature-card').forEach((cardEl) => {
+      if (typeof cardEl.refreshForPlayer === 'function') {
+        cardEl.refreshForPlayer();
+      }
+    });
+    document.querySelectorAll('.biome-weapons-details').forEach((sectionEl) => {
+      if (typeof sectionEl.refreshForPlayer === 'function') {
+        sectionEl.refreshForPlayer();
+      }
+    });
+  }
+
+  /**
+   * Build the "Your character" settings panel
+   * @param {HTMLElement} container
+   * @param {boolean} [openInitial] Expand the panel on first visit
+   */
+  function buildCharacterPanel(container, openInitial) {
+    if (!container || !window.VCRank || !playerState) return;
+    container.textContent = '';
+
+    const player = playerState;
+    const skillInputs = {}; // skill id -> { range, number, badge }
+    const setCheckboxes = {}; // set id -> checkbox
+    let difficultySelect = null;
+    let playersSelect = null;
+    let qualitySelect = null;
+    let sneakCheckbox = null;
+    let staggeredCheckbox = null;
+    let summaryEl = null;
+
+    const updateCharacterSummary = () => {
+      const skills = window.VCRank.SKILLS;
+      const avg = Math.round(skills.reduce((acc, s) => acc + player.skills[s.id], 0) / skills.length);
+      const diffLabel = DIFFICULTY_OPTIONS.find((d) => d.id === player.difficulty);
+      const playersStr = player.players + (player.players === 1 ? ' player' : ' players');
+      const qualityStr = player.quality === 'max' ? 'Max quality' : 'Quality ' + player.quality;
+      summaryEl.textContent =
+        'Your character · avg skill ' + avg +
+        ' · ' + (diffLabel ? diffLabel.short : 'Normal') +
+        ' · ' + playersStr +
+        ' · ' + qualityStr;
+    };
+
+    const updateSkillBadges = () => {
+      for (const s of window.VCRank.SKILLS) {
+        const inputs = skillInputs[s.id];
+        if (!inputs) continue;
+        const base = player.skills[s.id];
+        const effective = window.VCRank.effectiveSkill(player, s.id);
+        if (effective !== base) {
+          inputs.badge.textContent = '+' + skillBonusSum(player, s.id) + ' → ' + effective;
+        } else {
+          inputs.badge.textContent = '';
+        }
+      }
+    };
+
+    const onPlayerChange = () => {
+      savePlayerState(player);
+      updateCharacterSummary();
+      updateSkillBadges();
+      scheduleCardRefresh();
+    };
+
+    const syncSkillInputs = () => {
+      for (const s of window.VCRank.SKILLS) {
+        const inputs = skillInputs[s.id];
+        const v = String(player.skills[s.id]);
+        inputs.range.value = v;
+        inputs.number.value = v;
+      }
+    };
+
+    const syncAllInputs = () => {
+      syncSkillInputs();
+      for (const setId of Object.keys(setCheckboxes)) {
+        setCheckboxes[setId].checked = player.sets.includes(setId);
+      }
+      if (difficultySelect) difficultySelect.value = player.difficulty;
+      if (playersSelect) playersSelect.value = String(player.players);
+      if (qualitySelect) qualitySelect.value = String(player.quality);
+      if (sneakCheckbox) sneakCheckbox.checked = player.sneak;
+      if (staggeredCheckbox) staggeredCheckbox.checked = player.staggered;
+    };
+
+    const details = el('details', 'character-panel');
+    if (openInitial) {
+      details.setAttribute('open', '');
+    }
+    summaryEl = el('summary', 'character-summary');
+    details.appendChild(summaryEl);
+
+    const body = el('div', 'character-body');
+
+    // Weapon skills
+    const skillsBlock = el('div', 'character-block');
+    skillsBlock.appendChild(el('span', 'character-block-title', 'Weapon skills'));
+
+    const setAllRow = el('div', 'set-all-row');
+    setAllRow.appendChild(el('span', 'set-all-label', 'Set all'));
+    const setAllRange = document.createElement('input');
+    setAllRange.type = 'range';
+    setAllRange.min = '0';
+    setAllRange.max = '100';
+    setAllRange.value = '50';
+    setAllRange.className = 'set-all-range';
+    setAllRange.setAttribute('aria-label', 'Set all skills value');
+    const setAllVal = el('span', 'set-all-val', '50');
+    setAllRange.addEventListener('input', () => {
+      setAllVal.textContent = setAllRange.value;
+    });
+    const applyAllBtn = el('button', 'action-btn', 'Apply to all');
+    applyAllBtn.type = 'button';
+    applyAllBtn.addEventListener('click', () => {
+      const v = clampInt(setAllRange.value, 0, 100, 50);
+      for (const s of window.VCRank.SKILLS) {
+        player.skills[s.id] = v;
+      }
+      syncSkillInputs();
+      onPlayerChange();
+    });
+    setAllRow.appendChild(setAllRange);
+    setAllRow.appendChild(setAllVal);
+    setAllRow.appendChild(applyAllBtn);
+    skillsBlock.appendChild(setAllRow);
+
+    const skillsGrid = el('div', 'skills-grid');
+    for (const s of window.VCRank.SKILLS) {
+      const row = el('div', 'skill-row');
+      row.appendChild(el('span', 'skill-name', s.name));
+
+      const range = document.createElement('input');
+      range.type = 'range';
+      range.min = '0';
+      range.max = '100';
+      range.value = String(player.skills[s.id]);
+      range.className = 'skill-range';
+      range.id = 'skill-range-' + s.id;
+      range.setAttribute('aria-label', s.name + ' skill');
+
+      const numBox = el('div', 'skill-number-box');
+      const number = document.createElement('input');
+      number.type = 'number';
+      number.min = '0';
+      number.max = '100';
+      number.value = String(player.skills[s.id]);
+      number.className = 'skill-number';
+      number.id = 'skill-number-' + s.id;
+      number.setAttribute('aria-label', s.name + ' skill level');
+      const badge = el('span', 'skill-effective-badge');
+      numBox.appendChild(number);
+      numBox.appendChild(badge);
+
+      range.addEventListener('input', () => {
+        number.value = range.value;
+        player.skills[s.id] = clampInt(range.value, 0, 100, player.skills[s.id]);
+        onPlayerChange();
+      });
+      number.addEventListener('input', () => {
+        const v = Number(number.value);
+        if (Number.isFinite(v)) {
+          const c = clampInt(v, 0, 100, player.skills[s.id]);
+          player.skills[s.id] = c;
+          range.value = String(c);
+          onPlayerChange();
+        }
+      });
+      number.addEventListener('change', () => {
+        number.value = String(player.skills[s.id]);
+      });
+
+      row.appendChild(range);
+      row.appendChild(numBox);
+      skillsGrid.appendChild(row);
+      skillInputs[s.id] = { range, number, badge };
+    }
+    skillsBlock.appendChild(skillsGrid);
+    body.appendChild(skillsBlock);
+
+    // Armor set bonuses
+    const setBlock = el('div', 'character-block');
+    setBlock.appendChild(el('span', 'character-block-title', 'Armor set bonuses'));
+    const setBoxes = el('div', 'character-checkboxes');
+    for (const setId of Object.keys(window.VCRank.SET_BONUSES)) {
+      const label = el('label', 'char-checkbox-label');
+      const cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.checked = player.sets.includes(setId);
+      cb.addEventListener('change', () => {
+        if (cb.checked) {
+          if (!player.sets.includes(setId)) player.sets.push(setId);
+        } else {
+          player.sets = player.sets.filter((x) => x !== setId);
+        }
+        onPlayerChange();
+      });
+      label.appendChild(cb);
+      label.appendChild(document.createTextNode(SET_LABELS[setId] || setId));
+      setBoxes.appendChild(label);
+      setCheckboxes[setId] = cb;
+    }
+    setBlock.appendChild(setBoxes);
+    body.appendChild(setBlock);
+
+    // World (difficulty + players)
+    const worldBlock = el('div', 'character-block');
+    worldBlock.appendChild(el('span', 'character-block-title', 'World'));
+    const worldRow = el('div', 'character-fields-row');
+
+    const diffGroup = el('div', 'char-field-group');
+    diffGroup.appendChild(el('span', 'char-field-label', 'Combat difficulty'));
+    difficultySelect = document.createElement('select');
+    difficultySelect.className = 'char-select';
+    difficultySelect.setAttribute('aria-label', 'Combat difficulty');
+    DIFFICULTY_OPTIONS.forEach((opt) => {
+      const option = el('option', null, opt.label);
+      option.value = opt.id;
+      difficultySelect.appendChild(option);
+    });
+    difficultySelect.value = player.difficulty;
+    difficultySelect.addEventListener('change', () => {
+      player.difficulty = difficultySelect.value;
+      onPlayerChange();
+    });
+    diffGroup.appendChild(difficultySelect);
+    worldRow.appendChild(diffGroup);
+
+    const playersGroup = el('div', 'char-field-group');
+    playersGroup.appendChild(el('span', 'char-field-label', 'Players nearby'));
+    playersSelect = document.createElement('select');
+    playersSelect.className = 'char-select';
+    playersSelect.setAttribute('aria-label', 'Players nearby');
+    for (let n = 1; n <= 5; n++) {
+      const option = el('option', null, String(n));
+      option.value = String(n);
+      playersSelect.appendChild(option);
+    }
+    playersSelect.value = String(player.players);
+    playersSelect.addEventListener('change', () => {
+      player.players = clampInt(playersSelect.value, 1, 5, 1);
+      onPlayerChange();
+    });
+    playersGroup.appendChild(playersSelect);
+    playersGroup.appendChild(el('span', 'char-field-hint', '+30 % enemy HP per extra player'));
+    worldRow.appendChild(playersGroup);
+
+    worldBlock.appendChild(worldRow);
+    body.appendChild(worldBlock);
+
+    // Weapons (upgrade level)
+    const weaponsBlock = el('div', 'character-block');
+    weaponsBlock.appendChild(el('span', 'character-block-title', 'Weapons'));
+    const weaponsRow = el('div', 'character-fields-row');
+    const qualityGroup = el('div', 'char-field-group');
+    qualityGroup.appendChild(el('span', 'char-field-label', 'Upgrade level'));
+    qualitySelect = document.createElement('select');
+    qualitySelect.className = 'char-select';
+    qualitySelect.setAttribute('aria-label', 'Upgrade level');
+    const maxOption = el('option', null, 'Max');
+    maxOption.value = 'max';
+    qualitySelect.appendChild(maxOption);
+    for (let q = 1; q <= 4; q++) {
+      const option = el('option', null, String(q));
+      option.value = String(q);
+      qualitySelect.appendChild(option);
+    }
+    qualitySelect.value = String(player.quality);
+    qualitySelect.addEventListener('change', () => {
+      const v = qualitySelect.value;
+      player.quality = v === 'max' ? 'max' : clampInt(v, 1, 4, 4);
+      onPlayerChange();
+    });
+    qualityGroup.appendChild(qualitySelect);
+    weaponsRow.appendChild(qualityGroup);
+    weaponsBlock.appendChild(weaponsRow);
+    body.appendChild(weaponsBlock);
+
+    // Situational
+    const sitBlock = el('div', 'character-block');
+    sitBlock.appendChild(el('span', 'character-block-title', 'Situational'));
+    const sitBoxes = el('div', 'character-checkboxes');
+
+    const sneakLabel = el('label', 'char-checkbox-label');
+    sneakCheckbox = document.createElement('input');
+    sneakCheckbox.type = 'checkbox';
+    sneakCheckbox.checked = player.sneak;
+    sneakCheckbox.addEventListener('change', () => {
+      player.sneak = sneakCheckbox.checked;
+      onPlayerChange();
+    });
+    sneakLabel.appendChild(sneakCheckbox);
+    sneakLabel.appendChild(document.createTextNode('Sneak attack (backstab)'));
+    sitBoxes.appendChild(sneakLabel);
+
+    const staggeredLabel = el('label', 'char-checkbox-label');
+    staggeredCheckbox = document.createElement('input');
+    staggeredCheckbox.type = 'checkbox';
+    staggeredCheckbox.checked = player.staggered;
+    staggeredCheckbox.addEventListener('change', () => {
+      player.staggered = staggeredCheckbox.checked;
+      onPlayerChange();
+    });
+    staggeredLabel.appendChild(staggeredCheckbox);
+    staggeredLabel.appendChild(document.createTextNode('Enemy staggered (×2)'));
+    sitBoxes.appendChild(staggeredLabel);
+
+    sitBlock.appendChild(sitBoxes);
+    body.appendChild(sitBlock);
+
+    // Actions
+    const actions = el('div', 'character-actions');
+    const resetBtn = el('button', 'action-btn', 'Reset to defaults');
+    resetBtn.type = 'button';
+    resetBtn.addEventListener('click', () => {
+      const fresh = defaultPlayer();
+      for (const s of window.VCRank.SKILLS) {
+        player.skills[s.id] = fresh.skills[s.id];
+      }
+      player.difficulty = fresh.difficulty;
+      player.players = fresh.players;
+      player.quality = fresh.quality;
+      player.sets = [...fresh.sets];
+      player.sneak = fresh.sneak;
+      player.staggered = fresh.staggered;
+      syncAllInputs();
+      onPlayerChange();
+    });
+    actions.appendChild(resetBtn);
+    body.appendChild(actions);
+
+    details.appendChild(body);
+    container.appendChild(details);
+
+    updateCharacterSummary();
+    updateSkillBadges();
+  }
+
   /**
    * Open weapon modal dialog with full weapon statistics
    * @param {object} weapon
@@ -289,9 +767,10 @@
    * @param {Array<string>} [notes]
    * @param {string|null} [sublabel]
    * @param {object} data
+   * @param {{min?: number, max?: number, hits?: number|null}} [hitInfo]
    * @returns {HTMLElement}
    */
-  function createWeaponRowBtn(weaponId, score, notes, sublabel, data) {
+  function createWeaponRowBtn(weaponId, score, notes, sublabel, data, hitInfo) {
     const weapon = data.weapons[weaponId];
     const btn = el('button', 'weapon-btn');
     btn.type = 'button';
@@ -315,7 +794,16 @@
     }
 
     if (score !== null && score !== undefined) {
-      right.appendChild(el('span', 'weapon-score', String(score)));
+      const scoreBox = el('div', 'weapon-score-box');
+      const scoreEl = el('span', 'weapon-score', String(score));
+      if (hitInfo && hitInfo.min !== undefined && hitInfo.max !== undefined) {
+        scoreEl.title = hitInfo.min + '–' + hitInfo.max + ' per hit';
+      }
+      scoreBox.appendChild(scoreEl);
+      if (hitInfo && hitInfo.hits !== undefined && hitInfo.hits !== null) {
+        scoreBox.appendChild(el('span', 'weapon-hits', '≈ ' + hitInfo.hits + ' hits'));
+      }
+      right.appendChild(scoreBox);
     }
     btn.appendChild(right);
 
@@ -454,6 +942,125 @@
     attacksSection.appendChild(attacksList);
     card.appendChild(attacksSection);
 
+    // Recommendations (VC-5): computed live in the browser from the shared
+    // ranking core, so they follow the "Your character" panel settings.
+    const weaponsArray = Object.values(data.weapons);
+    let recBox = null;
+
+    const hitInfoFor = (weapon, ammo) => {
+      if (!weapon || !window.VCRank || !playerState) return null;
+      const hit = window.VCRank.perHit(weapon, ammo || null, creature, playerState);
+      const hp = window.VCRank.creatureHp(creature, starsList[currentStarIndex].star, biome.id, playerState);
+      const hits = hit.avg > 0 && hp > 0 ? Math.ceil(hp / hit.avg) : null;
+      return { min: Math.round(hit.min), max: Math.round(hit.max), hits };
+    };
+
+    const renderRec = () => {
+      if (!recBox || !window.VCRank || !playerState) return;
+      const rec = window.VCRank.recommend(creature, biome, weaponsArray, playerState);
+      recBox.textContent = '';
+
+      const isRangedOnly = creature.kind === 'passive' || creature.kind === 'fish';
+
+      // Tip row
+      if (rec.tip) {
+        recBox.appendChild(el('div', 'rec-tip', rec.tip));
+      }
+
+      const recGroups = el('div', 'rec-groups');
+      const bowWeapon = rec.bow ? data.weapons[rec.bow.weapon] : null;
+      const xbowWeapon = rec.crossbow ? data.weapons[rec.crossbow.weapon] : null;
+
+      // 1. Melee (up to 3 rows, only if not ranged only)
+      if (!isRangedOnly && rec.melee && rec.melee.length > 0) {
+        const meleeGroup = el('div', 'rec-group');
+        meleeGroup.appendChild(el('span', 'rec-group-title', 'Melee'));
+        rec.melee.slice(0, 3).forEach(m => {
+          const w = data.weapons[m.weapon];
+          meleeGroup.appendChild(createWeaponRowBtn(m.weapon, m.score, filterWeaponNotes(m.notes, creature), null, data, hitInfoFor(w, null)));
+        });
+        recGroups.appendChild(meleeGroup);
+      }
+
+      // 2. Bow + arrows
+      if (rec.bow || (rec.arrows && rec.arrows.length > 0)) {
+        const bowGroup = el('div', 'rec-group');
+        const bowName = bowWeapon ? bowWeapon.name : 'Bow';
+        bowGroup.appendChild(el('span', 'rec-group-title', 'Bow + Arrows (' + bowName + ')'));
+
+        if (rec.arrows && rec.arrows.length > 0) {
+          rec.arrows.forEach(arr => {
+            const a = data.weapons[arr.weapon];
+            bowGroup.appendChild(createWeaponRowBtn(arr.weapon, arr.score, filterWeaponNotes(arr.notes, creature), null, data, hitInfoFor(bowWeapon, a)));
+          });
+        } else if (rec.bow) {
+          bowGroup.appendChild(createWeaponRowBtn(rec.bow.weapon, rec.bow.score, filterWeaponNotes(rec.bow.notes, creature), null, data, hitInfoFor(bowWeapon, null)));
+        }
+        recGroups.appendChild(bowGroup);
+      }
+
+      // 3. Crossbow + bolts
+      if (rec.crossbow || (rec.bolts && rec.bolts.length > 0)) {
+        const xbowGroup = el('div', 'rec-group');
+        const xbowName = xbowWeapon ? xbowWeapon.name : 'Crossbow';
+        xbowGroup.appendChild(el('span', 'rec-group-title', 'Crossbow + Bolts (' + xbowName + ')'));
+
+        if (rec.bolts && rec.bolts.length > 0) {
+          rec.bolts.forEach(bolt => {
+            const b = data.weapons[bolt.weapon];
+            xbowGroup.appendChild(createWeaponRowBtn(bolt.weapon, bolt.score, filterWeaponNotes(bolt.notes, creature), null, data, hitInfoFor(xbowWeapon, b)));
+          });
+        } else if (rec.crossbow) {
+          xbowGroup.appendChild(createWeaponRowBtn(rec.crossbow.weapon, rec.crossbow.score, filterWeaponNotes(rec.crossbow.notes, creature), null, data, hitInfoFor(xbowWeapon, null)));
+        }
+        recGroups.appendChild(xbowGroup);
+      }
+
+      // 4. Magic (only if not ranged only)
+      if (!isRangedOnly && rec.magic) {
+        const magicGroup = el('div', 'rec-group');
+        magicGroup.appendChild(el('span', 'rec-group-title', 'Magic'));
+        const w = data.weapons[rec.magic.weapon];
+        magicGroup.appendChild(createWeaponRowBtn(rec.magic.weapon, rec.magic.score, filterWeaponNotes(rec.magic.notes, creature), null, data, hitInfoFor(w, null)));
+        recGroups.appendChild(magicGroup);
+      }
+
+      // 5. Bomb (only if not ranged only)
+      if (!isRangedOnly && rec.bomb) {
+        const bombGroup = el('div', 'rec-group');
+        bombGroup.appendChild(el('span', 'rec-group-title', 'Bomb'));
+        const w = data.weapons[rec.bomb.weapon];
+        bombGroup.appendChild(createWeaponRowBtn(rec.bomb.weapon, rec.bomb.score, filterWeaponNotes(rec.bomb.notes, creature), null, data, hitInfoFor(w, null)));
+        recGroups.appendChild(bombGroup);
+      }
+
+      // 6. Avoid
+      if (rec.avoid && rec.avoid.length > 0) {
+        const filteredAvoid = rec.avoid.filter(av => {
+          if ((av.type === 'chop' || av.type === 'pickaxe') && av.mult <= 0) return false;
+          if (av.type === 'spirit' && av.mult === 0) {
+            return creature.modifiers && creature.modifiers.spirit !== undefined;
+          }
+          return true;
+        });
+        if (filteredAvoid.length > 0) {
+          const avoidRow = el('div', 'rec-avoid-row');
+          avoidRow.appendChild(el('span', 'rec-avoid-label', 'Avoid:'));
+          const avoidChips = el('div', 'modifiers-chips');
+          filteredAvoid.forEach(av => {
+            const chip = el('span', 'mod-chip ' + getModClass(av.mult), capitalize(av.type) + ' (×' + av.mult + ')');
+            avoidChips.appendChild(chip);
+          });
+          avoidRow.appendChild(avoidChips);
+          recGroups.appendChild(avoidRow);
+        }
+      }
+
+      if (recGroups.children.length > 0) {
+        recBox.appendChild(recGroups);
+      }
+    };
+
     // Helper to update star-dependent views (image, HP, attacks)
     const updateStarView = () => {
       const starObj = starsList[currentStarIndex];
@@ -508,13 +1115,16 @@
       } else {
         attacksList.appendChild(el('div', 'attack-raw', 'No attacks'));
       }
+
+      // Hits-to-kill depends on the selected star level
+      renderRec();
     };
     updateStarView();
 
     // Weaknesses & Resistances
-    const recKey = biome.id + ':' + creature.id;
-    const rec = data.recommendations && data.recommendations[recKey];
-    const modifiers = (rec && rec.modifiers) || (creature.modifiers) || {};
+    const modifiers = window.VCRank
+      ? window.VCRank.effectiveModifiers(creature)
+      : (creature.modifiers || {});
 
     const nonNeutralMods = Object.entries(modifiers).filter(([type, val]) => {
       const num = parseModTier(val, data.modTiers);
@@ -565,102 +1175,12 @@
       card.appendChild(modSection);
     }
 
-    // Best Weapons Section
-    if (rec) {
-      const recBox = el('div', 'recommendations-box');
-      const isRangedOnly = creature.kind === 'passive' || creature.kind === 'fish';
-
-      // Tip row
-      if (rec.tip) {
-        recBox.appendChild(el('div', 'rec-tip', rec.tip));
-      }
-
-      const recGroups = el('div', 'rec-groups');
-
-      // 1. Melee (up to 3 rows, only if not ranged only)
-      if (!isRangedOnly && rec.melee && rec.melee.length > 0) {
-        const meleeGroup = el('div', 'rec-group');
-        meleeGroup.appendChild(el('span', 'rec-group-title', 'Melee'));
-        rec.melee.slice(0, 3).forEach(m => {
-          meleeGroup.appendChild(createWeaponRowBtn(m.weapon, m.score, filterWeaponNotes(m.notes, creature), null, data));
-        });
-        recGroups.appendChild(meleeGroup);
-      }
-
-      // 2. Bow + arrows
-      if (rec.bow || (rec.arrows && rec.arrows.length > 0)) {
-        const bowGroup = el('div', 'rec-group');
-        const bowWeapon = rec.bow ? data.weapons[rec.bow.weapon] : null;
-        const bowName = bowWeapon ? bowWeapon.name : 'Bow';
-        bowGroup.appendChild(el('span', 'rec-group-title', 'Bow + Arrows (' + bowName + ')'));
-
-        if (rec.arrows && rec.arrows.length > 0) {
-          rec.arrows.forEach(arr => {
-            bowGroup.appendChild(createWeaponRowBtn(arr.weapon, arr.score, filterWeaponNotes(arr.notes, creature), null, data));
-          });
-        } else if (rec.bow) {
-          bowGroup.appendChild(createWeaponRowBtn(rec.bow.weapon, rec.bow.score, filterWeaponNotes(rec.bow.notes, creature), null, data));
-        }
-        recGroups.appendChild(bowGroup);
-      }
-
-      // 3. Crossbow + bolts
-      if (rec.crossbow || (rec.bolts && rec.bolts.length > 0)) {
-        const xbowGroup = el('div', 'rec-group');
-        const xbowWeapon = rec.crossbow ? data.weapons[rec.crossbow.weapon] : null;
-        const xbowName = xbowWeapon ? xbowWeapon.name : 'Crossbow';
-        xbowGroup.appendChild(el('span', 'rec-group-title', 'Crossbow + Bolts (' + xbowName + ')'));
-
-        if (rec.bolts && rec.bolts.length > 0) {
-          rec.bolts.forEach(bolt => {
-            xbowGroup.appendChild(createWeaponRowBtn(bolt.weapon, bolt.score, filterWeaponNotes(bolt.notes, creature), null, data));
-          });
-        } else if (rec.crossbow) {
-          xbowGroup.appendChild(createWeaponRowBtn(rec.crossbow.weapon, rec.crossbow.score, filterWeaponNotes(rec.crossbow.notes, creature), null, data));
-        }
-        recGroups.appendChild(xbowGroup);
-      }
-
-      // 4. Magic (only if not ranged only)
-      if (!isRangedOnly && rec.magic) {
-        const magicGroup = el('div', 'rec-group');
-        magicGroup.appendChild(el('span', 'rec-group-title', 'Magic'));
-        magicGroup.appendChild(createWeaponRowBtn(rec.magic.weapon, rec.magic.score, filterWeaponNotes(rec.magic.notes, creature), null, data));
-        recGroups.appendChild(magicGroup);
-      }
-
-      // 5. Bomb (only if not ranged only)
-      if (!isRangedOnly && rec.bomb) {
-        const bombGroup = el('div', 'rec-group');
-        bombGroup.appendChild(el('span', 'rec-group-title', 'Bomb'));
-        bombGroup.appendChild(createWeaponRowBtn(rec.bomb.weapon, rec.bomb.score, filterWeaponNotes(rec.bomb.notes, creature), null, data));
-        recGroups.appendChild(bombGroup);
-      }
-
-      // 6. Avoid
-      if (rec.avoid && rec.avoid.length > 0) {
-        const filteredAvoid = rec.avoid.filter(av => {
-          if ((av.type === 'chop' || av.type === 'pickaxe') && av.mult <= 0) return false;
-          if (av.type === 'spirit' && av.mult === 0) {
-            return creature.modifiers && creature.modifiers.spirit !== undefined;
-          }
-          return true;
-        });
-        if (filteredAvoid.length > 0) {
-          const avoidRow = el('div', 'rec-avoid-row');
-          avoidRow.appendChild(el('span', 'rec-avoid-label', 'Avoid:'));
-          const avoidChips = el('div', 'modifiers-chips');
-          filteredAvoid.forEach(av => {
-            const chip = el('span', 'mod-chip ' + getModClass(av.mult), capitalize(av.type) + ' (×' + av.mult + ')');
-            avoidChips.appendChild(chip);
-          });
-          avoidRow.appendChild(avoidChips);
-          recGroups.appendChild(avoidRow);
-        }
-      }
-
-      if (recGroups.children.length > 0 || rec.tip) {
-        recBox.appendChild(recGroups);
+    // Best Weapons Section (VC-5: live recommendations, re-rendered when
+    // character settings or the selected star level change)
+    if (window.VCRank && playerState) {
+      recBox = el('div', 'recommendations-box');
+      renderRec();
+      if (recBox.children.length > 0) {
         card.appendChild(recBox);
       }
     }
@@ -785,6 +1305,12 @@
     details.appendChild(detailsContent);
     card.appendChild(details);
 
+    // Re-render recommendations when the player character settings change
+    // (keeps expanded details and the selected star level intact)
+    card.refreshForPlayer = () => {
+      renderRec();
+    };
+
     return card;
   }
 
@@ -883,17 +1409,22 @@
     const headRow = el('tr');
     headRow.appendChild(el('th', null, 'Weapon / Ammo'));
     headRow.appendChild(el('th', null, 'Max Damage'));
+    const yourAvgTh = el('th', null, 'Your avg');
+    yourAvgTh.title = 'Average per-hit damage with your skills, difficulty and upgrade level (no creature modifiers)';
+    headRow.appendChild(yourAvgTh);
     headRow.appendChild(el('th', null, 'Stamina'));
     headRow.appendChild(el('th', null, 'Materials'));
     thead.appendChild(headRow);
     table.appendChild(thead);
 
     const tbody = el('tbody');
+    const yourAvgCells = []; // { cell, weapon } pairs for live updates
+
     sortedCategories.forEach(cat => {
       // Category group header row
       const catRow = el('tr', 'weapon-category-header');
       const catTd = el('td', null, capitalize(cat) + ' (' + categoriesMap[cat].length + ')');
-      catTd.colSpan = 4;
+      catTd.colSpan = 5;
       catRow.appendChild(catTd);
       tbody.appendChild(catRow);
 
@@ -926,6 +1457,11 @@
         }
         row.appendChild(dmgTd);
 
+        // Your avg (live, no creature modifiers)
+        const avgTd = el('td', 'weapon-your-avg', '—');
+        yourAvgCells.push({ cell: avgTd, weapon });
+        row.appendChild(avgTd);
+
         // Stamina
         const staminaTd = el('td', null, weapon.stamina !== null && weapon.stamina !== undefined ? String(weapon.stamina) : '—');
         row.appendChild(staminaTd);
@@ -946,6 +1482,23 @@
     table.appendChild(tbody);
     tableWrapper.appendChild(table);
     section.appendChild(tableWrapper);
+
+    // "Your avg" column: average per-hit damage without creature modifiers,
+    // with the player's skills, difficulty and upgrade level. Situational
+    // multipliers (sneak, stagger) are excluded because they are not typical hits.
+    const updateYourAvg = () => {
+      if (!window.VCRank || !playerState) return;
+      const basePlayer = { ...playerState, sneak: false, staggered: false };
+      for (const { cell, weapon } of yourAvgCells) {
+        const hit = window.VCRank.perHit(weapon, null, null, basePlayer);
+        cell.textContent = String(Math.round(hit.avg));
+        cell.title = hit.min !== hit.max
+          ? Math.round(hit.min) + '–' + Math.round(hit.max) + ' per hit'
+          : String(Math.round(hit.avg));
+      }
+    };
+    section.refreshForPlayer = updateYourAvg;
+    updateYourAvg();
 
     return section;
   }
@@ -1185,7 +1738,7 @@
     body.appendChild(modGroup);
 
     // Note
-    const note = el('p', 'legend-note', 'Scores = per-hit damage at max upgrade quality vs. this creature; fire/poison DoT counted at face value.');
+    const note = el('p', 'legend-note', 'Damage = average per hit with your skills (primary attack). Combo finisher ×2, secondary attacks, Dvergr buff and DoT ticking are not included.');
     body.appendChild(note);
 
     details.appendChild(body);
@@ -1232,6 +1785,9 @@
       }
       return;
     }
+
+    // Build "Your character" panel (VC-5)
+    buildCharacterPanel(document.getElementById('character-section'), playerFirstVisit);
 
     // Build Legend
     buildLegend(document.getElementById('legend-section'));
