@@ -197,3 +197,73 @@ Ruční opravy, které parser aplikuje **jako poslední krok**:
   "exclude": { "creatures": ["staff-of-the-wild"], "weapons": [] }
 }
 ```
+
+## Armourer (VC-7)
+
+### `data/armor.json`
+
+```json
+[
+  {
+    "id": "iron-armor",
+    "name": "Iron Armor",
+    "wiki": "https://valheim.weirdgloop.org/w/Iron_Armor",
+    "kind": "set",
+    "biome": "swamp",
+    "tier": 3,
+    "setBonus": null,
+    "pieces": [
+      {
+        "id": "iron-helmet",
+        "name": "Iron Helmet",
+        "slot": "head",
+        "gameId": "HelmetIron",
+        "image": "img/armor/iron-helmet.png",
+        "station": "Forge",
+        "levels": [
+          { "quality": 1, "armor": 14, "durability": 1000, "stationLevel": 1, "materials": [{ "item": "iron", "amount": 20 }, { "item": "deer-hide", "amount": 2 }] },
+          { "quality": 2, "armor": 16, "durability": 1200, "stationLevel": 2, "materials": [{ "item": "iron", "amount": 5 }] }
+        ],
+        "armorSource": "table",
+        "weight": 3,
+        "movementSpeed": 0,
+        "resistances": [],
+        "description": "A helm of polished iron, fit for a hero."
+      }
+    ]
+  }
+]
+```
+
+- `kind`: `set` (stránka s víc díly nebo s `set pieces`) | `single` (samostatný plášť nebo čepice) | `cosmetic` (bez receptu).
+- `slot`: `head` | `chest` | `legs` | `cape`. Typ `Body` je `chest`.
+- `levels[q].materials` je cena **toho kroku**: výroba pro q=1, vylepšení z q−1 na q pro q≥2. Položky s poznámkou `(Fuel)` mají navíc `"fuel": true`.
+- `armorSource`: `table` | `infobox` | `estimate` (+2 za úroveň).
+- `setBonus`: `{ "name": "Sneaky", "pieces": 4, "effects": ["Sneak skill +15"] }` nebo `null`.
+- `movementSpeed`: číslo v procentech (`-5%` → -5).
+- `resistances`: pole čistých řetězců (`"Resistant vs. Frost"`).
+
+### `data/items.json`
+
+```json
+[
+  {
+    "id": "bronze",
+    "name": "Bronze",
+    "image": "img/items/bronze.png",
+    "biome": "black-forest",
+    "tier": 2,
+    "sources": [{ "text": "Forge", "kind": "station" }, { "text": "Smelter", "kind": "station" }],
+    "recipe": { "station": "Forge", "materials": [{ "item": "copper", "amount": 2 }, { "item": "tin", "amount": 1 }], "yields": 1 },
+    "wiki": "https://valheim.weirdgloop.org/w/Bronze"
+  }
+]
+```
+
+- `sources[].kind`: `creature` (je v `data/creatures.json`; přidá se `creatureId` a `biomes`) | `station` | `location` | `npc` | `other`.
+- `recipe`: z pole `materials` infoboxu suroviny, jinak `null`. `station` je první stanice ze `source`.
+- `biome` a `tier` přebírají logiku z `data/materials.json` (VC-2). Nová surovina se dohledá stejným postupem.
+
+### `apps/armourer/data/data.js`
+
+`window.VA_DATA = { generatedAt, source, biomes, armor, items }`. `items` je objekt podle `id`.

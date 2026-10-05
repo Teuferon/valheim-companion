@@ -203,3 +203,46 @@ Ověřeno na wiki 5. 10. 2026 (*Damage mechanics*, *Skills*, *World Modifiers*, 
   - Thunderblood / Bloodgold bonus za chybějící HP
   - otrava a hoření jako DoT (počítají se nominální hodnotou)
   - zbroj nepřítele (nepřátelé zbroj nemají)
+
+## 10. Armourer (VC-7, VC-8)
+
+Nová sekce `/armourer/` (`apps/armourer/`, statický web jako Bestiary). Ukazuje přehled všech brnění, kolik surovin stojí výroba a vylepšení na zvolenou úroveň a kde se ty suroviny berou.
+
+**Zdroj (ověřeno 5. 10. 2026):**
+- `Category:Armor` (81 stránek, podkategorie `Head`, `Body`, `Legs`, `Capes`). Set je jedna stránka (`Iron Armor`, `Troll Set`, `Protector Armor`…) a v ní je `{{InfoboxTabber}}` s blokem `{{infobox armor}}` pro každý díl. Tabbery můžou být vnořené (`Protector Armor`). Samostatné pláště a čepice mají vlastní stránku s jedním blokem.
+- Pole `{{infobox armor}}`:
+  - `title`, `image`, `id`, `type` (Head/Chest/Legs/Cape/Body)
+  - `source` (stanice), `crafting level`, `repair level`
+  - `armor`, `durability`, `weight`
+  - `movement speed`, `resistance`
+  - `set pieces` („Troll Set (4 pieces)“) a `set effect` (název efektu + odrážky)
+  - `materials 1..4`: cena výroby (1) a cena každého vylepšení (2–4)
+- Zápis materiálů se liší: `* 20 [[Iron]]` i `* [[Bronze]] x2`, někdy s poznámkou `(Fuel)`.
+- Brnění na vyšších úrovních: infobox ho nemá. Je v tabulkách `=== Quality N ===` na stránce setu (první číslo v řádku dílu, „Durability per piece: N“ v hlavičce). Když tabulka chybí, `armor per level` = 2 a v reportu se to označí jako odhad.
+- **Suroviny** (`{{infobox item}}` na stránce suroviny):
+  - `source`: odkud se bere (jednotky, stanice, místa), např. `[[Boar]], [[Bat]], [[Muddy Scrap Pile]]s`
+  - `materials`: recept, když se vyrábí (Bronze = 2× Copper + 1× Tin na Forge/Smelter, Iron = Scrap Iron na Smelter, Linen Thread = Flax na Spinning Wheel)
+- Kosmetika od Hildir (`source = [[Hildir]]`, bez receptu) a testovací stránky (`CAPE TEST`) se vyřadí, nebo se ukážou jako „Cosmetic“ bez nákupního seznamu. Rozhodne report.
+
+**Funkce:**
+- Sety seskupené po biomech podle tieru (stejné pravidlo jako u zbraní: max tier surovin z `materials 1`).
+- Spoilery: biomy, které hráč v Bestiary ještě neotevřel (`vc.openBiomes`, stejný origin), jsou zamčené a jde je odemknout.
+- Detail setu:
+  - díly s brněním na úrovni 1–4, váha, rychlost pohybu, odolnosti, set bonus
+  - stanice a její potřebná úroveň pro výrobu a pro každé vylepšení
+- **Nákupní seznam (košík):**
+  - Přidá se celý set nebo jednotlivé díly a jde to kombinovat napříč sety.
+  - U každé položky se nastaví „mám úroveň“ (žádná / 1–3) a „chci úroveň“ (1–4). Platí to i hromadně pro celý set.
+  - Suroviny se sečtou: ikona, název, počet, kde se berou (a biom jednotky, pokud je zdrojem jednotka z Bestiary).
+  - Přepínač „Break down crafted materials“ rozloží vyráběné suroviny až na základní (hloubka 3) a ukáže, na jaké stanici se vyrábí.
+  - Košík se ukládá v `localStorage` (`va.cart`).
+
+## 11. Sdílení na sítích (VC-9)
+
+- Na každé stránce (rozcestník, Bestiary, Sign Editor, Armourer):
+  - `<title>`, `description`, `canonical`
+  - Open Graph: `og:type`, `og:site_name`, `og:title`, `og:description`, `og:url`, `og:image` (+ `width`, `height`, `alt`)
+  - Twitter: `twitter:card=summary_large_image`, `twitter:title`, `twitter:description`, `twitter:image`
+  - `theme-color`, `apple-touch-icon` (PNG 180×180) a `site.webmanifest`
+- Obrázky 1200×630 PNG: jedna šablona (`apps/hub/og/card.html`) s logem (runový štít), nadpisem fontem Norse a pozadím biomu. Pro každou sekci vlastní varianta. Renderuje se headless Chromem skriptem `scripts/render-og.mjs` a výsledné PNG se commitují.
+- Absolutní adresa webu je v jednom místě, `site.config.json` → `{ "siteUrl": "https://…" }`. Meta tagy se do HTML vkládají skriptem `scripts/apply-meta.mjs` (idempotentně, mezi komentáře `<!-- meta:start -->` a `<!-- meta:end -->`), aby šla doména změnit na jednom místě.
