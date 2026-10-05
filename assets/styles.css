@@ -404,7 +404,7 @@ body {
 /* Creature Cards Grid */
 .creatures-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
   gap: 18px;
 }
 
@@ -419,6 +419,13 @@ body {
   gap: 14px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   transition: border-color 0.15s ease;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.creature-card,
+.creature-card * {
+  min-width: 0;
 }
 
 .creature-card:hover {
@@ -1121,6 +1128,47 @@ body {
   border: 1px solid var(--border-color);
 }
 
+/* Weapon Icon Placeholder (dimmed circle with initial letter in muted color) */
+.weapon-btn-icon.image-placeholder,
+.weapon-cell-icon.image-placeholder,
+.modal-icon.image-placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1;
+  opacity: 1;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.weapon-btn-icon.image-placeholder {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  font-size: 0.72rem;
+}
+
+.weapon-cell-icon.image-placeholder {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  font-size: 0.82rem;
+}
+
+.modal-icon.image-placeholder {
+  width: 54px;
+  height: 54px;
+  min-width: 54px;
+  font-size: 1.3rem;
+}
+
 .modal-title-box {
   flex: 1;
 }
@@ -1271,3 +1319,26 @@ body {
     font-size: 0.85rem;
   }
 }
+
+@media (max-width: 520px) {
+  .attack-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .attack-name {
+    width: 100%;
+  }
+
+  .attack-damages {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .attack-raw {
+    width: 100%;
+  }
+}
+
