@@ -1,5 +1,7 @@
 # Valheim Companion
 
+**Live: https://valheim-companion.teuferon.click**
+
 Tools for your Valheim journey:
 - **Bestiary**: Every creature and boss, grouped by biome and spoiler-free: each biome stays collapsed until you open it. Stats, weaknesses and the best weapons for your progress.
 - **Sign Editor (Runopis)**: Rich-text editor for Valheim signs with colors, formatting, live preview and copy to game in 13 languages.
