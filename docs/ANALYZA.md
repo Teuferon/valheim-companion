@@ -4,7 +4,7 @@ Statický web, který ukazuje všechny jednotky Valheimu (bossy, minibossy, nep�
 Každý biom je **zavřený** (ochrana proti spoilerům), po kliknutí se rozbalí.
 U každé jednotky jsou obrázky, staty po hvězdičkách, slabiny/resisty a **doporučené zbraně a munice**, které se dají mít nejpozději v tom biomu.
 
-- Repo: `pawlig/valheim-companion` (public). Web se otevírá dvojklikem na `index.html` (`file://`), jde ho ale hostovat i jako statickou stránku.
+- Repo: `pawlig/valheim-companion` (public). Web: https://valheim-companion.teuferon.click (EasyPanel, Docker, deploy webhookem při pushi).
 - Jazyk webu: **vše anglicky**. Dokumentace a zadání pro agenty česky.
 - Stav hry: Valheim 1.0 včetně **Deep North**.
 
@@ -245,7 +245,7 @@ Nová sekce `/armourer/` (`apps/armourer/`, statický web jako Bestiary). Ukazuj
   - Twitter: `twitter:card=summary_large_image`, `twitter:title`, `twitter:description`, `twitter:image`
   - `theme-color`, `apple-touch-icon` (PNG 180×180) a `site.webmanifest`
 - Obrázky 1200×630 PNG: jedna šablona (`apps/hub/og/card.html`) s logem (runový štít), nadpisem fontem Norse a pozadím biomu. Pro každou sekci vlastní varianta. Renderuje se headless Chromem skriptem `scripts/render-og.mjs` a výsledné PNG se commitují.
-- Absolutní adresa webu je v jednom místě, `site.config.json` → `{ "siteUrl": "https://…" }`. Meta tagy se do HTML vkládají skriptem `scripts/apply-meta.mjs` (idempotentně, mezi komentáře `<!-- meta:start -->` a `<!-- meta:end -->`), aby šla doména změnit na jednom místě.
+- Web běží na **https://valheim-companion.teuferon.click** (EasyPanel, deploy webhookem při každém pushi). Absolutní adresa webu je v jednom místě, `site.config.json` → `{ "siteUrl": "https://…" }`. Meta tagy se do HTML vkládají skriptem `scripts/apply-meta.mjs` (idempotentně, mezi komentáře `<!-- meta:start -->` a `<!-- meta:end -->`), aby šla doména změnit na jednom místě.
 
 ## 12. Rychlost útoku a DPS (VC-10)
 

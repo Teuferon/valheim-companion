@@ -33,7 +33,7 @@ KROK 1: obrázky, commit
 - Commit (PNG se commitují): `VC-9: OG card template, rendered images and icons [GM/flash]`
 
 KROK 2: meta tagy, commit
-- `site.config.json`: `{ "siteUrl": "", "siteName": "Valheim Companion", "locale": "en_US" }`. Doménu doplní orchestrátor. Při prázdném `siteUrl` skript tagy vyžadující absolutní URL (`og:url`, `og:image`, `canonical`, `twitter:image`) vynechá a vypíše varování.
+- `site.config.json`: `{ "siteUrl": "https://valheim-companion.teuferon.click", "siteName": "Valheim Companion", "locale": "en_US" }` (bez lomítka na konci). Při prázdném `siteUrl` skript tagy vyžadující absolutní URL (`og:url`, `og:image`, `canonical`, `twitter:image`) vynechá a vypíše varování.
 - `scripts/apply-meta.mjs` vloží do každého `index.html` blok mezi `<!-- meta:start -->` a `<!-- meta:end -->` (idempotentně, nahradí existující blok, jinak ho vloží za `<meta name="viewport">`):
   - `description`, `canonical`
   - `og:type=website`, `og:site_name`, `og:locale`, `og:title`, `og:description`, `og:url`, `og:image`, `og:image:width=1200`, `og:image:height=630`, `og:image:alt`
