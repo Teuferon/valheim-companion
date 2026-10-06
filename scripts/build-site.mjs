@@ -5,8 +5,9 @@
 //   dist/signs/            <- apps/signs/dist-static/*
 //   dist/damage-calculator/ <- apps/damage-calculator/dist-static/*
 
-import { cpSync, existsSync, mkdirSync, readdirSync, rmSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
+import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
 
 import { buildI18n } from './build-i18n.mjs';
@@ -21,6 +22,19 @@ const SHARED_I18N_DIR = path.join(REPO_ROOT, 'shared', 'i18n');
 const SHARED_ANALYTICS_DIR = path.join(REPO_ROOT, 'shared', 'analytics');
 const SIGNS_DIST = path.join(REPO_ROOT, 'apps', 'signs', 'dist-static');
 const DAMAGE_DIST = path.join(REPO_ROOT, 'apps', 'damage-calculator', 'dist-static');
+
+/** Generate the browser/Node module from the canonical typed player core. */
+export function buildPlayer() {
+  const require = createRequire(path.join(REPO_ROOT, 'apps', 'damage-calculator', 'package.json'));
+  const ts = require('typescript');
+  const source = readFileSync(path.join(REPO_ROOT, 'shared', 'player', 'core.ts'), 'utf8');
+  const output = ts.transpileModule(source, { compilerOptions: {
+    module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2022,
+  } }).outputText;
+  const generated = '// Generated from core.ts by scripts/build-site.mjs — DO NOT EDIT MANUALLY.\n' + output;
+  writeFileSync(path.join(REPO_ROOT, 'shared', 'player', 'core.js'), generated);
+  return generated;
+}
 
 export function buildSite() {
   if (!existsSync(SIGNS_DIST)) {
@@ -37,6 +51,7 @@ export function buildSite() {
     process.exit(1);
   }
 
+  buildPlayer();
   buildI18n();
   buildSearchIndex();
 

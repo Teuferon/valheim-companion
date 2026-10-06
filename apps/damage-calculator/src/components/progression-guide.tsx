@@ -20,7 +20,7 @@ import {
   type SkillMode,
 } from "@/lib/damage";
 import { buildGuideStep, type GuidePick } from "@/lib/guide";
-import type { RecipeMaterial } from "@/lib/types";
+import type { RecipeMaterial, Weapon } from "@/lib/types";
 
 const formatMaterials = (materials: RecipeMaterial[], number: (value: number) => string) =>
   materials.map((material) => `${number(material.quantity)}× ${material.name}`).join(" · ");
@@ -49,17 +49,21 @@ export function ProgressionGuide({
   biome,
   skillLevel,
   skillMode,
+  skillFor,
+  profileSkills = false,
 }: {
   biome: BiomeId;
   /** The page's weapon skill level; the guide ranks at the same setting. */
   skillLevel: number;
   skillMode: SkillMode;
+  skillFor?: (weapon: Weapon) => number;
+  profileSkills?: boolean;
 }) {
   const { t, formatCount, formatDamage, formatSeconds, nameOf } = useLanguage();
   const [open, setOpen] = useState(false);
   const step = useMemo(
-    () => buildGuideStep(biome, { skillLevel, skillMode }),
-    [biome, skillLevel, skillMode],
+    () => buildGuideStep(biome, { skillLevel, skillMode, skillFor }),
+    [biome, skillLevel, skillMode, skillFor],
   );
 
   const toggle = () => setOpen((value) => !value);
@@ -135,7 +139,7 @@ export function ProgressionGuide({
                   {formatCount(step.gate.health)} {t("HP")}
             </Badge>
                 <span className="text-[11px] text-muted-foreground sm:ml-auto">
-                  {t("Weapon skill {level} ({roll}) · primary attack · best reachable ammo", { level: formatCount(skillLevel), roll: t(SKILL_MODE_LABEL[skillMode]) })}
+                  {t(profileSkills ? "Bestiary profile ({roll}) · primary attack · best reachable ammo" : "Weapon skill {level} ({roll}) · primary attack · best reachable ammo", { level: formatCount(skillLevel), roll: t(SKILL_MODE_LABEL[skillMode]) })}
             </span>
               </div>
             ) : null}

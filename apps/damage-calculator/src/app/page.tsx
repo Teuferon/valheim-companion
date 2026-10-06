@@ -6,6 +6,8 @@ import {
   useState,
   useSyncExternalStore,
 } from "react";
+import { usePlayer } from "@/hooks/use-player";
+import { playerControls } from "@/lib/player-profile";
 import { Hammer, SlidersHorizontal } from "lucide-react";
 import { languages, useLanguage } from '@/hooks/use-language';
 import { MethodologyDialog, MethodologyLink } from "@/components/assumptions";
@@ -68,6 +70,10 @@ const DEFAULT_TARGET_SLUG =
 export default function Home() {
   const { preference, setPreference, t, formatCount, nameOf } = useLanguage();
   const [storedBiome, persistBiome] = useBiomeProgression();
+  const { player, hasProfile } = usePlayer();
+  const [pickedUseProfile, setPickedUseProfile] = useState<boolean | undefined>(undefined);
+  const useProfile = pickedUseProfile ?? hasProfile;
+  const activePlayer = useProfile ? player : null;
 
   /* The view carried by the query string, read as an external store so the
    * prerendered HTML and the first client render agree (the server snapshot is
@@ -129,17 +135,24 @@ export default function Home() {
   const [pickedBackstab, setPickedBackstab] = useState<boolean | undefined>(
     undefined,
   );
+  const [pickedStaggered, setPickedStaggered] = useState<boolean | undefined>(undefined);
   /* Ammo selection starts empty (auto): the best *reachable* ammo is derived
    * from the slider, so no later-biome arrow is ever preselected. */
   const [pickedArrow, setPickedArrow] = useState<string | undefined>(undefined);
   const [pickedBolt, setPickedBolt] = useState<string | undefined>(undefined);
   const [sortKey, setSortKey] = useState<SortKey>("dps");
 
-  const quality = pickedQuality ?? urlView.level ?? VIEW_DEFAULTS.level;
-  const skillLevel = pickedSkillLevel ?? urlView.skill ?? VIEW_DEFAULTS.skill;
+  const skillOverride = pickedSkillLevel ?? urlView.skill;
+  const { quality, backstab, staggered } = playerControls(activePlayer, null, {
+    level: pickedQuality ?? urlView.level,
+    backstab: pickedBackstab ?? urlView.backstab,
+    staggered: pickedStaggered ?? urlView.staggered,
+  });
+  const skillFor = useCallback((weapon: Weapon) =>
+    playerControls(activePlayer, weapon.cls, { skill: skillOverride }).skillLevel,
+    [activePlayer, skillOverride]);
   const skillMode = pickedSkillMode ?? urlView.roll ?? VIEW_DEFAULTS.roll;
   const attack = pickedAttack ?? urlView.attack ?? VIEW_DEFAULTS.attack;
-  const backstab = pickedBackstab ?? urlView.backstab ?? VIEW_DEFAULTS.backstab;
   const arrowSlug = pickedArrow ?? urlView.arrow ?? "";
   const boltSlug = pickedBolt ?? urlView.bolt ?? "";
 
@@ -230,13 +243,14 @@ export default function Home() {
         ammo: ammoFor(weapon),
         quality: qualityFor(weapon),
         target,
-        skillLevel,
+        skillLevel: skillFor(weapon),
         skillMode,
         attack,
         backstab,
+        staggered,
       }),
     }));
-  }, [reachableWeapons, qualityFor, arrow, bolt, target, skillLevel, skillMode, attack, backstab]);
+  }, [reachableWeapons, qualityFor, arrow, bolt, target, skillFor, skillMode, attack, backstab, staggered]);
 
   const topRow = useMemo(() => {
     const sorted = [...rows].sort((a, b) =>
@@ -252,6 +266,7 @@ export default function Home() {
     topRow?.weapon ??
     reachableWeapons[0] ??
     weapons[0];
+  const skillLevel = skillFor(selectedWeapon);
   /** The level shown for the selected weapon — clamped to what is reachable. */
   const selectedQuality = qualityFor(selectedWeapon);
   const qualityNote =
@@ -270,13 +285,14 @@ export default function Home() {
     () => ({
       biome,
       target: target.slug,
-      weapon: weaponSlug,
+      weapon: weaponSlug ?? (useProfile ? selectedWeapon.slug : null),
       cls: classFilter,
       level: quality,
       skill: skillLevel,
       roll: skillMode,
       attack,
       backstab,
+      staggered,
       arrow: arrowSlug || null,
       bolt: boltSlug || null,
     }),
@@ -284,12 +300,15 @@ export default function Home() {
       biome,
       target.slug,
       weaponSlug,
+      useProfile,
+      selectedWeapon.slug,
       classFilter,
       quality,
       skillLevel,
       skillMode,
       attack,
       backstab,
+      staggered,
       arrowSlug,
       boltSlug,
     ],
@@ -299,8 +318,8 @@ export default function Home() {
     INITIAL_VIEW_SEARCH !== "" && urlSearch === "";
   useEffect(() => {
     if (awaitingHydration) return; // do not overwrite the link being opened
-    replaceViewUrl(view);
-  }, [view, awaitingHydration]);
+    replaceViewUrl(view, hasProfile);
+  }, [view, awaitingHydration, hasProfile]);
 
   const selectedAmmo =
     selectedWeapon.ammo === "arrow"
@@ -321,8 +340,9 @@ export default function Home() {
         skillMode,
         attack: attack === "secondary" && !canUseSecondary ? "primary" : attack,
         backstab,
+        staggered,
       }),
-    [selectedWeapon, selectedAmmo, selectedQuality, target, skillLevel, skillMode, attack, canUseSecondary, backstab],
+    [selectedWeapon, selectedAmmo, selectedQuality, target, skillLevel, skillMode, attack, canUseSecondary, backstab, staggered],
   );
 
   const maxPerHit = useMemo(
@@ -399,6 +419,8 @@ export default function Home() {
         biome={biome}
         skillLevel={skillLevel}
         skillMode={skillMode}
+        skillFor={skillFor}
+        profileSkills={useProfile && skillOverride === undefined}
       />
 
       <TargetPicker
@@ -410,6 +432,13 @@ export default function Home() {
 
       {/* ---------------- global controls ---------------- */}
       <Card className="gap-0 py-0">
+        <div className="px-4 pt-4">
+          <label className="flex items-center gap-2 text-sm">
+            <input type="checkbox" checked={useProfile}
+              onChange={(event) => setPickedUseProfile(event.target.checked)} />
+            {t("Use my Bestiary profile")}
+          </label>
+        </div>
         <CardContent className="grid gap-5 px-4 py-4 sm:grid-cols-2 xl:grid-cols-4">
           <div className="space-y-2">
             <div className="flex items-center justify-between">
@@ -484,6 +513,11 @@ export default function Home() {
                 { value: "unalerted", label: t("Unalerted") },
               ]}
             />
+            <label className="flex items-center gap-2 text-xs">
+              <input type="checkbox" checked={staggered}
+                onChange={(event) => setPickedStaggered(event.target.checked)} />
+              {t("Staggered target (2× damage)")}
+            </label>
             <p className="text-[11px] leading-snug text-muted-foreground">
               {t("An unaware enemy takes the weapon's backstab bonus on the first hit — 1× to 6×, shown per weapon below. The hit then gives it five minutes of backstab immunity, so later hits are normal.")}
             </p>

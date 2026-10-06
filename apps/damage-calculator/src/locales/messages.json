@@ -3343,5 +3343,50 @@
     "ru": "{types} — урон древесине, руде и постройкам, поэтому исключён. По вики все кроме {creature} невосприимчивы к {chop}, а кроме нескольких существ из {biome} — к {pickaxe}. Поэтому {chop} от {weapon} не считается уроном существам, а осадные предметы наносят им мало урона или вовсе не наносят.",
     "ja": "{types}は木、鉱石、建築への地形ダメージとして除外。Wikiでは{creature}以外は{chop}無効、一部の{biome}生物以外は{pickaxe}無効です。そのため{weapon}の{chop}値は生物ダメージに含まれず、攻城アイテムも生物への威力はわずかかゼロです。",
     "id": "{types} adalah kerusakan kayu, tambang, dan bangunan sehingga dikecualikan. Wiki menyebut semua kecuali {creature} kebal {chop}, dan semua kecuali beberapa makhluk {biome} kebal {pickaxe}. Karena itu {chop} dari {weapon} tidak dihitung, dan senjata pengepungan hanya sedikit atau tidak melukai makhluk."
+  },
+  "Use my Bestiary profile": {
+    "en": "Use my Bestiary profile",
+    "cs": "Použít můj profil z Bestiary",
+    "de": "Mein Bestiary-Profil verwenden",
+    "es": "Usar mi perfil de Bestiary",
+    "fr": "Utiliser mon profil Bestiary",
+    "pt": "Usar meu perfil do Bestiary",
+    "zh": "使用我的 Bestiary 档案",
+    "hi": "मेरी Bestiary प्रोफ़ाइल का उपयोग करें",
+    "ar": "استخدام ملفي في Bestiary",
+    "bn": "আমার Bestiary প্রোফাইল ব্যবহার করুন",
+    "ru": "Использовать мой профиль Bestiary",
+    "ja": "Bestiary のプロフィールを使用",
+    "id": "Gunakan profil Bestiary saya"
+  },
+  "Staggered target (2× damage)": {
+    "en": "Staggered target (2× damage)",
+    "cs": "Omráčený cíl (2× poškození)",
+    "de": "Taumelndes Ziel (2× Schaden)",
+    "es": "Objetivo aturdido (2× daño)",
+    "fr": "Cible déstabilisée (2× dégâts)",
+    "pt": "Alvo atordoado (2× dano)",
+    "zh": "失衡目标（2×伤害）",
+    "hi": "लड़खड़ाता लक्ष्य (2× क्षति)",
+    "ar": "هدف مترنح (2× ضرر)",
+    "bn": "টলমল লক্ষ্য (2× ক্ষতি)",
+    "ru": "Ошеломлённая цель (2× урон)",
+    "ja": "よろめき状態の対象（ダメージ2倍）",
+    "id": "Target terhuyung (2× kerusakan)"
+  },
+  "Bestiary profile ({roll}) · primary attack · best reachable ammo": {
+    "en": "Bestiary profile ({roll}) · primary attack · best reachable ammo",
+    "cs": "Profil Bestiary ({roll}) · primární útok · nejlepší dostupná munice",
+    "de": "Bestiary-Profil ({roll}) · Primärangriff · beste verfügbare Munition",
+    "es": "Perfil de Bestiary ({roll}) · ataque principal · mejor munición disponible",
+    "fr": "Profil Bestiary ({roll}) · attaque principale · meilleures munitions accessibles",
+    "pt": "Perfil do Bestiary ({roll}) · ataque primário · melhor munição disponível",
+    "zh": "Bestiary 档案（{roll}）· 主要攻击 · 最佳可用弹药",
+    "hi": "Bestiary प्रोफ़ाइल ({roll}) · प्राथमिक हमला · सबसे अच्छा उपलब्ध गोला-बारूद",
+    "ar": "ملف Bestiary ({roll}) · هجوم أساسي · أفضل ذخيرة متاحة",
+    "bn": "Bestiary প্রোফাইল ({roll}) · প্রধান আক্রমণ · সেরা উপলব্ধ গোলাবারুদ",
+    "ru": "Профиль Bestiary ({roll}) · основная атака · лучшие доступные боеприпасы",
+    "ja": "Bestiary プロフィール（{roll}）· 通常攻撃 · 入手可能な最良の弾薬",
+    "id": "Profil Bestiary ({roll}) · serangan utama · amunisi terbaik yang tersedia"
   }
 }
