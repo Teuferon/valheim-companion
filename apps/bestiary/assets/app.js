@@ -2682,6 +2682,26 @@
       button.classList.toggle('active', button.dataset.kind === 'all');
     });
     if (header.getAttribute('aria-expanded') !== 'true') header.click();
+    // Ensure all open biomes from stored progress remain rendered and expanded
+    const openBiomesSet = new Set(getStoredOpenBiomes());
+    document.querySelectorAll('.biome-card').forEach(bCard => {
+      const bId = bCard.dataset.biomeId;
+      const bHeader = bCard.querySelector('.biome-header');
+      if (bHeader && (bHeader.getAttribute('aria-expanded') === 'true' || openBiomesSet.has(bId))) {
+        if (bHeader.getAttribute('aria-expanded') !== 'true') {
+          bHeader.setAttribute('aria-expanded', 'true');
+        }
+        const wrapper = bCard.querySelector('.biome-content-wrapper');
+        if (wrapper) {
+          wrapper.removeAttribute('inert');
+          wrapper.classList.add('open');
+          if (!wrapper.firstElementChild) {
+            const b = data.biomes.find(item => item.id === bId);
+            if (b) renderBiomeContent(b, wrapper, data);
+          }
+        }
+      }
+    });
     applyFiltersToAllOpenBiomes();
     const fish = biomeCard.querySelector('.fish-wrapper[data-creature-id="' + creature.id + '"]');
     if (fish && !fish.classList.contains('expanded')) fish.querySelector('.fish-tile').click();
@@ -2693,7 +2713,7 @@
     card.querySelector('.creature-details').open = true;
     const scroll = () => {
       if (!stillCurrent() || !card.isConnected) return;
-      card.scrollIntoView({ block: 'center', behavior: 'instant' });
+      card.scrollIntoView({ block: 'start', behavior: 'instant' });
       card.focus({ preventScroll: true });
     };
     requestAnimationFrame(scroll);
