@@ -275,3 +275,12 @@ Ověřeno 6. 10. 2026. Infobox zbraně rychlost útoku nemá. Je ve **vykreslen�
   - Backstab: kalkulačka ho dává jen na první úder (pak má nepřítel na 5 minut imunitu), Bestiary na všechny. Správně je model kalkulačky.
   - Rychlosti útoku: kalkulačka má kurátorované profily (`src/data/attack-profiles.ts`) z tabulek typů zbraní na wiki a herního modelu MaxDPS, s označenou spolehlivostí. Původně plánované VC-10 (parsování vykreslených stránek) se **ruší**. Bestiary převezme profily kalkulačky, aby oba nástroje dávaly stejná čísla.
 - **Jeden zdroj pravdy:** časování útoků a poškození po kvalitách se exportují z kalkulačky do `data/attack-profiles.json` a `data/weapon-quality.json`. Bestiary je čte a test parity hlídá, že `rank.js` a engine kalkulačky dávají stejná čísla.
+
+## 14. Jednotné pořadí biomů (VC-12, 6. 10. 2026)
+
+- Podle wiki (*Biomes*: Early game = Meadows, Black Forest, Ocean; Mid game od Swampu) a stejně jako v Damage Calculatoru:
+  **1 Meadows · 2 Black Forest · 3 Ocean · 4 Swamp · 5 Mountain · 6 Plains · 7 Mistlands · 8 Ashlands · 9 Deep North.**
+- `tier` = `order`. Rozlišení na `gearTier` se ruší a pro biom platí jedno číslo. Tier materiálu, zbraně i brnění je pořadí biomu, ze kterého pochází.
+- Jediný zdroj pořadí v Bestiary a Armouru je `scripts/wiki/biomes.mjs`. Test hlídá, že pořadí sedí s `apps/damage-calculator/src/data/biomes.ts`.
+- Důsledek: v Oceánu (Serpent) se doporučuje jen výbava do Oceánu (Black Forest + Chitin), ne železo ze Swampu. Stejně to dělá kalkulačka.
+- § 2 výše (původní tabulka s Oceánem za Swampem) tímto neplatí.
