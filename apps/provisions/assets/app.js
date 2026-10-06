@@ -1,13 +1,41 @@
 /* Provisions — safe DOM rendering with the shared locale and progress cores. */
 (function () {
   'use strict';
-  const data = VPR_DATA;
+  const data = { ...VPR_DATA,
+    food: VPR_DATA.food.map(food => ({ ...food, biome: VPAdvisor.availableBiome(food) })),
+    meads: VPR_DATA.meads.map(mead => ({ ...mead, biome: VPAdvisor.availableBiome(mead) })),
+  };
   const t = (key, values) => VCI18n.t(key, values);
   const name = entity => VCI18n.name(entity);
   const byId = (list, id) => list.find(item => item.id === id);
   const number = value => new Intl.NumberFormat(VCI18n.locale(), { maximumFractionDigits: 2 }).format(value);
   const time = seconds => t('{minutes} min', { minutes: number(seconds / 60) });
   let focus = 'All';
+  let activity = 'balanced';
+  try {
+    const stored = localStorage.getItem('vp.activity');
+    if (Object.hasOwn(VPAdvisor.ACTIVITIES, stored)) activity = stored;
+  } catch { /* Keep the default when storage is unavailable. */ }
+  let advisorContext = '';
+  let easy = false;
+  let advisorVersion = 0;
+  let advisorSignature = '';
+  let advisorCombos = null;
+  let advisorFailed = false;
+  let advisorWorker;
+  try {
+    advisorWorker = new Worker('assets/advisor-worker.js');
+    advisorWorker.onmessage = ({ data: response }) => {
+      if (response.version !== advisorVersion) return;
+      advisorCombos = response.combos;
+      renderAdvice();
+    };
+    advisorWorker.onerror = () => {
+      advisorFailed = true;
+      advisorWorker.terminate();
+      renderAdvice();
+    };
+  } catch { advisorFailed = true; }
   function readStored() {
     try { return JSON.parse(localStorage.getItem('vp.loadout')); } catch { return null; }
   }
@@ -24,7 +52,7 @@
     clearTimeout(noticeTimer);
     noticeTimer = setTimeout(() => { notice.textContent = ''; }, 4000);
   }
-  function update() { renderCatalog(); renderLoadout(); }
+  function update() { renderCatalog(); renderLoadout(); renderActivityPlanner(); requestAdvice(); }
   function addFood(food) {
     if (state.foods.includes(food.id) || state.foods.length >= 3) return;
     state.foods.push(food.id);
@@ -197,6 +225,7 @@
     renderShopping(content, plan);
     document.getElementById('mobile-summary').textContent = state.foods.length + ' / 3 · ' + plan.stats.health + ' HP';
     if (activeId) document.getElementById(activeId)?.focus({ preventScroll: true });
+    renderTips();
   }
   function materialName(plan, id) { return name(plan.items[id]) || id; }
   function materialList(materials, plan) {
@@ -350,6 +379,141 @@
       extra.append(grid); catalog.append(extra);
     }
   }
+  const bossNames = {
+    eikthyr: 'Eikthyr', 'the-elder': 'The Elder', bonemass: 'Bonemass', moder: 'Moder', yagluth: 'Yagluth',
+    'the-queen': 'The Queen', fader: 'Fader', 'kall-fimbulbringer': 'Kall Fimbulbringer', 'lord-reto': 'Lord Reto',
+  };
+  function contextOptions() {
+    const revealed = new Set(VCProgress.revealedBiomes(data.biomes));
+    return data.biomes.filter(biome => revealed.has(biome.id)).flatMap(biome => [
+      { id: biome.id, name: biome.name },
+      ...[...(biome.creatures?.boss || []), ...(biome.creatures?.miniboss || [])]
+        .filter(id => bossNames[id]).map(id => ({ id, name: bossNames[id] })),
+    ]);
+  }
+  function renderActivityPlanner() {
+    const container = document.getElementById('activity-planner');
+    const activeId = container.contains(document.activeElement) ? document.activeElement.id : '';
+    const options = contextOptions();
+    if (!options.some(option => option.id === advisorContext)) advisorContext = '';
+    container.replaceChildren(el('h2', '', t('Plan for…')));
+    container.firstChild.id = 'activity-title';
+    const activities = el('div', 'activities');
+    activities.setAttribute('role', 'group'); activities.setAttribute('aria-label', t('Plan for…'));
+    for (const [id, definition] of Object.entries(VPAdvisor.ACTIVITIES)) {
+      const pick = button('', () => {
+        activity = id;
+        try { localStorage.setItem('vp.activity', id); } catch { /* Keep advice usable without storage. */ }
+        renderActivityPlanner(); requestAdvice();
+      }, 'activity-button');
+      pick.id = 'activity-' + id;
+      pick.setAttribute('aria-pressed', String(activity === id));
+      const icon = el('span', 'activity-icon', definition.icon); icon.setAttribute('aria-hidden', 'true');
+      pick.append(icon, el('span', '', t(definition.label))); activities.append(pick);
+    }
+    const controls = el('div', 'advisor-controls');
+    const label = el('label'); label.append(el('span', '', t('Biome / boss')));
+    const select = el('select'); select.id = 'advisor-context';
+    const empty = el('option', '', t('No context')); empty.value = ''; select.append(empty);
+    for (const option of options) { const node = el('option', '', option.name); node.value = option.id; select.append(node); }
+    select.value = advisorContext;
+    select.addEventListener('change', () => { advisorContext = select.value; requestAdvice(); });
+    label.append(select);
+    const easyLabel = el('label', 'check-control');
+    const checkbox = el('input'); checkbox.type = 'checkbox'; checkbox.id = 'advisor-easy'; checkbox.checked = easy;
+    checkbox.addEventListener('change', () => { easy = checkbox.checked; requestAdvice(); });
+    easyLabel.append(checkbox, el('span', '', t('Easy to cook')));
+    controls.append(label, easyLabel);
+    container.append(activities, controls, el('p', 'hint', t('Easy: up to three basic ingredients per food and station level two or lower.')));
+    if (activeId) document.getElementById(activeId)?.focus({ preventScroll: true });
+  }
+  function requestAdvice() {
+    const unlockedBiomes = VCProgress.revealedBiomes(data.biomes);
+    const signature = JSON.stringify({ activity, easy, unlockedBiomes });
+    if (signature !== advisorSignature) {
+      advisorSignature = signature;
+      advisorCombos = null;
+      advisorVersion++;
+      if (!advisorFailed) advisorWorker.postMessage({ version: advisorVersion, activity, easy, unlockedBiomes });
+    }
+    renderAdvice();
+  }
+  function renderAdvice() {
+    const container = document.getElementById('advisor-results');
+    container.replaceChildren(el('h2', 'advisor-heading', t('Best combinations')));
+    container.setAttribute('aria-busy', String(advisorCombos === null && !advisorFailed));
+    if (advisorFailed) container.append(el('p', 'hint', t('Recommendations unavailable. Reload to try again.')));
+    else if (advisorCombos === null) container.append(el('p', 'hint', t('Finding combinations…')));
+    else if (!advisorCombos.length) container.append(el('p', 'hint', t('Unlock more food to find combinations.')));
+    else {
+      const grid = el('div', 'combo-grid');
+      for (const combo of advisorCombos) {
+        const card = el('article', 'combo-card');
+        for (const food of combo.foods) card.append(heading(food));
+        const stats = el('dl', 'combo-stats');
+        for (const [key, label] of [['health', 'Health'], ['stamina', 'Stamina'], ['eitr', 'Eitr'], ['healing', 'Healing per tick'], ['duration', 'Shortest duration']]) {
+          const row = el('div', key); row.append(el('dt', '', t(label)), el('dd', '', key === 'duration' ? time(combo.stats[key]) : number(combo.stats[key]))); stats.append(row);
+        }
+        card.append(stats);
+        if (combo.easy) card.append(el('span', 'badge', t('Easy')));
+        const use = button(t('Use this'), () => { state.foods = combo.foods.map(food => food.id); update(); }, 'add-item');
+        use.disabled = combo.foods.every(food => state.foods.includes(food.id));
+        card.append(use); grid.append(card);
+      }
+      container.append(grid, el('p', 'hint', t('Food bonuses only; base player stats are included in your loadout.')));
+    }
+    container.append(el('h2', 'advisor-heading', t('Recommended meads')));
+    const picks = VPAdvisor.recommendMeads(data.meads, activity, { id: advisorContext, unlockedBiomes: VCProgress.revealedBiomes(data.biomes) });
+    const grid = el('div', 'mead-picks');
+    for (const pick of picks) {
+      const card = el('article', 'mead-card');
+      const reason = t(pick.reason, {
+        resistance: t({ poison: 'Poison', frost: 'Frost', fire: 'Fire' }[pick.resistance] || 'Fire'),
+        context: contextOptions().find(option => option.id === advisorContext)?.name || '',
+      });
+      card.append(heading(pick.mead), el('p', 'hint', reason));
+      const selected = state.meads.some(line => line.id === pick.mead.id);
+      const add = button(t(selected ? 'Selected' : 'Add mead'), () => addMead(pick.mead), 'add-item');
+      add.disabled = selected || state.meads.length >= 4;
+      card.append(add); grid.append(card);
+    }
+    if (picks.length) container.append(grid);
+    else container.append(el('p', 'hint', t('No matching meads unlocked.')));
+    renderTips();
+  }
+  function tipRow(text, source) {
+    const row = el('li'); row.append(el('span', '', text));
+    if (source) {
+      const link = el('a', '', t('Source')); link.href = source; link.target = '_blank'; link.rel = 'noopener noreferrer'; row.append(link);
+    }
+    return row;
+  }
+  function renderTips() {
+    const container = document.getElementById('advisor-tips');
+    container.replaceChildren(el('h2', 'advisor-heading', t('Tips'))); container.firstChild.id = 'tips-title';
+    const list = el('ul', 'tip-list');
+    // Always expand ingredients for teleport warnings, independently of the shopping display toggle.
+    const plan = VPPlanner.shopping({ ...state, breakdown: true }, data);
+    for (const tip of VPAdvisor.computedTips(plan)) {
+      const values = { ...tip.values };
+      for (const [key, value] of Object.entries(values)) if (typeof value === 'number') values[key] = number(value);
+      if (tip.key === 'Shortest food duration: {time}.') values.time = time(tip.values.time * 60);
+      list.append(tipRow(t(tip.key, values), tip.source));
+    }
+    const general = {
+      boss: [13, 6, 4], combat: [13, 3, 4], mining: [4, 5, 9], farming: [5, 9, 10],
+      exploration: [3, 4, 7], magic: [4, 6, 10], balanced: [1, 2, 8],
+    }[activity];
+    const cold = ['mountain', 'deep-north', 'moder', 'kall-fimbulbringer'].includes(advisorContext);
+    const fire = ['ashlands', 'fader', 'lord-reto'].includes(advisorContext);
+    const poison = ['swamp', 'bonemass'].includes(advisorContext);
+    const ids = [...new Set([...(cold ? [11] : fire ? [12] : poison ? [13] : []), ...general])].slice(0, 3);
+    for (const id of ids) {
+      const tip = data.tips.find(item => item.id === 'tip-' + id);
+      if (tip) list.append(tipRow(t(tip.text), tip.source));
+    }
+    container.append(list);
+  }
   function render() {
     VCI18n.apply();
     const picker = document.querySelector('.vc-language-picker');
@@ -362,8 +526,7 @@
       return option;
     }));
     select.value = focus;
-    renderCatalog();
-    renderLoadout();
+    update();
   }
   VCI18n.mountPicker('#language-picker');
   document.getElementById('focus').addEventListener('change', event => { focus = event.target.value; renderCatalog(); });
@@ -374,6 +537,10 @@
     if (imported) { state = imported; update(); }
   });
   window.addEventListener('storage', event => {
+    if (event.key === 'vp.activity' || event.key === null) {
+      try { const stored = localStorage.getItem('vp.activity'); activity = Object.hasOwn(VPAdvisor.ACTIVITIES, stored) ? stored : 'balanced'; } catch { activity = 'balanced'; }
+      renderActivityPlanner(); requestAdvice();
+    }
     if (event.key === 'vp.loadout' || event.key === null) {
       state = VPPlanner.sanitize(readStored(), data); update();
     }

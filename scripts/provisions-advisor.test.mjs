@@ -87,3 +87,38 @@ test('100 foods are exhaustively ranked in under 300 ms', () => {
   const sorted = foods.toSorted((x, y) => a.scoreFood(y, 'boss') - a.scoreFood(x, 'boss'));
   assert.equal(combos[0].score, sorted.slice(0, 3).reduce((sum, f) => sum + a.scoreFood(f, 'boss'), 0));
 });
+
+test('actual data respects ingredient acquisition biomes and preserves feast unlock tiers', () => {
+  const unlockedBiomes = ['meadows', 'black-forest', 'ocean', 'swamp'];
+  const combos = a.bestCombos(data.food, 'boss', { unlockedBiomes, items: p.definitions(data) });
+  assert.ok(combos.every(combo => combo.foods.every(f => unlockedBiomes.includes(a.availableBiome(f)))));
+  assert.ok(combos.every(combo => combo.foods.every(f => !['cooked-asksvin-tail', 'cooked-seeker-meat', 'cooked-chicken-meat'].includes(f.id))));
+  assert.equal(a.availableBiome(data.food.find(f => f.id === 'onion-soup')), 'mountain');
+  assert.equal(a.availableBiome(data.food.find(f => f.id === 'carrot-soup')), 'black-forest');
+  assert.equal(a.availableBiome(data.food.find(f => f.id === 'ashlands-gourmet-bowl')), 'deep-north');
+  assert.equal(a.availableBiome(data.food.find(f => f.id === 'hearty-mountain-logger-s-stew')), 'plains');
+  assert.equal(a.recommendMeads(data.meads, 'boss', { id: 'swamp', unlockedBiomes: ['meadows', 'black-forest'] })[0].mead.id, 'poison-resistance-mead');
+});
+test('general tips have distinct IDs, valid activity tags, wiki sources and complete translations', () => {
+  const tips = JSON.parse(readFileSync(new URL('../data/provisions-tips.json', import.meta.url), 'utf8'));
+  const catalog = JSON.parse(readFileSync(new URL('../apps/provisions/locales/messages.json', import.meta.url), 'utf8'));
+  assert.ok(tips.length >= 10 && tips.length <= 15);
+  assert.equal(new Set(tips.map(tip => tip.id)).size, tips.length);
+  for (const tip of tips) {
+    assert.ok(tip.source.startsWith('https://valheim.weirdgloop.org/w/'));
+    assert.ok(tip.activities.every(id => Object.hasOwn(a.ACTIVITIES, id)));
+    assert.equal(Object.keys(catalog[tip.text]).length, 13);
+    assert.ok(Object.values(catalog[tip.text]).every(text => typeof text === 'string' && text.length > 0));
+  }
+});
+
+test('missing healing values never introduce NaN into scores or recommendations', () => {
+  for (const activity of Object.keys(a.ACTIVITIES)) {
+    for (const f of data.food) assert.ok(Number.isFinite(a.scoreFood(f, activity)), `${activity}: ${f.id}`);
+    assert.equal(a.scoreFood(food('empty-healing', { healing: { amount: null } }), activity), a.scoreFood(food('zero-healing', { healing: { amount: 0 } }), activity));
+  }
+  const top = a.bestCombos(data.food, 'boss', { unlockedBiomes: ['meadows', 'black-forest', 'ocean', 'swamp'], items: p.definitions(data) })[0];
+  assert.ok(Number.isFinite(top.score));
+  assert.ok(top.foods.some(f => f.id === 'serpent-stew'));
+  assert.ok(!top.foods.some(f => f.id === 'bukeperries'));
+});

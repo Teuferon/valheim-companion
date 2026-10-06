@@ -10,6 +10,35 @@
     magic: Object.freeze({ label: 'Magic', icon: '✦', eitr: 1.2, health: .6, stamina: .2 }),
     balanced: Object.freeze({ label: 'Balanced', icon: '⚖', health: 1, stamina: 1, eitr: .5 }),
   });
+  // Acquisition corrections verified through the wiki API on 2026-10-06.
+  // Some input records use a station's tier instead of ingredient availability.
+  // Food: https://valheim.weirdgloop.org/w/Food (Biome progression column).
+  // Feasts retain their boss/spice unlock tiers, not their thematic biome.
+  // Mead: https://valheim.weirdgloop.org/w/Poison_Resistance_Mead
+  const ACQUISITION_BIOMES = Object.freeze({
+    "boar-jerky": "black-forest",
+    "bukeperries": "black-forest",
+    "carrot": "black-forest",
+    "carrot-soup": "black-forest",
+    "cooked-bear-meat": "black-forest",
+    "cooked-fish": "swamp",
+    "cooked-serpent-meat": "swamp",
+    "cooked-asksvin-tail": "ashlands",
+    "cooked-chicken-meat": "plains",
+    "cooked-egg": "plains",
+    "cooked-lox-meat": "plains",
+    "cooked-seeker-meat": "mistlands",
+    "fish-n-bread": "mistlands",
+    "minced-meat-sauce": "black-forest",
+    "oats": "deep-north",
+    "onion": "mountain",
+    "onion-soup": "mountain",
+    "poteitr": "deep-north",
+    "serpent-stew": "swamp",
+    "turnip-stew": "swamp",
+    "poison-resistance-mead": "black-forest"
+});
+  const availableBiome = item => ACQUISITION_BIOMES[item.id] || item.biome;
   function preparation(food, { items = {} } = {}) {
     const raw = new Map();
     let stationLevel = Math.max(1, food.stationLevel || 1);
@@ -33,7 +62,7 @@
   function scoreFood(food, activity, opts = {}) {
     const weights = ACTIVITIES[activity] || Object.values(ACTIVITIES).find(value => value.label === activity) || ACTIVITIES.balanced;
     const score = (food.health || 0) * (weights.health || 0) + (food.stamina || 0) * (weights.stamina || 0)
-      + (food.eitr || 0) * (weights.eitr || 0) + (food.healing?.amount ?? food.healing ?? 0) * (weights.healing || 0)
+      + (food.eitr || 0) * (weights.eitr || 0) + (typeof food.healing === 'number' ? food.healing : food.healing?.amount || 0) * (weights.healing || 0)
       + (food.duration || 0) / 60 * (weights.duration || 0);
     if (!opts.easy) return score;
     const prep = opts.preparation || preparation(food, opts);
@@ -41,7 +70,7 @@
   }
   function unlocked(item, opts) {
     return item.unlocked !== false && item.availability !== 'console-only'
-      && (!opts.unlockedBiomes || opts.unlockedBiomes.includes(item.biome));
+      && (!opts.unlockedBiomes || opts.unlockedBiomes.includes(availableBiome(item)));
   }
   function bestCombos(foods, activity, opts = {}) {
     const limit = Math.max(0, Math.min(100, Math.floor(opts.limit ?? 3)));
@@ -118,5 +147,5 @@
     }, source: 'https://valheim.weirdgloop.org/w/Portal' });
     return tips;
   }
-  globalThis.VPAdvisor = Object.freeze({ ACTIVITIES, preparation, scoreFood, bestCombos, recommendMeads, computedTips });
+  globalThis.VPAdvisor = Object.freeze({ ACTIVITIES, availableBiome, preparation, scoreFood, bestCombos, recommendMeads, computedTips });
 })();
