@@ -57,6 +57,7 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | VC-19 | Progress Tracker `/progress/`, sdílený stav `vc.progress`, 15 milníků, sdílení `#p=` | Sol | ✅ |
 | VC-20 | Bestiary, Smithy, kalkulačka a rozcestník se řídí sdíleným postupem | Sol | ✅ |
 | **VC-21** | Provisions data (jídla, medoviny, feasty, stanice) + sdílený košík `shared/shopping` | Sol | 🔄 běží (`../valheim-units-CS`) | ⏳ fronta 11 |
+| **VC-32** | Progress jako vysouvací panel na každé stránce, nástroje reagují hned | Sol | 🔄 běží souběžně (`../valheim-units-GL`) |
 | **VC-22** | stránka Provisions `/provisions/` | — | ⏳ fronta 12 |
 
 ### Po frontě

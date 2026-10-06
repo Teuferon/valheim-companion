@@ -406,3 +406,12 @@ Vychází z `docs/NAVRHY-NASTROJU.md` § „Menší vylepšení“. Platí zása
 - Z Bestiary do kalkulačky se posílá **jen `biome` a `target`**. Zbraň, úroveň a skill si kalkulačka vezme z profilu hráče (VC-25) a návštěvník je doladí sám (návrh od Teuferona, 6. 10. 2026).
 
 > **Doplnění zásady (6. 10. 2026):** nepřekládají se ani **názvy nástrojů** (Valheim Companion, Bestiary, Armourer, Armory, Damage Calculator, Sign Editor, Runopis, Progress Tracker, Provisions). Jsou to vlastní jména.
+
+## 21. Progress jako vysouvací panel na každé stránce (VC-32, Pavel 6. 10. 2026)
+
+- Progress Tracker je dostupný z **každé stránky Companionu** jako vysouvací panel zprava. Stránka `/progress/` zůstává jako plné zobrazení (sdílení a reset).
+- **Spouštěč:** na desktopu svislá záložka na pravém okraji „⛓ Progress N/9“, na mobilu (< 640 px) kulaté tlačítko vlevo dole nad lištou souhlasu. Vkládá ho sdílený skript, takže sekce nemusí měnit hlavičku.
+- **Jeden kód:** vykreslování checklistu se z `apps/progress/assets/app.js` vytáhne do `shared/progress/ui.js` (`VCProgressUI.render(container, data, { compact })`). Stránka i panel ho používají. ⛔ Dvě kopie.
+- **Data** (`/progress/data/data.js`) se načtou až při prvním otevření panelu.
+- **Reakce bez obnovení stránky:** všechny sekce poslouchají `VCProgress.onChange` (Bestiary a Smithy už to umí). Kalkulačka posune progresi jen tehdy, když ji uživatel nenastavil ručně ani v URL.
+- Přístupnost: `role="dialog"`, `aria-modal`, focus trap, Esc zavírá, focus se vrátí na spouštěč. Stejná pravidla pro 13 jazyků a pro anglické názvy z hry.
