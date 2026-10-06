@@ -449,21 +449,6 @@
     "ja": "進行状況を記録 →",
     "id": "Catat progresmu →"
   },
-  "Track visited biomes, defeated bosses and milestones — unlock spoilers across your tools.": {
-    "en": "Track visited biomes, defeated bosses and milestones — unlock spoilers across your tools.",
-    "cs": "Zaznamenávejte navštívené biomy, poražené bossy a milníky — odemykejte spoilery ve všech nástrojích.",
-    "de": "Besuchte Biome, besiegte Bosse und Meilensteine festhalten — Spoiler in allen Werkzeugen freischalten.",
-    "es": "Registra los biomas visitados, los jefes derrotados y los hitos — desbloquea spoilers en todas tus herramientas.",
-    "fr": "Suivez les biomes visités, les boss vaincus et les étapes clés — révélez les spoilers dans tous vos outils.",
-    "pt": "Registre biomas visitados, chefes derrotados e marcos — desbloqueie spoilers em todas as ferramentas.",
-    "zh": "记录已探索的生物群系、击败的首领和里程碑，在所有工具中解锁剧透内容。",
-    "hi": "देखे गए बायोम, हराए गए बॉस और पड़ाव दर्ज करें — सभी टूल में स्पॉइलर अनलॉक करें।",
-    "ar": "سجّل المناطق التي زرتها والزعماء الذين هزمتهم والإنجازات — واكشف المحتوى المخفي في جميع أدواتك.",
-    "bn": "পরিদর্শিত বায়োম, পরাজিত বস ও মাইলফলক নথিভুক্ত করুন — সব টুলে স্পয়লার আনলক করুন।",
-    "ru": "Отмечайте посещённые биомы, побеждённых боссов и этапы — открывайте спойлеры во всех инструментах.",
-    "ja": "訪れたバイオーム、倒したボス、達成した節目を記録し、すべてのツールでネタバレ情報を解放。",
-    "id": "Catat bioma yang dikunjungi, bos yang dikalahkan, dan pencapaian — buka spoiler di semua alatmu."
-  },
   "{revealed} / {total} biomes · {bosses} bosses": {
     "en": "{revealed} / {total} biomes · {bosses} bosses",
     "cs": "{revealed} / {total} biomů · {bosses} bossů",
@@ -478,5 +463,65 @@
     "ru": "{revealed} / {total} биомов · {bosses} боссов",
     "ja": "{revealed} / {total} バイオーム · {bosses} ボス",
     "id": "{revealed} / {total} bioma · {bosses} bos"
+  },
+  "Start here": {
+    "en": "Start here",
+    "cs": "Začni tady",
+    "de": "Hier starten",
+    "es": "Empieza aquí",
+    "fr": "Commence ici",
+    "pt": "Comece aqui",
+    "zh": "从这里开始",
+    "hi": "यहाँ से शुरू करें",
+    "ar": "ابدأ من هنا",
+    "bn": "এখান থেকে শুরু করুন",
+    "ru": "Начни отсюда",
+    "ja": "ここから始めよう",
+    "id": "Mulai dari sini"
+  },
+  "Tick off the bosses you've beaten and the biomes you've reached — every tool below unlocks its spoilers to match. One tracker for the whole Companion.": {
+    "en": "Tick off the bosses you've beaten and the biomes you've reached — every tool below unlocks its spoilers to match. One tracker for the whole Companion.",
+    "cs": "Odškrtni poražené bosse a biomy, kam ses dostal — všechny nástroje níže podle toho odemknou spoilery. Jeden tracker pro celý Companion.",
+    "de": "Hake besiegte Bosse und erreichte Biome ab — alle Werkzeuge darunter schalten ihre Spoiler passend frei. Ein Tracker für den ganzen Companion.",
+    "es": "Marca los jefes que has derrotado y los biomas a los que has llegado: todas las herramientas de abajo desbloquean sus spoilers en consecuencia. Un solo registro para todo el Companion.",
+    "fr": "Coche les boss vaincus et les biomes atteints — tous les outils ci-dessous débloquent leurs spoilers en conséquence. Un seul suivi pour tout le Companion.",
+    "pt": "Marque os chefes que derrotou e os biomas que alcançou — todas as ferramentas abaixo desbloqueiam os spoilers de acordo. Um único registro para todo o Companion.",
+    "zh": "勾选已击败的首领和已到达的生物群系——下方所有工具都会相应解锁剧透内容。整个 Companion 共用一个进度追踪。",
+    "hi": "हराए गए बॉस और पहुँचे हुए बायोम पर निशान लगाएँ — नीचे के सभी टूल उसी हिसाब से स्पॉइलर खोल देते हैं। पूरे Companion के लिए एक ही ट्रैकर।",
+    "ar": "حدّد الزعماء الذين هزمتهم والمناطق التي وصلت إليها — وستكشف كل الأدوات أدناه محتواها وفقًا لذلك. متتبع واحد لكل Companion.",
+    "bn": "হারানো বস আর পৌঁছানো বায়োমে টিক দিন — নিচের সব টুল সেই অনুযায়ী স্পয়লার খুলে দেবে। পুরো Companion-এর জন্য একটাই ট্র্যাকার।",
+    "ru": "Отмечай побеждённых боссов и достигнутые биомы — все инструменты ниже откроют спойлеры по твоему прогрессу. Один трекер для всего Companion.",
+    "ja": "倒したボスと到達したバイオームにチェックを入れると、下のすべてのツールがそれに合わせてネタバレを解放します。Companion 全体で使える 1 つのトラッカーです。",
+    "id": "Centang bos yang sudah kamu kalahkan dan bioma yang sudah kamu capai — semua alat di bawah akan membuka spoiler sesuai progresmu. Satu pelacak untuk seluruh Companion."
+  },
+  "Unlocks spoilers in:": {
+    "en": "Unlocks spoilers in:",
+    "cs": "Odemyká spoilery v:",
+    "de": "Schaltet Spoiler frei in:",
+    "es": "Desbloquea spoilers en:",
+    "fr": "Débloque les spoilers dans :",
+    "pt": "Desbloqueia spoilers em:",
+    "zh": "解锁剧透：",
+    "hi": "इनमें स्पॉइलर खोलता है:",
+    "ar": "يكشف المحتوى في:",
+    "bn": "যেখানে স্পয়লার খোলে:",
+    "ru": "Открывает спойлеры в:",
+    "ja": "ネタバレを解放：",
+    "id": "Membuka spoiler di:"
+  },
+  "Follows your progress": {
+    "en": "Follows your progress",
+    "cs": "Řídí se tvým postupem",
+    "de": "Folgt deinem Fortschritt",
+    "es": "Sigue tu progreso",
+    "fr": "Suit ta progression",
+    "pt": "Segue o seu progresso",
+    "zh": "跟随你的进度",
+    "hi": "आपकी प्रगति के साथ",
+    "ar": "يتبع تقدّمك",
+    "bn": "আপনার অগ্রগতি অনুসরণ করে",
+    "ru": "Следует твоему прогрессу",
+    "ja": "進行状況に連動",
+    "id": "Mengikuti progresmu"
   }
 }
