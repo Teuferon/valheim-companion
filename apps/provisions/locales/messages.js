@@ -1005,21 +1005,6 @@ globalThis.VC_MESSAGES = {
     "ja": "買い物リスト",
     "id": "Daftar belanja"
   },
-  "Break down crafted materials": {
-    "en": "Break down crafted materials",
-    "cs": "Rozložit vyrobené suroviny",
-    "de": "Hergestellte Materialien zerlegen",
-    "es": "Desglosar materiales fabricados",
-    "fr": "Décomposer les matériaux fabriqués",
-    "pt": "Decompor materiais fabricados",
-    "zh": "展开合成材料",
-    "hi": "निर्मित सामग्री अलग करें",
-    "ar": "تفصيل المواد المصنعة",
-    "bn": "তৈরি উপকরণ ভেঙে দেখান",
-    "ru": "Разложить созданные материалы",
-    "ja": "加工素材を分解",
-    "id": "Uraikan bahan buatan"
-  },
   "Station steps": {
     "en": "Station steps",
     "cs": "Kroky na stanicích",
@@ -1289,5 +1274,20 @@ globalThis.VC_MESSAGES = {
     "ru": "Только через консоль",
     "ja": "コンソール限定",
     "id": "Hanya lewat konsol"
+  },
+  "Show raw materials": {
+    "en": "Show raw materials",
+    "cs": "Ukázat základní suroviny",
+    "de": "Rohmaterialien anzeigen",
+    "es": "Mostrar materias primas",
+    "fr": "Afficher les matières premières",
+    "pt": "Mostrar matérias-primas",
+    "zh": "显示原材料",
+    "hi": "कच्ची सामग्री दिखाएँ",
+    "ar": "إظهار المواد الخام",
+    "bn": "কাঁচামাল দেখান",
+    "ru": "Показать сырьё",
+    "ja": "原材料を表示",
+    "id": "Tampilkan bahan mentah"
   }
 };

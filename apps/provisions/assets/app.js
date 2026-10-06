@@ -253,7 +253,7 @@
     const breakdownLabel = el('label', 'check-control');
     const breakdown = el('input'); breakdown.type = 'checkbox'; breakdown.checked = state.breakdown;
     breakdown.addEventListener('change', () => { state.breakdown = breakdown.checked; renderLoadout(); });
-    breakdownLabel.append(breakdown, el('span', '', t('Break down crafted materials')));
+    breakdownLabel.append(breakdown, el('span', '', t('Show raw materials')));
     shopping.append(breakdownLabel);
     if (!plan.materials.length) shopping.append(el('p', 'hint', t('Choose food or mead to build a shopping list.')));
     for (const material of plan.materials) {
