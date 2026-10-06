@@ -23,6 +23,7 @@ export const PAGES = [
     section: 'bestiary',
     path: '/bestiary/',
     title: 'Bestiary — Valheim Companion',
+    i18nTitle: 'Bestiary — Valheim Companion',
     description:
       'Every Valheim creature and boss by biome, spoiler-free. Stats per star level, weaknesses, and the best weapons for your skills — with hits to kill.',
   },
@@ -31,6 +32,7 @@ export const PAGES = [
     section: 'armourer',
     path: '/armourer/',
     title: 'Armourer — Valheim Companion',
+    i18nTitle: 'Armourer — Valheim Companion',
     description:
       'Every Valheim armor set by biome. Pick pieces and upgrade levels and get the full material list — and where to farm it.',
   },
