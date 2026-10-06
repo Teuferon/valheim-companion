@@ -326,5 +326,42 @@ test('armor per quality: Carapace helmet has 32/34/36/38 and armorSource rendere
   );
 });
 
+test('DLC and seasonal armor pieces have kind special and appropriate tag; Crown of Valheim stays normal', async () => {
+  const { readFileSync } = await import('node:fs');
+  const armor = JSON.parse(readFileSync('data/armor.json', 'utf8'));
+
+  const capeOden = armor.find((a) => a.name === 'Cape of Oden');
+  assert.ok(capeOden, 'Cape of Oden exists');
+  assert.equal(capeOden.kind, 'special');
+  assert.equal(capeOden.tag, 'DLC');
+  assert.equal(capeOden.biome, null);
+  assert.equal(capeOden.pieces[0].kind, 'special');
+  assert.equal(capeOden.pieces[0].tag, 'DLC');
+
+  const hoodOden = armor.find((a) => a.name === 'Hood of Oden');
+  assert.ok(hoodOden, 'Hood of Oden exists');
+  assert.equal(hoodOden.kind, 'special');
+  assert.equal(hoodOden.tag, 'DLC');
+  assert.equal(hoodOden.biome, null);
+
+  const pointyHat = armor.find((a) => a.name === 'Pointy Hat');
+  assert.ok(pointyHat, 'Pointy Hat exists');
+  assert.equal(pointyHat.kind, 'special');
+  assert.equal(pointyHat.tag, 'Halloween');
+  assert.equal(pointyHat.biome, null);
+
+  const midsummer = armor.find((a) => a.name === 'Midsummer Crown');
+  assert.ok(midsummer, 'Midsummer Crown exists');
+  assert.equal(midsummer.kind, 'special');
+  assert.equal(midsummer.tag, 'Midsummer');
+  assert.equal(midsummer.biome, null);
+
+  const crownValheim = armor.find((a) => a.name === 'Crown of Valheim');
+  assert.ok(crownValheim, 'Crown of Valheim exists');
+  assert.equal(crownValheim.kind, 'single');
+  assert.equal(crownValheim.biome, 'deep-north');
+  assert.equal(crownValheim.tag, undefined);
+});
+
 
 
