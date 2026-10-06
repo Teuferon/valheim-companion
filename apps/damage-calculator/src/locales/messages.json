@@ -3857,68 +3857,6 @@
       "other": " · {count} pukulan ({weights}×)"
     }
   },
-  "{count} weapons reachable (total: {total})": {
-    "en": {
-      "one": "Reachable: {count} weapon (total: {total})",
-      "other": "Reachable: {count} weapons (total: {total})"
-    },
-    "cs": {
-      "one": "Dostupné: {count} zbraň (celkem: {total})",
-      "few": "Dostupné: {count} zbraně (celkem: {total})",
-      "many": "Dostupné: {count} zbraně (celkem: {total})",
-      "other": "Dostupné: {count} zbraní (celkem: {total})"
-    },
-    "de": {
-      "one": "Erreichbar: {count} Waffe (gesamt: {total})",
-      "other": "Erreichbar: {count} Waffen (gesamt: {total})"
-    },
-    "es": {
-      "one": "Disponibilidad: {count} arma (total: {total})",
-      "many": "Disponibilidad: {count} armas (total: {total})",
-      "other": "Disponibilidad: {count} armas (total: {total})"
-    },
-    "fr": {
-      "one": "Disponibilité : {count} arme (total: {total})",
-      "many": "Disponibilité : {count} armes (total: {total})",
-      "other": "Disponibilité : {count} armes (total: {total})"
-    },
-    "pt": {
-      "one": "Disponibilidade: {count} arma (total: {total})",
-      "many": "Disponibilidade: {count} armas (total: {total})",
-      "other": "Disponibilidade: {count} armas (total: {total})"
-    },
-    "zh": {
-      "other": "可用：{count} 件武器 (总数: {total})"
-    },
-    "hi": {
-      "one": "उपलब्ध: {count} हथियार (कुल: {total})",
-      "other": "उपलब्ध: {count} हथियार (कुल: {total})"
-    },
-    "ar": {
-      "zero": "المتاح: {count} أسلحة (الإجمالي: {total})",
-      "one": "المتاح: {count} سلاح (الإجمالي: {total})",
-      "two": "المتاح: {count} سلاحان (الإجمالي: {total})",
-      "few": "المتاح: {count} أسلحة (الإجمالي: {total})",
-      "many": "المتاح: {count} سلاحًا (الإجمالي: {total})",
-      "other": "المتاح: {count} سلاح (الإجمالي: {total})"
-    },
-    "bn": {
-      "one": "পাওয়া যায়: {count}টি অস্ত্র (মোট: {total})",
-      "other": "পাওয়া যায়: {count}টি অস্ত্র (মোট: {total})"
-    },
-    "ru": {
-      "one": "Доступно: {count} единица оружия (всего: {total})",
-      "few": "Доступно: {count} единицы оружия (всего: {total})",
-      "many": "Доступно: {count} единиц оружия (всего: {total})",
-      "other": "Доступно: {count} единицы оружия (всего: {total})"
-    },
-    "ja": {
-      "other": "到達可能：{count} 個の武器 (合計: {total})"
-    },
-    "id": {
-      "other": "Terjangkau: {count} senjata (total: {total})"
-    }
-  },
   "{count} weapons reachable in {biome} (total: {total})": {
     "en": {
       "one": "Reachable: {count} weapon · {biome} (total: {total})",

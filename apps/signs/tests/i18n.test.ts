@@ -6,6 +6,7 @@ import {
   readPreference,
   resolveLocale,
   translate,
+  translateNumber,
   languages,
   messages,
 } from '../lib/i18n.ts';
@@ -77,4 +78,22 @@ void test('warning translation preserves authored text and styles', () => {
     translate('en', 'Vložit {value}', { value: '<br>' }),
     'Insert <br>',
   );
+});
+
+void test('counted editor and gallery messages render in all 13 languages at plural boundaries', () => {
+  for (const { code } of languages) {
+    for (const count of [0, 1, 2, 5, 21]) {
+      for (const [key, entry] of Object.entries(messages)) {
+        if (typeof entry.en === 'string') continue;
+        const result = translateNumber(code, key, count, { limit: 50 });
+        assert.ok(result.length > 0, `${code}/${count}: ${key}`);
+        assert.notEqual(result, key);
+        assert.doesNotMatch(result, /undefined|\[object Object\]|\{\w+\}/);
+      }
+    }
+  }
+  assert.equal(translateNumber('en', '{count}/50 characters', 1), '1/50 character');
+  assert.equal(translateNumber('cs', '{count} UTF-8 bytes', 1), '1 UTF-8 bajt');
+  assert.equal(translateNumber('cs', '{count} UTF-8 bytes', 2), '2 UTF-8 bajty');
+  assert.equal(translateNumber('cs', '{count} UTF-8 bytes', 5), '5 UTF-8 bajtů');
 });

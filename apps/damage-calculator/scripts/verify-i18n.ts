@@ -3,12 +3,12 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
 import ts from 'typescript';
-import { languages, translate } from '../../../shared/i18n/core';
+import { languages, translate, tn, type Catalog } from '../../../shared/i18n/core';
 import { formatters } from '../src/lib/format';
 import { languageSnapshot, setLanguagePreference, subscribeLanguage } from '../src/hooks/use-language';
 
 const root = fileURLToPath(new URL('../src/', import.meta.url));
-const catalog = JSON.parse(readFileSync(join(root, 'locales/messages.json'), 'utf8')) as Record<string, Record<string, string>>;
+const catalog = JSON.parse(readFileSync(join(root, 'locales/messages.json'), 'utf8')) as Catalog;
 const keys = new Set<string>();
 const dictionaries = new Set(['TITLE', 'SUMMARY', 'SKILL_MODE_LABEL', 'SORT_LABELS', 'KIND_LABEL', 'KIND_FILTERS', 'GROUP_FILTERS', 'CONFIDENCE_LABEL', 'RESISTANCE_LABEL', 'GROUP_LABELS']);
 const brands = new Set(['← Valheim Companion', 'Valheim Companion', 'Valheim Wiki', 'valheim.weirdgloop.org', 'valheim.gaming.tools', 'MaxDPS', 'npm run scrape']);
@@ -28,7 +28,7 @@ function scan(file: string) {
     ts.forEachChild(node, dictionary);
   }
   function walk(node: ts.Node) {
-    if (ts.isCallExpression(node) && ['t', 'gameText'].includes(node.expression.getText(ast)) && node.arguments[0]) literal(node.arguments[0]);
+    if (ts.isCallExpression(node) && ['t', 'tn', 'gameText'].includes(node.expression.getText(ast)) && node.arguments[0]) literal(node.arguments[0]);
     if (ts.isVariableDeclaration(node) && dictionaries.has(node.name.getText(ast)) && node.initializer) {
       literal(node.initializer);
       dictionary(node.initializer);
@@ -55,11 +55,26 @@ scanDirectory(root);
 for (const key of keys) assert.ok(catalog[key], `Missing UI message: ${key}`);
 const placeholders = (value: string) => [...value.matchAll(/\{(\w+)\}/g)].map(match => match[1]).sort();
 for (const language of languages) {
-  const missing = Object.keys(catalog).filter(key => !catalog[key][language.code]?.trim());
+  const missing = Object.keys(catalog).filter(key => {
+    const value = catalog[key][language.code];
+    return !value || !(typeof value === 'string' ? [value] : Object.values(value)).every(text => text?.trim());
+  });
   console.log(`i18n ${language.code}: ${missing.length} missing translations`);
   assert.deepEqual(missing, []);
   for (const [key, translations] of Object.entries(catalog)) {
-    assert.deepEqual(placeholders(translations[language.code]), placeholders(key), `${language.code}: ${key}`);
+    const value = translations[language.code]!;
+    for (const text of typeof value === 'string' ? [value] : Object.values(value)) {
+      assert.deepEqual(placeholders(text), placeholders(key), `${language.code}: ${key}`);
+    }
+    if (typeof value !== 'string') {
+      assert.deepEqual(Object.keys(value).sort(), new Intl.PluralRules(language.code).resolvedOptions().pluralCategories.sort());
+      for (const count of [0, 1, 2, 5, 21]) {
+        const values = Object.fromEntries(placeholders(key).map(token => [token, count]));
+        const text = tn(catalog, key, count, values, language.code);
+        assert.notEqual(text, key);
+        assert.doesNotMatch(text, /undefined|\[object Object\]|\{\w+\}/);
+      }
+    }
   }
 }
 assert.equal(translate('cs', 'Showing {count}', {}, { count: '12' }), 'Showing 12');
