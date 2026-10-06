@@ -166,6 +166,8 @@ export interface CalculationInput {
    *  unaware. Later hits are normal because the target is then backstab-immune
    *  for five minutes. */
   backstab?: boolean;
+  /** Apply the 2x damage bonus while the target is staggered. */
+  staggered?: boolean;
 }
 
 export interface DamageLine {
@@ -271,7 +273,7 @@ export function calculate(input: CalculationInput): CalculationResult {
     const tier = target.resistances[type] ?? "neutral";
     const multiplier = RESISTANCE_MULTIPLIER[tier as keyof typeof RESISTANCE_MULTIPLIER] ?? 1;
     const effective =
-      base * skill * profile.damageMult * multiplier * openingMult;
+      base * skill * profile.damageMult * multiplier * openingMult * (input.staggered ? 2 : 1);
     lines.push({ type, label: DAMAGE_LABEL[type], base, tier, multiplier, effective });
   }
 

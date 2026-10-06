@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import vm from 'node:vm';
+import * as playerCore from '../shared/player/core.js';
 import { buildDataBundle } from './build-data.mjs';
 
 const read = file => readFileSync(new URL('../' + file, import.meta.url), 'utf8');
@@ -65,11 +66,13 @@ test('rendered cards link to their displayed biome and target in the same window
     },
   });
   context.window = context;
+  // Supply the module imports to the synchronous VM rendering harness.
+  Object.assign(context, playerCore);
   vm.runInContext(read('shared/i18n/core.js'), context);
   vm.runInContext(read('apps/bestiary/assets/messages.js'), context);
   vm.runInContext(read('apps/bestiary/data/data.js'), context);
   vm.runInContext(read('apps/bestiary/assets/extras.js'), context);
-  const source = read('apps/bestiary/assets/app.js').replace(
+  const source = read('apps/bestiary/assets/app.js').replace(/^import .*;$/gm, '').replace(
     "  if (document.readyState === 'loading')",
     "  globalThis.createCreatureCard = createCreatureCard;\n  if (document.readyState === 'loading')"
   );

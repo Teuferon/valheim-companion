@@ -22,6 +22,7 @@ COPY deploy/security-headers.conf /etc/nginx/snippets/security-headers.conf
 COPY apps/hub/ /usr/share/nginx/html/
 COPY shared/i18n/ /usr/share/nginx/html/shared/i18n/
 COPY shared/analytics/ /usr/share/nginx/html/shared/analytics/
+COPY shared/player/core.js /usr/share/nginx/html/shared/player/core.js
 COPY apps/bestiary/index.html /usr/share/nginx/html/bestiary/
 COPY apps/bestiary/assets/ /usr/share/nginx/html/bestiary/assets/
 COPY apps/bestiary/data/data.js /usr/share/nginx/html/bestiary/data/data.js

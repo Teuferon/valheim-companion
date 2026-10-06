@@ -1,5 +1,7 @@
+import { SKILLS, DIFFICULTY, SET_BONUSES, DEFAULT_PLAYER, effectiveSkill } from '../../../shared/player/core.js';
+
 // Shared calculation core for Valheim Companion (VC-5).
-// Classic script without import/export, exposes globalThis.VCRank.
+// Module exposing globalThis.VCRank for the Bestiary UI and Node tooling.
 // Follows docs/ANALYZA.md § 4, § 5, § 9 and docs/DATA-SCHEMA.md.
 
 (() => {
@@ -53,37 +55,6 @@
     'pickaxe',
   ];
 
-  const SKILLS = [
-    { id: 'swords', name: 'Swords' },
-    { id: 'knives', name: 'Knives' },
-    { id: 'clubs', name: 'Clubs' },
-    { id: 'polearms', name: 'Polearms' },
-    { id: 'spears', name: 'Spears' },
-    { id: 'axes', name: 'Axes' },
-    { id: 'fists', name: 'Fists' },
-    { id: 'bows', name: 'Bows' },
-    { id: 'crossbows', name: 'Crossbows' },
-    { id: 'elemental-magic', name: 'Elemental magic' },
-    { id: 'blood-magic', name: 'Blood magic' },
-    { id: 'pickaxes', name: 'Pickaxes' },
-  ];
-
-  const DIFFICULTY = {
-    veryeasy: 1.25,
-    easy: 1.1,
-    normal: 1,
-    hard: 0.85,
-    veryhard: 0.7,
-  };
-
-  const SET_BONUSES = {
-    root: { type: 'skill', skill: 'bows', amount: 15 },
-    lox: { type: 'skill', skill: 'bows', amount: 15 },
-    fenris: { type: 'skill', skill: 'fists', amount: 15 },
-    bear: { type: 'damage', types: ['slash', 'chop'], amount: 0.1 },
-    vanguard: { type: 'damage', types: ['pierce'], amount: 0.1 },
-  };
-
   // Attack timing constants from Damage Calculator (VC-11)
   const BOW_DRAW_BASE = 2.5;
   const BOW_DRAW_PER_SKILL = 0.02;
@@ -104,30 +75,6 @@
     'flesh-rippers': 6,
   };
 
-  const DEFAULT_PLAYER = {
-    skills: {
-      swords: 50,
-      knives: 50,
-      clubs: 50,
-      polearms: 50,
-      spears: 50,
-      axes: 50,
-      fists: 50,
-      bows: 50,
-      crossbows: 50,
-      'elemental-magic': 50,
-      'blood-magic': 50,
-      pickaxes: 50,
-    },
-    difficulty: 'normal',
-    players: 1,
-    quality: 'max',
-    sets: [],
-    sneak: false,
-    staggered: false,
-    rankBy: 'dps',
-  };
-
   const byCodepoint = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 
   function capitalize(s) {
@@ -143,20 +90,6 @@
     const max = Math.round(Math.min(0.55 + 0.006 * l, 1.0) * 1e6) / 1e6;
     const avg = Math.round(((min + max) / 2) * 1e6) / 1e6;
     return { min, max, avg };
-  }
-
-  // Effective skill level with armor set bonuses, capped at 100
-  function effectiveSkill(player, skill) {
-    if (!skill) return 0;
-    let val = player?.skills?.[skill] ?? 50;
-    const sets = Array.isArray(player?.sets) ? player.sets : [];
-    if (skill === 'bows') {
-      if (sets.includes('root')) val += 15;
-      if (sets.includes('lox')) val += 15;
-    } else if (skill === 'fists') {
-      if (sets.includes('fenris')) val += 15;
-    }
-    return Math.min(100, Math.max(0, val));
   }
 
   // Backstab multiplier: explicit weapon value, slug exception, else category default, else 3.

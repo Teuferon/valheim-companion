@@ -5,11 +5,11 @@
  * client, so every selection that changes the numbers on screen — biome,
  * target, weapon, class filter, upgrade level, skill level and roll, attack,
  * enemy state and chosen ammo — is mirrored into the URL. A copied link
- * therefore reproduces the exact ranking and the exact figures the sender
- * sees, and the address bar stays bookmarkable as the user adjusts anything.
+ * therefore reproduces the selected calculation, and the address bar stays bookmarkable as the user adjusts anything.
  *
- * Defaults are omitted so a link only carries what the sender actually
- * changed: a plain view stays `?biome=…&target=…`.
+ * Defaults are omitted in plain views; shared links include calculation
+ * controls explicitly so a recipient profile cannot change the numbers.
+ * A plain view stays `?biome=…&target=…`.
  *
  * Everything read out of a URL is validated against the committed datasets and
  * dropped when it does not match, so a stale or hand-edited link degrades to
@@ -43,6 +43,8 @@ export interface ViewState {
   attack: AttackKind;
   /** True when the enemy is unaware, so the first hit backstabs. */
   backstab: boolean;
+  /** Apply the stagger damage bonus. Optional for older callers. */
+  staggered?: boolean;
   /** Chosen arrow slug, or null for the best reachable one. */
   arrow: string | null;
   /** Chosen bolt slug, or null for the best reachable one. */
@@ -58,6 +60,7 @@ export const VIEW_DEFAULTS = {
   roll: "avg" as SkillMode,
   attack: "primary" as AttackKind,
   backstab: false,
+  staggered: false,
 } as const;
 
 /** Query parameter names. Short and stable — these end up in shared links. */
@@ -131,8 +134,10 @@ export function parseViewQuery(search: string): ParsedView {
   }
 
   const enemy = params.get(VIEW_PARAMS.enemy);
-  if (enemy === "unalerted") out.backstab = true;
-  else if (enemy === "alerted") out.backstab = false;
+  if (["alerted", "unalerted", "staggered", "unalerted-staggered"].includes(enemy ?? "")) {
+    out.backstab = enemy === "unalerted" || enemy === "unalerted-staggered";
+    out.staggered = enemy === "staggered" || enemy === "unalerted-staggered";
+  }
 
   const arrow = params.get(VIEW_PARAMS.arrow);
   if (arrow && ARROW_SLUGS.has(arrow)) out.arrow = arrow;
@@ -149,35 +154,39 @@ export function parseViewQuery(search: string): ParsedView {
  * Biome and target are always written even when they match the defaults: the
  * biome is normally remembered per browser in localStorage, so a link that
  * omitted it would open on whatever the recipient last used. Everything else
- * is written only when it differs from the default, so an untouched view stays
- * short and old links keep working.
+ * is normally written only when it differs from the default. explicitControls
+ * includes even default values when a recipient profile could change them.
  */
-export function viewSearch(view: ViewState): string {
+export function viewSearch(view: ViewState, explicitControls = false): string {
   const params = new URLSearchParams();
   params.set(VIEW_PARAMS.biome, view.biome);
   params.set(VIEW_PARAMS.target, view.target);
   if (view.weapon) params.set(VIEW_PARAMS.weapon, view.weapon);
   if (view.cls !== "all") params.set(VIEW_PARAMS.cls, view.cls);
-  if (view.level !== VIEW_DEFAULTS.level) {
+  if (explicitControls || view.level !== VIEW_DEFAULTS.level) {
     params.set(VIEW_PARAMS.level, String(view.level));
   }
-  if (view.skill !== VIEW_DEFAULTS.skill) {
+  if (explicitControls || view.skill !== VIEW_DEFAULTS.skill) {
     params.set(VIEW_PARAMS.skill, String(view.skill));
   }
   if (view.roll !== VIEW_DEFAULTS.roll) params.set(VIEW_PARAMS.roll, view.roll);
   if (view.attack !== VIEW_DEFAULTS.attack) {
     params.set(VIEW_PARAMS.attack, view.attack);
   }
-  if (view.backstab) params.set(VIEW_PARAMS.enemy, "unalerted");
+  if (explicitControls || view.backstab || view.staggered) {
+    params.set(VIEW_PARAMS.enemy, view.backstab
+      ? (view.staggered ? "unalerted-staggered" : "unalerted")
+      : (view.staggered ? "staggered" : "alerted"));
+  }
   if (view.arrow) params.set(VIEW_PARAMS.arrow, view.arrow);
   if (view.bolt) params.set(VIEW_PARAMS.bolt, view.bolt);
   return params.toString();
 }
 
-/** Absolute, copyable URL for a view. Client-only: it reads window.location. */
+/** Copyable URL with explicit controls, including defaults. Client-only. */
 export function buildViewUrl(view: ViewState): string {
   const { origin, pathname } = window.location;
-  return `${origin}${pathname}?${viewSearch(view)}`;
+  return `${origin}${pathname}?${viewSearch(view, true)}`;
 }
 
 /* ------------------------------------------------------------------ *
@@ -190,20 +199,15 @@ export function buildViewUrl(view: ViewState): string {
  * our own state back out is a plain external-system write.
  * ------------------------------------------------------------------ */
 
-const listeners = new Set<() => void>();
-
-const notify = () => {
-  for (const listener of listeners) listener();
-};
-
-/** Subscribe to URL changes: our own writes, plus back/forward navigation. */
+/** Only navigation supplies overrides. Our own mirrored defaults must not
+ * become incoming overrides that pin one class's skill for every weapon. */
 export function subscribeViewUrl(onChange: () => void): () => void {
-  listeners.add(onChange);
-  window.addEventListener("popstate", onChange);
-  return () => {
-    listeners.delete(onChange);
-    window.removeEventListener("popstate", onChange);
+  const onPopstate = () => {
+    incomingSearch = window.location.search;
+    onChange();
   };
+  window.addEventListener("popstate", onPopstate);
+  return () => window.removeEventListener("popstate", onPopstate);
 }
 
 /**
@@ -218,18 +222,17 @@ export function subscribeViewUrl(onChange: () => void): () => void {
 export const INITIAL_VIEW_SEARCH =
   typeof window === "undefined" ? "" : window.location.search;
 
-/** Browser snapshot: the current query string. A string compares by value, so
- *  useSyncExternalStore sees a stable snapshot between writes. */
-export const viewUrlSnapshot = (): string => window.location.search;
+/** Incoming query at load or navigation. Mirrored values remain output only. */
+let incomingSearch = INITIAL_VIEW_SEARCH;
+export const viewUrlSnapshot = (): string => incomingSearch;
 
 /** Snapshot for the prerender and the hydration pass: no view yet. */
 export const viewUrlServerSnapshot = (): string => "";
 
 /** Mirror a view into the address bar. replaceState, not pushState: adjusting
  *  a filter should not fill up the back button. */
-export function replaceViewUrl(view: ViewState): void {
-  const next = `?${viewSearch(view)}`;
+export function replaceViewUrl(view: ViewState, explicitControls = false): void {
+  const next = `?${viewSearch(view, explicitControls)}`;
   if (window.location.search === next) return;
   window.history.replaceState(null, "", `${window.location.pathname}${next}`);
-  notify();
 }

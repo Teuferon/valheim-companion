@@ -49,6 +49,8 @@ export const DEFAULT_GUIDE_OPTIONS: GuideOptions = {
 export interface GuideOptions {
   /** Weapon skill level, 0–100, exactly like the calculator's. */
   skillLevel: number;
+  /** Class-specific skill when the shared player profile is active. */
+  skillFor?: (weapon: Weapon) => number;
   /** Which roll of the skill factor to use. */
   skillMode: SkillMode;
 }
@@ -183,7 +185,7 @@ function bestAmmoFor(
       ammo,
       quality,
       target: gate,
-      skillLevel: options.skillLevel,
+      skillLevel: options.skillFor?.(weapon) ?? options.skillLevel,
       skillMode: options.skillMode,
       attack: "primary",
     });
@@ -222,7 +224,7 @@ export function buildGuideStep(
           ammo,
           quality,
           target: gate,
-          skillLevel: options.skillLevel,
+          skillLevel: options.skillFor?.(weapon) ?? options.skillLevel,
           skillMode: options.skillMode,
           attack: "primary",
         }),

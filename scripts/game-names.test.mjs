@@ -4,6 +4,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { createRequire } from 'node:module';
 import vm from 'node:vm';
+import * as playerCore from '../shared/player/core.js';
 
 const read = path => readFileSync(path, 'utf8');
 const languages = JSON.parse(read('shared/i18n/languages.json'));
@@ -96,6 +97,8 @@ function staticApp(app, locale) {
   const context = vm.createContext({ console, document, URLSearchParams,
     localStorage: { getItem: key => stored.get(key) ?? null, setItem: (key, value) => stored.set(key, value) } });
   context.window = context;
+  // Supply the module imports to the synchronous VM rendering harness.
+  Object.assign(context, playerCore);
   context.addEventListener = () => {};
   context.location = { hash: '', href: 'https://example.test/' };
   vm.runInContext(read('shared/i18n/core.js'), context);
@@ -109,7 +112,7 @@ function staticApp(app, locale) {
     }
   };
   prohibitLocalizedNames(context.VC_DATA ?? context.VA_DATA);
-  let source = read(`apps/${app}/assets/app.js`);
+  let source = read(`apps/${app}/assets/app.js`).replace(/^import .*;$/gm, '');
   if (app === 'bestiary') {
     vm.runInContext(read('apps/bestiary/assets/extras.js'), context);
     source = source.replace("  if (document.readyState === 'loading')", '  globalThis.renderers = { createCreatureCard, createWeaponRowBtn, openWeaponModal, biomeName, normalizeSearch };\n  if (document.readyState === \'loading\')');

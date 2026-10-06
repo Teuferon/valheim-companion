@@ -1,3 +1,5 @@
+import type { SkillId } from "../../../../shared/player/core";
+
 /** Weapon classes shared by the scraper output and the damage engine. */
 export type WeaponClass =
   | "axe"
@@ -72,3 +74,15 @@ export const WEAPON_CLASS_ORDER: WeaponClass[] = [
   "missile",
   "siege",
 ];
+/** Bestiary skill IDs, including classes that do not scale with a skill. */
+const CLASS_SKILLS: Record<WeaponClass, SkillId | null> = {
+  axe: "axes", battleaxe: "axes", "dual-axe": "axes",
+  club: "clubs", sledge: "clubs",
+  sword: "swords", greatsword: "swords",
+  knife: "knives", spear: "spears", atgeir: "polearms",
+  fists: "fists", bow: "bows", crossbow: "crossbows",
+  staff: "elemental-magic", "blood-staff": "blood-magic",
+  pickaxe: "pickaxes", bomb: null, missile: null, siege: null,
+};
+
+export const skillOfClass = (cls: WeaponClass): SkillId | null => CLASS_SKILLS[cls];
