@@ -43,10 +43,10 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | VC-14 | úklid (bomby, Root, brnění po kvalitách, DLC/seasonal, MIME manifestu) | agy | ✅ |
 | VC-15 | úklid (koruny bez vylepšení, `neutral` v kalkulačce, collation ve scraperu) | zai + agy | ✅ |
 | VC-16 | sdílené jádro i18n (13 jazyků, `vc.language`), rozcestník přeložený, Runopis napojený | agy | ✅ |
-| **VC-28** | Google Analytics 4 (G-CXQVNCCJKE) s lištou souhlasu, CSP, stránka Privacy | agy | 🔄 běží (worktree `../valheim-units-GL`) |
-| **VC-17** | Bestiary + Armourer v 13 jazycích, místní názvy z jazykových odkazů wiki, UX opravy Armouru | Sol | 🔄 běží (worktree `../valheim-units-CS`) |
-| **VC-18** | Damage Calculator v 13 jazycích + místní názvy | — | ⏳ fronta 3 |
-| **VC-23** | Armourer: zbraně, štíty a nástroje v košíku, „Can't be teleported“, kalkulačka tavení, deep link | — | ⏳ fronta 4 |
+| VC-28 | Google Analytics 4 (G-CXQVNCCJKE) s lištou souhlasu, CSP, stránka Privacy | agy | ✅ ověřeno na živém webu (bez souhlasu jen `gcs=G100` bez cookies, po Allow `_ga`) |
+| VC-17 | Bestiary + Armourer v 13 jazycích, místní názvy z wiki, UX opravy Armouru | Sol | ✅ |
+| **VC-18** | Damage Calculator v 13 jazycích + místní názvy | Sol | 🔄 běží (`../valheim-units-CS`) |
+| **VC-23** | Armourer: zbraně, štíty a nástroje v košíku, „Can't be teleported“, kalkulačka tavení, deep link | agy | 🔄 běží (`../valheim-units-GL`) |
 | **VC-24** | Bestiary: trofeje, ochočování, nájezdy, sdílení profilu, deep link na jednotku | — | ⏳ fronta 5 |
 | **VC-25** | Damage Calculator: sdílený profil hráče (`shared/player`), odkaz z Bestiary | — | ⏳ fronta 6 |
 | **VC-26** | Sign Editor: galerie šablon, sdílení cedule v URL | — | ⏳ fronta 7 |
@@ -57,18 +57,20 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | **VC-22** | stránka Provisions `/provisions/` | — | ⏳ fronta 12 |
 
 ### Po frontě
-Pavel 6. 10. schválil pořadí: překlady (VC-16 až VC-18), **vylepšení stávajících nástrojů** (VC-23 až VC-27), potom **Progress Tracker** a **Provisions** (VC-19 až VC-22). Další kandidáti z [`NAVRHY-NASTROJU.md`](NAVRHY-NASTROJU.md): Comfort Planner, Expedition, Trader Ledger, Fishing, Taming. Zatím nejsou schválené.
+Pracovníci od 6. 10.: agy do vyčerpání, pak **Codex Sol**. Pavel 6. 10. schválil pořadí: překlady (VC-16 až VC-18), **vylepšení stávajících nástrojů** (VC-23 až VC-27), potom **Progress Tracker** a **Provisions** (VC-19 až VC-22). Další kandidáti z [`NAVRHY-NASTROJU.md`](NAVRHY-NASTROJU.md): Comfort Planner, Expedition, Trader Ledger, Fishing, Taming. Zatím nejsou schválené.
 
 **Zásada:** každý nový nástroj a funkce je od začátku ve 13 jazycích (ANALYZA § 15 a zásada před § 16).
 
 ## Známé drobnosti (neřešené)
+
+- Čeština: chybí množná čísla („1 hráčů“). Řešit plural pravidly v `shared/i18n` (`Intl.PluralRules`) při další i18n úloze.
 
 - Ember Charge je jediná doporučovaná bomba. Ostatní bomby mají `recommendable: false`, protože wiki neuvádí plošné poškození.
 - Popisy z wiki zůstanou po překladu anglicky (ANALYZA § 15).
 
 ## Google Analytics
 
-Služba „Valheim Companion“ v účtu Pawlig, Measurement ID **G-CXQVNCCJKE**, stream „Valheim Companion web“ (16052418584). Měření se nasadí ve VC-28 (Consent Mode v2 + lišta, ANALYZA § 19). Data se v GA objeví do 48 h od nasazení.
+Služba „Valheim Companion“ v účtu Pawlig, Measurement ID **G-CXQVNCCJKE**, stream „Valheim Companion web“ (16052418584). Nasazeno 6. 10. 2026 (VC-28, Consent Mode v2 + lišta, ANALYZA § 19). Data se v GA objeví do 48 h.
 
 ## Na Pavlovi
 
