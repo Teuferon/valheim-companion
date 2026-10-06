@@ -15,6 +15,10 @@
 !apps/smithy/assets/
 !apps/smithy/data/data.js
 !apps/smithy/img/
+!apps/progress/index.html
+!apps/progress/assets/
+!apps/progress/data/data.js
+!apps/progress/locales/messages.js
 !apps/signs/
 !apps/damage-calculator/
 apps/signs/node_modules/

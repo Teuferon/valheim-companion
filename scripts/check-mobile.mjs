@@ -9,9 +9,10 @@ if (!Number.isInteger(port) || port < 1 || port > 65535) {
   throw new Error('Expected a preview server port between 1 and 65535');
 }
 const origin = `http://localhost:${port}`;
-const pages = ['/', '/bestiary/', '/smithy/', '/signs/', '/damage-calculator/', '/privacy/'];
+const pages = ['/', '/bestiary/', '/smithy/', '/signs/', '/damage-calculator/', '/privacy/', '/progress/'];
 const languages = JSON.parse(readFileSync(new URL('../shared/i18n/languages.json', import.meta.url), 'utf8'));
 const biomes = ['meadows', 'black-forest', 'ocean', 'swamp'];
+const progressBiomes = JSON.parse(readFileSync(new URL('../data/biomes.json', import.meta.url), 'utf8')).map(biome => biome.id);
 const browser = await launchClean({ headless: true, profileRoot: fileURLToPath(new URL('../', import.meta.url)) });
 let cdp;
 let failures = 0;
@@ -29,7 +30,9 @@ try {
       source: `if (location.origin === ${JSON.stringify(origin)}) {
         localStorage.clear();
         localStorage.setItem('vc.language', ${JSON.stringify(code)});
-        localStorage.setItem('vc.openBiomes', ${JSON.stringify(JSON.stringify(biomes))});
+        localStorage.setItem('vc.openBiomes', location.pathname === '/progress/'
+          ? ${JSON.stringify(JSON.stringify(progressBiomes))}
+          : ${JSON.stringify(JSON.stringify(biomes))});
       }`,
     });
     try {
@@ -78,7 +81,7 @@ try {
       await cdp.send('Page.removeScriptToEvaluateOnNewDocument', { identifier });
     }
   }
-  console.log(`\n${checked} pages checked (6 routes × ${languages.length} languages), ${failures} pages with scrollWidth > 360.`);
+  console.log(`\n${checked} pages checked (${pages.length} routes × ${languages.length} languages), ${failures} pages with scrollWidth > 360.`);
   const errorCount = errors.consoleErrors.length + errors.exceptions.length + errors.failedRequests.length;
   console.log(`Browser errors: ${errorCount}`);
   if (errorCount) console.error(JSON.stringify(errors, null, 2));
