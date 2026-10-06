@@ -55,8 +55,8 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | VC-26 | Sign Editor: 22 šablon, galerie, sdílení `#sign=` | Sol | ✅ |
 | VC-27 | rozcestník: hledání napříč sekcemi (jen anglické názvy, zamčené biomy skryté) + oprava deep linku | agy | ✅ |
 | VC-19 | Progress Tracker `/progress/`, sdílený stav `vc.progress`, 15 milníků, sdílení `#p=` | Sol | ✅ |
-| **VC-20** | napojení Progress na Bestiary, Smithy, kalkulačku a rozcestník | Sol | 🔄 běží (`../valheim-units-CS`) | ⏳ fronta 10 |
-| **VC-21** | Provisions data (jídla, medoviny, feasty, stanice) + sdílený košík `shared/shopping` | — | ⏳ fronta 11 |
+| VC-20 | Bestiary, Smithy, kalkulačka a rozcestník se řídí sdíleným postupem | Sol | ✅ |
+| **VC-21** | Provisions data (jídla, medoviny, feasty, stanice) + sdílený košík `shared/shopping` | Sol | 🔄 běží (`../valheim-units-CS`) | ⏳ fronta 11 |
 | **VC-22** | stránka Provisions `/provisions/` | — | ⏳ fronta 12 |
 
 ### Po frontě
