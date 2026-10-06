@@ -31,10 +31,10 @@ export const PAGES = [
     filePath: path.join(REPO_ROOT, 'apps', 'smithy', 'index.html'),
     section: 'smithy',
     path: '/smithy/',
-    title: 'Armourer — Valheim Companion',
-    i18nTitle: 'Armourer — Valheim Companion',
+    title: 'Smithy — Valheim Companion',
+    i18nTitle: 'Smithy — Valheim Companion',
     description:
-      'Every Valheim armor set by biome. Pick pieces and upgrade levels and get the full material list — and where to farm it.',
+      'Every Valheim armor set, weapon and shield by biome. Pick pieces and upgrade levels and get the full material list, smelting plan and where to farm it.',
   },
   {
     filePath: path.join(REPO_ROOT, 'apps', 'damage-calculator', 'index.html'),

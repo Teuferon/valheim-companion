@@ -1,5 +1,5 @@
 /**
- * Armourer — Valheim Companion
+ * Smithy — Valheim Companion
  * Vanilla JS Application
  */
 (function (root, factory) {

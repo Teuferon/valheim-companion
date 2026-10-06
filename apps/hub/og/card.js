@@ -16,9 +16,9 @@
       bg: '../../bestiary/img/biomes/mistlands.png',
     },
     smithy: {
-      title: 'ARMOURER',
+      title: 'SMITHY',
       sub: 'Valheim Companion',
-      desc: 'Every Valheim armor set by biome. Pick pieces and upgrade levels and get the full material list — and where to farm it.',
+      desc: 'Every Valheim armor set, weapon and shield by biome. Pick pieces and upgrade levels and get the full material list, smelting plan and where to farm it.',
       bg: '../../bestiary/img/biomes/mountain.png',
     },
     'damage-calculator': {
