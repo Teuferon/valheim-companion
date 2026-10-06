@@ -41,7 +41,7 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | VC-12 | jednotné pořadí biomů | agy | ✅ |
 | VC-13 | Ko-fi, odebrán odkaz na GitHub z rozcestníku | agy | ✅ |
 | VC-14 | úklid (bomby, Root, brnění po kvalitách, DLC/seasonal, MIME manifestu) | agy | ✅ |
-| **VC-15** | úklid (koruny bez vylepšení, `neutral` v kalkulačce, collation ve scraperu) | zai | 🔄 **běží** (worktree `../valheim-units-GL`, větev `prace/VC-15`) |
+| **VC-15** | úklid (koruny bez vylepšení, `neutral` v kalkulačce, collation ve scraperu) | zai → agy | 🔄 bod 1 hotový, body 2–3 jako WIP (`ca810d2`); dokončuje agy od 13:26 (worktree `../valheim-units-GL`, větev `prace/VC-15`) |
 | **VC-16** | sdílené jádro i18n (13 jazyků, `vc.language`), rozcestník přeložený, Runopis napojený | — | ⏳ fronta 1 |
 | **VC-28** | Google Analytics 4 (G-CXQVNCCJKE) s lištou souhlasu, CSP, stránka Privacy | — | ⏳ hned po VC-16 |
 | **VC-17** | Bestiary + Armourer v 13 jazycích, místní názvy z jazykových odkazů wiki | — | ⏳ fronta 2 |
