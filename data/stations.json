@@ -153,6 +153,171 @@
     }
   },
   {
+    "id": "artisan-table",
+    "name": "Artisan Table",
+    "names": {
+      "cs": "Řemeslnický stůl",
+      "fr": "Table d'artisan",
+      "ru": "Стол ремесленника"
+    },
+    "type": "comfort",
+    "materials": [
+      {
+        "item": "dragon-tear",
+        "amount": 2
+      },
+      {
+        "item": "wood",
+        "amount": 10
+      }
+    ],
+    "unlock": {
+      "station": null,
+      "materials": [
+        "dragon-tear",
+        "wood"
+      ]
+    },
+    "biome": "mountain",
+    "tier": 5,
+    "wiki": "https://valheim.weirdgloop.org/w/Artisan_Table"
+  },
+  {
+    "id": "black-forge",
+    "name": "Black Forge",
+    "names": {
+      "cs": "Černá Kovárna",
+      "ru": "Черная кузница"
+    },
+    "type": "comfort",
+    "materials": [
+      {
+        "item": "black-marble",
+        "amount": 10
+      },
+      {
+        "item": "yggdrasil-wood",
+        "amount": 10
+      },
+      {
+        "item": "black-core",
+        "amount": 5
+      }
+    ],
+    "unlock": {
+      "station": "workbench",
+      "materials": [
+        "black-marble",
+        "yggdrasil-wood",
+        "black-core"
+      ]
+    },
+    "biome": "mistlands",
+    "tier": 7,
+    "wiki": "https://valheim.weirdgloop.org/w/Black_Forge"
+  },
+  {
+    "id": "forge",
+    "name": "Forge",
+    "names": {
+      "cs": "Kovárna",
+      "fr": "Forge",
+      "ru": "Кузница"
+    },
+    "type": "comfort",
+    "materials": [
+      {
+        "item": "stone",
+        "amount": 4
+      },
+      {
+        "item": "coal",
+        "amount": 4
+      },
+      {
+        "item": "wood",
+        "amount": 10
+      },
+      {
+        "item": "copper",
+        "amount": 6
+      }
+    ],
+    "unlock": {
+      "station": "workbench",
+      "materials": [
+        "stone",
+        "coal",
+        "wood",
+        "copper"
+      ]
+    },
+    "biome": "black-forest",
+    "tier": 2,
+    "wiki": "https://valheim.weirdgloop.org/w/Forge"
+  },
+  {
+    "id": "stonecutter",
+    "name": "Stonecutter",
+    "names": {
+      "cs": "Lamač kamene",
+      "fr": "Tailleur de pierre",
+      "ru": "Камнерез"
+    },
+    "type": "comfort",
+    "materials": [
+      {
+        "item": "wood",
+        "amount": 10
+      },
+      {
+        "item": "iron",
+        "amount": 2
+      },
+      {
+        "item": "stone",
+        "amount": 4
+      }
+    ],
+    "unlock": {
+      "station": "workbench",
+      "materials": [
+        "wood",
+        "iron",
+        "stone"
+      ]
+    },
+    "biome": "swamp",
+    "tier": 4,
+    "wiki": "https://valheim.weirdgloop.org/w/Stonecutter"
+  },
+  {
+    "id": "workbench",
+    "name": "Workbench",
+    "names": {
+      "cs": "Pracovní stůl",
+      "de": "Werkbank",
+      "fr": "Table de fabrication",
+      "ru": "Верстак"
+    },
+    "type": "comfort",
+    "materials": [
+      {
+        "item": "wood",
+        "amount": 10
+      }
+    ],
+    "unlock": {
+      "station": null,
+      "materials": [
+        "wood"
+      ]
+    },
+    "biome": "meadows",
+    "tier": 1,
+    "wiki": "https://valheim.weirdgloop.org/w/Workbench"
+  },
+  {
     "id": "cauldron",
     "name": "Cauldron",
     "names": {
@@ -611,170 +776,5 @@
     "stationLevel": 1,
     "levelIncrement": 1,
     "progressionLevel": 7
-  },
-  {
-    "id": "artisan-table",
-    "name": "Artisan Table",
-    "names": {
-      "cs": "Řemeslnický stůl",
-      "fr": "Table d'artisan",
-      "ru": "Стол ремесленника"
-    },
-    "type": "comfort",
-    "materials": [
-      {
-        "item": "dragon-tear",
-        "amount": 2
-      },
-      {
-        "item": "wood",
-        "amount": 10
-      }
-    ],
-    "unlock": {
-      "station": null,
-      "materials": [
-        "dragon-tear",
-        "wood"
-      ]
-    },
-    "biome": "mountain",
-    "tier": 5,
-    "wiki": "https://valheim.weirdgloop.org/w/Artisan_Table"
-  },
-  {
-    "id": "black-forge",
-    "name": "Black Forge",
-    "names": {
-      "cs": "Černá Kovárna",
-      "ru": "Черная кузница"
-    },
-    "type": "comfort",
-    "materials": [
-      {
-        "item": "black-marble",
-        "amount": 10
-      },
-      {
-        "item": "yggdrasil-wood",
-        "amount": 10
-      },
-      {
-        "item": "black-core",
-        "amount": 5
-      }
-    ],
-    "unlock": {
-      "station": "workbench",
-      "materials": [
-        "black-marble",
-        "yggdrasil-wood",
-        "black-core"
-      ]
-    },
-    "biome": "mistlands",
-    "tier": 7,
-    "wiki": "https://valheim.weirdgloop.org/w/Black_Forge"
-  },
-  {
-    "id": "forge",
-    "name": "Forge",
-    "names": {
-      "cs": "Kovárna",
-      "fr": "Forge",
-      "ru": "Кузница"
-    },
-    "type": "comfort",
-    "materials": [
-      {
-        "item": "stone",
-        "amount": 4
-      },
-      {
-        "item": "coal",
-        "amount": 4
-      },
-      {
-        "item": "wood",
-        "amount": 10
-      },
-      {
-        "item": "copper",
-        "amount": 6
-      }
-    ],
-    "unlock": {
-      "station": "workbench",
-      "materials": [
-        "stone",
-        "coal",
-        "wood",
-        "copper"
-      ]
-    },
-    "biome": "black-forest",
-    "tier": 2,
-    "wiki": "https://valheim.weirdgloop.org/w/Forge"
-  },
-  {
-    "id": "stonecutter",
-    "name": "Stonecutter",
-    "names": {
-      "cs": "Lamač kamene",
-      "fr": "Tailleur de pierre",
-      "ru": "Камнерез"
-    },
-    "type": "comfort",
-    "materials": [
-      {
-        "item": "wood",
-        "amount": 10
-      },
-      {
-        "item": "iron",
-        "amount": 2
-      },
-      {
-        "item": "stone",
-        "amount": 4
-      }
-    ],
-    "unlock": {
-      "station": "workbench",
-      "materials": [
-        "wood",
-        "iron",
-        "stone"
-      ]
-    },
-    "biome": "swamp",
-    "tier": 4,
-    "wiki": "https://valheim.weirdgloop.org/w/Stonecutter"
-  },
-  {
-    "id": "workbench",
-    "name": "Workbench",
-    "names": {
-      "cs": "Pracovní stůl",
-      "de": "Werkbank",
-      "fr": "Table de fabrication",
-      "ru": "Верстак"
-    },
-    "type": "comfort",
-    "materials": [
-      {
-        "item": "wood",
-        "amount": 10
-      }
-    ],
-    "unlock": {
-      "station": null,
-      "materials": [
-        "wood"
-      ]
-    },
-    "biome": "meadows",
-    "tier": 1,
-    "wiki": "https://valheim.weirdgloop.org/w/Workbench"
   }
 ]

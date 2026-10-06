@@ -67,6 +67,21 @@
         "biome": "ashlands",
         "tier": 8,
         "reason": "Pot Shard wiki: Ancient Pots inside Putrid Holes or Charred Ruins in Ashlands."
+      },
+      "Fir Cone": {
+        "biome": "black-forest",
+        "tier": 2,
+        "reason": "Comfort wiki maximum section: both Maypole and Yule Tree require visiting Black Forest. Fir Cone lists growing biomes, not the earliest natural acquisition; use the early Fir route."
+      },
+      "Pine Cone": {
+        "biome": "black-forest",
+        "tier": 2,
+        "reason": "Pine wiki: naturally found in Black Forest. Growing biomes in the seed infobox do not determine acquisition tier."
+      },
+      "Turnip": {
+        "biome": "swamp",
+        "tier": 4,
+        "reason": "Turnip wiki: seeds first found in Swamp. Preserve the existing Provisions item record and use its actual acquisition tier for Jack-O-Turnip."
       }
     }
   }

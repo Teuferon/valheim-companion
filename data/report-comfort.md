@@ -25,12 +25,12 @@ Pieces: 76; categories: 11; seasonal: 6.
 
 | Biome | Pieces unlocked here | Computed | Wiki | Difference |
 |---|---:|---:|---:|---:|
-| Meadows | 5 | 5 | 5 | 0 |
-| Black Forest | 17 | 13 | 13 | 0 |
+| Meadows | 4 | 5 | 5 | 0 |
+| Black Forest | 19 | 13 | 13 | 0 |
 | Ocean | 0 | 13 | 13 | 0 |
-| Swamp | 7 | 15 | 15 | 0 |
-| Mountain | 8 | 17 | 17 | 0 |
-| Plains | 13 | 19 | 19 | 0 |
+| Swamp | 8 | 15 | 15 | 0 |
+| Mountain | 9 | 17 | 17 | 0 |
+| Plains | 10 | 19 | 19 | 0 |
 | Mistlands | 9 | 20 | 20 | 0 |
 | Ashlands | 9 | 22 | 22 | 0 |
 | Deep North | 6 | 22 | 22 | 0 |
@@ -52,6 +52,9 @@ Pieces: 76; categories: 11; seasonal: 6.
 - Iron Pit: meadows, tier 1. Iron Pit and Hildir wiki: always available from Hildir in Meadows.
 - Charcoal Resin: ashlands, tier 8. Charcoal Resin drops from Scorched Tree; its wiki lists Ashlands.
 - Pot Shard: ashlands, tier 8. Pot Shard wiki: Ancient Pots inside Putrid Holes or Charred Ruins in Ashlands.
+- Fir Cone: black-forest, tier 2. Comfort wiki maximum section: both Maypole and Yule Tree require visiting Black Forest. Fir Cone lists growing biomes, not the earliest natural acquisition; use the early Fir route.
+- Pine Cone: black-forest, tier 2. Pine wiki: naturally found in Black Forest. Growing biomes in the seed infobox do not determine acquisition tier.
+- Turnip: swamp, tier 4. Turnip wiki: seeds first found in Swamp. Preserve the existing Provisions item record and use its actual acquisition tier for Jack-O-Turnip.
 
 ## Recipe fallbacks
 

@@ -199,8 +199,10 @@ export async function fetchComfort() {
     '- Hearth assumes a lit fire within eight meters by default. The planner can disable lit/heated conditions or the eight-meter bonus; general furniture placement within ten meters remains a player responsibility.',
     '- Ocean has no separate wiki maximum row and uses Black Forest. Snow Lantern is Deep North-tier because its documented recipe uses Snowballs from Ice; its durability warning is retained as a condition note.', ''];
   save('data/comfort.json', JSON.stringify(data, null, 2) + '\n');
-  save('data/items.json', JSON.stringify([...originalItems, ...additions], null, 2) + '\n');
-  save('data/stations.json', JSON.stringify([...stations, ...newStations], null, 2) + '\n');
+  // Match the existing pipelines' stable ordering without editing any record.
+  const sharedItems = [...originalItems, ...additions].sort((a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0);
+  save('data/items.json', JSON.stringify(sharedItems, null, 2) + '\n');
+  save('data/stations.json', JSON.stringify([...stations.filter(s => s.type !== 'provisions'), ...newStations, ...stations.filter(s => s.type === 'provisions')], null, 2) + '\n');
   save('data/comfort-tips.json', JSON.stringify(tips, null, 2) + '\n');
   save('data/report-comfort.md', lines.join('\n'));
   console.log(`Comfort: ${data.pieces.length} pieces, ${additions.length} new materials, ${newStations.length} new stations. Maxima: ${JSON.stringify(maxima)}`);

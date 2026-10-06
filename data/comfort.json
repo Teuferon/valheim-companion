@@ -1424,8 +1424,8 @@
         }
       ],
       "station": "workbench",
-      "biome": "meadows",
-      "tier": 1,
+      "biome": "swamp",
+      "tier": 4,
       "seasonal": true,
       "conditions": {
         "lit": false,
@@ -2437,8 +2437,8 @@
         }
       ],
       "station": "workbench",
-      "biome": "plains",
-      "tier": 6,
+      "biome": "black-forest",
+      "tier": 2,
       "seasonal": true,
       "conditions": {
         "lit": false,
@@ -2469,8 +2469,8 @@
         }
       ],
       "station": "workbench",
-      "biome": "plains",
-      "tier": 6,
+      "biome": "black-forest",
+      "tier": 2,
       "seasonal": true,
       "conditions": {
         "lit": false,
@@ -2505,8 +2505,8 @@
         }
       ],
       "station": "workbench",
-      "biome": "plains",
-      "tier": 6,
+      "biome": "mountain",
+      "tier": 5,
       "seasonal": true,
       "conditions": {
         "lit": false,

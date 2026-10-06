@@ -1424,8 +1424,8 @@ window.VCO_DATA = {
         }
       ],
       "station": "workbench",
-      "biome": "meadows",
-      "tier": 1,
+      "biome": "swamp",
+      "tier": 4,
       "seasonal": true,
       "conditions": {
         "lit": false,
@@ -2437,8 +2437,8 @@ window.VCO_DATA = {
         }
       ],
       "station": "workbench",
-      "biome": "plains",
-      "tier": 6,
+      "biome": "black-forest",
+      "tier": 2,
       "seasonal": true,
       "conditions": {
         "lit": false,
@@ -2469,8 +2469,8 @@ window.VCO_DATA = {
         }
       ],
       "station": "workbench",
-      "biome": "plains",
-      "tier": 6,
+      "biome": "black-forest",
+      "tier": 2,
       "seasonal": true,
       "conditions": {
         "lit": false,
@@ -2505,8 +2505,8 @@ window.VCO_DATA = {
         }
       ],
       "station": "workbench",
-      "biome": "plains",
-      "tier": 6,
+      "biome": "mountain",
+      "tier": 5,
       "seasonal": true,
       "conditions": {
         "lit": false,
@@ -3906,8 +3906,8 @@ window.VCO_DATA = {
         "ru": "Пихтовая шишка"
       },
       "image": "img/items/fir-cone.png",
-      "biome": "plains",
-      "tier": 6,
+      "biome": "black-forest",
+      "tier": 2,
       "sources": [
         {
           "text": "Fir trees",
@@ -4343,8 +4343,8 @@ window.VCO_DATA = {
         "ru": "Сосновая шишка"
       },
       "image": "img/items/pine-cone.png",
-      "biome": "plains",
-      "tier": 6,
+      "biome": "black-forest",
+      "tier": 2,
       "sources": [
         {
           "text": "Pine",
@@ -4924,8 +4924,8 @@ window.VCO_DATA = {
       "name": "Turnip",
       "provisions": true,
       "image": "../provisions/img/items/turnip.png",
-      "biome": "meadows",
-      "tier": 1,
+      "biome": "swamp",
+      "tier": 4,
       "sources": [
         {
           "text": "Turnip Seeds",

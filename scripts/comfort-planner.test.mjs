@@ -32,6 +32,10 @@ test('mandatory best build maximum at every biome', () => {
   }
   const all = data.biomes.map(b => b.id);
   assert.equal(core.comfortLevel(core.bestBuild(data, all, { seasonal: true }), data).total, 24);
+  const forestSeasonal = core.bestBuild(data, ['meadows', 'black-forest'], { seasonal: true });
+  assert.equal(core.comfortLevel(forestSeasonal, data).total, 15);
+  assert.ok(!forestSeasonal.includes('jack-o-turnip'), 'Turnips require Swamp progress');
+  assert.ok(forestSeasonal.includes('yule-tree'), 'Fir cones are available in Black Forest');
   assert.deepEqual(plain(core.bestBuild(data, [])), []);
 });
 test('upgrades respect Progress and seasonal setting and prefer lower cost', () => {
