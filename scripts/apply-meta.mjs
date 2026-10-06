@@ -1,4 +1,4 @@
-// Inserts or updates Open Graph, Twitter, favicon and manifest metadata in all apps/*/index.html files.
+// Inserts or updates Open Graph, Twitter, favicon, GA4 and manifest metadata in all apps/*/index.html files.
 // Idempotent: replaces the block between <!-- meta:start --> and <!-- meta:end -->.
 
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
@@ -14,6 +14,7 @@ export const PAGES = [
     section: 'hub',
     path: '/',
     title: 'Valheim Companion — tools for your Valheim journey',
+    i18nTitle: 'Valheim Companion — tools for your Valheim journey',
     description:
       'Spoiler-free bestiary with weaknesses and best weapons for your skills, armor shopping lists and a rich-text sign editor. Updated for Valheim 1.0 and the Deep North.',
   },
@@ -22,6 +23,7 @@ export const PAGES = [
     section: 'bestiary',
     path: '/bestiary/',
     title: 'Bestiary — Valheim Companion',
+    i18nTitle: 'Bestiary — Valheim Companion',
     description:
       'Every Valheim creature and boss by biome, spoiler-free. Stats per star level, weaknesses, and the best weapons for your skills — with hits to kill.',
   },
@@ -30,6 +32,7 @@ export const PAGES = [
     section: 'armourer',
     path: '/armourer/',
     title: 'Armourer — Valheim Companion',
+    i18nTitle: 'Armourer — Valheim Companion',
     description:
       'Every Valheim armor set by biome. Pick pieces and upgrade levels and get the full material list — and where to farm it.',
   },
@@ -49,6 +52,28 @@ export const PAGES = [
     description:
       'Write Valheim signs with colors, sizes and rich-text tags, see a live in-game preview and copy them straight into the game. 13 languages.',
   },
+  {
+    filePath: path.join(REPO_ROOT, 'apps', 'hub', 'privacy', 'index.html'),
+    section: 'privacy',
+    path: '/privacy/',
+    title: 'Privacy — Valheim Companion',
+    i18nTitle: 'Privacy — Valheim Companion',
+    description: 'Privacy policy and cookie preferences for Valheim Companion.',
+  },
+  {
+    filePath: path.join(REPO_ROOT, 'apps', 'progress', 'index.html'),
+    section: 'progress',
+    path: '/progress/',
+    title: 'Progress Tracker — Valheim Companion',
+    description: 'Track your Valheim progression, bosses and biomes.',
+  },
+  {
+    filePath: path.join(REPO_ROOT, 'apps', 'provisions', 'index.html'),
+    section: 'provisions',
+    path: '/provisions/',
+    title: 'Provisions — Valheim Companion',
+    description: 'Valheim food and mead planner.',
+  },
 ];
 
 function escapeHtml(str) {
@@ -65,6 +90,7 @@ export function readConfig() {
       siteUrl: '',
       siteName: 'Valheim Companion',
       locale: 'en_US',
+      gaMeasurementId: '',
     };
   }
   try {
@@ -75,6 +101,7 @@ export function readConfig() {
       siteUrl,
       siteName: parsed.siteName || 'Valheim Companion',
       locale: parsed.locale || 'en_US',
+      gaMeasurementId: parsed.gaMeasurementId || '',
     };
   } catch (err) {
     console.warn(`Warning: failed to read ${CONFIG_FILE}:`, err);
@@ -82,6 +109,7 @@ export function readConfig() {
       siteUrl: '',
       siteName: 'Valheim Companion',
       locale: 'en_US',
+      gaMeasurementId: '',
     };
   }
 }
@@ -90,10 +118,15 @@ export function generateMetaBlock(page, config, indent = '  ') {
   const siteUrl = (config.siteUrl || '').trim().replace(/\/+$/, '');
   const siteName = config.siteName || 'Valheim Companion';
   const locale = config.locale || 'en_US';
+  const gaMeasurementId = config.gaMeasurementId || '';
+
+  const titleTag = page.i18nTitle
+    ? `<title data-i18n="${escapeHtml(page.i18nTitle)}">${escapeHtml(page.title)}</title>`
+    : `<title>${escapeHtml(page.title)}</title>`;
 
   const lines = [
     '<!-- meta:start -->',
-    `<title>${escapeHtml(page.title)}</title>`,
+    titleTag,
     `<meta name="description" content="${escapeHtml(page.description)}">`,
   ];
 
@@ -138,8 +171,17 @@ export function generateMetaBlock(page, config, indent = '  ') {
     '<link rel="icon" type="image/svg+xml" href="/favicon.svg">',
     '<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">',
     '<link rel="manifest" href="/site.webmanifest">',
-    '<!-- meta:end -->',
   );
+
+  if (gaMeasurementId) {
+    lines.push(`<meta name="vc-ga" content="${escapeHtml(gaMeasurementId)}">`);
+  }
+  if (siteUrl) {
+    lines.push(`<meta name="vc-site" content="${siteUrl}">`);
+  }
+  lines.push('<script src="/shared/analytics/consent.js" defer></script>');
+
+  lines.push('<!-- meta:end -->');
 
   return lines.map((l) => `${indent}${l}`).join('\n');
 }
@@ -197,7 +239,6 @@ export function applyMeta() {
 
   for (const page of PAGES) {
     if (!existsSync(page.filePath)) {
-      console.error(`File not found: ${page.filePath}`);
       continue;
     }
 

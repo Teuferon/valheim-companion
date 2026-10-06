@@ -4,6 +4,8 @@
 !deploy/
 !shared/
 !shared/**
+!shared/analytics/
+!shared/analytics/**
 !apps/hub/
 !apps/bestiary/index.html
 !apps/bestiary/assets/
