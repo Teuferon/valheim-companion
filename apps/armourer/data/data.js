@@ -1,5 +1,5 @@
 window.VA_DATA = {
-  "generatedAt": "2026-10-06T07:25:30.986Z",
+  "generatedAt": "2026-10-06T09:10:45.987Z",
   "source": {
     "name": "Valheim Wiki",
     "url": "https://valheim.weirdgloop.org",
@@ -5033,7 +5033,7 @@ window.VA_DATA = {
                   "amount": 8
                 },
                 {
-                  "item": "root",
+                  "item": "roots",
                   "amount": 2
                 }
               ]
@@ -5053,7 +5053,7 @@ window.VA_DATA = {
                   "amount": 4
                 },
                 {
-                  "item": "root",
+                  "item": "roots",
                   "amount": 1
                 }
               ]
@@ -5073,7 +5073,7 @@ window.VA_DATA = {
                   "amount": 8
                 },
                 {
-                  "item": "root",
+                  "item": "roots",
                   "amount": 2
                 }
               ]
@@ -5093,7 +5093,7 @@ window.VA_DATA = {
                   "amount": 16
                 },
                 {
-                  "item": "root",
+                  "item": "roots",
                   "amount": 4
                 }
               ]
@@ -5128,7 +5128,7 @@ window.VA_DATA = {
                   "amount": 8
                 },
                 {
-                  "item": "root",
+                  "item": "roots",
                   "amount": 2
                 }
               ]
@@ -5148,7 +5148,7 @@ window.VA_DATA = {
                   "amount": 4
                 },
                 {
-                  "item": "root",
+                  "item": "roots",
                   "amount": 1
                 }
               ]
@@ -5168,7 +5168,7 @@ window.VA_DATA = {
                   "amount": 8
                 },
                 {
-                  "item": "root",
+                  "item": "roots",
                   "amount": 2
                 }
               ]
@@ -5188,7 +5188,7 @@ window.VA_DATA = {
                   "amount": 16
                 },
                 {
-                  "item": "root",
+                  "item": "roots",
                   "amount": 4
                 }
               ]
@@ -9851,9 +9851,37 @@ window.VA_DATA = {
       "image": "img/items/root.png",
       "biome": "swamp",
       "tier": 4,
-      "sources": [],
+      "sources": [
+        {
+          "text": "Abomination",
+          "kind": "creature",
+          "creatureId": "abomination",
+          "biomes": [
+            "swamp"
+          ]
+        }
+      ],
       "recipe": null,
-      "wiki": "https://valheim.weirdgloop.org/w/Root"
+      "wiki": "https://valheim.weirdgloop.org/w/Root_(item)"
+    },
+    "roots": {
+      "id": "roots",
+      "name": "Roots",
+      "image": "img/items/roots.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Abomination",
+          "kind": "creature",
+          "creatureId": "abomination",
+          "biomes": [
+            "swamp"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Root_(item)"
     },
     "sap": {
       "id": "sap",
