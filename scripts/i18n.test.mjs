@@ -1,0 +1,310 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+
+// 1. Simulate browser environment before loading scripts
+class MockStorage {
+  constructor() {
+    this.store = new Map();
+  }
+  getItem(key) {
+    return this.store.has(key) ? this.store.get(key) : null;
+  }
+  setItem(key, value) {
+    this.store.set(key, String(value));
+  }
+  removeItem(key) {
+    this.store.delete(key);
+  }
+  clear() {
+    this.store.clear();
+  }
+}
+
+const mockStorage = new MockStorage();
+globalThis.localStorage = mockStorage;
+
+const mockNavigator = {
+  languages: ['en'],
+  language: 'en',
+};
+Object.defineProperty(globalThis, 'navigator', {
+  value: mockNavigator,
+  configurable: true,
+  writable: true,
+});
+
+class MockElement {
+  constructor(tagName = 'div') {
+    this.tagName = tagName.toUpperCase();
+    this.attributes = new Map();
+    this.textContent = '';
+    this.children = [];
+    this.value = '';
+    this.listeners = new Map();
+  }
+  hasAttribute(name) {
+    return this.attributes.has(name);
+  }
+  getAttribute(name) {
+    return this.attributes.has(name) ? this.attributes.get(name) : null;
+  }
+  setAttribute(name, value) {
+    this.attributes.set(name, String(value));
+  }
+  removeAttribute(name) {
+    this.attributes.delete(name);
+  }
+  appendChild(child) {
+    this.children.push(child);
+  }
+  addEventListener(event, fn) {
+    if (!this.listeners.has(event)) this.listeners.set(event, new Set());
+    this.listeners.get(event).add(fn);
+  }
+  dispatchEvent(event) {
+    const list = this.listeners.get(event.type) || [];
+    for (const fn of list) fn(event);
+  }
+  querySelectorAll(selector) {
+    const results = [];
+    const attrMatch = selector.match(/^\[([a-zA-Z0-9_-]+)\]$/);
+    if (attrMatch) {
+      const attrName = attrMatch[1];
+      const traverse = (el) => {
+        for (const child of el.children) {
+          if (child.hasAttribute(attrName)) results.push(child);
+          traverse(child);
+        }
+      };
+      traverse(this);
+    }
+    return results;
+  }
+  querySelector(selector) {
+    const list = this.querySelectorAll(selector);
+    return list.length ? list[0] : null;
+  }
+}
+
+const docElement = new MockElement('html');
+docElement.lang = 'en';
+docElement.dir = 'ltr';
+
+globalThis.document = {
+  documentElement: docElement,
+  title: '',
+  createElement(tag) {
+    return new MockElement(tag);
+  },
+  querySelector(selector) {
+    if (selector === 'html') return docElement;
+    return docElement.querySelector(selector);
+  },
+  querySelectorAll(selector) {
+    return docElement.querySelectorAll(selector);
+  },
+};
+
+const windowListeners = new Map();
+globalThis.window = {
+  addEventListener(event, fn) {
+    if (!windowListeners.has(event)) windowListeners.set(event, new Set());
+    windowListeners.get(event).add(fn);
+  },
+  removeEventListener(event, fn) {
+    if (windowListeners.has(event)) windowListeners.get(event).delete(fn);
+  },
+  dispatchEvent(event) {
+    const list = windowListeners.get(event.type) || [];
+    for (const fn of list) fn(event);
+  },
+};
+
+// 2. Load the standalone scripts
+await import('../shared/i18n/languages.js');
+await import('../shared/i18n/core.js');
+
+const { VCI18n } = globalThis;
+
+test('VCI18n: 13 languages are defined with Arabic marked as RTL', () => {
+  assert.equal(VCI18n.languages.length, 13);
+  const ar = VCI18n.languages.find((l) => l.code === 'ar');
+  assert.ok(ar);
+  assert.equal(ar.rtl, true);
+  const cs = VCI18n.languages.find((l) => l.code === 'cs');
+  assert.equal(cs?.rtl, undefined);
+});
+
+test('VCI18n: migrates legacy runopis.language to vc.language', () => {
+  mockStorage.clear();
+  mockStorage.setItem(VCI18n.LEGACY_KEY, 'de');
+
+  const pref = VCI18n.getPreference();
+  assert.equal(pref, 'de');
+  assert.equal(mockStorage.getItem(VCI18n.STORAGE_KEY), 'de');
+
+  mockStorage.removeItem(VCI18n.LEGACY_KEY);
+  assert.equal(VCI18n.getPreference(), 'de');
+});
+
+test('VCI18n: auto preference resolves navigator.languages = [cs-CZ] to cs', () => {
+  mockStorage.clear();
+  VCI18n.setPreference('auto');
+  mockNavigator.languages = ['cs-CZ', 'en-US'];
+
+  assert.equal(VCI18n.locale(), 'cs');
+});
+
+test('VCI18n: unknown browser language falls back to en', () => {
+  mockStorage.clear();
+  VCI18n.setPreference('auto');
+  mockNavigator.languages = ['xx-YY', 'zz'];
+
+  assert.equal(VCI18n.locale(), 'en');
+});
+
+test('VCI18n: invalid stored preference returns auto', () => {
+  mockStorage.clear();
+  mockStorage.setItem(VCI18n.STORAGE_KEY, 'klingon');
+
+  assert.equal(VCI18n.getPreference(), 'auto');
+});
+
+test('VCI18n: translation fallback cascade (target -> en -> source)', () => {
+  const catalog = {
+    'Hello world': {
+      en: 'Hello world',
+      fr: 'Bonjour le monde',
+    },
+    'English only': {
+      en: 'English only',
+    },
+  };
+
+  VCI18n.setPreference('fr');
+  assert.equal(VCI18n.t(catalog, 'Hello world'), 'Bonjour le monde');
+  assert.equal(VCI18n.t(catalog, 'English only'), 'English only');
+  assert.equal(VCI18n.t(catalog, 'Not in catalog'), 'Not in catalog');
+});
+
+test('VCI18n: placeholder interpolation handles values and keeps missing tokens', () => {
+  const catalog = {
+    'Welcome {name}! You have {count} items. Missing: {missing}': {
+      en: 'Welcome {name}! You have {count} items. Missing: {missing}',
+    },
+  };
+
+  VCI18n.setPreference('en');
+  const result = VCI18n.t(
+    catalog,
+    'Welcome {name}! You have {count} items. Missing: {missing}',
+    { name: 'Viking', count: 42 },
+  );
+  assert.equal(
+    result,
+    'Welcome Viking! You have 42 items. Missing: {missing}',
+  );
+});
+
+test('VCI18n: name() uses localized names and falls back to base name when missing', () => {
+  VCI18n.setPreference('cs');
+  const localizedCreature = {
+    name: 'Boar',
+    names: { cs: 'Divočák', de: 'Wildschwein' },
+  };
+  assert.equal(VCI18n.name(localizedCreature), 'Divočák');
+
+  const creatureWithoutNames = { name: 'Wolf' };
+  assert.equal(VCI18n.name(creatureWithoutNames), 'Wolf');
+
+  const creatureWithMissingLocale = {
+    name: 'Deer',
+    names: { de: 'Hirsch' },
+  };
+  assert.equal(VCI18n.name(creatureWithMissingLocale), 'Deer');
+  assert.equal(VCI18n.name(null), '');
+});
+
+test('VCI18n: documentElement dir and lang are set correctly (rtl for ar, ltr otherwise)', () => {
+  VCI18n.setPreference('ar');
+  assert.equal(docElement.dir, 'rtl');
+  assert.equal(docElement.lang, 'ar');
+
+  VCI18n.setPreference('en');
+  assert.equal(docElement.dir, 'ltr');
+  assert.equal(docElement.lang, 'en');
+
+  VCI18n.setPreference('cs');
+  assert.equal(docElement.dir, 'ltr');
+  assert.equal(docElement.lang, 'cs');
+});
+
+test('VCI18n: apply(root) translates data-i18n text and data-i18n-attr attributes', () => {
+  globalThis.VC_MESSAGES = {
+    'Search items…': {
+      cs: 'Hledat předměty…',
+      en: 'Search items…',
+    },
+    'Quick filter': {
+      cs: 'Rychlý filtr',
+      en: 'Quick filter',
+    },
+    'Page title': {
+      cs: 'Titulek stránky',
+      en: 'Page title',
+    },
+  };
+
+  VCI18n.setPreference('cs');
+
+  const container = new MockElement('div');
+  const heading = new MockElement('h1');
+  heading.setAttribute('data-i18n', 'Quick filter');
+  heading.textContent = 'Quick filter';
+  container.appendChild(heading);
+
+  const input = new MockElement('input');
+  input.setAttribute(
+    'data-i18n-attr',
+    'placeholder:Search items…;title:Quick filter',
+  );
+  container.appendChild(input);
+
+  const titleEl = new MockElement('title');
+  titleEl.setAttribute('data-i18n', 'Page title');
+  titleEl.textContent = 'Page title';
+  container.appendChild(titleEl);
+
+  VCI18n.apply(container);
+
+  assert.equal(heading.textContent, 'Rychlý filtr');
+  assert.equal(input.getAttribute('placeholder'), 'Hledat předměty…');
+  assert.equal(input.getAttribute('title'), 'Rychlý filtr');
+  assert.equal(titleEl.textContent, 'Titulek stránky');
+});
+
+test('VCI18n: mountPicker creates select with auto and all 13 languages, reacting to changes', () => {
+  VCI18n.setPreference('es');
+
+  const container = new MockElement('div');
+  const picker = VCI18n.mountPicker(container);
+
+  assert.ok(picker);
+  assert.equal(picker.children.length, 14); // auto + 13
+  assert.equal(picker.children[0].value, 'auto');
+  assert.equal(picker.children[0].textContent, 'Auto (browser)');
+  assert.equal(picker.value, 'es');
+
+  let notified = null;
+  const unsubscribe = VCI18n.onChange((loc, pref) => {
+    notified = { loc, pref };
+  });
+
+  picker.value = 'de';
+  picker.dispatchEvent({ type: 'change', target: picker });
+
+  assert.deepEqual(notified, { loc: 'de', pref: 'de' });
+  assert.equal(VCI18n.getPreference(), 'de');
+
+  unsubscribe();
+});
