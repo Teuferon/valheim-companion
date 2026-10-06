@@ -1881,4 +1881,91 @@ body {
   }
 }
 
+/* VC-11: Timing, DPS, secondary badge, and character panel rank switch */
+.badge-secondary {
+  background-color: rgba(180, 140, 60, 0.25);
+  color: var(--accent-gold);
+  border: 1px solid rgba(180, 140, 60, 0.45);
+  font-size: 0.65rem;
+  padding: 1px 5px;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.weapon-subline {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.timing-estimate {
+  font-size: 0.75rem;
+  color: var(--accent-gold);
+  cursor: help;
+  font-weight: 600;
+}
+
+.char-rank-toggle {
+  display: inline-flex;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background-color: #12161b;
+}
+
+.rank-toggle-btn {
+  background: transparent;
+  color: var(--text-muted);
+  border: none;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.rank-toggle-btn.active {
+  background-color: var(--accent-gold);
+  color: #12161b;
+  font-weight: 700;
+}
+
+.rank-toggle-btn:not(.active):hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+}
+
+.weapon-your-dps {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--accent-gold);
+  white-space: nowrap;
+}
+
+.weapon-cycle {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.legend-calculator-link {
+  margin-top: 10px;
+  font-size: 0.85rem;
+}
+
+.legend-link {
+  color: var(--accent-gold);
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.legend-link:hover {
+  color: var(--accent-gold-hover);
+}
+
 
