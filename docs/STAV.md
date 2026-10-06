@@ -47,7 +47,7 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | VC-17 | Bestiary + Armourer v 13 jazycích, místní názvy z wiki, UX opravy Armouru | Sol | ✅ |
 | **VC-18** | Damage Calculator v 13 jazycích + místní názvy | Sol | 🔄 běží (`../valheim-units-CS`) |
 | **VC-23** | Armourer: zbraně, štíty a nástroje v košíku, „Can't be teleported“, kalkulačka tavení, deep link | agy | 🔄 běží (`../valheim-units-GL`) |
-| **VC-29** | názvy biomů vždy anglicky (zásada Pavla) | — | ⏳ po VC-18 a VC-23 |
+| **VC-29** | všechny názvy z hry vždy anglicky (zásada Pavla), překládá se jen UI | — | ⏳ po VC-18 a VC-23 |
 | **VC-24** | Bestiary: trofeje, ochočování, nájezdy, sdílení profilu, deep link na jednotku | — | ⏳ fronta 5 |
 | **VC-25** | Damage Calculator: sdílený profil hráče (`shared/player`), odkaz z Bestiary | — | ⏳ fronta 6 |
 | **VC-26** | Sign Editor: galerie šablon, sdílení cedule v URL | — | ⏳ fronta 7 |

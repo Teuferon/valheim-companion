@@ -390,4 +390,4 @@ Vychází z `docs/NAVRHY-NASTROJU.md` § „Menší vylepšení“. Platí zása
   - `img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com`
 - **Stránka Privacy** `/privacy/` (rozcestník, 13 jazyků): co se měří, proč, jak odvolat souhlas, žádné reklamy a žádný prodej dat, kontakt.
 
-> **Zásada (Pavel, 6. 10. 2026): názvy biomů se nepřekládají.** Meadows, Black Forest, Ocean, Swamp, Mountain, Plains, Mistlands, Ashlands a Deep North zůstávají anglicky ve všech jazycích a ve všech nástrojích (hlavičky, štítky, vyhledávání, OG). Názvy jednotek, zbraní a surovin se dál berou z jazykových wiki (`names`). Pokud se později doloží, že hra biomy oficiálně překládá, dá se to vrátit.
+> **Zásada (Pavel, 6. 10. 2026): názvy z hry se nepřekládají.** Jednotky, bossové, zbraně, munice, brnění, suroviny, jídla, stanice i biomy zůstávají **anglicky ve všech jazycích** a ve všech nástrojích, stejně jako je hráč zná ze hry. Překládá se jen rozhraní: popisky, tlačítka, nápovědy, legenda a věty kolem názvů. Data `names` z jazykových odkazů wiki (VC-17) mohou zůstat v datech, UI je ale ⛔ nepoužívá. Tato zásada ruší body § 15 o místních názvech.
