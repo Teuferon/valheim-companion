@@ -54,8 +54,8 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | VC-25 | Damage Calculator: sdílený profil hráče (`shared/player`), přepínač „Use my Bestiary profile“, URL má přednost | Sol | ✅ |
 | VC-26 | Sign Editor: 22 šablon, galerie, sdílení `#sign=` | Sol | ✅ |
 | VC-27 | rozcestník: hledání napříč sekcemi (jen anglické názvy, zamčené biomy skryté) + oprava deep linku | agy | ✅ |
-| **VC-19** | Progress Tracker: sdílený stav `vc.progress` + stránka `/progress/` | Sol | 🔄 běží (`../valheim-units-CS`) | ⏳ fronta 9 |
-| **VC-20** | napojení Progress na Bestiary, Armourer, kalkulačku a rozcestník | — | ⏳ fronta 10 |
+| VC-19 | Progress Tracker `/progress/`, sdílený stav `vc.progress`, 15 milníků, sdílení `#p=` | Sol | ✅ |
+| **VC-20** | napojení Progress na Bestiary, Smithy, kalkulačku a rozcestník | Sol | 🔄 běží (`../valheim-units-CS`) | ⏳ fronta 10 |
 | **VC-21** | Provisions data (jídla, medoviny, feasty, stanice) + sdílený košík `shared/shopping` | — | ⏳ fronta 11 |
 | **VC-22** | stránka Provisions `/provisions/` | — | ⏳ fronta 12 |
 
@@ -69,7 +69,7 @@ Pracovníci od 6. 10.: agy je vyčerpaný (týden 4 %, obnova 8. 10.), práci d�
 - Přesměrování `/armourer/` → `/smithy/` (a `/bestiary` → `/bestiary/`) vrací `Location: http://…` a teprve EasyPanel přesměruje na https (o jeden skok navíc, funkčně OK). `absolute_redirect off` v `deploy/nginx.conf` se po nasazení neprojevilo. Ověřit v EasyPanelu, jestli běží nejnovější image.
 
 
-- Čeština: chybí množná čísla („1 hráčů“). Řešit plural pravidly v `shared/i18n` (`Intl.PluralRules`) při další i18n úloze.
+- Množná čísla: čeština „1 hráčů“, angličtina „1 bosses defeated“. Řešit plural pravidly v `shared/i18n` (`Intl.PluralRules`) při další i18n úloze.
 
 - Ember Charge je jediná doporučovaná bomba. Ostatní bomby mají `recommendable: false`, protože wiki neuvádí plošné poškození.
 - Popisy z wiki zůstanou po překladu anglicky (ANALYZA § 15).
