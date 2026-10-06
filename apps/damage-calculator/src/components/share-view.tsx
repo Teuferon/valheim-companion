@@ -1,3 +1,4 @@
+import { useLanguage } from '@/hooks/use-language';
 
 import { useEffect, useId, useRef, useState } from "react";
 import { Check, Link2, Share2 } from "lucide-react";
@@ -52,6 +53,7 @@ export function ShareViewButton({
   view: ViewState;
   className?: string;
 }) {
+  const { t, formatCount } = useLanguage();
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const [url, setUrl] = useState("");
@@ -104,18 +106,18 @@ export function ShareViewButton({
   };
 
   const summary = [
-    BIOME_NAME[view.biome],
+    t(BIOME_NAME[view.biome]),
     TARGET_NAME.get(view.target) ?? view.target,
-    view.cls === "all" ? "All classes" : CLASS_LABELS[view.cls],
+    t(view.cls === "all" ? "All classes" : CLASS_LABELS[view.cls]),
   ].join(" · ");
 
   /* The settings that decide the numbers, spelled out so it is obvious what a
    * link is about to reproduce. Only the non-default ones are worth naming. */
   const settings = [
-    `★${view.level}`,
-    `skill ${view.skill}${view.roll === "avg" ? "" : ` (${view.roll} roll)`}`,
-    view.attack === "secondary" ? "secondary attack" : null,
-    view.backstab ? "unalerted enemy" : null,
+    `★${formatCount(view.level)}`,
+    t("Skill {level} ({roll})", { level: formatCount(view.skill), roll: t(view.roll === "min" ? "Min roll" : view.roll === "max" ? "Max roll" : "Average") }),
+    view.attack === "secondary" ? t("Secondary") : null,
+    view.backstab ? t("Unalerted") : null,
     ...[view.arrow, view.bolt]
       .filter((slug): slug is string => Boolean(slug))
       .map((slug) => AMMO_NAME.get(slug) ?? slug),
@@ -134,17 +136,18 @@ export function ShareViewButton({
         className="flex h-8 items-center gap-1.5 rounded-lg border border-input px-2.5 text-xs font-medium whitespace-nowrap transition-colors outline-none hover:bg-accent hover:text-accent-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50"
       >
         <Share2 className="size-3.5" />
-        Share
-      </button>
+        {t("Share")}
+            </button>
 
       {open ? (
         <div
           id={panelId}
           role="dialog"
-          aria-label="Copy a link to this view"
+          aria-label={t("Copy a link to this view")}
           className="absolute right-0 top-full z-50 mt-2 w-[min(24rem,calc(100vw-2rem))] rounded-xl border bg-popover p-3 text-popover-foreground shadow-md"
         >
-          <p className="text-xs font-medium">Copy a link to this view</p>
+          <p className="text-xs font-medium">{t("Copy a link to this view")}
+            </p>
           <p className="mt-0.5 text-[11px] leading-snug text-muted-foreground">
             {summary}
           </p>
@@ -156,7 +159,7 @@ export function ShareViewButton({
               ref={inputRef}
               readOnly
               value={url}
-              aria-label="Link to this view"
+              aria-label={t("Link to this view")}
               onFocus={(event) => event.currentTarget.select()}
               className="h-8 w-full min-w-0 flex-1 rounded-lg border border-input bg-transparent px-2.5 text-xs outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50"
             />
@@ -173,21 +176,17 @@ export function ShareViewButton({
               {copied ? (
                 <>
                   <Check className="size-3.5" />
-                  Copied
-                </>
+                  {t("Copied")}</>
               ) : (
                 <>
                   <Link2 className="size-3.5" />
-                  Copy
-                </>
+                  {t("Copy")}</>
               )}
             </button>
           </div>
           <p className="mt-2 text-[11px] leading-snug text-muted-foreground">
-            The link carries the whole view — biome, target, weapon and class
-            filter plus the upgrade level, skill, attack, enemy state and
-            ammo — so it opens on exactly these numbers.
-          </p>
+            {t("The link carries the whole view — biome, target, weapon and class filter plus the upgrade level, skill, attack, enemy state and ammo — so it opens on exactly these numbers.")}
+            </p>
         </div>
       ) : null}
     </div>

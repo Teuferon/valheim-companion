@@ -1,3 +1,4 @@
+import { useLanguage } from '@/hooks/use-language';
 
 import { useState, useSyncExternalStore } from "react";
 import { Mountain } from "lucide-react";
@@ -68,6 +69,7 @@ export function BiomeSlider({
   visibleTargets: number;
   totalTargets: number;
 }) {
+  const { t, formatCount } = useLanguage();
   const index = biomeIndex(value);
   const biome = BIOMES[index];
 
@@ -77,16 +79,18 @@ export function BiomeSlider({
         <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
           <Label className="flex items-center gap-1.5 text-[11px] tracking-wide text-muted-foreground uppercase">
             <Mountain className="size-3" />
-            Progression — up to which biome
-          </Label>
+            {t("Progression — up to which biome")}
+            </Label>
           <span className="text-sm">
             <span className="font-heading font-semibold tracking-wide">
-              {biome.name}
+              {t(biome.name)}
             </span>
             {bossName ? (
-              <span className="text-muted-foreground"> · boss: {bossName}</span>
+              <span className="text-muted-foreground"> {t(" · boss: {boss}", { boss: bossName })}
+            </span>
             ) : (
-              <span className="text-muted-foreground"> · no Forsaken</span>
+              <span className="text-muted-foreground"> {t("· no Forsaken")}
+            </span>
             )}
           </span>
         </div>
@@ -108,7 +112,7 @@ export function BiomeSlider({
               const picked = typeof raw === "number" ? BIOMES[raw] : undefined;
               if (picked) onChange(picked.id);
             }}
-            aria-label="Progression biome"
+            aria-label={t("Progression biome")}
           />
         </div>
 
@@ -118,7 +122,7 @@ export function BiomeSlider({
               key={entry.id}
               type="button"
               onClick={() => onChange(entry.id)}
-              title={entry.note ?? entry.name}
+              title={t(entry.note ?? entry.name)}
               className={cn(
                 "flex-1 truncate text-[10px] transition-colors",
                 position === index
@@ -128,22 +132,13 @@ export function BiomeSlider({
                     : "text-muted-foreground/50 hover:text-muted-foreground",
               )}
             >
-              {entry.name}
+              {t(entry.name)}
             </button>
           ))}
         </div>
 
         <p className="text-xs text-muted-foreground">
-          Showing{" "}
-          <span className="font-semibold tabular-nums text-foreground">
-            {visibleWeapons}
-          </span>{" "}
-          of {totalWeapons} weapons and{" "}
-          <span className="font-semibold tabular-nums text-foreground">
-            {visibleTargets}
-          </span>{" "}
-          of {totalTargets} targets — only what can be reached by{" "}
-          {biome.name}. {biome.note}
+          {t("Showing {weapons} of {allWeapons} weapons and {targets} of {allTargets} targets reachable in {biome}.", { weapons: formatCount(visibleWeapons), allWeapons: formatCount(totalWeapons), targets: formatCount(visibleTargets), allTargets: formatCount(totalTargets), biome: t(biome.name) })} {biome.note ? t(biome.note) : ''}
         </p>
       </CardContent>
     </Card>

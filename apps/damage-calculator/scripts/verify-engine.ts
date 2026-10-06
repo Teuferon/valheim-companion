@@ -4,6 +4,7 @@
  */
 
 import { existsSync, readFileSync } from "node:fs";
+import './verify-i18n';
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { BIOMES, BIOME_ORDER, BOSS_BIOME, isReached, type BiomeId } from "../src/data/biomes";

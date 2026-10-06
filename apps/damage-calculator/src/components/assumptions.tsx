@@ -1,4 +1,6 @@
+import { useLanguage } from '@/hooks/use-language';
 
+import type { Translate, Locale } from "../../../../shared/i18n/core";
 import type { ReactElement } from "react";
 import { cn } from "cn";
 import { BookOpen, FlaskConical, Info, TriangleAlert } from "lucide-react";
@@ -21,7 +23,7 @@ import {
 } from "@/components/ui/dialog";
 import { Separator } from "@/components/ui/separator";
 import { CLASS_LABELS, datasetMeta, weapons } from "@/lib/data";
-import { RESISTANCE_MULTIPLIER, type ModifierTier } from "@/lib/types";
+import { RESISTANCE_MULTIPLIER, RESISTANCE_LABEL, type ModifierTier } from "@/lib/types";
 import type { WeaponClass } from "@/data/weapon-class";
 
 const TIERS: ModifierTier[] = [
@@ -33,12 +35,11 @@ const TIERS: ModifierTier[] = [
   "immune",
 ];
 
-/** Fixed format, so the date does not depend on the visitor's locale (a
- *  locale-formatted date here rendered as the confusing "5. jñna 2026"). */
-function formatDate(iso: string): string {
+/** Format source dates in the selected language while keeping the UTC day. */
+function formatDate(iso: string, locale: Locale): string {
   const date = new Date(iso);
-  if (Number.isNaN(date.getTime())) return "an unknown date";
-  return date.toLocaleDateString("en-GB", {
+  if (Number.isNaN(date.getTime())) return "—";
+  return date.toLocaleDateString(locale, {
     day: "numeric",
     month: "long",
     year: "numeric",
@@ -49,39 +50,39 @@ function formatDate(iso: string): string {
 const WEAPON_NAME = new Map(weapons.map((weapon) => [weapon.slug, weapon.name]));
 
 /** How one attack repeats, as a compact string for the class table. */
-function timingLabel(profile: AttackProfile): string {
+function timingLabel(profile: AttackProfile, t: Translate, number: (value: number, digits?: number) => string): string {
   switch (profile.timing.kind) {
     case "bow":
-      return "max(0.8 s, 2.5 − 0.02 × skill)";
+      return t("max({min} s, {base} − {factor} × skill)", { min: number(0.8), base: number(2.5), factor: number(0.02) });
     case "crossbow":
-      return "3.5 × (1 − skill/200) + 1.85 s";
+      return t("{reload} × (1 − skill/{limit}) + {shot} s", { reload: number(3.5), limit: number(200), shot: number(1.85) });
     case "fixed":
-      return `${profile.timing.seconds.toFixed(2)} s`;
+      return `${number(profile.timing.seconds, 2)} s`;
   }
 }
 
 /** Combo shape: hits per cycle and their damage weights. */
-function comboLabel(profile: AttackProfile): string {
+function comboLabel(profile: AttackProfile, t: Translate, number: (value: number) => string): string {
   if (profile.comboMults.length === 1) {
-    return profile.damageMult === 1 ? "" : ` · ×${profile.damageMult}`;
+    return profile.damageMult === 1 ? "" : ` · ×${number(profile.damageMult)}`;
   }
-  return ` · ${profile.comboMults.length} hits (${profile.comboMults.join("+")}×)`;
+  return t(" · {hits} hits ({weights}×)", { hits: number(profile.comboMults.length), weights: profile.comboMults.map(value => number(value)).join("+") });
 }
 
 /** One line per class paired with its attack profile, for the timing list. */
-type TimingRow = { key: string; label: string; profile: AttackProfile };
+type TimingRow = { key: string; cls: WeaponClass; attack: string; profile: AttackProfile };
 
 const TIMING_ROWS: TimingRow[] = (
   Object.keys(ATTACK_PROFILES) as WeaponClass[]
 ).flatMap((cls) => {
   const timing = ATTACK_PROFILES[cls];
   const rows: TimingRow[] = [
-    { key: `${cls}-primary`, label: `${CLASS_LABELS[cls]} (primary)`, profile: timing.primary },
+    { key: `${cls}-primary`, cls, attack: "Primary", profile: timing.primary },
   ];
   if (timing.secondary) {
     rows.push({
       key: `${cls}-secondary`,
-      label: `${CLASS_LABELS[cls]} (secondary)`,
+      cls, attack: "Secondary",
       profile: timing.secondary,
     });
   }
@@ -105,26 +106,26 @@ const SUMMARY =
 const HEADER_BUTTON =
   "flex h-8 items-center gap-1.5 rounded-lg border border-input px-2.5 text-xs font-medium whitespace-nowrap transition-colors outline-none hover:bg-accent hover:text-accent-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50";
 
-/** The whole write-up, unchanged: shown inside the dialog instead of on the page. */
+/** The translated methodology shown inside the dialog. */
 function MethodologySections() {
+  const { t, locale, number, formatCount } = useLanguage();
   return (
     <>
         <div className="space-y-2">
-          <h3 className="font-heading text-base font-semibold">The formula</h3>
+          <h3 className="font-heading text-base font-semibold">{t("The formula")}
+            </h3>
           <p className="text-muted-foreground">
-            Straight from the wiki&apos;s{" "}
+
             <a
               className="text-primary underline decoration-dotted underline-offset-2"
               href="https://valheim.weirdgloop.org/wiki/Damage_mechanics"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Damage mechanics
-            </a>{" "}
-            page:
-          </p>
+              {t("Damage mechanics")}</a>{" "}
+            </p>
           <pre className="scrollbar-thin overflow-x-auto rounded-lg border bg-muted/40 p-3 font-mono text-[11px] leading-relaxed">
-{`damage = listed damage
+{t(`damage = listed damage
        × skill factor            // 0.25–0.55 at skill 0, →1.0 by skill 75
        × backstab bonus          // first hit vs an unaware enemy, then immune
        × stagger bonus           // not modelled
@@ -132,30 +133,26 @@ function MethodologySections() {
        × multitarget penalty     // single target here = ×1
        × damage type modifier    // resistance tier
 
-listed damage = weapon value + ammo value`}
+listed damage = weapon value + ammo value`)}
           </pre>
         </div>
 
         <div className="space-y-2">
-          <h3 className="font-heading text-base font-semibold">Resistance tiers</h3>
+          <h3 className="font-heading text-base font-semibold">{t("Resistance tiers")}
+            </h3>
           <div className="flex flex-wrap gap-1.5">
             {TIERS.map((tier) => (
               <Badge key={tier} variant="outline" className="gap-1 font-normal">
-                {tier.replace("-", " ")}
+                {t(RESISTANCE_LABEL[tier])}
                 <span className="text-muted-foreground tabular-nums">
-                  ×{RESISTANCE_MULTIPLIER[tier]}
+                  ×{number(RESISTANCE_MULTIPLIER[tier])}
                 </span>
               </Badge>
             ))}
           </div>
           <p className="text-xs text-muted-foreground">
-            Chop, Pickaxe and Pure are terrain damage (woodcutting, mining and
-            structure damage) and are excluded — the wiki lists every creature
-            except Barka as immune to chop, and all except a few Deep North
-            creatures as immune to pickaxe. That is why a Stone Axe&apos;s chop
-            damage never shows up as creature damage, and why the siege items are
-            listed with little or no creature damage at all.
-          </p>
+            {t("Chop, Pickaxe and Pure are terrain damage (woodcutting, mining and structure damage) and are excluded — the wiki lists every creature except Barka as immune to chop, and all except a few Deep North creatures as immune to pickaxe. That is why a Stone Axe's chop damage never shows up as creature damage, and why the siege items are listed with little or no creature damage at all.")}
+            </p>
         </div>
 
         <Separator />
@@ -163,30 +160,27 @@ listed damage = weapon value + ammo value`}
         <div className="space-y-3">
           <h3 className="flex items-center gap-2 font-heading text-base font-semibold">
             <TriangleAlert className="size-4 text-amber-400" />
-            Attack timing: sourced, never guessed
-          </h3>
+            {t("Attack timing: sourced, never guessed")}
+            </h3>
           <p className="text-muted-foreground">
-            Timings come from the wiki&apos;s attack-speed tables (retrieved{" "}
-            {TIMING_RETRIEVED}) and MaxDPS&apos;s game-derived model (
-            {MAXDPS_BUILD}). Each attack says which one it uses; where the
-            sources disagree, the alternative stays on record. Timing always
-            means the repeat cycle — not a single swing.
-          </p>
+            {t("Timings use wiki attack-speed tables (retrieved {date}) and MaxDPS ({build}). Sources and disagreements are recorded below. Timing means a repeat cycle, not one swing.", { date: TIMING_RETRIEVED, build: MAXDPS_BUILD })}
+            </p>
 
           <div className="space-y-1.5">
             <h4 className="font-heading text-sm font-semibold">
-              Caveats, disagreements and unknowns
+              {t("Caveats, disagreements and unknowns")}
             </h4>
             <ul className="space-y-1 text-[11px] leading-snug text-muted-foreground">
-              {CONFLICTS.map(({ key, label, profile }) => (
+              {CONFLICTS.map(({ key, cls, attack, profile }) => (
                 <li key={key}>
-                  <span className="text-foreground">{label}</span> —{" "}
-                  {profile.note ? `${profile.note} ` : ""}
+                  <span className="text-foreground">{t("{class} ({attack})", { class: t(CLASS_LABELS[cls]), attack: t(attack) })}
+            </span> —{" "}
+                  {profile.note ? `${t(profile.note)} ` : ""}
                   {profile.alternates?.length
-                    ? `Alternative: ${profile.alternates
+                    ? `${t("Alternative:")} ${profile.alternates
                         .map(
                           (alt) =>
-                            `${alt.seconds.toFixed(2)} s — ${alt.source.label}.${alt.note ? ` ${alt.note}` : ""}`,
+                            `${number(alt.seconds, 2)} s — ${alt.source.label}.${alt.note ? ` ${t(alt.note)}` : ""}`,
                         )
                         .join(" ")}`
                     : ""}
@@ -197,12 +191,13 @@ listed damage = weapon value + ammo value`}
 
           <details className="rounded-lg border bg-muted/25">
             <summary className="cursor-pointer px-2.5 py-2 text-xs font-medium">
-              All class timings and sources
+              {t("All class timings and sources")}
             </summary>
             <ul className="space-y-1 border-t px-2.5 py-2 text-[11px]">
-              {TIMING_ROWS.map(({ key, label, profile }) => (
+              {TIMING_ROWS.map(({ key, cls, attack, profile }) => (
                 <li key={key} className="flex flex-wrap items-baseline gap-x-2">
-                  <span className="text-muted-foreground">{label}</span>
+                  <span className="text-muted-foreground">{t("{class} ({attack})", { class: t(CLASS_LABELS[cls]), attack: t(attack) })}
+            </span>
                   <a
                     className="tabular-nums text-primary underline decoration-dotted underline-offset-2"
                     href={profile.source.url}
@@ -210,11 +205,11 @@ listed damage = weapon value + ammo value`}
                     rel="noopener noreferrer"
                     title={profile.source.label}
                   >
-                    {timingLabel(profile)}
-                    {comboLabel(profile)}
+                    {timingLabel(profile, t, number)}
+                    {comboLabel(profile, t, number)}
                   </a>
                   <span className="text-muted-foreground">
-                    {CONFIDENCE_LABEL[profile.confidence]}
+                    {t(CONFIDENCE_LABEL[profile.confidence])}
                   </span>
                 </li>
               ))}
@@ -223,7 +218,7 @@ listed damage = weapon value + ammo value`}
 
           <div className="space-y-1.5">
             <h4 className="font-heading text-sm font-semibold">
-              Weapon-specific schedules
+              {t("Weapon-specific schedules")}
             </h4>
             <ul className="space-y-1 text-[11px] leading-snug text-muted-foreground">
               {Object.entries(WEAPON_PRIMARY_OVERRIDES).map(([slug, profile]) => (
@@ -231,16 +226,16 @@ listed damage = weapon value + ammo value`}
                   <span className="text-foreground">
                     {WEAPON_NAME.get(slug) ?? slug}
                   </span>{" "}
-                  — {timingLabel(profile)}
-                  {comboLabel(profile)}
+                  — {timingLabel(profile, t, number)}
+                  {comboLabel(profile, t, number)}
                   {profile.hitTimes
-                    ? ` · hits at ${profile.hitTimes.map((t) => `${t.toFixed(3)} s`).join(", ")}`
+                    ? t(" · hits at {times}", { times: profile.hitTimes.map(value => `${number(value, 3)} s`).join(", ") })
                     : ""}{" "}
                   ({profile.source.label}).{" "}
                   {profile.alternates
                     ?.map(
                       (alt) =>
-                        `Alternative: ${alt.seconds.toFixed(2)} s — ${alt.source.label}.${alt.note ? ` ${alt.note}` : ""}`,
+                        `${t("Alternative:")} ${number(alt.seconds, 2)} s — ${alt.source.label}.${alt.note ? ` ${t(alt.note)}` : ""}`,
                     )
                     .join(" ")}
                 </li>
@@ -249,11 +244,8 @@ listed damage = weapon value + ammo value`}
           </div>
 
           <p className="text-xs text-muted-foreground">
-            Per-hit damage does not use these values at all, so it stays exact
-            even where the timing is a model or an estimate. Cycle DPS excludes
-            stamina, eitr and interruptions; time-to-kill uses a published hit
-            schedule where one exists and averages the cycle otherwise.
-          </p>
+            {t("Per-hit damage does not use these values at all, so it stays exact even where the timing is a model or an estimate. Cycle DPS excludes stamina, eitr and interruptions; time-to-kill uses a published hit schedule where one exists and averages the cycle otherwise.")}
+            </p>
         </div>
 
         <Separator />
@@ -261,96 +253,38 @@ listed damage = weapon value + ammo value`}
         <div className="space-y-2">
           <h3 className="flex items-center gap-2 font-heading text-base font-semibold">
             <BookOpen className="size-4 text-primary" />
-            Sources
-          </h3>
+            {t("Sources")}
+            </h3>
           <ul className="space-y-1 text-xs text-muted-foreground">
             <li>
-              Data scraped from{" "}
-              <a
-                className="text-primary underline decoration-dotted underline-offset-2"
-                href={datasetMeta.source}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                valheim.weirdgloop.org
-              </a>{" "}
-              via the MediaWiki API on {formatDate(datasetMeta.generatedAt)}.
-              The older Fandom wiki is a version behind — it has no Deep North
-              content — so it is no longer used.
+              <a className="text-primary underline" href={datasetMeta.source} target="_blank" rel="noopener noreferrer">Valheim Wiki</a>{' · '}
+              {t("Data retrieved via MediaWiki API on {date}. The outdated Fandom wiki is no longer used.", { date: formatDate(datasetMeta.generatedAt, locale) })}
             </li>
             <li>
-              Attack timing: the wiki&apos;s attack-speed tables (Axes, Swords,
-              Clubs, Knives, Fists, Spears, Polearms, Pickaxes, Bows,
-              Crossbows, Dundr), retrieved {TIMING_RETRIEVED};{" "}
-              <a
-                className="text-primary underline decoration-dotted underline-offset-2"
-                href="https://valheim.maxdps.com/methodology"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                MaxDPS
-              </a>{" "}
-              game-derived model ({MAXDPS_BUILD}); ballista structure values from{" "}
-              <a
-                className="text-primary underline decoration-dotted underline-offset-2"
-                href="https://valheim.gaming.tools/structures/piece_turret"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                valheim.gaming.tools
-              </a>
-              .
+              {t("Timing sources: wiki attack-speed tables, MaxDPS game model and ballista structure data.")}{' '}
+              <a className="text-primary underline" href="https://valheim.maxdps.com/methodology" target="_blank" rel="noopener noreferrer">MaxDPS</a>{' · '}
+              <a className="text-primary underline" href="https://valheim.gaming.tools/structures/piece_turret" target="_blank" rel="noopener noreferrer">valheim.gaming.tools</a>
             </li>
             <li>
-              {datasetMeta.counts.weapons} weapons · {datasetMeta.counts.ammo} ammo
-              types · {datasetMeta.counts.bosses} bosses ·{" "}
-              {datasetMeta.counts.minibosses ?? 4} minibosses ·{" "}
-              {datasetMeta.counts.enemies ?? 67} enemies ·{" "}
-              {datasetMeta.counts.biomes ?? 9} biomes.
+              {t("{weapons} weapons · {ammo} ammo types · {bosses} bosses · {minibosses} minibosses · {enemies} enemies · {biomes} biomes", { weapons: formatCount(datasetMeta.counts.weapons), ammo: formatCount(datasetMeta.counts.ammo), bosses: formatCount(datasetMeta.counts.bosses), minibosses: formatCount(datasetMeta.counts.minibosses ?? 4), enemies: formatCount(datasetMeta.counts.enemies ?? 67), biomes: formatCount(datasetMeta.counts.biomes ?? 9) })}
             </li>
             <li>
-              <span className="text-foreground">Availability is derived, not
-              listed:</span>{" "}
-              an item appears once its crafting station and every material in its
-              crafting recipe are reachable at the selected biome, resolved
-              through the same recipe data for materials that are themselves
-              weapons. Upgrade levels are gated separately, and a material
-              missing from the curated table fails the scrape instead of being
-              guessed at.
-            </li>
+              <span className="text-foreground">{t("Availability is derived, not listed:")}
+            </span>{" "}
+              {t("an item appears once its crafting station and every material in its crafting recipe are reachable at the selected biome, resolved through the same recipe data for materials that are themselves weapons. Upgrade levels are gated separately, and a material missing from the curated table fails the scrape instead of being guessed at.")}</li>
             <li>
-              <span className="text-foreground">Creatures:</span> the eight
-              Forsaken, Hildir&apos;s four minibosses and every aggressive
-              creature are scraped with the wiki&apos;s base (0-star) health and
-              resistances; 1★/2★ variants are not modelled. Aggressive creatures
-              are grouped by the biome the wiki lists them under, and miniboss
-              biomes come from the dungeon each one occupies.
-            </li>
+              <span className="text-foreground">{t("Creatures:")}
+            </span> {t("the eight Forsaken, Hildir's four minibosses and every aggressive creature are scraped with the wiki's base (0-star) health and resistances; 1★/2★ variants are not modelled. Aggressive creatures are grouped by the biome the wiki lists them under, and miniboss biomes come from the dungeon each one occupies.")}</li>
             <li>
-              <span className="text-foreground">Backstab:</span> an unaware
-              enemy takes the weapon&apos;s tooltip bonus on the first hit. The
-              wiki names Abyssal Harpoon 1×, two-handed clubs 2×, knives and
-              Flesh Rippers 6×, and every other weapon 3×; a value the item
-              publishes itself (Dundr 1×, the siege payloads 4×) wins. A
-              backstab grants the target five minutes of backstab immunity, so
-              only the opening hit is boosted — turn it on with the Enemy state
-              control.
-            </li>
+              <span className="text-foreground">{t("Backstab:")}
+            </span> {t("an unaware enemy takes the weapon's tooltip bonus on the first hit. The wiki names Abyssal Harpoon 1×, two-handed clubs 2×, knives and Flesh Rippers 6×, and every other weapon 3×; a value the item publishes itself (Dundr 1×, the siege payloads 4×) wins. A backstab grants the target five minutes of backstab immunity, so only the opening hit is boosted — turn it on with the Enemy state control.")}</li>
             <li>
-              Excluded on purpose: shields (no damage), summon and support
-              staves whose damage comes from minions, dev/cheat items, and gear
-              whose recipe is disabled in the current build.
-            </li>
+              {t("Excluded on purpose: shields (no damage), summon and support staves whose damage comes from minions, dev/cheat items, and gear whose recipe is disabled in the current build.")}</li>
             <li>
-              Not modelled: armour (creatures have none), blocking, parrying,
-              stagger, multi-target penalties, and multi-projectile or area
-              effects (Dundr&apos;s 12-bolt grapeshot and explosion damage). All
-              of those multiply the numbers shown here rather than changing the
-              ranking.
-            </li>
+              {t("Not modelled: armour (creatures have none), blocking, parrying, stagger, multi-target penalties, and multi-projectile or area effects (Dundr's 12-bolt grapeshot and explosion damage). All of those multiply the numbers shown here rather than changing the ranking.")}</li>
           </ul>
           <p className="text-xs text-muted-foreground">
-            Re-scrape the wiki at any time with <code>npm run scrape</code>.
+            {t("Refresh data with {command}.", { command: "npm run scrape" })}
           </p>
         </div>
       </>
@@ -368,6 +302,7 @@ function MethodologyShell({
   trigger: ReactElement;
   className?: string;
 }) {
+  const { t } = useLanguage();
   return (
     <Dialog>
       <DialogTrigger render={trigger} />
@@ -381,9 +316,9 @@ function MethodologyShell({
         <DialogHeader className="gap-1 border-b bg-muted/25 px-4 py-4 text-left">
           <DialogTitle className="flex items-center gap-2 text-base">
             <FlaskConical className="size-4 text-primary" />
-            {TITLE}
+            {t(TITLE)}
           </DialogTitle>
-          <DialogDescription>{SUMMARY}</DialogDescription>
+          <DialogDescription>{t(SUMMARY)}</DialogDescription>
         </DialogHeader>
         {/* min-h-0 lets the grid row shrink, so a long write-up scrolls here
             instead of pushing the dialog past the viewport. */}
@@ -397,13 +332,14 @@ function MethodologyShell({
 
 /** Header trigger: an info button sitting beside Share. */
 export function MethodologyDialog({ className }: { className?: string }) {
+  const { t } = useLanguage();
   return (
     <MethodologyShell
       trigger={
         <button type="button" className={cn(HEADER_BUTTON, className)}>
           <Info className="size-3.5" />
-          Methodology
-        </button>
+          {t("Methodology")}
+            </button>
       }
     />
   );
@@ -411,6 +347,7 @@ export function MethodologyDialog({ className }: { className?: string }) {
 
 /** Footer trigger, where a bordered button would be too heavy. */
 export function MethodologyLink() {
+  const { t } = useLanguage();
   return (
     <MethodologyShell
       trigger={
@@ -418,7 +355,7 @@ export function MethodologyLink() {
           type="button"
           className="cursor-pointer rounded-sm text-primary underline decoration-dotted underline-offset-2 transition-colors hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
         >
-          {TITLE}
+          {t(TITLE)}
         </button>
       }
     />

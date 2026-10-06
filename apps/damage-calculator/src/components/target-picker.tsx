@@ -1,3 +1,4 @@
+import { useLanguage } from '@/hooks/use-language';
 
 import { useMemo, useState } from "react";
 import { Heart, MapPin, Search } from "lucide-react";
@@ -7,7 +8,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Segmented, type SegmentedOption } from "@/components/ui/segmented";
 import { BIOME_NAME } from "@/data/biomes";
-import { formatCount } from "@/lib/damage";
+
 import {
   DAMAGE_LABEL,
   type Creature,
@@ -50,6 +51,7 @@ export function TargetPicker({
   selected: Creature;
   onSelect: (target: Creature) => void;
 }) {
+  const { t, formatCount } = useLanguage();
   const [kind, setKind] = useState<"all" | CreatureKind>("all");
   const [query, setQuery] = useState("");
 
@@ -81,9 +83,9 @@ export function TargetPicker({
       value: filter.value,
       label: (
         <span className="flex items-center gap-1">
-          {filter.label}
+          {t(filter.label)}
           <span className="tabular-nums text-muted-foreground">
-            {counts[filter.value] ?? 0}
+            {formatCount(counts[filter.value] ?? 0)}
           </span>
         </span>
       ),
@@ -91,14 +93,14 @@ export function TargetPicker({
   );
 
   return (
-    <section aria-label="Choose a target" className="space-y-3">
+    <section aria-label={t("Choose a target")} className="space-y-3">
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
         <h2 className="font-heading text-base font-semibold tracking-wide text-muted-foreground uppercase">
-          1 · Pick your target
-        </h2>
+          {t("1 · Pick your target")}
+            </h2>
         <span className="text-xs text-muted-foreground">
-          {targets.length} of {total} targets reachable
-        </span>
+          {t("{shown} of {total} targets reachable", { shown: formatCount(targets.length), total: formatCount(total) })}
+            </span>
       </div>
 
       <div className="flex flex-wrap items-center gap-2">
@@ -107,9 +109,9 @@ export function TargetPicker({
           <Input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search targets…"
+            placeholder={t("Search targets…")}
             className="h-8 pl-8"
-            aria-label="Search targets"
+            aria-label={t("Search targets")}
           />
         </div>
         {/* max-w-full + overflow-x-auto keep the 360 px layout free of
@@ -117,7 +119,7 @@ export function TargetPicker({
         <Segmented
           value={kind}
           onChange={setKind}
-          ariaLabel="Filter targets by kind"
+          ariaLabel={t("Filter targets by kind")}
           options={options}
           className="max-w-full overflow-x-auto"
         />
@@ -170,13 +172,14 @@ export function TargetPicker({
                   <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[11px] text-muted-foreground">
                     <span className="inline-flex items-center gap-0.5">
                       <Heart className="size-3" />
-                      {formatCount(target.health)} HP
-                    </span>
+                      {formatCount(target.health)} {t("HP")}
+            </span>
                     <span className="inline-flex items-center gap-0.5">
                       <MapPin className="size-3" />
-                      {BIOME_NAME[target.biome]}
+                      {t(BIOME_NAME[target.biome])}
                     </span>
-                    <span>{KIND_LABEL[target.kind]}</span>
+                    <span>{t(KIND_LABEL[target.kind])}
+            </span>
                   </div>
                 </div>
               </div>
@@ -184,8 +187,8 @@ export function TargetPicker({
               <div className="flex flex-wrap gap-1">
                 {entries.length === 0 ? (
                   <span className="text-[11px] text-muted-foreground">
-                    No weaknesses — neutral to everything
-                  </span>
+                    {t("No weaknesses — neutral to everything")}
+            </span>
                 ) : (
                   entries.map(([type, tier]) => (
                     <ResistanceBadge key={type} type={type} tier={tier} />
@@ -198,11 +201,8 @@ export function TargetPicker({
       </div>
 
       <p className="text-xs text-muted-foreground">
-        Creature stats pulled from the Valheim wiki. Everything not listed is
-        neutral (×1) — e.g. {DAMAGE_LABEL.blunt} damage against{" "}
-        {selected.name}. Starred (1★/2★) variants are not modelled: each card
-        shows the base 0-star creature.
-      </p>
+        {t("Creature stats come from the Valheim wiki. Unlisted resistances are neutral (×1). Cards show base 0-star creatures; 1★/2★ variants are not modelled.")}
+            </p>
     </section>
   );
 }

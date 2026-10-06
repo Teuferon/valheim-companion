@@ -1,3 +1,4 @@
+import { useLanguage } from '@/hooks/use-language';
 
 import { useState } from "react";
 import { ExternalLink, ImageOff } from "lucide-react";
@@ -69,13 +70,14 @@ export function WikiLink({
   name: string;
   className?: string;
 }) {
+  const { t } = useLanguage();
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      title={`Open ${name} on the Valheim wiki`}
-      aria-label={`Open ${name} on the Valheim wiki`}
+      title={t("Open {name} on the Valheim wiki", { name })}
+      aria-label={t("Open {name} on the Valheim wiki", { name })}
       className={cn(
         "inline-flex size-6 items-center justify-center rounded-md text-muted-foreground transition-colors",
         "hover:bg-accent hover:text-primary focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none",

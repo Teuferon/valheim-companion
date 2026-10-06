@@ -8,7 +8,11 @@ import { fileURLToPath } from 'node:url';
 export default defineConfig({
   base: '/damage-calculator/',
   plugins: [react()],
-  resolve: { alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) } },
+  resolve: { alias: {
+    '@': fileURLToPath(new URL('./src', import.meta.url)),
+    // The classic-script core.js lives beside the React module core.ts.
+    '../../../../shared/i18n/core': fileURLToPath(new URL('../../shared/i18n/core.ts', import.meta.url)),
+  } },
   server: { fs: { allow: [fileURLToPath(new URL('../..', import.meta.url))] } },
   css: { postcss: { plugins: [tailwindcss()] } },
   build: { outDir: 'dist-static', emptyOutDir: true },

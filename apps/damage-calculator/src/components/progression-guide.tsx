@@ -1,3 +1,4 @@
+import { useLanguage } from '@/hooks/use-language';
 
 import { useMemo, useState } from "react";
 import { ArrowRight, ChevronDown, Lightbulb, Route, Target } from "lucide-react";
@@ -15,16 +16,13 @@ import {
 import { BIOME_NAME, type BiomeId } from "@/data/biomes";
 import { GUIDE_NOTES } from "@/data/guide-notes";
 import {
-  formatCount,
-  formatDamage,
-  formatSeconds,
   type SkillMode,
 } from "@/lib/damage";
 import { buildGuideStep, type GuidePick } from "@/lib/guide";
 import type { RecipeMaterial } from "@/lib/types";
 
-const formatMaterials = (materials: RecipeMaterial[]) =>
-  materials.map((material) => `${material.quantity}× ${material.name}`).join(" · ");
+const formatMaterials = (materials: RecipeMaterial[], number: (value: number) => string) =>
+  materials.map((material) => `${number(material.quantity)}× ${material.name}`).join(" · ");
 
 /** Matches the labels on the global skill-roll control. */
 const SKILL_MODE_LABEL: Record<SkillMode, string> = {
@@ -56,6 +54,7 @@ export function ProgressionGuide({
   skillLevel: number;
   skillMode: SkillMode;
 }) {
+  const { t, formatCount, formatDamage, formatSeconds } = useLanguage();
   const [open, setOpen] = useState(false);
   const step = useMemo(
     () => buildGuideStep(biome, { skillLevel, skillMode }),
@@ -72,10 +71,10 @@ export function ProgressionGuide({
       >
         <CardTitle className="flex items-center gap-2 text-base">
           <Route className="size-4 text-primary" />
-          Progression guide
-        </CardTitle>
+          {t("Progression guide")}
+            </CardTitle>
         <CardDescription>
-          What to craft and upgrade before you leave the {step.biome.name}.
+          {t("What to craft and upgrade before you leave {biome}.", { biome: t(step.biome.name) })}
         </CardDescription>
         <CardAction>
           <button
@@ -84,8 +83,8 @@ export function ProgressionGuide({
             aria-controls={GUIDE_PANEL_ID}
             aria-label={
               open
-                ? "Collapse the progression guide"
-                : "Expand the progression guide"
+                ? t("Collapse the progression guide")
+                : t("Expand the progression guide")
             }
             className="flex size-7 items-center justify-center rounded-lg text-muted-foreground outline-none transition-colors hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50"
             onClick={(event) => {
@@ -123,23 +122,20 @@ export function ProgressionGuide({
                   />
                   {step.biome.boss ? (
                     <>
-                      Gate: defeat{" "}
-                      <span className="font-semibold">{step.gate.name}</span>
+                      {t("Gate: defeat {target}", { target: step.gate.name })}
                     </>
                   ) : (
                     <>
-                      No Forsaken here — scored against{" "}
-                      <span className="font-semibold">{step.gate.name}</span>
+                      {t("No Forsaken here — scored against {target}", { target: step.gate.name })}
                     </>
                   )}
                 </span>
                 <Badge variant="outline" className="font-normal tabular-nums">
-                  {formatCount(step.gate.health)} HP
-                </Badge>
+                  {formatCount(step.gate.health)} {t("HP")}
+            </Badge>
                 <span className="text-[11px] text-muted-foreground sm:ml-auto">
-                  weapon skill {skillLevel} ({SKILL_MODE_LABEL[skillMode]}) ·
-                  primary attack · best reachable ammo
-                </span>
+                  {t("Weapon skill {level} ({roll}) · primary attack · best reachable ammo", { level: formatCount(skillLevel), roll: t(SKILL_MODE_LABEL[skillMode]) })}
+            </span>
               </div>
             ) : null}
 
@@ -155,27 +151,24 @@ export function ProgressionGuide({
 
             {step.picks.length === 0 ? (
               <p className="text-sm text-muted-foreground">
-                Nothing new to craft at this step.
-              </p>
+                {t("Nothing new to craft at this step.")}
+            </p>
             ) : null}
 
             <div className="space-y-1.5">
               <h3 className="flex items-center gap-1.5 font-heading text-sm font-semibold">
                 <Lightbulb className="size-3.5 text-primary" />
-                Before you move on
-              </h3>
+                {t("Before you move on")}
+            </h3>
               <ul className="list-disc space-y-1 pl-4 text-xs text-muted-foreground">
                 {GUIDE_NOTES[biome].map((note) => (
-                  <li key={note}>{note}</li>
+                  <li key={note}>{t(note)}</li>
                 ))}
               </ul>
             </div>
 
             <p className="text-[11px] leading-snug text-muted-foreground">
-              One pick per weapon group, scored against the gate with its
-              resistances applied. Per-hit damage is exact; time-to-kill uses
-              each weapon&apos;s sourced timing cycle on primary attacks — see
-              Methodology above.
+              {t("One pick per weapon group, scored against the gate with its resistances applied. Per-hit damage is exact; time-to-kill uses each weapon's sourced timing cycle on primary attacks — see Methodology above.")}
             </p>
           </CardContent>
         </div>
@@ -191,6 +184,7 @@ function GuidePickRow({
   pick: GuidePick;
   gateName: string;
 }) {
+  const { t, formatCount, formatDamage, formatSeconds } = useLanguage();
   const {
     weapon,
     ammo,
@@ -213,11 +207,11 @@ function GuidePickRow({
             </span>
             <WikiLink href={weapon.wikiUrl} name={weapon.name} />
             <Badge variant="secondary" className="font-normal">
-              {weapon.clsLabel}
+              {t(weapon.clsLabel)}
             </Badge>
             {upgradeable && quality > 1 ? (
               <Badge variant="outline" className="font-normal">
-                upgrade to Q{quality}
+                {t("Upgrade to Q{level}", { level: formatCount(quality) })}
               </Badge>
             ) : null}
             {ammo ? (
@@ -232,27 +226,28 @@ function GuidePickRow({
             <span className="font-semibold text-foreground tabular-nums">
               {formatDamage(result.perHit)}
             </span>{" "}
-            per hit ·{" "}
+            {t("per hit ·")}{" "}
             <span className="font-semibold text-foreground tabular-nums">
               {formatSeconds(result.ttk)}
             </span>{" "}
-            to kill {gateName}
+            {t("to kill {target}", { target: gateName })}
           </p>
 
           <div className="grid gap-x-6 gap-y-0.5 text-[11px] sm:grid-cols-2">
             <div className="flex gap-1">
-              <span className="shrink-0 text-muted-foreground">Craft:</span>
+              <span className="shrink-0 text-muted-foreground">{t("Craft:")}
+            </span>
               <span className="text-foreground/80">
-                {formatMaterials(craft)}
+                {formatMaterials(craft, formatCount)}
               </span>
             </div>
             {upgradeable && quality > 1 ? (
               <div className="flex gap-1">
                 <span className="shrink-0 text-muted-foreground">
-                  Upgrade materials:
-                </span>
+                  {t("Upgrade materials:")}
+            </span>
                 <span className="text-foreground/80">
-                  {formatMaterials(upgradeCost)}
+                  {formatMaterials(upgradeCost, formatCount)}
                 </span>
               </div>
             ) : null}
@@ -260,11 +255,11 @@ function GuidePickRow({
 
           {locked ? (
             <p className="text-[11px] text-amber-400">
-              Q{locked.level} is out of reach at this step:{" "}
+              {t("Q{level} is out of reach at this step:", { level: formatCount(locked.level) })}{" "}
               {locked.materials
                 .map(
                   (material) =>
-                    `${material.name}${material.biome ? ` (${BIOME_NAME[material.biome]})` : ""}`,
+                    `${material.name}${material.biome ? ` (${t(BIOME_NAME[material.biome])})` : ""}`,
                 )
                 .join(", ")}
               .
@@ -273,7 +268,7 @@ function GuidePickRow({
 
           {!upgradeable ? (
             <p className="text-[11px] text-muted-foreground">
-              The wiki lists no upgrade table for this one.
+              {t("The wiki lists no upgrade table for this one.")}
             </p>
           ) : null}
         </div>
