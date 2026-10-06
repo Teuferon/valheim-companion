@@ -8,6 +8,11 @@ export default defineConfig({
   base: '/signs/',
   plugins: [react()],
   resolve: { alias: { '@': fileURLToPath(new URL('.', import.meta.url)) } },
+  server: {
+    fs: {
+      allow: [fileURLToPath(new URL('../..', import.meta.url))],
+    },
+  },
   css: { postcss: { plugins: [tailwindcss()] } },
   build: { outDir: 'dist-static', emptyOutDir: true },
 });

@@ -1,13 +1,5 @@
 import rawLanguages from './languages.json' with { type: 'json' };
 
-export interface LanguageInfo {
-  code: string;
-  name: string;
-  rtl?: boolean;
-}
-
-export const languages = rawLanguages as readonly LanguageInfo[];
-
 export type Locale =
   | 'en'
   | 'cs'
@@ -22,6 +14,14 @@ export type Locale =
   | 'ru'
   | 'ja'
   | 'id';
+
+export interface LanguageInfo {
+  code: Locale;
+  name: string;
+  rtl?: boolean;
+}
+
+export const languages = rawLanguages as readonly LanguageInfo[];
 
 export type LanguagePreference = Locale | 'auto';
 

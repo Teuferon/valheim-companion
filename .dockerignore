@@ -2,6 +2,8 @@
 *
 !Dockerfile
 !deploy/
+!shared/
+!shared/**
 !apps/hub/
 !apps/bestiary/index.html
 !apps/bestiary/assets/
