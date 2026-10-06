@@ -46,12 +46,12 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | VC-28 | Google Analytics 4 (G-CXQVNCCJKE) s lištou souhlasu, CSP, stránka Privacy | agy | ✅ ověřeno na živém webu (bez souhlasu jen `gcs=G100` bez cookies, po Allow `_ga`) |
 | VC-17 | Bestiary + Armourer v 13 jazycích, místní názvy z wiki, UX opravy Armouru | Sol | ✅ |
 | VC-18 | Damage Calculator v 13 jazycích (místní názvy odebere VC-29) | Sol | ✅ |
-| **VC-23** | Armourer: zbraně, štíty a nástroje v košíku, „Can't be teleported“, kalkulačka tavení, deep link | agy | 🔄 data hotová, UI dokončuje agy (`../valheim-units-GL`) |
-| **VC-29** | všechny názvy z hry vždy anglicky (zásada Pavla), překládá se jen UI | — | ⏳ po VC-18 a VC-23 |
-| **VC-24** | Bestiary: trofeje, ochočování, nájezdy, sdílení profilu, deep link na jednotku | Sol | 🔄 běží (`../valheim-units-CS`) | ⏳ fronta 5 |
+| VC-23 | Armourer: zbraně a štíty v košíku, „Can't be teleported“, kalkulačka tavení | agy | ✅ |
+| **VC-29** | všechny názvy z hry vždy anglicky (zásada Pavla), překládá se jen UI | Sol | 🔄 běží (`../valheim-units-CS`) |
+| VC-24 | Bestiary: trofeje, ochočování, nájezdy, sdílení profilu, deep link | Sol | ✅ |
 | **VC-25** | Damage Calculator: sdílený profil hráče (`shared/player`), odkaz z Bestiary | — | ⏳ fronta 6 |
 | VC-26 | Sign Editor: 22 šablon, galerie, sdílení `#sign=` | Sol | ✅ |
-| **VC-27** | rozcestník: společné hledání napříč sekcemi | — | ⏳ fronta 8 |
+| **VC-27** | rozcestník: společné hledání napříč sekcemi + oprava deep linku v Bestiary | agy | 🔄 běží (`../valheim-units-GL`) | ⏳ fronta 8 |
 | **VC-19** | Progress Tracker: sdílený stav `vc.progress` + stránka `/progress/` | — | ⏳ fronta 9 |
 | **VC-20** | napojení Progress na Bestiary, Armourer, kalkulačku a rozcestník | — | ⏳ fronta 10 |
 | **VC-21** | Provisions data (jídla, medoviny, feasty, stanice) + sdílený košík `shared/shopping` | — | ⏳ fronta 11 |
