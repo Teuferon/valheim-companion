@@ -96,3 +96,19 @@
 @media (prefers-reduced-motion: reduce) {
   .vc-progress-panel, .vc-progress-loading::before { animation: none; }
 }
+
+/* Section pages (Bestiary, Smithy) style their own `.biome-header` accordion; keep the drawer independent. */
+.vc-progress-panel .biome-header {
+  position: static;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--text);
+  cursor: default;
+}
+.vc-progress-panel .biome-header::before,
+.vc-progress-panel .biome-header::after {
+  content: none;
+  display: none;
+}
