@@ -188,14 +188,6 @@
     magic: 'Magic'
   };
 
-  function getActionVerb(station) {
-    const s = (station || '').toLowerCase();
-    if (s.includes('smelt') || s.includes('blast furnace') || s.includes('smelting')) return 'Smelt';
-    if (s.includes('spin')) return 'Spin';
-    if (s.includes('refin')) return 'Refine';
-    return 'Craft';
-  }
-
   function calculateTotalArmor(pieces) {
     let q1 = 0;
     let max = 0;
@@ -234,43 +226,13 @@
     const weaponMap = new Map();
     (data.weapons || []).forEach(w => weaponMap.set(w.id, w));
 
-    const rawMats = new Map();
-    cart.forEach(item => {
-      const piece = pieceMap.get(item.pieceId) || weaponMap.get(item.pieceId);
-      if (!piece) return;
-      const have = typeof item.have === 'number' ? item.have : 0;
-      const want = typeof item.want === 'number' ? item.want : 1;
-      (piece.levels || []).forEach(lvl => {
-        if (lvl.quality > have && lvl.quality <= want) {
-          (lvl.materials || []).forEach(m => {
-            rawMats.set(m.item, (rawMats.get(m.item) || 0) + m.amount);
-          });
-        }
-      });
-    });
-
+    const definitions = Object.fromEntries([...pieceMap, ...weaponMap]);
+    const rawMats = VCShopping.sumMaterials(cart, definitions);
     const smeltedBars = {};
-    function expand(itemId, qty, depth, visited) {
-      if (depth > 5 || visited.has(itemId)) return;
-      const itemInfo = data.items && data.items[itemId];
-      if (!itemInfo || !itemInfo.recipe) return;
-
-      const st = (itemInfo.recipe.station || '').toLowerCase();
-      if (st.includes('smelter') || st.includes('blast furnace')) {
-        smeltedBars[itemId] = (smeltedBars[itemId] || 0) + qty;
-      }
-
-      visited.add(itemId);
-      const yields = itemInfo.recipe.yields || 1;
-      const batches = qty / yields;
-      (itemInfo.recipe.materials || []).forEach(sub => {
-        expand(sub.item, sub.amount * batches, depth + 1, new Set(visited));
-      });
+    for (const step of VCShopping.breakdown(rawMats, data.items, 6).steps) {
+      const station = step.station.toLowerCase();
+      if (station.includes('smelter') || station.includes('blast furnace')) smeltedBars[step.product] = step.amount;
     }
-
-    rawMats.forEach((qty, itemId) => {
-      expand(itemId, qty, 0, new Set());
-    });
 
     const smelter = (data.stations || []).find(s => s.id === 'smelter') || { secondsPerItem: 30, fuel: { perItem: 2 } };
     const blastFurnace = (data.stations || []).find(s => s.id === 'blast-furnace') || { secondsPerItem: 30, fuel: { perItem: 2 } };
@@ -348,7 +310,12 @@
     });
 
     // 1. Raw materials map: itemId -> { amount, isFuel }
-    const rawMats = new Map();
+    const definitions = Object.fromEntries([
+      ...[...pieceMap].map(([id, entry]) => [id, entry.piece]),
+      ...weaponMap,
+    ]);
+    const shoppingLines = cart.map(line => ({ ...line, want: typeof line.want === 'number' ? line.want : (weaponMap.get(line.pieceId)?.maxQuality || 1) }));
+    const rawMats = new Map(VCShopping.sumMaterials(shoppingLines, definitions).map(material => [material.item, material]));
     let totalArmor = 0;
     let totalWeight = 0;
     const setPieceCounts = new Map();
@@ -372,40 +339,12 @@
             totalArmor += wantLevel.armor;
           }
         }
-
-        // Materials for q in (Have, Want]
-        const have = typeof item.have === 'number' ? item.have : 0;
-        const want = typeof item.want === 'number' ? item.want : 1;
-
-        (piece.levels || []).forEach(lvl => {
-          if (lvl.quality > have && lvl.quality <= want) {
-            (lvl.materials || []).forEach(m => {
-              const current = rawMats.get(m.item) || { amount: 0, fuel: false };
-              current.amount += m.amount;
-              if (m.fuel) current.fuel = true;
-              rawMats.set(m.item, current);
-            });
-          }
-        });
       } else {
         const weapon = weaponMap.get(item.pieceId);
         if (weapon) {
           if (typeof weapon.weight === 'number') {
             totalWeight += weapon.weight;
           }
-          const have = typeof item.have === 'number' ? item.have : 0;
-          const want = typeof item.want === 'number' ? item.want : (weapon.maxQuality || 1);
-
-          (weapon.levels || []).forEach(lvl => {
-            if (lvl.quality > have && lvl.quality <= want) {
-              (lvl.materials || []).forEach(m => {
-                const current = rawMats.get(m.item) || { amount: 0, fuel: false };
-                current.amount += m.amount;
-                if (m.fuel) current.fuel = true;
-                rawMats.set(m.item, current);
-              });
-            }
-          });
         }
       }
     });
@@ -432,66 +371,22 @@
       }
     });
 
-    // 2. Breakdown logic if requested
-    const finalMats = new Map();
-    const intermediateStepsMap = new Map(); // key: "station|itemId" -> { station, itemId, amount }
-
-    if (breakdown) {
-      function expandItem(itemId, qty, fuelFlag, depth, visitedPath) {
-        const itemInfo = data.items && data.items[itemId];
-        if (depth >= 3 || !itemInfo || !itemInfo.recipe || visitedPath.has(itemId)) {
-          // Base material
-          const cur = finalMats.get(itemId) || { amount: 0, fuel: false };
-          cur.amount += qty;
-          if (fuelFlag) cur.fuel = true;
-          finalMats.set(itemId, cur);
-          return;
-        }
-
-        visitedPath.add(itemId);
-        const rec = itemInfo.recipe;
-        const station = rec.station || 'Station';
-        const yields = rec.yields || 1;
-        const batches = qty / yields;
-
-        // Record intermediate crafting step
-        const stepKey = station + '|' + itemId;
-        const step = intermediateStepsMap.get(stepKey) || {
-          station,
-          itemId,
-          productName: entityName(itemInfo) || itemId,
-          amount: 0
-        };
-        step.amount += qty;
-        intermediateStepsMap.set(stepKey, step);
-
-        // Expand sub-materials
-        (rec.materials || []).forEach(subMat => {
-          expandItem(subMat.item, subMat.amount * batches, subMat.fuel || false, depth + 1, new Set(visitedPath));
-        });
-      }
-
-      rawMats.forEach((val, itemId) => {
-        expandItem(itemId, val.amount, val.fuel, 0, new Set());
-      });
-    } else {
-      rawMats.forEach((val, itemId) => {
-        finalMats.set(itemId, { amount: val.amount, fuel: val.fuel });
-      });
-    }
-
-    // Format crafting steps
-    const craftingSteps = [];
-    intermediateStepsMap.forEach(step => {
-      const verb = getActionVerb(step.station);
-      craftingSteps.push({
-        station: step.station,
-        product: step.itemId,
-        productName: step.productName,
-        amount: step.amount,
-        text: t('{action} {amount}× {product} at {station}', { action: t(verb), amount: step.amount, product: step.productName, station: stationName(step.station) })
-      });
-    });
+    // Shared recipe expansion; presentation and spoiler handling stay in Smithy.
+    const expanded = breakdown
+      ? VCShopping.breakdown([...rawMats.values()], data.items)
+      : { materials: [...rawMats.values()], steps: [] };
+    const finalMats = new Map(expanded.materials.map(material => [material.item, material]));
+    const craftingSteps = expanded.steps.map(step => ({
+      station: step.station,
+      product: step.product,
+      productName: entityName(data.items?.[step.product]) || step.productName,
+      amount: step.amount,
+      text: t('{action} {amount}× {product} at {station}', {
+        action: t(step.action), amount: step.amount,
+        product: entityName(data.items?.[step.product]) || step.productName,
+        station: stationName(step.station),
+      }),
+    }));
 
     // Format materials with sources and spoiler handling
     const materials = [];
@@ -2073,8 +1968,7 @@
       const copyBtn = el('button', 'action-btn', 'Copy list');
       copyBtn.type = 'button';
       copyBtn.addEventListener('click', function () {
-        const lines = calc.materials.map(m => m.amount + '× ' + m.name);
-        const text = lines.join('\n');
+        const text = VCShopping.formatList(calc.materials, globalThis.VCI18n?.locale?.() || 'en');
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(text).then(() => {
             copyBtn.textContent = t('Copied!');

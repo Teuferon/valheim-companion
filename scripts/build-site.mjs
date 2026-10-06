@@ -132,6 +132,10 @@ export function buildSite() {
     cpSync(SHARED_ANALYTICS_DIR, sharedAnalyticsDistTarget, { recursive: true });
   }
 
+  const shoppingDist = path.join(DIST_DIR, 'shared', 'shopping');
+  mkdirSync(shoppingDist, { recursive: true });
+  cpSync(path.join(REPO_ROOT, 'shared', 'shopping', 'core.js'), path.join(shoppingDist, 'core.js'));
+
   // Shared player profile used by the Bestiary modules.
   const playerDist = path.join(DIST_DIR, 'shared', 'player');
   mkdirSync(playerDist, { recursive: true });
