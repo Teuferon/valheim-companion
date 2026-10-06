@@ -415,3 +415,40 @@ Vychází z `docs/NAVRHY-NASTROJU.md` § „Menší vylepšení“. Platí zása
 - **Data** (`/progress/data/data.js`) se načtou až při prvním otevření panelu.
 - **Reakce bez obnovení stránky:** všechny sekce poslouchají `VCProgress.onChange` (Bestiary a Smithy už to umí). Kalkulačka posune progresi jen tehdy, když ji uživatel nenastavil ručně ani v URL.
 - Přístupnost: `role="dialog"`, `aria-modal`, focus trap, Esc zavírá, focus se vrátí na spouštěč. Stejná pravidla pro 13 jazyků a pro anglické názvy z hry.
+
+## 22. Množná čísla (VC-33)
+
+- `shared/i18n` (`core.js` i `core.ts`) dostane `tn(catalog, key, count, values)` přes `Intl.PluralRules(locale)`.
+- Katalog pro počítané texty: `{ "<anglický klíč>": { "<locale>": { "one": "…", "few": "…", "many": "…", "other": "…" } } }`. Tvary jsou podle CLDR jazyka (např. cs: one/few/many/other, ar: zero/one/two/few/many/other, ja/zh/id: jen other). Chybějící tvar spadne na `other`, pak na angličtinu.
+- Platí pro všechny sekce, včetně React (Runopis, kalkulačka). Každý text s číslem („N players“, „N bosses defeated“, „N servings“, „N creatures“, „N weapons“…) jde přes `tn`.
+
+## 23. Provisions: plánovač podle činnosti (VC-34)
+
+- **Činnost** (přepínač nad seznamem jídel):
+
+  | Činnost | Skóre jídla |
+  |---|---|
+  | Boss fight | `HP×1.0 + stamina×0.35 + healing×6` |
+  | Combat | `HP×1.0 + stamina×0.6 + healing×3` |
+  | Mining & building | `stamina×1.0 + HP×0.4` |
+  | Farming | `stamina×1.0 + HP×0.3 + duration_min×0.4` |
+  | Exploration & sailing | `stamina×0.8 + HP×0.5 + duration_min×0.8` |
+  | Magic | `eitr×1.2 + HP×0.6 + stamina×0.2` |
+  | Balanced | `HP + stamina + eitr×0.5` |
+
+  `healing` je HP za tik a `duration_min` doba v minutách. Váhy jsou v jedné konstantě a jdou snadno ladit.
+- **Nejlepší kombinace:** projdou se všechny trojice **různých** jídel z odemčených biomů (`VCProgress`, nanejvýš ~170 000 kombinací, v prohlížeči do 100 ms) a ukáže se top 3 podle součtu skóre. Při shodě vyhrává levnější výroba (méně surovin po rozpadu, nižší úroveň stanice). Feasty se počítají jako jedno jídlo.
+- **„Easy to cook“** (přepínač): skóre se vynásobí `1 / (1 + 0.15 × (počet různých základních surovin − 1) + 0.1 × (úroveň stanice − 1))`.
+- **Medoviny podle činnosti a biomu**, pravidla nad `meads.json` (`effect.resistances`, text efektu):
+  - jed: biom Swamp nebo boss Bonemass
+  - mráz: Mountain, Deep North, Moder, Kall Fimbulbringer
+  - oheň: Ashlands, Fader, Lord Reto
+  - léčivé (Healing): Boss fight a Combat
+  - staminové (Stamina regen nebo „Tasty“): Mining, Farming, Exploration
+  - eitr: Magic
+  - doporučí se jen odemčené medoviny
+  - Činnost má volitelně „biom / boss“ (select z odemčených biomů a bossů).
+- **Tipy:**
+  - **spočítané** ze zvoleného loadoutu (šablony): nejkratší doba a počet porcí na zvolené hodiny, chybějící úroveň kotle a co k ní chybí, varování „suroviny nelze teleportovat“, když se týkají
+  - **obecné** v `apps/provisions/data/tips.json`: 10–15 krátkých rad, každá s odkazem na stránku wiki, ze které vychází (`source`). Jen fakta ověřená na valheim.weirdgloop.org.
+  - Všechny tipy ve 13 jazycích, názvy z hry anglicky.
