@@ -1,6 +1,28 @@
 'use strict';
 
 (function () {
+  const t = (source, values) => VCI18n.t(VC_MESSAGES, source, values);
+  const entityName = entity => VCI18n.name(entity);
+  const biomeName = biome => biome.names?.[VCI18n.locale()] || t(biome.name);
+  const gameName = name => {
+    const data = window.VC_DATA;
+    const entity = [...Object.values(data?.items || {}), ...Object.values(data?.weapons || {}),
+      ...Object.values(data?.creatures || {}), ...(data?.armor || []).flatMap(a => [a, ...a.pieces])]
+      .find(e => e.name.toLowerCase() === name.toLowerCase());
+    return entity ? entityName(entity) : name;
+  };
+  function setLabel(id) {
+    const ids = { root: 'root-set', lox: 'lox-fur-set', fenris: 'fenris-set', bear: 'bear-set', vanguard: 'vanguard-set' };
+    const armor = window.VC_DATA?.armor?.find(a => a.id === ids[id]);
+    const bonuses = window.VCRank.SET_BONUSES[id];
+    const terms = bonuses.type === 'skill'
+      ? ['+' + bonuses.amount + ' ' + t(window.VCRank.SKILLS.find(s => s.id === bonuses.skill)?.name || bonuses.skill)]
+      : ['+' + Math.round(bonuses.amount * 100) + ' % ' + bonuses.types.map(capitalize).join('/')];
+    return (armor ? entityName(armor) : SET_LABELS[id].split(' (')[0]) + ' (' + terms.join(', ') + ')';
+  }
+  const noteText = note => String(note).replace(/Blunt|Slash|Pierce|Chop|Pickaxe|Fire|Frost|Lightning|Poison|Spirit|Sneak|Stagger/g, word => t(word));
+  let modalWeapon = null;
+
   /**
    * Helper: create a DOM element safely without innerHTML
    * @param {string} tag
@@ -14,7 +36,7 @@
       element.className = className;
     }
     if (text !== undefined && text !== null) {
-      element.textContent = text;
+      element.textContent = t(String(text));
     }
     return element;
   }
@@ -26,7 +48,7 @@
    */
   function capitalize(str) {
     if (!str) return '';
-    return str.charAt(0).toUpperCase() + str.slice(1);
+    return t(str.charAt(0).toUpperCase() + str.slice(1));
   }
 
   /**
@@ -53,7 +75,7 @@
   function createImage(src, alt, className, placeholderChar) {
     if (!src) {
       const ph = el('div', className + ' image-placeholder', placeholderChar || (alt ? alt.charAt(0) : '?'));
-      ph.setAttribute('aria-label', alt || 'Image');
+      ph.setAttribute('aria-label', alt || t('Image'));
       return ph;
     }
     const img = document.createElement('img');
@@ -65,7 +87,7 @@
       const parent = img.parentElement;
       if (parent) {
         const ph = el('div', className + ' image-placeholder', placeholderChar || (alt ? alt.charAt(0) : '?'));
-        ph.setAttribute('aria-label', alt || 'Image');
+        ph.setAttribute('aria-label', alt || t('Image'));
         parent.replaceChild(ph, img);
       }
     });
@@ -327,15 +349,10 @@
       const skills = window.VCRank.SKILLS;
       const avg = Math.round(skills.reduce((acc, s) => acc + player.skills[s.id], 0) / skills.length);
       const diffLabel = DIFFICULTY_OPTIONS.find((d) => d.id === player.difficulty);
-      const playersStr = player.players + (player.players === 1 ? ' player' : ' players');
-      const qualityStr = player.quality === 'max' ? 'Max quality' : 'Quality ' + player.quality;
-      const rankByStr = player.rankBy === 'hit' ? 'Per hit' : 'DPS';
-      summaryEl.textContent =
-        'Your character · avg skill ' + avg +
-        ' · ' + (diffLabel ? diffLabel.short : 'Normal') +
-        ' · ' + playersStr +
-        ' · ' + qualityStr +
-        ' · ' + rankByStr;
+      const playersStr = t('{count} players', { count: player.players });
+      const qualityStr = player.quality === 'max' ? t('Max quality') : t('Quality {level}', { level: player.quality });
+      const rankByStr = player.rankBy === 'hit' ? t('Per hit') : t('DPS');
+      summaryEl.textContent = t('Your character · avg skill {skill} · {difficulty} · {players} · {quality} · {ranking}', { skill: avg, difficulty: t(diffLabel ? diffLabel.short : 'Normal'), players: playersStr, quality: qualityStr, ranking: rankByStr });
     };
 
     const updateSkillBadges = () => {
@@ -402,7 +419,7 @@
     setAllRange.max = '100';
     setAllRange.value = '50';
     setAllRange.className = 'set-all-range';
-    setAllRange.setAttribute('aria-label', 'Set all skills value');
+    setAllRange.setAttribute('aria-label', t('Set all skills value'));
     const setAllVal = el('span', 'set-all-val', '50');
     setAllRange.addEventListener('input', () => {
       setAllVal.textContent = setAllRange.value;
@@ -434,7 +451,7 @@
       range.value = String(player.skills[s.id]);
       range.className = 'skill-range';
       range.id = 'skill-range-' + s.id;
-      range.setAttribute('aria-label', s.name + ' skill');
+      range.setAttribute('aria-label', t('{skill} skill', { skill: t(s.name) }));
 
       const numBox = el('div', 'skill-number-box');
       const number = document.createElement('input');
@@ -444,7 +461,7 @@
       number.value = String(player.skills[s.id]);
       number.className = 'skill-number';
       number.id = 'skill-number-' + s.id;
-      number.setAttribute('aria-label', s.name + ' skill level');
+      number.setAttribute('aria-label', t('{skill} skill level', { skill: t(s.name) }));
       const badge = el('span', 'skill-effective-badge');
       numBox.appendChild(number);
       numBox.appendChild(badge);
@@ -493,7 +510,7 @@
         onPlayerChange();
       });
       label.appendChild(cb);
-      label.appendChild(document.createTextNode(SET_LABELS[setId] || setId));
+      label.appendChild(document.createTextNode(setLabel(setId)));
       setBoxes.appendChild(label);
       setCheckboxes[setId] = cb;
     }
@@ -509,7 +526,7 @@
     diffGroup.appendChild(el('span', 'char-field-label', 'Combat difficulty'));
     difficultySelect = document.createElement('select');
     difficultySelect.className = 'char-select';
-    difficultySelect.setAttribute('aria-label', 'Combat difficulty');
+    difficultySelect.setAttribute('aria-label', t('Combat difficulty'));
     DIFFICULTY_OPTIONS.forEach((opt) => {
       const option = el('option', null, opt.label);
       option.value = opt.id;
@@ -527,7 +544,7 @@
     playersGroup.appendChild(el('span', 'char-field-label', 'Players nearby'));
     playersSelect = document.createElement('select');
     playersSelect.className = 'char-select';
-    playersSelect.setAttribute('aria-label', 'Players nearby');
+    playersSelect.setAttribute('aria-label', t('Players nearby'));
     for (let n = 1; n <= 5; n++) {
       const option = el('option', null, String(n));
       option.value = String(n);
@@ -554,7 +571,7 @@
     rankGroup.appendChild(el('span', 'char-field-label', 'Rank by'));
     const rankToggle = el('div', 'char-rank-toggle');
     rankToggle.setAttribute('role', 'radiogroup');
-    rankToggle.setAttribute('aria-label', 'Rank by');
+    rankToggle.setAttribute('aria-label', t('Rank by'));
     const dpsBtn = el('button', 'rank-toggle-btn' + (player.rankBy !== 'hit' ? ' active' : ''), 'Damage per second');
     dpsBtn.type = 'button';
     const hitBtn = el('button', 'rank-toggle-btn' + (player.rankBy === 'hit' ? ' active' : ''), 'Damage per hit');
@@ -585,7 +602,7 @@
     qualityGroup.appendChild(el('span', 'char-field-label', 'Upgrade level'));
     qualitySelect = document.createElement('select');
     qualitySelect.className = 'char-select';
-    qualitySelect.setAttribute('aria-label', 'Upgrade level');
+    qualitySelect.setAttribute('aria-label', t('Upgrade level'));
     const maxOption = el('option', null, 'Max');
     maxOption.value = 'max';
     qualitySelect.appendChild(maxOption);
@@ -619,7 +636,7 @@
       onPlayerChange();
     });
     sneakLabel.appendChild(sneakCheckbox);
-    sneakLabel.appendChild(document.createTextNode('Sneak attack (backstab)'));
+    sneakLabel.appendChild(document.createTextNode(t('Sneak attack (backstab)')));
     sitBoxes.appendChild(sneakLabel);
 
     const staggeredLabel = el('label', 'char-checkbox-label');
@@ -631,7 +648,7 @@
       onPlayerChange();
     });
     staggeredLabel.appendChild(staggeredCheckbox);
-    staggeredLabel.appendChild(document.createTextNode('Enemy staggered (×2)'));
+    staggeredLabel.appendChild(document.createTextNode(t('Enemy staggered (×2)')));
     sitBoxes.appendChild(staggeredLabel);
 
     sitBlock.appendChild(sitBoxes);
@@ -676,23 +693,24 @@
     const container = document.getElementById('weapon-modal-content');
     if (!dialog || !container || !weapon) return;
 
+    modalWeapon = weapon;
     container.textContent = '';
 
     // Header (icon + title + close button)
     const header = el('div', 'modal-header');
-    const icon = createImage(weapon.image, weapon.name, 'modal-icon', weapon.name.charAt(0));
+    const icon = createImage(weapon.image, entityName(weapon), 'modal-icon', entityName(weapon).charAt(0));
     header.appendChild(icon);
 
     const titleBox = el('div', 'modal-title-box');
-    titleBox.appendChild(el('h3', 'modal-title', weapon.name));
+    titleBox.appendChild(el('h3', 'modal-title', entityName(weapon)));
 
-    const typeStr = [weapon.type || capitalize(weapon.category), weapon.hands].filter(Boolean).join(' · ');
+    const typeStr = [t(weapon.type || capitalize(weapon.category)), t(weapon.hands || '')].filter(Boolean).join(' · ');
     titleBox.appendChild(el('div', 'modal-subtitle', typeStr));
     header.appendChild(titleBox);
 
     const closeBtn = el('button', 'modal-close-btn', '✕');
     closeBtn.type = 'button';
-    closeBtn.setAttribute('aria-label', 'Close dialog');
+    closeBtn.setAttribute('aria-label', t('Close dialog'));
     closeBtn.addEventListener('click', () => dialog.close());
     header.appendChild(closeBtn);
 
@@ -703,16 +721,16 @@
 
     // Tier & Biome
     const biomeObj = data.biomes.find(b => b.id === weapon.biome);
-    const biomeName = biomeObj ? biomeObj.name : (weapon.biome ? capitalize(weapon.biome) : 'Unknown');
+    const biomeLabel = biomeObj ? biomeName(biomeObj) : (weapon.biome ? capitalize(weapon.biome) : t('Unknown'));
     const tierBiome = el('div', 'modal-field');
     tierBiome.appendChild(el('span', 'modal-field-title', 'Tier & Biome'));
-    tierBiome.appendChild(el('span', 'modal-field-val', (weapon.tier ? 'Tier ' + weapon.tier : 'Special') + ' · ' + biomeName));
+    tierBiome.appendChild(el('span', 'modal-field-val', (weapon.tier ? t('Tier {tier}', { tier: weapon.tier }) : t('Special')) + ' · ' + biomeLabel));
     statsGrid.appendChild(tierBiome);
 
     // Max Quality
     const qualityField = el('div', 'modal-field');
     qualityField.appendChild(el('span', 'modal-field-title', 'Max Quality'));
-    qualityField.appendChild(el('span', 'modal-field-val', weapon.maxQuality ? 'Level ' + weapon.maxQuality : 'Level 1'));
+    qualityField.appendChild(el('span', 'modal-field-val', weapon.maxQuality ? t('Level {level}', { level: weapon.maxQuality }) : t('Level {level}', { level: 1 })));
     statsGrid.appendChild(qualityField);
 
     // Stamina
@@ -731,7 +749,7 @@
     if (weapon.station) {
       const stationField = el('div', 'modal-field');
       stationField.appendChild(el('span', 'modal-field-title', 'Crafting Station'));
-      const lvlStr = weapon.stationLevel ? ' (Lvl ' + weapon.stationLevel + ')' : '';
+      const lvlStr = weapon.stationLevel ? ' (' + t('Level {level}', { level: weapon.stationLevel }) + ')' : '';
       stationField.appendChild(el('span', 'modal-field-val', weapon.station + lvlStr));
       statsGrid.appendChild(stationField);
     }
@@ -759,7 +777,7 @@
     if (weapon.materials && weapon.materials.length > 0) {
       const matSection = el('div', 'modal-field');
       matSection.appendChild(el('span', 'modal-field-title', 'Crafting Materials (Base)'));
-      const matText = weapon.materials.map(m => m.name + (m.amount ? ' ×' + m.amount : '')).join(', ');
+      const matText = weapon.materials.map(m => gameName(m.name) + (m.amount ? ' ×' + m.amount : '')).join(', ');
       matSection.appendChild(el('span', 'modal-field-val', matText));
       container.appendChild(matSection);
     }
@@ -790,7 +808,7 @@
     };
     dialog.addEventListener('click', onDialogClick);
 
-    dialog.showModal();
+    if (!dialog.open) dialog.showModal();
   }
 
   /**
@@ -835,14 +853,14 @@
 
     const left = el('div', 'weapon-btn-left');
     const iconSrc = weapon ? weapon.image : null;
-    const weaponName = weapon ? weapon.name : weaponId;
+    const weaponName = weapon ? entityName(weapon) : weaponId;
     left.appendChild(createImage(iconSrc, weaponName, 'weapon-btn-icon', weaponName.charAt(0)));
 
-    const nameText = sublabel ? weaponName + ' (' + sublabel + ')' : weaponName;
+    const nameText = sublabel ? weaponName + ' (' + t(sublabel) + ')' : weaponName;
     left.appendChild(el('span', 'weapon-btn-name', nameText));
 
     if (recItem && recItem.isSecondary) {
-      left.appendChild(el('span', 'badge badge-secondary', 'secondary'));
+      left.appendChild(el('span', 'badge badge-secondary', t('secondary')));
     }
     btn.appendChild(left);
 
@@ -850,7 +868,7 @@
     if (notes && notes.length > 0) {
       const notesDiv = el('div', 'rec-notes');
       notes.forEach(n => {
-        notesDiv.appendChild(el('span', 'rec-note-chip', n));
+        notesDiv.appendChild(el('span', 'rec-note-chip', noteText(n)));
       });
       right.appendChild(notesDiv);
     }
@@ -870,7 +888,7 @@
       }
       const scoreEl = el('span', 'weapon-score', mainScoreText);
       if (recItem && recItem.min !== undefined && recItem.max !== undefined) {
-        scoreEl.title = recItem.min + '–' + recItem.max + ' per hit';
+        scoreEl.title = recItem.min + '–' + recItem.max + ' ' + t('Per hit');
       }
       scoreBox.appendChild(scoreEl);
 
@@ -879,10 +897,10 @@
         const subline = el('div', 'weapon-subline');
         const hitVal = Math.round(recItem.perHit);
         const cycleVal = Number(recItem.cycleSeconds.toFixed(2));
-        subline.appendChild(document.createTextNode('per hit ' + hitVal + ' · cycle ' + cycleVal + ' s'));
+        subline.appendChild(document.createTextNode(t('per hit {damage} · cycle {seconds} s', { damage: hitVal, seconds: cycleVal })));
         if (recItem.confidence === 'estimate') {
           const estSpan = el('span', 'timing-estimate', ' ~');
-          estSpan.title = 'estimated timing';
+          estSpan.title = t('estimated timing');
           subline.appendChild(estSpan);
         }
         scoreBox.appendChild(subline);
@@ -890,7 +908,7 @@
 
       // 3. Hits / TTK: "≈ N hits · ≈ X s"
       if (recItem && recItem.hits != null) {
-        let hitsText = '≈ ' + recItem.hits + ' hits';
+        let hitsText = t('≈ {count} hits', { count: recItem.hits });
         if (recItem.timeToKill != null && Number.isFinite(recItem.timeToKill)) {
           const ttkVal = recItem.timeToKill < 10 ? recItem.timeToKill.toFixed(1) : Math.round(recItem.timeToKill);
           hitsText += ' · ≈ ' + ttkVal + ' s';
@@ -918,7 +936,7 @@
   function createCreatureCard(creature, biome, data) {
     const card = el('article', 'creature-card');
     card.dataset.creatureId = creature.id;
-    card.dataset.creatureName = creature.name.toLowerCase();
+    card.dataset.creatureName = (creature.name + ' ' + entityName(creature)).toLowerCase();
     card.dataset.creatureKind = creature.kind;
 
     const starsList = (creature.stars && creature.stars.length > 0)
@@ -934,7 +952,7 @@
     const updateImage = (starObj) => {
       imageBox.textContent = '';
       const imgSrc = starObj.image || (creature.stars && creature.stars[0] && creature.stars[0].image) || null;
-      imageBox.appendChild(createImage(imgSrc, creature.name, 'card-image', creature.name.charAt(0)));
+      imageBox.appendChild(createImage(imgSrc, entityName(creature), 'card-image', entityName(creature).charAt(0)));
     };
     updateImage(starsList[currentStarIndex]);
 
@@ -942,7 +960,7 @@
 
     // Title Row
     const titleRow = el('div', 'card-title-row');
-    const nameEl = el('h4', 'card-name', creature.name);
+    const nameEl = el('h4', 'card-name', entityName(creature));
     titleRow.appendChild(nameEl);
     headerInfo.appendChild(titleRow);
 
@@ -962,7 +980,7 @@
 
     // Always star badge if single star > 0
     if (starsList.length === 1 && starsList[0].star > 0) {
-      badgesRow.appendChild(el('span', 'badge badge-always-stars', 'Always ' + getStarSymbol(starsList[0].star)));
+      badgesRow.appendChild(el('span', 'badge badge-always-stars', t('Always {stars}', { stars: getStarSymbol(starsList[0].star) })));
     }
     if (badgesRow.children.length > 0) {
       headerInfo.appendChild(badgesRow);
@@ -972,12 +990,12 @@
     if (creature.hasStars && starsList.length > 1) {
       const starSelector = el('div', 'star-selector');
       starSelector.setAttribute('role', 'group');
-      starSelector.setAttribute('aria-label', 'Select star level');
+      starSelector.setAttribute('aria-label', t('Select star level'));
 
       starsList.forEach((starObj, idx) => {
         const starBtn = el('button', 'star-btn' + (idx === 0 ? ' active' : ''), getStarSymbol(starObj.star));
         starBtn.type = 'button';
-        starBtn.setAttribute('aria-label', starObj.star + ' star');
+        starBtn.setAttribute('aria-label', t('{count} stars', { count: starObj.star }));
         starBtn.addEventListener('click', function () {
           currentStarIndex = idx;
           Array.from(starSelector.children).forEach(btn => btn.classList.remove('active'));
@@ -997,7 +1015,7 @@
     if (creature.weakPoints && creature.weakPoints.length > 0) {
       const wpBox = el('div', 'weak-points-box');
       creature.weakPoints.forEach(wp => {
-        const label = el('span', 'weak-point-label', 'Weak point: ' + wp.part + ' — ');
+        const label = el('span', 'weak-point-label', t('Weak point: {part} — ', { part: t(wp.part) }));
         wpBox.appendChild(label);
 
         const chips = el('div', 'modifiers-chips');
@@ -1079,8 +1097,8 @@
       // 2. Bow + arrows
       if (rec.bow || (rec.arrows && rec.arrows.length > 0)) {
         const bowGroup = el('div', 'rec-group');
-        const bowName = bowWeapon ? bowWeapon.name : 'Bow';
-        bowGroup.appendChild(el('span', 'rec-group-title', 'Bow + Arrows (' + bowName + ')'));
+        const bowName = bowWeapon ? entityName(bowWeapon) : t('Bow');
+        bowGroup.appendChild(el('span', 'rec-group-title', t('Bow + Arrows ({name})', { name: bowName })));
 
         if (rec.arrows && rec.arrows.length > 0) {
           rec.arrows.forEach(arr => {
@@ -1095,8 +1113,8 @@
       // 3. Crossbow + bolts
       if (rec.crossbow || (rec.bolts && rec.bolts.length > 0)) {
         const xbowGroup = el('div', 'rec-group');
-        const xbowName = xbowWeapon ? xbowWeapon.name : 'Crossbow';
-        xbowGroup.appendChild(el('span', 'rec-group-title', 'Crossbow + Bolts (' + xbowName + ')'));
+        const xbowName = xbowWeapon ? entityName(xbowWeapon) : t('Crossbow');
+        xbowGroup.appendChild(el('span', 'rec-group-title', t('Crossbow + Bolts ({name})', { name: xbowName })));
 
         if (rec.bolts && rec.bolts.length > 0) {
           rec.bolts.forEach(bolt => {
@@ -1165,7 +1183,7 @@
       }
 
       if (hpVal !== null) {
-        healthValue.textContent = Number(hpVal).toLocaleString();
+        healthValue.textContent = Number(hpVal).toLocaleString(VCI18n.locale());
       } else if (starObj.healthText) {
         healthValue.textContent = starObj.healthText;
       } else {
@@ -1258,7 +1276,7 @@
 
       // Other immunities
       if (creature.otherImmunities && creature.otherImmunities.length > 0) {
-        const otherImm = el('div', 'other-immunities', 'Also immune: ' + creature.otherImmunities.join(', '));
+        const otherImm = el('div', 'other-immunities', t('Also immune: {types}', { types: creature.otherImmunities.map(tier => t(tier)).join(', ') }));
         modSection.appendChild(otherImm);
       }
 
@@ -1285,7 +1303,7 @@
       if (earlierBiomes.length > 0) {
         const alsoBox = el('div', 'also-found-box');
         alsoBox.appendChild(el('span', 'also-found-label', 'Also found in: '));
-        alsoBox.appendChild(document.createTextNode(earlierBiomes.map(b => b.name).join(', ')));
+        alsoBox.appendChild(document.createTextNode(earlierBiomes.map(b => biomeName(b)).join(', ')));
         card.appendChild(alsoBox);
       }
     }
@@ -1308,19 +1326,19 @@
     if (creature.drops && creature.drops.length > 0) {
       const row = el('div', 'details-row');
       row.appendChild(el('span', 'details-key', 'Drops'));
-      row.appendChild(el('span', 'details-val', creature.drops.join(', ')));
+      row.appendChild(el('span', 'details-val', creature.drops.map(gameName).join(', ')));
       detailsContent.appendChild(row);
     }
 
     // Trophy
-    if (creature.trophy && creature.trophy.name) {
+    if (creature.trophy && gameName(creature.trophy.name)) {
       const row = el('div', 'details-row');
       row.appendChild(el('span', 'details-key', 'Trophy'));
       const trophyVal = el('div', 'trophy-val');
       if (creature.trophy.image) {
-        trophyVal.appendChild(createImage(creature.trophy.image, creature.trophy.name, 'trophy-img', 'T'));
+        trophyVal.appendChild(createImage(creature.trophy.image, gameName(creature.trophy.name), 'trophy-img', 'T'));
       }
-      trophyVal.appendChild(el('span', 'details-val', creature.trophy.name));
+      trophyVal.appendChild(el('span', 'details-val', gameName(creature.trophy.name)));
       row.appendChild(trophyVal);
       detailsContent.appendChild(row);
     }
@@ -1414,22 +1432,22 @@
   function createFishTile(creature, biome, data) {
     const wrapper = el('div', 'fish-wrapper');
     wrapper.dataset.creatureId = creature.id;
-    wrapper.dataset.creatureName = creature.name.toLowerCase();
+    wrapper.dataset.creatureName = (creature.name + ' ' + entityName(creature)).toLowerCase();
     wrapper.dataset.creatureKind = 'fish';
 
     const tile = el('div', 'fish-tile');
     tile.setAttribute('role', 'button');
     tile.setAttribute('tabindex', '0');
     tile.setAttribute('aria-expanded', 'false');
-    tile.setAttribute('aria-label', creature.name + ', click to toggle details');
+    tile.setAttribute('aria-label', t('{name}, click to toggle details', { name: entityName(creature) }));
 
     const star0 = (creature.stars && creature.stars[0]) || {};
-    const thumb = createImage(star0.image, creature.name, 'fish-thumb', creature.name.charAt(0));
+    const thumb = createImage(star0.image, entityName(creature), 'fish-thumb', entityName(creature).charAt(0));
     tile.appendChild(thumb);
 
     const info = el('div', 'fish-info');
-    info.appendChild(el('span', 'fish-name', creature.name));
-    const hpStr = star0.health !== null && star0.health !== undefined ? star0.health + ' HP' : '— HP';
+    info.appendChild(el('span', 'fish-name', entityName(creature)));
+    const hpStr = star0.health !== null && star0.health !== undefined ? star0.health + ' ' + t('HP') : '— ' + t('HP');
     info.appendChild(el('span', 'fish-hp', hpStr));
     tile.appendChild(info);
 
@@ -1542,7 +1560,7 @@
     if (weaponsList.length === 0) return null;
 
     const section = el('details', 'biome-weapons-details');
-    const summary = el('summary', null, 'Weapons & ammo from this biome (' + weaponsList.length + ')');
+    const summary = el('summary', null, t('Weapons & ammo from this biome ({count})', { count: weaponsList.length }));
     section.appendChild(summary);
 
     const tableWrapper = el('div', 'weapons-table-wrapper');
@@ -1565,7 +1583,7 @@
     headRow.appendChild(el('th', null, 'Weapon / Ammo'));
     headRow.appendChild(el('th', null, 'Max Damage'));
     const yourAvgTh = el('th', null, 'Your avg');
-    yourAvgTh.title = 'Average per-hit damage with your skills, difficulty and upgrade level (no creature modifiers)';
+    yourAvgTh.title = t('Average per-hit damage with your skills, difficulty and upgrade level (no creature modifiers)');
     headRow.appendChild(yourAvgTh);
     headRow.appendChild(el('th', null, 'Stamina'));
     headRow.appendChild(el('th', null, 'Materials'));
@@ -1590,8 +1608,8 @@
         // Name + Icon
         const nameTd = el('td');
         const itemBox = el('div', 'weapon-cell-item');
-        itemBox.appendChild(createImage(weapon.image, weapon.name, 'weapon-cell-icon', weapon.name.charAt(0)));
-        itemBox.appendChild(el('span', 'weapon-cell-name', weapon.name));
+        itemBox.appendChild(createImage(weapon.image, entityName(weapon), 'weapon-cell-icon', entityName(weapon).charAt(0)));
+        itemBox.appendChild(el('span', 'weapon-cell-name', entityName(weapon)));
         itemBox.addEventListener('click', () => openWeaponModal(weapon, data));
         nameTd.appendChild(itemBox);
         row.appendChild(nameTd);
@@ -1624,7 +1642,7 @@
         // Materials
         const matTd = el('td', 'weapon-materials');
         if (weapon.materials && weapon.materials.length > 0) {
-          matTd.textContent = weapon.materials.map(m => m.name + (m.amount ? ' ×' + m.amount : '')).join(', ');
+          matTd.textContent = weapon.materials.map(m => gameName(m.name) + (m.amount ? ' ×' + m.amount : '')).join(', ');
         } else {
           matTd.textContent = '—';
         }
@@ -1649,7 +1667,7 @@
           const avgVal = Math.round(hit.avg);
           cell.textContent = String(avgVal);
           cell.title = hit.min !== hit.max
-            ? Math.round(hit.min) + '–' + Math.round(hit.max) + ' per hit'
+            ? Math.round(hit.min) + '–' + Math.round(hit.max) + ' ' + t('Per hit')
             : String(avgVal);
         } else {
           cell.textContent = '—';
@@ -1682,7 +1700,7 @@
     if (bossesList.length > 0) {
       const bossSection = el('section', 'biome-section biome-section-bosses');
       const bossTitle = el('h3', 'section-title');
-      bossTitle.appendChild(document.createTextNode('Bosses '));
+      bossTitle.appendChild(document.createTextNode(t('Bosses ')));
       bossTitle.appendChild(el('span', 'section-count', '(' + bossesList.length + ')'));
       bossSection.appendChild(bossTitle);
 
@@ -1702,7 +1720,7 @@
     if (hostileList.length > 0) {
       const hostileSection = el('section', 'biome-section biome-section-hostile');
       const hostileTitle = el('h3', 'section-title');
-      hostileTitle.appendChild(document.createTextNode('Hostile '));
+      hostileTitle.appendChild(document.createTextNode(t('Hostile ')));
       hostileTitle.appendChild(el('span', 'section-count', '(' + hostileList.length + ')'));
       hostileSection.appendChild(hostileTitle);
 
@@ -1722,7 +1740,7 @@
     if (passiveList.length > 0) {
       const passiveSection = el('section', 'biome-section biome-section-passive');
       const passiveTitle = el('h3', 'section-title');
-      passiveTitle.appendChild(document.createTextNode('Passive '));
+      passiveTitle.appendChild(document.createTextNode(t('Passive ')));
       passiveTitle.appendChild(el('span', 'section-count', '(' + passiveList.length + ')'));
       passiveSection.appendChild(passiveTitle);
 
@@ -1742,7 +1760,7 @@
     if (fishList.length > 0) {
       const fishSection = el('section', 'biome-section biome-section-fish');
       const fishTitle = el('h3', 'section-title');
-      fishTitle.appendChild(document.createTextNode('Fish '));
+      fishTitle.appendChild(document.createTextNode(t('Fish ')));
       fishTitle.appendChild(el('span', 'section-count', '(' + fishList.length + ')'));
       fishSection.appendChild(fishTitle);
 
@@ -1881,14 +1899,14 @@
     modGroup.appendChild(el('div', 'legend-group-title', 'Weakness & Resistance Multipliers'));
     const modItems = el('div', 'legend-items');
     const tiers = [
-      { mult: 2, label: '×2 Very Weak', cls: 'mod-chip-2' },
-      { mult: 1.5, label: '×1.5 Weak', cls: 'mod-chip-1_5' },
-      { mult: 1.25, label: '×1.25 Slightly Weak', cls: 'mod-chip-1_25' },
-      { mult: 1, label: '×1 Neutral', cls: 'mod-chip-1' },
-      { mult: 0.75, label: '×0.75 Slightly Resistant', cls: 'mod-chip-0_75' },
-      { mult: 0.5, label: '×0.5 Resistant', cls: 'mod-chip-0_5' },
-      { mult: 0.25, label: '×0.25 Very Resistant', cls: 'mod-chip-0_25' },
-      { mult: 0, label: '×0 Immune', cls: 'mod-chip-0' }
+      { mult: 2, label: '×2 ' + t('Very Weak'), cls: 'mod-chip-2' },
+      { mult: 1.5, label: '×1.5 ' + t('Weak'), cls: 'mod-chip-1_5' },
+      { mult: 1.25, label: '×1.25 ' + t('Slightly Weak'), cls: 'mod-chip-1_25' },
+      { mult: 1, label: '×1 ' + t('Neutral'), cls: 'mod-chip-1' },
+      { mult: 0.75, label: '×0.75 ' + t('Slightly Resistant'), cls: 'mod-chip-0_75' },
+      { mult: 0.5, label: '×0.5 ' + t('Resistant'), cls: 'mod-chip-0_5' },
+      { mult: 0.25, label: '×0.25 ' + t('Very Resistant'), cls: 'mod-chip-0_25' },
+      { mult: 0, label: '×0 ' + t('Immune'), cls: 'mod-chip-0' }
     ];
     tiers.forEach(item => {
       modItems.appendChild(el('span', 'mod-chip ' + item.cls, item.label));
@@ -1918,7 +1936,7 @@
    * @param {object} data
    * @returns {{ refresh: function }}
    */
-  function buildArmorySection(container, data) {
+  function buildArmorySection(container, data, state = {}) {
     if (!container || !data || !data.weapons) return null;
     container.textContent = '';
 
@@ -1929,11 +1947,11 @@
     container.appendChild(header);
 
     // State
-    let sortColumn = 'yourDps';
-    let sortDirection = 'desc';
-    let searchQuery = '';
-    let selectedCategory = 'all';
-    let selectedDamageType = null;
+    let sortColumn = state.sortColumn ?? 'yourDps';
+    let sortDirection = state.sortDirection ?? 'desc';
+    let searchQuery = state.searchQuery ?? '';
+    let selectedCategory = state.selectedCategory ?? 'all';
+    let selectedDamageType = state.selectedDamageType ?? null;
 
     // Controls
     const controls = el('div', 'armory-controls');
@@ -1946,15 +1964,16 @@
     const searchInput = el('input');
     searchInput.type = 'search';
     searchInput.id = 'armory-search';
-    searchInput.placeholder = 'Search weapons…';
-    searchInput.setAttribute('aria-label', 'Search weapons by name');
+    searchInput.value = searchQuery;
+    searchInput.placeholder = t('Search weapons…');
+    searchInput.setAttribute('aria-label', t('Search weapons by name'));
     searchBox.appendChild(searchInput);
     row1.appendChild(searchBox);
 
     // Category filter dropdown
     const categorySelect = el('select', 'armory-select');
     categorySelect.id = 'armory-category-filter';
-    categorySelect.setAttribute('aria-label', 'Filter weapons by category');
+    categorySelect.setAttribute('aria-label', t('Filter weapons by category'));
 
     const CATEGORY_OPTIONS = [
       { value: 'all', label: 'All' },
@@ -1979,6 +1998,7 @@
       optionEl.value = opt.value;
       categorySelect.appendChild(optionEl);
     });
+    categorySelect.value = selectedCategory;
     row1.appendChild(categorySelect);
 
     // Spoiler toggle
@@ -1988,7 +2008,15 @@
     toggleAllCheckbox.id = 'armory-toggle-all';
     toggleAllCheckbox.checked = getStoredArmoryAll();
     toggleLabel.appendChild(toggleAllCheckbox);
-    toggleLabel.appendChild(el('span', null, 'Show all weapons (spoilers)'));
+    const spoilerText = el('span');
+    toggleLabel.appendChild(spoilerText);
+    const updateSpoilerLabel = () => {
+      const active = toggleAllCheckbox.checked;
+      spoilerText.textContent = t(active ? '⚠ All weapons shown — click to hide' : 'Show all weapons (spoilers)');
+      toggleAllCheckbox.setAttribute('aria-pressed', String(active));
+      toggleLabel.classList.toggle('spoilers-active', active);
+    };
+    updateSpoilerLabel();
     row1.appendChild(toggleLabel);
 
     controls.appendChild(row1);
@@ -2002,7 +2030,7 @@
     const chipButtons = [];
 
     DAMAGE_CHIP_TYPES.forEach(dt => {
-      const chipBtn = el('button', 'armory-chip-btn', capitalize(dt));
+      const chipBtn = el('button', 'armory-chip-btn' + (selectedDamageType === dt ? ' active' : ''), capitalize(dt));
       chipBtn.type = 'button';
       chipBtn.dataset.damage = dt;
       chipBtn.addEventListener('click', () => {
@@ -2050,7 +2078,7 @@
 
     headerCols.forEach(col => {
       const th = el('th', col.cls || null);
-      if (col.title) th.title = col.title;
+      if (col.title) th.title = t(col.title);
 
       if (col.key) {
         th.setAttribute('tabindex', '0');
@@ -2080,7 +2108,7 @@
           }
         });
       } else {
-        th.textContent = col.label;
+        th.textContent = t(col.label);
       }
       headRow.appendChild(th);
     });
@@ -2137,11 +2165,11 @@
 
       // 1. Icon
       const iconTd = el('td', 'armory-col-icon');
-      iconTd.appendChild(createImage(w.image, w.name, 'armory-weapon-icon', w.name.charAt(0)));
+      iconTd.appendChild(createImage(w.image, entityName(w), 'armory-weapon-icon', entityName(w).charAt(0)));
       row.appendChild(iconTd);
 
       // 2. Name
-      const nameTd = el('td', 'armory-col-name', w.name);
+      const nameTd = el('td', 'armory-col-name', entityName(w));
       row.appendChild(nameTd);
 
       // 3. Category
@@ -2152,10 +2180,10 @@
       row.appendChild(el('td', null, skillText));
 
       // 5. Biome (Tier)
-      let biomeText = 'Special';
+      let biomeText = t('Special');
       if (w.biome) {
         const b = data.biomes?.find(x => x.id === w.biome);
-        const bName = b ? b.name : capitalize(w.biome);
+        const bName = b ? biomeName(b) : capitalize(w.biome);
         biomeText = w.tier != null ? bName + ' (' + w.tier + ')' : bName;
       }
       row.appendChild(el('td', null, biomeText));
@@ -2184,7 +2212,7 @@
         const avgVal = Math.round(hit.avg);
         avgTd.textContent = String(avgVal);
         avgTd.title = hit.min !== hit.max
-          ? Math.round(hit.min) + '–' + Math.round(hit.max) + ' per hit'
+          ? Math.round(hit.min) + '–' + Math.round(hit.max) + ' ' + t('Per hit')
           : String(avgVal);
       } else {
         avgTd.textContent = '—';
@@ -2207,7 +2235,7 @@
         cycleTd.textContent = cycleStr;
         if (weaponStats.confidence === 'estimate') {
           const est = el('span', 'timing-estimate', ' ~');
-          est.title = 'estimated timing';
+          est.title = t('estimated timing');
           cycleTd.appendChild(est);
         }
       } else {
@@ -2232,7 +2260,7 @@
       // 12. Materials
       const matTd = el('td', 'weapon-materials');
       if (w.materials && w.materials.length > 0) {
-        matTd.textContent = w.materials.map(m => m.name + (m.amount ? ' ×' + m.amount : '')).join(', ');
+        matTd.textContent = w.materials.map(m => gameName(m.name) + (m.amount ? ' ×' + m.amount : '')).join(', ');
       } else {
         matTd.textContent = '—';
       }
@@ -2246,7 +2274,7 @@
       const tr = el('tr', 'armory-locked-row');
       const td = el('td');
       td.colSpan = 12;
-      td.textContent = '🔒 ' + count + ' weapons from ' + biome.name + ' — open the biome to reveal';
+      td.textContent = t('🔒 {count} weapons from {biome} — open the biome to reveal', { count, biome: biomeName(biome) });
       tr.appendChild(td);
       return tr;
     }
@@ -2268,7 +2296,7 @@
         // Filters
         if (!matchesCategory(w, selectedCategory)) continue;
         if (selectedDamageType && !matchesDamageType(w, selectedDamageType)) continue;
-        if (searchQuery && !w.name.toLowerCase().includes(searchQuery)) continue;
+        if (searchQuery && !(w.name + ' ' + entityName(w)).toLowerCase().includes(searchQuery)) continue;
 
         const weaponStats = computeWeaponStats(w, data, playerState);
         visible.push({
@@ -2288,7 +2316,7 @@
         // If desc, Special comes first when showAll is true
         if (showAll && sortDirection === 'desc') {
           const specialItems = visible.filter(it => !it.weapon.biome);
-          specialItems.sort((a, b) => b.weapon.name.localeCompare(a.weapon.name));
+          specialItems.sort((a, b) => entityName(b.weapon).localeCompare(entityName(a.weapon)));
           specialItems.forEach(it => tbody.appendChild(createWeaponRow(it.weapon, it.stats)));
         }
 
@@ -2297,8 +2325,8 @@
             const biomeItems = visible.filter(it => it.weapon.biome === biome.id);
             biomeItems.sort((a, b) => {
               return sortDirection === 'asc'
-                ? a.weapon.name.localeCompare(b.weapon.name)
-                : b.weapon.name.localeCompare(a.weapon.name);
+                ? entityName(a.weapon).localeCompare(entityName(b.weapon))
+                : entityName(b.weapon).localeCompare(entityName(a.weapon));
             });
             biomeItems.forEach(it => tbody.appendChild(createWeaponRow(it.weapon, it.stats)));
           } else {
@@ -2313,7 +2341,7 @@
         // If asc, Special comes at the end when showAll is true
         if (showAll && sortDirection === 'asc') {
           const specialItems = visible.filter(it => !it.weapon.biome);
-          specialItems.sort((a, b) => a.weapon.name.localeCompare(b.weapon.name));
+          specialItems.sort((a, b) => entityName(a.weapon).localeCompare(entityName(b.weapon)));
           specialItems.forEach(it => tbody.appendChild(createWeaponRow(it.weapon, it.stats)));
         }
       } else {
@@ -2321,36 +2349,36 @@
         visible.sort((a, b) => {
           if (sortColumn === 'name') {
             return sortDirection === 'asc'
-              ? a.weapon.name.localeCompare(b.weapon.name)
-              : b.weapon.name.localeCompare(a.weapon.name);
+              ? entityName(a.weapon).localeCompare(entityName(b.weapon))
+              : entityName(b.weapon).localeCompare(entityName(a.weapon));
           }
           if (sortColumn === 'yourDps') {
             const diff = a.dps - b.dps;
             return sortDirection === 'asc'
-              ? (diff || a.weapon.name.localeCompare(b.weapon.name))
-              : (-diff || a.weapon.name.localeCompare(b.weapon.name));
+              ? (diff || entityName(a.weapon).localeCompare(entityName(b.weapon)))
+              : (-diff || entityName(a.weapon).localeCompare(entityName(b.weapon)));
           }
           if (sortColumn === 'cycle') {
             const aCyc = a.cycle > 0 ? a.cycle : (sortDirection === 'asc' ? 9999 : -1);
             const bCyc = b.cycle > 0 ? b.cycle : (sortDirection === 'asc' ? 9999 : -1);
             const diff = aCyc - bCyc;
             return sortDirection === 'asc'
-              ? (diff || a.weapon.name.localeCompare(b.weapon.name))
-              : (-diff || a.weapon.name.localeCompare(b.weapon.name));
+              ? (diff || entityName(a.weapon).localeCompare(entityName(b.weapon)))
+              : (-diff || entityName(a.weapon).localeCompare(entityName(b.weapon)));
           }
           if (sortColumn === 'yourAvg') {
             const diff = a.avg - b.avg;
             return sortDirection === 'asc'
-              ? (diff || a.weapon.name.localeCompare(b.weapon.name))
-              : (-diff || a.weapon.name.localeCompare(b.weapon.name));
+              ? (diff || entityName(a.weapon).localeCompare(entityName(b.weapon)))
+              : (-diff || entityName(a.weapon).localeCompare(entityName(b.weapon)));
           }
           if (sortColumn === 'stamina') {
             const aStam = a.weapon.stamina !== null && a.weapon.stamina !== undefined ? a.weapon.stamina : (sortDirection === 'asc' ? 9999 : -1);
             const bStam = b.weapon.stamina !== null && b.weapon.stamina !== undefined ? b.weapon.stamina : (sortDirection === 'asc' ? 9999 : -1);
             const diff = aStam - bStam;
             return sortDirection === 'asc'
-              ? (diff || a.weapon.name.localeCompare(b.weapon.name))
-              : (-diff || a.weapon.name.localeCompare(b.weapon.name));
+              ? (diff || entityName(a.weapon).localeCompare(entityName(b.weapon)))
+              : (-diff || entityName(a.weapon).localeCompare(entityName(b.weapon)));
           }
           return 0;
         });
@@ -2375,7 +2403,7 @@
         const emptyTr = el('tr', 'armory-empty-row');
         const emptyTd = el('td');
         emptyTd.colSpan = 10;
-        emptyTd.textContent = 'No weapons found matching your criteria.';
+        emptyTd.textContent = t('No weapons found matching your criteria.');
         emptyTr.appendChild(emptyTd);
         tbody.appendChild(emptyTr);
       }
@@ -2394,6 +2422,7 @@
 
     toggleAllCheckbox.addEventListener('change', () => {
       setStoredArmoryAll(toggleAllCheckbox.checked);
+      updateSpoilerLabel();
       renderTableBody();
     });
 
@@ -2402,8 +2431,10 @@
     renderTableBody();
 
     return {
+      snapshot: () => ({ sortColumn, sortDirection, searchQuery, selectedCategory, selectedDamageType }),
       refresh() {
         toggleAllCheckbox.checked = getStoredArmoryAll();
+        updateSpoilerLabel();
         renderTableBody();
       },
     };
@@ -2419,7 +2450,7 @@
     footer.textContent = '';
 
     const p1 = el('p');
-    p1.appendChild(document.createTextNode('Data: '));
+    p1.appendChild(document.createTextNode(t('Data: ')));
 
     const wikiA = el('a', null, 'Valheim Wiki (valheim.weirdgloop.org)');
     wikiA.href = 'https://valheim.weirdgloop.org';
@@ -2427,7 +2458,7 @@
     wikiA.rel = 'noopener noreferrer';
     p1.appendChild(wikiA);
 
-    p1.appendChild(document.createTextNode(', CC BY-SA 4.0 · generated '));
+    p1.appendChild(document.createTextNode(t(', CC BY-SA 4.0 · generated ')));
 
     const genDate = data.generatedAt ? data.generatedAt.slice(0, 10) : '2026-10-05';
     p1.appendChild(document.createTextNode(genDate));
@@ -2440,7 +2471,7 @@
     const spanText = el('span');
     const strong = el('strong', null, 'Free, ad-free and made in my spare time.');
     spanText.appendChild(strong);
-    spanText.appendChild(document.createTextNode(' If it helped your run, you can buy me a coffee.'));
+    spanText.appendChild(document.createTextNode(t(' If it helped your run, you can buy me a coffee.')));
     pSupport.appendChild(spanText);
 
     const aKofi = el('a');
@@ -2450,7 +2481,7 @@
 
     const imgKofi = document.createElement('img');
     imgKofi.src = '/support/kofi.png';
-    imgKofi.alt = 'Buy Me a Coffee at ko-fi.com';
+    imgKofi.alt = t('Buy Me a Coffee at ko-fi.com');
     imgKofi.width = 143;
     imgKofi.height = 36;
     imgKofi.loading = 'lazy';
@@ -2521,9 +2552,9 @@
       }
 
       const headerContent = el('div', 'biome-header-content');
-      const orderBadge = el('span', 'biome-order-badge', 'Biome ' + biome.order);
-      const nameHeading = el('span', 'biome-name', biome.name);
-      const countBadge = el('span', 'biome-count-badge', creaturesCount + (creaturesCount === 1 ? ' creature' : ' creatures'));
+      const orderBadge = el('span', 'biome-order-badge', t('Biome {order}', { order: biome.order }));
+      const nameHeading = el('span', 'biome-name', biomeName(biome));
+      const countBadge = el('span', 'biome-count-badge', t('{count} creatures', { count: creaturesCount }));
 
       headerContent.appendChild(orderBadge);
       headerContent.appendChild(nameHeading);
@@ -2583,6 +2614,48 @@
         applyFiltersToBiome(card, '', 'all');
       }
     });
+
+    const picker = VCI18n.mountPicker('#language-picker');
+    function translatePage() {
+      VCI18n.apply(document);
+      picker.setAttribute('aria-label', t('Language'));
+      picker.options[0].textContent = t('Auto (browser)');
+      const characterOpen = document.querySelector('.character-panel')?.open;
+      const legendOpen = document.querySelector('.legend-details')?.open;
+      buildCharacterPanel(document.getElementById('character-section'), characterOpen);
+      buildLegend(document.getElementById('legend-section'));
+      document.querySelector('.legend-details').open = legendOpen;
+      buildFooter(document.getElementById('page-footer'), data);
+      document.querySelectorAll('.biome-card').forEach(card => {
+        const biome = data.biomes.find(b => b.id === card.dataset.biomeId);
+        card.querySelector('.biome-name').textContent = biomeName(biome);
+        card.querySelector('.biome-order-badge').textContent = t('Biome {order}', { order: biome.order });
+        card.querySelector('.biome-count-badge').textContent = t('{count} creatures', { count: Object.values(biome.creatures || {}).flat().length });
+        const wrapper = card.querySelector('.biome-content-wrapper');
+        if (!wrapper.children.length) return;
+        const fish = [...wrapper.querySelectorAll('.fish-wrapper.expanded')].map(e => e.dataset.creatureId);
+        const states = [...wrapper.querySelectorAll('.creature-card')].map(e => ({
+          id: e.dataset.creatureId, star: [...e.querySelectorAll('.star-btn')].findIndex(b => b.classList.contains('active')),
+          details: !!e.querySelector('.creature-details')?.open,
+        }));
+        const details = [...wrapper.querySelectorAll('details')].map(e => e.open);
+        renderBiomeContent(biome, wrapper, data);
+        fish.forEach(id => wrapper.querySelector('.fish-wrapper[data-creature-id="' + id + '"] .fish-tile')?.click());
+        states.forEach(state => {
+          const creature = wrapper.querySelector('.creature-card[data-creature-id="' + state.id + '"]');
+          creature?.querySelectorAll('.star-btn')[state.star]?.click();
+          if (creature?.querySelector('.creature-details')) creature.querySelector('.creature-details').open = state.details;
+        });
+        [...wrapper.querySelectorAll('details')].forEach((e, i) => { e.open = details[i] ?? e.open; });
+      });
+      armoryController = buildArmorySection(armoryContainer, data, armoryController?.snapshot());
+      if (document.getElementById('weapon-modal').open && modalWeapon) openWeaponModal(modalWeapon, data);
+      applyFiltersToAllOpenBiomes();
+    }
+    VCI18n.onChange(translatePage);
+    VCI18n.apply(document);
+    picker.setAttribute('aria-label', t('Language'));
+    picker.options[0].textContent = t('Auto (browser)');
 
     // Search Box Listener
     const searchInput = document.getElementById('creature-search');
