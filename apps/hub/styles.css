@@ -149,7 +149,7 @@ body {
     url('bestiary/img/biomes/black-forest.png');
 }
 
-.card-armourer {
+.card-smithy {
   background-image:
     linear-gradient(rgba(24, 29, 35, 0.82), rgba(24, 29, 35, 0.94)),
     url('bestiary/img/biomes/mountain.png');

@@ -47,6 +47,19 @@ const server = createServer((req, res) => {
   const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
   let pathname = decodeURIComponent(url.pathname);
 
+  // Preserve the suffix and query string of legacy Smithy links.
+  if (url.pathname === '/armourer' || url.pathname.startsWith('/armourer/')) {
+    const suffix = url.pathname === '/armourer' ? '' : url.pathname.slice('/armourer/'.length);
+    res.writeHead(301, { Location: `/smithy/${suffix}${url.search}` });
+    res.end();
+    return;
+  }
+  if (pathname === '/smithy') {
+    res.writeHead(301, { Location: `/smithy/${url.search}` });
+    res.end();
+    return;
+  }
+
   // Normalize redirects without trailing slashes for sections
   if (pathname === '/bestiary') {
     res.writeHead(301, { Location: '/bestiary/' });

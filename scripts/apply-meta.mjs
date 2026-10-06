@@ -28,9 +28,9 @@ export const PAGES = [
       'Every Valheim creature and boss by biome, spoiler-free. Stats per star level, weaknesses, and the best weapons for your skills — with hits to kill.',
   },
   {
-    filePath: path.join(REPO_ROOT, 'apps', 'armourer', 'index.html'),
-    section: 'armourer',
-    path: '/armourer/',
+    filePath: path.join(REPO_ROOT, 'apps', 'smithy', 'index.html'),
+    section: 'smithy',
+    path: '/smithy/',
     title: 'Armourer — Valheim Companion',
     i18nTitle: 'Armourer — Valheim Companion',
     description:

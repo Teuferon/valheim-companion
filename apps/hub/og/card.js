@@ -1,5 +1,5 @@
 // Card script for Valheim Companion Open Graph card template.
-// Reads ?section=hub|bestiary|signs|armourer|damage-calculator and siteUrl from site.config.json.
+// Reads ?section=hub|bestiary|signs|smithy|damage-calculator and siteUrl from site.config.json.
 
 (function () {
   const SECTIONS = {
@@ -15,7 +15,7 @@
       desc: 'Every Valheim creature and boss by biome, spoiler-free. Stats per star level, weaknesses, and the best weapons for your skills — with hits to kill.',
       bg: '../../bestiary/img/biomes/mistlands.png',
     },
-    armourer: {
+    smithy: {
       title: 'ARMOURER',
       sub: 'Valheim Companion',
       desc: 'Every Valheim armor set by biome. Pick pieces and upgrade levels and get the full material list — and where to farm it.',

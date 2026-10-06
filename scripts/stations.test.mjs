@@ -132,8 +132,8 @@ test('smoke test: Iron Armor Q4 smelting calculation matches station parameters'
 
 test('VACart.calculateSmelting computes accurate smelting parameters across furnace counts and items', () => {
   const context = vm.createContext({ console });
-  vm.runInContext(readFileSync('apps/armourer/assets/app.js', 'utf8'), context);
-  vm.runInContext(readFileSync('apps/armourer/data/data.js', 'utf8').replace('window.VA_DATA', 'globalThis.VA_DATA'), context);
+  vm.runInContext(readFileSync('apps/smithy/assets/app.js', 'utf8'), context);
+  vm.runInContext(readFileSync('apps/smithy/data/data.js', 'utf8').replace('window.VA_DATA', 'globalThis.VA_DATA'), context);
   const { calculateSmelting, calculateCartMaterials } = context.VACart;
   const data = context.VA_DATA;
 

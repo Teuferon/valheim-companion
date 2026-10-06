@@ -4,8 +4,8 @@ import { readFileSync } from 'node:fs';
 import vm from 'node:vm';
 
 const context = vm.createContext({ console });
-vm.runInContext(readFileSync('apps/armourer/assets/app.js', 'utf8'), context);
-vm.runInContext(readFileSync('apps/armourer/data/data.js', 'utf8').replace('window.VA_DATA', 'globalThis.VA_DATA'), context);
+vm.runInContext(readFileSync('apps/smithy/assets/app.js', 'utf8'), context);
+vm.runInContext(readFileSync('apps/smithy/data/data.js', 'utf8').replace('window.VA_DATA', 'globalThis.VA_DATA'), context);
 const { calculateCartMaterials } = context.VACart;
 const data = context.VA_DATA;
 const cartFor = id => data.armor.find(a => a.id === id).pieces.map(piece => ({ pieceId: piece.id, have: 0, want: 1 }));
@@ -46,7 +46,7 @@ test('show-all sources follow biome order and crafted materials show only their 
   assert.equal(bronze.materials.find(m => m.item === 'bronze').sources[0].text, 'Crafted at Forge');
 });
 
-for (const app of ['bestiary', 'armourer']) {
+for (const app of ['bestiary', 'smithy']) {
   test(`${app} catalogs cover 13 languages and preserve every placeholder`, () => {
     const catalog = JSON.parse(readFileSync(`apps/${app}/locales/messages.json`, 'utf8'));
     const languages = JSON.parse(readFileSync('shared/i18n/languages.json', 'utf8')).map(l => l.code);

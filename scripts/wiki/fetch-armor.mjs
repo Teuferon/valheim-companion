@@ -26,7 +26,7 @@ import { BASE_MATERIAL_TABLE, createMaterialResolver } from './materials.mjs';
 
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const DATA_DIR = path.join(REPO_ROOT, 'data');
-const ARMOURER_DIR = path.join(REPO_ROOT, 'apps', 'armourer');
+const ARMOURER_DIR = path.join(REPO_ROOT, 'apps', 'smithy');
 const ARMOR_IMG_DIR = path.join(ARMOURER_DIR, 'img', 'armor');
 const ITEMS_IMG_DIR = path.join(ARMOURER_DIR, 'img', 'items');
 
