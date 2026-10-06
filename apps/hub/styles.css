@@ -62,6 +62,16 @@ body {
   margin-bottom: 48px;
 }
 
+.hub-progress-summary {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-underline-offset: 3px;
+}
+
+.hub-progress-summary:hover {
+  color: var(--accent-gold);
+}
+
 .hub-top-bar {
   display: flex;
   justify-content: flex-end;
@@ -165,6 +175,12 @@ body {
   background-image:
     linear-gradient(rgba(24, 29, 35, 0.82), rgba(24, 29, 35, 0.94)),
     url('bestiary/img/biomes/ashlands.png');
+}
+
+.card-progress {
+  background-image:
+    linear-gradient(rgba(24, 29, 35, 0.82), rgba(24, 29, 35, 0.94)),
+    url('bestiary/img/biomes/meadows.png');
 }
 
 .card-content {

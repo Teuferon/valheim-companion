@@ -434,5 +434,50 @@ globalThis.VC_MESSAGES = {
     "ru": "Ещё 1 результат в закрытом биоме",
     "ja": "未開放のバイオームにあと 1 件の結果があります",
     "id": "1 hasil lainnya di bioma terkunci"
+  },
+  "Track your progress →": {
+    "en": "Track your progress →",
+    "cs": "Sledujte svůj postup →",
+    "de": "Fortschritt verfolgen →",
+    "es": "Registra tu progreso →",
+    "fr": "Suivez votre progression →",
+    "pt": "Acompanhe seu progresso →",
+    "zh": "记录你的进度 →",
+    "hi": "अपनी प्रगति दर्ज करें →",
+    "ar": "تتبّع تقدمك →",
+    "bn": "আপনার অগ্রগতি নথিভুক্ত করুন →",
+    "ru": "Отслеживайте прогресс →",
+    "ja": "進行状況を記録 →",
+    "id": "Catat progresmu →"
+  },
+  "Track visited biomes, defeated bosses and milestones — unlock spoilers across your tools.": {
+    "en": "Track visited biomes, defeated bosses and milestones — unlock spoilers across your tools.",
+    "cs": "Zaznamenávejte navštívené biomy, poražené bossy a milníky — odemykejte spoilery ve všech nástrojích.",
+    "de": "Besuchte Biome, besiegte Bosse und Meilensteine festhalten — Spoiler in allen Werkzeugen freischalten.",
+    "es": "Registra los biomas visitados, los jefes derrotados y los hitos — desbloquea spoilers en todas tus herramientas.",
+    "fr": "Suivez les biomes visités, les boss vaincus et les étapes clés — révélez les spoilers dans tous vos outils.",
+    "pt": "Registre biomas visitados, chefes derrotados e marcos — desbloqueie spoilers em todas as ferramentas.",
+    "zh": "记录已探索的生物群系、击败的首领和里程碑，在所有工具中解锁剧透内容。",
+    "hi": "देखे गए बायोम, हराए गए बॉस और पड़ाव दर्ज करें — सभी टूल में स्पॉइलर अनलॉक करें।",
+    "ar": "سجّل المناطق التي زرتها والزعماء الذين هزمتهم والإنجازات — واكشف المحتوى المخفي في جميع أدواتك.",
+    "bn": "পরিদর্শিত বায়োম, পরাজিত বস ও মাইলফলক নথিভুক্ত করুন — সব টুলে স্পয়লার আনলক করুন।",
+    "ru": "Отмечайте посещённые биомы, побеждённых боссов и этапы — открывайте спойлеры во всех инструментах.",
+    "ja": "訪れたバイオーム、倒したボス、達成した節目を記録し、すべてのツールでネタバレ情報を解放。",
+    "id": "Catat bioma yang dikunjungi, bos yang dikalahkan, dan pencapaian — buka spoiler di semua alatmu."
+  },
+  "{revealed} / {total} biomes · {bosses} bosses": {
+    "en": "{revealed} / {total} biomes · {bosses} bosses",
+    "cs": "{revealed} / {total} biomů · {bosses} bossů",
+    "de": "{revealed} / {total} Biome · {bosses} Bosse",
+    "es": "{revealed} / {total} biomas · {bosses} jefes",
+    "fr": "{revealed} / {total} biomes · {bosses} boss",
+    "pt": "{revealed} / {total} biomas · {bosses} chefes",
+    "zh": "{revealed} / {total} 生物群系 · {bosses} 个首领",
+    "hi": "{revealed} / {total} बायोम · {bosses} बॉस",
+    "ar": "{revealed} / {total} مناطق · {bosses} زعماء",
+    "bn": "{revealed} / {total} বায়োম · {bosses} বস",
+    "ru": "{revealed} / {total} биомов · {bosses} боссов",
+    "ja": "{revealed} / {total} バイオーム · {bosses} ボス",
+    "id": "{revealed} / {total} bioma · {bosses} bos"
   }
 };

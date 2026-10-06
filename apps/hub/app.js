@@ -16,18 +16,22 @@
   }
 
   function getOpenBiomes() {
-    if (typeof globalThis.VCProgress?.revealedBiomes === 'function') {
-      try {
-        const biomes = globalThis.VCProgress.revealedBiomes();
-        if (biomes && biomes.size) return biomes;
-      } catch {}
-    }
-    try {
-      const raw = localStorage.getItem('vc.openBiomes');
-      return new Set(raw ? JSON.parse(raw) : []);
-    } catch {
-      return new Set();
-    }
+    return new Set(VCProgress.revealedBiomes(VP_DATA.biomes));
+  }
+
+  function updateProgressSummary() {
+    const link = document.getElementById('hub-progress-summary');
+    if (!link) return;
+    const state = VCProgress.get();
+    const biomes = VP_DATA.biomes;
+    const revealed = getOpenBiomes();
+    const bosses = biomes.flatMap(biome => biome.bosses).filter(boss => state.defeated[boss.id]).length;
+    const hasProgress = state.visited.length > 0 || Object.keys(state.defeated).length > 0
+      || Object.keys(state.milestones).length > 0 || revealed.size > 1;
+    link.hidden = !hasProgress;
+    link.textContent = hasProgress ? t('{revealed} / {total} biomes · {bosses} bosses', {
+      revealed: revealed.size, total: biomes.length, bosses,
+    }) : '';
   }
 
   const TYPE_CONFIG = [
@@ -159,7 +163,7 @@
 
           const nameSpan = document.createElement('span');
           nameSpan.className = 'hub-search-item-name';
-          nameSpan.textContent = item.name;
+          nameSpan.textContent = VCI18n.name(item);
           infoDiv.appendChild(nameSpan);
 
           a.appendChild(infoDiv);
@@ -271,11 +275,9 @@
       }
     });
 
-    window.addEventListener('storage', (e) => {
-      if (e.key === 'vc.openBiomes' || e.key === 'vc.progress') {
-        if (!resultsContainer.hidden && input.value.trim()) {
-          renderResults(input.value);
-        }
+    VCProgress.onChange(() => {
+      if (!resultsContainer.hidden && input.value.trim()) {
+        renderResults(input.value);
       }
     });
 
@@ -303,6 +305,9 @@
     }
 
     initSearch();
+    updateProgressSummary();
+    VCProgress.onChange(updateProgressSummary);
+    VCI18n.onChange(updateProgressSummary);
   }
 
   if (document.readyState === 'loading') {
