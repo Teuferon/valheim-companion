@@ -1,0 +1,2544 @@
+{
+  "categories": [
+    {
+      "id": "fire",
+      "name": "Fire",
+      "notes": "Fires do not stack with each other.\nOnly provides comfort when lit.\nHearth provides more comfort.\nHearth provides the Fire effect at a range of 12m while an extra 1 comfort at a range of 8m."
+    },
+    {
+      "id": "rug",
+      "name": "Rug",
+      "notes": "Rugs do not stack with each other, only one rug will provide a bonus."
+    },
+    {
+      "id": "table",
+      "name": "Table",
+      "notes": "Tables do not stack with each other.\nDarkwood provides the most comfort."
+    },
+    {
+      "id": "chair",
+      "name": "Chair",
+      "notes": "Chairs do not stack with each other.\nAny \"throne\" provides the most comfort."
+    },
+    {
+      "id": "bed",
+      "name": "Bed",
+      "notes": "Beds do not stack with each other.\nDragon bed provides more comfort."
+    },
+    {
+      "id": "banner",
+      "name": "Banner",
+      "notes": "Banners do not stack with each other.\nJute Curtains do not stack with Banners or each other"
+    },
+    {
+      "id": "plants",
+      "name": "Plants",
+      "notes": "Plants do not stack with each other.\nMistletoe, Yule garland, and Yule wreath can only be built during Yule events or with debug mode."
+    },
+    {
+      "id": "stands",
+      "name": "Stands",
+      "notes": "Stands do not stack with each other.\nDoes not need to be displaying an item."
+    },
+    {
+      "id": "bathroom",
+      "name": "Bathroom",
+      "notes": "Bathroom items do not stack with each other.\nHot tub only provides comfort when heated."
+    },
+    {
+      "id": "lights",
+      "name": "Lights",
+      "notes": "Lights do not stack with each other.\nJack-o-turnip can only be built during Halloween or with debug mode.\nSnow lantern rapidly loses durability and breaks in any biomes except the Mountain and Deep North."
+    },
+    {
+      "id": "ashlands",
+      "name": "Ashlands",
+      "notes": "Ashlands items do not stack with each other"
+    }
+  ],
+  "pieces": [
+    {
+      "id": "antler-throne",
+      "name": "Antler Throne",
+      "category": "chair",
+      "comfort": 3,
+      "names": {},
+      "image": "img/pieces/antler-throne.png",
+      "materials": [
+        {
+          "item": "timberwood",
+          "amount": 15
+        },
+        {
+          "item": "moose-trophy",
+          "amount": 1
+        },
+        {
+          "item": "moose-hide",
+          "amount": 5
+        }
+      ],
+      "station": "workbench",
+      "biome": "deep-north",
+      "tier": 9,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_moose_throne",
+      "wiki": "https://valheim.weirdgloop.org/w/Antler_Throne"
+    },
+    {
+      "id": "armor-stand",
+      "name": "Armor Stand",
+      "category": "stands",
+      "comfort": 1,
+      "names": {
+        "cs": "Stojan na brnění",
+        "ru": "Стойка для брони"
+      },
+      "image": null,
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 8
+        },
+        {
+          "item": "iron-nails",
+          "amount": 4
+        },
+        {
+          "item": "leather-scraps",
+          "amount": 2
+        }
+      ],
+      "station": "workbench",
+      "biome": "swamp",
+      "tier": 4,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "ArmorStand",
+      "wiki": "https://valheim.weirdgloop.org/w/Armor_Stand"
+    },
+    {
+      "id": "ashwood-bed",
+      "name": "Ashwood Bed",
+      "category": "bed",
+      "comfort": 1,
+      "names": {
+        "cs": "Postel z popelavého dřeva",
+        "ru": "Кровать из пепельного дерева"
+      },
+      "image": "img/pieces/ashwood-bed.png",
+      "materials": [
+        {
+          "item": "ashwood",
+          "amount": 8
+        },
+        {
+          "item": "lox-pelt",
+          "amount": 2
+        },
+        {
+          "item": "asksvin-hide",
+          "amount": 2
+        }
+      ],
+      "station": "workbench",
+      "biome": "ashlands",
+      "tier": 8,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "ashwood_bed",
+      "wiki": "https://valheim.weirdgloop.org/w/Ashwood_Bed"
+    },
+    {
+      "id": "ashwood-bench",
+      "name": "Ashwood Bench",
+      "category": "chair",
+      "comfort": 1,
+      "names": {},
+      "image": "img/pieces/ashwood-bench.png",
+      "materials": [
+        {
+          "item": "ashwood",
+          "amount": 6
+        }
+      ],
+      "station": "workbench",
+      "biome": "ashlands",
+      "tier": 8,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_blackwood_bench01",
+      "wiki": "https://valheim.weirdgloop.org/w/Ashwood_Bench"
+    },
+    {
+      "id": "asksvin-rug",
+      "name": "Asksvin Rug",
+      "category": "rug",
+      "comfort": 1,
+      "names": {
+        "ru": "Коврики"
+      },
+      "image": "img/pieces/asksvin-rug.png",
+      "materials": [
+        {
+          "item": "asksvin-hide",
+          "amount": 4
+        }
+      ],
+      "station": "workbench",
+      "biome": "ashlands",
+      "tier": 8,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "rug_asksvin",
+      "wiki": "https://valheim.weirdgloop.org/w/Asksvin_Rug"
+    },
+    {
+      "id": "asksvin-skeleton",
+      "name": "Asksvin Skeleton",
+      "category": "ashlands",
+      "comfort": 1,
+      "names": {
+        "ru": "Скелет пеплозавра"
+      },
+      "image": "img/pieces/asksvin-skeleton.png",
+      "materials": [
+        {
+          "item": "bone-fragments",
+          "amount": 50
+        },
+        {
+          "item": "asksvin-neck",
+          "amount": 1
+        },
+        {
+          "item": "asksvin-pelvis",
+          "amount": 1
+        },
+        {
+          "item": "asksvin-ribcage",
+          "amount": 1
+        },
+        {
+          "item": "asksvin-skull",
+          "amount": 1
+        }
+      ],
+      "station": "workbench",
+      "biome": "ashlands",
+      "tier": 8,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_asksvinskeleton",
+      "wiki": "https://valheim.weirdgloop.org/w/Asksvin_Skeleton"
+    },
+    {
+      "id": "barber-station",
+      "name": "Barber Station",
+      "category": "bathroom",
+      "comfort": 1,
+      "names": {
+        "ru": "Цирюльня"
+      },
+      "image": "img/pieces/barber-station.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 10
+        },
+        {
+          "item": "barber-kit",
+          "amount": 1
+        },
+        {
+          "item": "bronze-nails",
+          "amount": 5
+        },
+        {
+          "item": "troll-hide",
+          "amount": 5
+        }
+      ],
+      "station": "workbench",
+      "biome": "black-forest",
+      "tier": 2,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_barber",
+      "wiki": "https://valheim.weirdgloop.org/w/Barber_Station"
+    },
+    {
+      "id": "bearskin-rug",
+      "name": "Bearskin Rug",
+      "category": "rug",
+      "comfort": 2,
+      "names": {
+        "ru": "Коврики"
+      },
+      "image": "img/pieces/bearskin-rug.png",
+      "materials": [
+        {
+          "item": "bear-hide",
+          "amount": 1
+        },
+        {
+          "item": "bear-paw",
+          "amount": 2
+        },
+        {
+          "item": "bear-trophy",
+          "amount": 1
+        }
+      ],
+      "station": "workbench",
+      "biome": "black-forest",
+      "tier": 2,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "rug_Bjorn",
+      "wiki": "https://valheim.weirdgloop.org/w/Bearskin_Rug"
+    },
+    {
+      "id": "bed",
+      "name": "Bed",
+      "category": "bed",
+      "comfort": 1,
+      "names": {
+        "cs": "Postel",
+        "fr": "Lit",
+        "ru": "Кровать"
+      },
+      "image": "img/pieces/bed.png",
+      "materials": [
+        {
+          "item": "wood",
+          "amount": 8
+        }
+      ],
+      "station": "workbench",
+      "biome": "meadows",
+      "tier": 1,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "bed",
+      "wiki": "https://valheim.weirdgloop.org/w/Bed"
+    },
+    {
+      "id": "bench",
+      "name": "Bench",
+      "category": "chair",
+      "comfort": 1,
+      "names": {},
+      "image": "img/pieces/bench.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 6
+        }
+      ],
+      "station": "workbench",
+      "biome": "black-forest",
+      "tier": 2,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_bench01",
+      "wiki": "https://valheim.weirdgloop.org/w/Bench"
+    },
+    {
+      "id": "black-banner",
+      "name": "Black banner",
+      "category": "banner",
+      "comfort": 1,
+      "names": {
+        "ru": "Флаги"
+      },
+      "image": "img/pieces/black-banner.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 2
+        },
+        {
+          "item": "leather-scraps",
+          "amount": 6
+        },
+        {
+          "item": "coal",
+          "amount": 4
+        }
+      ],
+      "station": "workbench",
+      "biome": "black-forest",
+      "tier": 2,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_banner01",
+      "wiki": "https://valheim.weirdgloop.org/w/Black_banner"
+    },
+    {
+      "id": "black-marble-bench",
+      "name": "Black Marble Bench",
+      "category": "chair",
+      "comfort": 1,
+      "names": {},
+      "image": "img/pieces/black-marble-bench.png",
+      "materials": [
+        {
+          "item": "black-marble",
+          "amount": 6
+        },
+        {
+          "item": "copper",
+          "amount": 3
+        }
+      ],
+      "station": "stonecutter",
+      "biome": "mistlands",
+      "tier": 7,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_blackmarble_bench",
+      "wiki": "https://valheim.weirdgloop.org/w/Black_Marble_Bench"
+    },
+    {
+      "id": "black-marble-table",
+      "name": "Black Marble Table",
+      "category": "table",
+      "comfort": 1,
+      "names": {},
+      "image": "img/pieces/black-marble-table.png",
+      "materials": [
+        {
+          "item": "black-marble",
+          "amount": 6
+        },
+        {
+          "item": "copper",
+          "amount": 3
+        }
+      ],
+      "station": "stonecutter",
+      "biome": "mistlands",
+      "tier": 7,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_blackmarble_table",
+      "wiki": "https://valheim.weirdgloop.org/w/Black_Marble_Table"
+    },
+    {
+      "id": "black-marble-throne",
+      "name": "Black Marble Throne",
+      "category": "chair",
+      "comfort": 3,
+      "names": {},
+      "image": "img/pieces/black-marble-throne.png",
+      "materials": [
+        {
+          "item": "black-marble",
+          "amount": 20
+        },
+        {
+          "item": "scale-hide",
+          "amount": 4
+        },
+        {
+          "item": "deer-hide",
+          "amount": 2
+        },
+        {
+          "item": "copper",
+          "amount": 5
+        }
+      ],
+      "station": "stonecutter",
+      "biome": "mistlands",
+      "tier": 7,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_blackmarble_throne",
+      "wiki": "https://valheim.weirdgloop.org/w/Black_Marble_Throne"
+    },
+    {
+      "id": "blue-banner",
+      "name": "Blue banner",
+      "category": "banner",
+      "comfort": 1,
+      "names": {
+        "ru": "Флаги"
+      },
+      "image": "img/pieces/blue-banner.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 2
+        },
+        {
+          "item": "leather-scraps",
+          "amount": 6
+        },
+        {
+          "item": "blueberries",
+          "amount": 4
+        }
+      ],
+      "station": "workbench",
+      "biome": "black-forest",
+      "tier": 2,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_banner02",
+      "wiki": "https://valheim.weirdgloop.org/w/Blue_banner"
+    },
+    {
+      "id": "blue-jute-carpet",
+      "name": "Blue Jute Carpet",
+      "category": "rug",
+      "comfort": 1,
+      "names": {
+        "ru": "Коврики"
+      },
+      "image": "img/pieces/blue-jute-carpet.png",
+      "materials": [
+        {
+          "item": "blue-jute",
+          "amount": 4
+        }
+      ],
+      "station": "workbench",
+      "biome": "mistlands",
+      "tier": 7,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "jute_carpet_blue",
+      "wiki": "https://valheim.weirdgloop.org/w/Blue_Jute_Carpet"
+    },
+    {
+      "id": "blue-jute-curtain",
+      "name": "Blue Jute Curtain",
+      "category": "banner",
+      "comfort": 2,
+      "names": {
+        "ru": "Занавеска из голубого джута"
+      },
+      "image": "img/pieces/blue-jute-curtain.png",
+      "materials": [
+        {
+          "item": "blue-jute",
+          "amount": 4
+        },
+        {
+          "item": "finewood",
+          "amount": 1
+        }
+      ],
+      "station": "workbench",
+      "biome": "mistlands",
+      "tier": 7,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_cloth_hanging_door_blue2",
+      "wiki": "https://valheim.weirdgloop.org/w/Blue_Jute_Curtain"
+    },
+    {
+      "id": "blue-jute-drapes",
+      "name": "Blue Jute Drapes",
+      "category": "banner",
+      "comfort": 2,
+      "names": {
+        "ru": "Портьеры из голубого джута"
+      },
+      "image": "img/pieces/blue-jute-drapes.png",
+      "materials": [
+        {
+          "item": "blue-jute",
+          "amount": 4
+        },
+        {
+          "item": "finewood",
+          "amount": 1
+        }
+      ],
+      "station": "workbench",
+      "biome": "mistlands",
+      "tier": 7,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_cloth_hanging_door_blue",
+      "wiki": "https://valheim.weirdgloop.org/w/Blue_Jute_Drapes"
+    },
+    {
+      "id": "blue-red-and-white-banner",
+      "name": "Blue, red and white banner",
+      "category": "banner",
+      "comfort": 1,
+      "names": {
+        "ru": "Флаги"
+      },
+      "image": "img/pieces/blue-red-and-white-banner.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 2
+        },
+        {
+          "item": "leather-scraps",
+          "amount": 6
+        },
+        {
+          "item": "blueberries",
+          "amount": 2
+        },
+        {
+          "item": "raspberries",
+          "amount": 2
+        },
+        {
+          "item": "cloudberries",
+          "amount": 1
+        }
+      ],
+      "station": "workbench",
+      "biome": "plains",
+      "tier": 6,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_banner06",
+      "wiki": "https://valheim.weirdgloop.org/w/Blue%2C_red_and_white_banner"
+    },
+    {
+      "id": "blue-standing-brazier",
+      "name": "Blue Standing Brazier",
+      "category": "fire",
+      "comfort": 1,
+      "names": {
+        "ru": "Жаровня с синим пламенем"
+      },
+      "image": "img/pieces/blue-standing-brazier.png",
+      "materials": [
+        {
+          "item": "bronze",
+          "amount": 5
+        },
+        {
+          "item": "greydwarf-eye",
+          "amount": 5
+        },
+        {
+          "item": "fenris-claw",
+          "amount": 3
+        }
+      ],
+      "station": "forge",
+      "biome": "mountain",
+      "tier": 5,
+      "seasonal": false,
+      "conditions": {
+        "lit": true,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_brazierfloor02",
+      "wiki": "https://valheim.weirdgloop.org/w/Blue_Standing_Brazier"
+    },
+    {
+      "id": "bone-throne",
+      "name": "Bone Throne",
+      "category": "chair",
+      "comfort": 3,
+      "names": {},
+      "image": "img/pieces/bone-throne.png",
+      "materials": [
+        {
+          "item": "charred-bone",
+          "amount": 15
+        },
+        {
+          "item": "flametal",
+          "amount": 4
+        },
+        {
+          "item": "grausten",
+          "amount": 20
+        },
+        {
+          "item": "charred-skull",
+          "amount": 3
+        }
+      ],
+      "station": "stonecutter",
+      "biome": "ashlands",
+      "tier": 8,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_bone_throne",
+      "wiki": "https://valheim.weirdgloop.org/w/Bone_Throne"
+    },
+    {
+      "id": "bonfire",
+      "name": "Bonfire",
+      "category": "fire",
+      "comfort": 1,
+      "names": {
+        "cs": "Velký táborák",
+        "ru": "Большой костер"
+      },
+      "image": "img/pieces/bonfire.png",
+      "materials": [
+        {
+          "item": "surtling-core",
+          "amount": 1
+        },
+        {
+          "item": "ancient-bark",
+          "amount": 5
+        },
+        {
+          "item": "finewood",
+          "amount": 5
+        },
+        {
+          "item": "corewood",
+          "amount": 5
+        }
+      ],
+      "station": null,
+      "biome": "swamp",
+      "tier": 4,
+      "seasonal": false,
+      "conditions": {
+        "lit": true,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "bonfire",
+      "wiki": "https://valheim.weirdgloop.org/w/Bonfire"
+    },
+    {
+      "id": "campfire",
+      "name": "Campfire",
+      "category": "fire",
+      "comfort": 1,
+      "names": {
+        "cs": "Malý táborák",
+        "ru": "Костер"
+      },
+      "image": "img/pieces/campfire.png",
+      "materials": [
+        {
+          "item": "stone",
+          "amount": 5
+        },
+        {
+          "item": "wood",
+          "amount": 2
+        }
+      ],
+      "station": null,
+      "biome": "meadows",
+      "tier": 1,
+      "seasonal": false,
+      "conditions": {
+        "lit": true,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "fire_pit",
+      "wiki": "https://valheim.weirdgloop.org/w/Campfire"
+    },
+    {
+      "id": "carved-bench",
+      "name": "Carved Bench",
+      "category": "chair",
+      "comfort": 1,
+      "names": {},
+      "image": "img/pieces/carved-bench.png",
+      "materials": [
+        {
+          "item": "timberwood",
+          "amount": 6
+        },
+        {
+          "item": "moose-hide",
+          "amount": 6
+        }
+      ],
+      "station": "workbench",
+      "biome": "deep-north",
+      "tier": 9,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_bench_runed",
+      "wiki": "https://valheim.weirdgloop.org/w/Carved_Bench"
+    },
+    {
+      "id": "carved-chair",
+      "name": "Carved Chair",
+      "category": "chair",
+      "comfort": 2,
+      "names": {},
+      "image": "img/pieces/carved-chair.png",
+      "materials": [],
+      "station": null,
+      "biome": null,
+      "tier": null,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Carved_Chair"
+    },
+    {
+      "id": "chair",
+      "name": "Chair",
+      "category": "chair",
+      "comfort": 2,
+      "names": {},
+      "image": "img/pieces/chair.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 4
+        }
+      ],
+      "station": "workbench",
+      "biome": "black-forest",
+      "tier": 2,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_chair02",
+      "wiki": "https://valheim.weirdgloop.org/w/Chair"
+    },
+    {
+      "id": "darkwood-chair",
+      "name": "Darkwood Chair",
+      "category": "chair",
+      "comfort": 2,
+      "names": {},
+      "image": "img/pieces/darkwood-chair.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 4
+        },
+        {
+          "item": "tar",
+          "amount": 1
+        },
+        {
+          "item": "iron-nails",
+          "amount": 5
+        },
+        {
+          "item": "deer-hide",
+          "amount": 1
+        }
+      ],
+      "station": "workbench",
+      "biome": "plains",
+      "tier": 6,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_chair03",
+      "wiki": "https://valheim.weirdgloop.org/w/Darkwood_Chair"
+    },
+    {
+      "id": "deer-rug",
+      "name": "Deer Rug",
+      "category": "rug",
+      "comfort": 1,
+      "names": {
+        "ru": "Коврики"
+      },
+      "image": "img/pieces/deer-rug.png",
+      "materials": [
+        {
+          "item": "deer-hide",
+          "amount": 4
+        }
+      ],
+      "station": "workbench",
+      "biome": "meadows",
+      "tier": 1,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "rug_deer",
+      "wiki": "https://valheim.weirdgloop.org/w/Deer_Rug"
+    },
+    {
+      "id": "dragon-bed",
+      "name": "Dragon Bed",
+      "category": "bed",
+      "comfort": 2,
+      "names": {
+        "cs": "Dračí postel",
+        "ru": "Драконья кровать"
+      },
+      "image": "img/pieces/dragon-bed.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 40
+        },
+        {
+          "item": "deer-hide",
+          "amount": 7
+        },
+        {
+          "item": "wolf-pelt",
+          "amount": 4
+        },
+        {
+          "item": "feathers",
+          "amount": 10
+        },
+        {
+          "item": "iron-nails",
+          "amount": 15
+        }
+      ],
+      "station": "workbench",
+      "biome": "mountain",
+      "tier": 5,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_bed02",
+      "wiki": "https://valheim.weirdgloop.org/w/Dragon_Bed"
+    },
+    {
+      "id": "dvergr-lantern-pole",
+      "name": "Dvergr Lantern Pole",
+      "category": "lights",
+      "comfort": 1,
+      "names": {
+        "cs": "Dvergská lucerna na sloupu",
+        "ru": "Фонарный столб двергов"
+      },
+      "image": "img/pieces/dvergr-lantern-pole.png",
+      "materials": [
+        {
+          "item": "copper",
+          "amount": 3
+        },
+        {
+          "item": "dvergr-lantern",
+          "amount": 1
+        },
+        {
+          "item": "chain",
+          "amount": 1
+        }
+      ],
+      "station": "black-forge",
+      "biome": "mistlands",
+      "tier": 7,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_dvergr_lantern_pole",
+      "wiki": "https://valheim.weirdgloop.org/w/Dvergr_Lantern_Pole"
+    },
+    {
+      "id": "dvergr-wall-lantern",
+      "name": "Dvergr Wall Lantern",
+      "category": "lights",
+      "comfort": 1,
+      "names": {
+        "cs": "Dvergská nástěnná lucerna",
+        "ru": "Настенный светильник двергов"
+      },
+      "image": "img/pieces/dvergr-wall-lantern.png",
+      "materials": [
+        {
+          "item": "copper",
+          "amount": 2
+        },
+        {
+          "item": "dvergr-lantern",
+          "amount": 1
+        },
+        {
+          "item": "chain",
+          "amount": 1
+        }
+      ],
+      "station": "black-forge",
+      "biome": "mistlands",
+      "tier": 7,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_dvergr_lantern",
+      "wiki": "https://valheim.weirdgloop.org/w/Dvergr_Wall_Lantern"
+    },
+    {
+      "id": "fey-lights",
+      "name": "Fey Lights",
+      "category": "plants",
+      "comfort": 1,
+      "names": {
+        "ru": "Волшебные огни"
+      },
+      "image": "img/pieces/fey-lights.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 2
+        },
+        {
+          "item": "thistle",
+          "amount": 1
+        }
+      ],
+      "station": "workbench",
+      "biome": "black-forest",
+      "tier": 2,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_FairylightGarland",
+      "wiki": "https://valheim.weirdgloop.org/w/Fey_Lights"
+    },
+    {
+      "id": "flower-garland",
+      "name": "Flower Garland",
+      "category": "plants",
+      "comfort": 1,
+      "names": {
+        "ru": "Цветочная гирлянда"
+      },
+      "image": "img/pieces/flower-garland.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 2
+        },
+        {
+          "item": "dandelion",
+          "amount": 1
+        }
+      ],
+      "station": "workbench",
+      "biome": "black-forest",
+      "tier": 2,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_CelebrationGarland",
+      "wiki": "https://valheim.weirdgloop.org/w/Flower_Garland"
+    },
+    {
+      "id": "green-banner",
+      "name": "Green banner",
+      "category": "banner",
+      "comfort": 1,
+      "names": {
+        "ru": "Флаги"
+      },
+      "image": "img/pieces/green-banner.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 2
+        },
+        {
+          "item": "leather-scraps",
+          "amount": 6
+        },
+        {
+          "item": "guck",
+          "amount": 1
+        }
+      ],
+      "station": "workbench",
+      "biome": "swamp",
+      "tier": 4,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_banner05",
+      "wiki": "https://valheim.weirdgloop.org/w/Green_banner"
+    },
+    {
+      "id": "hanging-brazier",
+      "name": "Hanging Brazier",
+      "category": "fire",
+      "comfort": 1,
+      "names": {
+        "cs": "Závěsná pánev",
+        "ru": "Подвесной мангал"
+      },
+      "image": "img/pieces/hanging-brazier.png",
+      "materials": [
+        {
+          "item": "bronze",
+          "amount": 5
+        },
+        {
+          "item": "coal",
+          "amount": 2
+        },
+        {
+          "item": "chain",
+          "amount": 1
+        }
+      ],
+      "station": "forge",
+      "biome": "swamp",
+      "tier": 4,
+      "seasonal": false,
+      "conditions": {
+        "lit": true,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_brazierceiling01",
+      "wiki": "https://valheim.weirdgloop.org/w/Hanging_Brazier"
+    },
+    {
+      "id": "hare-rug",
+      "name": "Hare Rug",
+      "category": "rug",
+      "comfort": 1,
+      "names": {
+        "ru": "Коврики"
+      },
+      "image": "img/pieces/hare-rug.png",
+      "materials": [
+        {
+          "item": "scale-hide",
+          "amount": 4
+        }
+      ],
+      "station": "workbench",
+      "biome": "mistlands",
+      "tier": 7,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "rug_hare",
+      "wiki": "https://valheim.weirdgloop.org/w/Hare_Rug"
+    },
+    {
+      "id": "hearth",
+      "name": "Hearth",
+      "category": "fire",
+      "comfort": 2,
+      "names": {
+        "cs": "Krb",
+        "ru": "Очаг"
+      },
+      "image": "img/pieces/hearth.png",
+      "materials": [
+        {
+          "item": "stone",
+          "amount": 15
+        }
+      ],
+      "station": "stonecutter",
+      "biome": "swamp",
+      "tier": 4,
+      "seasonal": false,
+      "conditions": {
+        "lit": true,
+        "heated": false,
+        "hearthRange8m": true
+      },
+      "gameId": "hearth",
+      "wiki": "https://valheim.weirdgloop.org/w/Hearth"
+    },
+    {
+      "id": "hot-tub",
+      "name": "Hot Tub",
+      "category": "bathroom",
+      "comfort": 2,
+      "names": {
+        "cs": "Vířivka",
+        "ru": "Ванна"
+      },
+      "image": "img/pieces/hot-tub.png",
+      "materials": [
+        {
+          "item": "wood",
+          "amount": 20
+        },
+        {
+          "item": "tar",
+          "amount": 6
+        },
+        {
+          "item": "iron",
+          "amount": 10
+        },
+        {
+          "item": "stone",
+          "amount": 8
+        }
+      ],
+      "station": "workbench",
+      "biome": "plains",
+      "tier": 6,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": true,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_bathtub",
+      "wiki": "https://valheim.weirdgloop.org/w/Hot_Tub"
+    },
+    {
+      "id": "iron-fire-pit",
+      "name": "Iron Fire Pit",
+      "category": "fire",
+      "comfort": 1,
+      "names": {
+        "ru": "Железная костровая чаша"
+      },
+      "image": "img/pieces/iron-fire-pit.png",
+      "materials": [
+        {
+          "item": "iron-pit",
+          "amount": 1
+        },
+        {
+          "item": "wood",
+          "amount": 1
+        }
+      ],
+      "station": null,
+      "biome": "meadows",
+      "tier": 1,
+      "seasonal": false,
+      "conditions": {
+        "lit": true,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "fire_pit_iron",
+      "wiki": "https://valheim.weirdgloop.org/w/Iron_Fire_Pit"
+    },
+    {
+      "id": "item-stand-horizontal",
+      "name": "Item Stand (horizontal)",
+      "category": "stands",
+      "comfort": 1,
+      "names": {
+        "cs": "Stojan na předměty",
+        "ru": "Стойка для предмета"
+      },
+      "image": "img/pieces/item-stand-horizontal.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 4
+        },
+        {
+          "item": "bronze-nails",
+          "amount": 1
+        }
+      ],
+      "station": "workbench",
+      "biome": "black-forest",
+      "tier": 2,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Item_Stand_(horizontal)"
+    },
+    {
+      "id": "item-stand-vertical",
+      "name": "Item Stand (vertical)",
+      "category": "stands",
+      "comfort": 1,
+      "names": {
+        "cs": "Stojan na předměty",
+        "ru": "Стойка для предмета"
+      },
+      "image": "img/pieces/item-stand-vertical.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 4
+        },
+        {
+          "item": "bronze-nails",
+          "amount": 1
+        }
+      ],
+      "station": "workbench",
+      "biome": "black-forest",
+      "tier": 2,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Item_Stand_(vertical)"
+    },
+    {
+      "id": "jack-o-turnip",
+      "name": "Jack-O-Turnip",
+      "category": "lights",
+      "comfort": 2,
+      "names": {
+        "cs": "Jack-o-turnip",
+        "ru": "Фонарь из репы"
+      },
+      "image": "img/pieces/jack-o-turnip.png",
+      "materials": [
+        {
+          "item": "turnip",
+          "amount": 4
+        },
+        {
+          "item": "resin",
+          "amount": 2
+        }
+      ],
+      "station": "workbench",
+      "biome": "meadows",
+      "tier": 1,
+      "seasonal": true,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_jackoturnip",
+      "wiki": "https://valheim.weirdgloop.org/w/Jack-O-Turnip"
+    },
+    {
+      "id": "large-green-pot",
+      "name": "Large green pot",
+      "category": "ashlands",
+      "comfort": 1,
+      "names": {
+        "ru": "Горшки"
+      },
+      "image": "img/pieces/large-green-pot.png",
+      "materials": [
+        {
+          "item": "pot-shard",
+          "amount": 5
+        },
+        {
+          "item": "charcoal-resin",
+          "amount": 1
+        }
+      ],
+      "station": null,
+      "biome": "ashlands",
+      "tier": 8,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_pot2",
+      "wiki": "https://valheim.weirdgloop.org/w/Large_green_pot"
+    },
+    {
+      "id": "lava-lantern",
+      "name": "Lava Lantern",
+      "category": "lights",
+      "comfort": 2,
+      "names": {
+        "ru": "Лавовый светильник"
+      },
+      "image": "img/pieces/lava-lantern.png",
+      "materials": [
+        {
+          "item": "flametal",
+          "amount": 1
+        },
+        {
+          "item": "proustite-powder",
+          "amount": 1
+        },
+        {
+          "item": "sulfur",
+          "amount": 1
+        }
+      ],
+      "station": "black-forge",
+      "biome": "ashlands",
+      "tier": 8,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_Lavalantern",
+      "wiki": "https://valheim.weirdgloop.org/w/Lava_Lantern"
+    },
+    {
+      "id": "long-carved-table",
+      "name": "Long Carved Table",
+      "category": "table",
+      "comfort": 2,
+      "names": {},
+      "image": "img/pieces/long-carved-table.png",
+      "materials": [
+        {
+          "item": "timberwood",
+          "amount": 20
+        },
+        {
+          "item": "tar",
+          "amount": 2
+        },
+        {
+          "item": "iron-nails",
+          "amount": 20
+        }
+      ],
+      "station": "workbench",
+      "biome": "deep-north",
+      "tier": 9,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_table_runed",
+      "wiki": "https://valheim.weirdgloop.org/w/Long_Carved_Table"
+    },
+    {
+      "id": "long-heavy-table",
+      "name": "Long Heavy Table",
+      "category": "table",
+      "comfort": 2,
+      "names": {},
+      "image": "img/pieces/long-heavy-table.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 20
+        },
+        {
+          "item": "tar",
+          "amount": 2
+        },
+        {
+          "item": "iron-nails",
+          "amount": 20
+        }
+      ],
+      "station": "workbench",
+      "biome": "plains",
+      "tier": 6,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_table_oak",
+      "wiki": "https://valheim.weirdgloop.org/w/Long_Heavy_Table"
+    },
+    {
+      "id": "lox-rug",
+      "name": "Lox Rug",
+      "category": "rug",
+      "comfort": 2,
+      "names": {
+        "ru": "Коврики"
+      },
+      "image": "img/pieces/lox-rug.png",
+      "materials": [
+        {
+          "item": "lox-pelt",
+          "amount": 4
+        }
+      ],
+      "station": "workbench",
+      "biome": "plains",
+      "tier": 6,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "rug_fur",
+      "wiki": "https://valheim.weirdgloop.org/w/Lox_Rug"
+    },
+    {
+      "id": "maypole",
+      "name": "Maypole",
+      "category": null,
+      "comfort": 1,
+      "names": {
+        "cs": "Máje",
+        "ru": "Майское дерево"
+      },
+      "image": "img/pieces/maypole.png",
+      "materials": [
+        {
+          "item": "wood",
+          "amount": 10
+        },
+        {
+          "item": "dandelion",
+          "amount": 4
+        },
+        {
+          "item": "thistle",
+          "amount": 4
+        }
+      ],
+      "station": "workbench",
+      "biome": "black-forest",
+      "tier": 2,
+      "seasonal": true,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_maypole",
+      "wiki": "https://valheim.weirdgloop.org/w/Maypole"
+    },
+    {
+      "id": "medium-green-pot",
+      "name": "Medium green pot",
+      "category": "ashlands",
+      "comfort": 1,
+      "names": {
+        "ru": "Горшки"
+      },
+      "image": "img/pieces/medium-green-pot.png",
+      "materials": [
+        {
+          "item": "pot-shard",
+          "amount": 4
+        },
+        {
+          "item": "charcoal-resin",
+          "amount": 1
+        }
+      ],
+      "station": null,
+      "biome": "ashlands",
+      "tier": 8,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_pot1",
+      "wiki": "https://valheim.weirdgloop.org/w/Medium_green_pot"
+    },
+    {
+      "id": "mistletoe",
+      "name": "Mistletoe",
+      "category": "plants",
+      "comfort": 1,
+      "names": {
+        "cs": "Jmelí",
+        "ru": "Омела"
+      },
+      "image": "img/pieces/mistletoe.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 1
+        },
+        {
+          "item": "red-jute",
+          "amount": 1
+        }
+      ],
+      "station": "workbench",
+      "biome": "mountain",
+      "tier": 5,
+      "seasonal": true,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_mistletoe",
+      "wiki": "https://valheim.weirdgloop.org/w/Mistletoe"
+    },
+    {
+      "id": "moose-hide-carpet",
+      "name": "Moose Hide Carpet",
+      "category": "rug",
+      "comfort": 2,
+      "names": {
+        "ru": "Коврики"
+      },
+      "image": "img/pieces/moose-hide-carpet.png",
+      "materials": [],
+      "station": null,
+      "biome": null,
+      "tier": null,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Moose_Hide_Carpet"
+    },
+    {
+      "id": "orange-banner",
+      "name": "Orange banner",
+      "category": "banner",
+      "comfort": 1,
+      "names": {
+        "ru": "Флаги"
+      },
+      "image": "img/pieces/orange-banner.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 2
+        },
+        {
+          "item": "leather-scraps",
+          "amount": 6
+        },
+        {
+          "item": "carrot",
+          "amount": 2
+        },
+        {
+          "item": "cloudberries",
+          "amount": 3
+        }
+      ],
+      "station": "workbench",
+      "biome": "plains",
+      "tier": 6,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_banner10",
+      "wiki": "https://valheim.weirdgloop.org/w/Orange_banner"
+    },
+    {
+      "id": "purple-banner",
+      "name": "Purple banner",
+      "category": "banner",
+      "comfort": 1,
+      "names": {
+        "ru": "Флаги"
+      },
+      "image": "img/pieces/purple-banner.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 2
+        },
+        {
+          "item": "leather-scraps",
+          "amount": 6
+        },
+        {
+          "item": "blueberries",
+          "amount": 2
+        },
+        {
+          "item": "raspberries",
+          "amount": 3
+        }
+      ],
+      "station": "workbench",
+      "biome": "black-forest",
+      "tier": 2,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_banner09",
+      "wiki": "https://valheim.weirdgloop.org/w/Purple_banner"
+    },
+    {
+      "id": "raven-throne",
+      "name": "Raven Throne",
+      "category": "chair",
+      "comfort": 3,
+      "names": {},
+      "image": "img/pieces/raven-throne.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 20
+        },
+        {
+          "item": "iron-nails",
+          "amount": 10
+        }
+      ],
+      "station": "workbench",
+      "biome": "swamp",
+      "tier": 4,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_throne01",
+      "wiki": "https://valheim.weirdgloop.org/w/Raven_Throne"
+    },
+    {
+      "id": "red-banner",
+      "name": "Red banner",
+      "category": "banner",
+      "comfort": 1,
+      "names": {
+        "ru": "Флаги"
+      },
+      "image": "img/pieces/red-banner.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 2
+        },
+        {
+          "item": "leather-scraps",
+          "amount": 6
+        },
+        {
+          "item": "bloodbag",
+          "amount": 1
+        }
+      ],
+      "station": "workbench",
+      "biome": "swamp",
+      "tier": 4,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_banner04",
+      "wiki": "https://valheim.weirdgloop.org/w/Red_banner"
+    },
+    {
+      "id": "red-jute-carpet",
+      "name": "Red Jute Carpet",
+      "category": "rug",
+      "comfort": 1,
+      "names": {
+        "ru": "Коврики"
+      },
+      "image": "img/pieces/red-jute-carpet.png",
+      "materials": [
+        {
+          "item": "red-jute",
+          "amount": 4
+        }
+      ],
+      "station": "workbench",
+      "biome": "mountain",
+      "tier": 5,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "jute_carpet",
+      "wiki": "https://valheim.weirdgloop.org/w/Red_Jute_Carpet"
+    },
+    {
+      "id": "red-jute-curtain",
+      "name": "Red Jute Curtain",
+      "category": "banner",
+      "comfort": 2,
+      "names": {
+        "ru": "Штора из красного джута"
+      },
+      "image": "img/pieces/red-jute-curtain.png",
+      "materials": [
+        {
+          "item": "red-jute",
+          "amount": 4
+        },
+        {
+          "item": "finewood",
+          "amount": 1
+        }
+      ],
+      "station": "workbench",
+      "biome": "mountain",
+      "tier": 5,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_cloth_hanging_door",
+      "wiki": "https://valheim.weirdgloop.org/w/Red_Jute_Curtain"
+    },
+    {
+      "id": "round-table",
+      "name": "Round Table",
+      "category": "table",
+      "comfort": 2,
+      "names": {},
+      "image": "img/pieces/round-table.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 10
+        },
+        {
+          "item": "tar",
+          "amount": 2
+        },
+        {
+          "item": "iron-nails",
+          "amount": 20
+        }
+      ],
+      "station": "workbench",
+      "biome": "plains",
+      "tier": 6,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_table_round",
+      "wiki": "https://valheim.weirdgloop.org/w/Round_Table"
+    },
+    {
+      "id": "sealskin-rug",
+      "name": "Sealskin Rug",
+      "category": "rug",
+      "comfort": 1,
+      "names": {},
+      "image": "img/pieces/sealskin-rug.png",
+      "materials": [
+        {
+          "item": "seal-pelt",
+          "amount": 4
+        }
+      ],
+      "station": "workbench",
+      "biome": "deep-north",
+      "tier": 9,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "rug_seal",
+      "wiki": "https://valheim.weirdgloop.org/w/Sealskin_Rug"
+    },
+    {
+      "id": "sitting-log",
+      "name": "Sitting Log",
+      "category": "chair",
+      "comfort": 1,
+      "names": {},
+      "image": "img/pieces/sitting-log.png",
+      "materials": [
+        {
+          "item": "corewood",
+          "amount": 2
+        }
+      ],
+      "station": "workbench",
+      "biome": "black-forest",
+      "tier": 2,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_logbench01",
+      "wiki": "https://valheim.weirdgloop.org/w/Sitting_Log"
+    },
+    {
+      "id": "small-green-pot",
+      "name": "Small green pot",
+      "category": "ashlands",
+      "comfort": 1,
+      "names": {
+        "ru": "Горшки"
+      },
+      "image": "img/pieces/small-green-pot.png",
+      "materials": [
+        {
+          "item": "pot-shard",
+          "amount": 3
+        },
+        {
+          "item": "charcoal-resin",
+          "amount": 1
+        }
+      ],
+      "station": null,
+      "biome": "ashlands",
+      "tier": 8,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_pot3",
+      "wiki": "https://valheim.weirdgloop.org/w/Small_green_pot"
+    },
+    {
+      "id": "snow-lantern",
+      "name": "Snow Lantern",
+      "category": "lights",
+      "comfort": 2,
+      "names": {},
+      "image": "img/pieces/snow-lantern.png",
+      "materials": [
+        {
+          "item": "snowball",
+          "amount": 8
+        }
+      ],
+      "station": "workbench",
+      "biome": "deep-north",
+      "tier": 9,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_snowlantern",
+      "wiki": "https://valheim.weirdgloop.org/w/Snow_Lantern"
+    },
+    {
+      "id": "square-carved-table",
+      "name": "Square Carved Table",
+      "category": "table",
+      "comfort": 1,
+      "names": {},
+      "image": "img/pieces/square-carved-table.png",
+      "materials": [
+        {
+          "item": "timberwood",
+          "amount": 6
+        },
+        {
+          "item": "tar",
+          "amount": 1
+        },
+        {
+          "item": "iron-nails",
+          "amount": 6
+        }
+      ],
+      "station": "workbench",
+      "biome": "deep-north",
+      "tier": 9,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_table_runed_small",
+      "wiki": "https://valheim.weirdgloop.org/w/Square_Carved_Table"
+    },
+    {
+      "id": "standing-brazier",
+      "name": "Standing Brazier",
+      "category": "fire",
+      "comfort": 1,
+      "names": {
+        "cs": "Stojící uhelné ohniště",
+        "ru": "Жаровня"
+      },
+      "image": "img/pieces/standing-brazier.png",
+      "materials": [
+        {
+          "item": "bronze",
+          "amount": 5
+        },
+        {
+          "item": "coal",
+          "amount": 2
+        },
+        {
+          "item": "fenris-claw",
+          "amount": 3
+        }
+      ],
+      "station": "forge",
+      "biome": "mountain",
+      "tier": 5,
+      "seasonal": false,
+      "conditions": {
+        "lit": true,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_brazierfloor01",
+      "wiki": "https://valheim.weirdgloop.org/w/Standing_Brazier"
+    },
+    {
+      "id": "stone-throne",
+      "name": "Stone Throne",
+      "category": "chair",
+      "comfort": 3,
+      "names": {},
+      "image": "img/pieces/stone-throne.png",
+      "materials": [
+        {
+          "item": "stone",
+          "amount": 20
+        },
+        {
+          "item": "deer-hide",
+          "amount": 2
+        },
+        {
+          "item": "wolf-pelt",
+          "amount": 2
+        }
+      ],
+      "station": "stonecutter",
+      "biome": "mountain",
+      "tier": 5,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_throne02",
+      "wiki": "https://valheim.weirdgloop.org/w/Stone_Throne"
+    },
+    {
+      "id": "stool",
+      "name": "Stool",
+      "category": "chair",
+      "comfort": 1,
+      "names": {},
+      "image": "img/pieces/stool.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 4
+        }
+      ],
+      "station": "workbench",
+      "biome": "black-forest",
+      "tier": 2,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_chair",
+      "wiki": "https://valheim.weirdgloop.org/w/Stool"
+    },
+    {
+      "id": "straw",
+      "name": "Straw",
+      "category": "rug",
+      "comfort": 1,
+      "names": {
+        "ru": "Коврики"
+      },
+      "image": "img/pieces/straw.png",
+      "materials": [
+        {
+          "item": "barley",
+          "amount": 1
+        },
+        {
+          "item": "flax",
+          "amount": 1
+        }
+      ],
+      "station": "workbench",
+      "biome": "plains",
+      "tier": 6,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "rug_straw",
+      "wiki": "https://valheim.weirdgloop.org/w/Straw"
+    },
+    {
+      "id": "table",
+      "name": "Table",
+      "category": "table",
+      "comfort": 1,
+      "names": {},
+      "image": "img/pieces/table.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 6
+        }
+      ],
+      "station": "workbench",
+      "biome": "black-forest",
+      "tier": 2,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_table",
+      "wiki": "https://valheim.weirdgloop.org/w/Table"
+    },
+    {
+      "id": "white-and-blue-striped-banner",
+      "name": "White and blue striped banner",
+      "category": "banner",
+      "comfort": 1,
+      "names": {
+        "ru": "Флаги"
+      },
+      "image": "img/pieces/white-and-blue-striped-banner.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 2
+        },
+        {
+          "item": "leather-scraps",
+          "amount": 6
+        },
+        {
+          "item": "blueberries",
+          "amount": 2
+        },
+        {
+          "item": "cloudberries",
+          "amount": 3
+        }
+      ],
+      "station": "workbench",
+      "biome": "plains",
+      "tier": 6,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_banner07",
+      "wiki": "https://valheim.weirdgloop.org/w/White_and_blue_striped_banner"
+    },
+    {
+      "id": "white-and-red-striped-banner",
+      "name": "White and red striped banner",
+      "category": "banner",
+      "comfort": 1,
+      "names": {
+        "ru": "Флаги"
+      },
+      "image": "img/pieces/white-and-red-striped-banner.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 2
+        },
+        {
+          "item": "leather-scraps",
+          "amount": 6
+        },
+        {
+          "item": "raspberries",
+          "amount": 4
+        }
+      ],
+      "station": "workbench",
+      "biome": "black-forest",
+      "tier": 2,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_banner03",
+      "wiki": "https://valheim.weirdgloop.org/w/White_and_red_striped_banner"
+    },
+    {
+      "id": "white-banner",
+      "name": "White banner",
+      "category": "banner",
+      "comfort": 1,
+      "names": {
+        "ru": "Флаги"
+      },
+      "image": "img/pieces/white-banner.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 2
+        },
+        {
+          "item": "leather-scraps",
+          "amount": 6
+        },
+        {
+          "item": "coal",
+          "amount": 2
+        },
+        {
+          "item": "cloudberries",
+          "amount": 4
+        }
+      ],
+      "station": "workbench",
+      "biome": "plains",
+      "tier": 6,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_banner11",
+      "wiki": "https://valheim.weirdgloop.org/w/White_banner"
+    },
+    {
+      "id": "wolf-rug",
+      "name": "Wolf Rug",
+      "category": "rug",
+      "comfort": 2,
+      "names": {
+        "ru": "Коврики"
+      },
+      "image": "img/pieces/wolf-rug.png",
+      "materials": [
+        {
+          "item": "wolf-pelt",
+          "amount": 4
+        }
+      ],
+      "station": "workbench",
+      "biome": "mountain",
+      "tier": 5,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "rug_wolf",
+      "wiki": "https://valheim.weirdgloop.org/w/Wolf_Rug"
+    },
+    {
+      "id": "yellow-banner",
+      "name": "Yellow banner",
+      "category": "banner",
+      "comfort": 1,
+      "names": {
+        "ru": "Флаги"
+      },
+      "image": "img/pieces/yellow-banner.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 2
+        },
+        {
+          "item": "leather-scraps",
+          "amount": 6
+        },
+        {
+          "item": "coal",
+          "amount": 2
+        },
+        {
+          "item": "dandelion",
+          "amount": 4
+        }
+      ],
+      "station": "workbench",
+      "biome": "black-forest",
+      "tier": 2,
+      "seasonal": false,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_banner08",
+      "wiki": "https://valheim.weirdgloop.org/w/Yellow_banner"
+    },
+    {
+      "id": "yule-garland",
+      "name": "Yule garland",
+      "category": "plants",
+      "comfort": 1,
+      "names": {
+        "cs": "Yule Girlanda",
+        "ru": "Йольская гирлянда"
+      },
+      "image": "img/pieces/yule-garland.png",
+      "materials": [
+        {
+          "item": "finewood",
+          "amount": 2
+        },
+        {
+          "item": "pine-cone",
+          "amount": 1
+        }
+      ],
+      "station": "workbench",
+      "biome": "plains",
+      "tier": 6,
+      "seasonal": true,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_xmasgarland",
+      "wiki": "https://valheim.weirdgloop.org/w/Yule_garland"
+    },
+    {
+      "id": "yule-tree",
+      "name": "Yule Tree",
+      "category": null,
+      "comfort": 1,
+      "names": {
+        "cs": "Vánoční stromek",
+        "ru": "Йольское дерево"
+      },
+      "image": "img/pieces/yule-tree.png",
+      "materials": [
+        {
+          "item": "wood",
+          "amount": 10
+        },
+        {
+          "item": "fir-cone",
+          "amount": 1
+        }
+      ],
+      "station": "workbench",
+      "biome": "plains",
+      "tier": 6,
+      "seasonal": true,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_xmastree",
+      "wiki": "https://valheim.weirdgloop.org/w/Yule_Tree"
+    },
+    {
+      "id": "yule-wreath",
+      "name": "Yule wreath",
+      "category": "plants",
+      "comfort": 1,
+      "names": {
+        "cs": "Yule Věnec",
+        "ru": "Йольский венок"
+      },
+      "image": "img/pieces/yule-wreath.png",
+      "materials": [
+        {
+          "item": "pine-cone",
+          "amount": 4
+        },
+        {
+          "item": "red-jute",
+          "amount": 1
+        },
+        {
+          "item": "finewood",
+          "amount": 1
+        }
+      ],
+      "station": "workbench",
+      "biome": "plains",
+      "tier": 6,
+      "seasonal": true,
+      "conditions": {
+        "lit": false,
+        "heated": false,
+        "hearthRange8m": false
+      },
+      "gameId": "piece_xmascrown",
+      "wiki": "https://valheim.weirdgloop.org/w/Yule_wreath"
+    }
+  ],
+  "wikiMaxByBiome": {
+    "meadows": 5,
+    "black-forest": 13,
+    "swamp": 15,
+    "mountain": 17,
+    "plains": 19,
+    "mistlands": 20,
+    "ashlands": 22,
+    "deep-north": 22,
+    "ocean": 13
+  },
+  "rules": {
+    "base": 1,
+    "shelter": 1,
+    "unshelteredCap": 1,
+    "restedBaseMinutes": 7,
+    "rangeMeters": 10,
+    "restedEffects": {
+      "healthRegenPercent": 50,
+      "staminaRegenPercent": 100,
+      "eitrRegenPercent": 100,
+      "xpPercent": 50
+    }
+  }
+}

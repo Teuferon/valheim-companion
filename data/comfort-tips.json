@@ -1,0 +1,52 @@
+[
+  {
+    "id": "range",
+    "text": "Keep furniture within ten meters of your character.",
+    "source": "https://valheim.weirdgloop.org/w/Comfort"
+  },
+  {
+    "id": "shelter",
+    "text": "Without shelter, sitting near a fire caps comfort at one.",
+    "source": "https://valheim.weirdgloop.org/w/Comfort"
+  },
+  {
+    "id": "hearth",
+    "text": "Hearth gives its extra comfort only within eight meters.",
+    "source": "https://valheim.weirdgloop.org/w/Comfort"
+  },
+  {
+    "id": "fire",
+    "text": "Fires must be lit to provide comfort.",
+    "source": "https://valheim.weirdgloop.org/w/Comfort"
+  },
+  {
+    "id": "tub",
+    "text": "Hot Tub provides comfort only when fueled and heated.",
+    "source": "https://valheim.weirdgloop.org/w/Hot_Tub"
+  },
+  {
+    "id": "categories",
+    "text": "Only the highest comfort piece in each category counts.",
+    "source": "https://valheim.weirdgloop.org/w/Comfort"
+  },
+  {
+    "id": "dungeon",
+    "text": "A Campfire in a dungeon entrance can restore a ten-minute Rested effect.",
+    "source": "https://valheim.weirdgloop.org/w/Rested"
+  },
+  {
+    "id": "wet",
+    "text": "Wet prevents Resting, except while sitting in a Hot Tub.",
+    "source": "https://valheim.weirdgloop.org/w/Resting"
+  },
+  {
+    "id": "rested",
+    "text": "Rested lasts seven minutes plus your comfort level.",
+    "source": "https://valheim.weirdgloop.org/w/Resting"
+  },
+  {
+    "id": "wait",
+    "text": "Rest for twenty uninterrupted seconds, away from hostile creatures, to gain Rested.",
+    "source": "https://valheim.weirdgloop.org/w/Resting"
+  }
+]
