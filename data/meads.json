@@ -1,0 +1,844 @@
+[
+  {
+    "id": "anti-sting-concoction",
+    "name": "Anti-Sting Concoction",
+    "names": {
+      "cs": "Roztok proti štípancům",
+      "ru": "Средство от смертожалов"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Anti-Sting_Concoction",
+    "image": "img/meads/anti-sting-concoction.png",
+    "effect": {
+      "text": "* Prevent Deathsquito attacks",
+      "resistances": []
+    },
+    "duration": 600,
+    "cooldown": 600,
+    "base": {
+      "item": "mead-base-anti-sting",
+      "name": "Mead Base: Anti-Sting",
+      "station": "mead-ketill",
+      "stationLevel": 1,
+      "materials": [
+        {
+          "item": "cloudberries",
+          "amount": 10
+        },
+        {
+          "item": "grouper",
+          "amount": 3
+        },
+        {
+          "item": "fragrant-bundle",
+          "amount": 1
+        }
+      ]
+    },
+    "fermenterTime": 2400,
+    "yields": 6,
+    "biome": "plains",
+    "tier": 6
+  },
+  {
+    "id": "berserkir-mead",
+    "name": "Berserkir Mead",
+    "names": {
+      "cs": "Berserkská medovina",
+      "ru": "Медовуха берсеркира"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Berserkir_Mead",
+    "image": "img/meads/berserkir-mead.png",
+    "effect": {
+      "text": "* Attack, Block and Dodge Stamina use -80%\n* Weak (x1.5) against Slash, Blunt and Pierce damage",
+      "resistances": []
+    },
+    "duration": 20,
+    "cooldown": 20,
+    "base": {
+      "item": "mead-base-berserkir",
+      "name": "Mead base: Berserkir",
+      "station": "mead-ketill",
+      "stationLevel": 1,
+      "materials": [
+        {
+          "item": "mushroom",
+          "amount": 10
+        },
+        {
+          "item": "yellow-mushroom",
+          "amount": 10
+        },
+        {
+          "item": "toadstool",
+          "amount": 1
+        }
+      ]
+    },
+    "fermenterTime": 2400,
+    "yields": 3,
+    "biome": "plains",
+    "tier": 6
+  },
+  {
+    "id": "brew-of-animal-whispers",
+    "name": "Brew of Animal Whispers",
+    "names": {
+      "cs": "Nápoj zvířecího šepotu",
+      "ru": "Отвар звериного шепота"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Brew_of_Animal_Whispers",
+    "image": "img/meads/brew-of-animal-whispers.png",
+    "effect": {
+      "text": "x2 taming speed",
+      "resistances": []
+    },
+    "duration": 600,
+    "cooldown": 600,
+    "base": {
+      "item": "mead-base-animal-whispers",
+      "name": "Mead base: Animal whispers",
+      "station": "mead-ketill",
+      "stationLevel": 1,
+      "materials": [
+        {
+          "item": "onion",
+          "amount": 5
+        },
+        {
+          "item": "carrot",
+          "amount": 10
+        },
+        {
+          "item": "pungent-pebbles",
+          "amount": 1
+        }
+      ]
+    },
+    "fermenterTime": 2400,
+    "yields": 6,
+    "biome": "swamp",
+    "tier": 4
+  },
+  {
+    "id": "draught-of-vananidir",
+    "name": "Draught of Vananidir",
+    "names": {
+      "cs": "Nápoj Vananidir",
+      "ru": "Напиток Вананидир"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Draught_of_Vananidir",
+    "image": "img/meads/draught-of-vananidir.png",
+    "effect": {
+      "text": "-50% swimming stamina consumption",
+      "resistances": []
+    },
+    "duration": 300,
+    "cooldown": 300,
+    "base": {
+      "item": "mead-base-vananidir",
+      "name": "Mead base: Vananidir",
+      "station": "mead-ketill",
+      "stationLevel": 1,
+      "materials": [
+        {
+          "item": "dandelion",
+          "amount": 10
+        },
+        {
+          "item": "perch",
+          "amount": 2
+        },
+        {
+          "item": "fresh-seaweed",
+          "amount": 1
+        }
+      ]
+    },
+    "fermenterTime": 2400,
+    "yields": 6,
+    "biome": "swamp",
+    "tier": 4
+  },
+  {
+    "id": "fire-resistance-barley-wine",
+    "name": "Fire Resistance Barley Wine",
+    "names": {
+      "cs": "Ječmenné pivo na odolnost vůči ohni",
+      "ru": "Огненное ячменное вино"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Fire_Resistance_Barley_Wine",
+    "image": "img/meads/fire-resistance-barley-wine.png",
+    "effect": {
+      "text": "Resistance vs. Fire",
+      "resistances": []
+    },
+    "duration": 600,
+    "cooldown": 600,
+    "base": {
+      "item": "barley-wine-base-fire-resistance",
+      "name": "Barley Wine Base: Fire Resistance",
+      "station": "mead-ketill",
+      "stationLevel": 1,
+      "materials": [
+        {
+          "item": "barley",
+          "amount": 10
+        },
+        {
+          "item": "cloudberries",
+          "amount": 10
+        }
+      ]
+    },
+    "fermenterTime": 2400,
+    "yields": 6,
+    "biome": "plains",
+    "tier": 6
+  },
+  {
+    "id": "frost-resistance-mead",
+    "name": "Frost Resistance Mead",
+    "names": {
+      "cs": "Medovina proti mrazu",
+      "ru": "Морозоустойчивая медовуха"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Frost_Resistance_Mead",
+    "image": "img/meads/frost-resistance-mead.png",
+    "effect": {
+      "text": "Resistant (0.5x) VS Frost",
+      "resistances": [
+        {
+          "type": "frost",
+          "multiplier": 0.5
+        }
+      ]
+    },
+    "duration": 600,
+    "cooldown": 600,
+    "base": {
+      "item": "mead-base-frost-resistance",
+      "name": "Mead base: Frost resistance",
+      "station": "mead-ketill",
+      "stationLevel": 1,
+      "materials": [
+        {
+          "item": "honey",
+          "amount": 10
+        },
+        {
+          "item": "thistle",
+          "amount": 5
+        },
+        {
+          "item": "bloodbag",
+          "amount": 2
+        },
+        {
+          "item": "greydwarf-eye",
+          "amount": 1
+        }
+      ]
+    },
+    "fermenterTime": 2400,
+    "yields": 6,
+    "biome": "swamp",
+    "tier": 4
+  },
+  {
+    "id": "lightfoot-mead",
+    "name": "Lightfoot Mead",
+    "names": {
+      "cs": "Lehkonohá medovina",
+      "ru": "Медовуха Легкоступа"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Lightfoot_Mead",
+    "image": "img/meads/lightfoot-mead.png",
+    "effect": {
+      "text": "* -30% jump stamina cost\n* +20% jump height",
+      "resistances": []
+    },
+    "duration": 600,
+    "cooldown": 600,
+    "base": {
+      "item": "mead-base-lightfoot",
+      "name": "Mead Base: Lightfoot",
+      "station": "mead-ketill",
+      "stationLevel": 1,
+      "materials": [
+        {
+          "item": "scale-hide",
+          "amount": 2
+        },
+        {
+          "item": "feathers",
+          "amount": 5
+        },
+        {
+          "item": "magecap",
+          "amount": 5
+        }
+      ]
+    },
+    "fermenterTime": 2400,
+    "yields": 6,
+    "biome": "mistlands",
+    "tier": 7
+  },
+  {
+    "id": "lingering-eitr-mead",
+    "name": "Lingering Eitr Mead",
+    "names": {
+      "cs": "Trvající éitrová medovina",
+      "ru": "Мощная медовуха Эйтра"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Lingering_Eitr_Mead",
+    "image": "img/meads/lingering-eitr-mead.png",
+    "effect": {
+      "text": "Upon consumption, it provides +25% eitr regeneration for 5 minutes. While active, it prevents the consumption of all types of eitr meads.\n\nru:Мощная медовуха Эйтра\ncs:Trvající éitrová medovina",
+      "resistances": []
+    },
+    "duration": 300,
+    "cooldown": 300,
+    "base": {
+      "item": "mead-base-lingering-eitr",
+      "name": "Mead base: Lingering eitr",
+      "station": "mead-ketill",
+      "stationLevel": 1,
+      "materials": [
+        {
+          "item": "sap",
+          "amount": 10
+        },
+        {
+          "item": "vineberry-cluster",
+          "amount": 10
+        },
+        {
+          "item": "magecap",
+          "amount": 10
+        }
+      ]
+    },
+    "fermenterTime": 2400,
+    "yields": 6,
+    "biome": "ashlands",
+    "tier": 8
+  },
+  {
+    "id": "lingering-healing-mead",
+    "name": "Lingering Healing Mead",
+    "names": {
+      "cs": "Trvající léčivá medovina",
+      "ru": "Мощная медовуха лечения"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Lingering_Healing_Mead",
+    "image": "img/meads/lingering-healing-mead.png",
+    "effect": {
+      "text": "Upon consumption, it provides +25% health regeneration for 5 minutes. While active, it prevents the consumption of all types of healing meads.",
+      "resistances": []
+    },
+    "duration": 300,
+    "cooldown": 300,
+    "base": {
+      "item": "mead-base-lingering-health",
+      "name": "Mead base: Lingering health",
+      "station": "mead-ketill",
+      "stationLevel": 1,
+      "materials": [
+        {
+          "item": "sap",
+          "amount": 10
+        },
+        {
+          "item": "vineberry-cluster",
+          "amount": 10
+        },
+        {
+          "item": "smoke-puff",
+          "amount": 10
+        }
+      ]
+    },
+    "fermenterTime": 2400,
+    "yields": 6,
+    "biome": "ashlands",
+    "tier": 8
+  },
+  {
+    "id": "lingering-stamina-mead",
+    "name": "Lingering Stamina Mead",
+    "names": {
+      "cs": "Medovina trvající výdrže",
+      "ru": "Большая медовуха выносливости"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Lingering_Stamina_Mead",
+    "image": "img/meads/lingering-stamina-mead.png",
+    "effect": {
+      "text": "+25% rate",
+      "resistances": []
+    },
+    "duration": 300,
+    "cooldown": 300,
+    "base": {
+      "item": "mead-base-lingering-stamina",
+      "name": "Mead base: Lingering stamina",
+      "station": "mead-ketill",
+      "stationLevel": 1,
+      "materials": [
+        {
+          "item": "sap",
+          "amount": 10
+        },
+        {
+          "item": "cloudberries",
+          "amount": 10
+        },
+        {
+          "item": "jotun-puffs",
+          "amount": 10
+        }
+      ]
+    },
+    "fermenterTime": 2400,
+    "yields": 6,
+    "biome": "mistlands",
+    "tier": 7
+  },
+  {
+    "id": "love-potion",
+    "name": "Love Potion",
+    "names": {
+      "cs": "Nápoj lásky",
+      "ru": "Любовное зелье"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Love_Potion",
+    "image": "img/meads/love-potion.png",
+    "effect": {
+      "text": "Its consumption increases the spawn rate of Trolls (from 5% to 25%), increases the chance of starred Trolls and increases the maximum number of spawned Trolls (from 1 to 2). All Trolls are also automatically on alert.",
+      "resistances": []
+    },
+    "duration": 300,
+    "cooldown": 300,
+    "base": null,
+    "fermenterTime": null,
+    "yields": 5,
+    "biome": "swamp",
+    "tier": 4
+  },
+  {
+    "id": "major-healing-mead",
+    "name": "Major Healing Mead",
+    "names": {
+      "cs": "Velká Léčivá Medovina",
+      "ru": "Большая медовуха лечения"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Major_Healing_Mead",
+    "image": "img/meads/major-healing-mead.png",
+    "effect": {
+      "text": "+125 HP over 10s",
+      "resistances": []
+    },
+    "duration": 10,
+    "cooldown": 120,
+    "base": {
+      "item": "mead-base-major-healing",
+      "name": "Mead base: Major healing",
+      "station": "mead-ketill",
+      "stationLevel": 1,
+      "materials": [
+        {
+          "item": "honey",
+          "amount": 10
+        },
+        {
+          "item": "blood-clot",
+          "amount": 4
+        },
+        {
+          "item": "royal-jelly",
+          "amount": 5
+        }
+      ]
+    },
+    "fermenterTime": 2400,
+    "yields": 6,
+    "biome": "mistlands",
+    "tier": 7
+  },
+  {
+    "id": "mead-of-troll-endurance",
+    "name": "Mead of Troll Endurance",
+    "names": {
+      "cs": "Medovina trollí výdrže",
+      "ru": "Медовуха силы тролля"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Mead_of_Troll_Endurance",
+    "image": "img/meads/mead-of-troll-endurance.png",
+    "effect": {
+      "text": "* +250.0 carry weight",
+      "resistances": []
+    },
+    "duration": 300,
+    "cooldown": 300,
+    "base": {
+      "item": "mead-base-troll-endurance",
+      "name": "Mead Base: Troll Endurance",
+      "station": "mead-ketill",
+      "stationLevel": 1,
+      "materials": [
+        {
+          "item": "trollfish",
+          "amount": 2
+        },
+        {
+          "item": "honey",
+          "amount": 10
+        },
+        {
+          "item": "powdered-dragon-eggshells",
+          "amount": 1
+        }
+      ]
+    },
+    "fermenterTime": 2400,
+    "yields": 6,
+    "biome": "swamp",
+    "tier": 4
+  },
+  {
+    "id": "medium-healing-mead",
+    "name": "Medium Healing Mead",
+    "names": {
+      "cs": "Střední léčivá medovina",
+      "ru": "Средняя медовуха лечения"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Medium_Healing_Mead",
+    "image": "img/meads/medium-healing-mead.png",
+    "effect": {
+      "text": "+75 HP over 10s",
+      "resistances": []
+    },
+    "duration": 10,
+    "cooldown": 120,
+    "base": {
+      "item": "mead-base-medium-healing",
+      "name": "Mead base: Medium healing",
+      "station": "mead-ketill",
+      "stationLevel": 1,
+      "materials": [
+        {
+          "item": "honey",
+          "amount": 10
+        },
+        {
+          "item": "bloodbag",
+          "amount": 4
+        },
+        {
+          "item": "raspberries",
+          "amount": 10
+        },
+        {
+          "item": "dandelion",
+          "amount": 1
+        }
+      ]
+    },
+    "fermenterTime": 2400,
+    "yields": 6,
+    "biome": "swamp",
+    "tier": 4
+  },
+  {
+    "id": "medium-stamina-mead",
+    "name": "Medium Stamina Mead",
+    "names": {
+      "cs": "Střední medovina na výdrž",
+      "ru": "Средняя медовуха выносливости"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Medium_Stamina_Mead",
+    "image": "img/meads/medium-stamina-mead.png",
+    "effect": {
+      "text": "+160 Stamina over 2s",
+      "resistances": []
+    },
+    "duration": 2,
+    "cooldown": 120,
+    "base": {
+      "item": "mead-base-medium-stamina",
+      "name": "Mead base: Medium stamina",
+      "station": "mead-ketill",
+      "stationLevel": 1,
+      "materials": [
+        {
+          "item": "honey",
+          "amount": 10
+        },
+        {
+          "item": "cloudberries",
+          "amount": 10
+        },
+        {
+          "item": "yellow-mushroom",
+          "amount": 10
+        }
+      ]
+    },
+    "fermenterTime": 2400,
+    "yields": 6,
+    "biome": "plains",
+    "tier": 6
+  },
+  {
+    "id": "minor-eitr-mead",
+    "name": "Minor Eitr Mead",
+    "names": {
+      "cs": "Slabší Éitrová medovina",
+      "ru": "Малая медовуха Эйтра"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Minor_Eitr_Mead",
+    "image": "img/meads/minor-eitr-mead.png",
+    "effect": {
+      "text": "+125 Eitr over 10s",
+      "resistances": []
+    },
+    "duration": 10,
+    "cooldown": 120,
+    "base": {
+      "item": "mead-base-minor-eitr",
+      "name": "Mead base: Minor eitr",
+      "station": "mead-ketill",
+      "stationLevel": 1,
+      "materials": [
+        {
+          "item": "honey",
+          "amount": 10
+        },
+        {
+          "item": "sap",
+          "amount": 5
+        },
+        {
+          "item": "jotun-puffs",
+          "amount": 2
+        },
+        {
+          "item": "magecap",
+          "amount": 5
+        }
+      ]
+    },
+    "fermenterTime": 2400,
+    "yields": 6,
+    "biome": "mistlands",
+    "tier": 7
+  },
+  {
+    "id": "minor-healing-mead",
+    "name": "Minor Healing Mead",
+    "names": {
+      "cs": "Drobná léčivá medovina",
+      "ru": "Малая медовуха лечения"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Minor_Healing_Mead",
+    "image": "img/meads/minor-healing-mead.png",
+    "effect": {
+      "text": "+50 HP over 10s",
+      "resistances": []
+    },
+    "duration": 10,
+    "cooldown": 120,
+    "base": {
+      "item": "mead-base-minor-healing",
+      "name": "Mead base: Minor healing",
+      "station": "mead-ketill",
+      "stationLevel": 1,
+      "materials": [
+        {
+          "item": "honey",
+          "amount": 10
+        },
+        {
+          "item": "blueberries",
+          "amount": 5
+        },
+        {
+          "item": "raspberries",
+          "amount": 10
+        },
+        {
+          "item": "dandelion",
+          "amount": 1
+        }
+      ]
+    },
+    "fermenterTime": 2400,
+    "yields": 6,
+    "biome": "black-forest",
+    "tier": 2
+  },
+  {
+    "id": "minor-stamina-mead",
+    "name": "Minor Stamina Mead",
+    "names": {
+      "cs": "Drobná medovina na výdrž",
+      "ru": "Малая медовуха выносливости"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Minor_Stamina_Mead",
+    "image": "img/meads/minor-stamina-mead.png",
+    "effect": {
+      "text": "+80 Stamina over 2s",
+      "resistances": []
+    },
+    "duration": 2,
+    "cooldown": 120,
+    "base": {
+      "item": "mead-base-minor-stamina",
+      "name": "Mead base: Minor stamina",
+      "station": "mead-ketill",
+      "stationLevel": 1,
+      "materials": [
+        {
+          "item": "honey",
+          "amount": 10
+        },
+        {
+          "item": "raspberries",
+          "amount": 10
+        },
+        {
+          "item": "yellow-mushroom",
+          "amount": 10
+        }
+      ]
+    },
+    "fermenterTime": 2400,
+    "yields": 6,
+    "biome": "black-forest",
+    "tier": 2
+  },
+  {
+    "id": "poison-resistance-mead",
+    "name": "Poison Resistance Mead",
+    "names": {
+      "cs": "Medovina proti jedu",
+      "ru": "Медовуха-антидот"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Poison_Resistance_Mead",
+    "image": "img/meads/poison-resistance-mead.png",
+    "effect": {
+      "text": "Very resistant vs. Poison",
+      "resistances": []
+    },
+    "duration": 600,
+    "cooldown": 600,
+    "base": {
+      "item": "mead-base-poison-resistance",
+      "name": "Mead base: Poison resistance",
+      "station": "mead-ketill",
+      "stationLevel": 1,
+      "materials": [
+        {
+          "item": "honey",
+          "amount": 10
+        },
+        {
+          "item": "thistle",
+          "amount": 5
+        },
+        {
+          "item": "neck-tail",
+          "amount": 1
+        },
+        {
+          "item": "coal",
+          "amount": 10
+        }
+      ]
+    },
+    "fermenterTime": 2400,
+    "yields": 6,
+    "biome": "swamp",
+    "tier": 4
+  },
+  {
+    "id": "tasty-mead",
+    "name": "Tasty Mead",
+    "names": {
+      "cs": "Chutná medovina",
+      "ru": "Вкусная медовуха"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Tasty_Mead",
+    "image": "img/meads/tasty-mead.png",
+    "effect": {
+      "text": "-50% rate; +100% rate",
+      "resistances": []
+    },
+    "duration": 10,
+    "cooldown": 10,
+    "base": {
+      "item": "mead-base-tasty",
+      "name": "Mead base: Tasty",
+      "station": "mead-ketill",
+      "stationLevel": 1,
+      "materials": [
+        {
+          "item": "honey",
+          "amount": 10
+        },
+        {
+          "item": "raspberries",
+          "amount": 10
+        },
+        {
+          "item": "blueberries",
+          "amount": 5
+        }
+      ]
+    },
+    "fermenterTime": 2400,
+    "yields": 6,
+    "biome": "black-forest",
+    "tier": 2
+  },
+  {
+    "id": "tonic-of-ratatosk",
+    "name": "Tonic of Ratatosk",
+    "names": {
+      "cs": "Ratatoskův tonik",
+      "ru": "Эликсир Рататоска"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Tonic_of_Ratatosk",
+    "image": "img/meads/tonic-of-ratatosk.png",
+    "effect": {
+      "text": "* +15% walking and running speed\n* +7.5% swimming speed\n* Run +10",
+      "resistances": []
+    },
+    "duration": 600,
+    "cooldown": 600,
+    "base": {
+      "item": "mead-base-ratatosk",
+      "name": "Mead Base: Ratatosk",
+      "station": "mead-ketill",
+      "stationLevel": 1,
+      "materials": [
+        {
+          "item": "honey",
+          "amount": 10
+        },
+        {
+          "item": "blueberries",
+          "amount": 10
+        },
+        {
+          "item": "cured-squirrel-hamstring",
+          "amount": 1
+        }
+      ]
+    },
+    "fermenterTime": 2400,
+    "yields": 6,
+    "biome": "swamp",
+    "tier": 4
+  }
+]

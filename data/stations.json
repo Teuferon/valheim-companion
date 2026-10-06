@@ -151,5 +151,212 @@
       "cs": "Kolovrat",
       "ru": "Прялка"
     }
+  },
+  {
+    "id": "cauldron",
+    "name": "Cauldron",
+    "names": {
+      "fr": "Chaudron",
+      "ru": "Котел"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Cauldron",
+    "type": "provisions",
+    "materials": [
+      {
+        "item": "tin",
+        "amount": 10
+      }
+    ],
+    "unlock": {
+      "station": "Forge",
+      "materials": [
+        "tin"
+      ]
+    },
+    "maxLevel": 1,
+    "levels": [
+      {
+        "level": 1,
+        "upgrade": null
+      }
+    ]
+  },
+  {
+    "id": "fermenter",
+    "name": "Fermenter",
+    "names": {
+      "cs": "Fermentor",
+      "ru": "Бродильная бочка"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Fermenter",
+    "type": "provisions",
+    "materials": [
+      {
+        "item": "finewood",
+        "amount": 30
+      },
+      {
+        "item": "bronze",
+        "amount": 5
+      },
+      {
+        "item": "resin",
+        "amount": 10
+      }
+    ],
+    "unlock": {
+      "station": "Forge",
+      "materials": [
+        "finewood",
+        "bronze",
+        "resin"
+      ]
+    },
+    "secondsPerBatch": 2400
+  },
+  {
+    "id": "cooking-station",
+    "name": "Cooking Station",
+    "names": {
+      "fr": "Poste de cuisson",
+      "ru": "Стойка для готовки"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Cooking_Station",
+    "type": "provisions",
+    "materials": [
+      {
+        "item": "wood",
+        "amount": 2
+      }
+    ],
+    "unlock": {
+      "station": null,
+      "materials": [
+        "wood"
+      ]
+    }
+  },
+  {
+    "id": "iron-cooking-station",
+    "name": "Iron Cooking Station",
+    "names": {
+      "cs": "Železná kuchyňka",
+      "ru": "Железная стойка для готовки"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Iron_Cooking_Station",
+    "type": "provisions",
+    "materials": [
+      {
+        "item": "chain",
+        "amount": 3
+      },
+      {
+        "item": "iron",
+        "amount": 3
+      }
+    ],
+    "unlock": {
+      "station": "Workbench",
+      "materials": [
+        "chain",
+        "iron"
+      ]
+    }
+  },
+  {
+    "id": "oven",
+    "name": "Oven",
+    "names": {
+      "cs": "Kamenná pec",
+      "ru": "Каменная печь"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Oven",
+    "type": "provisions",
+    "materials": [
+      {
+        "item": "iron",
+        "amount": 15
+      },
+      {
+        "item": "stone",
+        "amount": 20
+      },
+      {
+        "item": "surtling-core",
+        "amount": 4
+      }
+    ],
+    "unlock": {
+      "station": "Artisan Table",
+      "materials": [
+        "iron",
+        "stone",
+        "surtling-core"
+      ]
+    }
+  },
+  {
+    "id": "mead-ketill",
+    "name": "Mead Ketill",
+    "names": {
+      "ru": "Котел для медовух"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Mead_Ketill",
+    "type": "provisions",
+    "materials": [
+      {
+        "item": "tin",
+        "amount": 4
+      },
+      {
+        "item": "copper",
+        "amount": 6
+      },
+      {
+        "item": "leather-scraps",
+        "amount": 2
+      }
+    ],
+    "unlock": {
+      "station": "Forge",
+      "materials": [
+        "tin",
+        "copper",
+        "leather-scraps"
+      ]
+    }
+  },
+  {
+    "id": "food-preparation-table",
+    "name": "Food Preparation Table",
+    "names": {
+      "cs": "Přípravný stůl",
+      "de": "Lebensmittelzubereitungstisch",
+      "ru": "Разделочный стол"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Food_Preparation_Table",
+    "type": "provisions",
+    "materials": [
+      {
+        "item": "iron",
+        "amount": 5
+      },
+      {
+        "item": "finewood",
+        "amount": 20
+      },
+      {
+        "item": "leather-scraps",
+        "amount": 15
+      }
+    ],
+    "unlock": {
+      "station": "Workbench",
+      "materials": [
+        "iron",
+        "finewood",
+        "leather-scraps"
+      ]
+    }
   }
 ]
