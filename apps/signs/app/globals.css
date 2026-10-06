@@ -1524,3 +1524,34 @@ kbd {
     gap: 5px;
   }
 }
+
+/* Shareable sign links */
+.share-button {
+  margin-top: 12px;
+  justify-content: center;
+}
+.share-dialog {
+  max-width: 560px !important;
+  max-height: calc(100dvh - 30px);
+  overflow: auto;
+}
+.share-dialog [data-slot='dialog-title'] {
+  padding-inline-end: 24px;
+}
+.share-link {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #556247;
+  border-radius: 5px;
+  padding: 12px;
+  background: #101a14;
+  color: #e0e7d4;
+  font-size: 13px;
+}
+.share-status {
+  min-height: 1.5em;
+  color: #b4c0a5;
+}
+.sign-link-warning {
+  margin-bottom: 18px;
+}

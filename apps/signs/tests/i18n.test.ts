@@ -53,7 +53,11 @@ void test('editor messages, templates and guide labels are included in the catal
     new URL('../components/template-gallery.tsx', import.meta.url),
     'utf8',
   );
-  const keys = [...(page + gallery).matchAll(/\bt\(\s*'([^']+)'/g)].map(
+  const share = readFileSync(
+    new URL('../components/share-sign.tsx', import.meta.url),
+    'utf8',
+  );
+  const keys = [...(page + gallery + share).matchAll(/\bt\(\s*'([^']+)'/g)].map(
     (match) => match[1],
   );
   for (const group of tagGroups)

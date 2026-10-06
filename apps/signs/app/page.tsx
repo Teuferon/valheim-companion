@@ -3,7 +3,13 @@
 // This component is shared with a standalone Vite SPA; use portable HTML links and images.
 /* oxlint-disable next/no-html-link-for-pages, next/no-img-element */
 
-import { useMemo, useRef, useState, type CSSProperties } from 'react';
+import {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type CSSProperties,
+} from 'react';
 import {
   ArrowRight,
   AlignLeft,
@@ -27,6 +33,8 @@ import {
   Wand2,
 } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
+import { ShareSign } from '@/components/share-sign';
+import { decodeSignHash, type SignEditorState } from '@/lib/sign-url';
 import { TemplateCard, TemplateGallery } from '@/components/template-gallery';
 import {
   signTemplates,
@@ -189,17 +197,44 @@ export default function Page() {
   const [settings, setSettings] = useState<SignSettings>(defaults);
   const [compact, setCompact] = useState(true);
   const [raw, setRaw] = useState<string | null>(null);
-  const [mode, setMode] = useState('visual');
+  const [mode, setMode] = useState<SignEditorState['mode']>('visual');
   const [advanced, setAdvanced] = useState(false);
   const [day, setDay] = useState(false);
   const [copied, setCopied] = useState(false);
   const [copyError, setCopyError] = useState(false);
-  const [limit, setLimit] = useState('50');
+  const [limit, setLimit] = useState<SignEditorState['limit']>('50');
+  const [linkError, setLinkError] = useState(false);
   const [guideOpen, setGuideOpen] = useState(false);
   const input = useRef<HTMLTextAreaElement>(null),
     output = useRef<HTMLTextAreaElement>(null);
   const selection = useRef({ start: -1, end: -1 });
   const copyTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => {
+    const restore = () => {
+      const hash = window.location.hash;
+      if (!hash.startsWith('#sign=')) {
+        setLinkError(false);
+        return;
+      }
+      const state = decodeSignHash(hash);
+      setLinkError(!state);
+      if (!state) return;
+      setText(state.text);
+      setSettings(state.settings);
+      setRaw(state.raw);
+      setMode(state.mode);
+      setCompact(state.compact);
+      setLimit(state.limit);
+      setAdvanced(state.advanced);
+      setDay(state.day);
+      setCopied(false);
+      setCopyError(false);
+      selection.current = { start: -1, end: -1 };
+    };
+    restore();
+    window.addEventListener('hashchange', restore);
+    return () => window.removeEventListener('hashchange', restore);
+  }, []);
   const code = raw ?? compileSign(text, settings, compact);
   const count = countText(code);
   const preview = useMemo(() => parseRichText(code, t), [code, t]);
@@ -216,6 +251,7 @@ export default function Page() {
     setCopied(false);
   };
   const changeMode = (value: string) => {
+    if (value !== 'visual' && value !== 'code') return;
     if (value === 'code') setRaw(code);
     else if (raw !== null) {
       setText(raw);
@@ -450,6 +486,11 @@ export default function Page() {
               01 <span>{t('/ TVOJE CEDULE')}</span>
             </span>
           </section>
+          {linkError && (
+            <p role="alert" className="warning sign-link-warning">
+              {t('This sign link is invalid or uses an unsupported version.')}
+            </p>
+          )}
           <div className="workspace">
             <section className="editor-panel" aria-label={t('Editor cedule')}>
               <div className="panel-title">
@@ -879,7 +920,12 @@ export default function Page() {
                     />{' '}
                     {t('Úsporný zápis')}
                   </label>
-                  <Select value={limit} onValueChange={(v) => v && setLimit(v)}>
+                  <Select
+                    value={limit}
+                    onValueChange={(v) =>
+                      (v === '50' || v === '999') && setLimit(v)
+                    }
+                  >
                     <SelectTrigger
                       aria-label={t('Limit cedule')}
                       className="limit-select"
@@ -938,6 +984,18 @@ export default function Page() {
                     )}
                   </p>
                 )}
+                <ShareSign
+                  state={{
+                    text,
+                    settings,
+                    raw,
+                    mode,
+                    compact,
+                    limit,
+                    advanced,
+                    day,
+                  }}
+                />
                 <p className="paste-help">
                   {t('Ve hře otevři ceduli klávesou')} <kbd>E</kbd>{' '}
                   {t('a vlož text pomocí')} <kbd>Ctrl</kbd> + <kbd>V</kbd>.
