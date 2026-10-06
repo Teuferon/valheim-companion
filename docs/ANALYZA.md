@@ -153,6 +153,7 @@ Valheim Companion je rozcestník a nástroje jsou pod ním jako sekce:
 |---|---|---|
 | `/` | rozcestník (anglicky) | `apps/hub/` |
 | `/bestiary/` | **Bestiary**: jednotky, slabiny, doporučené zbraně | `apps/bestiary/` (statický web) + `scripts/` + `data/` |
+| `/damage-calculator/` | **Damage Calculator**: poškození zbraní proti jednotkám, resisty, DPS a čas na zabití | `apps/damage-calculator/` (React 19 + Vite, převzato z `Teuferon/valheim-weapon-boss-damage`) |
 | `/signs/` | **Sign Editor (Runopis)**: editor cedulí, 13 jazyků | `apps/signs/` (React 19 + Vite, převzato z `pawlig/valheim-signs` přes `git subtree` i s historií) |
 
 - Další nástroje přibydou jako `apps/<nazev>/` a `/<nazev>/` a dostanou kartu v rozcestníku.

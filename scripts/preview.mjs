@@ -58,6 +58,11 @@ const server = createServer((req, res) => {
     res.end();
     return;
   }
+  if (pathname === '/damage-calculator') {
+    res.writeHead(301, { Location: '/damage-calculator/' });
+    res.end();
+    return;
+  }
 
   let filePath = path.join(DIST_DIR, pathname);
 
@@ -87,6 +92,16 @@ const server = createServer((req, res) => {
     if (existsSync(signsIndex)) {
       res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
       createReadStream(signsIndex).pipe(res);
+      return;
+    }
+  }
+
+  // SPA fallback for /damage-calculator/*
+  if (pathname.startsWith('/damage-calculator/')) {
+    const damageIndex = path.join(DIST_DIR, 'damage-calculator', 'index.html');
+    if (existsSync(damageIndex)) {
+      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+      createReadStream(damageIndex).pipe(res);
       return;
     }
   }

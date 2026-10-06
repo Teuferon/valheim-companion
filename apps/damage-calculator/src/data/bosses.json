@@ -1,0 +1,128 @@
+[
+  {
+    "slug": "eikthyr",
+    "name": "Eikthyr",
+    "kind": "boss",
+    "wikiTitle": "Eikthyr",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Eikthyr",
+    "image": "/items/eikthyr.png",
+    "health": 500,
+    "biome": "meadows",
+    "resistances": {}
+  },
+  {
+    "slug": "the-elder",
+    "name": "The Elder",
+    "kind": "boss",
+    "wikiTitle": "The Elder",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/The_Elder",
+    "image": "/items/the-elder.png",
+    "health": 2500,
+    "biome": "black-forest",
+    "resistances": {
+      "fire": "very-weak",
+      "poison": "immune",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "bonemass",
+    "name": "Bonemass",
+    "kind": "boss",
+    "wikiTitle": "Bonemass",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Bonemass",
+    "image": "/items/bonemass.png",
+    "health": 5000,
+    "biome": "swamp",
+    "resistances": {
+      "blunt": "weak",
+      "frost": "weak",
+      "slash": "resistant",
+      "fire": "very-resistant",
+      "pierce": "very-resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "moder",
+    "name": "Moder",
+    "kind": "boss",
+    "wikiTitle": "Moder",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Moder",
+    "image": "/items/moder.png",
+    "health": 7500,
+    "biome": "mountain",
+    "resistances": {
+      "fire": "weak",
+      "frost": "immune",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "yagluth",
+    "name": "Yagluth",
+    "kind": "boss",
+    "wikiTitle": "Yagluth",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Yagluth",
+    "image": "/items/yagluth.png",
+    "health": 10000,
+    "biome": "plains",
+    "resistances": {
+      "fire": "resistant",
+      "pierce": "very-resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "the-queen",
+    "name": "The Queen",
+    "kind": "boss",
+    "wikiTitle": "The Queen",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/The_Queen",
+    "image": "/items/the-queen.png",
+    "health": 12500,
+    "biome": "mistlands",
+    "resistances": {
+      "pierce": "resistant",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "fader",
+    "name": "Fader",
+    "kind": "boss",
+    "wikiTitle": "Fader",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Fader",
+    "image": "/items/fader.png",
+    "health": 25000,
+    "biome": "ashlands",
+    "resistances": {
+      "pierce": "resistant",
+      "fire": "immune",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "kall-fimbulbringer",
+    "name": "Kall Fimbulbringer",
+    "kind": "boss",
+    "wikiTitle": "Kall Fimbulbringer",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Kall_Fimbulbringer",
+    "image": "/items/kall-fimbulbringer.png",
+    "health": 47000,
+    "healthPhases": [
+      10000,
+      7000,
+      30000
+    ],
+    "biome": "deep-north",
+    "resistances": {
+      "pierce": "resistant",
+      "fire": "resistant",
+      "frost": "resistant",
+      "lightning": "resistant",
+      "spirit": "immune"
+    },
+    "note": "Three phases (10,000 / 7,000 / 30,000 HP); immune to all damage during phase 2. Resistances shown are the ones the infobox publishes."
+  }
+]

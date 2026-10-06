@@ -8,5 +8,8 @@
 !apps/bestiary/data/data.js
 !apps/bestiary/img/
 !apps/signs/
+!apps/damage-calculator/
 apps/signs/node_modules/
 apps/signs/dist-static/
+apps/damage-calculator/node_modules/
+apps/damage-calculator/dist-static/

@@ -1,0 +1,349 @@
+[
+  {
+    "slug": "black-metal-bolt",
+    "name": "Black Metal Bolt",
+    "wikiTitle": "Black Metal Bolt",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Black_Metal_Bolt",
+    "image": "/items/black-metal-bolt.png",
+    "kind": "bolt",
+    "damage": {
+      "pierce": [
+        62,
+        62,
+        62,
+        62
+      ]
+    },
+    "biome": "mistlands"
+  },
+  {
+    "slug": "bloodgold-arrow",
+    "name": "Bloodgold Arrow",
+    "wikiTitle": "Bloodgold Arrow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Bloodgold_Arrow",
+    "image": "/items/bloodgold-arrow.png",
+    "kind": "arrow",
+    "damage": {
+      "pierce": [
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    "biome": "deep-north"
+  },
+  {
+    "slug": "bloodgold-bolt",
+    "name": "Bloodgold Bolt",
+    "wikiTitle": "Bloodgold Bolt",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Bloodgold_Bolt",
+    "image": "/items/bloodgold-bolt.png",
+    "kind": "bolt",
+    "damage": {
+      "pierce": [
+        92,
+        92,
+        92,
+        92
+      ]
+    },
+    "biome": "deep-north"
+  },
+  {
+    "slug": "bone-bolt",
+    "name": "Bone bolt",
+    "wikiTitle": "Bone Bolt",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Bone_Bolt",
+    "image": "/items/bone-bolt.png",
+    "kind": "bolt",
+    "damage": {
+      "pierce": [
+        32,
+        32,
+        32,
+        32
+      ]
+    },
+    "biome": "mistlands"
+  },
+  {
+    "slug": "bronzehead-arrow",
+    "name": "Bronzehead arrow",
+    "wikiTitle": "Bronzehead Arrow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Bronzehead_Arrow",
+    "image": "/items/bronzehead-arrow.png",
+    "kind": "arrow",
+    "damage": {
+      "pierce": [
+        32,
+        32,
+        32,
+        32
+      ]
+    },
+    "biome": "black-forest"
+  },
+  {
+    "slug": "carapace-arrow",
+    "name": "Carapace arrow",
+    "wikiTitle": "Carapace Arrow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Carapace_Arrow",
+    "image": "/items/carapace-arrow.png",
+    "kind": "arrow",
+    "damage": {
+      "pierce": [
+        72,
+        72,
+        72,
+        72
+      ]
+    },
+    "biome": "mistlands"
+  },
+  {
+    "slug": "carapace-bolt",
+    "name": "Carapace bolt",
+    "wikiTitle": "Carapace Bolt",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Carapace_Bolt",
+    "image": "/items/carapace-bolt.png",
+    "kind": "bolt",
+    "damage": {
+      "pierce": [
+        72,
+        72,
+        72,
+        72
+      ]
+    },
+    "biome": "mistlands"
+  },
+  {
+    "slug": "fire-arrow",
+    "name": "Fire arrow",
+    "wikiTitle": "Fire Arrow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Fire_Arrow",
+    "image": "/items/fire-arrow.png",
+    "kind": "arrow",
+    "damage": {
+      "pierce": [
+        11,
+        11,
+        11,
+        11
+      ],
+      "fire": [
+        22,
+        22,
+        22,
+        22
+      ]
+    },
+    "biome": "meadows"
+  },
+  {
+    "slug": "flinthead-arrow",
+    "name": "Flinthead arrow",
+    "wikiTitle": "Flinthead Arrow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Flinthead_Arrow",
+    "image": "/items/flinthead-arrow.png",
+    "kind": "arrow",
+    "damage": {
+      "pierce": [
+        27,
+        27,
+        27,
+        27
+      ]
+    },
+    "biome": "meadows"
+  },
+  {
+    "slug": "frost-arrow",
+    "name": "Frost arrow",
+    "wikiTitle": "Frost Arrow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Frost_Arrow",
+    "image": "/items/frost-arrow.png",
+    "kind": "arrow",
+    "damage": {
+      "pierce": [
+        26,
+        26,
+        26,
+        26
+      ],
+      "frost": [
+        52,
+        52,
+        52,
+        52
+      ]
+    },
+    "biome": "mountain"
+  },
+  {
+    "slug": "charred-arrow",
+    "name": "Charred arrow",
+    "wikiTitle": "Charred Arrow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Charred_Arrow",
+    "image": "/items/charred-arrow.png",
+    "kind": "arrow",
+    "damage": {
+      "pierce": [
+        82,
+        82,
+        82,
+        82
+      ]
+    },
+    "biome": "ashlands"
+  },
+  {
+    "slug": "charred-bolt",
+    "name": "Charred bolt",
+    "wikiTitle": "Charred Bolt",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Charred_Bolt",
+    "image": "/items/charred-bolt.png",
+    "kind": "bolt",
+    "damage": {
+      "pierce": [
+        82,
+        82,
+        82,
+        82
+      ]
+    },
+    "biome": "ashlands"
+  },
+  {
+    "slug": "iron-bolt",
+    "name": "Iron bolt",
+    "wikiTitle": "Iron Bolt",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Iron_Bolt",
+    "image": "/items/iron-bolt.png",
+    "kind": "bolt",
+    "damage": {
+      "pierce": [
+        42,
+        42,
+        42,
+        42
+      ]
+    },
+    "biome": "mistlands"
+  },
+  {
+    "slug": "ironhead-arrow",
+    "name": "Ironhead arrow",
+    "wikiTitle": "Ironhead Arrow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Ironhead_Arrow",
+    "image": "/items/ironhead-arrow.png",
+    "kind": "arrow",
+    "damage": {
+      "pierce": [
+        42,
+        42,
+        42,
+        42
+      ]
+    },
+    "biome": "swamp"
+  },
+  {
+    "slug": "needle-arrow",
+    "name": "Needle arrow",
+    "wikiTitle": "Needle Arrow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Needle_Arrow",
+    "image": "/items/needle-arrow.png",
+    "kind": "arrow",
+    "damage": {
+      "pierce": [
+        62,
+        62,
+        62,
+        62
+      ]
+    },
+    "biome": "plains"
+  },
+  {
+    "slug": "obsidian-arrow",
+    "name": "Obsidian arrow",
+    "wikiTitle": "Obsidian Arrow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Obsidian_Arrow",
+    "image": "/items/obsidian-arrow.png",
+    "kind": "arrow",
+    "damage": {
+      "pierce": [
+        52,
+        52,
+        52,
+        52
+      ]
+    },
+    "biome": "mountain"
+  },
+  {
+    "slug": "poison-arrow",
+    "name": "Poison arrow",
+    "wikiTitle": "Poison Arrow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Poison_Arrow",
+    "image": "/items/poison-arrow.png",
+    "kind": "arrow",
+    "damage": {
+      "pierce": [
+        26,
+        26,
+        26,
+        26
+      ],
+      "poison": [
+        52,
+        52,
+        52,
+        52
+      ]
+    },
+    "biome": "mountain"
+  },
+  {
+    "slug": "silver-arrow",
+    "name": "Silver arrow",
+    "wikiTitle": "Silver Arrow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Silver_Arrow",
+    "image": "/items/silver-arrow.png",
+    "kind": "arrow",
+    "damage": {
+      "pierce": [
+        52,
+        52,
+        52,
+        52
+      ],
+      "spirit": [
+        20,
+        20,
+        20,
+        20
+      ]
+    },
+    "biome": "mountain"
+  },
+  {
+    "slug": "wood-arrow",
+    "name": "Wood arrow",
+    "wikiTitle": "Wood Arrow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Wood_Arrow",
+    "image": "/items/wood-arrow.png",
+    "kind": "arrow",
+    "damage": {
+      "pierce": [
+        22,
+        22,
+        22,
+        22
+      ]
+    },
+    "biome": "meadows"
+  }
+]

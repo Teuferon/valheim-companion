@@ -1,0 +1,4058 @@
+[
+  {
+    "slug": "abyssal-harpoon",
+    "name": "Abyssal Harpoon",
+    "wikiTitle": "Abyssal Harpoon",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Abyssal_Harpoon",
+    "image": "/items/abyssal-harpoon.png",
+    "gameId": "SpearChitin",
+    "cls": "spear",
+    "clsLabel": "Spear",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    "scaledFromTable": false,
+    "stamina": 15,
+    "backstab": 1,
+    "biome": "ocean"
+  },
+  {
+    "slug": "abyssal-razor",
+    "name": "Abyssal Razor",
+    "wikiTitle": "Abyssal Razor",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Abyssal_Razor",
+    "image": "/items/abyssal-razor.png",
+    "gameId": "KnifeChitin",
+    "cls": "knife",
+    "clsLabel": "Knife",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        20,
+        21,
+        22,
+        23
+      ],
+      "slash": [
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 8,
+    "biome": "ocean"
+  },
+  {
+    "slug": "ancient-bark-spear",
+    "name": "Ancient Bark Spear",
+    "wikiTitle": "Ancient Bark Spear",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Ancient_Bark_Spear",
+    "image": "/items/ancient-bark-spear.png",
+    "gameId": "SpearElderbark",
+    "cls": "spear",
+    "clsLabel": "Spear",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        55,
+        61,
+        67,
+        73
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 10,
+    "biome": "swamp"
+  },
+  {
+    "slug": "antler-pickaxe",
+    "name": "Antler pickaxe",
+    "wikiTitle": "Antler Pickaxe",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Antler_Pickaxe",
+    "image": "/items/antler-pickaxe.png",
+    "gameId": "PickaxeAntler",
+    "cls": "pickaxe",
+    "clsLabel": "Pickaxe",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "pickaxe": [
+        18,
+        18,
+        18,
+        18
+      ]
+    },
+    "scaledFromTable": false,
+    "stamina": 6,
+    "biome": "meadows"
+  },
+  {
+    "slug": "arbalest",
+    "name": "Arbalest",
+    "wikiTitle": "Arbalest",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Arbalest",
+    "image": "/items/arbalest.png",
+    "gameId": "CrossbowArbalest",
+    "cls": "crossbow",
+    "clsLabel": "Crossbow",
+    "wielding": "ranged",
+    "group": "ranged",
+    "damage": {
+      "pierce": [
+        200,
+        203,
+        206,
+        209
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 1,
+    "ammo": "bolt",
+    "biome": "mistlands"
+  },
+  {
+    "slug": "ash-fang",
+    "name": "Ash Fang",
+    "wikiTitle": "Ash Fang",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Ash_Fang",
+    "image": "/items/ash-fang.png",
+    "gameId": "BowAshlands",
+    "cls": "bow",
+    "clsLabel": "Bow",
+    "wielding": "ranged",
+    "group": "ranged",
+    "damage": {
+      "pierce": [
+        82,
+        86,
+        90,
+        94
+      ],
+      "spirit": [
+        0,
+        5,
+        10,
+        15
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 14,
+    "ammo": "arrow",
+    "biome": "ashlands"
+  },
+  {
+    "slug": "bare-fists",
+    "name": "Bare fists",
+    "wikiTitle": "Bare Fists",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Bare_Fists",
+    "image": "/items/bare-fists.png",
+    "gameId": "PlayerUnarmed",
+    "cls": "fists",
+    "clsLabel": "Unarmed",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    "scaledFromTable": false,
+    "stamina": 4,
+    "backstab": 3,
+    "biome": "meadows"
+  },
+  {
+    "slug": "battleaxe",
+    "name": "Battleaxe",
+    "wikiTitle": "Battleaxe",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Battleaxe",
+    "image": "/items/battleaxe.png",
+    "gameId": "Battleaxe",
+    "cls": "battleaxe",
+    "clsLabel": "Battleaxe (2H Axe)",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        70,
+        76,
+        82,
+        88
+      ],
+      "chop": [
+        40,
+        42.5,
+        45,
+        47.5
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "swamp"
+  },
+  {
+    "slug": "berserkir-axes",
+    "name": "Berserkir Axes",
+    "wikiTitle": "Berserkir Axes",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Berserkir_Axes",
+    "image": "/items/berserkir-axes.png",
+    "gameId": "AxeBerzerkr",
+    "cls": "dual-axe",
+    "clsLabel": "Dual-wielded Axes",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        140,
+        145,
+        150,
+        155
+      ],
+      "chop": [
+        80,
+        83,
+        86,
+        89
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "backstab": 3,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "bile-bomb",
+    "name": "Bile Bomb",
+    "wikiTitle": "Bile Bomb",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Bile_Bomb",
+    "image": "/items/bile-bomb.png",
+    "gameId": "BombBile",
+    "cls": "bomb",
+    "clsLabel": "Bomb",
+    "wielding": "one-handed",
+    "group": "consumable",
+    "damage": {
+      "blunt": [
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    "scaledFromTable": false,
+    "stamina": 8,
+    "backstab": 3,
+    "consumable": true,
+    "skillScaled": false,
+    "biome": "mistlands"
+  },
+  {
+    "slug": "black-metal-atgeir",
+    "name": "Black Metal Atgeir",
+    "wikiTitle": "Black Metal Atgeir",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Black_Metal_Atgeir",
+    "image": "/items/black-metal-atgeir.png",
+    "gameId": "AtgeirBlackmetal",
+    "cls": "atgeir",
+    "clsLabel": "Polearm (Atgeir)",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        105,
+        111,
+        117,
+        123
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 18,
+    "biome": "plains"
+  },
+  {
+    "slug": "black-metal-axe",
+    "name": "Black Metal Axe",
+    "wikiTitle": "Black Metal Axe",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Black_Metal_Axe",
+    "image": "/items/black-metal-axe.png",
+    "gameId": "AxeBlackMetal",
+    "cls": "axe",
+    "clsLabel": "One-handed Axe",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        100,
+        105,
+        110,
+        115
+      ],
+      "chop": [
+        60,
+        63,
+        66,
+        69
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 14,
+    "biome": "plains"
+  },
+  {
+    "slug": "black-metal-battleaxe",
+    "name": "Black Metal Battleaxe",
+    "wikiTitle": "Black Metal Battleaxe",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Black_Metal_Battleaxe",
+    "image": "/items/black-metal-battleaxe.png",
+    "gameId": "BattleaxeBlackmetal",
+    "cls": "battleaxe",
+    "clsLabel": "Battleaxe (2H Axe)",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        110,
+        116,
+        122,
+        128
+      ],
+      "chop": [
+        60,
+        62.5,
+        65,
+        67.5
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 20,
+    "biome": "plains"
+  },
+  {
+    "slug": "black-metal-knife",
+    "name": "Black Metal Knife",
+    "wikiTitle": "Black Metal Knife",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Black_Metal_Knife",
+    "image": "/items/black-metal-knife.png",
+    "gameId": "KnifeBlackMetal",
+    "cls": "knife",
+    "clsLabel": "Knife",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "slash": [
+        34,
+        35,
+        36,
+        37
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 12,
+    "biome": "plains"
+  },
+  {
+    "slug": "black-metal-missile",
+    "name": "Black metal missile",
+    "wikiTitle": "Black Metal Missile",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Black_Metal_Missile",
+    "image": "/items/black-metal-missile.png",
+    "gameId": "TurretBolt",
+    "cls": "missile",
+    "clsLabel": "Ballista Missile",
+    "wielding": "ranged",
+    "group": "siege",
+    "damage": {
+      "pierce": [
+        120,
+        120,
+        120,
+        120
+      ]
+    },
+    "scaledFromTable": false,
+    "consumable": true,
+    "skillScaled": false,
+    "biome": "plains"
+  },
+  {
+    "slug": "black-metal-pickaxe",
+    "name": "Black Metal Pickaxe",
+    "wikiTitle": "Black Metal Pickaxe",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Black_Metal_Pickaxe",
+    "image": "/items/black-metal-pickaxe.png",
+    "gameId": "PickaxeBlackMetal",
+    "cls": "pickaxe",
+    "clsLabel": "Pickaxe",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        49,
+        54,
+        59,
+        64
+      ],
+      "pickaxe": [
+        49,
+        54,
+        59,
+        64
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 14,
+    "biome": "mistlands"
+  },
+  {
+    "slug": "black-metal-sword",
+    "name": "Black Metal Sword",
+    "wikiTitle": "Black Metal Sword",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Black_Metal_Sword",
+    "image": "/items/black-metal-sword.png",
+    "gameId": "SwordBlackmetal",
+    "cls": "sword",
+    "clsLabel": "Sword",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        95,
+        101,
+        107,
+        113
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 14,
+    "biome": "plains"
+  },
+  {
+    "slug": "bleeding-berserkir-axes",
+    "name": "Bleeding Berserkir Axes",
+    "wikiTitle": "Bleeding Berserkir Axes",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Bleeding_Berserkir_Axes",
+    "image": "/items/bleeding-berserkir-axes.png",
+    "gameId": "AxeBerzerkrBlood",
+    "cls": "dual-axe",
+    "clsLabel": "Dual-wielded Axes",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        140,
+        145,
+        150,
+        155
+      ],
+      "chop": [
+        80,
+        83,
+        86,
+        89
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "backstab": 3,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "blood-fang",
+    "name": "Blood Fang",
+    "wikiTitle": "Blood Fang",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Blood_Fang",
+    "image": "/items/blood-fang.png",
+    "gameId": "BowAshlandsBlood",
+    "cls": "bow",
+    "clsLabel": "Bow",
+    "wielding": "ranged",
+    "group": "ranged",
+    "damage": {
+      "pierce": [
+        82,
+        86,
+        90,
+        94
+      ],
+      "spirit": [
+        0,
+        5,
+        10,
+        15
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 14,
+    "ammo": "arrow",
+    "biome": "ashlands"
+  },
+  {
+    "slug": "bloodgeon",
+    "name": "Bloodgeon",
+    "wikiTitle": "Bloodgeon",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Bloodgeon",
+    "image": "/items/bloodgeon.png",
+    "gameId": "MaceEldnerBlood",
+    "cls": "club",
+    "clsLabel": "One-handed Club",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        135,
+        141,
+        147,
+        153
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "bloodgold-missile",
+    "name": "Bloodgold Missile",
+    "wikiTitle": "Bloodgold Missile",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Bloodgold_Missile",
+    "image": "/items/bloodgold-missile.png",
+    "gameId": "TurretBoltBloodgold",
+    "cls": "missile",
+    "clsLabel": "Ballista Missile",
+    "wielding": "ranged",
+    "group": "siege",
+    "damage": {
+      "pierce": [
+        200,
+        200,
+        200,
+        200
+      ]
+    },
+    "scaledFromTable": false,
+    "consumable": true,
+    "skillScaled": false,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "bloodgold-payload",
+    "name": "Bloodgold Payload",
+    "wikiTitle": "Bloodgold Payload",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Bloodgold_Payload",
+    "image": "/items/bloodgold-payload.png",
+    "gameId": "Catapult_Ammo_BloodGold",
+    "cls": "siege",
+    "clsLabel": "Catapult Ammo",
+    "wielding": "ranged",
+    "group": "siege",
+    "damage": {
+      "blunt": [
+        20,
+        20,
+        20,
+        20
+      ],
+      "chop": [
+        200,
+        200,
+        200,
+        200
+      ],
+      "pickaxe": [
+        600,
+        600,
+        600,
+        600
+      ],
+      "pure": [
+        200,
+        200,
+        200,
+        200
+      ]
+    },
+    "scaledFromTable": false,
+    "backstab": 4,
+    "consumable": true,
+    "skillScaled": false,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "bronze-atgeir",
+    "name": "Bronze Atgeir",
+    "wikiTitle": "Bronze Atgeir",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Bronze_Atgeir",
+    "image": "/items/bronze-atgeir.png",
+    "gameId": "AtgeirBronze",
+    "cls": "atgeir",
+    "clsLabel": "Polearm (Atgeir)",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        45,
+        51,
+        57,
+        63
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 12,
+    "biome": "black-forest"
+  },
+  {
+    "slug": "bronze-axe",
+    "name": "Bronze Axe",
+    "wikiTitle": "Bronze Axe",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Bronze_Axe",
+    "image": "/items/bronze-axe.png",
+    "gameId": "AxeBronze",
+    "cls": "axe",
+    "clsLabel": "One-handed Axe",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        40,
+        45,
+        50,
+        55
+      ],
+      "chop": [
+        40,
+        43,
+        46,
+        49
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 8,
+    "biome": "black-forest"
+  },
+  {
+    "slug": "bronze-mace",
+    "name": "Bronze Mace",
+    "wikiTitle": "Bronze Mace",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Bronze_Mace",
+    "image": "/items/bronze-mace.png",
+    "gameId": "MaceBronze",
+    "cls": "club",
+    "clsLabel": "One-handed Club",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        35,
+        41,
+        47,
+        53
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 8,
+    "biome": "black-forest"
+  },
+  {
+    "slug": "bronze-pickaxe",
+    "name": "Bronze Pickaxe",
+    "wikiTitle": "Bronze Pickaxe",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Bronze_Pickaxe",
+    "image": "/items/bronze-pickaxe.png",
+    "gameId": "PickaxeBronze",
+    "cls": "pickaxe",
+    "clsLabel": "Pickaxe",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        25,
+        30,
+        35,
+        40
+      ],
+      "pickaxe": [
+        25,
+        29,
+        33,
+        37
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 8,
+    "biome": "black-forest"
+  },
+  {
+    "slug": "bronze-spear",
+    "name": "Bronze Spear",
+    "wikiTitle": "Bronze Spear",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Bronze_Spear",
+    "image": "/items/bronze-spear.png",
+    "gameId": "SpearBronze",
+    "cls": "spear",
+    "clsLabel": "Spear",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        35,
+        41,
+        47,
+        53
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 8,
+    "biome": "black-forest"
+  },
+  {
+    "slug": "bronze-sword",
+    "name": "Bronze Sword",
+    "wikiTitle": "Bronze Sword",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Bronze_Sword",
+    "image": "/items/bronze-sword.png",
+    "gameId": "SwordBronze",
+    "cls": "sword",
+    "clsLabel": "Sword",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        35,
+        41,
+        47,
+        53
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 8,
+    "biome": "black-forest"
+  },
+  {
+    "slug": "brutal-slayer",
+    "name": "Brutal Slayer",
+    "wikiTitle": "Brutal Slayer",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Brutal_Slayer",
+    "image": "/items/brutal-slayer.png",
+    "gameId": "THSwordSlayerBlood",
+    "cls": "greatsword",
+    "clsLabel": "Two-handed Sword",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        170,
+        176,
+        182,
+        188
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 20,
+    "backstab": 3,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "carapace-spear",
+    "name": "Carapace Spear",
+    "wikiTitle": "Carapace Spear",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Carapace_Spear",
+    "image": "/items/carapace-spear.png",
+    "gameId": "SpearCarapace",
+    "cls": "spear",
+    "clsLabel": "Spear",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        115,
+        121,
+        127,
+        133
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "mistlands"
+  },
+  {
+    "slug": "club",
+    "name": "Club",
+    "wikiTitle": "Club",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Club",
+    "image": "/items/club.png",
+    "gameId": "Club",
+    "cls": "club",
+    "clsLabel": "One-handed Club",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        12,
+        18,
+        24,
+        30
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 6,
+    "biome": "meadows"
+  },
+  {
+    "slug": "copper-knife",
+    "name": "Copper Knife",
+    "wikiTitle": "Copper Knife",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Copper_Knife",
+    "image": "/items/copper-knife.png",
+    "gameId": "KnifeCopper",
+    "cls": "knife",
+    "clsLabel": "Knife",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "slash": [
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 6,
+    "biome": "black-forest"
+  },
+  {
+    "slug": "crude-bow",
+    "name": "Crude Bow",
+    "wikiTitle": "Crude Bow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Crude_Bow",
+    "image": "/items/crude-bow.png",
+    "gameId": "Bow",
+    "cls": "bow",
+    "clsLabel": "Bow",
+    "wielding": "ranged",
+    "group": "ranged",
+    "damage": {
+      "pierce": [
+        22,
+        25,
+        28,
+        31
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 4,
+    "ammo": "arrow",
+    "biome": "meadows"
+  },
+  {
+    "slug": "crystal-battleaxe",
+    "name": "Crystal Battleaxe",
+    "wikiTitle": "Crystal Battleaxe",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Crystal_Battleaxe",
+    "image": "/items/crystal-battleaxe.png",
+    "gameId": "BattleaxeCrystal",
+    "cls": "battleaxe",
+    "clsLabel": "Battleaxe (2H Axe)",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        90,
+        96,
+        102,
+        108
+      ],
+      "spirit": [
+        30,
+        30,
+        30,
+        30
+      ],
+      "chop": [
+        50,
+        52.5,
+        55,
+        57.5
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 18,
+    "biome": "mountain"
+  },
+  {
+    "slug": "demolisher",
+    "name": "Demolisher",
+    "wikiTitle": "Demolisher",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Demolisher",
+    "image": "/items/demolisher.png",
+    "gameId": "SledgeDemolisher",
+    "cls": "sledge",
+    "clsLabel": "Sledgehammer (2H Club)",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        145,
+        151,
+        157,
+        163
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 28,
+    "biome": "mistlands"
+  },
+  {
+    "slug": "draugr-fang",
+    "name": "Draugr Fang",
+    "wikiTitle": "Draugr Fang",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Draugr_Fang",
+    "image": "/items/draugr-fang.png",
+    "gameId": "BowDraugrFang",
+    "cls": "bow",
+    "clsLabel": "Bow",
+    "wielding": "ranged",
+    "group": "ranged",
+    "damage": {
+      "pierce": [
+        47,
+        50,
+        53,
+        56
+      ],
+      "poison": [
+        5,
+        10,
+        15,
+        20
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 10,
+    "ammo": "arrow",
+    "biome": "mountain"
+  },
+  {
+    "slug": "dundr",
+    "name": "Dundr",
+    "wikiTitle": "Dundr",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Dundr",
+    "image": "/items/dundr.png",
+    "gameId": "StaffLightning",
+    "cls": "staff",
+    "clsLabel": "Elemental Staff",
+    "wielding": "magic",
+    "group": "magic",
+    "damage": {
+      "lightning": [
+        20,
+        23,
+        26,
+        29
+      ]
+    },
+    "scaledFromTable": true,
+    "backstab": 1,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "dyrnwyn",
+    "name": "Dyrnwyn",
+    "wikiTitle": "Dyrnwyn",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Dyrnwyn",
+    "image": "/items/dyrnwyn.png",
+    "gameId": "SwordDyrnwyn",
+    "cls": "sword",
+    "clsLabel": "Sword",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        145,
+        151,
+        157,
+        163
+      ],
+      "fire": [
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "early-axes",
+    "name": "Early Axes",
+    "wikiTitle": "Early Axes",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Early_Axes",
+    "image": "/items/early-axes.png",
+    "gameId": "AxeEarly",
+    "cls": "dual-axe",
+    "clsLabel": "Dual-wielded Axes",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        30,
+        35,
+        40,
+        45
+      ],
+      "chop": [
+        35,
+        38,
+        41,
+        44
+      ]
+    },
+    "scaledFromTable": false,
+    "stamina": 6,
+    "backstab": 3,
+    "biome": "meadows"
+  },
+  {
+    "slug": "echo-spike",
+    "name": "Echo Spike",
+    "wikiTitle": "Echo Spike",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Echo_Spike",
+    "image": "/items/echo-spike.png",
+    "gameId": "StaffOrbofAhri",
+    "cls": "blood-staff",
+    "clsLabel": "Blood Magic Staff",
+    "wielding": "magic",
+    "group": "magic",
+    "damage": {
+      "fire": [
+        50,
+        50,
+        50,
+        50
+      ],
+      "frost": [
+        50,
+        50,
+        50,
+        50
+      ]
+    },
+    "scaledFromTable": true,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "ember-charge",
+    "name": "Ember Charge",
+    "wikiTitle": "Ember Charge",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Ember_Charge",
+    "image": "/items/ember-charge.png",
+    "gameId": "BombDynamite",
+    "cls": "bomb",
+    "clsLabel": "Bomb",
+    "wielding": "one-handed",
+    "group": "consumable",
+    "damage": {
+      "blunt": [
+        140,
+        140,
+        140,
+        140
+      ],
+      "chop": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "pickaxe": [
+        50,
+        50,
+        50,
+        50
+      ]
+    },
+    "scaledFromTable": false,
+    "stamina": 8,
+    "consumable": true,
+    "skillScaled": false,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "explosive-payload",
+    "name": "Explosive Payload",
+    "wikiTitle": "Explosive Payload",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Explosive_Payload",
+    "image": "/items/explosive-payload.png",
+    "gameId": "BombSiege",
+    "cls": "siege",
+    "clsLabel": "Catapult Ammo",
+    "wielding": "ranged",
+    "group": "siege",
+    "damage": {
+      "chop": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "pickaxe": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "pure": [
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    "scaledFromTable": false,
+    "backstab": 4,
+    "consumable": true,
+    "skillScaled": false,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "fang-spear",
+    "name": "Fang Spear",
+    "wikiTitle": "Fang Spear",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Fang_Spear",
+    "image": "/items/fang-spear.png",
+    "gameId": "SpearWolfFang",
+    "cls": "spear",
+    "clsLabel": "Spear",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        75,
+        81,
+        87,
+        93
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 12,
+    "biome": "mountain"
+  },
+  {
+    "slug": "finewood-bow",
+    "name": "Finewood Bow",
+    "wikiTitle": "Finewood Bow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Finewood_Bow",
+    "image": "/items/finewood-bow.png",
+    "gameId": "BowFineWood",
+    "cls": "bow",
+    "clsLabel": "Bow",
+    "wielding": "ranged",
+    "group": "ranged",
+    "damage": {
+      "pierce": [
+        32,
+        35,
+        38,
+        41
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 6,
+    "ammo": "arrow",
+    "biome": "black-forest"
+  },
+  {
+    "slug": "flametal-mace",
+    "name": "Flametal mace",
+    "wikiTitle": "Flametal Mace",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Flametal_Mace",
+    "image": "/items/flametal-mace.png",
+    "gameId": "MaceEldner",
+    "cls": "club",
+    "clsLabel": "One-handed Club",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        135,
+        141,
+        147,
+        153
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "flametal-missile",
+    "name": "Flametal missile",
+    "wikiTitle": "Flametal Missile",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Flametal_Missile",
+    "image": "/items/flametal-missile.png",
+    "gameId": "TurretBoltFlametal",
+    "cls": "missile",
+    "clsLabel": "Ballista Missile",
+    "wielding": "ranged",
+    "group": "siege",
+    "damage": {
+      "pierce": [
+        140,
+        140,
+        140,
+        140
+      ]
+    },
+    "scaledFromTable": false,
+    "consumable": true,
+    "skillScaled": false,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "flesh-rippers",
+    "name": "Flesh Rippers",
+    "wikiTitle": "Flesh Rippers",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Flesh_Rippers",
+    "image": "/items/flesh-rippers.png",
+    "gameId": "FistFenrirClaw",
+    "cls": "fists",
+    "clsLabel": "Unarmed",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        60,
+        64,
+        68,
+        72
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 10,
+    "biome": "mountain"
+  },
+  {
+    "slug": "flint-axe",
+    "name": "Flint Axe",
+    "wikiTitle": "Flint Axe",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Flint_Axe",
+    "image": "/items/flint-axe.png",
+    "gameId": "AxeFlint",
+    "cls": "axe",
+    "clsLabel": "One-handed Axe",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        20,
+        25,
+        30,
+        35
+      ],
+      "chop": [
+        30,
+        33,
+        36,
+        39
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 6,
+    "biome": "meadows"
+  },
+  {
+    "slug": "flint-knife",
+    "name": "Flint Knife",
+    "wikiTitle": "Flint Knife",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Flint_Knife",
+    "image": "/items/flint-knife.png",
+    "gameId": "KnifeFlint",
+    "cls": "knife",
+    "clsLabel": "Knife",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "slash": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 4,
+    "biome": "meadows"
+  },
+  {
+    "slug": "flint-spear",
+    "name": "Flint Spear",
+    "wikiTitle": "Flint Spear",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Flint_Spear",
+    "image": "/items/flint-spear.png",
+    "gameId": "SpearFlint",
+    "cls": "spear",
+    "clsLabel": "Spear",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        20,
+        26,
+        32,
+        38
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 6,
+    "biome": "meadows"
+  },
+  {
+    "slug": "frostfire-atgeir",
+    "name": "Frostfire Atgeir",
+    "wikiTitle": "Frostfire Atgeir",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Frostfire_Atgeir",
+    "image": "/items/frostfire-atgeir.png",
+    "gameId": "AtgeirGold_FrostFire",
+    "cls": "atgeir",
+    "clsLabel": "Polearm (Atgeir)",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        148,
+        158,
+        168,
+        178
+      ],
+      "fire": [
+        12,
+        15,
+        18,
+        21
+      ],
+      "frost": [
+        88,
+        91,
+        94,
+        97
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 20,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "frostfire-axe",
+    "name": "Frostfire Axe",
+    "wikiTitle": "Frostfire Axe",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Frostfire_Axe",
+    "image": "/items/frostfire-axe.png",
+    "gameId": "AxeGold_FrostFire",
+    "cls": "axe",
+    "clsLabel": "One-handed Axe",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        144,
+        154,
+        164,
+        174
+      ],
+      "fire": [
+        12,
+        15,
+        18,
+        21
+      ],
+      "frost": [
+        88,
+        91,
+        94,
+        97
+      ],
+      "chop": [
+        90,
+        93,
+        96,
+        99
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "frostfire-bow",
+    "name": "Frostfire Bow",
+    "wikiTitle": "Frostfire Bow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Frostfire_Bow",
+    "image": "/items/frostfire-bow.png",
+    "gameId": "BowGold_FrostFire",
+    "cls": "bow",
+    "clsLabel": "Bow",
+    "wielding": "ranged",
+    "group": "ranged",
+    "damage": {
+      "pierce": [
+        68,
+        76,
+        82,
+        88
+      ],
+      "fire": [
+        12,
+        15,
+        18,
+        21
+      ],
+      "frost": [
+        88,
+        91,
+        94,
+        97
+      ],
+      "spirit": [
+        10,
+        15,
+        20,
+        25
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 14,
+    "ammo": "arrow",
+    "biome": "deep-north"
+  },
+  {
+    "slug": "frostfire-crossbow",
+    "name": "Frostfire Crossbow",
+    "wikiTitle": "Frostfire Crossbow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Frostfire_Crossbow",
+    "image": "/items/frostfire-crossbow.png",
+    "gameId": "CrossbowGold_FrostFire",
+    "cls": "crossbow",
+    "clsLabel": "Crossbow",
+    "wielding": "ranged",
+    "group": "ranged",
+    "damage": {
+      "pierce": [
+        232,
+        240,
+        248,
+        256
+      ],
+      "fire": [
+        12,
+        15,
+        18,
+        21
+      ],
+      "frost": [
+        88,
+        91,
+        94,
+        97
+      ],
+      "chop": [
+        180,
+        185,
+        190,
+        195
+      ]
+    },
+    "scaledFromTable": true,
+    "ammo": "bolt",
+    "biome": "deep-north"
+  },
+  {
+    "slug": "frostfire-dagger",
+    "name": "Frostfire Dagger",
+    "wikiTitle": "Frostfire Dagger",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Frostfire_Dagger",
+    "image": "/items/frostfire-dagger.png",
+    "gameId": "KnifeGold_FrostFire",
+    "cls": "knife",
+    "clsLabel": "Knife",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        62,
+        67,
+        72,
+        77
+      ],
+      "slash": [
+        62,
+        67,
+        72,
+        77
+      ],
+      "fire": [
+        10,
+        13,
+        16,
+        19
+      ],
+      "frost": [
+        88,
+        91,
+        94,
+        97
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 14,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "frostfire-greataxe",
+    "name": "Frostfire Greataxe",
+    "wikiTitle": "Frostfire Greataxe",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Frostfire_Greataxe",
+    "image": "/items/frostfire-greataxe.png",
+    "gameId": "BattleaxeGold_FrostFire",
+    "cls": "battleaxe",
+    "clsLabel": "Battleaxe (2H Axe)",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        154,
+        164,
+        174,
+        184
+      ],
+      "fire": [
+        12,
+        15,
+        18,
+        21
+      ],
+      "frost": [
+        88,
+        91,
+        94,
+        97
+      ],
+      "chop": [
+        40,
+        42.5,
+        45,
+        47.5
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 22,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "frostfire-greatsword",
+    "name": "Frostfire Greatsword",
+    "wikiTitle": "Frostfire Greatsword",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Frostfire_Greatsword",
+    "image": "/items/frostfire-greatsword.png",
+    "gameId": "THSwordGold_FrostFire",
+    "cls": "greatsword",
+    "clsLabel": "Two-handed Sword",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        186,
+        196,
+        206,
+        216
+      ],
+      "fire": [
+        12,
+        15,
+        18,
+        21
+      ],
+      "frost": [
+        88,
+        91,
+        94,
+        97
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 20,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "frostfire-knucklechains",
+    "name": "Frostfire Knucklechains",
+    "wikiTitle": "Frostfire Knucklechains",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Frostfire_Knucklechains",
+    "image": "/items/frostfire-knucklechains.png",
+    "gameId": "FistGold_FrostFire",
+    "cls": "fists",
+    "clsLabel": "Unarmed",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        80,
+        88,
+        96,
+        102
+      ],
+      "fire": [
+        12,
+        15,
+        18,
+        21
+      ],
+      "frost": [
+        88,
+        91,
+        94,
+        97
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 14,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "frostfire-mace",
+    "name": "Frostfire Mace",
+    "wikiTitle": "Frostfire Mace",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Frostfire_Mace",
+    "image": "/items/frostfire-mace.png",
+    "gameId": "MaceGold_FrostFire",
+    "cls": "club",
+    "clsLabel": "One-handed Club",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        144,
+        154,
+        164,
+        174
+      ],
+      "fire": [
+        12,
+        15,
+        18,
+        21
+      ],
+      "frost": [
+        88,
+        91,
+        94,
+        97
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "frostfire-sledge",
+    "name": "Frostfire Sledge",
+    "wikiTitle": "Frostfire Sledge",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Frostfire_Sledge",
+    "image": "/items/frostfire-sledge.png",
+    "gameId": "SledgeGold_FrostFire",
+    "cls": "sledge",
+    "clsLabel": "Sledgehammer (2H Club)",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        200,
+        210,
+        220,
+        230
+      ],
+      "fire": [
+        12,
+        15,
+        18,
+        21
+      ],
+      "frost": [
+        88,
+        91,
+        94,
+        97
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 28,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "frostfire-spear",
+    "name": "Frostfire Spear",
+    "wikiTitle": "Frostfire Spear",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Frostfire_Spear",
+    "image": "/items/frostfire-spear.png",
+    "gameId": "SpearGold_FrostFire",
+    "cls": "spear",
+    "clsLabel": "Spear",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        148,
+        158,
+        168,
+        178
+      ],
+      "fire": [
+        12,
+        15,
+        18,
+        21
+      ],
+      "frost": [
+        88,
+        91,
+        94,
+        97
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "frostfire-sword",
+    "name": "Frostfire Sword",
+    "wikiTitle": "Frostfire Sword",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Frostfire_Sword",
+    "image": "/items/frostfire-sword.png",
+    "gameId": "SwordGold_FrostFire",
+    "cls": "sword",
+    "clsLabel": "Sword",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        138,
+        148,
+        158,
+        168
+      ],
+      "fire": [
+        12,
+        15,
+        18,
+        21
+      ],
+      "frost": [
+        88,
+        91,
+        94,
+        97
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "frostner",
+    "name": "Frostner",
+    "wikiTitle": "Frostner",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Frostner",
+    "image": "/items/frostner.png",
+    "gameId": "MaceSilver",
+    "cls": "club",
+    "clsLabel": "One-handed Club",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        35,
+        35,
+        35,
+        35
+      ],
+      "frost": [
+        40,
+        46,
+        52,
+        58
+      ],
+      "spirit": [
+        20,
+        20,
+        20,
+        20
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 12,
+    "biome": "mountain"
+  },
+  {
+    "slug": "grausten-payload",
+    "name": "Grausten Payload",
+    "wikiTitle": "Grausten Payload",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Grausten_Payload",
+    "image": "/items/grausten-payload.png",
+    "gameId": "Catapult_Ammo",
+    "cls": "siege",
+    "clsLabel": "Catapult Ammo",
+    "wielding": "ranged",
+    "group": "siege",
+    "damage": {
+      "blunt": [
+        25,
+        25,
+        25,
+        25
+      ],
+      "chop": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "pickaxe": [
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    "scaledFromTable": false,
+    "backstab": 4,
+    "consumable": true,
+    "skillScaled": false,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "himminafl",
+    "name": "Himminafl",
+    "wikiTitle": "Himminafl",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Himminafl",
+    "image": "/items/himminafl.png",
+    "gameId": "AtgeirHimminAfl",
+    "cls": "atgeir",
+    "clsLabel": "Polearm (Atgeir)",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        85,
+        85,
+        85,
+        85
+      ],
+      "lightning": [
+        40,
+        46,
+        52,
+        58
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 20,
+    "biome": "mistlands"
+  },
+  {
+    "slug": "huntsman-bow",
+    "name": "Huntsman Bow",
+    "wikiTitle": "Huntsman Bow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Huntsman_Bow",
+    "image": "/items/huntsman-bow.png",
+    "gameId": "BowHuntsman",
+    "cls": "bow",
+    "clsLabel": "Bow",
+    "wielding": "ranged",
+    "group": "ranged",
+    "damage": {
+      "pierce": [
+        42,
+        45,
+        48,
+        51
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 8,
+    "ammo": "arrow",
+    "biome": "swamp"
+  },
+  {
+    "slug": "iron-atgeir",
+    "name": "Iron Atgeir",
+    "wikiTitle": "Iron Atgeir",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Iron_Atgeir",
+    "image": "/items/iron-atgeir.png",
+    "gameId": "AtgeirIron",
+    "cls": "atgeir",
+    "clsLabel": "Polearm (Atgeir)",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        65,
+        71,
+        77,
+        83
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 14,
+    "biome": "swamp"
+  },
+  {
+    "slug": "iron-axe",
+    "name": "Iron Axe",
+    "wikiTitle": "Iron Axe",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Iron_Axe",
+    "image": "/items/iron-axe.png",
+    "gameId": "AxeIron",
+    "cls": "axe",
+    "clsLabel": "One-handed Axe",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        60,
+        65,
+        70,
+        75
+      ],
+      "chop": [
+        50,
+        53,
+        56,
+        59
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 10,
+    "biome": "swamp"
+  },
+  {
+    "slug": "iron-mace",
+    "name": "Iron Mace",
+    "wikiTitle": "Iron Mace",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Iron_Mace",
+    "image": "/items/iron-mace.png",
+    "gameId": "MaceIron",
+    "cls": "club",
+    "clsLabel": "One-handed Club",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        55,
+        61,
+        67,
+        73
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 10,
+    "biome": "swamp"
+  },
+  {
+    "slug": "iron-pickaxe",
+    "name": "Iron Pickaxe",
+    "wikiTitle": "Iron Pickaxe",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Iron_Pickaxe",
+    "image": "/items/iron-pickaxe.png",
+    "gameId": "PickaxeIron",
+    "cls": "pickaxe",
+    "clsLabel": "Pickaxe",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        33,
+        38,
+        43,
+        48
+      ],
+      "pickaxe": [
+        33,
+        33,
+        33,
+        33
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 10,
+    "biome": "swamp"
+  },
+  {
+    "slug": "iron-sledge",
+    "name": "Iron Sledge",
+    "wikiTitle": "Iron Sledge",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Iron_Sledge",
+    "image": "/items/iron-sledge.png",
+    "gameId": "SledgeIron",
+    "cls": "sledge",
+    "clsLabel": "Sledgehammer (2H Club)",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        55,
+        61,
+        67,
+        73
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 20,
+    "biome": "swamp"
+  },
+  {
+    "slug": "iron-sword",
+    "name": "Iron Sword",
+    "wikiTitle": "Iron Sword",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Iron_Sword",
+    "image": "/items/iron-sword.png",
+    "gameId": "SwordIron",
+    "cls": "sword",
+    "clsLabel": "Sword",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        55,
+        61,
+        67,
+        73
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 10,
+    "biome": "swamp"
+  },
+  {
+    "slug": "jotun-bane",
+    "name": "Jotun Bane",
+    "wikiTitle": "Jotun Bane",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Jotun_Bane",
+    "image": "/items/jotun-bane.png",
+    "gameId": "AxeJotunBane",
+    "cls": "axe",
+    "clsLabel": "One-handed Axe",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        80,
+        85,
+        90,
+        95
+      ],
+      "poison": [
+        40,
+        40,
+        40,
+        40
+      ],
+      "chop": [
+        70,
+        73,
+        76,
+        79
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "mistlands"
+  },
+  {
+    "slug": "klossen",
+    "name": "Klossen",
+    "wikiTitle": "Klossen",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Klossen",
+    "image": "/items/klossen.png",
+    "gameId": "MaceEldnerNature",
+    "cls": "club",
+    "clsLabel": "One-handed Club",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        135,
+        141,
+        147,
+        153
+      ],
+      "poison": [
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "krom",
+    "name": "Krom",
+    "wikiTitle": "Krom",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Krom",
+    "image": "/items/krom.png",
+    "gameId": "THSwordKrom",
+    "cls": "greatsword",
+    "clsLabel": "Two-handed Sword",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        150,
+        156,
+        162,
+        168
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 20,
+    "biome": "mistlands"
+  },
+  {
+    "slug": "lightning-strike",
+    "name": "Lightning Strike",
+    "wikiTitle": "Lightning Strike",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Lightning_Strike",
+    "image": "/items/lightning-strike.png",
+    "gameId": "StaffThunderBlood",
+    "cls": "staff",
+    "clsLabel": "Elemental Staff",
+    "wielding": "magic",
+    "group": "magic",
+    "damage": {
+      "lightning": [
+        300,
+        320,
+        340,
+        360
+      ]
+    },
+    "scaledFromTable": true,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "mistwalker",
+    "name": "Mistwalker",
+    "wikiTitle": "Mistwalker",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Mistwalker",
+    "image": "/items/mistwalker.png",
+    "gameId": "SwordMistwalker",
+    "cls": "sword",
+    "clsLabel": "Sword",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        75,
+        75,
+        75,
+        75
+      ],
+      "frost": [
+        40,
+        46,
+        52,
+        58
+      ],
+      "spirit": [
+        0,
+        5,
+        10,
+        15
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "mistlands"
+  },
+  {
+    "slug": "nidhogg",
+    "name": "Nidhögg",
+    "wikiTitle": "Nidhögg",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Nidh%C3%B6gg",
+    "image": "/items/nidhogg.png",
+    "gameId": "SwordNiedhogg",
+    "cls": "sword",
+    "clsLabel": "Sword",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        135,
+        141,
+        147,
+        153
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "nidhogg-the-bleeding",
+    "name": "Nidhögg the Bleeding",
+    "wikiTitle": "Nidhögg the Bleeding",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Nidh%C3%B6gg_the_Bleeding",
+    "image": "/items/nidhogg-the-bleeding.png",
+    "gameId": "SwordNiedhoggBlood",
+    "cls": "sword",
+    "clsLabel": "Sword",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        135,
+        141,
+        147,
+        153
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "nidhogg-the-primal",
+    "name": "Nidhögg the Primal",
+    "wikiTitle": "Nidhögg the Primal",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Nidh%C3%B6gg_the_Primal",
+    "image": "/items/nidhogg-the-primal.png",
+    "gameId": "SwordNiedhoggNature",
+    "cls": "sword",
+    "clsLabel": "Sword",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        135,
+        141,
+        147,
+        153
+      ],
+      "poison": [
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "nidhogg-the-thundering",
+    "name": "Nidhögg the Thundering",
+    "wikiTitle": "Nidhögg the Thundering",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Nidh%C3%B6gg_the_Thundering",
+    "image": "/items/nidhogg-the-thundering.png",
+    "gameId": "SwordNiedhoggLightning",
+    "cls": "sword",
+    "clsLabel": "Sword",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        135,
+        141,
+        147,
+        153
+      ],
+      "lightning": [
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "nord-atgeir",
+    "name": "Nord Atgeir",
+    "wikiTitle": "Nord Atgeir",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Nord_Atgeir",
+    "image": "/items/nord-atgeir.png",
+    "gameId": "AtgeirGold",
+    "cls": "atgeir",
+    "clsLabel": "Polearm (Atgeir)",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        182,
+        192,
+        202,
+        212
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 20,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "nord-axe",
+    "name": "Nord Axe",
+    "wikiTitle": "Nord Axe",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Nord_Axe",
+    "image": "/items/nord-axe.png",
+    "gameId": "AxeGold",
+    "cls": "axe",
+    "clsLabel": "One-handed Axe",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        176,
+        186,
+        196,
+        206
+      ],
+      "chop": [
+        90,
+        90,
+        90,
+        90
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "nord-bow",
+    "name": "Nord Bow",
+    "wikiTitle": "Nord Bow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Nord_Bow",
+    "image": "/items/nord-bow.png",
+    "gameId": "BowGold",
+    "cls": "bow",
+    "clsLabel": "Bow",
+    "wielding": "ranged",
+    "group": "ranged",
+    "damage": {
+      "pierce": [
+        100,
+        108,
+        116,
+        124
+      ],
+      "spirit": [
+        10,
+        22,
+        34,
+        46
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 14,
+    "ammo": "arrow",
+    "biome": "deep-north"
+  },
+  {
+    "slug": "nord-crossbow",
+    "name": "Nord Crossbow",
+    "wikiTitle": "Nord Crossbow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Nord_Crossbow",
+    "image": "/items/nord-crossbow.png",
+    "gameId": "CrossbowGold",
+    "cls": "crossbow",
+    "clsLabel": "Crossbow",
+    "wielding": "ranged",
+    "group": "ranged",
+    "damage": {
+      "pierce": [
+        264,
+        272,
+        280,
+        288
+      ],
+      "chop": [
+        180,
+        185,
+        190,
+        195
+      ]
+    },
+    "scaledFromTable": true,
+    "ammo": "bolt",
+    "biome": "deep-north"
+  },
+  {
+    "slug": "nord-dagger",
+    "name": "Nord Dagger",
+    "wikiTitle": "Nord Dagger",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Nord_Dagger",
+    "image": "/items/nord-dagger.png",
+    "gameId": "KnifeGold",
+    "cls": "knife",
+    "clsLabel": "Knife",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        75,
+        80,
+        85,
+        90
+      ],
+      "slash": [
+        75,
+        80,
+        85,
+        90
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 14,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "nord-greataxe",
+    "name": "Nord Greataxe",
+    "wikiTitle": "Nord Greataxe",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Nord_Greataxe",
+    "image": "/items/nord-greataxe.png",
+    "gameId": "BattleaxeGold",
+    "cls": "battleaxe",
+    "clsLabel": "Battleaxe (2H Axe)",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        188,
+        198,
+        208,
+        218
+      ],
+      "chop": [
+        40,
+        42.5,
+        45,
+        47.5
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 22,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "nord-greatsword",
+    "name": "Nord Greatsword",
+    "wikiTitle": "Nord Greatsword",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Nord_Greatsword",
+    "image": "/items/nord-greatsword.png",
+    "gameId": "THSwordGold",
+    "cls": "greatsword",
+    "clsLabel": "Two-handed Sword",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        210,
+        220,
+        230,
+        240
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 20,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "nord-knucklechains",
+    "name": "Nord Knucklechains",
+    "wikiTitle": "Nord Knucklechains",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Nord_Knucklechains",
+    "image": "/items/nord-knucklechains.png",
+    "gameId": "FistGold",
+    "cls": "fists",
+    "clsLabel": "Unarmed",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        114,
+        114,
+        114,
+        114
+      ],
+      "slash": [
+        0,
+        8,
+        16,
+        24
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 14,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "nord-mace",
+    "name": "Nord Mace",
+    "wikiTitle": "Nord Mace",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Nord_Mace",
+    "image": "/items/nord-mace.png",
+    "gameId": "MaceGold",
+    "cls": "club",
+    "clsLabel": "One-handed Club",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        170,
+        180,
+        190,
+        200
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "nord-sledge",
+    "name": "Nord Sledge",
+    "wikiTitle": "Nord Sledge",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Nord_Sledge",
+    "image": "/items/nord-sledge.png",
+    "gameId": "SledgeGold",
+    "cls": "sledge",
+    "clsLabel": "Sledgehammer (2H Club)",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        225,
+        235,
+        245,
+        255
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 28,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "nord-spear",
+    "name": "Nord Spear",
+    "wikiTitle": "Nord Spear",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Nord_Spear",
+    "image": "/items/nord-spear.png",
+    "gameId": "SpearGold",
+    "cls": "spear",
+    "clsLabel": "Spear",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        170,
+        180,
+        190,
+        200
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "nord-sword",
+    "name": "Nord Sword",
+    "wikiTitle": "Nord Sword",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Nord_Sword",
+    "image": "/items/nord-sword.png",
+    "gameId": "SwordGold",
+    "cls": "sword",
+    "clsLabel": "Sword",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        170,
+        180,
+        190,
+        200
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "northern-vengeance",
+    "name": "Northern Vengeance",
+    "wikiTitle": "Northern Vengeance",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Northern_Vengeance",
+    "image": "/items/northern-vengeance.png",
+    "gameId": "StaffFrostOrbs",
+    "cls": "blood-staff",
+    "clsLabel": "Blood Magic Staff",
+    "wielding": "magic",
+    "group": "magic",
+    "damage": {
+      "frost": [
+        75,
+        83,
+        91,
+        99
+      ],
+      "pure": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "scaledFromTable": true,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "ooze-bomb",
+    "name": "Ooze bomb",
+    "wikiTitle": "Ooze Bomb",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Ooze_Bomb",
+    "image": "/items/ooze-bomb.png",
+    "gameId": "BombOoze",
+    "cls": "bomb",
+    "clsLabel": "Bomb",
+    "wielding": "one-handed",
+    "group": "consumable",
+    "damage": {
+      "blunt": [
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    "scaledFromTable": false,
+    "stamina": 8,
+    "backstab": 3,
+    "consumable": true,
+    "skillScaled": false,
+    "biome": "swamp"
+  },
+  {
+    "slug": "paws-of-the-bear",
+    "name": "Paws of the Bear",
+    "wikiTitle": "Paws of the Bear",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Paws_of_the_Bear",
+    "image": "/items/paws-of-the-bear.png",
+    "gameId": "FistBjornClaw",
+    "cls": "fists",
+    "clsLabel": "Unarmed",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        25,
+        29,
+        33,
+        37
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 6,
+    "biome": "black-forest"
+  },
+  {
+    "slug": "porcupine",
+    "name": "Porcupine",
+    "wikiTitle": "Porcupine",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Porcupine",
+    "image": "/items/porcupine.png",
+    "gameId": "MaceNeedle",
+    "cls": "club",
+    "clsLabel": "One-handed Club",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        50,
+        50,
+        50,
+        50
+      ],
+      "pierce": [
+        45,
+        51,
+        57,
+        63
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 14,
+    "biome": "plains"
+  },
+  {
+    "slug": "primal-berserkir-axes",
+    "name": "Primal Berserkir Axes",
+    "wikiTitle": "Primal Berserkir Axes",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Primal_Berserkir_Axes",
+    "image": "/items/primal-berserkir-axes.png",
+    "gameId": "AxeBerzerkrNature",
+    "cls": "dual-axe",
+    "clsLabel": "Dual-wielded Axes",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        140,
+        145,
+        150,
+        155
+      ],
+      "poison": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "chop": [
+        80,
+        83,
+        86,
+        89
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "backstab": 3,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "primal-slayer",
+    "name": "Primal Slayer",
+    "wikiTitle": "Primal Slayer",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Primal_Slayer",
+    "image": "/items/primal-slayer.png",
+    "gameId": "THSwordSlayerNature",
+    "cls": "greatsword",
+    "clsLabel": "Two-handed Sword",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        170,
+        176,
+        182,
+        188
+      ],
+      "poison": [
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 20,
+    "backstab": 3,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "ripper",
+    "name": "Ripper",
+    "wikiTitle": "Ripper",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Ripper",
+    "image": "/items/ripper.png",
+    "gameId": "CrossbowRipper",
+    "cls": "crossbow",
+    "clsLabel": "Crossbow",
+    "wielding": "ranged",
+    "group": "ranged",
+    "damage": {
+      "pierce": [
+        220,
+        223,
+        226,
+        229
+      ],
+      "chop": [
+        160,
+        160,
+        160,
+        160
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 0,
+    "ammo": "bolt",
+    "biome": "ashlands"
+  },
+  {
+    "slug": "root-fang",
+    "name": "Root Fang",
+    "wikiTitle": "Root Fang",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Root_Fang",
+    "image": "/items/root-fang.png",
+    "gameId": "BowAshlandsRoot",
+    "cls": "bow",
+    "clsLabel": "Bow",
+    "wielding": "ranged",
+    "group": "ranged",
+    "damage": {
+      "pierce": [
+        82,
+        86,
+        90,
+        94
+      ],
+      "poison": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "spirit": [
+        0,
+        5,
+        10,
+        15
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 14,
+    "ammo": "arrow",
+    "biome": "ashlands"
+  },
+  {
+    "slug": "root-ripper",
+    "name": "Root Ripper",
+    "wikiTitle": "Root Ripper",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Root_Ripper",
+    "image": "/items/root-ripper.png",
+    "gameId": "CrossbowRipperNature",
+    "cls": "crossbow",
+    "clsLabel": "Crossbow",
+    "wielding": "ranged",
+    "group": "ranged",
+    "damage": {
+      "pierce": [
+        220,
+        223,
+        226,
+        229
+      ],
+      "poison": [
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 1,
+    "ammo": "bolt",
+    "biome": "ashlands"
+  },
+  {
+    "slug": "scourging-slayer",
+    "name": "Scourging Slayer",
+    "wikiTitle": "Scourging Slayer",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Scourging_Slayer",
+    "image": "/items/scourging-slayer.png",
+    "gameId": "THSwordSlayerLightning",
+    "cls": "greatsword",
+    "clsLabel": "Two-handed Sword",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        170,
+        176,
+        182,
+        188
+      ],
+      "lightning": [
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 20,
+    "backstab": 3,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "silver-knife",
+    "name": "Silver Knife",
+    "wikiTitle": "Silver Knife",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Silver_Knife",
+    "image": "/items/silver-knife.png",
+    "gameId": "KnifeSilver",
+    "cls": "knife",
+    "clsLabel": "Knife",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        25,
+        26,
+        27,
+        28
+      ],
+      "slash": [
+        25,
+        26,
+        27,
+        28
+      ],
+      "spirit": [
+        12,
+        12,
+        12,
+        12
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 10,
+    "biome": "mountain"
+  },
+  {
+    "slug": "silver-sword",
+    "name": "Silver Sword",
+    "wikiTitle": "Silver Sword",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Silver_Sword",
+    "image": "/items/silver-sword.png",
+    "gameId": "SwordSilver",
+    "cls": "sword",
+    "clsLabel": "Sword",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        75,
+        81,
+        87,
+        93
+      ],
+      "spirit": [
+        30,
+        35,
+        40,
+        45
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 12,
+    "biome": "mountain"
+  },
+  {
+    "slug": "skoll-and-hati",
+    "name": "Skoll and Hati",
+    "wikiTitle": "Skoll and Hati",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Skoll_and_Hati",
+    "image": "/items/skoll-and-hati.png",
+    "gameId": "KnifeSkollAndHati",
+    "cls": "knife",
+    "clsLabel": "Dual-wielded Knives",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        45,
+        46,
+        47,
+        48
+      ],
+      "slash": [
+        45,
+        46,
+        47,
+        48
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 14,
+    "biome": "mistlands"
+  },
+  {
+    "slug": "skull-splittur",
+    "name": "Skull Splittur",
+    "wikiTitle": "Skull Splittur",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Skull_Splittur",
+    "image": "/items/skull-splittur.png",
+    "gameId": "BattleaxeSkullSplittur",
+    "cls": "battleaxe",
+    "clsLabel": "Battleaxe (2H Axe)",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        130,
+        136,
+        142,
+        148
+      ],
+      "chop": [
+        70,
+        72.5,
+        75,
+        77.5
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 22,
+    "biome": "mistlands"
+  },
+  {
+    "slug": "slayer",
+    "name": "Slayer",
+    "wikiTitle": "Slayer",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Slayer",
+    "image": "/items/slayer.png",
+    "gameId": "THSwordSlayer",
+    "cls": "greatsword",
+    "clsLabel": "Two-handed Sword",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        170,
+        176,
+        182,
+        188
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 20,
+    "backstab": 3,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "smoke-bomb",
+    "name": "Smoke bomb",
+    "wikiTitle": "Smoke Bomb",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Smoke_Bomb",
+    "image": "/items/smoke-bomb.png",
+    "gameId": "BombSmoke",
+    "cls": "bomb",
+    "clsLabel": "Bomb",
+    "wielding": "one-handed",
+    "group": "consumable",
+    "damage": {
+      "blunt": [
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    "scaledFromTable": false,
+    "stamina": 8,
+    "backstab": 3,
+    "consumable": true,
+    "skillScaled": false,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "snowball",
+    "name": "Snowball",
+    "wikiTitle": "Snowball",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Snowball",
+    "image": "/items/snowball.png",
+    "gameId": "Snowball",
+    "cls": "bomb",
+    "clsLabel": "Bomb",
+    "wielding": "one-handed",
+    "group": "consumable",
+    "damage": {
+      "blunt": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "frost": [
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    "scaledFromTable": false,
+    "stamina": 8,
+    "backstab": 3,
+    "consumable": true,
+    "skillScaled": false,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "spinesnap",
+    "name": "Spinesnap",
+    "wikiTitle": "Spinesnap",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Spinesnap",
+    "image": "/items/spinesnap.png",
+    "gameId": "BowSpineSnap",
+    "cls": "bow",
+    "clsLabel": "Bow",
+    "wielding": "ranged",
+    "group": "ranged",
+    "damage": {
+      "pierce": [
+        72,
+        76,
+        80,
+        84
+      ],
+      "spirit": [
+        5,
+        10,
+        15,
+        20
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 14,
+    "ammo": "arrow",
+    "biome": "mistlands"
+  },
+  {
+    "slug": "splitnir",
+    "name": "Splitnir",
+    "wikiTitle": "Splitnir",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Splitnir",
+    "image": "/items/splitnir.png",
+    "gameId": "SpearSplitner",
+    "cls": "spear",
+    "clsLabel": "Spear",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        135,
+        141,
+        147,
+        153
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "splitnir-the-bleeding",
+    "name": "Splitnir the Bleeding",
+    "wikiTitle": "Splitnir the Bleeding",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Splitnir_the_Bleeding",
+    "image": "/items/splitnir-the-bleeding.png",
+    "gameId": "SpearSplitner_Blood",
+    "cls": "spear",
+    "clsLabel": "Spear",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        135,
+        141,
+        147,
+        153
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "splitnir-the-primal",
+    "name": "Splitnir the Primal",
+    "wikiTitle": "Splitnir the Primal",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Splitnir_the_Primal",
+    "image": "/items/splitnir-the-primal.png",
+    "gameId": "SpearSplitner_Nature",
+    "cls": "spear",
+    "clsLabel": "Spear",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        135,
+        141,
+        147,
+        153
+      ],
+      "poison": [
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "splitnir-the-storming",
+    "name": "Splitnir the Storming",
+    "wikiTitle": "Splitnir the Storming",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Splitnir_the_Storming",
+    "image": "/items/splitnir-the-storming.png",
+    "gameId": "SpearSplitner_Lightning",
+    "cls": "spear",
+    "clsLabel": "Spear",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        135,
+        141,
+        147,
+        153
+      ],
+      "lightning": [
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "staff-of-embers",
+    "name": "Staff of Embers",
+    "wikiTitle": "Staff of Embers",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Staff_of_Embers",
+    "image": "/items/staff-of-embers.png",
+    "gameId": "StaffFireball",
+    "cls": "staff",
+    "clsLabel": "Elemental Staff",
+    "wielding": "magic",
+    "group": "magic",
+    "damage": {
+      "blunt": [
+        120,
+        120,
+        120,
+        120
+      ],
+      "fire": [
+        120,
+        126,
+        132,
+        138
+      ]
+    },
+    "scaledFromTable": true,
+    "biome": "mistlands"
+  },
+  {
+    "slug": "staff-of-fracturing",
+    "name": "Staff of Fracturing",
+    "wikiTitle": "Staff of Fracturing",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Staff_of_Fracturing",
+    "image": "/items/staff-of-fracturing.png",
+    "gameId": "StaffClusterbomb",
+    "cls": "staff",
+    "clsLabel": "Elemental Staff",
+    "wielding": "magic",
+    "group": "magic",
+    "damage": {
+      "blunt": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "fire": [
+        12,
+        18,
+        24,
+        30
+      ]
+    },
+    "scaledFromTable": true,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "staff-of-frost",
+    "name": "Staff of Frost",
+    "wikiTitle": "Staff of Frost",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Staff_of_Frost",
+    "image": "/items/staff-of-frost.png",
+    "gameId": "StaffIceShards",
+    "cls": "staff",
+    "clsLabel": "Elemental Staff",
+    "wielding": "magic",
+    "group": "magic",
+    "damage": {
+      "frost": [
+        30,
+        32,
+        34,
+        36
+      ]
+    },
+    "scaledFromTable": true,
+    "biome": "mistlands"
+  },
+  {
+    "slug": "staff-of-the-wild",
+    "name": "Staff of the Wild",
+    "wikiTitle": "Staff of the Wild",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Staff_of_the_Wild",
+    "image": "/items/staff-of-the-wild.png",
+    "gameId": "StaffGreenRoots",
+    "cls": "staff",
+    "clsLabel": "Elemental Staff",
+    "wielding": "magic",
+    "group": "magic",
+    "damage": {
+      "blunt": [
+        20,
+        40,
+        60,
+        80
+      ],
+      "poison": [
+        20,
+        40,
+        60,
+        80
+      ]
+    },
+    "scaledFromTable": true,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "stagbreaker",
+    "name": "Stagbreaker",
+    "wikiTitle": "Stagbreaker",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Stagbreaker",
+    "image": "/items/stagbreaker.png",
+    "gameId": "SledgeStagbreaker",
+    "cls": "sledge",
+    "clsLabel": "Sledgehammer (2H Club)",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        20,
+        26,
+        32,
+        38
+      ],
+      "pierce": [
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 12,
+    "biome": "black-forest"
+  },
+  {
+    "slug": "stone-axe",
+    "name": "Stone Axe",
+    "wikiTitle": "Stone Axe",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Stone_Axe",
+    "image": "/items/stone-axe.png",
+    "gameId": "AxeStone",
+    "cls": "axe",
+    "clsLabel": "One-handed Axe",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        15,
+        20,
+        25,
+        30
+      ],
+      "chop": [
+        20,
+        23,
+        26,
+        29
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 6,
+    "biome": "meadows"
+  },
+  {
+    "slug": "storm-fang",
+    "name": "Storm Fang",
+    "wikiTitle": "Storm Fang",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Storm_Fang",
+    "image": "/items/storm-fang.png",
+    "gameId": "BowAshlandsStorm",
+    "cls": "bow",
+    "clsLabel": "Bow",
+    "wielding": "ranged",
+    "group": "ranged",
+    "damage": {
+      "pierce": [
+        82,
+        86,
+        90,
+        94
+      ],
+      "lightning": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "spirit": [
+        0,
+        5,
+        10,
+        15
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 14,
+    "ammo": "arrow",
+    "biome": "ashlands"
+  },
+  {
+    "slug": "storm-ripper",
+    "name": "Storm Ripper",
+    "wikiTitle": "Storm Ripper",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Storm_Ripper",
+    "image": "/items/storm-ripper.png",
+    "gameId": "CrossbowRipperLightning",
+    "cls": "crossbow",
+    "clsLabel": "Crossbow",
+    "wielding": "ranged",
+    "group": "ranged",
+    "damage": {
+      "pierce": [
+        220,
+        223,
+        226,
+        229
+      ],
+      "lightning": [
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 1,
+    "ammo": "bolt",
+    "biome": "ashlands"
+  },
+  {
+    "slug": "storm-star",
+    "name": "Storm Star",
+    "wikiTitle": "Storm Star",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Storm_Star",
+    "image": "/items/storm-star.png",
+    "gameId": "MaceEldnerLightning",
+    "cls": "club",
+    "clsLabel": "One-handed Club",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        135,
+        141,
+        147,
+        153
+      ],
+      "lightning": [
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "thunderblood-atgeir",
+    "name": "Thunderblood Atgeir",
+    "wikiTitle": "Thunderblood Atgeir",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Thunderblood_Atgeir",
+    "image": "/items/thunderblood-atgeir.png",
+    "gameId": "AtgeirGold_BloodLightning",
+    "cls": "atgeir",
+    "clsLabel": "Polearm (Atgeir)",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        192,
+        202,
+        212,
+        222
+      ],
+      "lightning": [
+        45,
+        50,
+        55,
+        60
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 20,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "thunderblood-axe",
+    "name": "Thunderblood Axe",
+    "wikiTitle": "Thunderblood Axe",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Thunderblood_Axe",
+    "image": "/items/thunderblood-axe.png",
+    "gameId": "AxeGold_BloodLightning",
+    "cls": "axe",
+    "clsLabel": "One-handed Axe",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        186,
+        196,
+        206,
+        216
+      ],
+      "lightning": [
+        45,
+        50,
+        55,
+        60
+      ],
+      "chop": [
+        90,
+        93,
+        96,
+        99
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "thunderblood-bow",
+    "name": "Thunderblood Bow",
+    "wikiTitle": "Thunderblood Bow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Thunderblood_Bow",
+    "image": "/items/thunderblood-bow.png",
+    "gameId": "BowGold_BloodLightning",
+    "cls": "bow",
+    "clsLabel": "Bow",
+    "wielding": "ranged",
+    "group": "ranged",
+    "damage": {
+      "pierce": [
+        110,
+        118,
+        126,
+        134
+      ],
+      "lightning": [
+        45,
+        50,
+        55,
+        60
+      ],
+      "spirit": [
+        10,
+        15,
+        20,
+        25
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 14,
+    "ammo": "arrow",
+    "biome": "deep-north"
+  },
+  {
+    "slug": "thunderblood-crossbow",
+    "name": "Thunderblood Crossbow",
+    "wikiTitle": "Thunderblood Crossbow",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Thunderblood_Crossbow",
+    "image": "/items/thunderblood-crossbow.png",
+    "gameId": "CrossbowGold_BloodLightning",
+    "cls": "crossbow",
+    "clsLabel": "Crossbow",
+    "wielding": "ranged",
+    "group": "ranged",
+    "damage": {
+      "pierce": [
+        274,
+        282,
+        290,
+        298
+      ],
+      "lightning": [
+        45,
+        50,
+        55,
+        60
+      ],
+      "chop": [
+        180,
+        185,
+        190,
+        195
+      ]
+    },
+    "scaledFromTable": true,
+    "ammo": "bolt",
+    "biome": "deep-north"
+  },
+  {
+    "slug": "thunderblood-dagger",
+    "name": "Thunderblood Dagger",
+    "wikiTitle": "Thunderblood Dagger",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Thunderblood_Dagger",
+    "image": "/items/thunderblood-dagger.png",
+    "gameId": "KnifeGold_BloodLightning",
+    "cls": "knife",
+    "clsLabel": "Knife",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        80,
+        85,
+        90,
+        95
+      ],
+      "slash": [
+        80,
+        85,
+        90,
+        95
+      ],
+      "lightning": [
+        45,
+        50,
+        55,
+        60
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 14,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "thunderblood-greataxe",
+    "name": "Thunderblood Greataxe",
+    "wikiTitle": "Thunderblood Greataxe",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Thunderblood_Greataxe",
+    "image": "/items/thunderblood-greataxe.png",
+    "gameId": "BattleaxeGold_BloodLightning",
+    "cls": "battleaxe",
+    "clsLabel": "Battleaxe (2H Axe)",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        198,
+        208,
+        218,
+        228
+      ],
+      "frost": [
+        88,
+        91,
+        94,
+        97
+      ],
+      "lightning": [
+        45,
+        50,
+        55,
+        60
+      ],
+      "chop": [
+        40,
+        42.5,
+        45,
+        47.5
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 22,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "thunderblood-greatsword",
+    "name": "Thunderblood Greatsword",
+    "wikiTitle": "Thunderblood Greatsword",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Thunderblood_Greatsword",
+    "image": "/items/thunderblood-greatsword.png",
+    "gameId": "THSwordGold_BloodLightning",
+    "cls": "greatsword",
+    "clsLabel": "Two-handed Sword",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        220,
+        230,
+        240,
+        250
+      ],
+      "lightning": [
+        45,
+        50,
+        55,
+        60
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 20,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "thunderblood-knucklechains",
+    "name": "Thunderblood Knucklechains",
+    "wikiTitle": "Thunderblood Knucklechains",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Thunderblood_Knucklechains",
+    "image": "/items/thunderblood-knucklechains.png",
+    "gameId": "FistGold_BloodLightning",
+    "cls": "fists",
+    "clsLabel": "Unarmed",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        122,
+        130,
+        138,
+        146
+      ],
+      "lightning": [
+        45,
+        50,
+        55,
+        60
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 14,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "thunderblood-mace",
+    "name": "Thunderblood Mace",
+    "wikiTitle": "Thunderblood Mace",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Thunderblood_Mace",
+    "image": "/items/thunderblood-mace.png",
+    "gameId": "MaceGold_BloodLightning",
+    "cls": "club",
+    "clsLabel": "One-handed Club",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        180,
+        190,
+        200,
+        210
+      ],
+      "lightning": [
+        45,
+        50,
+        55,
+        60
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "thunderblood-sledge",
+    "name": "Thunderblood Sledge",
+    "wikiTitle": "Thunderblood Sledge",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Thunderblood_Sledge",
+    "image": "/items/thunderblood-sledge.png",
+    "gameId": "SledgeGold_BloodLightning",
+    "cls": "sledge",
+    "clsLabel": "Sledgehammer (2H Club)",
+    "wielding": "two-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        235,
+        245,
+        255,
+        265
+      ],
+      "lightning": [
+        45,
+        50,
+        55,
+        60
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 28,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "thunderblood-spear",
+    "name": "Thunderblood Spear",
+    "wikiTitle": "Thunderblood Spear",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Thunderblood_Spear",
+    "image": "/items/thunderblood-spear.png",
+    "gameId": "SpearGold_BloodLightning",
+    "cls": "spear",
+    "clsLabel": "Spear",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        180,
+        190,
+        200,
+        210
+      ],
+      "lightning": [
+        45,
+        50,
+        55,
+        60
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "thunderblood-sword",
+    "name": "Thunderblood Sword",
+    "wikiTitle": "Thunderblood Sword",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Thunderblood_Sword",
+    "image": "/items/thunderblood-sword.png",
+    "gameId": "SwordGold_BloodLightning",
+    "cls": "sword",
+    "clsLabel": "Sword",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        180,
+        190,
+        200,
+        210
+      ],
+      "lightning": [
+        45,
+        50,
+        55,
+        60
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "biome": "deep-north"
+  },
+  {
+    "slug": "thundering-berserkir-axes",
+    "name": "Thundering Berserkir Axes",
+    "wikiTitle": "Thundering Berserkir Axes",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Thundering_Berserkir_Axes",
+    "image": "/items/thundering-berserkir-axes.png",
+    "gameId": "AxeBerzerkrLightning",
+    "cls": "dual-axe",
+    "clsLabel": "Dual-wielded Axes",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "slash": [
+        140,
+        145,
+        150,
+        155
+      ],
+      "lightning": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "chop": [
+        80,
+        83,
+        86,
+        89
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 16,
+    "backstab": 3,
+    "biome": "ashlands"
+  },
+  {
+    "slug": "torch",
+    "name": "Torch",
+    "wikiTitle": "Torch",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Torch",
+    "image": "/items/torch.png",
+    "gameId": "Torch",
+    "cls": "club",
+    "clsLabel": "One-handed Club",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "blunt": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "fire": [
+        15,
+        15,
+        15,
+        15
+      ]
+    },
+    "scaledFromTable": false,
+    "stamina": 4,
+    "biome": "meadows"
+  },
+  {
+    "slug": "vilebone-maulclaws",
+    "name": "Vilebone Maulclaws",
+    "wikiTitle": "Vilebone Maulclaws",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Vilebone_Maulclaws",
+    "image": "/items/vilebone-maulclaws.png",
+    "gameId": "FistBjornUndeadClaw",
+    "cls": "fists",
+    "clsLabel": "Unarmed",
+    "wielding": "one-handed",
+    "group": "melee",
+    "damage": {
+      "pierce": [
+        60,
+        60,
+        60,
+        60
+      ],
+      "slash": [
+        20,
+        24,
+        28,
+        32
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 12,
+    "biome": "plains"
+  },
+  {
+    "slug": "wooden-missile",
+    "name": "Wooden missile",
+    "wikiTitle": "Wooden Missile",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Wooden_Missile",
+    "image": "/items/wooden-missile.png",
+    "gameId": "TurretBoltWood",
+    "cls": "missile",
+    "clsLabel": "Ballista Missile",
+    "wielding": "ranged",
+    "group": "siege",
+    "damage": {
+      "pierce": [
+        75,
+        75,
+        75,
+        75
+      ]
+    },
+    "scaledFromTable": false,
+    "consumable": true,
+    "skillScaled": false,
+    "biome": "mountain"
+  },
+  {
+    "slug": "wound-ripper",
+    "name": "Wound Ripper",
+    "wikiTitle": "Wound Ripper",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Wound_Ripper",
+    "image": "/items/wound-ripper.png",
+    "gameId": "CrossbowRipperBlood",
+    "cls": "crossbow",
+    "clsLabel": "Crossbow",
+    "wielding": "ranged",
+    "group": "ranged",
+    "damage": {
+      "pierce": [
+        220,
+        223,
+        226,
+        229
+      ]
+    },
+    "scaledFromTable": true,
+    "stamina": 1,
+    "ammo": "bolt",
+    "biome": "ashlands"
+  }
+]
