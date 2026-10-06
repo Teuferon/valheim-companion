@@ -82,6 +82,9 @@ Open Graph preview cards, Twitter cards, PWA icons and web manifests are configu
 
 ## Docs
 
-- `docs/ANALYZA.md`: analysis, sources, recommendation algorithm
+- `docs/STAV.md`: current status, task queue, what is running (start here)
+- `docs/ORCHESTRACE.md`: how worker agents are launched, reviewed and merged
+- `docs/ANALYZA.md`: analysis and decisions (data sources, formulas, biome order, i18n)
 - `docs/DATA-SCHEMA.md`: data format
-- `docs/zadani/`: task specs for the worker agents
+- `docs/NAVRHY-NASTROJU.md`: proposals for further tools
+- `docs/zadani/`: task specs for the worker agents (VC-1 …)
