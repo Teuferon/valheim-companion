@@ -1165,6 +1165,27 @@ body {
   text-decoration: underline;
 }
 
+.card-calculator-link {
+  margin: 0;
+  padding: 12px 16px;
+  background-color: var(--bg-card);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.card-calc-link {
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.card-calc-link:hover,
+.card-calc-link:focus-visible {
+  color: var(--accent-gold-hover);
+  text-decoration: underline;
+}
+
 /* Fish Compact Grid */
 .fish-grid {
   display: grid;

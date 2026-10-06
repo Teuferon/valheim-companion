@@ -1815,6 +1815,21 @@ globalThis.VC_MESSAGES = {
     "ja": "詳細な内訳 → ダメージ計算機",
     "id": "Rincian lengkap → Kalkulator kerusakan"
   },
+  "Compare all weapons in the Damage Calculator →": {
+    "en": "Compare all weapons in the Damage Calculator →",
+    "cs": "Porovnat všechny zbraně v Damage Calculator →",
+    "de": "Alle Waffen im Damage Calculator vergleichen →",
+    "es": "Comparar todas las armas en Damage Calculator →",
+    "fr": "Comparer toutes les armes dans Damage Calculator →",
+    "pt": "Comparar todas as armas no Damage Calculator →",
+    "zh": "在 Damage Calculator 中比较所有武器 →",
+    "hi": "Damage Calculator में सभी हथियारों की तुलना करें →",
+    "ar": "قارن جميع الأسلحة في Damage Calculator ←",
+    "bn": "Damage Calculator-এ সব অস্ত্র তুলনা করুন →",
+    "ru": "Сравнить всё оружие в Damage Calculator →",
+    "ja": "Damage Calculator ですべての武器を比較 →",
+    "id": "Bandingkan semua senjata di Damage Calculator →"
+  },
   "Every weapon and ammo, with your damage.": {
     "en": "Every weapon and ammo, with your damage.",
     "cs": "Všechny zbraně a munice s tvým poškozením.",
