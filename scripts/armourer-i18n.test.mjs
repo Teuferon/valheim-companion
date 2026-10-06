@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import vm from 'node:vm';
 
 const context = vm.createContext({ console });
+vm.runInContext(readFileSync('shared/shopping/core.js', 'utf8'), context);
 vm.runInContext(readFileSync('apps/smithy/assets/app.js', 'utf8'), context);
 vm.runInContext(readFileSync('apps/smithy/data/data.js', 'utf8').replace('window.VA_DATA', 'globalThis.VA_DATA'), context);
 const { calculateCartMaterials } = context.VACart;

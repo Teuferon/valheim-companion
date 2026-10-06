@@ -89,7 +89,7 @@ test('search index builds valid bundle under 150 kB with required fields', () =>
     assert.ok(typeof item.names === 'object' && item.names !== null);
     assert.ok(item.biome === null || typeof item.biome === 'string');
     assert.ok(typeof item.order === 'number');
-    assert.ok(typeof item.url === 'string' && (item.url.startsWith('/bestiary/') || item.url.startsWith('/smithy/')));
+    assert.ok(typeof item.url === 'string' && (item.url.startsWith('/bestiary/') || item.url.startsWith('/smithy/') || item.url.startsWith('/provisions/')));
     assert.ok(item.image === null || typeof item.image === 'string');
   }
 });
@@ -138,7 +138,7 @@ test('spoilers hide locked biomes and count remaining matches', () => {
   assert.equal(unlockedResult.lockedCount, 0);
 });
 
-test('deep links route correctly to bestiary and smithy', () => {
+test('deep links route correctly to bestiary, smithy and provisions', () => {
   const sandbox = {};
   vm.runInNewContext(readFileSync('apps/hub/data/search.js', 'utf8'), sandbox);
   const index = sandbox.VC_SEARCH_INDEX;
@@ -154,6 +154,14 @@ test('deep links route correctly to bestiary and smithy', () => {
 
   const weapon = index.find(item => item.type === 'weapon' && item.name === 'Abyssal Harpoon');
   assert.equal(weapon.url, '/smithy/#item=abyssal-harpoon');
+
+  const food = JSON.parse(readFileSync('data/food.json', 'utf8'));
+  assert.ok(food.length > 0);
+  for (const provision of food) {
+    const entry = index.find(item => item.type === 'food' && item.name === provision.name);
+    assert.ok(entry, `${provision.name} must be searchable`);
+    assert.equal(entry.url, `/provisions/#item=${encodeURIComponent(provision.id)}`);
+  }
 });
 
 test('hub message catalog covers all 13 languages with zero missing translations', () => {

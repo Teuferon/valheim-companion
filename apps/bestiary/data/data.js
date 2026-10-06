@@ -31769,6 +31769,122 @@ window.VC_DATA = {
         "ru": "Шкура пеплозавра"
       }
     },
+    "asksvin-tail": {
+      "id": "asksvin-tail",
+      "name": "Asksvin Tail",
+      "provisions": true,
+      "image": "../provisions/img/items/asksvin-tail.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Asksvin",
+          "kind": "creature",
+          "creatureId": "asksvin",
+          "biomes": [
+            "ashlands"
+          ]
+        },
+        {
+          "text": "Asksvin Hatchling",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Asksvin_Tail",
+      "names": {
+        "cs": "Asksvinův ocas",
+        "ru": "Хвост пеплозавра"
+      }
+    },
+    "barley": {
+      "id": "barley",
+      "name": "Barley",
+      "provisions": true,
+      "image": "../provisions/img/items/barley.png",
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "Fuling Villages in the Plains biome.",
+          "kind": "location"
+        },
+        {
+          "text": "Abandoned Village Barrels.",
+          "kind": "location"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Barley",
+      "names": {
+        "cs": "Ječmen",
+        "de": "Gerste",
+        "fr": "Orge",
+        "ru": "Ячмень"
+      }
+    },
+    "barley-flour": {
+      "id": "barley-flour",
+      "name": "Barley Flour",
+      "provisions": true,
+      "image": "../provisions/img/items/barley-flour.png",
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "Windmill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Windmill",
+        "materials": [
+          {
+            "item": "barley",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Barley_Flour",
+      "names": {
+        "cs": "Mouka z ječmene",
+        "ru": "Ячменная мука"
+      }
+    },
+    "barley-wine-base-fire-resistance": {
+      "id": "barley-wine-base-fire-resistance",
+      "name": "Barley Wine Base: Fire Resistance",
+      "provisions": true,
+      "image": "../provisions/img/items/barley-wine-base-fire-resistance.png",
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "Mead Ketill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Mead Ketill",
+        "materials": [
+          {
+            "item": "barley",
+            "amount": 10
+          },
+          {
+            "item": "cloudberries",
+            "amount": 10
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Barley_Wine_Base%3A_Fire_Resistance",
+      "names": {
+        "cs": "Ječmenné pivo na odolnost vůči ohni",
+        "ru": "Огненное ячменное вино"
+      }
+    },
     "bear-hide": {
       "id": "bear-hide",
       "name": "Bear Hide",
@@ -31797,6 +31913,37 @@ window.VC_DATA = {
       "wiki": "https://valheim.weirdgloop.org/w/Bear_Hide",
       "names": {
         "ru": "Медвежья шкура"
+      }
+    },
+    "bear-meat": {
+      "id": "bear-meat",
+      "name": "Bear Meat",
+      "provisions": true,
+      "image": "../provisions/img/items/bear-meat.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Bear",
+          "kind": "creature",
+          "creatureId": "bear",
+          "biomes": [
+            "black-forest"
+          ]
+        },
+        {
+          "text": "Vile",
+          "kind": "creature",
+          "creatureId": "vile",
+          "biomes": [
+            "plains"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Bear_Meat",
+      "names": {
+        "ru": "Медвежье мясо"
       }
     },
     "bear-paw": {
@@ -31903,6 +32050,26 @@ window.VC_DATA = {
         "ru": "Желчный мешок"
       }
     },
+    "black-marble": {
+      "id": "black-marble",
+      "name": "Black Marble",
+      "provisions": true,
+      "image": "../provisions/img/items/black-marble.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Giant Remains and various structures in the Mistlands biome",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/black_marble",
+      "names": {
+        "cs": "Černý mramor",
+        "ru": "Черный мрамор"
+      }
+    },
     "black-metal": {
       "id": "black-metal",
       "name": "Black Metal",
@@ -31980,6 +32147,56 @@ window.VC_DATA = {
         "ru": "Кусок черного металла"
       }
     },
+    "blood-clot": {
+      "id": "blood-clot",
+      "name": "Blood Clot",
+      "provisions": true,
+      "image": "../provisions/img/items/blood-clot.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Ticks",
+          "kind": "creature",
+          "creatureId": "tick",
+          "biomes": [
+            "mistlands"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Blood_Clot",
+      "names": {
+        "cs": "Krevní sraženina",
+        "ru": "Кровавый сгусток"
+      }
+    },
+    "bloodbag": {
+      "id": "bloodbag",
+      "name": "Bloodbag",
+      "provisions": true,
+      "image": "../provisions/img/items/bloodbag.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Leeches",
+          "kind": "creature",
+          "creatureId": "leech",
+          "biomes": [
+            "swamp"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Bloodbag",
+      "names": {
+        "cs": "Vak s krví",
+        "de": "Blutsack",
+        "fr": "Poche de sang",
+        "ru": "Туша"
+      }
+    },
     "bloodgold": {
       "id": "bloodgold",
       "name": "Bloodgold",
@@ -32045,6 +32262,33 @@ window.VC_DATA = {
         "ru": "Черника"
       }
     },
+    "boar-meat": {
+      "id": "boar-meat",
+      "name": "Boar Meat",
+      "provisions": true,
+      "image": "../provisions/img/items/boar-meat.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Boar",
+          "kind": "creature",
+          "creatureId": "boar",
+          "biomes": [
+            "meadows"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Boar_Meat",
+      "names": {
+        "cs": "Kančí maso",
+        "de": "Wildschweinfleisch",
+        "fr": "Viande de sanglier",
+        "pt": "Carne de Javali",
+        "ru": "Кабанина"
+      }
+    },
     "bone-fragments": {
       "id": "bone-fragments",
       "name": "Bone Fragments",
@@ -32089,6 +32333,30 @@ window.VC_DATA = {
         "ru": "Обломки костей"
       }
     },
+    "bonemaw-meat": {
+      "id": "bonemaw-meat",
+      "name": "Bonemaw Meat",
+      "provisions": true,
+      "image": "../provisions/img/items/bonemaw-meat.png",
+      "biome": "ashlands",
+      "tier": 8,
+      "sources": [
+        {
+          "text": "Bonemaw",
+          "kind": "creature",
+          "creatureId": "bonemaw",
+          "biomes": [
+            "ashlands"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Bonemaw_Meat",
+      "names": {
+        "cs": "Kostichřtánovo maso",
+        "ru": "Мясо Костепасти"
+      }
+    },
     "bonemaw-tooth": {
       "id": "bonemaw-tooth",
       "name": "Bonemaw Tooth",
@@ -32105,6 +32373,64 @@ window.VC_DATA = {
       "wiki": "https://valheim.weirdgloop.org/w/Bonemaw_Tooth",
       "names": {
         "ru": "Зуб Костепасти"
+      }
+    },
+    "bread": {
+      "id": "bread",
+      "name": "Bread",
+      "provisions": true,
+      "image": "../provisions/img/items/bread.png",
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "Stone Oven",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Stone Oven",
+        "materials": [
+          {
+            "item": "bread-dough",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Bread",
+      "names": {
+        "cs": "Chleba",
+        "ru": "Хлеб"
+      }
+    },
+    "bread-dough": {
+      "id": "bread-dough",
+      "name": "Bread Dough",
+      "provisions": true,
+      "image": "../provisions/img/items/bread-dough.png",
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "Food Preparation Table",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Food Preparation Table",
+        "materials": [
+          {
+            "item": "barley-flour",
+            "amount": 10
+          }
+        ],
+        "yields": 2
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Bread_Dough",
+      "names": {
+        "cs": "Chleba",
+        "ru": "Хлеб"
       }
     },
     "bronze": {
@@ -32177,6 +32503,28 @@ window.VC_DATA = {
         "de": "Chitinpanzer",
         "fr": "Carapace",
         "ru": "Панцирь"
+      }
+    },
+    "carrot": {
+      "id": "carrot",
+      "name": "Carrot",
+      "provisions": true,
+      "image": "../provisions/img/items/carrot.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Farming Carrot Seeds",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Carrot",
+      "names": {
+        "cs": "Mrkev",
+        "de": "Karotte",
+        "fr": "Carotte",
+        "ru": "Морковь"
       }
     },
     "cast-breastplate-of-the-protector": {
@@ -33202,6 +33550,38 @@ window.VC_DATA = {
         "ru": "Обугленная кость"
       }
     },
+    "chicken-meat": {
+      "id": "chicken-meat",
+      "name": "Chicken Meat",
+      "provisions": true,
+      "image": "../provisions/img/items/chicken-meat.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Chicken",
+          "kind": "creature",
+          "creatureId": "chicken",
+          "biomes": [
+            "plains"
+          ]
+        },
+        {
+          "text": "Hen",
+          "kind": "creature",
+          "creatureId": "hen",
+          "biomes": [
+            "plains"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Chicken_Meat",
+      "names": {
+        "cs": "Kuřecí maso",
+        "ru": "Курятина"
+      }
+    },
     "chitin": {
       "id": "chitin",
       "name": "Chitin",
@@ -33228,6 +33608,28 @@ window.VC_DATA = {
         "cs": "Chitin",
         "fr": "Chitine",
         "ru": "Хитин"
+      }
+    },
+    "cloudberries": {
+      "id": "cloudberries",
+      "name": "Cloudberries",
+      "provisions": true,
+      "image": "../provisions/img/items/cloudberries.png",
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "Plains biome",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Cloudberries",
+      "names": {
+        "cs": "Morušky",
+        "de": "Moltebeeren",
+        "fr": "Plaquebières",
+        "ru": "Морошка"
       }
     },
     "coal": {
@@ -33265,6 +33667,240 @@ window.VC_DATA = {
         "de": "Kohle",
         "fr": "Charbon",
         "ru": "Уголь"
+      }
+    },
+    "cooked-bear-meat": {
+      "id": "cooked-bear-meat",
+      "name": "Cooked Bear Meat",
+      "provisions": true,
+      "image": "../provisions/img/items/cooked-bear-meat.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Cooking Station",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Cooking Station",
+        "materials": [
+          {
+            "item": "bear-meat",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Cooked_Bear_Meat",
+      "names": {
+        "ru": "Медвежье мясо"
+      }
+    },
+    "cooked-boar-meat": {
+      "id": "cooked-boar-meat",
+      "name": "Cooked Boar Meat",
+      "provisions": true,
+      "image": "../provisions/img/items/cooked-boar-meat.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Cooking Station",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Cooking Station",
+        "materials": [
+          {
+            "item": "boar-meat",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Cooked_boar_meat",
+      "names": {
+        "cs": "Kančí maso",
+        "de": "Wildschweinfleisch",
+        "fr": "Viande de sanglier",
+        "pt": "Carne de Javali",
+        "ru": "Кабанина"
+      }
+    },
+    "cooked-deer-meat": {
+      "id": "cooked-deer-meat",
+      "name": "Cooked Deer Meat",
+      "provisions": true,
+      "image": "../provisions/img/items/cooked-deer-meat.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Cooking Station",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Cooking Station",
+        "materials": [
+          {
+            "item": "deer-meat",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Cooked_deer_meat",
+      "names": {
+        "cs": "Jelení maso",
+        "de": "Hirschfleisch",
+        "fr": "Viande de cerf",
+        "ru": "Оленина"
+      }
+    },
+    "cooked-fish": {
+      "id": "cooked-fish",
+      "name": "Cooked Fish",
+      "provisions": true,
+      "image": "../provisions/img/items/cooked-fish.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Cooking Station",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Cooking Station",
+        "materials": [
+          {
+            "item": "raw-fish",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Cooked_fish",
+      "names": {
+        "cs": "Syrová ryba",
+        "fr": "Poisson cru",
+        "ru": "Сырая рыба"
+      }
+    },
+    "cooked-moose-meat": {
+      "id": "cooked-moose-meat",
+      "name": "Cooked Moose Meat",
+      "provisions": true,
+      "image": "../provisions/img/items/cooked-moose-meat.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Iron Cooking Station",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Iron Cooking Station",
+        "materials": [
+          {
+            "item": "moose-meat",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Cooked_Moose_Meat",
+      "names": {}
+    },
+    "cooked-serpent-meat": {
+      "id": "cooked-serpent-meat",
+      "name": "Cooked Serpent Meat",
+      "provisions": true,
+      "image": "../provisions/img/items/cooked-serpent-meat.png",
+      "biome": "ocean",
+      "tier": 3,
+      "sources": [
+        {
+          "text": "Iron Cooking Station",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Iron Cooking Station",
+        "materials": [
+          {
+            "item": "serpent-meat",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Cooked_Serpent_Meat",
+      "names": {
+        "cs": "Maso z hada",
+        "ru": "Мясо змея"
+      }
+    },
+    "cooked-asksvin-tail": {
+      "id": "cooked-asksvin-tail",
+      "name": "Cooked asksvin tail",
+      "provisions": true,
+      "image": "../provisions/img/items/cooked-asksvin-tail.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Iron Cooking Station",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Iron Cooking Station",
+        "materials": [
+          {
+            "item": "asksvin-tail",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Cooked_Asksvin_Tail",
+      "names": {
+        "cs": "Asksvinův ocas",
+        "ru": "Хвост пеплозавра"
+      }
+    },
+    "cooked-seeker-meat": {
+      "id": "cooked-seeker-meat",
+      "name": "Cooked seeker meat",
+      "provisions": true,
+      "image": "../provisions/img/items/cooked-seeker-meat.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Iron Cooking Station",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Iron Cooking Station",
+        "materials": [
+          {
+            "item": "seeker-meat",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Cooked_seeker_meat",
+      "names": {
+        "cs": "Maso Hledačů",
+        "ru": "Мясо искателя"
       }
     },
     "copper": {
@@ -33436,6 +34072,29 @@ window.VC_DATA = {
         "ru": "Категория:Трофеи"
       }
     },
+    "cured-squirrel-hamstring": {
+      "id": "cured-squirrel-hamstring",
+      "name": "Cured Squirrel Hamstring",
+      "provisions": true,
+      "image": "../provisions/img/items/cured-squirrel-hamstring.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "The Bog Witch",
+          "kind": "npc"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Cured_Squirrel_Hamstring",
+      "unlock": {
+        "biome": "swamp",
+        "tier": 4
+      },
+      "names": {
+        "ru": "Дубленые беличьи сухожилия"
+      }
+    },
     "curious-axe-head": {
       "id": "curious-axe-head",
       "name": "Curious Axe Head",
@@ -33499,6 +34158,71 @@ window.VC_DATA = {
         "de": "Hirschfell",
         "fr": "Peau de cerf",
         "ru": "Шкура оленя"
+      }
+    },
+    "deer-meat": {
+      "id": "deer-meat",
+      "name": "Deer Meat",
+      "provisions": true,
+      "image": "../provisions/img/items/deer-meat.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Deer",
+          "kind": "creature",
+          "creatureId": "deer",
+          "biomes": [
+            "meadows",
+            "black-forest"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Deer_Meat",
+      "names": {
+        "cs": "Jelení maso",
+        "de": "Hirschfleisch",
+        "fr": "Viande de cerf",
+        "ru": "Оленина"
+      }
+    },
+    "deer-stew": {
+      "id": "deer-stew",
+      "name": "Deer Stew",
+      "provisions": true,
+      "image": "../provisions/img/items/deer-stew.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Cauldron",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Cauldron",
+        "materials": [
+          {
+            "item": "cooked-deer-meat",
+            "amount": 1
+          },
+          {
+            "item": "blueberries",
+            "amount": 1
+          },
+          {
+            "item": "carrot",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Deer_Stew",
+      "names": {
+        "cs": "Jelení polévka",
+        "fr": "Râgout de cerf",
+        "ru": "Рагу из оленины"
       }
     },
     "deer-trophy": {
@@ -33703,6 +34427,34 @@ window.VC_DATA = {
         "ru": "Дирнвин"
       }
     },
+    "egg": {
+      "id": "egg",
+      "name": "Egg",
+      "provisions": true,
+      "image": "../provisions/img/items/egg.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Haldor",
+          "kind": "npc"
+        },
+        {
+          "text": "Hen",
+          "kind": "creature",
+          "creatureId": "hen",
+          "biomes": [
+            "plains"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Egg",
+      "names": {
+        "cs": "Vejce",
+        "ru": "Яйцо"
+      }
+    },
     "elaking-hair-bundle": {
       "id": "elaking-hair-bundle",
       "name": "Elaking Hair Bundle",
@@ -33738,6 +34490,45 @@ window.VC_DATA = {
       "recipe": null,
       "wiki": "https://valheim.weirdgloop.org/w/Embers",
       "names": {}
+    },
+    "entrails": {
+      "id": "entrails",
+      "name": "Entrails",
+      "provisions": true,
+      "image": "../provisions/img/items/entrails.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Draugr",
+          "kind": "creature",
+          "creatureId": "draugr",
+          "biomes": [
+            "swamp",
+            "mountain"
+          ]
+        },
+        {
+          "text": "Draugr Elite",
+          "kind": "creature",
+          "creatureId": "draugr-elite",
+          "biomes": [
+            "swamp"
+          ]
+        },
+        {
+          "text": "Meat piles",
+          "kind": "location"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Entrails",
+      "names": {
+        "cs": "Vnitřnosti",
+        "de": "Innereien",
+        "fr": "Entrailles",
+        "ru": "Потроха"
+      }
     },
     "feathers": {
       "id": "feathers",
@@ -33821,6 +34612,30 @@ window.VC_DATA = {
       "names": {
         "cs": "Houslihlavka",
         "ru": "Рахис"
+      }
+    },
+    "fiery-spice-powder": {
+      "id": "fiery-spice-powder",
+      "name": "Fiery Spice Powder",
+      "provisions": true,
+      "image": "../provisions/img/items/fiery-spice-powder.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "The Bog Witch",
+          "kind": "npc"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Fiery_Spice_Powder",
+      "unlock": {
+        "biome": "deep-north",
+        "tier": 9,
+        "boss": "fader"
+      },
+      "names": {
+        "ru": "Порошок пламенных пряностей"
       }
     },
     "finewood": {
@@ -33986,6 +34801,30 @@ window.VC_DATA = {
         "ru": "Кремень"
       }
     },
+    "fragrant-bundle": {
+      "id": "fragrant-bundle",
+      "name": "Fragrant Bundle",
+      "provisions": true,
+      "image": "../provisions/img/items/fragrant-bundle.png",
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "The Bog Witch",
+          "kind": "npc"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Fragrant_Bundle",
+      "unlock": {
+        "biome": "plains",
+        "tier": 6,
+        "boss": "moder"
+      },
+      "names": {
+        "ru": "Ароматный букет"
+      }
+    },
     "freeze-gland": {
       "id": "freeze-gland",
       "name": "Freeze Gland",
@@ -34009,6 +34848,29 @@ window.VC_DATA = {
         "de": "Gefrorene Drüse",
         "fr": "Glande gelée",
         "ru": "Морозная железа"
+      }
+    },
+    "fresh-seaweed": {
+      "id": "fresh-seaweed",
+      "name": "Fresh Seaweed",
+      "provisions": true,
+      "image": "../provisions/img/items/fresh-seaweed.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "The Bog Witch",
+          "kind": "npc"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Fresh_Seaweed",
+      "unlock": {
+        "biome": "swamp",
+        "tier": 4
+      },
+      "names": {
+        "ru": "Свежие водоросли"
       }
     },
     "frostfire-essence": {
@@ -34061,6 +34923,30 @@ window.VC_DATA = {
         "de": "Riesenhering",
         "fr": "Guinée saumon",
         "ru": "Гигантская сельдь"
+      }
+    },
+    "grasslands-herbalist-harvest": {
+      "id": "grasslands-herbalist-harvest",
+      "name": "Grasslands Herbalist Harvest",
+      "provisions": true,
+      "image": "../provisions/img/items/grasslands-herbalist-harvest.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "The Bog Witch",
+          "kind": "npc"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Grasslands_Herbalist_Harvest",
+      "unlock": {
+        "biome": "mistlands",
+        "tier": 7,
+        "boss": "yagluth"
+      },
+      "names": {
+        "ru": "Урожай лугового травника"
       }
     },
     "greydwarf-eye": {
@@ -34179,6 +35065,54 @@ window.VC_DATA = {
         "ru": "Твердый рог"
       }
     },
+    "hare-meat": {
+      "id": "hare-meat",
+      "name": "Hare Meat",
+      "provisions": true,
+      "image": "../provisions/img/items/hare-meat.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Hare",
+          "kind": "creature",
+          "creatureId": "hare",
+          "biomes": [
+            "mistlands"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Hare_Meat",
+      "names": {
+        "cs": "Zaječí maso",
+        "ru": "Зайчатина"
+      }
+    },
+    "herbs-of-the-hidden-hills": {
+      "id": "herbs-of-the-hidden-hills",
+      "name": "Herbs of the Hidden Hills",
+      "provisions": true,
+      "image": "../provisions/img/items/herbs-of-the-hidden-hills.png",
+      "biome": "ashlands",
+      "tier": 8,
+      "sources": [
+        {
+          "text": "The Bog Witch",
+          "kind": "npc"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Herbs_of_the_Hidden_Hills",
+      "unlock": {
+        "biome": "ashlands",
+        "tier": 8,
+        "boss": "the-queen"
+      },
+      "names": {
+        "ru": "Травы тайных холмов"
+      }
+    },
     "hexen-trophy": {
       "id": "hexen-trophy",
       "name": "Hexen Trophy",
@@ -34200,6 +35134,27 @@ window.VC_DATA = {
       "names": {
         "cs": "Trofeje",
         "ru": "Категория:Трофеи"
+      }
+    },
+    "honey": {
+      "id": "honey",
+      "name": "Honey",
+      "provisions": true,
+      "image": "../provisions/img/items/honey.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Beehive",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Honey",
+      "names": {
+        "cs": "Med",
+        "fr": "Miel",
+        "ru": "Мед"
       }
     },
     "ice": {
@@ -34316,6 +35271,73 @@ window.VC_DATA = {
         "ru": "Нефрит"
       }
     },
+    "jotun-puffs": {
+      "id": "jotun-puffs",
+      "name": "Jotun Puffs",
+      "provisions": true,
+      "image": "../provisions/img/items/jotun-puffs.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Gathered in Mistlands and farmable",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Jotun_Puffs",
+      "names": {
+        "cs": "Jótunnské obláčky",
+        "ru": "Гриб Йотунов"
+      }
+    },
+    "kale": {
+      "id": "kale",
+      "name": "Kale",
+      "provisions": true,
+      "image": "../provisions/img/items/kale.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Cultivator",
+          "kind": "other"
+        }
+      ],
+      "recipe": {
+        "station": "Cultivator",
+        "materials": [
+          {
+            "item": "kale-seeds",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Kale",
+      "names": {}
+    },
+    "kale-seeds": {
+      "id": "kale-seeds",
+      "name": "Kale Seeds",
+      "provisions": true,
+      "image": "../provisions/img/items/kale-seeds.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Kale plants in the Deep North",
+          "kind": "other"
+        },
+        {
+          "text": "Granary in Abandoned Village",
+          "kind": "location"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Kale_Seeds",
+      "names": {}
+    },
     "leather-scraps": {
       "id": "leather-scraps",
       "name": "Leather Scraps",
@@ -34402,6 +35424,31 @@ window.VC_DATA = {
         "ru": "Льняная нить"
       }
     },
+    "lingonberries": {
+      "id": "lingonberries",
+      "name": "Lingonberries",
+      "provisions": true,
+      "image": "../provisions/img/items/lingonberries.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Lingonberry Bush",
+          "kind": "other"
+        },
+        {
+          "text": "Captive Fuling",
+          "kind": "creature",
+          "creatureId": "captive-fuling",
+          "biomes": [
+            "deep-north"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Lingonberries",
+      "names": {}
+    },
     "liquid-frost": {
       "id": "liquid-frost",
       "name": "Liquid Frost",
@@ -34447,6 +35494,59 @@ window.VC_DATA = {
       "wiki": "https://valheim.weirdgloop.org/w/Long_Claws",
       "names": {}
     },
+    "lox-meat": {
+      "id": "lox-meat",
+      "name": "Lox Meat",
+      "provisions": true,
+      "image": "../provisions/img/items/lox-meat.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Lox",
+          "kind": "creature",
+          "creatureId": "lox",
+          "biomes": [
+            "plains"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Lox_Meat",
+      "names": {
+        "cs": "Maso z Loxe",
+        "ru": "Мясо быкоящера"
+      }
+    },
+    "lox-meat-pie": {
+      "id": "lox-meat-pie",
+      "name": "Lox Meat Pie",
+      "provisions": true,
+      "image": "../provisions/img/items/lox-meat-pie.png",
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "Stone Oven",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Stone Oven",
+        "materials": [
+          {
+            "item": "unbaked-lox-pie",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Lox_Meat_Pie",
+      "names": {
+        "cs": "Masový koláč z Loxe",
+        "ru": "Пирог из мяса быкоящера"
+      }
+    },
     "lox-pelt": {
       "id": "lox-pelt",
       "name": "Lox Pelt",
@@ -34470,6 +35570,26 @@ window.VC_DATA = {
         "de": "Lox-Pelz",
         "fr": "Peau de Lox",
         "ru": "Шкура быкоящера"
+      }
+    },
+    "magecap": {
+      "id": "magecap",
+      "name": "Magecap",
+      "provisions": true,
+      "image": "../provisions/img/items/magecap.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Gathered in Mistlands and farmable",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Magecap",
+      "names": {
+        "cs": "Mágovka",
+        "ru": "Волшебный гриб"
       }
     },
     "magmafish": {
@@ -34516,6 +35636,758 @@ window.VC_DATA = {
         "ru": "Мандибула"
       }
     },
+    "mead-base-anti-sting": {
+      "id": "mead-base-anti-sting",
+      "name": "Mead Base: Anti-Sting",
+      "provisions": true,
+      "image": "../provisions/img/items/mead-base-anti-sting.png",
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "Mead Ketill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Mead Ketill",
+        "materials": [
+          {
+            "item": "cloudberries",
+            "amount": 10
+          },
+          {
+            "item": "grouper",
+            "amount": 3
+          },
+          {
+            "item": "fragrant-bundle",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mead_Base%3A_Anti-Sting",
+      "names": {
+        "cs": "Roztok proti štípancům",
+        "ru": "Средство от смертожалов"
+      }
+    },
+    "mead-base-lightfoot": {
+      "id": "mead-base-lightfoot",
+      "name": "Mead Base: Lightfoot",
+      "provisions": true,
+      "image": "../provisions/img/items/mead-base-lightfoot.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Mead Ketill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Mead Ketill",
+        "materials": [
+          {
+            "item": "scale-hide",
+            "amount": 2
+          },
+          {
+            "item": "feathers",
+            "amount": 5
+          },
+          {
+            "item": "magecap",
+            "amount": 5
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mead_Base%3A_Lightfoot",
+      "names": {
+        "cs": "Lehkonohá medovina",
+        "ru": "Медовуха Легкоступа"
+      }
+    },
+    "mead-base-ratatosk": {
+      "id": "mead-base-ratatosk",
+      "name": "Mead Base: Ratatosk",
+      "provisions": true,
+      "image": "../provisions/img/items/mead-base-ratatosk.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Mead Ketill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Mead Ketill",
+        "materials": [
+          {
+            "item": "honey",
+            "amount": 10
+          },
+          {
+            "item": "blueberries",
+            "amount": 10
+          },
+          {
+            "item": "cured-squirrel-hamstring",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mead_Base%3A_Ratatosk",
+      "names": {
+        "cs": "Ratatoskův tonik",
+        "ru": "Эликсир Рататоска"
+      }
+    },
+    "mead-base-troll-endurance": {
+      "id": "mead-base-troll-endurance",
+      "name": "Mead Base: Troll Endurance",
+      "provisions": true,
+      "image": "../provisions/img/items/mead-base-troll-endurance.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Mead Ketill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Mead Ketill",
+        "materials": [
+          {
+            "item": "trollfish",
+            "amount": 2
+          },
+          {
+            "item": "honey",
+            "amount": 10
+          },
+          {
+            "item": "powdered-dragon-eggshells",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mead_Base%3A_Troll_Endurance",
+      "names": {
+        "cs": "Medovina trollí výdrže",
+        "ru": "Медовуха силы тролля"
+      }
+    },
+    "mead-base-animal-whispers": {
+      "id": "mead-base-animal-whispers",
+      "name": "Mead base: Animal whispers",
+      "provisions": true,
+      "image": "../provisions/img/items/mead-base-animal-whispers.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Mead Ketill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Mead Ketill",
+        "materials": [
+          {
+            "item": "onion",
+            "amount": 5
+          },
+          {
+            "item": "carrot",
+            "amount": 10
+          },
+          {
+            "item": "pungent-pebbles",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mead_Base%3A_Animal_Whispers",
+      "names": {
+        "cs": "Nápoj zvířecího šepotu",
+        "ru": "Отвар звериного шепота"
+      }
+    },
+    "mead-base-berserkir": {
+      "id": "mead-base-berserkir",
+      "name": "Mead base: Berserkir",
+      "provisions": true,
+      "image": "../provisions/img/items/mead-base-berserkir.png",
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "Mead Ketill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Mead Ketill",
+        "materials": [
+          {
+            "item": "mushroom",
+            "amount": 10
+          },
+          {
+            "item": "yellow-mushroom",
+            "amount": 10
+          },
+          {
+            "item": "toadstool",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mead_Base%3A_Berserkir",
+      "names": {
+        "cs": "Berserkská medovina",
+        "ru": "Медовуха берсеркира"
+      }
+    },
+    "mead-base-frost-resistance": {
+      "id": "mead-base-frost-resistance",
+      "name": "Mead base: Frost resistance",
+      "provisions": true,
+      "image": "../provisions/img/items/mead-base-frost-resistance.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Mead Ketill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Mead Ketill",
+        "materials": [
+          {
+            "item": "honey",
+            "amount": 10
+          },
+          {
+            "item": "thistle",
+            "amount": 5
+          },
+          {
+            "item": "bloodbag",
+            "amount": 2
+          },
+          {
+            "item": "greydwarf-eye",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mead_Base%3A_Frost_Resistance",
+      "names": {
+        "cs": "Medovina proti mrazu",
+        "ru": "Морозоустойчивая медовуха"
+      }
+    },
+    "mead-base-lingering-eitr": {
+      "id": "mead-base-lingering-eitr",
+      "name": "Mead base: Lingering eitr",
+      "provisions": true,
+      "image": "../provisions/img/items/mead-base-lingering-eitr.png",
+      "biome": "ashlands",
+      "tier": 8,
+      "sources": [
+        {
+          "text": "Mead Ketill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Mead Ketill",
+        "materials": [
+          {
+            "item": "sap",
+            "amount": 10
+          },
+          {
+            "item": "vineberry-cluster",
+            "amount": 10
+          },
+          {
+            "item": "magecap",
+            "amount": 10
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mead_Base%3A_Lingering_Eitr",
+      "names": {
+        "cs": "Trvající éitrová medovina",
+        "ru": "Мощная медовуха Эйтра"
+      }
+    },
+    "mead-base-lingering-health": {
+      "id": "mead-base-lingering-health",
+      "name": "Mead base: Lingering health",
+      "provisions": true,
+      "image": "../provisions/img/items/mead-base-lingering-health.png",
+      "biome": "ashlands",
+      "tier": 8,
+      "sources": [
+        {
+          "text": "Mead Ketill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Mead Ketill",
+        "materials": [
+          {
+            "item": "sap",
+            "amount": 10
+          },
+          {
+            "item": "vineberry-cluster",
+            "amount": 10
+          },
+          {
+            "item": "smoke-puff",
+            "amount": 10
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mead_Base%3A_Lingering_Health",
+      "names": {
+        "cs": "Trvající léčivá medovina",
+        "ru": "Мощная медовуха лечения"
+      }
+    },
+    "mead-base-lingering-stamina": {
+      "id": "mead-base-lingering-stamina",
+      "name": "Mead base: Lingering stamina",
+      "provisions": true,
+      "image": "../provisions/img/items/mead-base-lingering-stamina.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Mead Ketill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Mead Ketill",
+        "materials": [
+          {
+            "item": "sap",
+            "amount": 10
+          },
+          {
+            "item": "cloudberries",
+            "amount": 10
+          },
+          {
+            "item": "jotun-puffs",
+            "amount": 10
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mead_Base%3A_Lingering_Stamina",
+      "names": {
+        "cs": "Medovina trvající výdrže",
+        "ru": "Большая медовуха выносливости"
+      }
+    },
+    "mead-base-major-healing": {
+      "id": "mead-base-major-healing",
+      "name": "Mead base: Major healing",
+      "provisions": true,
+      "image": "../provisions/img/items/mead-base-major-healing.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Mead Ketill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Mead Ketill",
+        "materials": [
+          {
+            "item": "honey",
+            "amount": 10
+          },
+          {
+            "item": "blood-clot",
+            "amount": 4
+          },
+          {
+            "item": "royal-jelly",
+            "amount": 5
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mead_Base%3A_Major_Healing",
+      "names": {
+        "cs": "Velká Léčivá Medovina",
+        "ru": "Большая медовуха лечения"
+      }
+    },
+    "mead-base-medium-healing": {
+      "id": "mead-base-medium-healing",
+      "name": "Mead base: Medium healing",
+      "provisions": true,
+      "image": "../provisions/img/items/mead-base-medium-healing.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Mead Ketill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Mead Ketill",
+        "materials": [
+          {
+            "item": "honey",
+            "amount": 10
+          },
+          {
+            "item": "bloodbag",
+            "amount": 4
+          },
+          {
+            "item": "raspberries",
+            "amount": 10
+          },
+          {
+            "item": "dandelion",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mead_Base%3A_Medium_Healing",
+      "names": {
+        "cs": "Střední léčivá medovina",
+        "ru": "Средняя медовуха лечения"
+      }
+    },
+    "mead-base-medium-stamina": {
+      "id": "mead-base-medium-stamina",
+      "name": "Mead base: Medium stamina",
+      "provisions": true,
+      "image": "../provisions/img/items/mead-base-medium-stamina.png",
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "Mead Ketill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Mead Ketill",
+        "materials": [
+          {
+            "item": "honey",
+            "amount": 10
+          },
+          {
+            "item": "cloudberries",
+            "amount": 10
+          },
+          {
+            "item": "yellow-mushroom",
+            "amount": 10
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mead_Base%3A_Medium_Stamina",
+      "names": {
+        "cs": "Střední medovina na výdrž",
+        "ru": "Средняя медовуха выносливости"
+      }
+    },
+    "mead-base-minor-eitr": {
+      "id": "mead-base-minor-eitr",
+      "name": "Mead base: Minor eitr",
+      "provisions": true,
+      "image": "../provisions/img/items/mead-base-minor-eitr.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Mead Ketill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Mead Ketill",
+        "materials": [
+          {
+            "item": "honey",
+            "amount": 10
+          },
+          {
+            "item": "sap",
+            "amount": 5
+          },
+          {
+            "item": "jotun-puffs",
+            "amount": 2
+          },
+          {
+            "item": "magecap",
+            "amount": 5
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mead_Base%3A_Minor_Eitr",
+      "names": {
+        "cs": "Slabší Éitrová medovina",
+        "ru": "Малая медовуха Эйтра"
+      }
+    },
+    "mead-base-minor-healing": {
+      "id": "mead-base-minor-healing",
+      "name": "Mead base: Minor healing",
+      "provisions": true,
+      "image": "../provisions/img/items/mead-base-minor-healing.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Mead Ketill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Mead Ketill",
+        "materials": [
+          {
+            "item": "honey",
+            "amount": 10
+          },
+          {
+            "item": "blueberries",
+            "amount": 5
+          },
+          {
+            "item": "raspberries",
+            "amount": 10
+          },
+          {
+            "item": "dandelion",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mead_Base%3A_Minor_Healing",
+      "names": {
+        "cs": "Drobná léčivá medovina",
+        "ru": "Малая медовуха лечения"
+      }
+    },
+    "mead-base-minor-stamina": {
+      "id": "mead-base-minor-stamina",
+      "name": "Mead base: Minor stamina",
+      "provisions": true,
+      "image": "../provisions/img/items/mead-base-minor-stamina.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Mead Ketill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Mead Ketill",
+        "materials": [
+          {
+            "item": "honey",
+            "amount": 10
+          },
+          {
+            "item": "raspberries",
+            "amount": 10
+          },
+          {
+            "item": "yellow-mushroom",
+            "amount": 10
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mead_Base%3A_Minor_Stamina",
+      "names": {
+        "cs": "Drobná medovina na výdrž",
+        "ru": "Малая медовуха выносливости"
+      }
+    },
+    "mead-base-poison-resistance": {
+      "id": "mead-base-poison-resistance",
+      "name": "Mead base: Poison resistance",
+      "provisions": true,
+      "image": "../provisions/img/items/mead-base-poison-resistance.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Mead Ketill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Mead Ketill",
+        "materials": [
+          {
+            "item": "honey",
+            "amount": 10
+          },
+          {
+            "item": "thistle",
+            "amount": 5
+          },
+          {
+            "item": "neck-tail",
+            "amount": 1
+          },
+          {
+            "item": "coal",
+            "amount": 10
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mead_Base%3A_Poison_Resistance",
+      "names": {
+        "cs": "Medovina proti jedu",
+        "ru": "Медовуха-антидот"
+      }
+    },
+    "mead-base-tasty": {
+      "id": "mead-base-tasty",
+      "name": "Mead base: Tasty",
+      "provisions": true,
+      "image": "../provisions/img/items/mead-base-tasty.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Mead Ketill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Mead Ketill",
+        "materials": [
+          {
+            "item": "honey",
+            "amount": 10
+          },
+          {
+            "item": "raspberries",
+            "amount": 10
+          },
+          {
+            "item": "blueberries",
+            "amount": 5
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mead_Base%3A_Tasty",
+      "names": {
+        "cs": "Chutná medovina",
+        "ru": "Вкусная медовуха"
+      }
+    },
+    "mead-base-vananidir": {
+      "id": "mead-base-vananidir",
+      "name": "Mead base: Vananidir",
+      "provisions": true,
+      "image": "../provisions/img/items/mead-base-vananidir.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Mead Ketill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Mead Ketill",
+        "materials": [
+          {
+            "item": "dandelion",
+            "amount": 10
+          },
+          {
+            "item": "perch",
+            "amount": 2
+          },
+          {
+            "item": "fresh-seaweed",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mead_Base%3A_Vananidir",
+      "names": {
+        "cs": "Nápoj Vananidir",
+        "ru": "Напиток Вананидир"
+      }
+    },
+    "misthare-supreme": {
+      "id": "misthare-supreme",
+      "name": "Misthare Supreme",
+      "provisions": true,
+      "image": "../provisions/img/items/misthare-supreme.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Stone Oven",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Stone Oven",
+        "materials": [
+          {
+            "item": "uncooked-misthare-supreme",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Misthare_Supreme",
+      "names": {
+        "cs": "Supreme z mlžného zajíce",
+        "ru": "Гуляш из зайчатины"
+      }
+    },
     "moose-hide": {
       "id": "moose-hide",
       "name": "Moose Hide",
@@ -34538,6 +36410,27 @@ window.VC_DATA = {
       ],
       "recipe": null,
       "wiki": "https://valheim.weirdgloop.org/w/Moose_Hide",
+      "names": {}
+    },
+    "moose-meat": {
+      "id": "moose-meat",
+      "name": "Moose Meat",
+      "provisions": true,
+      "image": "../provisions/img/items/moose-meat.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Moose",
+          "kind": "creature",
+          "creatureId": "moose",
+          "biomes": [
+            "deep-north"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Moose_Meat",
       "names": {}
     },
     "moose-sinew": {
@@ -35340,6 +37233,60 @@ window.VC_DATA = {
       "wiki": "https://valheim.weirdgloop.org/w/Mould_Northern_Vengeance",
       "names": {}
     },
+    "mountain-peak-pepper-powder": {
+      "id": "mountain-peak-pepper-powder",
+      "name": "Mountain Peak Pepper Powder",
+      "provisions": true,
+      "image": "../provisions/img/items/mountain-peak-pepper-powder.png",
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "The Bog Witch",
+          "kind": "npc"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Mountain_Peak_Pepper_Powder",
+      "unlock": {
+        "biome": "plains",
+        "tier": 6,
+        "boss": "moder"
+      },
+      "names": {
+        "ru": "Толченый перец с горных вершин"
+      }
+    },
+    "mushroom": {
+      "id": "mushroom",
+      "name": "Mushroom",
+      "provisions": true,
+      "image": "../provisions/img/items/mushroom.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Meadows",
+          "kind": "other"
+        },
+        {
+          "text": "Black Forest",
+          "kind": "other"
+        },
+        {
+          "text": "Swamp",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Mushroom",
+      "names": {
+        "cs": "Houba",
+        "de": "Pilz",
+        "fr": "Champignon",
+        "ru": "Гриб"
+      }
+    },
     "mysterious-axe-head": {
       "id": "mysterious-axe-head",
       "name": "Mysterious Axe Head",
@@ -35356,6 +37303,32 @@ window.VC_DATA = {
       "wiki": "https://valheim.weirdgloop.org/w/Mysterious_Axe_Head",
       "names": {
         "ru": "Древние топоры"
+      }
+    },
+    "neck-tail": {
+      "id": "neck-tail",
+      "name": "Neck Tail",
+      "provisions": true,
+      "image": "../provisions/img/items/neck-tail.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Neck",
+          "kind": "creature",
+          "creatureId": "neck",
+          "biomes": [
+            "meadows"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Neck_Tail",
+      "names": {
+        "cs": "Ocas Necka",
+        "de": "Nixenschwanz",
+        "fr": "Queue de Nixe",
+        "ru": "Хвост никса"
       }
     },
     "needle": {
@@ -35853,6 +37826,109 @@ window.VC_DATA = {
         "ru": "Северный лосось"
       }
     },
+    "oat-flour": {
+      "id": "oat-flour",
+      "name": "Oat Flour",
+      "provisions": true,
+      "image": "../provisions/img/items/oat-flour.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Windmill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Windmill",
+        "materials": [
+          {
+            "item": "oats",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Oat_Flour",
+      "names": {}
+    },
+    "oat-milk": {
+      "id": "oat-milk",
+      "name": "Oat Milk",
+      "provisions": true,
+      "image": "../provisions/img/items/oat-milk.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Mead Ketill",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Mead Ketill",
+        "materials": [
+          {
+            "item": "oats",
+            "amount": 5
+          },
+          {
+            "item": "ice",
+            "amount": 5
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Oat_Milk",
+      "names": {}
+    },
+    "oat-seeds": {
+      "id": "oat-seeds",
+      "name": "Oat Seeds",
+      "provisions": true,
+      "image": "../provisions/img/items/oat-seeds.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Granary in Abandoned Village",
+          "kind": "location"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Oat_Seeds",
+      "names": {}
+    },
+    "oats": {
+      "id": "oats",
+      "name": "Oats",
+      "provisions": true,
+      "image": "../provisions/img/items/oats.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Windmill",
+          "kind": "station"
+        },
+        {
+          "text": "Farming",
+          "kind": "other"
+        }
+      ],
+      "recipe": {
+        "station": "Windmill, Farming",
+        "materials": [
+          {
+            "item": "oat-seeds",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Oats",
+      "names": {}
+    },
     "obsidian": {
       "id": "obsidian",
       "name": "Obsidian",
@@ -35870,6 +37946,55 @@ window.VC_DATA = {
       "names": {
         "cs": "Obsidián",
         "ru": "Обсидиан"
+      }
+    },
+    "onion": {
+      "id": "onion",
+      "name": "Onion",
+      "provisions": true,
+      "image": "../provisions/img/items/onion.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Farming Onion Seeds",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Onion",
+      "names": {
+        "cs": "Cibule",
+        "ru": "Лук"
+      }
+    },
+    "onion-soup": {
+      "id": "onion-soup",
+      "name": "Onion Soup",
+      "provisions": true,
+      "image": "../provisions/img/items/onion-soup.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Cauldron (level 2)",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Cauldron",
+        "materials": [
+          {
+            "item": "onion",
+            "amount": 3
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Onion_Soup",
+      "names": {
+        "cs": "Cibulová polévka",
+        "ru": "Луковый суп"
       }
     },
     "ooze": {
@@ -35904,6 +38029,44 @@ window.VC_DATA = {
         "fr": "Gadoue",
         "ru": "Жижа"
       }
+    },
+    "oven-pancake-batter": {
+      "id": "oven-pancake-batter",
+      "name": "Oven Pancake Batter",
+      "provisions": true,
+      "image": "../provisions/img/items/oven-pancake-batter.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Cauldron",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Cauldron",
+        "materials": [
+          {
+            "item": "moose-meat",
+            "amount": 1
+          },
+          {
+            "item": "poteitr",
+            "amount": 2
+          },
+          {
+            "item": "lingonberries",
+            "amount": 2
+          },
+          {
+            "item": "oat-flour",
+            "amount": 2
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Oven_Pancake_Batter",
+      "names": {}
     },
     "perch": {
       "id": "perch",
@@ -35964,6 +38127,55 @@ window.VC_DATA = {
         "ru": "Щука"
       }
     },
+    "poteitr": {
+      "id": "poteitr",
+      "name": "Poteitr",
+      "provisions": true,
+      "image": "../provisions/img/items/poteitr.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Cultivator",
+          "kind": "other"
+        }
+      ],
+      "recipe": {
+        "station": "Cultivator",
+        "materials": [
+          {
+            "item": "seed-poteitr",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Poteitr",
+      "names": {}
+    },
+    "powdered-dragon-eggshells": {
+      "id": "powdered-dragon-eggshells",
+      "name": "Powdered Dragon Eggshells",
+      "provisions": true,
+      "image": "../provisions/img/items/powdered-dragon-eggshells.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "The Bog Witch",
+          "kind": "npc"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Powdered_Dragon_Eggshells",
+      "unlock": {
+        "biome": "swamp",
+        "tier": 4
+      },
+      "names": {
+        "ru": "Толченая драконья скорлупа"
+      }
+    },
     "proustite-powder": {
       "id": "proustite-powder",
       "name": "Proustite Powder",
@@ -36010,6 +38222,132 @@ window.VC_DATA = {
         "fr": "Poisson-globe",
         "ru": "Иглобрюх"
       }
+    },
+    "pungent-pebbles": {
+      "id": "pungent-pebbles",
+      "name": "Pungent Pebbles",
+      "provisions": true,
+      "image": "../provisions/img/items/pungent-pebbles.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "The Bog Witch",
+          "kind": "npc"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Pungent_Pebbles",
+      "unlock": {
+        "biome": "swamp",
+        "tier": 4
+      },
+      "names": {
+        "ru": "Вонючие камешки"
+      }
+    },
+    "queen-s-jam": {
+      "id": "queen-s-jam",
+      "name": "Queen's Jam",
+      "provisions": true,
+      "image": "../provisions/img/items/queen-s-jam.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Cauldron",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Cauldron",
+        "materials": [
+          {
+            "item": "raspberries",
+            "amount": 8
+          },
+          {
+            "item": "blueberries",
+            "amount": 6
+          }
+        ],
+        "yields": 4
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Queen's_Jam",
+      "names": {
+        "cs": "Marmeláda královny",
+        "fr": "Confiture de la reine",
+        "ru": "Королевский джем"
+      }
+    },
+    "raspberries": {
+      "id": "raspberries",
+      "name": "Raspberries",
+      "provisions": true,
+      "image": "../provisions/img/items/raspberries.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Raspberry bushes in Meadows",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Raspberries",
+      "names": {
+        "cs": "Maliny",
+        "de": "Himbeeren",
+        "fr": "Framboises",
+        "ru": "Малина"
+      }
+    },
+    "raw-fish": {
+      "id": "raw-fish",
+      "name": "Raw Fish",
+      "provisions": true,
+      "image": "../provisions/img/items/raw-fish.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Fishing Rod",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Raw_Fish",
+      "names": {
+        "cs": "Syrová ryba",
+        "fr": "Poisson cru",
+        "ru": "Сырая рыба"
+      }
+    },
+    "raw-kale-chips": {
+      "id": "raw-kale-chips",
+      "name": "Raw Kale Chips",
+      "provisions": true,
+      "image": "../provisions/img/items/raw-kale-chips.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Cauldron",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Cauldron",
+        "materials": [
+          {
+            "item": "kale",
+            "amount": 12
+          }
+        ],
+        "yields": 4
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Raw_Kale_Chips",
+      "names": {}
     },
     "refined-eitr": {
       "id": "refined-eitr",
@@ -36221,6 +38559,34 @@ window.VC_DATA = {
         "ru": "Корень"
       }
     },
+    "royal-jelly": {
+      "id": "royal-jelly",
+      "name": "Royal Jelly",
+      "provisions": true,
+      "image": "../provisions/img/items/royal-jelly.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Seeker Brood",
+          "kind": "creature",
+          "creatureId": "seeker-brood",
+          "biomes": [
+            "mistlands"
+          ]
+        },
+        {
+          "text": "piles in Infested Mines",
+          "kind": "location"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Royal_Jelly",
+      "names": {
+        "cs": "Královské želé",
+        "ru": "Маточное молочко"
+      }
+    },
     "sap": {
       "id": "sap",
       "name": "Sap",
@@ -36238,6 +38604,44 @@ window.VC_DATA = {
       "names": {
         "cs": "Míza",
         "ru": "Живица"
+      }
+    },
+    "sausages": {
+      "id": "sausages",
+      "name": "Sausages",
+      "provisions": true,
+      "image": "../provisions/img/items/sausages.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Cauldron (level 2)",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Cauldron",
+        "materials": [
+          {
+            "item": "entrails",
+            "amount": 4
+          },
+          {
+            "item": "boar-meat",
+            "amount": 1
+          },
+          {
+            "item": "thistle",
+            "amount": 1
+          }
+        ],
+        "yields": 4
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Sausages",
+      "names": {
+        "cs": "Klobásy",
+        "fr": "Saucisses",
+        "ru": "Колбаски"
       }
     },
     "scale-hide": {
@@ -36263,6 +38667,43 @@ window.VC_DATA = {
         "de": "Schuppenhaut",
         "fr": "Peau écailleuse",
         "ru": "Чешуйчатая шкура"
+      }
+    },
+    "scorching-medley": {
+      "id": "scorching-medley",
+      "name": "Scorching Medley",
+      "provisions": true,
+      "image": "../provisions/img/items/scorching-medley.png",
+      "biome": "ashlands",
+      "tier": 8,
+      "sources": [
+        {
+          "text": "Cauldron (level 6)",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Cauldron",
+        "materials": [
+          {
+            "item": "jotun-puffs",
+            "amount": 3
+          },
+          {
+            "item": "onion",
+            "amount": 3
+          },
+          {
+            "item": "fiddlehead",
+            "amount": 3
+          }
+        ],
+        "yields": 3
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Scorching_Medley",
+      "names": {
+        "cs": "Pálivá směs",
+        "ru": "Обжигающий салат"
       }
     },
     "scrap-iron": {
@@ -36307,6 +38748,50 @@ window.VC_DATA = {
         "ru": "Металлолом"
       }
     },
+    "seafarer-s-herbs": {
+      "id": "seafarer-s-herbs",
+      "name": "Seafarer's Herbs",
+      "provisions": true,
+      "image": "../provisions/img/items/seafarer-s-herbs.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "The Bog Witch",
+          "kind": "npc"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Seafarer's_Herbs",
+      "unlock": {
+        "biome": "swamp",
+        "tier": 4
+      },
+      "names": {
+        "ru": "Травы мореплавателя"
+      }
+    },
+    "seal-blubber": {
+      "id": "seal-blubber",
+      "name": "Seal Blubber",
+      "provisions": true,
+      "image": "../provisions/img/items/seal-blubber.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Seal",
+          "kind": "creature",
+          "creatureId": "seal",
+          "biomes": [
+            "deep-north"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Seal_Blubber",
+      "names": {}
+    },
     "seal-pelt": {
       "id": "seal-pelt",
       "name": "Seal Pelt",
@@ -36326,6 +38811,101 @@ window.VC_DATA = {
       "recipe": null,
       "wiki": "https://valheim.weirdgloop.org/w/Seal_Pelt",
       "names": {}
+    },
+    "seasoning-of-the-gourd": {
+      "id": "seasoning-of-the-gourd",
+      "name": "Seasoning of the Gourd",
+      "provisions": true,
+      "image": "../provisions/img/items/seasoning-of-the-gourd.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "The Bog Witch",
+          "kind": "npc"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Seasoning_of_the_Gourd",
+      "unlock": {
+        "biome": "deep-north",
+        "tier": 9,
+        "boss": "kall-fimbulbringer"
+      },
+      "names": {}
+    },
+    "seed-poteitr": {
+      "id": "seed-poteitr",
+      "name": "Seed Poteitr",
+      "provisions": true,
+      "image": "../provisions/img/items/seed-poteitr.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Granary in Abandoned Village",
+          "kind": "location"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Seed_Poteitr",
+      "names": {}
+    },
+    "seeker-meat": {
+      "id": "seeker-meat",
+      "name": "Seeker Meat",
+      "provisions": true,
+      "image": "../provisions/img/items/seeker-meat.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Seeker",
+          "kind": "creature",
+          "creatureId": "seeker",
+          "biomes": [
+            "mistlands"
+          ]
+        },
+        {
+          "text": "Seeker Soldier",
+          "kind": "creature",
+          "creatureId": "seeker-soldier",
+          "biomes": [
+            "mistlands"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Seeker_Meat",
+      "names": {
+        "cs": "Maso Hledačů",
+        "ru": "Мясо искателя"
+      }
+    },
+    "serpent-meat": {
+      "id": "serpent-meat",
+      "name": "Serpent Meat",
+      "provisions": true,
+      "image": "../provisions/img/items/serpent-meat.png",
+      "biome": "ocean",
+      "tier": 3,
+      "sources": [
+        {
+          "text": "Serpent",
+          "kind": "creature",
+          "creatureId": "serpent",
+          "biomes": [
+            "ocean"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Serpent_Meat",
+      "names": {
+        "cs": "Maso z hada",
+        "ru": "Мясо змея"
+      }
     },
     "serpent-scale": {
       "id": "serpent-scale",
@@ -36674,6 +39254,28 @@ window.VC_DATA = {
         "ru": "Тетра"
       }
     },
+    "thistle": {
+      "id": "thistle",
+      "name": "Thistle",
+      "provisions": true,
+      "image": "../provisions/img/items/thistle.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Gathered in the Black Forest and Swamp",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Thistle",
+      "names": {
+        "cs": "Bodlák",
+        "de": "Distel",
+        "fr": "Chardon",
+        "ru": "Чертополох"
+      }
+    },
     "thunderblood-essence": {
       "id": "thunderblood-essence",
       "name": "Thunderblood Essence",
@@ -36752,6 +39354,30 @@ window.VC_DATA = {
         "de": "Zinnerz",
         "fr": "Minerai d'étain",
         "ru": "Оловянная руда"
+      }
+    },
+    "toadstool": {
+      "id": "toadstool",
+      "name": "Toadstool",
+      "provisions": true,
+      "image": "../provisions/img/items/toadstool.png",
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "The Bog Witch",
+          "kind": "npc"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Toadstool",
+      "unlock": {
+        "biome": "plains",
+        "tier": 6,
+        "boss": "moder"
+      },
+      "names": {
+        "ru": "Поганка"
       }
     },
     "troll-hide": {
@@ -36852,6 +39478,428 @@ window.VC_DATA = {
         "ru": "Тунец"
       }
     },
+    "turnip": {
+      "id": "turnip",
+      "name": "Turnip",
+      "provisions": true,
+      "image": "../provisions/img/items/turnip.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Turnip Seeds",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Turnip",
+      "names": {
+        "cs": "Tuřín",
+        "ru": "Репа"
+      }
+    },
+    "turnip-stew": {
+      "id": "turnip-stew",
+      "name": "Turnip Stew",
+      "provisions": true,
+      "image": "../provisions/img/items/turnip-stew.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Cauldron (level 2)",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Cauldron",
+        "materials": [
+          {
+            "item": "boar-meat",
+            "amount": 1
+          },
+          {
+            "item": "turnip",
+            "amount": 3
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Turnip_Stew",
+      "names": {
+        "cs": "Polévka z tuřínu",
+        "fr": "Soupe de navets",
+        "ru": "Рагу из репы"
+      }
+    },
+    "unbaked-lox-pie": {
+      "id": "unbaked-lox-pie",
+      "name": "Unbaked Lox Pie",
+      "provisions": true,
+      "image": "../provisions/img/items/unbaked-lox-pie.png",
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "Food Preparation Table",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Food Preparation Table",
+        "materials": [
+          {
+            "item": "cloudberries",
+            "amount": 2
+          },
+          {
+            "item": "lox-meat",
+            "amount": 2
+          },
+          {
+            "item": "barley-flour",
+            "amount": 4
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Unbaked_Lox_Pie",
+      "names": {
+        "cs": "Masový koláč z Loxe",
+        "ru": "Пирог из мяса быкоящера"
+      }
+    },
+    "unbaked-poteitr": {
+      "id": "unbaked-poteitr",
+      "name": "Unbaked Poteitr",
+      "provisions": true,
+      "image": "../provisions/img/items/unbaked-poteitr.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Cauldron",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Cauldron",
+        "materials": [
+          {
+            "item": "seal-blubber",
+            "amount": 1
+          },
+          {
+            "item": "kale",
+            "amount": 2
+          },
+          {
+            "item": "poteitr",
+            "amount": 1
+          },
+          {
+            "item": "oat-flour",
+            "amount": 2
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Unbaked_Poteitr",
+      "names": {}
+    },
+    "unbaked-sweetbread": {
+      "id": "unbaked-sweetbread",
+      "name": "Unbaked Sweetbread",
+      "provisions": true,
+      "image": "../provisions/img/items/unbaked-sweetbread.png",
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "Food Preparation Table",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Food Preparation Table",
+        "materials": [
+          {
+            "item": "cloudberries",
+            "amount": 2
+          },
+          {
+            "item": "egg",
+            "amount": 1
+          },
+          {
+            "item": "barley-flour",
+            "amount": 1
+          },
+          {
+            "item": "honey",
+            "amount": 1
+          }
+        ],
+        "yields": 2
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Unbaked_Sweetbread",
+      "names": {
+        "ru": "Сдобная булка с глазурью"
+      }
+    },
+    "uncooked-fish-n-bread": {
+      "id": "uncooked-fish-n-bread",
+      "name": "Uncooked Fish 'n' Bread",
+      "provisions": true,
+      "image": "../provisions/img/items/uncooked-fish-n-bread.png",
+      "biome": "ashlands",
+      "tier": 8,
+      "sources": [
+        {
+          "text": "Food Preparation Table",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Food Preparation Table",
+        "materials": [
+          {
+            "item": "anglerfish",
+            "amount": 1
+          },
+          {
+            "item": "bread-dough",
+            "amount": 2
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Uncooked_Fish_'n'_Bread",
+      "names": {
+        "cs": "Ryba s chlebem",
+        "ru": "Рыба с хлебом"
+      }
+    },
+    "uncooked-honey-glazed-chicken": {
+      "id": "uncooked-honey-glazed-chicken",
+      "name": "Uncooked Honey Glazed Chicken",
+      "provisions": true,
+      "image": "../provisions/img/items/uncooked-honey-glazed-chicken.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Food Preparation Table",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Food Preparation Table",
+        "materials": [
+          {
+            "item": "chicken-meat",
+            "amount": 1
+          },
+          {
+            "item": "honey",
+            "amount": 3
+          },
+          {
+            "item": "jotun-puffs",
+            "amount": 2
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Uncooked_Honey_Glazed_Chicken",
+      "names": {
+        "cs": "Kuře na medu",
+        "ru": "Курятина в медовой глазури"
+      }
+    },
+    "uncooked-meat-platter": {
+      "id": "uncooked-meat-platter",
+      "name": "Uncooked Meat Platter",
+      "provisions": true,
+      "image": "../provisions/img/items/uncooked-meat-platter.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Food Preparation Table",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Food Preparation Table",
+        "materials": [
+          {
+            "item": "seeker-meat",
+            "amount": 1
+          },
+          {
+            "item": "lox-meat",
+            "amount": 1
+          },
+          {
+            "item": "hare-meat",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Uncooked_Meat_Platter",
+      "names": {
+        "cs": "Masový talíř",
+        "ru": "Мясное ассорти"
+      }
+    },
+    "uncooked-misthare-supreme": {
+      "id": "uncooked-misthare-supreme",
+      "name": "Uncooked Misthare Supreme",
+      "provisions": true,
+      "image": "../provisions/img/items/uncooked-misthare-supreme.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Food Preparation Table",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Food Preparation Table",
+        "materials": [
+          {
+            "item": "hare-meat",
+            "amount": 1
+          },
+          {
+            "item": "jotun-puffs",
+            "amount": 3
+          },
+          {
+            "item": "carrot",
+            "amount": 2
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Uncooked_Misthare_Supreme",
+      "names": {
+        "cs": "Supreme z mlžného zajíce",
+        "ru": "Гуляш из зайчатины"
+      }
+    },
+    "uncooked-piquant-pie": {
+      "id": "uncooked-piquant-pie",
+      "name": "Uncooked Piquant Pie",
+      "provisions": true,
+      "image": "../provisions/img/items/uncooked-piquant-pie.png",
+      "biome": "ashlands",
+      "tier": 8,
+      "sources": [
+        {
+          "text": "Food Preparation Table",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Food Preparation Table",
+        "materials": [
+          {
+            "item": "vineberry-cluster",
+            "amount": 2
+          },
+          {
+            "item": "asksvin-tail",
+            "amount": 2
+          },
+          {
+            "item": "barley-flour",
+            "amount": 4
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Uncooked_Piquant_Pie",
+      "names": {
+        "ru": "Пряный пирог"
+      }
+    },
+    "uncooked-roasted-crust-pie": {
+      "id": "uncooked-roasted-crust-pie",
+      "name": "Uncooked Roasted Crust Pie",
+      "provisions": true,
+      "image": "../provisions/img/items/uncooked-roasted-crust-pie.png",
+      "biome": "ashlands",
+      "tier": 8,
+      "sources": [
+        {
+          "text": "Food Preparation Table",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Food Preparation Table",
+        "materials": [
+          {
+            "item": "vineberry-cluster",
+            "amount": 2
+          },
+          {
+            "item": "volture-egg",
+            "amount": 1
+          },
+          {
+            "item": "barley-flour",
+            "amount": 4
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Uncooked_Roasted_Crust_Pie",
+      "names": {
+        "ru": "Пирог с поджаристой коркой"
+      }
+    },
+    "uncooked-stuffed-mushroom": {
+      "id": "uncooked-stuffed-mushroom",
+      "name": "Uncooked Stuffed Mushroom",
+      "provisions": true,
+      "image": "../provisions/img/items/uncooked-stuffed-mushroom.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Food Preparation Table",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Food Preparation Table",
+        "materials": [
+          {
+            "item": "magecap",
+            "amount": 3
+          },
+          {
+            "item": "blood-clot",
+            "amount": 1
+          },
+          {
+            "item": "turnip",
+            "amount": 2
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Uncooked_Stuffed_Mushroom",
+      "names": {
+        "cs": "Plněná houba",
+        "ru": "Фаршированный гриб"
+      }
+    },
     "vile-ribcage": {
       "id": "vile-ribcage",
       "name": "Vile Ribcage",
@@ -36895,6 +39943,73 @@ window.VC_DATA = {
       "names": {
         "cs": "Trofeje",
         "ru": "Категория:Трофеи"
+      }
+    },
+    "vineberry-cluster": {
+      "id": "vineberry-cluster",
+      "name": "Vineberry Cluster",
+      "provisions": true,
+      "image": "../provisions/img/items/vineberry-cluster.png",
+      "biome": "ashlands",
+      "tier": 8,
+      "sources": [
+        {
+          "text": "Ashlands",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Vineberry_Cluster",
+      "names": {
+        "cs": "Trs vína",
+        "ru": "Гроздь лозовых ягод"
+      }
+    },
+    "volture-egg": {
+      "id": "volture-egg",
+      "name": "Volture Egg",
+      "provisions": true,
+      "image": "../provisions/img/items/volture-egg.png",
+      "biome": "ashlands",
+      "tier": 8,
+      "sources": [
+        {
+          "text": "Volture",
+          "kind": "creature",
+          "creatureId": "volture",
+          "biomes": [
+            "ashlands"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Volture_Egg",
+      "names": {
+        "ru": "Яйцо стервулканника"
+      }
+    },
+    "volture-meat": {
+      "id": "volture-meat",
+      "name": "Volture Meat",
+      "provisions": true,
+      "image": "../provisions/img/items/volture-meat.png",
+      "biome": "ashlands",
+      "tier": 8,
+      "sources": [
+        {
+          "text": "Volture",
+          "kind": "creature",
+          "creatureId": "volture",
+          "biomes": [
+            "ashlands"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Volture_Meat",
+      "names": {
+        "cs": "Sopí maso",
+        "ru": "Мясо стервулканника"
       }
     },
     "wisp": {
@@ -36955,6 +40070,31 @@ window.VC_DATA = {
         "ru": "Волчий клык"
       }
     },
+    "wolf-meat": {
+      "id": "wolf-meat",
+      "name": "Wolf Meat",
+      "provisions": true,
+      "image": "../provisions/img/items/wolf-meat.png",
+      "biome": "mountain",
+      "tier": 5,
+      "sources": [
+        {
+          "text": "Wolf",
+          "kind": "creature",
+          "creatureId": "wolf",
+          "biomes": [
+            "mountain"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Wolf_Meat",
+      "names": {
+        "cs": "Vlčí maso",
+        "fr": "Viande de loup",
+        "ru": "Волчатина"
+      }
+    },
     "wolf-pelt": {
       "id": "wolf-pelt",
       "name": "Wolf Pelt",
@@ -36978,6 +40118,42 @@ window.VC_DATA = {
         "de": "Wolfspelz",
         "fr": "Peau de loup",
         "ru": "Шкура волка"
+      }
+    },
+    "wolf-skewer": {
+      "id": "wolf-skewer",
+      "name": "Wolf Skewer",
+      "provisions": true,
+      "image": "../provisions/img/items/wolf-skewer.png",
+      "biome": "mountain",
+      "tier": 5,
+      "sources": [
+        {
+          "text": "Cauldron (level 3)",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Cauldron",
+        "materials": [
+          {
+            "item": "wolf-meat",
+            "amount": 1
+          },
+          {
+            "item": "mushroom",
+            "amount": 2
+          },
+          {
+            "item": "onion",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Wolf_Skewer",
+      "names": {
+        "ru": "Волк на шпажке"
       }
     },
     "wolf-trophy": {
@@ -37036,6 +40212,30 @@ window.VC_DATA = {
         "ru": "Древесина"
       }
     },
+    "woodland-herb-blend": {
+      "id": "woodland-herb-blend",
+      "name": "Woodland Herb Blend",
+      "provisions": true,
+      "image": "../provisions/img/items/woodland-herb-blend.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "The Bog Witch",
+          "kind": "npc"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Woodland_Herb_Blend",
+      "unlock": {
+        "biome": "swamp",
+        "tier": 4,
+        "boss": "the-elder"
+      },
+      "names": {
+        "ru": "Смесь лесных трав"
+      }
+    },
     "writhan-roots": {
       "id": "writhan-roots",
       "name": "Writhan Roots",
@@ -37055,6 +40255,73 @@ window.VC_DATA = {
       "recipe": null,
       "wiki": "https://valheim.weirdgloop.org/w/Writhan_Roots",
       "names": {}
+    },
+    "yellow-mushroom": {
+      "id": "yellow-mushroom",
+      "name": "Yellow Mushroom",
+      "provisions": true,
+      "image": "../provisions/img/items/yellow-mushroom.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Burial Chambers",
+          "kind": "location"
+        },
+        {
+          "text": "Troll Cave",
+          "kind": "location"
+        },
+        {
+          "text": "Sunken Crypts",
+          "kind": "location"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Yellow_Mushroom",
+      "names": {
+        "cs": "Žlutá houba",
+        "de": "Gelber Pilz",
+        "fr": "Champignon jaune",
+        "ru": "Желтый гриб"
+      }
+    },
+    "yggdrasil-porridge": {
+      "id": "yggdrasil-porridge",
+      "name": "Yggdrasil Porridge",
+      "provisions": true,
+      "image": "../provisions/img/items/yggdrasil-porridge.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Cauldron (level 5)",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Cauldron",
+        "materials": [
+          {
+            "item": "sap",
+            "amount": 4
+          },
+          {
+            "item": "barley",
+            "amount": 3
+          },
+          {
+            "item": "royal-jelly",
+            "amount": 2
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Yggdrasil_Porridge",
+      "names": {
+        "cs": "Yggdrasilská kaše",
+        "ru": "Иггдрасильская каша"
+      }
     },
     "yggdrasil-wood": {
       "id": "yggdrasil-wood",
