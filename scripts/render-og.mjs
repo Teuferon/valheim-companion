@@ -50,6 +50,7 @@ export function renderOgImages() {
     'smithy',
     'damage-calculator',
     'signs',
+    'progress',
   ];
 
   const renderedFiles = [];

@@ -65,7 +65,7 @@ export const PAGES = [
     section: 'progress',
     path: '/progress/',
     title: 'Progress Tracker — Valheim Companion',
-    description: 'Track your Valheim progression, bosses and biomes.',
+    description: 'Tick off bosses, biomes and key drops — every Valheim Companion tool unlocks spoilers as you progress.',
   },
   {
     filePath: path.join(REPO_ROOT, 'apps', 'provisions', 'index.html'),

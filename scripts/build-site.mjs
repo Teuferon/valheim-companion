@@ -12,6 +12,7 @@ import { fileURLToPath } from 'node:url';
 
 import { buildI18n } from './build-i18n.mjs';
 import { buildSearchIndex } from './build-search-index.mjs';
+import { buildProgressData } from './build-progress-data.mjs';
 
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST_DIR = path.join(REPO_ROOT, 'dist');
@@ -54,6 +55,7 @@ export function buildSite() {
   buildPlayer();
   buildI18n();
   buildSearchIndex();
+  buildProgressData();
 
   console.log('assembling dist/…');
   rmSync(DIST_DIR, { recursive: true, force: true });
@@ -91,6 +93,16 @@ export function buildSite() {
   cpSync(path.join(ARMOURER_DIR, 'assets'), path.join(armourerDist, 'assets'), { recursive: true });
   cpSync(path.join(ARMOURER_DIR, 'data', 'data.js'), path.join(armourerDist, 'data', 'data.js'));
   cpSync(path.join(ARMOURER_DIR, 'img'), path.join(armourerDist, 'img'), { recursive: true });
+
+  // Progress static page, generated checklist and locale catalog.
+  const progressDist = path.join(DIST_DIR, 'progress');
+  mkdirSync(progressDist, { recursive: true });
+  for (const file of ['index.html', 'assets', 'data', 'locales']) {
+    cpSync(path.join(REPO_ROOT, 'apps', 'progress', file), path.join(progressDist, file), { recursive: true });
+  }
+  const progressCoreDist = path.join(DIST_DIR, 'shared', 'progress');
+  mkdirSync(progressCoreDist, { recursive: true });
+  cpSync(path.join(REPO_ROOT, 'shared', 'progress', 'core.js'), path.join(progressCoreDist, 'core.js'));
 
   // 4. apps/signs/dist-static/* -> dist/signs/
   const signsDistTarget = path.join(DIST_DIR, 'signs');

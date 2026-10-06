@@ -1,5 +1,5 @@
 // Card script for Valheim Companion Open Graph card template.
-// Reads ?section=hub|bestiary|signs|smithy|damage-calculator and siteUrl from site.config.json.
+// Reads ?section=hub|bestiary|signs|smithy|damage-calculator|progress and siteUrl from site.config.json.
 
 (function () {
   const SECTIONS = {
@@ -26,6 +26,12 @@
       sub: 'Valheim Companion',
       desc: 'Pick a Valheim creature and a weapon, set skill and upgrade level and see the damage that actually lands — resistances, DPS and time-to-kill.',
       bg: '../../bestiary/img/biomes/ashlands.png',
+    },
+    progress: {
+      title: 'PROGRESS TRACKER',
+      sub: 'Valheim Companion',
+      desc: 'Tick off bosses, biomes and key drops — every Valheim Companion tool unlocks spoilers as you progress.',
+      bg: '../../bestiary/img/biomes/meadows.png',
     },
     signs: {
       title: 'SIGN EDITOR (RUNOPIS)',
