@@ -7,6 +7,10 @@
 !apps/bestiary/assets/
 !apps/bestiary/data/data.js
 !apps/bestiary/img/
+!apps/armourer/index.html
+!apps/armourer/assets/
+!apps/armourer/data/data.js
+!apps/armourer/img/
 !apps/signs/
 apps/signs/node_modules/
 apps/signs/dist-static/

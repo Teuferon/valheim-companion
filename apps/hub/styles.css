@@ -112,6 +112,12 @@ body {
     url('bestiary/img/biomes/black-forest.png');
 }
 
+.card-armourer {
+  background-image:
+    linear-gradient(rgba(24, 29, 35, 0.82), rgba(24, 29, 35, 0.94)),
+    url('bestiary/img/biomes/mountain.png');
+}
+
 .card-signs {
   background-image:
     linear-gradient(rgba(24, 29, 35, 0.82), rgba(24, 29, 35, 0.94)),
