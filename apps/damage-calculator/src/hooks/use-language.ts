@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useSyncExternalStore } from 'react';
 import messages from '@/locales/messages.json';
 import { formatters } from '@/lib/format';
+import { localizedName, type NamedEntity } from '@/lib/entity-names';
 import {
   STORAGE_KEY, LEGACY_KEY, getStoredPreference, readPreference,
   resolveLocale, setStoredPreference, translate, languages,
@@ -48,10 +49,11 @@ export function useLanguage() {
   const setPreference = useCallback(setLanguagePreference, []);
   const t: Translate = useMemo(() => (source, values) => translate(locale, source, messages, values), [locale]);
   const formats = useMemo(() => formatters(locale), [locale]);
+  const nameOf = useCallback((entity: NamedEntity) => localizedName(entity, locale), [locale]);
   useEffect(() => {
     document.documentElement.lang = locale;
     document.documentElement.dir = locale === 'ar' ? 'rtl' : 'ltr';
     document.title = `${t('Valheim Damage Calculator')} · Valheim Companion`;
   }, [locale, t]);
-  return { locale, preference, setPreference, t, ...formats };
+  return { locale, preference, setPreference, t, nameOf, ...formats };
 }

@@ -66,7 +66,7 @@ const DEFAULT_TARGET_SLUG =
   targets.find((t) => t.slug === "bonemass")?.slug ?? targets[0].slug;
 
 export default function Home() {
-  const { preference, setPreference, t, formatCount } = useLanguage();
+  const { preference, setPreference, t, formatCount, nameOf } = useLanguage();
   const [storedBiome, persistBiome] = useBiomeProgression();
 
   /* The view carried by the query string, read as an external store so the
@@ -334,6 +334,8 @@ export default function Home() {
     [topRow, maxPerHit],
   );
 
+  const biomeBoss = targets.find(target => target.slug === BIOMES.find(entry => entry.id === biome)?.boss);
+
   return (
     <main className="mx-auto w-full max-w-[1550px] space-y-6 px-4 py-8 sm:px-6">
       <header className="space-y-3">
@@ -386,11 +388,7 @@ export default function Home() {
       <BiomeSlider
         value={biome}
         onChange={applyBiome}
-        bossName={
-          targets.find(
-            (t) => t.slug === BIOMES.find((entry) => entry.id === biome)?.boss,
-          )?.name
-        }
+        bossName={biomeBoss ? nameOf(biomeBoss) : undefined}
         visibleWeapons={reachableWeapons.length}
         totalWeapons={weapons.length}
         visibleTargets={reachableTargets.length}
@@ -551,7 +549,7 @@ export default function Home() {
                 </button>
                 <WikiLink
                   href={selectedWeapon.wikiUrl}
-                  name={selectedWeapon.name}
+                  name={nameOf(selectedWeapon)}
                 />
               </span>
             ) : null}
@@ -577,11 +575,11 @@ export default function Home() {
         <section aria-label={t("Weapon ranking")} className="animate-rise-in min-w-0">
           <div className="mb-3 flex items-baseline justify-between gap-3">
             <h2 className="font-heading text-base font-semibold tracking-wide text-muted-foreground uppercase">
-              {t("3 · Find the best weapon for {target}", { target: target.name })}
+              {t("3 · Find the best weapon for {target}", { target: nameOf(target) })}
             </h2>
             <span className="flex items-center gap-2 text-xs text-muted-foreground">
               <span className="flex items-center gap-1">
-                <ItemImage src={target.image} alt={target.name} size={18} />
+                <ItemImage src={target.image} alt={nameOf(target)} size={18} />
                 {formatCount(target.health)} {t("HP")}
             </span>
               <ShareViewButton view={view} />
@@ -631,7 +629,7 @@ function AmmoSelect({
   value: string;
   onChange: (v: string) => void;
 }) {
-  const { t } = useLanguage();
+  const { t, nameOf } = useLanguage();
   const sorted = [...items].sort((a, b) => totalDamage(b) - totalDamage(a));
   const empty = sorted.length === 0;
 
@@ -640,7 +638,7 @@ function AmmoSelect({
       value={value}
       disabled={empty}
       // Gives the trigger the item's name instead of its slug.
-      items={sorted.map((item) => ({ value: item.slug, label: item.name }))}
+      items={sorted.map((item) => ({ value: item.slug, label: nameOf(item) }))}
       onValueChange={(next) => {
         if (typeof next === "string") onChange(next);
       }}
@@ -654,8 +652,8 @@ function AmmoSelect({
         {sorted.map((item) => (
           <SelectItem key={item.slug} value={item.slug}>
             <span className="flex items-center gap-2">
-              <ItemImage src={item.image} alt={item.name} size={18} />
-              {item.name}
+              <ItemImage src={item.image} alt={nameOf(item)} size={18} />
+              {nameOf(item)}
             </span>
           </SelectItem>
         ))}

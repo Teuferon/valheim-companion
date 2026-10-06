@@ -113,3 +113,27 @@ try {
   }
 }
 console.log(`i18n: ${Object.keys(catalog).length} messages; coverage, placeholders, formatting and language store verified`);
+
+const { buildNames } = await import('./export-names.mjs');
+const { localizedName, matchesName } = await import('../src/lib/entity-names');
+const exportedNames = JSON.parse(readFileSync(join(root, 'data/names.json'), 'utf8')) as Record<string, Record<string, string>>;
+assert.deepEqual(exportedNames, buildNames(), 'Committed names must exactly match the VC-17 language links');
+const entities = ['bosses', 'enemies', 'weapons', 'ammo'].flatMap(file => JSON.parse(readFileSync(join(root, `data/${file}.json`), 'utf8'))) as { slug: string; name: string }[];
+const before = JSON.stringify(entities);
+for (const entity of entities) {
+  assert.ok(Object.hasOwn(exportedNames, entity.slug), `Missing name export entry: ${entity.slug}`);
+  for (const { code } of languages) {
+    const expected = exportedNames[entity.slug][code] ?? entity.name;
+    assert.equal(localizedName(entity, code), expected);
+    assert.ok(matchesName(entity, entity.name, code), `English search failed: ${entity.slug}/${code}`);
+    assert.ok(matchesName(entity, expected, code), `Local search failed: ${entity.slug}/${code}`);
+  }
+}
+assert.equal(JSON.stringify(entities), before, 'Display names must never mutate English data or URL slugs');
+const abomination = entities.find(entity => entity.slug === 'abomination')!;
+assert.equal(localizedName(abomination, 'cs'), 'Ohavnost');
+assert.equal(matchesName(abomination, '  OHAVNOST  ', 'cs'), true);
+assert.equal(matchesName(abomination, 'ABOMINATION', 'cs'), true);
+assert.equal(matchesName(abomination, 'not a creature', 'cs'), false);
+assert.equal(localizedName({ slug: 'not-in-wiki', name: 'English fallback' }, 'ja'), 'English fallback');
+console.log(`i18n: ${entities.length} entity names verified against VC-17; local and English search passed`);

@@ -7,9 +7,9 @@ import { arrows, bolts, CLASS_LABELS, targets } from "@/lib/data";
 import { buildViewUrl, type ViewState } from "@/lib/view-url";
 import { cn } from "@/lib/utils";
 
-const TARGET_NAME = new Map(targets.map((t) => [t.slug, t.name] as const));
-const AMMO_NAME = new Map(
-  [...arrows, ...bolts].map((a) => [a.slug, a.name] as const),
+const TARGET_BY_SLUG = new Map(targets.map((t) => [t.slug, t] as const));
+const AMMO_BY_SLUG = new Map(
+  [...arrows, ...bolts].map((a) => [a.slug, a] as const),
 );
 
 /** Copy text, falling back to a hidden textarea when the async Clipboard API
@@ -53,7 +53,7 @@ export function ShareViewButton({
   view: ViewState;
   className?: string;
 }) {
-  const { t, formatCount } = useLanguage();
+  const { t, formatCount, nameOf } = useLanguage();
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const [url, setUrl] = useState("");
@@ -107,7 +107,7 @@ export function ShareViewButton({
 
   const summary = [
     t(BIOME_NAME[view.biome]),
-    TARGET_NAME.get(view.target) ?? view.target,
+    TARGET_BY_SLUG.has(view.target) ? nameOf(TARGET_BY_SLUG.get(view.target)!) : view.target,
     t(view.cls === "all" ? "All classes" : CLASS_LABELS[view.cls]),
   ].join(" · ");
 
@@ -120,7 +120,7 @@ export function ShareViewButton({
     view.backstab ? t("Unalerted") : null,
     ...[view.arrow, view.bolt]
       .filter((slug): slug is string => Boolean(slug))
-      .map((slug) => AMMO_NAME.get(slug) ?? slug),
+      .map((slug) => AMMO_BY_SLUG.has(slug) ? nameOf(AMMO_BY_SLUG.get(slug)!) : slug),
   ]
     .filter((part): part is string => Boolean(part))
     .join(" · ");

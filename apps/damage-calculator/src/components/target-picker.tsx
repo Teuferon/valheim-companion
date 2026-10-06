@@ -1,3 +1,4 @@
+import { matchesName } from '@/lib/entity-names';
 import { useLanguage } from '@/hooks/use-language';
 
 import { useMemo, useState } from "react";
@@ -51,7 +52,7 @@ export function TargetPicker({
   selected: Creature;
   onSelect: (target: Creature) => void;
 }) {
-  const { t, formatCount } = useLanguage();
+  const { t, formatCount, nameOf, locale } = useLanguage();
   const [kind, setKind] = useState<"all" | CreatureKind>("all");
   const [query, setQuery] = useState("");
 
@@ -68,9 +69,9 @@ export function TargetPicker({
     return targets.filter(
       (target) =>
         (kind === "all" || target.kind === kind) &&
-        (!q || target.name.toLowerCase().includes(q)),
+        (!q || matchesName(target, q, locale)),
     );
-  }, [targets, kind, query]);
+  }, [targets, kind, query, locale]);
 
   /* The slider can move the selection while a filter is up, so the selected
    * card is always rendered even when it falls outside the current filter. */
@@ -158,16 +159,16 @@ export function TargetPicker({
               <div className="flex items-center gap-3">
                 <ItemImage
                   src={target.image}
-                  alt={target.name}
+                  alt={nameOf(target)}
                   size={44}
                   className="drop-shadow"
                 />
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-1">
                     <span className="font-heading truncate text-base font-semibold tracking-wide">
-                      {target.name}
+                      {nameOf(target)}
                     </span>
-                    <WikiLink href={target.wikiUrl} name={target.name} />
+                    <WikiLink href={target.wikiUrl} name={nameOf(target)} />
                   </div>
                   <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[11px] text-muted-foreground">
                     <span className="inline-flex items-center gap-0.5">

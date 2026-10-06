@@ -54,7 +54,7 @@ export function ProgressionGuide({
   skillLevel: number;
   skillMode: SkillMode;
 }) {
-  const { t, formatCount, formatDamage, formatSeconds } = useLanguage();
+  const { t, formatCount, formatDamage, formatSeconds, nameOf } = useLanguage();
   const [open, setOpen] = useState(false);
   const step = useMemo(
     () => buildGuideStep(biome, { skillLevel, skillMode }),
@@ -117,16 +117,16 @@ export function ProgressionGuide({
                   <Target className="size-4 shrink-0 text-primary" />
                   <ItemImage
                     src={step.gate.image}
-                    alt={step.gate.name}
+                    alt={nameOf(step.gate)}
                     size={18}
                   />
                   {step.biome.boss ? (
                     <>
-                      {t("Gate: defeat {target}", { target: step.gate.name })}
+                      {t("Gate: defeat {target}", { target: nameOf(step.gate) })}
                     </>
                   ) : (
                     <>
-                      {t("No Forsaken here — scored against {target}", { target: step.gate.name })}
+                      {t("No Forsaken here — scored against {target}", { target: nameOf(step.gate) })}
                     </>
                   )}
                 </span>
@@ -144,7 +144,7 @@ export function ProgressionGuide({
                 <GuidePickRow
                   key={pick.weapon.slug}
                   pick={pick}
-                  gateName={step.gate?.name ?? ""}
+                  gateName={step.gate ? nameOf(step.gate) : ""}
                 />
               ))}
             </ul>
@@ -184,7 +184,7 @@ function GuidePickRow({
   pick: GuidePick;
   gateName: string;
 }) {
-  const { t, formatCount, formatDamage, formatSeconds } = useLanguage();
+  const { t, formatCount, formatDamage, formatSeconds, nameOf } = useLanguage();
   const {
     weapon,
     ammo,
@@ -199,13 +199,13 @@ function GuidePickRow({
   return (
     <li className="rounded-lg border bg-muted/10 px-3 py-3">
       <div className="flex items-start gap-3">
-        <ItemImage src={weapon.image} alt={weapon.name} size={40} />
+        <ItemImage src={weapon.image} alt={nameOf(weapon)} size={40} />
         <div className="min-w-0 flex-1 space-y-1">
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
             <span className="font-heading text-sm font-semibold">
-              {weapon.name}
+              {nameOf(weapon)}
             </span>
-            <WikiLink href={weapon.wikiUrl} name={weapon.name} />
+            <WikiLink href={weapon.wikiUrl} name={nameOf(weapon)} />
             <Badge variant="secondary" className="font-normal">
               {t(weapon.clsLabel)}
             </Badge>
@@ -217,7 +217,7 @@ function GuidePickRow({
             {ammo ? (
               <Badge variant="outline" className="gap-1 font-normal">
                 <ArrowRight className="size-3" />
-                {ammo.name}
+                {nameOf(ammo)}
               </Badge>
             ) : null}
           </div>

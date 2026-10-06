@@ -1,0 +1,850 @@
+{
+  "abomination": {
+    "cs": "Ohavnost",
+    "de": "Monstrosität",
+    "fr": "Abomination",
+    "ru": "Мерзость"
+  },
+  "abyssal-harpoon": {
+    "cs": "Harpuna z hlubin",
+    "fr": "Harpon abyssal",
+    "ru": "Глубинный гарпун"
+  },
+  "abyssal-razor": {
+    "cs": "Břitva z hlubin",
+    "fr": "Rasoir abyssal",
+    "ru": "Глубинное лезвие"
+  },
+  "ancient-bark-spear": {
+    "cs": "Kopí ze starověkého dřeva",
+    "fr": "Lance en écorce ancienne",
+    "ru": "Копье из древней коры"
+  },
+  "antler-pickaxe": {
+    "cs": "Krumpáč z parohu",
+    "ru": "Кирка из оленьего рога"
+  },
+  "arbalest": {
+    "ru": "Арбалет"
+  },
+  "ash-fang": {
+    "ru": "Пепельный клык"
+  },
+  "asksvin": {
+    "ru": "Пеплозавр"
+  },
+  "bare-fists": {},
+  "barka": {},
+  "bat": {
+    "cs": "Netopýr",
+    "ru": "Летучая мышь"
+  },
+  "battleaxe": {
+    "cs": "Bojová sekera",
+    "de": "Streitaxt",
+    "fr": "Hache de combat",
+    "ru": "Боевой топор"
+  },
+  "bear": {
+    "cs": "Medvěd",
+    "ru": "Медведь"
+  },
+  "berserkir-axes": {
+    "de": "Berserkir-Äxte",
+    "ru": "Топоры берсеркира"
+  },
+  "bile-bomb": {
+    "ru": "Желчная бомба"
+  },
+  "black-metal-atgeir": {
+    "cs": "Atgeir z černého kovu",
+    "fr": "Atgeir en sombracier",
+    "ru": "Алебарда из черного металла"
+  },
+  "black-metal-axe": {
+    "cs": "Sekera z černého kovu",
+    "de": "Schwarzmetall-Axt",
+    "fr": "Hache en sombracier",
+    "ru": "Топор из черного металла"
+  },
+  "black-metal-battleaxe": {
+    "ru": "Боевой топор из черного металла"
+  },
+  "black-metal-bolt": {
+    "cs": "Šipka z černokovu",
+    "ru": "Болт из черного металла"
+  },
+  "black-metal-knife": {
+    "cs": "Nůž z černého kovu",
+    "fr": "Couteau en sombracier",
+    "ru": "Нож из черного металла"
+  },
+  "black-metal-missile": {},
+  "black-metal-pickaxe": {
+    "ru": "Кирка из черного металла"
+  },
+  "black-metal-sword": {
+    "cs": "Meč z černokovu",
+    "de": "Schwarzmetall-Schwert",
+    "fr": "Épée en sombracier",
+    "ru": "Меч из черного металла"
+  },
+  "bleeding-berserkir-axes": {
+    "cs": "Krvavé berserkské sekery",
+    "de": "Blutende Berserkir-Äxte",
+    "fr": "Haches des berserkir d'hémorragie",
+    "ru": "Кровоточащие топоры берсеркира"
+  },
+  "blob": {
+    "cs": "Slizoun",
+    "de": "Schleimling",
+    "fr": "Blob",
+    "ru": "Сгустень"
+  },
+  "blood-fang": {
+    "ru": "Кровавый клык"
+  },
+  "bloodgeon": {
+    "de": "Blutprügel",
+    "fr": "Masse-sang",
+    "ru": "Кровавая булава"
+  },
+  "bloodgold-arrow": {},
+  "bloodgold-bolt": {},
+  "bloodgold-missile": {},
+  "bloodgold-payload": {},
+  "boar": {
+    "cs": "Kanec",
+    "de": "Wildschwein",
+    "fr": "Sanglier",
+    "pt": "Javali",
+    "ru": "Кабан"
+  },
+  "bone-bolt": {
+    "cs": "Kostěnná šipka",
+    "ru": "Костяной болт"
+  },
+  "bonemass": {
+    "cs": "Bonemass",
+    "de": "Knochenwanst",
+    "fr": "Masse d'Os",
+    "ru": "Масса костей"
+  },
+  "bonemaw": {
+    "ru": "Костепасть"
+  },
+  "brenna": {
+    "cs": "Brenna",
+    "de": "Brenna",
+    "fr": "Brenna",
+    "ru": "Бренна"
+  },
+  "bronze-atgeir": {
+    "cs": "Bronzový Atgeir",
+    "fr": "Atgeir en bronze",
+    "ru": "Бронзовая алебарда"
+  },
+  "bronze-axe": {
+    "cs": "Bronzová sekera",
+    "de": "Bronzeaxt",
+    "fr": "Hache en bronze",
+    "ru": "Бронзовый топор"
+  },
+  "bronze-mace": {
+    "cs": "Bronzový palcát",
+    "de": "Bronzener Streitkolben",
+    "fr": "Massue en bronze",
+    "ru": "Бронзовая булава"
+  },
+  "bronze-pickaxe": {
+    "cs": "Bronzový krumpáč",
+    "ru": "Бронзовая кирка"
+  },
+  "bronze-spear": {
+    "cs": "Bronzové kopí",
+    "fr": "Lance en bronze",
+    "ru": "Бронзовое копье"
+  },
+  "bronze-sword": {
+    "cs": "Bronzový meč",
+    "fr": "Épée en bronze",
+    "ru": "Бронзовый меч"
+  },
+  "bronzehead-arrow": {
+    "cs": "Bronzový šíp",
+    "fr": "Flèche en bronze",
+    "ru": "Стрела с бронзовым наконечником"
+  },
+  "brutal-slayer": {
+    "ru": "Жестокий убийца"
+  },
+  "carapace-arrow": {
+    "ru": "Панцирная стрела"
+  },
+  "carapace-bolt": {
+    "cs": "Šipka z krunýře",
+    "ru": "Панцирный болт"
+  },
+  "carapace-spear": {
+    "cs": "Kopí z krunýře",
+    "de": "Chitin-Speer",
+    "fr": "Lance en carapace",
+    "ru": "Панцирное копье"
+  },
+  "charred-arrow": {
+    "ru": "Обугленная стрела"
+  },
+  "charred-bolt": {
+    "cs": "Sežehnutá šipka",
+    "ru": "Обугленный болт"
+  },
+  "charred-marksman": {
+    "cs": "Sežehnutý střelec",
+    "de": "Verkohlter Scharfschütze",
+    "fr": "Archer calciné",
+    "ru": "Обугленный лучник"
+  },
+  "charred-twitcher": {
+    "cs": "Sežehnutý trhavec",
+    "de": "Verkohlter Zuckender",
+    "fr": "Forcené calciné",
+    "ru": "Обугленный дергун"
+  },
+  "charred-warlock": {
+    "cs": "Sežehnutý čaroděj",
+    "de": "Verkohlter Hexer",
+    "fr": "Sorcier calciné",
+    "ru": "Обугленный чернокнижник"
+  },
+  "charred-warrior": {
+    "cs": "Sežehnutý válečník",
+    "de": "Verkohlter Krieger",
+    "fr": "Guerrier calciné",
+    "ru": "Обугленный воин"
+  },
+  "club": {
+    "cs": "Palice",
+    "de": "Keule",
+    "fr": "Bâton",
+    "ru": "Дубина"
+  },
+  "copper-knife": {
+    "cs": "Měděný nůž",
+    "fr": "Couteau en cuivre",
+    "ru": "Медный нож"
+  },
+  "crude-bow": {
+    "cs": "Hrubý luk",
+    "fr": "Arc",
+    "ru": "Грубый лук"
+  },
+  "crystal-battleaxe": {
+    "cs": "Křišťálová bitevní sekera",
+    "de": "Kristallkampfaxt",
+    "fr": "Hache de combat en cristal",
+    "ru": "Кристальный боевой топор"
+  },
+  "cultist": {
+    "cs": "Kultista",
+    "de": "Kultist",
+    "ru": "Культист"
+  },
+  "deathsquito": {
+    "de": "Todeskito",
+    "ru": "Смертожал"
+  },
+  "demolisher": {
+    "ru": "Разрушитель"
+  },
+  "drake": {
+    "cs": "Drak",
+    "fr": "Drac",
+    "ru": "Дракон"
+  },
+  "draugr": {
+    "cs": "Draugr",
+    "de": "Draugr",
+    "fr": "Draugr",
+    "ru": "Драугр"
+  },
+  "draugr-elite": {
+    "cs": "Elitní Draugr",
+    "de": "Elite Draugr",
+    "fr": "Élite Draugr",
+    "ru": "Элитный драугр"
+  },
+  "draugr-fang": {
+    "cs": "Draugrův Tesák",
+    "fr": "Croc de Draugr",
+    "ru": "Клык Драугра"
+  },
+  "dundr": {
+    "ru": "Дундр"
+  },
+  "dvergr-mage": {
+    "cs": "Dvergský Mág",
+    "ru": "Дверг-маг"
+  },
+  "dvergr-rogue": {
+    "cs": "Dvergský Tulák",
+    "ru": "Дверг-разбойник"
+  },
+  "dyrnwyn": {
+    "cs": "Dyrnwyn",
+    "ru": "Дирнвин"
+  },
+  "early-axes": {
+    "ru": "Древние топоры"
+  },
+  "echo-spike": {},
+  "eikthyr": {
+    "cs": "Eikthyr",
+    "de": "Eikthyr",
+    "fr": "Eikthyr",
+    "ru": "Эйктюр"
+  },
+  "elaking": {},
+  "ember-charge": {},
+  "explosive-payload": {},
+  "eyeless-one": {},
+  "fader": {
+    "ru": "Прародитель"
+  },
+  "fallen-valkyrie": {
+    "cs": "Padlá valkýra",
+    "de": "Gefallene Walküre",
+    "fr": "Valkyrie déchue",
+    "ru": "Падшая валькирия"
+  },
+  "fallen-warrior": {},
+  "fang-spear": {
+    "cs": "Kopí z tesáku",
+    "fr": "Lance en crocs",
+    "ru": "Копье с волчьим клыком"
+  },
+  "fenring": {
+    "fr": "Fenring",
+    "ru": "Фенринг"
+  },
+  "finewood-bow": {
+    "cs": "Luk z jemného dřeva",
+    "fr": "Arc de Bois Noble",
+    "ru": "Хороший лук"
+  },
+  "fire-arrow": {
+    "cs": "Ohnivý šíp",
+    "fr": "Flèche enflammée",
+    "ru": "Огненная стрела"
+  },
+  "flametal-mace": {
+    "de": "Flammenkern-Streitkolben",
+    "ru": "Огнеметаллическая булава"
+  },
+  "flametal-missile": {},
+  "flesh-rippers": {
+    "ru": "Потрошители плоти"
+  },
+  "flint-axe": {
+    "cs": "Sekera z pazourku",
+    "de": "Feuersteinaxt",
+    "ru": "Кремневый топор"
+  },
+  "flint-knife": {
+    "cs": "Nůž z pazourku",
+    "ru": "Кремневый нож"
+  },
+  "flint-spear": {
+    "cs": "Kopí z pazourku",
+    "fr": "Lance en silex",
+    "ru": "Кремневое копье"
+  },
+  "flinthead-arrow": {
+    "cs": "Šíp z pazourku",
+    "fr": "Flèche en silex",
+    "ru": "Стрела с кремниевым наконечником"
+  },
+  "frost-arrow": {
+    "cs": "Mrazivý šíp",
+    "fr": "Flèche de givre",
+    "ru": "Ледяная стрела"
+  },
+  "frostfire-atgeir": {},
+  "frostfire-axe": {},
+  "frostfire-bow": {},
+  "frostfire-crossbow": {},
+  "frostfire-dagger": {},
+  "frostfire-greataxe": {},
+  "frostfire-greatsword": {},
+  "frostfire-knucklechains": {},
+  "frostfire-mace": {},
+  "frostfire-sledge": {},
+  "frostfire-spear": {},
+  "frostfire-sword": {},
+  "frostner": {
+    "cs": "Frostner",
+    "de": "Frostner",
+    "fr": "Argivre",
+    "ru": "Ледомор"
+  },
+  "fuling": {
+    "de": "Fuling",
+    "fr": "Gobelin",
+    "ru": "Фулинг"
+  },
+  "fuling-berserker": {
+    "fr": "Berserker Gobelin",
+    "ru": "Фулинг-берсерк"
+  },
+  "fuling-shaman": {
+    "de": "Fuling Schamane",
+    "fr": "Chaman Gobelin",
+    "ru": "Фулинг-шаман"
+  },
+  "gammeltroll": {},
+  "geirrhafa": {
+    "de": "Geirrhafa",
+    "ru": "Гейрафа"
+  },
+  "ghost": {
+    "cs": "Duch",
+    "de": "Geist",
+    "fr": "Fantôme",
+    "ru": "Дух"
+  },
+  "gjall": {
+    "cs": "Gjall",
+    "de": "Gjall",
+    "ru": "Гьялль"
+  },
+  "grausten-payload": {},
+  "greydwarf": {
+    "cs": "Šedý trpaslík",
+    "de": "Grauzwerg",
+    "fr": "Naingris",
+    "ru": "Грейдворф"
+  },
+  "greydwarf-brute": {
+    "cs": "Šedý trpaslík surovec",
+    "de": "Grauzwergen Berserker",
+    "fr": "Brute Naingris",
+    "ru": "Грейдворф-дикарь"
+  },
+  "greydwarf-deep-north": {},
+  "greydwarf-shaman": {
+    "cs": "Šaman šedý trpaslík",
+    "de": "Grauzwergen Schamane",
+    "fr": "Chaman Naingris",
+    "ru": "Грейдворф-шаман"
+  },
+  "greydwarf-shaman-deep-north": {},
+  "greyling": {
+    "cs": "Greyling",
+    "de": "Gräuling",
+    "fr": "Bourgeon Naingris",
+    "ru": "Грейлинг"
+  },
+  "growth": {
+    "cs": "Dehtová bublina",
+    "de": "Düsterblob",
+    "fr": "Growth",
+    "ru": "Поросль"
+  },
+  "hexen": {},
+  "himminafl": {
+    "ru": "Химминафль"
+  },
+  "huntsman-bow": {
+    "cs": "Lovecký luk",
+    "fr": "Arc de chasse",
+    "ru": "Охотничий лук"
+  },
+  "iron-atgeir": {
+    "cs": "Železný Atgeir",
+    "fr": "Atgeir en fer",
+    "ru": "Железная алебарда"
+  },
+  "iron-axe": {
+    "cs": "Železná sekera",
+    "de": "Eisenaxt",
+    "fr": "Hache en fer",
+    "ru": "Железный топор"
+  },
+  "iron-bolt": {
+    "cs": "Železná Šipka",
+    "ru": "Железный болт"
+  },
+  "iron-mace": {
+    "cs": "Železný palcát",
+    "de": "Eiserner Streitkolben",
+    "fr": "Massue de fer",
+    "ru": "Железная булава"
+  },
+  "iron-pickaxe": {
+    "cs": "Železný krumpáč",
+    "ru": "Железная кирка"
+  },
+  "iron-sledge": {
+    "cs": "Železné velké kladivo",
+    "fr": "Masse de fer",
+    "ru": "Железная кувалда"
+  },
+  "iron-sword": {
+    "cs": "Železný meč",
+    "de": "Eisenschwert",
+    "fr": "Épée en fer",
+    "ru": "Железный меч"
+  },
+  "ironhead-arrow": {
+    "cs": "Železný šíp",
+    "fr": "Flèche en fer",
+    "ru": "Стрела с железным наконечником"
+  },
+  "jotun-bane": {
+    "cs": "Zhouba Jótunů",
+    "de": "Jotun-Fluch",
+    "fr": "Fléau des jötnars",
+    "ru": "Погибель йотунов"
+  },
+  "kall-fimbulbringer": {},
+  "klossen": {
+    "ru": "Клоссен"
+  },
+  "krigen": {},
+  "krom": {
+    "cs": "Krom",
+    "ru": "Кром"
+  },
+  "kvastur": {
+    "ru": "Квастур"
+  },
+  "lava-blob": {
+    "ru": "Лавовый сгустень"
+  },
+  "leech": {
+    "cs": "Pijavice",
+    "de": "Schlundegel",
+    "fr": "Sangsue",
+    "ru": "Пиявка"
+  },
+  "lightning-strike": {},
+  "lord-reto": {
+    "ru": "Владыка Рето"
+  },
+  "lox": {
+    "cs": "Lox",
+    "de": "Lox",
+    "fr": "Lox",
+    "ru": "Быкоящер"
+  },
+  "mistwalker": {
+    "cs": "Mlhošlap",
+    "de": "Nebelbrecher",
+    "fr": "Marchebrume",
+    "ru": "Странник туманов"
+  },
+  "moder": {
+    "cs": "Moder",
+    "de": "Drachenmutter",
+    "ru": "Матерь"
+  },
+  "moose": {},
+  "morgen": {
+    "ru": "Морген"
+  },
+  "neck": {
+    "cs": "Neck",
+    "de": "Nixe",
+    "fr": "Nixe",
+    "pt": "Lagarto",
+    "ru": "Никс"
+  },
+  "needle-arrow": {
+    "cs": "Šíp z jehly",
+    "fr": "Flèche aiguille",
+    "ru": "Игольная стрела"
+  },
+  "nidhogg": {
+    "ru": "Нидхёгг"
+  },
+  "nidhogg-the-bleeding": {
+    "ru": "Кровоточащий нидхёгг"
+  },
+  "nidhogg-the-primal": {
+    "ru": "Первобытный нидхёгг"
+  },
+  "nidhogg-the-thundering": {
+    "ru": "Громовой нидхёгг"
+  },
+  "nord-atgeir": {},
+  "nord-axe": {},
+  "nord-bow": {},
+  "nord-crossbow": {},
+  "nord-dagger": {},
+  "nord-greataxe": {},
+  "nord-greatsword": {},
+  "nord-knucklechains": {},
+  "nord-mace": {},
+  "nord-sledge": {},
+  "nord-spear": {},
+  "nord-sword": {},
+  "northern-vengeance": {},
+  "obsidian-arrow": {
+    "cs": "Obsidiánový šíp",
+    "fr": "Flèche d'obsidienne",
+    "ru": "Обсидиановая стрела"
+  },
+  "ooze-bomb": {
+    "cs": "Bomba ze slizu",
+    "fr": "Bombe puante",
+    "ru": "Гнилостная бомба"
+  },
+  "oozer": {
+    "cs": "Oozer",
+    "de": "Schleimmasse",
+    "fr": "Oozer",
+    "ru": "Слизняк"
+  },
+  "paws-of-the-bear": {
+    "ru": "Медвежьи лапы"
+  },
+  "poison-arrow": {
+    "cs": "Otrávený šíp",
+    "fr": "Flèche empoisonnée",
+    "ru": "Отравленная стрела"
+  },
+  "porcupine": {
+    "cs": "Pichlavý palcát",
+    "de": "Stachelschwein",
+    "fr": "Porc-épic",
+    "ru": "Дикобраз"
+  },
+  "primal-berserkir-axes": {
+    "cs": "Prvotní berserkské sekery",
+    "de": "Urweltliche Berserkir-Äxte",
+    "fr": "Haches des berserkir primitives",
+    "ru": "Первобытные топоры берсеркира"
+  },
+  "primal-slayer": {
+    "ru": "Первобытный убийца"
+  },
+  "rancid-remains": {
+    "cs": "Zatuchlé zůstatky",
+    "de": "Ranzige Überreste",
+    "fr": "Cadavre rance",
+    "ru": "Сгнившие останки"
+  },
+  "ripper": {
+    "ru": "Разрыватель"
+  },
+  "root-creature": {},
+  "root-fang": {
+    "ru": "Корневой клык"
+  },
+  "root-ripper": {
+    "ru": "Корневой разрыватель"
+  },
+  "scourging-slayer": {
+    "ru": "Грозный убийца"
+  },
+  "seeker": {
+    "cs": "Hledač",
+    "fr": "Fouineur",
+    "ru": "Искатель"
+  },
+  "seeker-brood": {
+    "cs": "Potomstvo Hledačů",
+    "fr": "Fouineur",
+    "ru": "Выводок искателя"
+  },
+  "seeker-soldier": {
+    "cs": "Voják Hledačů",
+    "ru": "Искатель-солдат"
+  },
+  "serpent": {
+    "fr": "Serpent",
+    "ru": "Змей"
+  },
+  "shapeless-pulp": {},
+  "silver-arrow": {
+    "cs": "Stříbrný šíp",
+    "fr": "Flèche en argent",
+    "ru": "Серебряная стрела"
+  },
+  "silver-knife": {
+    "fr": "Couteau en argent",
+    "ru": "Серебряный нож"
+  },
+  "silver-sword": {
+    "cs": "Stříbrný meč",
+    "de": "Silberschwert",
+    "fr": "Épée en argent",
+    "ru": "Серебряный меч"
+  },
+  "skeleton": {
+    "cs": "Kostlivec",
+    "de": "Skelett",
+    "fr": "Squelette",
+    "ru": "Скелет"
+  },
+  "skoll-and-hati": {
+    "ru": "Сколль и Хати"
+  },
+  "skugg": {
+    "ru": "Скугг"
+  },
+  "skull-splittur": {
+    "ru": "Крушитель черепов"
+  },
+  "slayer": {
+    "ru": "Убийца"
+  },
+  "smoke-bomb": {
+    "ru": "Дымовая шашка"
+  },
+  "snowball": {},
+  "spinesnap": {
+    "ru": "Хребтолом"
+  },
+  "splitnir": {
+    "ru": "Расколнир"
+  },
+  "splitnir-the-bleeding": {
+    "ru": "Кровоточащий расколнир"
+  },
+  "splitnir-the-primal": {
+    "ru": "Первобытный расколнир"
+  },
+  "splitnir-the-storming": {
+    "ru": "Штормовой расколнир"
+  },
+  "staff-of-embers": {
+    "ru": "Посох огня"
+  },
+  "staff-of-fracturing": {
+    "ru": "Посох раскалывания"
+  },
+  "staff-of-frost": {
+    "ru": "Посох льда"
+  },
+  "staff-of-the-wild": {
+    "ru": "Посох дикой природы"
+  },
+  "stagbreaker": {
+    "cs": "Jelení palice",
+    "fr": "Brise-cerf",
+    "ru": "Оленья Скорбь"
+  },
+  "stone-axe": {
+    "cs": "Kamenná sekera",
+    "de": "Steinaxt",
+    "ru": "Каменный топор"
+  },
+  "stone-golem": {
+    "fr": "Golem de pierre",
+    "ru": "Каменный голем"
+  },
+  "storm-fang": {
+    "ru": "Штормовой клык"
+  },
+  "storm-ripper": {
+    "ru": "Штормовой разрыватель"
+  },
+  "storm-star": {
+    "cs": "Bouřlivá hvězda",
+    "de": "Sturmstern",
+    "fr": "Étoile des tempêtes",
+    "ru": "Штормовая звезда"
+  },
+  "surtling": {
+    "cs": "Surtling",
+    "de": "Surtling",
+    "fr": "Surtling",
+    "ru": "Суртлинг"
+  },
+  "the-elder": {
+    "cs": "Prastarý",
+    "de": "Der Uralte",
+    "fr": "L'Aîné",
+    "ru": "Древний"
+  },
+  "the-queen": {
+    "cs": "Královna",
+    "ru": "Королева"
+  },
+  "thunderblood-atgeir": {},
+  "thunderblood-axe": {},
+  "thunderblood-bow": {},
+  "thunderblood-crossbow": {},
+  "thunderblood-dagger": {},
+  "thunderblood-greataxe": {},
+  "thunderblood-greatsword": {},
+  "thunderblood-knucklechains": {},
+  "thunderblood-mace": {},
+  "thunderblood-sledge": {},
+  "thunderblood-spear": {},
+  "thunderblood-sword": {},
+  "thundering-berserkir-axes": {
+    "cs": "Hromové berserkské sekery",
+    "de": "Donnernde Berserkir-Äxte",
+    "fr": "Haches des berserkir du tonnerre",
+    "ru": "Громовые топоры берсеркира"
+  },
+  "tick": {
+    "cs": "Klíště",
+    "ru": "Клещ"
+  },
+  "tiny-pulp": {},
+  "torch": {},
+  "troll": {
+    "cs": "Troll",
+    "de": "Troll",
+    "fr": "Troll",
+    "ru": "Тролль"
+  },
+  "ulv": {
+    "cs": "Ulv",
+    "de": "Ulv",
+    "ru": "Ульв"
+  },
+  "vile": {
+    "cs": "Děs",
+    "ru": "Гнилолап"
+  },
+  "vilebone-maulclaws": {
+    "ru": "Гнилокостные когти"
+  },
+  "volture": {
+    "ru": "Стервулканник"
+  },
+  "wolf": {
+    "cs": "Vlk",
+    "de": "Wolf",
+    "fr": "Loup",
+    "ru": "Волк"
+  },
+  "wood-arrow": {
+    "cs": "Dřevěný šíp",
+    "fr": "Flèche en bois",
+    "ru": "Деревянная стрела"
+  },
+  "wooden-missile": {},
+  "wound-ripper": {
+    "ru": "Ранящий разрыватель"
+  },
+  "wraith": {
+    "cs": "Přízrak",
+    "de": "Zorngeist",
+    "fr": "Spectre",
+    "ru": "Призрак"
+  },
+  "writhan": {},
+  "yagluth": {
+    "cs": "Yagluth",
+    "de": "Yagluth",
+    "ru": "Яглут"
+  },
+  "zil-thungr": {
+    "de": "Zil & Thungr",
+    "ru": "Зил и Тангр"
+  }
+}

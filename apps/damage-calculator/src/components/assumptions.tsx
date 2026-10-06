@@ -47,7 +47,7 @@ function formatDate(iso: string, locale: Locale): string {
   });
 }
 
-const WEAPON_NAME = new Map(weapons.map((weapon) => [weapon.slug, weapon.name]));
+const WEAPON_BY_SLUG = new Map(weapons.map((weapon) => [weapon.slug, weapon]));
 
 /** How one attack repeats, as a compact string for the class table. */
 function timingLabel(profile: AttackProfile, t: Translate, number: (value: number, digits?: number) => string): string {
@@ -108,7 +108,7 @@ const HEADER_BUTTON =
 
 /** The translated methodology shown inside the dialog. */
 function MethodologySections() {
-  const { t, locale, number, formatCount } = useLanguage();
+  const { t, locale, number, formatCount, nameOf } = useLanguage();
   return (
     <>
         <div className="space-y-2">
@@ -224,7 +224,7 @@ listed damage = weapon value + ammo value`)}
               {Object.entries(WEAPON_PRIMARY_OVERRIDES).map(([slug, profile]) => (
                 <li key={slug}>
                   <span className="text-foreground">
-                    {WEAPON_NAME.get(slug) ?? slug}
+                    {WEAPON_BY_SLUG.has(slug) ? nameOf(WEAPON_BY_SLUG.get(slug)!) : slug}
                   </span>{" "}
                   — {timingLabel(profile, t, number)}
                   {comboLabel(profile, t, number)}

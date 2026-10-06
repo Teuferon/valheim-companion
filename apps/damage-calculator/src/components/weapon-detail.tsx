@@ -49,7 +49,7 @@ export function WeaponDetail({
   result: CalculationResult;
   bestResult: { weapon: Weapon; perHit: number; dps: number } | null;
 }) {
-  const { t, formatCount, formatDamage, formatSeconds, number } = useLanguage();
+  const { t, formatCount, formatDamage, formatSeconds, number, nameOf } = useLanguage();
   const isBest = bestResult?.weapon.slug === weapon.slug;
 
   return (
@@ -57,12 +57,12 @@ export function WeaponDetail({
       <CardHeader className="gap-3 border-b bg-muted/25 px-4 py-4">
         <div className="flex items-start gap-3">
           <div className="rounded-lg bg-background/60 p-2 ring-1 ring-border">
-            <ItemImage src={weapon.image} alt={weapon.name} size={44} />
+            <ItemImage src={weapon.image} alt={nameOf(weapon)} size={44} />
           </div>
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-1.5">
-              <CardTitle className="truncate text-lg">{weapon.name}</CardTitle>
-              <WikiLink href={weapon.wikiUrl} name={weapon.name} />
+              <CardTitle className="truncate text-lg">{nameOf(weapon)}</CardTitle>
+              <WikiLink href={weapon.wikiUrl} name={nameOf(weapon)} />
             </div>
             <div className="mt-1 flex flex-wrap items-center gap-1.5">
               {/* Same one-click class filter as the ranking rows. */}
@@ -83,7 +83,7 @@ export function WeaponDetail({
               {weapon.ammo && ammo ? (
                 <Badge variant="outline" className="gap-1 font-normal">
                   <ArrowRight className="size-3" />
-                  {ammo.name}
+                  {nameOf(ammo)}
                 </Badge>
               ) : null}
               {isBest ? (
@@ -276,7 +276,7 @@ export function WeaponDetail({
           {bestResult ? (
             <Row
               label={t("Vs best pick")}
-              value={t("{percent}% of {weapon}", { percent: number((result.perHit / bestResult.perHit) * 100, 0), weapon: bestResult.weapon.name })}
+              value={t("{percent}% of {weapon}", { percent: number((result.perHit / bestResult.perHit) * 100, 0), weapon: nameOf(bestResult.weapon) })}
             />
           ) : null}
         </dl>

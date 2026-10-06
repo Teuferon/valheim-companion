@@ -1,3 +1,4 @@
+import { matchesName } from '@/lib/entity-names';
 import { useLanguage } from '@/hooks/use-language';
 
 import { useMemo, useState } from "react";
@@ -71,7 +72,7 @@ export function WeaponsTable({
   cls: "all" | WeaponClass;
   onClsChange: (next: "all" | WeaponClass) => void;
 }) {
-  const { t, formatCount, formatDamage, formatSeconds, number } = useLanguage();
+  const { t, formatCount, formatDamage, formatSeconds, number, nameOf, locale } = useLanguage();
   const [query, setQuery] = useState("");
   const [group, setGroup] = useState<"all" | WeaponGroup>("all");
   /* Damage type is its own axis: a sword that deals fire should survive both the
@@ -123,8 +124,9 @@ export function WeaponsTable({
       if (!query.trim()) return true;
       const q = query.trim().toLowerCase();
       return (
-        r.weapon.name.toLowerCase().includes(q) ||
-        r.weapon.clsLabel.toLowerCase().includes(q)
+        matchesName(r.weapon, q, locale) ||
+        r.weapon.clsLabel.toLowerCase().includes(q) ||
+        t(r.weapon.clsLabel).toLocaleLowerCase(locale).includes(q)
       );
     });
     return [...filtered].sort((a, b) => {
@@ -133,7 +135,7 @@ export function WeaponsTable({
       }
       return b.result[sortKey] - a.result[sortKey];
     });
-  }, [rows, cls, group, damage, query, sortKey, t]);
+  }, [rows, cls, group, damage, query, sortKey, t, locale]);
 
   return (
     <Card className="gap-0 overflow-hidden py-0">
@@ -278,17 +280,17 @@ export function WeaponsTable({
                       <div className="flex items-center gap-2">
                         <ItemImage
                           src={row.weapon.image}
-                          alt={row.weapon.name}
+                          alt={nameOf(row.weapon)}
                           size={28}
                         />
                         <div className="min-w-0">
                           <div className="flex items-center gap-1">
                             <span className="truncate font-medium">
-                              {row.weapon.name}
+                              {nameOf(row.weapon)}
                             </span>
                             <WikiLink
                               href={row.weapon.wikiUrl}
-                              name={row.weapon.name}
+                              name={nameOf(row.weapon)}
                               className="size-5"
                             />
                           </div>
