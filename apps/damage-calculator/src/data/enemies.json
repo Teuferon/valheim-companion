@@ -1,0 +1,1125 @@
+[
+  {
+    "slug": "boar",
+    "name": "Boar",
+    "wikiTitle": "Boar",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Boar",
+    "image": "/items/boar.png",
+    "kind": "enemy",
+    "health": 10,
+    "biome": "meadows",
+    "resistances": {
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "greyling",
+    "name": "Greyling",
+    "wikiTitle": "Greyling",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Greyling",
+    "image": "/items/greyling.png",
+    "kind": "enemy",
+    "health": 20,
+    "biome": "meadows",
+    "resistances": {
+      "fire": "very-weak",
+      "poison": "resistant",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "neck",
+    "name": "Neck",
+    "wikiTitle": "Neck",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Neck",
+    "image": "/items/neck.png",
+    "kind": "enemy",
+    "health": 5,
+    "biome": "meadows",
+    "resistances": {
+      "fire": "weak",
+      "poison": "resistant",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "brenna",
+    "name": "Brenna",
+    "wikiTitle": "Brenna",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Brenna",
+    "image": "/items/brenna.png",
+    "kind": "miniboss",
+    "health": 1200,
+    "biome": "black-forest",
+    "resistances": {
+      "blunt": "weak",
+      "frost": "weak",
+      "pierce": "resistant",
+      "fire": "immune",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "bear",
+    "name": "Bear",
+    "wikiTitle": "Bear",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Bear",
+    "image": "/items/bear.png",
+    "kind": "enemy",
+    "health": 500,
+    "biome": "black-forest",
+    "resistances": {
+      "fire": "weak",
+      "frost": "resistant",
+      "blunt": "resistant",
+      "pierce": "resistant",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "ghost",
+    "name": "Ghost",
+    "wikiTitle": "Ghost",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Ghost",
+    "image": "/items/ghost.png",
+    "kind": "enemy",
+    "health": 60,
+    "biome": "black-forest",
+    "resistances": {
+      "spirit": "weak",
+      "blunt": "resistant",
+      "slash": "resistant",
+      "pierce": "resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "greydwarf",
+    "name": "Greydwarf",
+    "wikiTitle": "Greydwarf",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Greydwarf",
+    "image": "/items/greydwarf.png",
+    "kind": "enemy",
+    "health": 40,
+    "biome": "black-forest",
+    "resistances": {
+      "fire": "very-weak",
+      "poison": "resistant",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "greydwarf-brute",
+    "name": "Greydwarf Brute",
+    "wikiTitle": "Greydwarf Brute",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Greydwarf_Brute",
+    "image": "/items/greydwarf-brute.png",
+    "kind": "enemy",
+    "health": 150,
+    "biome": "black-forest",
+    "resistances": {
+      "fire": "very-weak",
+      "poison": "resistant",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "greydwarf-shaman",
+    "name": "Greydwarf Shaman",
+    "wikiTitle": "Greydwarf Shaman",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Greydwarf_Shaman",
+    "image": "/items/greydwarf-shaman.png",
+    "kind": "enemy",
+    "health": 60,
+    "biome": "black-forest",
+    "resistances": {
+      "fire": "very-weak",
+      "poison": "resistant",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "rancid-remains",
+    "name": "Rancid Remains",
+    "wikiTitle": "Rancid Remains",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Rancid_Remains",
+    "image": "/items/rancid-remains.png",
+    "kind": "enemy",
+    "health": 100,
+    "biome": "black-forest",
+    "resistances": {
+      "blunt": "weak",
+      "fire": "weak",
+      "pierce": "resistant",
+      "frost": "resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "root-creature",
+    "name": "Root",
+    "wikiTitle": "Root (creature)",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Root_(creature)",
+    "image": "/items/root-creature.png",
+    "kind": "enemy",
+    "health": 20,
+    "biome": "black-forest",
+    "resistances": {
+      "fire": "weak",
+      "frost": "resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "skeleton",
+    "name": "Skeleton",
+    "wikiTitle": "Skeleton",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Skeleton",
+    "image": "/items/skeleton.png",
+    "kind": "enemy",
+    "health": 40,
+    "biome": "black-forest",
+    "resistances": {
+      "blunt": "weak",
+      "fire": "weak",
+      "pierce": "resistant",
+      "frost": "resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "troll",
+    "name": "Troll",
+    "wikiTitle": "Troll",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Troll",
+    "image": "/items/troll.png",
+    "kind": "enemy",
+    "health": 600,
+    "biome": "black-forest",
+    "resistances": {
+      "pierce": "weak",
+      "blunt": "resistant",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "serpent",
+    "name": "Serpent",
+    "wikiTitle": "Serpent",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Serpent",
+    "image": "/items/serpent.png",
+    "kind": "enemy",
+    "health": 400,
+    "biome": "ocean",
+    "resistances": {
+      "frost": "weak",
+      "poison": "resistant",
+      "fire": "immune",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "abomination",
+    "name": "Abomination",
+    "wikiTitle": "Abomination",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Abomination",
+    "image": "/items/abomination.png",
+    "kind": "enemy",
+    "health": 800,
+    "biome": "swamp",
+    "resistances": {
+      "fire": "weak",
+      "blunt": "resistant",
+      "pierce": "very-resistant",
+      "frost": "immune",
+      "poison": "immune",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "blob",
+    "name": "Blob",
+    "wikiTitle": "Blob",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Blob",
+    "image": "/items/blob.png",
+    "kind": "enemy",
+    "health": 50,
+    "biome": "swamp",
+    "resistances": {
+      "blunt": "weak",
+      "frost": "weak",
+      "lightning": "weak",
+      "fire": "resistant",
+      "pierce": "resistant",
+      "slash": "resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "draugr",
+    "name": "Draugr",
+    "wikiTitle": "Draugr",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Draugr",
+    "image": "/items/draugr.png",
+    "kind": "enemy",
+    "health": 100,
+    "biome": "swamp",
+    "resistances": {
+      "fire": "resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "draugr-elite",
+    "name": "Draugr Elite",
+    "wikiTitle": "Draugr Elite",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Draugr_Elite",
+    "image": "/items/draugr-elite.png",
+    "kind": "enemy",
+    "health": 200,
+    "biome": "swamp",
+    "resistances": {
+      "fire": "resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "kvastur",
+    "name": "Kvastur",
+    "wikiTitle": "Kvastur",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Kvastur",
+    "image": "/items/kvastur.png",
+    "kind": "enemy",
+    "health": 700,
+    "biome": "swamp",
+    "resistances": {
+      "fire": "very-weak",
+      "poison": "immune",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "leech",
+    "name": "Leech",
+    "wikiTitle": "Leech",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Leech",
+    "image": "/items/leech.png",
+    "kind": "enemy",
+    "health": 60,
+    "biome": "swamp",
+    "resistances": {
+      "poison": "resistant",
+      "fire": "immune",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "oozer",
+    "name": "Oozer",
+    "wikiTitle": "Oozer",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Oozer",
+    "image": "/items/oozer.png",
+    "kind": "enemy",
+    "health": 150,
+    "biome": "swamp",
+    "resistances": {
+      "blunt": "weak",
+      "frost": "weak",
+      "lightning": "weak",
+      "fire": "resistant",
+      "pierce": "resistant",
+      "slash": "resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "surtling",
+    "name": "Surtling",
+    "wikiTitle": "Surtling",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Surtling",
+    "image": "/items/surtling.png",
+    "kind": "enemy",
+    "health": 20,
+    "biome": "swamp",
+    "resistances": {
+      "frost": "weak",
+      "fire": "immune",
+      "poison": "immune",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "wraith",
+    "name": "Wraith",
+    "wikiTitle": "Wraith",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Wraith",
+    "image": "/items/wraith.png",
+    "kind": "enemy",
+    "health": 100,
+    "biome": "swamp",
+    "resistances": {
+      "fire": "weak",
+      "spirit": "weak",
+      "blunt": "resistant",
+      "pierce": "resistant",
+      "slash": "resistant",
+      "frost": "immune",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "writhan",
+    "name": "Writhan",
+    "wikiTitle": "Writhan",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Writhan",
+    "image": "/items/writhan.png",
+    "kind": "enemy",
+    "health": 400,
+    "biome": "swamp",
+    "resistances": {
+      "slash": "weak",
+      "blunt": "resistant",
+      "fire": "resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "geirrhafa",
+    "name": "Geirrhafa",
+    "wikiTitle": "Geirrhafa",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Geirrhafa",
+    "image": "/items/geirrhafa.png",
+    "kind": "miniboss",
+    "health": 3700,
+    "biome": "mountain",
+    "resistances": {
+      "fire": "weak",
+      "frost": "immune"
+    }
+  },
+  {
+    "slug": "bat",
+    "name": "Bat",
+    "wikiTitle": "Bat",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Bat",
+    "image": "/items/bat.png",
+    "kind": "enemy",
+    "health": 10,
+    "biome": "mountain",
+    "resistances": {
+      "fire": "weak",
+      "spirit": "weak",
+      "blunt": "resistant",
+      "slash": "resistant",
+      "pierce": "resistant",
+      "frost": "immune",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "cultist",
+    "name": "Cultist",
+    "wikiTitle": "Cultist",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Cultist",
+    "image": "/items/cultist.png",
+    "kind": "enemy",
+    "health": 200,
+    "biome": "mountain",
+    "resistances": {
+      "poison": "weak",
+      "fire": "immune"
+    }
+  },
+  {
+    "slug": "drake",
+    "name": "Drake",
+    "wikiTitle": "Drake",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Drake",
+    "image": "/items/drake.png",
+    "kind": "enemy",
+    "health": 100,
+    "biome": "mountain",
+    "resistances": {
+      "fire": "weak",
+      "frost": "immune",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "fenring",
+    "name": "Fenring",
+    "wikiTitle": "Fenring",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Fenring",
+    "image": "/items/fenring.png",
+    "kind": "enemy",
+    "health": 300,
+    "biome": "mountain",
+    "resistances": {
+      "fire": "weak",
+      "poison": "resistant"
+    }
+  },
+  {
+    "slug": "stone-golem",
+    "name": "Stone Golem",
+    "wikiTitle": "Stone Golem",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Stone_Golem",
+    "image": "/items/stone-golem.png",
+    "kind": "enemy",
+    "health": 800,
+    "biome": "mountain",
+    "resistances": {
+      "pierce": "resistant",
+      "slash": "resistant",
+      "fire": "immune",
+      "frost": "immune",
+      "poison": "immune",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "ulv",
+    "name": "Ulv",
+    "wikiTitle": "Ulv",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Ulv",
+    "image": "/items/ulv.png",
+    "kind": "enemy",
+    "health": 50,
+    "biome": "mountain",
+    "resistances": {
+      "poison": "weak",
+      "fire": "very-resistant"
+    }
+  },
+  {
+    "slug": "wolf",
+    "name": "Wolf",
+    "wikiTitle": "Wolf",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Wolf",
+    "image": "/items/wolf.png",
+    "kind": "enemy",
+    "health": 80,
+    "biome": "mountain",
+    "resistances": {
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "zil-thungr",
+    "name": "Zil & Thungr",
+    "wikiTitle": "Zil & Thungr",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Zil_%26_Thungr",
+    "image": "/items/zil-thungr.png",
+    "kind": "miniboss",
+    "health": 6600,
+    "biome": "plains",
+    "resistances": {
+      "spirit": "immune"
+    },
+    "note": "Two enemies: Thungr 4,200 HP + Zil 2,400 HP. Combined health shown; both must die."
+  },
+  {
+    "slug": "deathsquito",
+    "name": "Deathsquito",
+    "wikiTitle": "Deathsquito",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Deathsquito",
+    "image": "/items/deathsquito.png",
+    "kind": "enemy",
+    "health": 10,
+    "biome": "plains",
+    "resistances": {
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "fuling",
+    "name": "Fuling",
+    "wikiTitle": "Fuling",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Fuling",
+    "image": "/items/fuling.png",
+    "kind": "enemy",
+    "health": 175,
+    "biome": "plains",
+    "resistances": {
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "fuling-berserker",
+    "name": "Fuling Berserker",
+    "wikiTitle": "Fuling Berserker",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Fuling_Berserker",
+    "image": "/items/fuling-berserker.png",
+    "kind": "enemy",
+    "health": 800,
+    "biome": "plains",
+    "resistances": {
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "fuling-shaman",
+    "name": "Fuling Shaman",
+    "wikiTitle": "Fuling Shaman",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Fuling_Shaman",
+    "image": "/items/fuling-shaman.png",
+    "kind": "enemy",
+    "health": 100,
+    "biome": "plains",
+    "resistances": {
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "growth",
+    "name": "Growth",
+    "wikiTitle": "Growth",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Growth",
+    "image": "/items/growth.png",
+    "kind": "enemy",
+    "health": 100,
+    "biome": "plains",
+    "resistances": {
+      "blunt": "weak",
+      "fire": "weak",
+      "frost": "resistant",
+      "pierce": "resistant",
+      "slash": "resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "lox",
+    "name": "Lox",
+    "wikiTitle": "Lox",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Lox",
+    "image": "/items/lox.png",
+    "kind": "enemy",
+    "health": 1000,
+    "biome": "plains",
+    "resistances": {
+      "fire": "weak",
+      "blunt": "resistant",
+      "frost": "resistant",
+      "slash": "resistant",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "vile",
+    "name": "Vile",
+    "wikiTitle": "Vile",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Vile",
+    "image": "/items/vile.png",
+    "kind": "enemy",
+    "health": 1200,
+    "biome": "plains",
+    "resistances": {
+      "fire": "weak",
+      "spirit": "weak",
+      "frost": "resistant",
+      "blunt": "resistant",
+      "pierce": "resistant",
+      "slash": "resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "dvergr-mage",
+    "name": "Dvergr Mage",
+    "wikiTitle": "Dvergr Mage",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Dvergr_Mage",
+    "image": "/items/dvergr-mage.png",
+    "kind": "enemy",
+    "health": 350,
+    "biome": "mistlands",
+    "resistances": {
+      "fire": "resistant",
+      "frost": "resistant",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "dvergr-rogue",
+    "name": "Dvergr Rogue",
+    "wikiTitle": "Dvergr Rogue",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Dvergr_Rogue",
+    "image": "/items/dvergr-rogue.png",
+    "kind": "enemy",
+    "health": 350,
+    "biome": "mistlands",
+    "resistances": {
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "gjall",
+    "name": "Gjall",
+    "wikiTitle": "Gjall",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Gjall",
+    "image": "/items/gjall.png",
+    "kind": "enemy",
+    "health": 1500,
+    "biome": "mistlands",
+    "resistances": {
+      "fire": "resistant",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "seeker",
+    "name": "Seeker",
+    "wikiTitle": "Seeker",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Seeker",
+    "image": "/items/seeker.png",
+    "kind": "enemy",
+    "health": 200,
+    "biome": "mistlands",
+    "resistances": {
+      "blunt": "resistant",
+      "pierce": "resistant",
+      "slash": "resistant",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "seeker-brood",
+    "name": "Seeker Brood",
+    "wikiTitle": "Seeker Brood",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Seeker_Brood",
+    "image": "/items/seeker-brood.png",
+    "kind": "enemy",
+    "health": 20,
+    "biome": "mistlands",
+    "resistances": {
+      "blunt": "resistant",
+      "pierce": "resistant",
+      "slash": "resistant",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "seeker-soldier",
+    "name": "Seeker Soldier",
+    "wikiTitle": "Seeker Soldier",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Seeker_Soldier",
+    "image": "/items/seeker-soldier.png",
+    "kind": "enemy",
+    "health": 1500,
+    "biome": "mistlands",
+    "resistances": {
+      "blunt": "resistant",
+      "pierce": "resistant",
+      "slash": "resistant",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "tick",
+    "name": "Tick",
+    "wikiTitle": "Tick",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Tick",
+    "image": "/items/tick.png",
+    "kind": "enemy",
+    "health": 50,
+    "biome": "mistlands",
+    "resistances": {
+      "pierce": "weak",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "lord-reto",
+    "name": "Lord Reto",
+    "wikiTitle": "Lord Reto",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Lord_Reto",
+    "image": "/items/lord-reto.png",
+    "kind": "miniboss",
+    "health": 7500,
+    "biome": "ashlands",
+    "resistances": {
+      "spirit": "weak",
+      "pierce": "resistant",
+      "fire": "resistant",
+      "frost": "resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "asksvin",
+    "name": "Asksvin",
+    "wikiTitle": "Asksvin",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Asksvin",
+    "image": "/items/asksvin.png",
+    "kind": "enemy",
+    "health": 800,
+    "biome": "ashlands",
+    "resistances": {
+      "fire": "resistant",
+      "poison": "resistant",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "bonemaw",
+    "name": "Bonemaw",
+    "wikiTitle": "Bonemaw",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Bonemaw",
+    "image": "/items/bonemaw.png",
+    "kind": "enemy",
+    "health": 1100,
+    "biome": "ashlands",
+    "resistances": {
+      "frost": "weak",
+      "poison": "resistant",
+      "fire": "immune",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "fallen-valkyrie",
+    "name": "Fallen Valkyrie",
+    "wikiTitle": "Fallen Valkyrie",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Fallen_Valkyrie",
+    "image": "/items/fallen-valkyrie.png",
+    "kind": "enemy",
+    "health": 1500,
+    "biome": "ashlands",
+    "resistances": {
+      "spirit": "weak",
+      "fire": "resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "charred-marksman",
+    "name": "Charred Marksman",
+    "wikiTitle": "Charred Marksman",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Charred_Marksman",
+    "image": "/items/charred-marksman.png",
+    "kind": "enemy",
+    "health": 200,
+    "biome": "ashlands",
+    "resistances": {
+      "spirit": "weak",
+      "pierce": "resistant",
+      "fire": "very-resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "charred-twitcher",
+    "name": "Charred Twitcher",
+    "wikiTitle": "Charred Twitcher",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Charred_Twitcher",
+    "image": "/items/charred-twitcher.png",
+    "kind": "enemy",
+    "health": 220,
+    "biome": "ashlands",
+    "resistances": {
+      "spirit": "weak",
+      "pierce": "resistant",
+      "fire": "very-resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "charred-warlock",
+    "name": "Charred Warlock",
+    "wikiTitle": "Charred Warlock",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Charred_Warlock",
+    "image": "/items/charred-warlock.png",
+    "kind": "enemy",
+    "health": 600,
+    "biome": "ashlands",
+    "resistances": {
+      "spirit": "weak",
+      "pierce": "resistant",
+      "frost": "resistant",
+      "fire": "very-resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "charred-warrior",
+    "name": "Charred Warrior",
+    "wikiTitle": "Charred Warrior",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Charred_Warrior",
+    "image": "/items/charred-warrior.png",
+    "kind": "enemy",
+    "health": 600,
+    "biome": "ashlands",
+    "resistances": {
+      "spirit": "weak",
+      "pierce": "resistant",
+      "fire": "very-resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "lava-blob",
+    "name": "Lava Blob",
+    "wikiTitle": "Lava Blob",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Lava_Blob",
+    "image": "/items/lava-blob.png",
+    "kind": "enemy",
+    "health": 300,
+    "biome": "ashlands",
+    "resistances": {
+      "blunt": "weak",
+      "frost": "weak",
+      "lightning": "weak",
+      "pierce": "resistant",
+      "poison": "resistant",
+      "fire": "immune"
+    }
+  },
+  {
+    "slug": "morgen",
+    "name": "Morgen",
+    "wikiTitle": "Morgen",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Morgen",
+    "image": "/items/morgen.png",
+    "kind": "enemy",
+    "health": 1600,
+    "biome": "ashlands",
+    "resistances": {
+      "lightning": "weak",
+      "blunt": "resistant",
+      "slash": "resistant",
+      "pierce": "resistant",
+      "fire": "resistant"
+    }
+  },
+  {
+    "slug": "skugg",
+    "name": "Skugg",
+    "wikiTitle": "Skugg",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Skugg",
+    "image": "/items/skugg.png",
+    "kind": "enemy",
+    "health": 400,
+    "biome": "ashlands",
+    "resistances": {
+      "pierce": "resistant",
+      "fire": "resistant",
+      "lightning": "resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "volture",
+    "name": "Volture",
+    "wikiTitle": "Volture",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Volture",
+    "image": "/items/volture.png",
+    "kind": "enemy",
+    "health": 200,
+    "biome": "ashlands",
+    "resistances": {
+      "frost": "weak",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "barka",
+    "name": "Barka",
+    "wikiTitle": "Barka",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Barka",
+    "image": "/items/barka.png",
+    "kind": "enemy",
+    "health": 2200,
+    "biome": "deep-north",
+    "resistances": {
+      "fire": "weak",
+      "blunt": "resistant",
+      "slash": "resistant",
+      "pierce": "resistant",
+      "frost": "resistant",
+      "lightning": "resistant",
+      "poison": "immune",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "elaking",
+    "name": "Elaking",
+    "wikiTitle": "Elaking",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Elaking",
+    "image": "/items/elaking.png",
+    "kind": "enemy",
+    "health": 350,
+    "biome": "deep-north",
+    "resistances": {
+      "fire": "weak",
+      "frost": "resistant",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "eyeless-one",
+    "name": "Eyeless One",
+    "wikiTitle": "Eyeless One",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Eyeless_One",
+    "image": "/items/eyeless-one.png",
+    "kind": "enemy",
+    "health": 1400,
+    "biome": "deep-north",
+    "resistances": {
+      "frost": "resistant",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "fallen-warrior",
+    "name": "Fallen Warrior",
+    "wikiTitle": "Fallen Warrior",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Fallen_Warrior",
+    "image": "/items/fallen-warrior.png",
+    "kind": "enemy",
+    "health": 750,
+    "biome": "deep-north",
+    "resistances": {
+      "spirit": "weak",
+      "blunt": "resistant",
+      "slash": "resistant",
+      "pierce": "resistant",
+      "fire": "resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "gammeltroll",
+    "name": "Gammeltroll",
+    "wikiTitle": "Gammeltroll",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Gammeltroll",
+    "image": "/items/gammeltroll.png",
+    "kind": "enemy",
+    "health": 3000,
+    "biome": "deep-north",
+    "resistances": {
+      "blunt": "resistant",
+      "slash": "resistant",
+      "pierce": "resistant",
+      "frost": "resistant",
+      "fire": "immune",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "greydwarf-deep-north",
+    "name": "Greydwarf (Deep North)",
+    "wikiTitle": "Greydwarf (Deep North)",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Greydwarf_(Deep_North)",
+    "image": "/items/greydwarf-deep-north.png",
+    "kind": "enemy",
+    "health": 100,
+    "biome": "deep-north",
+    "resistances": {
+      "fire": "very-weak",
+      "poison": "resistant"
+    }
+  },
+  {
+    "slug": "greydwarf-shaman-deep-north",
+    "name": "Greydwarf Shaman (Deep North)",
+    "wikiTitle": "Greydwarf Shaman (Deep North)",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Greydwarf_Shaman_(Deep_North)",
+    "image": "/items/greydwarf-shaman-deep-north.png",
+    "kind": "enemy",
+    "health": 120,
+    "biome": "deep-north",
+    "resistances": {
+      "fire": "very-weak",
+      "poison": "resistant",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "hexen",
+    "name": "Hexen",
+    "wikiTitle": "Hexen",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Hexen",
+    "image": "/items/hexen.png",
+    "kind": "enemy",
+    "health": 800,
+    "biome": "deep-north",
+    "resistances": {
+      "fire": "weak",
+      "frost": "very-resistant",
+      "poison": "immune",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "krigen",
+    "name": "Krigen",
+    "wikiTitle": "Krigen",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Krigen",
+    "image": "/items/krigen.png",
+    "kind": "enemy",
+    "health": 1300,
+    "biome": "deep-north",
+    "resistances": {
+      "pierce": "resistant",
+      "frost": "very-resistant",
+      "poison": "immune",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "moose",
+    "name": "Moose",
+    "wikiTitle": "Moose",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Moose",
+    "image": "/items/moose.png",
+    "kind": "enemy",
+    "health": 1000,
+    "biome": "deep-north",
+    "resistances": {
+      "fire": "weak",
+      "blunt": "resistant",
+      "slash": "resistant",
+      "frost": "resistant",
+      "spirit": "immune"
+    }
+  },
+  {
+    "slug": "shapeless-pulp",
+    "name": "Shapeless Pulp",
+    "wikiTitle": "Shapeless Pulp",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Shapeless_Pulp",
+    "image": "/items/shapeless-pulp.png",
+    "kind": "enemy",
+    "health": 150,
+    "biome": "deep-north",
+    "resistances": {
+      "blunt": "weak",
+      "frost": "weak",
+      "lightning": "weak",
+      "slash": "resistant",
+      "pierce": "resistant",
+      "fire": "resistant",
+      "poison": "immune"
+    }
+  },
+  {
+    "slug": "tiny-pulp",
+    "name": "Tiny Pulp",
+    "wikiTitle": "Tiny Pulp",
+    "wikiUrl": "https://valheim.weirdgloop.org/wiki/Tiny_Pulp",
+    "image": "/items/tiny-pulp.png",
+    "kind": "enemy",
+    "health": 50,
+    "biome": "deep-north",
+    "resistances": {
+      "blunt": "weak",
+      "frost": "weak",
+      "lightning": "weak",
+      "slash": "resistant",
+      "pierce": "resistant",
+      "fire": "resistant",
+      "poison": "immune"
+    }
+  }
+]

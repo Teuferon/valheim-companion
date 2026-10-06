@@ -124,6 +124,12 @@ body {
     url('signs/sign-scene.png');
 }
 
+.card-damage-calculator {
+  background-image:
+    linear-gradient(rgba(24, 29, 35, 0.82), rgba(24, 29, 35, 0.94)),
+    url('bestiary/img/biomes/ashlands.png');
+}
+
 .card-content {
   position: relative;
   z-index: 1;

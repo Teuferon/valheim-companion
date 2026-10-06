@@ -1,8 +1,9 @@
 // Assembles the final site into dist/ for deployment or preview.
 // Follows VC-4 architecture:
-//   dist/          <- apps/hub/*
-//   dist/bestiary/ <- apps/bestiary/{index.html, assets, data/data.js, img}
-//   dist/signs/    <- apps/signs/dist-static/*
+//   dist/                  <- apps/hub/*
+//   dist/bestiary/         <- apps/bestiary/{index.html, assets, data/data.js, img}
+//   dist/signs/            <- apps/signs/dist-static/*
+//   dist/damage-calculator/ <- apps/damage-calculator/dist-static/*
 
 import { cpSync, existsSync, mkdirSync, rmSync } from 'node:fs';
 import path from 'node:path';
@@ -14,11 +15,20 @@ const HUB_DIR = path.join(REPO_ROOT, 'apps', 'hub');
 const BESTIARY_DIR = path.join(REPO_ROOT, 'apps', 'bestiary');
 const ARMOURER_DIR = path.join(REPO_ROOT, 'apps', 'armourer');
 const SIGNS_DIST = path.join(REPO_ROOT, 'apps', 'signs', 'dist-static');
+const DAMAGE_DIST = path.join(REPO_ROOT, 'apps', 'damage-calculator', 'dist-static');
 
 export function buildSite() {
   if (!existsSync(SIGNS_DIST)) {
     console.error('Error: apps/signs/dist-static does not exist.');
     console.error('Please build Runopis first: npm --prefix apps/signs run build');
+    process.exit(1);
+  }
+
+  if (!existsSync(DAMAGE_DIST)) {
+    console.error('Error: apps/damage-calculator/dist-static does not exist.');
+    console.error(
+      'Please build the Damage Calculator first: npm --prefix apps/damage-calculator run build',
+    );
     process.exit(1);
   }
 
@@ -53,6 +63,11 @@ export function buildSite() {
   const signsDistTarget = path.join(DIST_DIR, 'signs');
   mkdirSync(signsDistTarget, { recursive: true });
   cpSync(SIGNS_DIST, signsDistTarget, { recursive: true });
+
+  // 4. apps/damage-calculator/dist-static/* -> dist/damage-calculator/
+  const damageDistTarget = path.join(DIST_DIR, 'damage-calculator');
+  mkdirSync(damageDistTarget, { recursive: true });
+  cpSync(DAMAGE_DIST, damageDistTarget, { recursive: true });
 
   console.log('done: site assembled in dist/');
 }

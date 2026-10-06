@@ -153,6 +153,7 @@ Valheim Companion je rozcestník a nástroje jsou pod ním jako sekce:
 |---|---|---|
 | `/` | rozcestník (anglicky) | `apps/hub/` |
 | `/bestiary/` | **Bestiary**: jednotky, slabiny, doporučené zbraně | `apps/bestiary/` (statický web) + `scripts/` + `data/` |
+| `/damage-calculator/` | **Damage Calculator**: poškození zbraní proti jednotkám, resisty, DPS a čas na zabití | `apps/damage-calculator/` (React 19 + Vite, převzato z `Teuferon/valheim-weapon-boss-damage`) |
 | `/signs/` | **Sign Editor (Runopis)**: editor cedulí, 13 jazyků | `apps/signs/` (React 19 + Vite, převzato z `pawlig/valheim-signs` přes `git subtree` i s historií) |
 
 - Další nástroje přibydou jako `apps/<nazev>/` a `/<nazev>/` a dostanou kartu v rozcestníku.
@@ -263,3 +264,23 @@ Ověřeno 6. 10. 2026. Infobox zbraně rychlost útoku nemá. Je ve **vykreslen�
 - Stamina za sekundu: `stamina × n / T × (1 − 0.33 × L/100)`, u luku `X / s` × stejný koeficient.
 - Backstab: hodnota z vykreslené stránky má přednost před infoboxem i výchozí hodnotou.
 - Řazení: nové nastavení hráče `rankBy: 'dps' | 'hit'`, výchozí `'dps'`. Každá zbraň má lepší z primárního a sekundárního DPS (`bestMode`). Zbraň bez DPS se při `'dps'` řadí na konec své skupiny.
+
+## 13. Damage Calculator a jednotná čísla (PR #1, VC-11)
+
+- 6. 10. 2026 je mergnutý PR #1 od Teuferona: `apps/damage-calculator/` (React + Vite) na `/damage-calculator/`. Data bere ze stejné wiki (valheim.weirdgloop.org, staženo 5. 10.) vlastním scraperem `apps/damage-calculator/scripts/scrape.ts`. Testy enginu jsou v `npm test` (156 kontrol).
+- **Porovnání s Bestiary** (orchestrátor, 6. 10.):
+  - Vzorec skillu je stejný (0.25–0.55 + 0.006·L).
+  - Odolnosti a HP 78 společných jednotek se shodují. Rozdíl je jen u Chop a Pickaxe: kalkulačka je proti jednotkám ignoruje, Bestiary počítá slabiny z wiki (Stone Golem Pickaxe ×2, Gammeltroll, Kvastur).
+  - **Chyba v Bestiary:** poškození na úrovních 2–4 se bralo jen z polí `<typ> per level` v infoboxu a ta u mnoha zbraní chybí. Kalkulačka bere tabulku „Upgrade information“ (Battleaxe 70/76/82/88, Bestiary 70). Bestiary tak u 216 hodnot podhodnocuje vyšší kvalitu.
+  - Backstab: kalkulačka ho dává jen na první úder (pak má nepřítel na 5 minut imunitu), Bestiary na všechny. Správně je model kalkulačky.
+  - Rychlosti útoku: kalkulačka má kurátorované profily (`src/data/attack-profiles.ts`) z tabulek typů zbraní na wiki a herního modelu MaxDPS, s označenou spolehlivostí. Původně plánované VC-10 (parsování vykreslených stránek) se **ruší**. Bestiary převezme profily kalkulačky, aby oba nástroje dávaly stejná čísla.
+- **Jeden zdroj pravdy:** časování útoků a poškození po kvalitách se exportují z kalkulačky do `data/attack-profiles.json` a `data/weapon-quality.json`. Bestiary je čte a test parity hlídá, že `rank.js` a engine kalkulačky dávají stejná čísla.
+
+## 14. Jednotné pořadí biomů (VC-12, 6. 10. 2026)
+
+- Podle wiki (*Biomes*: Early game = Meadows, Black Forest, Ocean; Mid game od Swampu) a stejně jako v Damage Calculatoru:
+  **1 Meadows · 2 Black Forest · 3 Ocean · 4 Swamp · 5 Mountain · 6 Plains · 7 Mistlands · 8 Ashlands · 9 Deep North.**
+- `tier` = `order`. Rozlišení na `gearTier` se ruší a pro biom platí jedno číslo. Tier materiálu, zbraně i brnění je pořadí biomu, ze kterého pochází.
+- Jediný zdroj pořadí v Bestiary a Armouru je `scripts/wiki/biomes.mjs`. Test hlídá, že pořadí sedí s `apps/damage-calculator/src/data/biomes.ts`.
+- Důsledek: v Oceánu (Serpent) se doporučuje jen výbava do Oceánu (Black Forest + Chitin), ne železo ze Swampu. Stejně to dělá kalkulačka.
+- § 2 výše (původní tabulka s Oceánem za Swampem) tímto neplatí.

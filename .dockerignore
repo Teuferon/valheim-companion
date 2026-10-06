@@ -12,5 +12,8 @@
 !apps/armourer/data/data.js
 !apps/armourer/img/
 !apps/signs/
+!apps/damage-calculator/
 apps/signs/node_modules/
 apps/signs/dist-static/
+apps/damage-calculator/node_modules/
+apps/damage-calculator/dist-static/
