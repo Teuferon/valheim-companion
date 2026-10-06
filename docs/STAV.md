@@ -51,10 +51,10 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | VC-24 | Bestiary: trofeje, ochočování, nájezdy, sdílení profilu, deep link | Sol | ✅ |
 | VC-30 | odkaz z karty Bestiary do kalkulačky (Teuferon) + názvy nástrojů anglicky | Sol | ✅ |
 | VC-31 | Armourer → **Smithy** (`/smithy/`, 301 ze `/armourer/`), bez Bare Fists, mobil 360 px ve 13 jazycích (`scripts/check-mobile.mjs`) | Sol | ✅ |
-| **VC-25** | Damage Calculator: sdílený profil hráče (`shared/player`) | Sol | 🔄 běží (`../valheim-units-CS`) | ⏳ fronta 6 |
+| VC-25 | Damage Calculator: sdílený profil hráče (`shared/player`), přepínač „Use my Bestiary profile“, URL má přednost | Sol | ✅ |
 | VC-26 | Sign Editor: 22 šablon, galerie, sdílení `#sign=` | Sol | ✅ |
 | VC-27 | rozcestník: hledání napříč sekcemi (jen anglické názvy, zamčené biomy skryté) + oprava deep linku | agy | ✅ |
-| **VC-19** | Progress Tracker: sdílený stav `vc.progress` + stránka `/progress/` | — | ⏳ fronta 9 |
+| **VC-19** | Progress Tracker: sdílený stav `vc.progress` + stránka `/progress/` | Sol | 🔄 běží (`../valheim-units-CS`) | ⏳ fronta 9 |
 | **VC-20** | napojení Progress na Bestiary, Armourer, kalkulačku a rozcestník | — | ⏳ fronta 10 |
 | **VC-21** | Provisions data (jídla, medoviny, feasty, stanice) + sdílený košík `shared/shopping` | — | ⏳ fronta 11 |
 | **VC-22** | stránka Provisions `/provisions/` | — | ⏳ fronta 12 |
