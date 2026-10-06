@@ -508,8 +508,37 @@ async function main() {
       if (levels.length <= 1) {
         armorSource = 'infobox';
       } else if (usedEstimate) {
-        armorSource = 'estimate';
-        report.estimatedArmor.push({ piece: pieceName, set: title, levels: levels.length });
+        let renderedData = null;
+        for (const pageName of [pieceName, b.title, title]) {
+          if (!pageName) continue;
+          const html = await api.getRenderedText(pageName);
+          if (!html) continue;
+          const stripped = html.replace(/<[^>]+>/g, ' | ').replace(/\s+/g, ' ');
+          const armMatches = [...stripped.matchAll(/Armor\s*\|\s*\|\s*(\d+(?:\.\d+)?)/gi)].map((m) => parseFloat(m[1]));
+          const durMatches = [...stripped.matchAll(/Durability\s*\|\s*\|\s*(\d+)/gi)].map((m) => parseInt(m[1], 10));
+          if (armMatches.length >= levels.length && durMatches.length >= levels.length) {
+            renderedData = {
+              armors: armMatches.slice(0, levels.length),
+              durs: durMatches.slice(0, levels.length),
+            };
+            break;
+          }
+        }
+
+        if (renderedData) {
+          for (let i = 0; i < levels.length; i++) {
+            levels[i].armor = renderedData.armors[i];
+            levels[i].durability = renderedData.durs[i];
+          }
+          armorSource = 'rendered';
+          usedEstimate = false;
+        } else {
+          armorSource = 'estimate';
+          let reason = 'only 1 quality level on wiki';
+          if (pieceName === 'Crown of Valheim') reason = 'only 1 quality level on wiki (cannot be upgraded)';
+          if (pieceName === 'Crown of Roots') reason = 'only 1 quality level on wiki (cosmetic item)';
+          report.estimatedArmor.push({ piece: pieceName, set: title, levels: levels.length, reason });
+        }
       } else {
         armorSource = 'table';
       }
@@ -902,7 +931,8 @@ function renderReport(report, armor, items) {
     lines.push('None. All pieces with quality upgrades found in quality tables.');
   } else {
     for (const ea of report.estimatedArmor) {
-      lines.push(`- **${ea.piece}** (${ea.set}, ${ea.levels} levels)`);
+      const reason = ea.reason ? `: ${ea.reason}` : '';
+      lines.push(`- **${ea.piece}** (${ea.set}, ${ea.levels} levels)${reason}`);
     }
   }
 

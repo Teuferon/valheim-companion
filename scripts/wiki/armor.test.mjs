@@ -309,4 +309,22 @@ test('resolveDisambiguationTitle detects Root disambiguation and returns Root (i
   assert.equal(resolveDisambiguationTitle(null, 'Root'), null);
 });
 
+test('armor per quality: Carapace helmet has 32/34/36/38 and armorSource rendered', async () => {
+  const { readFileSync } = await import('node:fs');
+  const armor = JSON.parse(readFileSync('data/armor.json', 'utf8'));
+  const carapaceSet = armor.find((a) => a.name === 'Carapace Armor');
+  const helmet = carapaceSet?.pieces?.find((p) => p.name === 'Carapace helmet');
+  assert.ok(helmet, 'Carapace helmet exists');
+  assert.equal(helmet.armorSource, 'rendered');
+  assert.deepEqual(
+    helmet.levels.map((l) => l.armor),
+    [32, 34, 36, 38]
+  );
+  assert.deepEqual(
+    helmet.levels.map((l) => l.durability),
+    [1200, 1400, 1600, 1800]
+  );
+});
+
+
 

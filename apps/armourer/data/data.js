@@ -1,5 +1,5 @@
 window.VA_DATA = {
-  "generatedAt": "2026-10-06T09:10:45.987Z",
+  "generatedAt": "2026-10-06T09:14:46.046Z",
   "source": {
     "name": "Valheim Wiki",
     "url": "https://valheim.weirdgloop.org",
@@ -337,7 +337,7 @@ window.VA_DATA = {
             {
               "quality": 2,
               "armor": 14,
-              "durability": 1400,
+              "durability": 1250,
               "stationLevel": 4,
               "materials": [
                 {
@@ -349,7 +349,7 @@ window.VA_DATA = {
             {
               "quality": 3,
               "armor": 16,
-              "durability": 1600,
+              "durability": 1300,
               "stationLevel": 5,
               "materials": [
                 {
@@ -361,7 +361,7 @@ window.VA_DATA = {
             {
               "quality": 4,
               "armor": 18,
-              "durability": 1800,
+              "durability": 1350,
               "stationLevel": 6,
               "materials": [
                 {
@@ -371,7 +371,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 4,
           "movementSpeed": 0,
           "resistances": [],
@@ -703,7 +703,7 @@ window.VA_DATA = {
           "levels": [
             {
               "quality": 1,
-              "armor": 0,
+              "armor": 1,
               "durability": 1500,
               "stationLevel": 2,
               "materials": [
@@ -720,7 +720,7 @@ window.VA_DATA = {
             {
               "quality": 2,
               "armor": 2,
-              "durability": 1700,
+              "durability": 1550,
               "stationLevel": 3,
               "materials": [
                 {
@@ -731,8 +731,8 @@ window.VA_DATA = {
             },
             {
               "quality": 3,
-              "armor": 4,
-              "durability": 1900,
+              "armor": 3,
+              "durability": 1600,
               "stationLevel": 4,
               "materials": [
                 {
@@ -743,8 +743,8 @@ window.VA_DATA = {
             },
             {
               "quality": 4,
-              "armor": 6,
-              "durability": 2100,
+              "armor": 4,
+              "durability": 1650,
               "stationLevel": 5,
               "materials": [
                 {
@@ -754,7 +754,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 4,
           "movementSpeed": 0,
           "resistances": [],
@@ -1414,7 +1414,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 10,
           "movementSpeed": -5,
           "resistances": [],
@@ -1746,8 +1746,8 @@ window.VA_DATA = {
             },
             {
               "quality": 2,
-              "armor": 3,
-              "durability": 1700,
+              "armor": 2,
+              "durability": 1550,
               "stationLevel": 2,
               "materials": [
                 {
@@ -1762,8 +1762,8 @@ window.VA_DATA = {
             },
             {
               "quality": 3,
-              "armor": 5,
-              "durability": 1900,
+              "armor": 3,
+              "durability": 1600,
               "stationLevel": 3,
               "materials": [
                 {
@@ -1778,8 +1778,8 @@ window.VA_DATA = {
             },
             {
               "quality": 4,
-              "armor": 7,
-              "durability": 2100,
+              "armor": 4,
+              "durability": 1650,
               "stationLevel": 4,
               "materials": [
                 {
@@ -1793,7 +1793,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 4,
           "movementSpeed": 0,
           "resistances": [],
@@ -1845,7 +1845,7 @@ window.VA_DATA = {
             {
               "quality": 2,
               "armor": 14,
-              "durability": 1400,
+              "durability": 1250,
               "stationLevel": 5,
               "materials": [
                 {
@@ -1869,7 +1869,7 @@ window.VA_DATA = {
             {
               "quality": 3,
               "armor": 16,
-              "durability": 1600,
+              "durability": 1300,
               "stationLevel": 6,
               "materials": [
                 {
@@ -1893,7 +1893,7 @@ window.VA_DATA = {
             {
               "quality": 4,
               "armor": 18,
-              "durability": 1800,
+              "durability": 1350,
               "stationLevel": 7,
               "materials": [
                 {
@@ -1915,7 +1915,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 4,
           "movementSpeed": 0,
           "resistances": [],
@@ -2124,7 +2124,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 3,
           "movementSpeed": 0,
           "resistances": [],
@@ -2223,7 +2223,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 10,
           "movementSpeed": -5,
           "resistances": [],
@@ -2322,7 +2322,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 10,
           "movementSpeed": -5,
           "resistances": [],
@@ -2420,7 +2420,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 3,
           "movementSpeed": 0,
           "resistances": [],
@@ -2664,7 +2664,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 1,
           "movementSpeed": 0,
           "resistances": [],
@@ -2751,7 +2751,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 5,
           "movementSpeed": -2,
           "resistances": [],
@@ -2834,7 +2834,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 5,
           "movementSpeed": -2,
           "resistances": [],
@@ -2870,8 +2870,8 @@ window.VA_DATA = {
             },
             {
               "quality": 2,
-              "armor": 3,
-              "durability": 1400,
+              "armor": 2,
+              "durability": 1250,
               "stationLevel": 2,
               "materials": [
                 {
@@ -2890,8 +2890,8 @@ window.VA_DATA = {
             },
             {
               "quality": 3,
-              "armor": 5,
-              "durability": 1600,
+              "armor": 3,
+              "durability": 1300,
               "stationLevel": 3,
               "materials": [
                 {
@@ -2910,8 +2910,8 @@ window.VA_DATA = {
             },
             {
               "quality": 4,
-              "armor": 7,
-              "durability": 1800,
+              "armor": 4,
+              "durability": 1350,
               "stationLevel": 4,
               "materials": [
                 {
@@ -2929,7 +2929,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 4,
           "movementSpeed": 0,
           "resistances": [
@@ -3650,7 +3650,7 @@ window.VA_DATA = {
             },
             {
               "quality": 2,
-              "armor": 10,
+              "armor": 12,
               "durability": 1200,
               "stationLevel": 2,
               "materials": [
@@ -3706,7 +3706,7 @@ window.VA_DATA = {
             },
             {
               "quality": 3,
-              "armor": 12,
+              "armor": 16,
               "durability": 1400,
               "stationLevel": 3,
               "materials": [
@@ -3762,7 +3762,7 @@ window.VA_DATA = {
             },
             {
               "quality": 4,
-              "armor": 14,
+              "armor": 20,
               "durability": 1600,
               "stationLevel": 4,
               "materials": [
@@ -3817,7 +3817,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 3,
           "movementSpeed": 0,
           "resistances": [],
@@ -4317,7 +4317,7 @@ window.VA_DATA = {
             },
             {
               "quality": 2,
-              "armor": 3,
+              "armor": 2,
               "durability": 500,
               "stationLevel": 2,
               "materials": [
@@ -4333,7 +4333,7 @@ window.VA_DATA = {
             },
             {
               "quality": 3,
-              "armor": 5,
+              "armor": 3,
               "durability": 700,
               "stationLevel": 3,
               "materials": [
@@ -4349,7 +4349,7 @@ window.VA_DATA = {
             },
             {
               "quality": 4,
-              "armor": 7,
+              "armor": 4,
               "durability": 900,
               "stationLevel": 4,
               "materials": [
@@ -4364,7 +4364,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 1,
           "movementSpeed": 0,
           "resistances": [],
@@ -5349,7 +5349,7 @@ window.VA_DATA = {
             {
               "quality": 2,
               "armor": 14,
-              "durability": 1400,
+              "durability": 1250,
               "stationLevel": 5,
               "materials": [
                 {
@@ -5369,7 +5369,7 @@ window.VA_DATA = {
             {
               "quality": 3,
               "armor": 16,
-              "durability": 1600,
+              "durability": 1300,
               "stationLevel": 6,
               "materials": [
                 {
@@ -5389,7 +5389,7 @@ window.VA_DATA = {
             {
               "quality": 4,
               "armor": 18,
-              "durability": 1800,
+              "durability": 1350,
               "stationLevel": 7,
               "materials": [
                 {
@@ -5407,7 +5407,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 4,
           "movementSpeed": 0,
           "resistances": [],
@@ -5804,7 +5804,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 3,
           "movementSpeed": 0,
           "resistances": [],
@@ -6120,7 +6120,7 @@ window.VA_DATA = {
             },
             {
               "quality": 2,
-              "armor": 3,
+              "armor": 2,
               "durability": 400,
               "stationLevel": 2,
               "materials": [
@@ -6131,7 +6131,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 2,
           "movementSpeed": 0,
           "resistances": [],

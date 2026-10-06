@@ -25,26 +25,8 @@ Source: valheim.weirdgloop.org (MediaWiki API). No dates on purpose: the report 
 
 ## Pieces with estimated armor (armorSource: estimate)
 
-- **Ashen cape** (Ashen Cape, 4 levels)
-- **Asksvin cloak** (Asksvin Cloak, 4 levels)
-- **Bronze Plate Leggings** (Bronze Armor, 4 levels)
-- **Cape of Oden** (Cape of Oden, 4 levels)
-- **Cape of the Caller** (Cape of the Caller, 4 levels)
-- **Carapace helmet** (Carapace Armor, 4 levels)
-- **Carapace breastplate** (Carapace Armor, 4 levels)
-- **Carapace greaves** (Carapace Armor, 4 levels)
-- **Celebratory Cap** (Celebratory Cap, 4 levels)
-- **Crown of Roots** (Crown of Roots, 4 levels)
-- **Crown of Valheim** (Crown of Valheim, 4 levels)
-- **Eitr-weave hood** (Eitr-weave Set, 4 levels)
-- **Eitr-weave robe** (Eitr-weave Set, 4 levels)
-- **Eitr-weave trousers** (Eitr-weave Set, 4 levels)
-- **Feather cape** (Eitr-weave Set, 4 levels)
-- **Fishing Hat** (Fishing Hat, 4 levels)
-- **Hood of Oden** (Hood of Oden, 4 levels)
-- **Moose Hide Cape** (Moose Hide Cape, 4 levels)
-- **Pointy Hat** (Pointy Hat, 4 levels)
-- **Rag tunic** (Rag Armor, 2 levels)
+- **Crown of Roots** (Crown of Roots, 4 levels): only 1 quality level on wiki (cosmetic item)
+- **Crown of Valheim** (Crown of Valheim, 4 levels): only 1 quality level on wiki (cannot be upgraded)
 
 ## Materials without source or biome
 
