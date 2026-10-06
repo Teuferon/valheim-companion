@@ -1,7 +1,7 @@
 # Stav projektu Valheim Companion
 
 > **Živý dokument.** Orchestrátor ho aktualizuje po každé přejímce, merge nebo změně fronty. Nová session začíná tady.
-> Poslední aktualizace: **6. 10. 2026, 13:00**
+> Poslední aktualizace: **6. 10. 2026, 13:50**
 
 - Web: https://valheim-companion.teuferon.click (EasyPanel, deploy webhookem při každém pushi do repa)
 - Repo: https://github.com/pawlig/valheim-companion (public), lokálně `~/gameroot/valheim-units`
@@ -41,7 +41,7 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | VC-12 | jednotné pořadí biomů | agy | ✅ |
 | VC-13 | Ko-fi, odebrán odkaz na GitHub z rozcestníku | agy | ✅ |
 | VC-14 | úklid (bomby, Root, brnění po kvalitách, DLC/seasonal, MIME manifestu) | agy | ✅ |
-| **VC-15** | úklid (koruny bez vylepšení, `neutral` v kalkulačce, collation ve scraperu) | zai → agy | 🔄 bod 1 hotový, body 2–3 jako WIP (`ca810d2`); dokončuje agy od 13:26 (worktree `../valheim-units-GL`, větev `prace/VC-15`) |
+| VC-15 | úklid (koruny bez vylepšení, `neutral` v kalkulačce, collation ve scraperu) | zai + agy | ✅ |
 | **VC-16** | sdílené jádro i18n (13 jazyků, `vc.language`), rozcestník přeložený, Runopis napojený | — | ⏳ fronta 1 |
 | **VC-28** | Google Analytics 4 (G-CXQVNCCJKE) s lištou souhlasu, CSP, stránka Privacy | — | ⏳ hned po VC-16 |
 | **VC-17** | Bestiary + Armourer v 13 jazycích, místní názvy z jazykových odkazů wiki | — | ⏳ fronta 2 |
@@ -63,9 +63,6 @@ Pavel 6. 10. schválil pořadí: překlady (VC-16 až VC-18), **vylepšení stá
 
 ## Známé drobnosti (neřešené)
 
-- Barka „Chop: neutral“: řeší VC-15.
-- Crown of Roots / Crown of Valheim: odhad brnění; řeší VC-15.
-- Damage Calculator: pořadí v JSON závisí na locale stroje; řeší VC-15.
 - Ember Charge je jediná doporučovaná bomba. Ostatní bomby mají `recommendable: false`, protože wiki neuvádí plošné poškození.
 - Popisy z wiki zůstanou po překladu anglicky (ANALYZA § 15).
 
