@@ -7,6 +7,7 @@ import {
   useSyncExternalStore,
 } from "react";
 import { Hammer, SlidersHorizontal } from "lucide-react";
+import { languages, useLanguage } from '@/hooks/use-language';
 import { MethodologyDialog, MethodologyLink } from "@/components/assumptions";
 import { BiomeSlider, useBiomeProgression } from "@/components/biome-slider";
 import { ProgressionGuide } from "@/components/progression-guide";
@@ -65,6 +66,7 @@ const DEFAULT_TARGET_SLUG =
   targets.find((t) => t.slug === "bonemass")?.slug ?? targets[0].slug;
 
 export default function Home() {
+  const { preference, setPreference, t } = useLanguage();
   const [storedBiome, persistBiome] = useBiomeProgression();
 
   /* The view carried by the query string, read as an external store so the
@@ -368,6 +370,17 @@ export default function Home() {
           </Badge>
           <MethodologyDialog className="ml-auto" />
           <ShareViewButton view={view} />
+          <select
+            aria-label={t('Language')}
+            value={preference}
+            onChange={(event) => setPreference(event.target.value)}
+            className="max-w-full rounded-md border bg-background px-2 py-1.5 text-xs text-foreground"
+          >
+            <option value="auto">{t('Auto (browser)')}</option>
+            {languages.map((language) => (
+              <option key={language.code} value={language.code}>{language.name}</option>
+            ))}
+          </select>
         </div>
       </header>
 

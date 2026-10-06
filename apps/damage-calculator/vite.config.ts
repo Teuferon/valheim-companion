@@ -9,6 +9,7 @@ export default defineConfig({
   base: '/damage-calculator/',
   plugins: [react()],
   resolve: { alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) } },
+  server: { fs: { allow: [fileURLToPath(new URL('../..', import.meta.url))] } },
   css: { postcss: { plugins: [tailwindcss()] } },
   build: { outDir: 'dist-static', emptyOutDir: true },
 });
