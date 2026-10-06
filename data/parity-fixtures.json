@@ -29374,5 +29374,2453 @@
     "cycleSeconds": 1.1,
     "dps": 476.7954545454545,
     "timeToKill": 98.57476524143192
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 13.200000000000001,
+    "openingPerHit": 13.200000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 9.42857142857143,
+    "timeToKill": 4.242424242424241
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 13.200000000000001,
+    "openingPerHit": 39.6,
+    "cycleSeconds": 1.4,
+    "dps": 28.28571428571429,
+    "timeToKill": 1.414141414141414
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 13.200000000000001,
+    "openingPerHit": 13.200000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 9.42857142857143,
+    "timeToKill": 4.242424242424241
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 13.200000000000001,
+    "openingPerHit": 39.6,
+    "cycleSeconds": 1.4,
+    "dps": 28.28571428571429,
+    "timeToKill": 1.414141414141414
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 19.200000000000003,
+    "openingPerHit": 19.200000000000003,
+    "cycleSeconds": 1.4,
+    "dps": 13.714285714285717,
+    "timeToKill": 2.916666666666666
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 19.200000000000003,
+    "openingPerHit": 57.60000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 41.14285714285715,
+    "timeToKill": 0.972222222222222
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 19.200000000000003,
+    "openingPerHit": 19.200000000000003,
+    "cycleSeconds": 1.4,
+    "dps": 13.714285714285717,
+    "timeToKill": 2.916666666666666
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 19.200000000000003,
+    "openingPerHit": 57.60000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 41.14285714285715,
+    "timeToKill": 0.972222222222222
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 23.1,
+    "openingPerHit": 23.1,
+    "cycleSeconds": 1.4,
+    "dps": 16.500000000000004,
+    "timeToKill": 2.424242424242424
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 23.100000000000005,
+    "openingPerHit": 69.30000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 49.500000000000014,
+    "timeToKill": 0.8080808080808078
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 23.1,
+    "openingPerHit": 23.1,
+    "cycleSeconds": 1.4,
+    "dps": 16.500000000000004,
+    "timeToKill": 2.424242424242424
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 23.100000000000005,
+    "openingPerHit": 69.30000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 49.500000000000014,
+    "timeToKill": 0.8080808080808078
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 33.6,
+    "openingPerHit": 33.6,
+    "cycleSeconds": 1.4,
+    "dps": 24.000000000000004,
+    "timeToKill": 1.6666666666666665
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 33.6,
+    "openingPerHit": 100.80000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 72.00000000000001,
+    "timeToKill": 0.5555555555555555
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 33.6,
+    "openingPerHit": 33.6,
+    "cycleSeconds": 1.4,
+    "dps": 24.000000000000004,
+    "timeToKill": 1.6666666666666665
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 33.6,
+    "openingPerHit": 100.80000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 72.00000000000001,
+    "timeToKill": 0.5555555555555555
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 30.525000000000002,
+    "openingPerHit": 30.525000000000002,
+    "cycleSeconds": 1.4,
+    "dps": 21.80357142857143,
+    "timeToKill": 1.8345618345618344
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 30.525000000000002,
+    "openingPerHit": 91.575,
+    "cycleSeconds": 1.4,
+    "dps": 65.41071428571429,
+    "timeToKill": 0.6115206115206114
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 30.525000000000002,
+    "openingPerHit": 30.525000000000002,
+    "cycleSeconds": 1.4,
+    "dps": 21.80357142857143,
+    "timeToKill": 1.8345618345618344
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 30.525000000000002,
+    "openingPerHit": 91.575,
+    "cycleSeconds": 1.4,
+    "dps": 65.41071428571429,
+    "timeToKill": 0.6115206115206114
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 44.400000000000006,
+    "openingPerHit": 44.400000000000006,
+    "cycleSeconds": 1.4,
+    "dps": 31.71428571428572,
+    "timeToKill": 1.261261261261261
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 44.400000000000006,
+    "openingPerHit": 133.20000000000002,
+    "cycleSeconds": 1.4,
+    "dps": 95.14285714285717,
+    "timeToKill": 0.4204204204204203
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 44.400000000000006,
+    "openingPerHit": 44.400000000000006,
+    "cycleSeconds": 1.4,
+    "dps": 31.71428571428572,
+    "timeToKill": 1.261261261261261
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "greydwarf",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 44.400000000000006,
+    "openingPerHit": 133.20000000000002,
+    "cycleSeconds": 1.4,
+    "dps": 95.14285714285717,
+    "timeToKill": 0.4204204204204203
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 19.8,
+    "openingPerHit": 19.8,
+    "cycleSeconds": 1.4,
+    "dps": 14.142857142857144,
+    "timeToKill": 42.42424242424242
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 19.8,
+    "openingPerHit": 59.400000000000006,
+    "cycleSeconds": 1.4,
+    "dps": 42.42857142857144,
+    "timeToKill": 14.141414141414138
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 19.8,
+    "openingPerHit": 19.8,
+    "cycleSeconds": 1.4,
+    "dps": 14.142857142857144,
+    "timeToKill": 42.42424242424242
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 19.8,
+    "openingPerHit": 59.400000000000006,
+    "cycleSeconds": 1.4,
+    "dps": 42.42857142857144,
+    "timeToKill": 14.141414141414138
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 28.800000000000004,
+    "openingPerHit": 28.800000000000004,
+    "cycleSeconds": 1.4,
+    "dps": 20.571428571428577,
+    "timeToKill": 29.16666666666666
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 28.8,
+    "openingPerHit": 86.4,
+    "cycleSeconds": 1.4,
+    "dps": 61.71428571428572,
+    "timeToKill": 9.722222222222221
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 28.800000000000004,
+    "openingPerHit": 28.800000000000004,
+    "cycleSeconds": 1.4,
+    "dps": 20.571428571428577,
+    "timeToKill": 29.16666666666666
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 28.8,
+    "openingPerHit": 86.4,
+    "cycleSeconds": 1.4,
+    "dps": 61.71428571428572,
+    "timeToKill": 9.722222222222221
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 34.650000000000006,
+    "openingPerHit": 34.650000000000006,
+    "cycleSeconds": 1.4,
+    "dps": 24.750000000000007,
+    "timeToKill": 24.242424242424235
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 34.650000000000006,
+    "openingPerHit": 103.95000000000002,
+    "cycleSeconds": 1.4,
+    "dps": 74.25000000000001,
+    "timeToKill": 8.08080808080808
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 34.650000000000006,
+    "openingPerHit": 34.650000000000006,
+    "cycleSeconds": 1.4,
+    "dps": 24.750000000000007,
+    "timeToKill": 24.242424242424235
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 34.650000000000006,
+    "openingPerHit": 103.95000000000002,
+    "cycleSeconds": 1.4,
+    "dps": 74.25000000000001,
+    "timeToKill": 8.08080808080808
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 50.400000000000006,
+    "openingPerHit": 50.400000000000006,
+    "cycleSeconds": 1.4,
+    "dps": 36.00000000000001,
+    "timeToKill": 16.666666666666664
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 50.400000000000006,
+    "openingPerHit": 151.20000000000002,
+    "cycleSeconds": 1.4,
+    "dps": 108.00000000000001,
+    "timeToKill": 5.5555555555555545
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 50.400000000000006,
+    "openingPerHit": 50.400000000000006,
+    "cycleSeconds": 1.4,
+    "dps": 36.00000000000001,
+    "timeToKill": 16.666666666666664
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 50.400000000000006,
+    "openingPerHit": 151.20000000000002,
+    "cycleSeconds": 1.4,
+    "dps": 108.00000000000001,
+    "timeToKill": 5.5555555555555545
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 45.7875,
+    "openingPerHit": 45.7875,
+    "cycleSeconds": 1.4,
+    "dps": 32.705357142857146,
+    "timeToKill": 18.345618345618345
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 45.7875,
+    "openingPerHit": 137.3625,
+    "cycleSeconds": 1.4,
+    "dps": 98.11607142857144,
+    "timeToKill": 6.115206115206115
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 45.7875,
+    "openingPerHit": 45.7875,
+    "cycleSeconds": 1.4,
+    "dps": 32.705357142857146,
+    "timeToKill": 18.345618345618345
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 45.7875,
+    "openingPerHit": 137.3625,
+    "cycleSeconds": 1.4,
+    "dps": 98.11607142857144,
+    "timeToKill": 6.115206115206115
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 66.60000000000001,
+    "openingPerHit": 66.60000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 47.571428571428584,
+    "timeToKill": 12.61261261261261
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 66.60000000000001,
+    "openingPerHit": 199.8,
+    "cycleSeconds": 1.4,
+    "dps": 142.71428571428572,
+    "timeToKill": 4.204204204204204
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 66.60000000000001,
+    "openingPerHit": 66.60000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 47.571428571428584,
+    "timeToKill": 12.61261261261261
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "troll",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 66.60000000000001,
+    "openingPerHit": 199.8,
+    "cycleSeconds": 1.4,
+    "dps": 142.71428571428572,
+    "timeToKill": 4.204204204204204
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 13.200000000000001,
+    "openingPerHit": 13.200000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 9.42857142857143,
+    "timeToKill": 10.606060606060604
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 13.200000000000001,
+    "openingPerHit": 39.6,
+    "cycleSeconds": 1.4,
+    "dps": 28.28571428571429,
+    "timeToKill": 3.535353535353535
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 13.200000000000001,
+    "openingPerHit": 13.200000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 9.42857142857143,
+    "timeToKill": 10.606060606060604
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 13.200000000000001,
+    "openingPerHit": 39.6,
+    "cycleSeconds": 1.4,
+    "dps": 28.28571428571429,
+    "timeToKill": 3.535353535353535
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 19.200000000000003,
+    "openingPerHit": 19.200000000000003,
+    "cycleSeconds": 1.4,
+    "dps": 13.714285714285717,
+    "timeToKill": 7.291666666666665
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 19.200000000000003,
+    "openingPerHit": 57.60000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 41.14285714285715,
+    "timeToKill": 2.430555555555555
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 19.200000000000003,
+    "openingPerHit": 19.200000000000003,
+    "cycleSeconds": 1.4,
+    "dps": 13.714285714285717,
+    "timeToKill": 7.291666666666665
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 19.200000000000003,
+    "openingPerHit": 57.60000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 41.14285714285715,
+    "timeToKill": 2.430555555555555
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 23.1,
+    "openingPerHit": 23.1,
+    "cycleSeconds": 1.4,
+    "dps": 16.500000000000004,
+    "timeToKill": 6.06060606060606
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 23.100000000000005,
+    "openingPerHit": 69.30000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 49.500000000000014,
+    "timeToKill": 2.0202020202020194
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 23.1,
+    "openingPerHit": 23.1,
+    "cycleSeconds": 1.4,
+    "dps": 16.500000000000004,
+    "timeToKill": 6.06060606060606
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 23.100000000000005,
+    "openingPerHit": 69.30000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 49.500000000000014,
+    "timeToKill": 2.0202020202020194
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 33.6,
+    "openingPerHit": 33.6,
+    "cycleSeconds": 1.4,
+    "dps": 24.000000000000004,
+    "timeToKill": 4.166666666666666
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 33.6,
+    "openingPerHit": 100.80000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 72.00000000000001,
+    "timeToKill": 1.3888888888888886
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 33.6,
+    "openingPerHit": 33.6,
+    "cycleSeconds": 1.4,
+    "dps": 24.000000000000004,
+    "timeToKill": 4.166666666666666
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 33.6,
+    "openingPerHit": 100.80000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 72.00000000000001,
+    "timeToKill": 1.3888888888888886
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 30.525000000000002,
+    "openingPerHit": 30.525000000000002,
+    "cycleSeconds": 1.4,
+    "dps": 21.80357142857143,
+    "timeToKill": 4.586404586404586
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 30.525000000000002,
+    "openingPerHit": 91.575,
+    "cycleSeconds": 1.4,
+    "dps": 65.41071428571429,
+    "timeToKill": 1.5288015288015286
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 30.525000000000002,
+    "openingPerHit": 30.525000000000002,
+    "cycleSeconds": 1.4,
+    "dps": 21.80357142857143,
+    "timeToKill": 4.586404586404586
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 30.525000000000002,
+    "openingPerHit": 91.575,
+    "cycleSeconds": 1.4,
+    "dps": 65.41071428571429,
+    "timeToKill": 1.5288015288015286
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 44.400000000000006,
+    "openingPerHit": 44.400000000000006,
+    "cycleSeconds": 1.4,
+    "dps": 31.71428571428572,
+    "timeToKill": 3.1531531531531525
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 44.400000000000006,
+    "openingPerHit": 133.20000000000002,
+    "cycleSeconds": 1.4,
+    "dps": 95.14285714285717,
+    "timeToKill": 1.0510510510510507
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 44.400000000000006,
+    "openingPerHit": 44.400000000000006,
+    "cycleSeconds": 1.4,
+    "dps": 31.71428571428572,
+    "timeToKill": 3.1531531531531525
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "draugr",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 44.400000000000006,
+    "openingPerHit": 133.20000000000002,
+    "cycleSeconds": 1.4,
+    "dps": 95.14285714285717,
+    "timeToKill": 1.0510510510510507
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 33,
+    "openingPerHit": 33,
+    "cycleSeconds": 1.4,
+    "dps": 23.571428571428573,
+    "timeToKill": 33.93939393939394
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 33,
+    "openingPerHit": 99,
+    "cycleSeconds": 1.4,
+    "dps": 70.71428571428572,
+    "timeToKill": 11.313131313131311
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 33,
+    "openingPerHit": 33,
+    "cycleSeconds": 1.4,
+    "dps": 23.571428571428573,
+    "timeToKill": 33.93939393939394
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 33,
+    "openingPerHit": 99,
+    "cycleSeconds": 1.4,
+    "dps": 70.71428571428572,
+    "timeToKill": 11.313131313131311
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 36,
+    "openingPerHit": 36,
+    "cycleSeconds": 1.4,
+    "dps": 25.714285714285715,
+    "timeToKill": 31.11111111111111
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 36,
+    "openingPerHit": 108,
+    "cycleSeconds": 1.4,
+    "dps": 77.14285714285715,
+    "timeToKill": 10.370370370370368
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 36,
+    "openingPerHit": 36,
+    "cycleSeconds": 1.4,
+    "dps": 25.714285714285715,
+    "timeToKill": 31.11111111111111
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 36,
+    "openingPerHit": 108,
+    "cycleSeconds": 1.4,
+    "dps": 77.14285714285715,
+    "timeToKill": 10.370370370370368
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 57.75,
+    "openingPerHit": 57.75,
+    "cycleSeconds": 1.4,
+    "dps": 41.25,
+    "timeToKill": 19.393939393939394
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 57.75000000000001,
+    "openingPerHit": 173.25000000000003,
+    "cycleSeconds": 1.4,
+    "dps": 123.75000000000003,
+    "timeToKill": 6.464646464646463
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 57.75,
+    "openingPerHit": 57.75,
+    "cycleSeconds": 1.4,
+    "dps": 41.25,
+    "timeToKill": 19.393939393939394
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 57.75000000000001,
+    "openingPerHit": 173.25000000000003,
+    "cycleSeconds": 1.4,
+    "dps": 123.75000000000003,
+    "timeToKill": 6.464646464646463
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 63,
+    "openingPerHit": 63,
+    "cycleSeconds": 1.4,
+    "dps": 45,
+    "timeToKill": 17.77777777777778
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 63.00000000000001,
+    "openingPerHit": 189.00000000000003,
+    "cycleSeconds": 1.4,
+    "dps": 135.00000000000003,
+    "timeToKill": 5.925925925925925
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 63,
+    "openingPerHit": 63,
+    "cycleSeconds": 1.4,
+    "dps": 45,
+    "timeToKill": 17.77777777777778
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 63.00000000000001,
+    "openingPerHit": 189.00000000000003,
+    "cycleSeconds": 1.4,
+    "dps": 135.00000000000003,
+    "timeToKill": 5.925925925925925
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 76.3125,
+    "openingPerHit": 76.3125,
+    "cycleSeconds": 1.4,
+    "dps": 54.50892857142858,
+    "timeToKill": 14.676494676494675
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 76.3125,
+    "openingPerHit": 228.9375,
+    "cycleSeconds": 1.4,
+    "dps": 163.52678571428572,
+    "timeToKill": 4.892164892164892
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 76.3125,
+    "openingPerHit": 76.3125,
+    "cycleSeconds": 1.4,
+    "dps": 54.50892857142858,
+    "timeToKill": 14.676494676494675
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 76.3125,
+    "openingPerHit": 228.9375,
+    "cycleSeconds": 1.4,
+    "dps": 163.52678571428572,
+    "timeToKill": 4.892164892164892
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 83.25,
+    "openingPerHit": 83.25,
+    "cycleSeconds": 1.4,
+    "dps": 59.464285714285715,
+    "timeToKill": 13.453453453453454
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 83.25,
+    "openingPerHit": 249.75,
+    "cycleSeconds": 1.4,
+    "dps": 178.39285714285717,
+    "timeToKill": 4.484484484484484
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 83.25,
+    "openingPerHit": 83.25,
+    "cycleSeconds": 1.4,
+    "dps": 59.464285714285715,
+    "timeToKill": 13.453453453453454
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "stone-golem",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 83.25,
+    "openingPerHit": 249.75,
+    "cycleSeconds": 1.4,
+    "dps": 178.39285714285717,
+    "timeToKill": 4.484484484484484
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 6.6000000000000005,
+    "openingPerHit": 6.6000000000000005,
+    "cycleSeconds": 1.4,
+    "dps": 4.714285714285715,
+    "timeToKill": 318.18181818181813
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 6.6000000000000005,
+    "openingPerHit": 19.8,
+    "cycleSeconds": 1.4,
+    "dps": 14.142857142857144,
+    "timeToKill": 106.06060606060605
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 6.6000000000000005,
+    "openingPerHit": 6.6000000000000005,
+    "cycleSeconds": 1.4,
+    "dps": 4.714285714285715,
+    "timeToKill": 318.18181818181813
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 6.6000000000000005,
+    "openingPerHit": 19.8,
+    "cycleSeconds": 1.4,
+    "dps": 14.142857142857144,
+    "timeToKill": 106.06060606060605
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 9.600000000000001,
+    "openingPerHit": 9.600000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 6.8571428571428585,
+    "timeToKill": 218.74999999999994
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 9.600000000000001,
+    "openingPerHit": 28.800000000000004,
+    "cycleSeconds": 1.4,
+    "dps": 20.571428571428577,
+    "timeToKill": 72.91666666666664
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 9.600000000000001,
+    "openingPerHit": 9.600000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 6.8571428571428585,
+    "timeToKill": 218.74999999999994
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 9.600000000000001,
+    "openingPerHit": 28.800000000000004,
+    "cycleSeconds": 1.4,
+    "dps": 20.571428571428577,
+    "timeToKill": 72.91666666666664
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 11.55,
+    "openingPerHit": 11.55,
+    "cycleSeconds": 1.4,
+    "dps": 8.250000000000002,
+    "timeToKill": 181.81818181818178
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 11.550000000000002,
+    "openingPerHit": 34.650000000000006,
+    "cycleSeconds": 1.4,
+    "dps": 24.750000000000007,
+    "timeToKill": 60.60606060606059
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 11.55,
+    "openingPerHit": 11.55,
+    "cycleSeconds": 1.4,
+    "dps": 8.250000000000002,
+    "timeToKill": 181.81818181818178
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 11.550000000000002,
+    "openingPerHit": 34.650000000000006,
+    "cycleSeconds": 1.4,
+    "dps": 24.750000000000007,
+    "timeToKill": 60.60606060606059
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 16.8,
+    "openingPerHit": 16.8,
+    "cycleSeconds": 1.4,
+    "dps": 12.000000000000002,
+    "timeToKill": 124.99999999999999
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 16.8,
+    "openingPerHit": 50.400000000000006,
+    "cycleSeconds": 1.4,
+    "dps": 36.00000000000001,
+    "timeToKill": 41.66666666666666
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 16.8,
+    "openingPerHit": 16.8,
+    "cycleSeconds": 1.4,
+    "dps": 12.000000000000002,
+    "timeToKill": 124.99999999999999
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 16.8,
+    "openingPerHit": 50.400000000000006,
+    "cycleSeconds": 1.4,
+    "dps": 36.00000000000001,
+    "timeToKill": 41.66666666666666
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 15.262500000000001,
+    "openingPerHit": 15.262500000000001,
+    "cycleSeconds": 1.4,
+    "dps": 10.901785714285715,
+    "timeToKill": 137.5921375921376
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 15.262500000000001,
+    "openingPerHit": 45.7875,
+    "cycleSeconds": 1.4,
+    "dps": 32.705357142857146,
+    "timeToKill": 45.86404586404586
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 15.262500000000001,
+    "openingPerHit": 15.262500000000001,
+    "cycleSeconds": 1.4,
+    "dps": 10.901785714285715,
+    "timeToKill": 137.5921375921376
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 15.262500000000001,
+    "openingPerHit": 45.7875,
+    "cycleSeconds": 1.4,
+    "dps": 32.705357142857146,
+    "timeToKill": 45.86404586404586
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 22.200000000000003,
+    "openingPerHit": 22.200000000000003,
+    "cycleSeconds": 1.4,
+    "dps": 15.85714285714286,
+    "timeToKill": 94.59459459459458
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 22.200000000000003,
+    "openingPerHit": 66.60000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 47.571428571428584,
+    "timeToKill": 31.531531531531524
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 22.200000000000003,
+    "openingPerHit": 22.200000000000003,
+    "cycleSeconds": 1.4,
+    "dps": 15.85714285714286,
+    "timeToKill": 94.59459459459458
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "seeker-soldier",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 22.200000000000003,
+    "openingPerHit": 66.60000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 47.571428571428584,
+    "timeToKill": 31.531531531531524
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 6.6000000000000005,
+    "openingPerHit": 6.6000000000000005,
+    "cycleSeconds": 1.4,
+    "dps": 4.714285714285715,
+    "timeToKill": 9969.696969696968
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 6.6000000000000005,
+    "openingPerHit": 19.8,
+    "cycleSeconds": 1.4,
+    "dps": 14.142857142857144,
+    "timeToKill": 3323.232323232323
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 6.6000000000000005,
+    "openingPerHit": 6.6000000000000005,
+    "cycleSeconds": 1.4,
+    "dps": 4.714285714285715,
+    "timeToKill": 9969.696969696968
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 0,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 6.6000000000000005,
+    "openingPerHit": 19.8,
+    "cycleSeconds": 1.4,
+    "dps": 14.142857142857144,
+    "timeToKill": 3323.232323232323
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 9.600000000000001,
+    "openingPerHit": 9.600000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 6.8571428571428585,
+    "timeToKill": 6854.166666666665
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 9.600000000000001,
+    "openingPerHit": 28.800000000000004,
+    "cycleSeconds": 1.4,
+    "dps": 20.571428571428577,
+    "timeToKill": 2284.7222222222217
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 9.600000000000001,
+    "openingPerHit": 9.600000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 6.8571428571428585,
+    "timeToKill": 6854.166666666665
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 0,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 9.600000000000001,
+    "openingPerHit": 28.800000000000004,
+    "cycleSeconds": 1.4,
+    "dps": 20.571428571428577,
+    "timeToKill": 2284.7222222222217
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 11.55,
+    "openingPerHit": 11.55,
+    "cycleSeconds": 1.4,
+    "dps": 8.250000000000002,
+    "timeToKill": 5696.969696969696
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 11.550000000000002,
+    "openingPerHit": 34.650000000000006,
+    "cycleSeconds": 1.4,
+    "dps": 24.750000000000007,
+    "timeToKill": 1898.9898989898984
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 11.55,
+    "openingPerHit": 11.55,
+    "cycleSeconds": 1.4,
+    "dps": 8.250000000000002,
+    "timeToKill": 5696.969696969696
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 50,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 11.550000000000002,
+    "openingPerHit": 34.650000000000006,
+    "cycleSeconds": 1.4,
+    "dps": 24.750000000000007,
+    "timeToKill": 1898.9898989898984
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 16.8,
+    "openingPerHit": 16.8,
+    "cycleSeconds": 1.4,
+    "dps": 12.000000000000002,
+    "timeToKill": 3916.666666666666
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 16.8,
+    "openingPerHit": 50.400000000000006,
+    "cycleSeconds": 1.4,
+    "dps": 36.00000000000001,
+    "timeToKill": 1305.5555555555552
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 16.8,
+    "openingPerHit": 16.8,
+    "cycleSeconds": 1.4,
+    "dps": 12.000000000000002,
+    "timeToKill": 3916.666666666666
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 50,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 16.8,
+    "openingPerHit": 50.400000000000006,
+    "cycleSeconds": 1.4,
+    "dps": 36.00000000000001,
+    "timeToKill": 1305.5555555555552
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 15.262500000000001,
+    "openingPerHit": 15.262500000000001,
+    "cycleSeconds": 1.4,
+    "dps": 10.901785714285715,
+    "timeToKill": 4311.220311220311
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 15.262500000000001,
+    "openingPerHit": 45.7875,
+    "cycleSeconds": 1.4,
+    "dps": 32.705357142857146,
+    "timeToKill": 1437.073437073437
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 15.262500000000001,
+    "openingPerHit": 15.262500000000001,
+    "cycleSeconds": 1.4,
+    "dps": 10.901785714285715,
+    "timeToKill": 4311.220311220311
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 100,
+      "quality": 1,
+      "qualityMode": "1",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 15.262500000000001,
+    "openingPerHit": 45.7875,
+    "cycleSeconds": 1.4,
+    "dps": 32.705357142857146,
+    "timeToKill": 1437.073437073437
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": false
+    },
+    "perHit": 22.200000000000003,
+    "openingPerHit": 22.200000000000003,
+    "cycleSeconds": 1.4,
+    "dps": 15.85714285714286,
+    "timeToKill": 2963.9639639639636
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "primary",
+      "backstab": true
+    },
+    "perHit": 22.200000000000003,
+    "openingPerHit": 66.60000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 47.571428571428584,
+    "timeToKill": 987.9879879879877
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": false
+    },
+    "perHit": 22.200000000000003,
+    "openingPerHit": 22.200000000000003,
+    "cycleSeconds": 1.4,
+    "dps": 15.85714285714286,
+    "timeToKill": 2963.9639639639636
+  },
+  {
+    "inputs": {
+      "weapon": "iron-pickaxe",
+      "ammo": null,
+      "target": "kall-fimbulbringer",
+      "skillLevel": 100,
+      "quality": 4,
+      "qualityMode": "max",
+      "attack": "secondary",
+      "backstab": true
+    },
+    "perHit": 22.200000000000003,
+    "openingPerHit": 66.60000000000001,
+    "cycleSeconds": 1.4,
+    "dps": 47.571428571428584,
+    "timeToKill": 987.9879879879877
   }
 ]
