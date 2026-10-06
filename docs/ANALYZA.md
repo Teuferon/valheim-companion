@@ -401,11 +401,12 @@ Vychází z `docs/NAVRHY-NASTROJU.md` § „Menší vylepšení“. Platí zása
 | Armourer | `/armourer/#set=<id>`, `#item=<id>` | hledání (VC-27) |
 | Damage Calculator | `/damage-calculator/?biome=<biomeId>&target=<slug>` (+ volitelně `weapon`, `class`, `level`, `skill`, `roll`, `attack`, `state`; formát `src/lib/view-url.ts`) | karty Bestiary (VC-30), hledání |
 | Sign Editor | `/signs/#sign=<base64url>` | sdílení cedule (VC-26) |
+| Comfort Planner | `/comfort/#b=<base64url>`, `#item=<id>` | sdílení stavby, hledání, tip v Provisions (VC-35) |
 
 - Id biomů a jednotek jsou ve všech nástrojích stejná (`creature.id` v Bestiary = `slug` v kalkulačce). Bestiary odkazuje do kalkulačky jen u jednotek, které kalkulačka zná (`calculatorSlug` v bundlu); dnes je to 78 ze 106.
 - Z Bestiary do kalkulačky se posílá **jen `biome` a `target`**. Zbraň, úroveň a skill si kalkulačka vezme z profilu hráče (VC-25) a návštěvník je doladí sám (návrh od Teuferona, 6. 10. 2026).
 
-> **Doplnění zásady (6. 10. 2026):** nepřekládají se ani **názvy nástrojů** (Valheim Companion, Bestiary, Armourer, Armory, Damage Calculator, Sign Editor, Runopis, Progress Tracker, Provisions). Jsou to vlastní jména.
+> **Doplnění zásady (6. 10. 2026):** nepřekládají se ani **názvy nástrojů** (Valheim Companion, Bestiary, Armourer, Armory, Damage Calculator, Sign Editor, Runopis, Progress Tracker, Provisions, Comfort Planner). Jsou to vlastní jména.
 
 ## 21. Progress jako vysouvací panel na každé stránce (VC-32, Pavel 6. 10. 2026)
 
@@ -452,3 +453,32 @@ Vychází z `docs/NAVRHY-NASTROJU.md` § „Menší vylepšení“. Platí zása
   - **spočítané** ze zvoleného loadoutu (šablony): nejkratší doba a počet porcí na zvolené hodiny, chybějící úroveň kotle a co k ní chybí, varování „suroviny nelze teleportovat“, když se týkají
   - **obecné** v `apps/provisions/data/tips.json`: 10–15 krátkých rad, každá s odkazem na stránku wiki, ze které vychází (`source`). Jen fakta ověřená na valheim.weirdgloop.org.
   - Všechny tipy ve 13 jazycích, názvy z hry anglicky.
+
+## 24. Comfort Planner (VC-35, Pavel 6. 10. 2026)
+
+Nová sekce `/comfort/` (`apps/comfort/`, statická, vanilla JS jako Provisions). Hráč skládá nábytek do základny a vidí výsledný comfort, délku efektu Rested a nákupní seznam.
+
+- **Pravidla hry** (ověřeno na wiki 6. 10. 2026, stránky *Comfort*, *Resting*, *Rested*):
+  - `comfort = 1 (základ) + 1 (shelter) + Σ nejvyšší kus v každé kategorii + kusy bez kategorie (Maypole, Yule Tree)`. Kusy ve stejné kategorii se nesčítají, stejný kus se nesčítá sám se sebou.
+  - Kategorie: Fire, Rug, Table, Chair, Bed, Banner (i Jute Curtain a Drapes), Plants, Stands, Bathroom, Lights, Ashlands.
+  - Bez střechy (jen u ohně) je comfort vždy 1, všechno ostatní se ignoruje.
+  - Nábytek se počítá do 10 m od hráče. Hearth dává 2 jen pod střechou a do 8 m, jinak 1. Ohně musí hořet, Hot Tub musí být zatopený.
+  - **Rested = 7 + comfort minut.** Efekt dává HP regen +50 %, stamina regen +100 %, eitr regen +100 % a XP +50 %.
+  - Maximum bez sezónních kusů je 22 (29 min). Maypole a Yule Tree přidají po 1 (24, 31 min).
+- **Data:**
+  - `data/comfort.json`: kategorie, kusy a hodnoty z tabulky na stránce *Comfort*.
+  - Každý kus má infobox `{{infobox structure}}` s `comfort = Bed 2`, `materials`, `source` (Workbench, Stonecutter, Forge, Artisan Table, Black Forge…) a `image`.
+  - Tier kusu = max(tier surovin, tier stanice). Logika je sdílená s Smithy a Provisions.
+  - Sezónní kusy (`seasonal: true`): Maypole, Yule Tree, Mistletoe, Yule garland, Yule wreath, Jack-O-Turnip.
+  - **Kontrola správnosti:** spočítané maximum podle biomu musí sedět s tabulkou wiki „Maximum comfort per biome“: Meadows 5, Black Forest 13, Swamp 15, Mountain 17, Plains 19, Mistlands 20, Ashlands 22, Deep North 22. Ocean má stejné maximum jako Black Forest. Odchylka se buď opraví v `data/overrides.json`, nebo se zdůvodní v reportu.
+- **Funkce:**
+  - souhrn nahoře: comfort N / maximum pro můj postup, Rested N min, přepínač „Sheltered“ (výchozí zapnuto)
+  - kategorie jako řádky karet, v každé se vybírá nanejvýš jeden kus (nebo nic); Maypole a Yule Tree jsou zaškrtávátka
+  - zamčené kusy podle `VCProgress.revealedBiomes()` s „Reveal“, sezónní kusy jen s přepínačem „Include seasonal items“
+  - „Best I can build“ vybere v každé kategorii nejvyšší odemčený kus, při shodě ten levnější (méně základních surovin po rozpadu); „Clear“
+  - **„Next upgrades“:** až 5 jednotlivých změn, které nejvíc zvednou comfort, seřazené podle zisku a pak podle ceny (např. „+1 · Hearth instead of Campfire · 15 Stone“)
+  - nákupní seznam přes `VCShopping` jen pro kusy, které hráč ještě nemá („I have it“ jako Have/Want ve Smithy): rozpad, potřebné stanice, zdroje surovin s odkazy do Bestiary, „Copy list“, varování o neteleportovatelných surovinách
+  - tipy: 8–10 ověřených rad s odkazem na wiki (10 m, shelter, Hearth 8 m, ohně musí hořet, Hot Tub zatopený, kategorie se nesčítají, táborák u vchodu do dungeonu = 10 min, mokrý hráč neodpočívá, Rested 7 + comfort)
+  - uložení `vco.build`, sdílení `#b=<base64url>`, deep link `#item=<id>` (hledání v rozcestníku)
+- **Vazby:** karta v rozcestníku mezi Provisions a Sign Editor (štítek „Follows your progress“), řádek „Unlocks spoilers in:“ na kartě Progress, položky v hledání rozcestníku, odkaz z tipu o Rested v Provisions.
+- Název nástroje **Comfort Planner** se nepřekládá (doplnění zásady v § 20).
