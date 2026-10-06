@@ -17,6 +17,7 @@ const HUB_DIR = path.join(REPO_ROOT, 'apps', 'hub');
 const BESTIARY_DIR = path.join(REPO_ROOT, 'apps', 'bestiary');
 const ARMOURER_DIR = path.join(REPO_ROOT, 'apps', 'armourer');
 const SHARED_I18N_DIR = path.join(REPO_ROOT, 'shared', 'i18n');
+const SHARED_ANALYTICS_DIR = path.join(REPO_ROOT, 'shared', 'analytics');
 const SIGNS_DIST = path.join(REPO_ROOT, 'apps', 'signs', 'dist-static');
 const DAMAGE_DIST = path.join(REPO_ROOT, 'apps', 'damage-calculator', 'dist-static');
 
@@ -93,6 +94,13 @@ export function buildSite() {
         cpSync(path.join(SHARED_I18N_DIR, file), path.join(sharedDistTarget, file));
       }
     }
+  }
+
+  // 6. shared/analytics/* -> dist/shared/analytics/
+  const sharedAnalyticsDistTarget = path.join(DIST_DIR, 'shared', 'analytics');
+  mkdirSync(sharedAnalyticsDistTarget, { recursive: true });
+  if (existsSync(SHARED_ANALYTICS_DIR)) {
+    cpSync(SHARED_ANALYTICS_DIR, sharedAnalyticsDistTarget, { recursive: true });
   }
 
   console.log('done: site assembled in dist/');
