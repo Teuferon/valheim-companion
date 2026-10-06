@@ -3388,5 +3388,20 @@
     "ru": "Профиль Bestiary ({roll}) · основная атака · лучшие доступные боеприпасы",
     "ja": "Bestiary プロフィール（{roll}）· 通常攻撃 · 入手可能な最良の弾薬",
     "id": "Profil Bestiary ({roll}) · serangan utama · amunisi terbaik yang tersedia"
+  },
+  "Track your progress →": {
+    "en": "Track your progress →",
+    "cs": "Sledujte svůj postup →",
+    "de": "Fortschritt verfolgen →",
+    "es": "Registra tu progreso →",
+    "fr": "Suivez votre progression →",
+    "pt": "Acompanhe seu progresso →",
+    "zh": "记录你的进度 →",
+    "hi": "अपनी प्रगति दर्ज करें →",
+    "ar": "تتبّع تقدمك →",
+    "bn": "আপনার অগ্রগতি নথিভুক্ত করুন →",
+    "ru": "Отслеживайте прогресс →",
+    "ja": "進行状況を記録 →",
+    "id": "Catat progresmu →"
   }
 }

@@ -11,12 +11,12 @@ import {
   BIOME_STORAGE_KEY,
   DEFAULT_BIOME,
   biomeIndex,
-  isKnownBiome,
 } from "@/lib/progression";
+import { readTrackedBiome } from "@/lib/tracked-progress";
 import { cn } from "@/lib/utils";
 
 /**
- * The persisted progression position.
+ * The tracked progression default; URL and session choices override it.
  *
  * Hydration safety is why this goes through `useSyncExternalStore` rather than
  * reading localStorage while rendering: the server snapshot is always null, so
@@ -31,8 +31,7 @@ const subscribe = (onChange: () => void) => {
 };
 
 const readStoredBiome = (): BiomeId => {
-  const stored = window.localStorage.getItem(BIOME_STORAGE_KEY);
-  return isKnownBiome(stored) ? stored : DEFAULT_BIOME;
+  try { return readTrackedBiome(window.localStorage); } catch { return BIOMES[0].id; }
 };
 
 const serverBiome = () => DEFAULT_BIOME;
@@ -46,7 +45,7 @@ export function useBiomeProgression(): [BiomeId, (next: BiomeId) => void] {
 
   const setBiome = (next: BiomeId) => {
     setCurrent(next);
-    window.localStorage.setItem(BIOME_STORAGE_KEY, next);
+    try { window.localStorage.setItem(BIOME_STORAGE_KEY, next); } catch { /* Keep the session selection. */ }
   };
 
   return [biome, setBiome];
@@ -141,6 +140,9 @@ export function BiomeSlider({
         <p className="text-xs text-muted-foreground">
           {t("Showing {weapons} of {allWeapons} weapons and {targets} of {allTargets} targets reachable in {biome}.", { weapons: formatCount(visibleWeapons), allWeapons: formatCount(totalWeapons), targets: formatCount(visibleTargets), allTargets: formatCount(totalTargets), biome: biome.name })} {biome.note ? formatGameText(biome.note, t) : ''}
         </p>
+        <a href="../progress/" className="text-xs text-muted-foreground hover:text-foreground">
+          {t("Track your progress →")}
+        </a>
       </CardContent>
     </Card>
   );
