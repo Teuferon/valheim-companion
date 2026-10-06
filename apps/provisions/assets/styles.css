@@ -86,3 +86,32 @@ summary { cursor: pointer; color: var(--gold); padding: 6px 0; }
   .mobile-bar button { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--gold); }
 }
 @media (prefers-reduced-motion: no-preference) { button, a { transition: color .15s, border-color .15s; } }
+/* Activity advice fits the existing food catalog and remains readable at 360 px. */
+.provisions-main, .activity-planner, .advisor-results, .advisor-tips { min-width: 0; overflow-wrap: anywhere; }
+.activity-planner { padding: 18px; background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--gold); border-radius: 10px; }
+.activity-planner h2, .advisor-heading { font: bold 1.35rem Georgia, serif; color: var(--gold); margin-bottom: 14px; }
+.activities { display: flex; flex-wrap: wrap; gap: 8px; }
+.activity-button { display: inline-flex; align-items: center; gap: 8px; text-align: start; }
+.activity-button[aria-pressed="true"] { color: var(--gold); border-color: var(--gold); background: #d9a44118; }
+.activity-icon { flex-shrink: 0; font-size: 1.2rem; }
+.advisor-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; margin: 16px 0 8px; }
+.advisor-controls > label { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; min-width: 0; }
+.advisor-controls select { min-width: 0; }
+.advisor-results, .advisor-tips { margin: 24px 0; }
+.advisor-results > .advisor-heading:not(:first-child) { margin-top: 24px; }
+.combo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 10px; }
+.combo-card { display: flex; flex-direction: column; gap: 10px; min-width: 0; background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
+.combo-card .item-heading img { width: 36px; height: 36px; }
+.combo-card .item-heading h4 { font-size: .9rem; }
+.combo-stats { margin: 6px 0; font-size: .8rem; }
+.combo-stats > div { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 5px; }
+.combo-stats dt { color: var(--muted); }
+.combo-stats dd { margin: 0; color: var(--stat-color, var(--gold)); }
+.mead-picks { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 12px; }
+.advisor-tips { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 18px; }
+.tip-list { padding-inline-start: 20px; margin: 0; font-size: .9rem; }
+.tip-list li { margin: 10px 0; }
+.tip-list a { display: inline-block; margin-inline-start: 8px; font-size: .8rem; }
+@media (max-width: 1200px) and (min-width: 1025px), (max-width: 700px) {
+  .combo-grid { grid-template-columns: minmax(0, 1fr); }
+}

@@ -10,7 +10,9 @@ export function buildProvisionsData() {
     const image = item.image ? (item.image.startsWith('../provisions/') ? item.image.slice('../provisions/'.length) : `../smithy/${item.image}`) : null;
     return [item.id, { ...item, image: image && existsSync(path.resolve(ROOT, 'apps/provisions', image)) ? image : null }];
   }));
-  const bundle = { biomes, food: load('food'), meads: load('meads'), stations: load('stations'), items };
+  const bundle = { biomes, food: load('food'), meads: load('meads'), stations: load('stations'), items, tips: load('provisions-tips') };
+  const tipsDestination = path.join(ROOT, 'apps/provisions/data/tips.json');
+  writeFileSync(tipsDestination, JSON.stringify(bundle.tips, null, 2) + '\n');
   const imageReferences = new Set([...bundle.food, ...bundle.meads, ...Object.values(items)].map(e => e.image).filter(Boolean));
   for (const image of imageReferences) {
     if (!existsSync(path.resolve(ROOT, 'apps/provisions', image))) throw new Error(`Missing image: ${image}`);

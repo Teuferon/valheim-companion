@@ -1,0 +1,138 @@
+[
+  {
+    "id": "tip-1",
+    "text": "You can eat up to three different foods at once.",
+    "source": "https://valheim.weirdgloop.org/w/Food",
+    "activities": [
+      "balanced",
+      "boss",
+      "combat",
+      "mining",
+      "farming",
+      "exploration",
+      "magic"
+    ]
+  },
+  {
+    "id": "tip-2",
+    "text": "Food bonuses weaken as the food is digested.",
+    "source": "https://valheim.weirdgloop.org/w/Food",
+    "activities": [
+      "balanced",
+      "exploration",
+      "farming",
+      "mining"
+    ]
+  },
+  {
+    "id": "tip-3",
+    "text": "Eat again when the food icon flashes to refresh its bonuses.",
+    "source": "https://valheim.weirdgloop.org/w/Food",
+    "activities": [
+      "boss",
+      "combat",
+      "exploration"
+    ]
+  },
+  {
+    "id": "tip-4",
+    "text": "Rested boosts health, stamina and eitr regeneration.",
+    "source": "https://valheim.weirdgloop.org/w/Rested_Effect",
+    "activities": [
+      "mining",
+      "farming",
+      "exploration",
+      "magic"
+    ]
+  },
+  {
+    "id": "tip-5",
+    "text": "Higher comfort makes Rested last longer.",
+    "source": "https://valheim.weirdgloop.org/w/Comfort",
+    "activities": [
+      "exploration",
+      "farming",
+      "mining"
+    ]
+  },
+  {
+    "id": "tip-6",
+    "text": "A mead cooldown blocks another mead of the same type.",
+    "source": "https://valheim.weirdgloop.org/w/Mead",
+    "activities": [
+      "boss",
+      "combat",
+      "magic"
+    ]
+  },
+  {
+    "id": "tip-7",
+    "text": "Mead bases need fermentation; keep the Fermenter roofed and sheltered.",
+    "source": "https://valheim.weirdgloop.org/w/Fermenter",
+    "activities": [
+      "balanced",
+      "boss",
+      "combat"
+    ]
+  },
+  {
+    "id": "tip-8",
+    "text": "Place a feast with the Serving Tray before eating it.",
+    "source": "https://valheim.weirdgloop.org/w/Feasts",
+    "activities": [
+      "farming",
+      "exploration",
+      "balanced"
+    ]
+  },
+  {
+    "id": "tip-9",
+    "text": "The Cauldron needs a fire underneath to cook.",
+    "source": "https://valheim.weirdgloop.org/w/Cauldron",
+    "activities": [
+      "farming",
+      "mining",
+      "balanced"
+    ]
+  },
+  {
+    "id": "tip-10",
+    "text": "Build Cauldron upgrades nearby to unlock more recipes.",
+    "source": "https://valheim.weirdgloop.org/w/Cauldron",
+    "activities": [
+      "magic",
+      "boss",
+      "combat"
+    ]
+  },
+  {
+    "id": "tip-11",
+    "text": "Frost Resistance Mead prevents Cold and Freezing.",
+    "source": "https://valheim.weirdgloop.org/w/Frost_Resistance_Mead",
+    "activities": [
+      "exploration",
+      "boss",
+      "combat"
+    ]
+  },
+  {
+    "id": "tip-12",
+    "text": "Fire Resistance Barley Wine reduces fire damage taken.",
+    "source": "https://valheim.weirdgloop.org/w/Fire_Resistance_Barley_Wine",
+    "activities": [
+      "boss",
+      "combat",
+      "exploration"
+    ]
+  },
+  {
+    "id": "tip-13",
+    "text": "Drink Poison Resistance Mead before being poisoned; it does not cure existing poison.",
+    "source": "https://valheim.weirdgloop.org/w/Poison_Resistance_Mead",
+    "activities": [
+      "boss",
+      "combat",
+      "exploration"
+    ]
+  }
+]
