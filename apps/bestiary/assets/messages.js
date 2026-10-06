@@ -1576,64 +1576,252 @@ globalThis.VC_MESSAGES = {
     "id": "sekunder"
   },
   "{count} creatures": {
-    "en": "{count} creatures",
-    "cs": "{count} jednotek",
-    "de": "{count} Kreaturen",
-    "es": "{count} criaturas",
-    "fr": "{count} créatures",
-    "pt": "{count} criaturas",
-    "zh": "{count} 个生物",
-    "hi": "{count} प्राणी",
-    "ar": "{count} مخلوقات",
-    "bn": "{count} প্রাণী",
-    "ru": "{count} существ",
-    "ja": "{count} 体の生物",
-    "id": "{count} makhluk"
+    "en": {
+      "one": "{count} creature",
+      "other": "{count} creatures"
+    },
+    "cs": {
+      "one": "{count} jednotka",
+      "few": "{count} jednotky",
+      "many": "{count} jednotky",
+      "other": "{count} jednotek"
+    },
+    "de": {
+      "one": "{count} Kreatur",
+      "other": "{count} Kreaturen"
+    },
+    "es": {
+      "one": "{count} criatura",
+      "many": "{count} criaturas",
+      "other": "{count} criaturas"
+    },
+    "fr": {
+      "one": "{count} créature",
+      "many": "{count} créatures",
+      "other": "{count} créatures"
+    },
+    "pt": {
+      "one": "{count} criatura",
+      "many": "{count} criaturas",
+      "other": "{count} criaturas"
+    },
+    "zh": {
+      "other": "{count} 个生物"
+    },
+    "hi": {
+      "one": "{count} प्राणी",
+      "other": "{count} प्राणी"
+    },
+    "ar": {
+      "zero": "{count} مخلوقات",
+      "one": "{count} مخلوق",
+      "two": "{count} مخلوقان",
+      "few": "{count} مخلوقات",
+      "many": "{count} مخلوقًا",
+      "other": "{count} مخلوق"
+    },
+    "bn": {
+      "one": "{count}টি প্রাণী",
+      "other": "{count}টি প্রাণী"
+    },
+    "ru": {
+      "one": "{count} существо",
+      "few": "{count} существа",
+      "many": "{count} существ",
+      "other": "{count} существа"
+    },
+    "ja": {
+      "other": "{count} 体の生物"
+    },
+    "id": {
+      "other": "{count} makhluk"
+    }
   },
   "{count} players": {
-    "en": "{count} players",
-    "cs": "{count} hráčů",
-    "de": "{count} Spieler",
-    "es": "{count} jugadores",
-    "fr": "{count} joueurs",
-    "pt": "{count} jogadores",
-    "zh": "{count} 名玩家",
-    "hi": "{count} खिलाड़ी",
-    "ar": "{count} لاعبين",
-    "bn": "{count} খেলোয়াড়",
-    "ru": "{count} игроков",
-    "ja": "{count} 人のプレイヤー",
-    "id": "{count} pemain"
+    "en": {
+      "one": "{count} player",
+      "other": "{count} players"
+    },
+    "cs": {
+      "one": "{count} hráč",
+      "few": "{count} hráči",
+      "many": "{count} hráče",
+      "other": "{count} hráčů"
+    },
+    "de": {
+      "one": "{count} Spieler",
+      "other": "{count} Spieler"
+    },
+    "es": {
+      "one": "{count} jugador",
+      "many": "{count} jugadores",
+      "other": "{count} jugadores"
+    },
+    "fr": {
+      "one": "{count} joueur",
+      "many": "{count} joueurs",
+      "other": "{count} joueurs"
+    },
+    "pt": {
+      "one": "{count} jogador",
+      "many": "{count} jogadores",
+      "other": "{count} jogadores"
+    },
+    "zh": {
+      "other": "{count} 名玩家"
+    },
+    "hi": {
+      "one": "{count} खिलाड़ी",
+      "other": "{count} खिलाड़ी"
+    },
+    "ar": {
+      "zero": "{count} لاعبين",
+      "one": "{count} لاعب",
+      "two": "{count} لاعبان",
+      "few": "{count} لاعبين",
+      "many": "{count} لاعبًا",
+      "other": "{count} لاعب"
+    },
+    "bn": {
+      "one": "{count} জন খেলোয়াড়",
+      "other": "{count} জন খেলোয়াড়"
+    },
+    "ru": {
+      "one": "{count} игрок",
+      "few": "{count} игрока",
+      "many": "{count} игроков",
+      "other": "{count} игрока"
+    },
+    "ja": {
+      "other": "{count} 人のプレイヤー"
+    },
+    "id": {
+      "other": "{count} pemain"
+    }
   },
   "{count} stars": {
-    "en": "{count} stars",
-    "cs": "{count} hvězd",
-    "de": "{count} Sterne",
-    "es": "{count} estrellas",
-    "fr": "{count} étoiles",
-    "pt": "{count} estrelas",
-    "zh": "{count} 星",
-    "hi": "{count} सितारे",
-    "ar": "{count} نجوم",
-    "bn": "{count} তারা",
-    "ru": "{count} звёзд",
-    "ja": "星 {count}",
-    "id": "{count} bintang"
+    "en": {
+      "one": "{count} star",
+      "other": "{count} stars"
+    },
+    "cs": {
+      "one": "{count} hvězda",
+      "few": "{count} hvězdy",
+      "many": "{count} hvězdy",
+      "other": "{count} hvězd"
+    },
+    "de": {
+      "one": "{count} Stern",
+      "other": "{count} Sterne"
+    },
+    "es": {
+      "one": "{count} estrella",
+      "many": "{count} estrellas",
+      "other": "{count} estrellas"
+    },
+    "fr": {
+      "one": "{count} étoile",
+      "many": "{count} étoiles",
+      "other": "{count} étoiles"
+    },
+    "pt": {
+      "one": "{count} estrela",
+      "many": "{count} estrelas",
+      "other": "{count} estrelas"
+    },
+    "zh": {
+      "other": "{count} 星"
+    },
+    "hi": {
+      "one": "{count} सितारा",
+      "other": "{count} सितारे"
+    },
+    "ar": {
+      "zero": "{count} نجوم",
+      "one": "{count} نجمة",
+      "two": "{count} نجمتان",
+      "few": "{count} نجوم",
+      "many": "{count} نجمةً",
+      "other": "{count} نجمة"
+    },
+    "bn": {
+      "one": "{count}টি তারা",
+      "other": "{count}টি তারা"
+    },
+    "ru": {
+      "one": "{count} звезда",
+      "few": "{count} звезды",
+      "many": "{count} звёзд",
+      "other": "{count} звезды"
+    },
+    "ja": {
+      "other": "{count} 個の星"
+    },
+    "id": {
+      "other": "{count} bintang"
+    }
   },
   "≈ {count} hits": {
-    "en": "≈ {count} hits",
-    "cs": "≈ {count} zásahů",
-    "de": "≈ {count} Treffer",
-    "es": "≈ {count} golpes",
-    "fr": "≈ {count} coups",
-    "pt": "≈ {count} golpes",
-    "zh": "≈ {count} 次命中",
-    "hi": "≈ {count} वार",
-    "ar": "≈ {count} ضربات",
-    "bn": "≈ {count} আঘাত",
-    "ru": "≈ {count} ударов",
-    "ja": "約 {count} 回の命中",
-    "id": "≈ {count} pukulan"
+    "en": {
+      "one": "≈ {count} hit",
+      "other": "≈ {count} hits"
+    },
+    "cs": {
+      "one": "≈ {count} zásah",
+      "few": "≈ {count} zásahy",
+      "many": "≈ {count} zásahu",
+      "other": "≈ {count} zásahů"
+    },
+    "de": {
+      "one": "≈ {count} Treffer",
+      "other": "≈ {count} Treffer"
+    },
+    "es": {
+      "one": "≈ {count} golpe",
+      "many": "≈ {count} golpes",
+      "other": "≈ {count} golpes"
+    },
+    "fr": {
+      "one": "≈ {count} coup",
+      "many": "≈ {count} coups",
+      "other": "≈ {count} coups"
+    },
+    "pt": {
+      "one": "≈ {count} golpe",
+      "many": "≈ {count} golpes",
+      "other": "≈ {count} golpes"
+    },
+    "zh": {
+      "other": "≈ {count} 次命中"
+    },
+    "hi": {
+      "one": "≈ {count} वार",
+      "other": "≈ {count} वार"
+    },
+    "ar": {
+      "zero": "≈ {count} ضربات",
+      "one": "≈ {count} ضربة",
+      "two": "≈ {count} ضربتان",
+      "few": "≈ {count} ضربات",
+      "many": "≈ {count} ضربةً",
+      "other": "≈ {count} ضربة"
+    },
+    "bn": {
+      "one": "≈ {count}টি আঘাত",
+      "other": "≈ {count}টি আঘাত"
+    },
+    "ru": {
+      "one": "≈ {count} удар",
+      "few": "≈ {count} удара",
+      "many": "≈ {count} ударов",
+      "other": "≈ {count} удара"
+    },
+    "ja": {
+      "other": "約 {count} 回の命中"
+    },
+    "id": {
+      "other": "≈ {count} pukulan"
+    }
   },
   "+30 % enemy HP per extra player": {
     "en": "+30 % enemy HP per extra player",
@@ -2026,19 +2214,66 @@ globalThis.VC_MESSAGES = {
     "id": "Kelemahan & ketahanan"
   },
   "Weapons & ammo from this biome ({count})": {
-    "en": "Weapons & ammo from this biome ({count})",
-    "cs": "Zbraně a munice z tohoto biomu ({count})",
-    "de": "Waffen & Munition aus diesem Biom ({count})",
-    "es": "Armas y municiones de este bioma ({count})",
-    "fr": "Armes et munitions de ce biome ({count})",
-    "pt": "Armas e munições deste bioma ({count})",
-    "zh": "此群系的武器和弹药（{count}）",
-    "hi": "इस बायोम के हथियार और गोला-बारूद ({count})",
-    "ar": "أسلحة وذخيرة هذه المنطقة ({count})",
-    "bn": "এই বায়োমের অস্ত্র ও গোলাবারুদ ({count})",
-    "ru": "Оружие и боеприпасы этого биома ({count})",
-    "ja": "このバイオームの武器と弾薬（{count}）",
-    "id": "Senjata & amunisi bioma ini ({count})"
+    "en": {
+      "one": "Weapon & ammo from this biome ({count})",
+      "other": "Weapons & ammo from this biome ({count})"
+    },
+    "cs": {
+      "one": "Zbraň a munice z tohoto biomu ({count})",
+      "few": "Zbraně a munice z tohoto biomu ({count})",
+      "many": "Zbraně a munice z tohoto biomu ({count})",
+      "other": "Zbraně a munice z tohoto biomu ({count})"
+    },
+    "de": {
+      "one": "Waffe & Munition aus diesem Biom ({count})",
+      "other": "Waffen & Munition aus diesem Biom ({count})"
+    },
+    "es": {
+      "one": "Arma y municiones de este bioma ({count})",
+      "many": "Armas y municiones de este bioma ({count})",
+      "other": "Armas y municiones de este bioma ({count})"
+    },
+    "fr": {
+      "one": "Arme et munitions de ce biome ({count})",
+      "many": "Armes et munitions de ce biome ({count})",
+      "other": "Armes et munitions de ce biome ({count})"
+    },
+    "pt": {
+      "one": "Arma e munições deste bioma ({count})",
+      "many": "Armas e munições deste bioma ({count})",
+      "other": "Armas e munições deste bioma ({count})"
+    },
+    "zh": {
+      "other": "此群系的武器和弹药（{count}）"
+    },
+    "hi": {
+      "one": "इस बायोम के हथियार और गोला-बारूद ({count})",
+      "other": "इस बायोम के हथियार और गोला-बारूद ({count})"
+    },
+    "ar": {
+      "zero": "أسلحة وذخيرة هذه المنطقة ({count})",
+      "one": "سلاح وذخيرة هذه المنطقة ({count})",
+      "two": "سلاحان وذخيرة هذه المنطقة ({count})",
+      "few": "أسلحة وذخيرة هذه المنطقة ({count})",
+      "many": "أسلحة وذخيرة هذه المنطقة ({count})",
+      "other": "أسلحة وذخيرة هذه المنطقة ({count})"
+    },
+    "bn": {
+      "one": "এই বায়োমের অস্ত্র ও গোলাবারুদ ({count})",
+      "other": "এই বায়োমের অস্ত্র ও গোলাবারুদ ({count})"
+    },
+    "ru": {
+      "one": "Оружие и боеприпасы этого биома ({count})",
+      "few": "Оружие и боеприпасы этого биома ({count})",
+      "many": "Оружие и боеприпасы этого биома ({count})",
+      "other": "Оружие и боеприпасы этого биома ({count})"
+    },
+    "ja": {
+      "other": "このバイオームの武器と弾薬（{count}）"
+    },
+    "id": {
+      "other": "Senjata & amunisi bioma ini ({count})"
+    }
   },
   "Your character · avg skill {skill} · {difficulty} · {players} · {quality} · {ranking}": {
     "en": "Your character · avg skill {skill} · {difficulty} · {players} · {quality} · {ranking}",
@@ -2116,19 +2351,66 @@ globalThis.VC_MESSAGES = {
     "id": "Level keahlian {skill}"
   },
   "🔒 {count} weapons from {biome} — open the biome to reveal": {
-    "en": "🔒 {count} weapons from {biome} — open the biome to reveal",
-    "cs": "🔒 {count} zbraní z biomu {biome} — otevři biom pro odhalení",
-    "de": "🔒 {count} Waffen aus {biome} — Biom öffnen zum Enthüllen",
-    "es": "🔒 {count} armas de {biome} — abre el bioma para revelarlas",
-    "fr": "🔒 {count} armes de {biome} — ouvrez le biome pour les révéler",
-    "pt": "🔒 {count} armas de {biome} — abra o bioma para revelar",
-    "zh": "🔒 {biome} 的 {count} 件武器——开放群系以揭示",
-    "hi": "🔒 {biome} के {count} हथियार — देखने के लिए बायोम खोलें",
-    "ar": "🔒 {count} أسلحة من {biome} — افتح المنطقة لكشفها",
-    "bn": "🔒 {biome}-এর {count} অস্ত্র — দেখতে বায়োম খুলুন",
-    "ru": "🔒 {count} единиц оружия из {biome} — откройте биом",
-    "ja": "🔒 {biome} の武器 {count} 個 — バイオームを開いて表示",
-    "id": "🔒 {count} senjata dari {biome} — buka bioma untuk mengungkap"
+    "en": {
+      "one": "🔒 {count} weapon from {biome} — open the biome to reveal",
+      "other": "🔒 {count} weapons from {biome} — open the biome to reveal"
+    },
+    "cs": {
+      "one": "🔒 {count} zbraň z biomu {biome} — otevři biom pro odhalení",
+      "few": "🔒 {count} zbraně z biomu {biome} — otevři biom pro odhalení",
+      "many": "🔒 {count} zbraně z biomu {biome} — otevři biom pro odhalení",
+      "other": "🔒 {count} zbraní z biomu {biome} — otevři biom pro odhalení"
+    },
+    "de": {
+      "one": "🔒 {count} Waffe aus {biome} — Biom öffnen zum Enthüllen",
+      "other": "🔒 {count} Waffen aus {biome} — Biom öffnen zum Enthüllen"
+    },
+    "es": {
+      "one": "🔒 {count} arma de {biome} — abre el bioma para revelarla",
+      "many": "🔒 {count} armas de {biome} — abre el bioma para revelarlas",
+      "other": "🔒 {count} armas de {biome} — abre el bioma para revelarlas"
+    },
+    "fr": {
+      "one": "🔒 {count} arme de {biome} — ouvrez le biome pour la révéler",
+      "many": "🔒 {count} armes de {biome} — ouvrez le biome pour les révéler",
+      "other": "🔒 {count} armes de {biome} — ouvrez le biome pour les révéler"
+    },
+    "pt": {
+      "one": "🔒 {count} arma de {biome} — abra o bioma para revelar",
+      "many": "🔒 {count} armas de {biome} — abra o bioma para revelar",
+      "other": "🔒 {count} armas de {biome} — abra o bioma para revelar"
+    },
+    "zh": {
+      "other": "🔒 {biome} 的 {count} 件武器——开放群系以揭示"
+    },
+    "hi": {
+      "one": "🔒 {biome} के {count} हथियार — देखने के लिए बायोम खोलें",
+      "other": "🔒 {biome} के {count} हथियार — देखने के लिए बायोम खोलें"
+    },
+    "ar": {
+      "zero": "🔒 {count} أسلحة من {biome} — افتح المنطقة لكشفها",
+      "one": "🔒 {count} سلاح من {biome} — افتح المنطقة لكشفها",
+      "two": "🔒 {count} سلاحان من {biome} — افتح المنطقة لكشفها",
+      "few": "🔒 {count} أسلحة من {biome} — افتح المنطقة لكشفها",
+      "many": "🔒 {count} سلاحًا من {biome} — افتح المنطقة لكشفها",
+      "other": "🔒 {count} سلاح من {biome} — افتح المنطقة لكشفها"
+    },
+    "bn": {
+      "one": "🔒 {biome}-এর {count} অস্ত্র — দেখতে বায়োম খুলুন",
+      "other": "🔒 {biome}-এর {count} অস্ত্র — দেখতে বায়োম খুলুন"
+    },
+    "ru": {
+      "one": "🔒 {count} единица оружия из {biome} — откройте биом",
+      "few": "🔒 {count} единицы оружия из {biome} — откройте биом",
+      "many": "🔒 {count} единиц оружия из {biome} — откройте биом",
+      "other": "🔒 {count} единицы оружия из {biome} — откройте биом"
+    },
+    "ja": {
+      "other": "🔒 {biome} の武器 {count} 個 — バイオームを開いて表示"
+    },
+    "id": {
+      "other": "🔒 {count} senjata dari {biome} — buka bioma untuk mengungkap"
+    }
   },
   "(default)": {
     "en": "(default)",
@@ -2716,19 +2998,66 @@ globalThis.VC_MESSAGES = {
     "id": "Jangkauan makan: {range} m"
   },
   "Taming time: {minutes} min": {
-    "en": "Taming time: {minutes} min",
-    "cs": "Doba ochočení: {minutes} min",
-    "de": "Zähmungsdauer: {minutes} min",
-    "es": "Tiempo de domesticación: {minutes} min",
-    "fr": "Durée d’apprivoisement : {minutes} min",
-    "pt": "Tempo de domesticação: {minutes} min",
-    "zh": "驯服时间：{minutes} min",
-    "hi": "पालतू बनाने का समय: {minutes} min",
-    "ar": "مدة الترويض: {minutes} min",
-    "bn": "পোষ মানানোর সময়: {minutes} min",
-    "ru": "Время приручения: {minutes} min",
-    "ja": "テイム時間：{minutes} min",
-    "id": "Waktu penjinakan: {minutes} min"
+    "en": {
+      "one": "Taming time: {minutes} min",
+      "other": "Taming time: {minutes} min"
+    },
+    "cs": {
+      "one": "Doba ochočení: {minutes} min",
+      "few": "Doba ochočení: {minutes} min",
+      "many": "Doba ochočení: {minutes} min",
+      "other": "Doba ochočení: {minutes} min"
+    },
+    "de": {
+      "one": "Zähmungsdauer: {minutes} min",
+      "other": "Zähmungsdauer: {minutes} min"
+    },
+    "es": {
+      "one": "Tiempo de domesticación: {minutes} min",
+      "many": "Tiempo de domesticación: {minutes} min",
+      "other": "Tiempo de domesticación: {minutes} min"
+    },
+    "fr": {
+      "one": "Durée d’apprivoisement : {minutes} min",
+      "many": "Durée d’apprivoisement : {minutes} min",
+      "other": "Durée d’apprivoisement : {minutes} min"
+    },
+    "pt": {
+      "one": "Tempo de domesticação: {minutes} min",
+      "many": "Tempo de domesticação: {minutes} min",
+      "other": "Tempo de domesticação: {minutes} min"
+    },
+    "zh": {
+      "other": "驯服时间：{minutes} min"
+    },
+    "hi": {
+      "one": "पालतू बनाने का समय: {minutes} min",
+      "other": "पालतू बनाने का समय: {minutes} min"
+    },
+    "ar": {
+      "zero": "مدة الترويض: {minutes} min",
+      "one": "مدة الترويض: {minutes} min",
+      "two": "مدة الترويض: {minutes} min",
+      "few": "مدة الترويض: {minutes} min",
+      "many": "مدة الترويض: {minutes} min",
+      "other": "مدة الترويض: {minutes} min"
+    },
+    "bn": {
+      "one": "পোষ মানানোর সময়: {minutes} min",
+      "other": "পোষ মানানোর সময়: {minutes} min"
+    },
+    "ru": {
+      "one": "Время приручения: {minutes} min",
+      "few": "Время приручения: {minutes} min",
+      "many": "Время приручения: {minutes} min",
+      "other": "Время приручения: {minutes} min"
+    },
+    "ja": {
+      "other": "テイム時間：{minutes} min"
+    },
+    "id": {
+      "other": "Waktu penjinakan: {minutes} min"
+    }
   },
   "a later raid": {
     "en": "a later raid",
@@ -3119,5 +3448,253 @@ globalThis.VC_MESSAGES = {
     "ru": "Сбрасываются только биомы, открытые вручную. Сохранённый прогресс можно изменить на странице Progress.",
     "ja": "手動で公開したバイオームのみリセットします。記録した進行状況は Progress ページで管理してください。",
     "id": "Hanya bioma yang dibuka secara manual yang direset. Kelola progres tersimpan di halaman Progress."
+  },
+  "Bosses ({count})": {
+    "en": {
+      "one": "Boss ({count})",
+      "other": "Bosses ({count})"
+    },
+    "cs": {
+      "one": "Boss ({count})",
+      "few": "Bossové ({count})",
+      "many": "Bosse ({count})",
+      "other": "Bossů ({count})"
+    },
+    "de": {
+      "one": "Boss ({count})",
+      "other": "Bosse ({count})"
+    },
+    "es": {
+      "one": "Jefe ({count})",
+      "many": "Jefes ({count})",
+      "other": "Jefes ({count})"
+    },
+    "fr": {
+      "one": "Boss ({count})",
+      "many": "Boss ({count})",
+      "other": "Boss ({count})"
+    },
+    "pt": {
+      "one": "Chefe ({count})",
+      "many": "Chefes ({count})",
+      "other": "Chefes ({count})"
+    },
+    "zh": {
+      "other": "个首领 ({count})"
+    },
+    "hi": {
+      "one": "बॉस ({count})",
+      "other": "बॉस ({count})"
+    },
+    "ar": {
+      "zero": "زعماء ({count})",
+      "one": "زعيم ({count})",
+      "two": "زعيمان ({count})",
+      "few": "زعماء ({count})",
+      "many": "زعيمًا ({count})",
+      "other": "زعيم ({count})"
+    },
+    "bn": {
+      "one": "জন বস ({count})",
+      "other": "জন বস ({count})"
+    },
+    "ru": {
+      "one": "Босс ({count})",
+      "few": "Босса ({count})",
+      "many": "Боссов ({count})",
+      "other": "Босса ({count})"
+    },
+    "ja": {
+      "other": "体のボス ({count})"
+    },
+    "id": {
+      "other": "Bos ({count})"
+    }
+  },
+  "Hostile ({count})": {
+    "en": {
+      "one": "Hostile ({count})",
+      "other": "Hostile ({count})"
+    },
+    "cs": {
+      "one": "Nepřátelské ({count})",
+      "few": "Nepřátelské ({count})",
+      "many": "Nepřátelské ({count})",
+      "other": "Nepřátelské ({count})"
+    },
+    "de": {
+      "one": "Feindlich ({count})",
+      "other": "Feindlich ({count})"
+    },
+    "es": {
+      "one": "Hostiles ({count})",
+      "many": "Hostiles ({count})",
+      "other": "Hostiles ({count})"
+    },
+    "fr": {
+      "one": "Hostiles ({count})",
+      "many": "Hostiles ({count})",
+      "other": "Hostiles ({count})"
+    },
+    "pt": {
+      "one": "Hostis ({count})",
+      "many": "Hostis ({count})",
+      "other": "Hostis ({count})"
+    },
+    "zh": {
+      "other": "敌对 ({count})"
+    },
+    "hi": {
+      "one": "शत्रुतापूर्ण ({count})",
+      "other": "शत्रुतापूर्ण ({count})"
+    },
+    "ar": {
+      "zero": "عدائي ({count})",
+      "one": "عدائي ({count})",
+      "two": "عدائي ({count})",
+      "few": "عدائي ({count})",
+      "many": "عدائي ({count})",
+      "other": "عدائي ({count})"
+    },
+    "bn": {
+      "one": "শত্রুভাবাপন্ন ({count})",
+      "other": "শত্রুভাবাপন্ন ({count})"
+    },
+    "ru": {
+      "one": "Враждебные ({count})",
+      "few": "Враждебные ({count})",
+      "many": "Враждебные ({count})",
+      "other": "Враждебные ({count})"
+    },
+    "ja": {
+      "other": "敵対 ({count})"
+    },
+    "id": {
+      "other": "Bermusuhan ({count})"
+    }
+  },
+  "Passive ({count})": {
+    "en": {
+      "one": "Passive ({count})",
+      "other": "Passive ({count})"
+    },
+    "cs": {
+      "one": "Pasivní ({count})",
+      "few": "Pasivní ({count})",
+      "many": "Pasivní ({count})",
+      "other": "Pasivní ({count})"
+    },
+    "de": {
+      "one": "Passiv ({count})",
+      "other": "Passiv ({count})"
+    },
+    "es": {
+      "one": "Pasivos ({count})",
+      "many": "Pasivos ({count})",
+      "other": "Pasivos ({count})"
+    },
+    "fr": {
+      "one": "Passifs ({count})",
+      "many": "Passifs ({count})",
+      "other": "Passifs ({count})"
+    },
+    "pt": {
+      "one": "Passivos ({count})",
+      "many": "Passivos ({count})",
+      "other": "Passivos ({count})"
+    },
+    "zh": {
+      "other": "被动 ({count})"
+    },
+    "hi": {
+      "one": "निष्क्रिय ({count})",
+      "other": "निष्क्रिय ({count})"
+    },
+    "ar": {
+      "zero": "مسالم ({count})",
+      "one": "مسالم ({count})",
+      "two": "مسالم ({count})",
+      "few": "مسالم ({count})",
+      "many": "مسالم ({count})",
+      "other": "مسالم ({count})"
+    },
+    "bn": {
+      "one": "নিষ্ক্রিয় ({count})",
+      "other": "নিষ্ক্রিয় ({count})"
+    },
+    "ru": {
+      "one": "Мирные ({count})",
+      "few": "Мирные ({count})",
+      "many": "Мирные ({count})",
+      "other": "Мирные ({count})"
+    },
+    "ja": {
+      "other": "非敵対 ({count})"
+    },
+    "id": {
+      "other": "Pasif ({count})"
+    }
+  },
+  "Fish ({count})": {
+    "en": {
+      "one": "Fish ({count})",
+      "other": "Fish ({count})"
+    },
+    "cs": {
+      "one": "Ryby ({count})",
+      "few": "Ryby ({count})",
+      "many": "Ryby ({count})",
+      "other": "Ryby ({count})"
+    },
+    "de": {
+      "one": "Fische ({count})",
+      "other": "Fische ({count})"
+    },
+    "es": {
+      "one": "Peces ({count})",
+      "many": "Peces ({count})",
+      "other": "Peces ({count})"
+    },
+    "fr": {
+      "one": "Poissons ({count})",
+      "many": "Poissons ({count})",
+      "other": "Poissons ({count})"
+    },
+    "pt": {
+      "one": "Peixes ({count})",
+      "many": "Peixes ({count})",
+      "other": "Peixes ({count})"
+    },
+    "zh": {
+      "other": "鱼 ({count})"
+    },
+    "hi": {
+      "one": "मछलियाँ ({count})",
+      "other": "मछलियाँ ({count})"
+    },
+    "ar": {
+      "zero": "الأسماك ({count})",
+      "one": "الأسماك ({count})",
+      "two": "الأسماك ({count})",
+      "few": "الأسماك ({count})",
+      "many": "الأسماك ({count})",
+      "other": "الأسماك ({count})"
+    },
+    "bn": {
+      "one": "মাছ ({count})",
+      "other": "মাছ ({count})"
+    },
+    "ru": {
+      "one": "Рыбы ({count})",
+      "few": "Рыбы ({count})",
+      "many": "Рыбы ({count})",
+      "other": "Рыбы ({count})"
+    },
+    "ja": {
+      "other": "魚 ({count})"
+    },
+    "id": {
+      "other": "Ikan ({count})"
+    }
   }
 };

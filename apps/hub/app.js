@@ -7,6 +7,8 @@
     return globalThis.VCI18n ? globalThis.VCI18n.t(key, params) : key;
   }
 
+  const tn = (key, count, values) => VCI18n.tn(globalThis.VC_MESSAGES, key, count, values);
+
   function normalizeSearch(str) {
     return (str || '')
       .normalize('NFD')
@@ -29,9 +31,8 @@
     const hasProgress = state.visited.length > 0 || Object.keys(state.defeated).length > 0
       || Object.keys(state.milestones).length > 0 || revealed.size > 1;
     link.hidden = !hasProgress;
-    link.textContent = hasProgress ? t('{revealed} / {total} biomes · {bosses} bosses', {
-      revealed: revealed.size, total: biomes.length, bosses,
-    }) : '';
+    link.textContent = hasProgress ? tn('{count} / {total} biomes', revealed.size, { total: biomes.length })
+      + ' · ' + tn('{count} bosses', bosses) : '';
   }
 
   const TYPE_CONFIG = [
@@ -189,7 +190,7 @@
         lockText.className = 'hub-search-locked-text';
         lockText.textContent = lockedCount === 1
           ? t('1 more result in locked biomes')
-          : t('{count} more results in locked biomes', { count: lockedCount });
+          : tn('{count} more results in locked biomes', lockedCount);
         lockedDiv.appendChild(lockText);
 
         resultsContainer.appendChild(lockedDiv);

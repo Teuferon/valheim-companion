@@ -16,6 +16,9 @@
     if (globalThis.VCI18n) return globalThis.VCI18n.t(messages, key, values);
     return (messages[key]?.[locale()] || messages[key]?.en || key).replace(/\{(\w+)\}/g, (match, name) => values[name] ?? match);
   }
+  function translateNumber(key, count, values) {
+    return globalThis.VCI18n.tn(api.messages || globalThis.VC_MESSAGES || {}, key, count, values);
+  }
   function render(container, data, { compact = false } = {}) {
     if (mounts.has(container)) { const mounted = mounts.get(container); mounted.update(); return mounted; }
     const P = globalThis.VCProgress;
@@ -96,7 +99,8 @@
       const state = P.get();
       const revealed = new Set([...P.revealedBiomes(biomes), ...temporaryReveals]);
       const defeated = biomes.flatMap(b => b.bosses).filter(boss => state.defeated[boss.id]).length;
-      summaryText.textContent = t('{revealed} / {total} biomes revealed · {bosses} bosses defeated', { revealed: revealed.size, total: biomes.length, bosses: defeated });
+      summaryText.textContent = translateNumber('{count} / {total} biomes revealed', revealed.size, { total: biomes.length })
+        + ' · ' + translateNumber('{count} bosses defeated', defeated);
       meter.max = biomes.length;
       meter.value = revealed.size;
       biomeContainer.replaceChildren();
@@ -143,6 +147,6 @@
     update();
     return mounted;
   }
-  const api = { render, locale, t: translate, messages: null };
+  const api = { render, locale, t: translate, tn: translateNumber, messages: null };
   globalThis.VCProgressUI = api;
 })();

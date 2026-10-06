@@ -9,7 +9,7 @@ test('shared checklist renders summary, locks spoilers, and reacts to checkbox c
   const { context: c, document: d, data } = fixture();
   const container = d.createElement('main'); d.body.append(container);
   const mounted = c.VCProgressUI.render(container, data, { compact: false });
-  assert.equal(container.querySelector('.summary-text').textContent, '1 / 9 biomes revealed · 0 bosses defeated');
+  assert.equal(container.querySelector('.summary-text').textContent, '1 / 9 biome revealed · 0 bosses defeated');
   assert.equal(container.querySelectorAll('.biome').length, 9);
   assert.equal(container.querySelectorAll('.locked').length, 8);
   assert.ok(container.querySelectorAll('h2').some(node => node.textContent === '🔒 Biome 2'));
@@ -48,7 +48,10 @@ test('shared checklist catalog covers all locales and preserves placeholders', (
   const languages = JSON.parse(read('shared/i18n/languages.json'));
   const tokens = value => [...value.matchAll(/\{\w+\}/g)].map(match => match[0]).sort();
   for (const [key, translations] of Object.entries(messages)) for (const { code } of languages) {
-    assert.ok(translations[code]?.trim(), `${key}: missing ${code}`);
-    assert.deepEqual(tokens(translations[code]), tokens(key));
+    assert.ok(translations[code], `${key}: missing ${code}`);
+    for (const text of typeof translations[code] === 'string' ? [translations[code]] : Object.values(translations[code])) {
+      assert.ok(text.trim(), `${key}: empty ${code}`);
+      assert.deepEqual(tokens(text), tokens(key), `${key}: placeholders in ${code}`);
+    }
   }
 });

@@ -4,8 +4,8 @@ import { formatters } from '@/lib/format';
 import { localizedName, type NamedEntity } from '@/lib/entity-names';
 import {
   STORAGE_KEY, LEGACY_KEY, getStoredPreference, readPreference,
-  resolveLocale, setStoredPreference, translate, languages,
-  type LanguagePreference, type Locale, type Translate,
+  resolveLocale, setStoredPreference, translate, tn as coreTn, languages,
+  type LanguagePreference, type Locale, type Translate, type TranslateNumber,
 } from '../../../../shared/i18n/core';
 
 export { languages };
@@ -48,6 +48,7 @@ export function useLanguage() {
   const [preference, locale] = current.split(':') as [LanguagePreference, Locale];
   const setPreference = useCallback(setLanguagePreference, []);
   const t: Translate = useMemo(() => (source, values) => translate(locale, source, messages, values), [locale]);
+  const tn: TranslateNumber = useMemo(() => (source, count, values) => coreTn(messages, source, count, values, locale), [locale]);
   const formats = useMemo(() => formatters(locale), [locale]);
   const nameOf = useCallback((entity: NamedEntity) => localizedName(entity, locale), [locale]);
   useEffect(() => {
@@ -55,5 +56,5 @@ export function useLanguage() {
     document.documentElement.dir = locale === 'ar' ? 'rtl' : 'ltr';
     document.title = `${t('Valheim Damage Calculator')} · Valheim Companion`;
   }, [locale, t]);
-  return { locale, preference, setPreference, t, nameOf, ...formats };
+  return { locale, preference, setPreference, t, tn, nameOf, ...formats };
 }

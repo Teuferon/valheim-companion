@@ -72,7 +72,7 @@ export function WeaponsTable({
   cls: "all" | WeaponClass;
   onClsChange: (next: "all" | WeaponClass) => void;
 }) {
-  const { t, formatCount, formatDamage, formatSeconds, number, nameOf, locale } = useLanguage();
+  const { t, tn, formatCount, formatDamage, formatSeconds, number, nameOf, locale } = useLanguage();
   const [query, setQuery] = useState("");
   const [group, setGroup] = useState<"all" | WeaponGroup>("all");
   /* Damage type is its own axis: a sword that deals fire should survive both the
@@ -140,7 +140,7 @@ export function WeaponsTable({
           <CardTitle className="text-base">
             {t("Weapon ranking")}{/* Numbers stay in the body face so counts are unambiguous. */}
             <span className="ml-2 font-sans text-xs font-normal text-muted-foreground">
-              {t("{shown} of {total}", { shown: formatCount(sorted.length), total: formatCount(rows.length) })}
+              {tn("{shown} of {total}", sorted.length, { shown: formatCount(sorted.length), total: formatCount(rows.length) })}
             </span>
           </CardTitle>
           <Segmented

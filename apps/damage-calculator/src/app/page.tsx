@@ -68,7 +68,7 @@ const DEFAULT_TARGET_SLUG =
   targets.find((t) => t.slug === "bonemass")?.slug ?? targets[0].slug;
 
 export default function Home() {
-  const { preference, setPreference, t, formatCount, nameOf } = useLanguage();
+  const { preference, setPreference, t, tn, formatCount, nameOf } = useLanguage();
   const [storedBiome, persistBiome] = useBiomeProgression();
   const { player, hasProfile } = usePlayer();
   const [pickedUseProfile, setPickedUseProfile] = useState<boolean | undefined>(undefined);
@@ -381,10 +381,10 @@ export default function Home() {
         </div>
         <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
           <Badge variant="secondary" className="font-normal">
-            {t("{count} weapons", { count: formatCount(weapons.length) })}
+            {tn("{count} weapons", weapons.length, { count: formatCount(weapons.length) })}
             </Badge>
           <Badge variant="secondary" className="font-normal">
-            {t("{count} targets", { count: formatCount(targets.length) })}
+            {tn("{count} targets", targets.length, { count: formatCount(targets.length) })}
             </Badge>
           <Badge variant="outline" className="font-normal">
             {t("Data from the Valheim wiki")}

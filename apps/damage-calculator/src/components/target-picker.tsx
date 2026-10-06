@@ -52,7 +52,7 @@ export function TargetPicker({
   selected: Creature;
   onSelect: (target: Creature) => void;
 }) {
-  const { t, formatCount, nameOf, locale } = useLanguage();
+  const { t, tn, formatCount, nameOf, locale } = useLanguage();
   const [kind, setKind] = useState<"all" | CreatureKind>("all");
   const [query, setQuery] = useState("");
 
@@ -100,7 +100,7 @@ export function TargetPicker({
           {t("1 · Pick your target")}
             </h2>
         <span className="text-xs text-muted-foreground">
-          {t("{shown} of {total} targets reachable", { shown: formatCount(targets.length), total: formatCount(total) })}
+          {tn("{count} targets reachable (total: {total})", targets.length, { count: formatCount(targets.length), total: formatCount(total) })}
             </span>
       </div>
 

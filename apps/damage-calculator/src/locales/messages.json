@@ -44,21 +44,6 @@
     "ja": " · 命中時刻：{times}",
     "id": " · serangan pada {times}"
   },
-  " · {hits} hits ({weights}×)": {
-    "en": " · {hits} hits ({weights}×)",
-    "cs": " · {hits} zásahů ({weights}×)",
-    "de": " · {hits} Treffer ({weights}×)",
-    "es": " · {hits} golpes ({weights}×)",
-    "fr": " · {hits} coups ({weights}×)",
-    "pt": " · {hits} golpes ({weights}×)",
-    "zh": " · {hits}次命中（{weights}×）",
-    "hi": " · {hits} वार ({weights}×)",
-    "ar": " · {hits} ضربات ({weights}×)",
-    "bn": " · {hits} আঘাত ({weights}×)",
-    "ru": " · {hits} ударов ({weights}×)",
-    "ja": " · {hits}ヒット（{weights}×）",
-    "id": " · {hits} serangan ({weights}×)"
-  },
   "1 · Pick your target": {
     "en": "1 · Pick your target",
     "cs": "1 · Vyber cíl",
@@ -1949,21 +1934,6 @@
     "ja": "{type}ダメージの武器のみ表示",
     "id": "Tampilkan hanya senjata dengan kerusakan {type}"
   },
-  "Showing {weapons} of {allWeapons} weapons and {targets} of {allTargets} targets reachable in {biome}.": {
-    "en": "Showing {weapons} of {allWeapons} weapons and {targets} of {allTargets} targets reachable in {biome}.",
-    "cs": "Zobrazeno {weapons} z {allWeapons} zbraní a {targets} z {allTargets} cílů dostupných v biomu {biome}.",
-    "de": "{weapons} von {allWeapons} Waffen und {targets} von {allTargets} Zielen in {biome} erreichbar.",
-    "es": "{weapons} de {allWeapons} armas y {targets} de {allTargets} objetivos alcanzables en {biome}.",
-    "fr": "{weapons} sur {allWeapons} armes et {targets} sur {allTargets} cibles accessibles dans {biome}.",
-    "pt": "{weapons} de {allWeapons} armas e {targets} de {allTargets} alvos acessíveis em {biome}.",
-    "zh": "在{biome}可用：{weapons}/{allWeapons}件武器，{targets}/{allTargets}个目标。",
-    "hi": "{biome} में {allWeapons} में से {weapons} हथियार और {allTargets} में से {targets} लक्ष्य उपलब्ध।",
-    "ar": "عرض {weapons} من {allWeapons} أسلحة و{targets} من {allTargets} أهداف متاحة في {biome}.",
-    "bn": "{biome}-এ {allWeapons}টির মধ্যে {weapons}টি অস্ত্র এবং {allTargets}টির মধ্যে {targets}টি লক্ষ্য পাওয়া যায়।",
-    "ru": "Доступно в {biome}: {weapons} из {allWeapons} оружия и {targets} из {allTargets} целей.",
-    "ja": "{biome}で入手可能な武器{weapons}/{allWeapons}、対象{targets}/{allTargets}を表示。",
-    "id": "Menampilkan {weapons} dari {allWeapons} senjata dan {targets} dari {allTargets} target yang terjangkau di {biome}."
-  },
   "Siege": {
     "en": "Siege",
     "cs": "Obléhání",
@@ -2730,34 +2700,128 @@
     "id": "{class} ({attack})"
   },
   "{count} targets": {
-    "en": "{count} targets",
-    "cs": "{count} cílů",
-    "de": "{count} Ziele",
-    "es": "{count} objetivos",
-    "fr": "{count} cibles",
-    "pt": "{count} alvos",
-    "zh": "{count}个目标",
-    "hi": "{count} लक्ष्य",
-    "ar": "{count} أهداف",
-    "bn": "{count}টি লক্ষ্য",
-    "ru": "{count} целей",
-    "ja": "対象{count}体",
-    "id": "{count} target"
+    "en": {
+      "one": "{count} target",
+      "other": "{count} targets"
+    },
+    "cs": {
+      "one": "{count} cíl",
+      "few": "{count} cíle",
+      "many": "{count} cíle",
+      "other": "{count} cílů"
+    },
+    "de": {
+      "one": "{count} Ziel",
+      "other": "{count} Ziele"
+    },
+    "es": {
+      "one": "{count} objetivo",
+      "many": "{count} objetivos",
+      "other": "{count} objetivos"
+    },
+    "fr": {
+      "one": "{count} cible",
+      "many": "{count} cibles",
+      "other": "{count} cibles"
+    },
+    "pt": {
+      "one": "{count} alvo",
+      "many": "{count} alvos",
+      "other": "{count} alvos"
+    },
+    "zh": {
+      "other": "{count}个目标"
+    },
+    "hi": {
+      "one": "{count} लक्ष्य",
+      "other": "{count} लक्ष्य"
+    },
+    "ar": {
+      "zero": "{count} أهداف",
+      "one": "{count} أهداف",
+      "two": "{count} أهداف",
+      "few": "{count} أهداف",
+      "many": "{count} أهداف",
+      "other": "{count} أهداف"
+    },
+    "bn": {
+      "one": "{count}টি লক্ষ্য",
+      "other": "{count}টি লক্ষ্য"
+    },
+    "ru": {
+      "one": "{count} целей",
+      "few": "{count} целей",
+      "many": "{count} целей",
+      "other": "{count} целей"
+    },
+    "ja": {
+      "other": "対象{count}体"
+    },
+    "id": {
+      "other": "{count} target"
+    }
   },
   "{count} weapons": {
-    "en": "{count} weapons",
-    "cs": "{count} zbraní",
-    "de": "{count} Waffen",
-    "es": "{count} armas",
-    "fr": "{count} armes",
-    "pt": "{count} armas",
-    "zh": "{count}件武器",
-    "hi": "{count} हथियार",
-    "ar": "{count} أسلحة",
-    "bn": "{count}টি অস্ত্র",
-    "ru": "{count} оружия",
-    "ja": "武器{count}個",
-    "id": "{count} senjata"
+    "en": {
+      "one": "{count} weapon",
+      "other": "{count} weapons"
+    },
+    "cs": {
+      "one": "{count} zbraň",
+      "few": "{count} zbraně",
+      "many": "{count} zbraně",
+      "other": "{count} zbraní"
+    },
+    "de": {
+      "one": "{count} Waffe",
+      "other": "{count} Waffen"
+    },
+    "es": {
+      "one": "{count} arma",
+      "many": "{count} armas",
+      "other": "{count} armas"
+    },
+    "fr": {
+      "one": "{count} arme",
+      "many": "{count} armes",
+      "other": "{count} armes"
+    },
+    "pt": {
+      "one": "{count} arma",
+      "many": "{count} armas",
+      "other": "{count} armas"
+    },
+    "zh": {
+      "other": "{count}件武器"
+    },
+    "hi": {
+      "one": "{count} हथियार",
+      "other": "{count} हथियार"
+    },
+    "ar": {
+      "zero": "{count} أسلحة",
+      "one": "{count} سلاح",
+      "two": "{count} سلاحان",
+      "few": "{count} أسلحة",
+      "many": "{count} سلاحًا",
+      "other": "{count} سلاح"
+    },
+    "bn": {
+      "one": "{count}টি অস্ত্র",
+      "other": "{count}টি অস্ত্র"
+    },
+    "ru": {
+      "one": "{count} единица оружия",
+      "few": "{count} единицы оружия",
+      "many": "{count} единиц оружия",
+      "other": "{count} единицы оружия"
+    },
+    "ja": {
+      "other": "武器{count}個"
+    },
+    "id": {
+      "other": "{count} senjata"
+    }
   },
   "{percent}% of {weapon}": {
     "en": "{percent}% of {weapon}",
@@ -2790,34 +2854,66 @@
     "id": "{reload} × (1 − keterampilan/{limit}) + {shot} s"
   },
   "{shown} of {total}": {
-    "en": "{shown} of {total}",
-    "cs": "{shown} z {total}",
-    "de": "{shown} von {total}",
-    "es": "{shown} de {total}",
-    "fr": "{shown} sur {total}",
-    "pt": "{shown} de {total}",
-    "zh": "{shown}/{total}",
-    "hi": "{total} में से {shown}",
-    "ar": "{shown} من {total}",
-    "bn": "{total}টির মধ্যে {shown}টি",
-    "ru": "{shown} из {total}",
-    "ja": "{shown}/{total}",
-    "id": "{shown} dari {total}"
-  },
-  "{shown} of {total} targets reachable": {
-    "en": "{shown} of {total} targets reachable",
-    "cs": "Dostupných {shown} z {total} cílů",
-    "de": "{shown} von {total} Zielen erreichbar",
-    "es": "{shown} de {total} objetivos alcanzables",
-    "fr": "{shown} sur {total} cibles accessibles",
-    "pt": "{shown} de {total} alvos acessíveis",
-    "zh": "可到达目标：{shown}/{total}",
-    "hi": "{total} में से {shown} लक्ष्य उपलब्ध",
-    "ar": "{shown} من {total} أهداف متاحة",
-    "bn": "{total}টির মধ্যে {shown}টি লক্ষ্য পাওয়া যায়",
-    "ru": "Доступно {shown} из {total} целей",
-    "ja": "対象{shown}/{total}体に到達可能",
-    "id": "{shown} dari {total} target terjangkau"
+    "en": {
+      "one": "{shown} of {total}",
+      "other": "{shown} of {total}"
+    },
+    "cs": {
+      "one": "{shown} z {total}",
+      "few": "{shown} z {total}",
+      "many": "{shown} z {total}",
+      "other": "{shown} z {total}"
+    },
+    "de": {
+      "one": "{shown} von {total}",
+      "other": "{shown} von {total}"
+    },
+    "es": {
+      "one": "{shown} de {total}",
+      "many": "{shown} de {total}",
+      "other": "{shown} de {total}"
+    },
+    "fr": {
+      "one": "{shown} sur {total}",
+      "many": "{shown} sur {total}",
+      "other": "{shown} sur {total}"
+    },
+    "pt": {
+      "one": "{shown} de {total}",
+      "many": "{shown} de {total}",
+      "other": "{shown} de {total}"
+    },
+    "zh": {
+      "other": "{shown}/{total}"
+    },
+    "hi": {
+      "one": "{total} में से {shown}",
+      "other": "{total} में से {shown}"
+    },
+    "ar": {
+      "zero": "{shown} من {total}",
+      "one": "{shown} من {total}",
+      "two": "{shown} من {total}",
+      "few": "{shown} من {total}",
+      "many": "{shown} من {total}",
+      "other": "{shown} من {total}"
+    },
+    "bn": {
+      "one": "{total}টির মধ্যে {shown}টি",
+      "other": "{total}টির মধ্যে {shown}টি"
+    },
+    "ru": {
+      "one": "{shown} из {total}",
+      "few": "{shown} из {total}",
+      "many": "{shown} из {total}",
+      "other": "{shown} из {total}"
+    },
+    "ja": {
+      "other": "{shown}/{total}"
+    },
+    "id": {
+      "other": "{shown} dari {total}"
+    }
   },
   "{type} only": {
     "en": "{type} only",
@@ -2848,21 +2944,6 @@
     "ru": "{type}: база {base} × сопротивление {resistance} × навык",
     "ja": "{type}：基本{base} × 耐性{resistance} × スキル",
     "id": "{type}: dasar {base} × resistansi {resistance} × keterampilan"
-  },
-  "{weapons} weapons · {ammo} ammo types · {bosses} bosses · {minibosses} minibosses · {enemies} enemies · {biomes} biomes": {
-    "en": "{weapons} weapons · {ammo} ammo types · {bosses} bosses · {minibosses} minibosses · {enemies} enemies · {biomes} biomes",
-    "cs": "{weapons} zbraní · {ammo} typů munice · {bosses} bossů · {minibosses} minibossů · {enemies} nepřátel · {biomes} biomů",
-    "de": "{weapons} Waffen · {ammo} Munitionstypen · {bosses} Bosse · {minibosses} Minibosse · {enemies} Feinde · {biomes} Biome",
-    "es": "{weapons} armas · {ammo} tipos de munición · {bosses} jefes · {minibosses} minijefes · {enemies} enemigos · {biomes} biomas",
-    "fr": "{weapons} armes · {ammo} types de munitions · {bosses} boss · {minibosses} mini-boss · {enemies} ennemis · {biomes} biomes",
-    "pt": "{weapons} armas · {ammo} tipos de munição · {bosses} chefes · {minibosses} minichefes · {enemies} inimigos · {biomes} biomas",
-    "zh": "{weapons}件武器 · {ammo}种弹药 · {bosses}个首领 · {minibosses}个小首领 · {enemies}种敌人 · {biomes}种生物群系",
-    "hi": "{weapons} हथियार · {ammo} गोला-बारूद प्रकार · {bosses} बॉस · {minibosses} मिनी-बॉस · {enemies} शत्रु · {biomes} बायोम",
-    "ar": "{weapons} أسلحة · {ammo} أنواع ذخيرة · {bosses} زعماء · {minibosses} زعماء صغار · {enemies} أعداء · {biomes} بيئات",
-    "bn": "{weapons}টি অস্ত্র · {ammo} রকম গোলাবারুদ · {bosses}টি বস · {minibosses}টি মিনি-বস · {enemies}টি শত্রু · {biomes}টি বায়োম",
-    "ru": "{weapons} оружия · {ammo} типов боеприпасов · {bosses} боссов · {minibosses} мини-боссов · {enemies} врагов · {biomes} биомов",
-    "ja": "武器{weapons}個 · 弾薬{ammo}種 · ボス{bosses}体 · ミニボス{minibosses}体 · 敵{enemies}種 · バイオーム{biomes}種",
-    "id": "{weapons} senjata · {ammo} jenis amunisi · {bosses} bos · {minibosses} bos mini · {enemies} musuh · {biomes} bioma"
   },
   "· no Forsaken": {
     "en": "· no Forsaken",
@@ -3403,5 +3484,563 @@
     "ru": "Отслеживайте прогресс →",
     "ja": "進行状況を記録 →",
     "id": "Catat progresmu →"
+  },
+  "{count} ammo types": {
+    "en": {
+      "one": "{count} ammo type",
+      "other": "{count} ammo types"
+    },
+    "cs": {
+      "one": "{count} typ munice",
+      "few": "{count} typy munice",
+      "many": "{count} typu munice",
+      "other": "{count} typů munice"
+    },
+    "de": {
+      "one": "{count} Munitionstyp",
+      "other": "{count} Munitionstypen"
+    },
+    "es": {
+      "one": "{count} tipo de munición",
+      "many": "{count} tipos de munición",
+      "other": "{count} tipos de munición"
+    },
+    "fr": {
+      "one": "{count} type de munitions",
+      "many": "{count} types de munitions",
+      "other": "{count} types de munitions"
+    },
+    "pt": {
+      "one": "{count} tipo de munição",
+      "many": "{count} tipos de munição",
+      "other": "{count} tipos de munição"
+    },
+    "zh": {
+      "other": "{count} 种弹药"
+    },
+    "hi": {
+      "one": "{count} गोला-बारूद प्रकार",
+      "other": "{count} गोला-बारूद प्रकार"
+    },
+    "ar": {
+      "zero": "{count} أنواع ذخيرة",
+      "one": "{count} نوع ذخيرة",
+      "two": "{count} نوعا ذخيرة",
+      "few": "{count} أنواع ذخيرة",
+      "many": "{count} نوعًا من الذخيرة",
+      "other": "{count} نوع ذخيرة"
+    },
+    "bn": {
+      "one": "{count}টি গোলাবারুদের ধরন",
+      "other": "{count}টি গোলাবারুদের ধরন"
+    },
+    "ru": {
+      "one": "{count} тип боеприпасов",
+      "few": "{count} типа боеприпасов",
+      "many": "{count} типов боеприпасов",
+      "other": "{count} типа боеприпасов"
+    },
+    "ja": {
+      "other": "{count} 種類の弾薬"
+    },
+    "id": {
+      "other": "{count} jenis amunisi"
+    }
+  },
+  "{count} bosses": {
+    "en": {
+      "one": "{count} boss",
+      "other": "{count} bosses"
+    },
+    "cs": {
+      "one": "{count} boss",
+      "few": "{count} bossové",
+      "many": "{count} bosse",
+      "other": "{count} bossů"
+    },
+    "de": {
+      "one": "{count} Boss",
+      "other": "{count} Bosse"
+    },
+    "es": {
+      "one": "{count} jefe",
+      "many": "{count} jefes",
+      "other": "{count} jefes"
+    },
+    "fr": {
+      "one": "{count} boss",
+      "many": "{count} boss",
+      "other": "{count} boss"
+    },
+    "pt": {
+      "one": "{count} chefe",
+      "many": "{count} chefes",
+      "other": "{count} chefes"
+    },
+    "zh": {
+      "other": "{count} 个首领"
+    },
+    "hi": {
+      "one": "{count} बॉस",
+      "other": "{count} बॉस"
+    },
+    "ar": {
+      "zero": "{count} زعماء",
+      "one": "{count} زعيم",
+      "two": "{count} زعيمان",
+      "few": "{count} زعماء",
+      "many": "{count} زعيمًا",
+      "other": "{count} زعيم"
+    },
+    "bn": {
+      "one": "{count} জন বস",
+      "other": "{count} জন বস"
+    },
+    "ru": {
+      "one": "{count} босс",
+      "few": "{count} босса",
+      "many": "{count} боссов",
+      "other": "{count} босса"
+    },
+    "ja": {
+      "other": "{count} 体のボス"
+    },
+    "id": {
+      "other": "{count} bos"
+    }
+  },
+  "{count} minibosses": {
+    "en": {
+      "one": "{count} miniboss",
+      "other": "{count} minibosses"
+    },
+    "cs": {
+      "one": "{count} miniboss",
+      "few": "{count} minibossové",
+      "many": "{count} minibosse",
+      "other": "{count} minibossů"
+    },
+    "de": {
+      "one": "{count} Miniboss",
+      "other": "{count} Minibosse"
+    },
+    "es": {
+      "one": "{count} minijefe",
+      "many": "{count} minijefes",
+      "other": "{count} minijefes"
+    },
+    "fr": {
+      "one": "{count} mini-boss",
+      "many": "{count} mini-boss",
+      "other": "{count} mini-boss"
+    },
+    "pt": {
+      "one": "{count} minichefe",
+      "many": "{count} minichefes",
+      "other": "{count} minichefes"
+    },
+    "zh": {
+      "other": "{count} 个小首领"
+    },
+    "hi": {
+      "one": "{count} मिनीबॉस",
+      "other": "{count} मिनीबॉस"
+    },
+    "ar": {
+      "zero": "{count} زعماء صغار",
+      "one": "{count} زعيم صغير",
+      "two": "{count} زعيمان صغيران",
+      "few": "{count} زعماء صغار",
+      "many": "{count} زعيمًا صغيرًا",
+      "other": "{count} زعيم صغير"
+    },
+    "bn": {
+      "one": "{count} জন মিনি-বস",
+      "other": "{count} জন মিনি-বস"
+    },
+    "ru": {
+      "one": "{count} мини-босс",
+      "few": "{count} мини-босса",
+      "many": "{count} мини-боссов",
+      "other": "{count} мини-босса"
+    },
+    "ja": {
+      "other": "{count} 体のミニボス"
+    },
+    "id": {
+      "other": "{count} minibos"
+    }
+  },
+  "{count} enemies": {
+    "en": {
+      "one": "{count} enemy",
+      "other": "{count} enemies"
+    },
+    "cs": {
+      "one": "{count} nepřítel",
+      "few": "{count} nepřátelé",
+      "many": "{count} nepřítele",
+      "other": "{count} nepřátel"
+    },
+    "de": {
+      "one": "{count} Gegner",
+      "other": "{count} Gegner"
+    },
+    "es": {
+      "one": "{count} enemigo",
+      "many": "{count} enemigos",
+      "other": "{count} enemigos"
+    },
+    "fr": {
+      "one": "{count} ennemi",
+      "many": "{count} ennemis",
+      "other": "{count} ennemis"
+    },
+    "pt": {
+      "one": "{count} inimigo",
+      "many": "{count} inimigos",
+      "other": "{count} inimigos"
+    },
+    "zh": {
+      "other": "{count} 个敌人"
+    },
+    "hi": {
+      "one": "{count} शत्रु",
+      "other": "{count} शत्रु"
+    },
+    "ar": {
+      "zero": "{count} أعداء",
+      "one": "{count} عدو",
+      "two": "{count} عدوان",
+      "few": "{count} أعداء",
+      "many": "{count} عدوًا",
+      "other": "{count} عدو"
+    },
+    "bn": {
+      "one": "{count} জন শত্রু",
+      "other": "{count} জন শত্রু"
+    },
+    "ru": {
+      "one": "{count} враг",
+      "few": "{count} врага",
+      "many": "{count} врагов",
+      "other": "{count} врага"
+    },
+    "ja": {
+      "other": "{count} 体の敵"
+    },
+    "id": {
+      "other": "{count} musuh"
+    }
+  },
+  "{count} biomes": {
+    "en": {
+      "one": "{count} biome",
+      "other": "{count} biomes"
+    },
+    "cs": {
+      "one": "{count} biom",
+      "few": "{count} biomy",
+      "many": "{count} biomu",
+      "other": "{count} biomů"
+    },
+    "de": {
+      "one": "{count} Biom",
+      "other": "{count} Biome"
+    },
+    "es": {
+      "one": "{count} bioma",
+      "many": "{count} biomas",
+      "other": "{count} biomas"
+    },
+    "fr": {
+      "one": "{count} biome",
+      "many": "{count} biomes",
+      "other": "{count} biomes"
+    },
+    "pt": {
+      "one": "{count} bioma",
+      "many": "{count} biomas",
+      "other": "{count} biomas"
+    },
+    "zh": {
+      "other": "{count} 个生物群系"
+    },
+    "hi": {
+      "one": "{count} बायोम",
+      "other": "{count} बायोम"
+    },
+    "ar": {
+      "zero": "{count} مناطق",
+      "one": "{count} منطقة",
+      "two": "{count} منطقتان",
+      "few": "{count} مناطق",
+      "many": "{count} منطقةً",
+      "other": "{count} منطقة"
+    },
+    "bn": {
+      "one": "{count}টি বায়োম",
+      "other": "{count}টি বায়োম"
+    },
+    "ru": {
+      "one": "{count} биом",
+      "few": "{count} биома",
+      "many": "{count} биомов",
+      "other": "{count} биома"
+    },
+    "ja": {
+      "other": "{count} バイオーム"
+    },
+    "id": {
+      "other": "{count} bioma"
+    }
+  },
+  " · {count} hits ({weights}×)": {
+    "en": {
+      "one": " · {count} hit ({weights}×)",
+      "other": " · {count} hits ({weights}×)"
+    },
+    "cs": {
+      "one": " · {count} zásah ({weights}×)",
+      "few": " · {count} zásahy ({weights}×)",
+      "many": " · {count} zásahu ({weights}×)",
+      "other": " · {count} zásahů ({weights}×)"
+    },
+    "de": {
+      "one": " · {count} Treffer ({weights}×)",
+      "other": " · {count} Treffer ({weights}×)"
+    },
+    "es": {
+      "one": " · {count} golpe ({weights}×)",
+      "many": " · {count} golpes ({weights}×)",
+      "other": " · {count} golpes ({weights}×)"
+    },
+    "fr": {
+      "one": " · {count} coup ({weights}×)",
+      "many": " · {count} coups ({weights}×)",
+      "other": " · {count} coups ({weights}×)"
+    },
+    "pt": {
+      "one": " · {count} golpe ({weights}×)",
+      "many": " · {count} golpes ({weights}×)",
+      "other": " · {count} golpes ({weights}×)"
+    },
+    "zh": {
+      "other": " · {count} 次命中 ({weights}×)"
+    },
+    "hi": {
+      "one": " · {count} वार ({weights}×)",
+      "other": " · {count} वार ({weights}×)"
+    },
+    "ar": {
+      "zero": " · {count} ضربات ({weights}×)",
+      "one": " · {count} ضربة ({weights}×)",
+      "two": " · {count} ضربتان ({weights}×)",
+      "few": " · {count} ضربات ({weights}×)",
+      "many": " · {count} ضربةً ({weights}×)",
+      "other": " · {count} ضربة ({weights}×)"
+    },
+    "bn": {
+      "one": " · {count}টি আঘাত ({weights}×)",
+      "other": " · {count}টি আঘাত ({weights}×)"
+    },
+    "ru": {
+      "one": " · {count} удар ({weights}×)",
+      "few": " · {count} удара ({weights}×)",
+      "many": " · {count} ударов ({weights}×)",
+      "other": " · {count} удара ({weights}×)"
+    },
+    "ja": {
+      "other": " · {count} 回の命中 ({weights}×)"
+    },
+    "id": {
+      "other": " · {count} pukulan ({weights}×)"
+    }
+  },
+  "{count} weapons reachable in {biome} (total: {total})": {
+    "en": {
+      "one": "Reachable: {count} weapon · {biome} (total: {total})",
+      "other": "Reachable: {count} weapons · {biome} (total: {total})"
+    },
+    "cs": {
+      "one": "Dostupné: {count} zbraň · {biome} (celkem: {total})",
+      "few": "Dostupné: {count} zbraně · {biome} (celkem: {total})",
+      "many": "Dostupné: {count} zbraně · {biome} (celkem: {total})",
+      "other": "Dostupné: {count} zbraní · {biome} (celkem: {total})"
+    },
+    "de": {
+      "one": "Erreichbar: {count} Waffe · {biome} (gesamt: {total})",
+      "other": "Erreichbar: {count} Waffen · {biome} (gesamt: {total})"
+    },
+    "es": {
+      "one": "Disponibilidad: {count} arma · {biome} (total: {total})",
+      "many": "Disponibilidad: {count} armas · {biome} (total: {total})",
+      "other": "Disponibilidad: {count} armas · {biome} (total: {total})"
+    },
+    "fr": {
+      "one": "Disponibilité : {count} arme · {biome} (total: {total})",
+      "many": "Disponibilité : {count} armes · {biome} (total: {total})",
+      "other": "Disponibilité : {count} armes · {biome} (total: {total})"
+    },
+    "pt": {
+      "one": "Disponibilidade: {count} arma · {biome} (total: {total})",
+      "many": "Disponibilidade: {count} armas · {biome} (total: {total})",
+      "other": "Disponibilidade: {count} armas · {biome} (total: {total})"
+    },
+    "zh": {
+      "other": "可用：{count} 件武器 · {biome} (总数: {total})"
+    },
+    "hi": {
+      "one": "उपलब्ध: {count} हथियार · {biome} (कुल: {total})",
+      "other": "उपलब्ध: {count} हथियार · {biome} (कुल: {total})"
+    },
+    "ar": {
+      "zero": "المتاح: {count} أسلحة · {biome} (الإجمالي: {total})",
+      "one": "المتاح: {count} سلاح · {biome} (الإجمالي: {total})",
+      "two": "المتاح: {count} سلاحان · {biome} (الإجمالي: {total})",
+      "few": "المتاح: {count} أسلحة · {biome} (الإجمالي: {total})",
+      "many": "المتاح: {count} سلاحًا · {biome} (الإجمالي: {total})",
+      "other": "المتاح: {count} سلاح · {biome} (الإجمالي: {total})"
+    },
+    "bn": {
+      "one": "পাওয়া যায়: {count}টি অস্ত্র · {biome} (মোট: {total})",
+      "other": "পাওয়া যায়: {count}টি অস্ত্র · {biome} (মোট: {total})"
+    },
+    "ru": {
+      "one": "Доступно: {count} единица оружия · {biome} (всего: {total})",
+      "few": "Доступно: {count} единицы оружия · {biome} (всего: {total})",
+      "many": "Доступно: {count} единиц оружия · {biome} (всего: {total})",
+      "other": "Доступно: {count} единицы оружия · {biome} (всего: {total})"
+    },
+    "ja": {
+      "other": "到達可能：{count} 個の武器 · {biome} (合計: {total})"
+    },
+    "id": {
+      "other": "Terjangkau: {count} senjata · {biome} (total: {total})"
+    }
+  },
+  "{count} targets reachable (total: {total})": {
+    "en": {
+      "one": "Reachable: {count} target (total: {total})",
+      "other": "Reachable: {count} targets (total: {total})"
+    },
+    "cs": {
+      "one": "Dostupné: {count} cíl (celkem: {total})",
+      "few": "Dostupné: {count} cíle (celkem: {total})",
+      "many": "Dostupné: {count} cíle (celkem: {total})",
+      "other": "Dostupné: {count} cílů (celkem: {total})"
+    },
+    "de": {
+      "one": "Erreichbar: {count} Ziel (gesamt: {total})",
+      "other": "Erreichbar: {count} Ziele (gesamt: {total})"
+    },
+    "es": {
+      "one": "Disponibilidad: {count} objetivo (total: {total})",
+      "many": "Disponibilidad: {count} objetivos (total: {total})",
+      "other": "Disponibilidad: {count} objetivos (total: {total})"
+    },
+    "fr": {
+      "one": "Disponibilité : {count} cible (total: {total})",
+      "many": "Disponibilité : {count} cibles (total: {total})",
+      "other": "Disponibilité : {count} cibles (total: {total})"
+    },
+    "pt": {
+      "one": "Disponibilidade: {count} alvo (total: {total})",
+      "many": "Disponibilidade: {count} alvos (total: {total})",
+      "other": "Disponibilidade: {count} alvos (total: {total})"
+    },
+    "zh": {
+      "other": "可用：{count} 个目标 (总数: {total})"
+    },
+    "hi": {
+      "one": "उपलब्ध: {count} लक्ष्य (कुल: {total})",
+      "other": "उपलब्ध: {count} लक्ष्य (कुल: {total})"
+    },
+    "ar": {
+      "zero": "المتاح: {count} أهداف (الإجمالي: {total})",
+      "one": "المتاح: {count} هدف (الإجمالي: {total})",
+      "two": "المتاح: {count} هدفان (الإجمالي: {total})",
+      "few": "المتاح: {count} أهداف (الإجمالي: {total})",
+      "many": "المتاح: {count} هدفًا (الإجمالي: {total})",
+      "other": "المتاح: {count} هدف (الإجمالي: {total})"
+    },
+    "bn": {
+      "one": "পাওয়া যায়: {count}টি লক্ষ্য (মোট: {total})",
+      "other": "পাওয়া যায়: {count}টি লক্ষ্য (মোট: {total})"
+    },
+    "ru": {
+      "one": "Доступно: {count} цель (всего: {total})",
+      "few": "Доступно: {count} цели (всего: {total})",
+      "many": "Доступно: {count} целей (всего: {total})",
+      "other": "Доступно: {count} цели (всего: {total})"
+    },
+    "ja": {
+      "other": "到達可能：{count} 体の対象 (合計: {total})"
+    },
+    "id": {
+      "other": "Terjangkau: {count} target (total: {total})"
+    }
+  },
+  "{count} targets reachable in {biome} (total: {total})": {
+    "en": {
+      "one": "Reachable: {count} target · {biome} (total: {total})",
+      "other": "Reachable: {count} targets · {biome} (total: {total})"
+    },
+    "cs": {
+      "one": "Dostupné: {count} cíl · {biome} (celkem: {total})",
+      "few": "Dostupné: {count} cíle · {biome} (celkem: {total})",
+      "many": "Dostupné: {count} cíle · {biome} (celkem: {total})",
+      "other": "Dostupné: {count} cílů · {biome} (celkem: {total})"
+    },
+    "de": {
+      "one": "Erreichbar: {count} Ziel · {biome} (gesamt: {total})",
+      "other": "Erreichbar: {count} Ziele · {biome} (gesamt: {total})"
+    },
+    "es": {
+      "one": "Disponibilidad: {count} objetivo · {biome} (total: {total})",
+      "many": "Disponibilidad: {count} objetivos · {biome} (total: {total})",
+      "other": "Disponibilidad: {count} objetivos · {biome} (total: {total})"
+    },
+    "fr": {
+      "one": "Disponibilité : {count} cible · {biome} (total: {total})",
+      "many": "Disponibilité : {count} cibles · {biome} (total: {total})",
+      "other": "Disponibilité : {count} cibles · {biome} (total: {total})"
+    },
+    "pt": {
+      "one": "Disponibilidade: {count} alvo · {biome} (total: {total})",
+      "many": "Disponibilidade: {count} alvos · {biome} (total: {total})",
+      "other": "Disponibilidade: {count} alvos · {biome} (total: {total})"
+    },
+    "zh": {
+      "other": "可用：{count} 个目标 · {biome} (总数: {total})"
+    },
+    "hi": {
+      "one": "उपलब्ध: {count} लक्ष्य · {biome} (कुल: {total})",
+      "other": "उपलब्ध: {count} लक्ष्य · {biome} (कुल: {total})"
+    },
+    "ar": {
+      "zero": "المتاح: {count} أهداف · {biome} (الإجمالي: {total})",
+      "one": "المتاح: {count} هدف · {biome} (الإجمالي: {total})",
+      "two": "المتاح: {count} هدفان · {biome} (الإجمالي: {total})",
+      "few": "المتاح: {count} أهداف · {biome} (الإجمالي: {total})",
+      "many": "المتاح: {count} هدفًا · {biome} (الإجمالي: {total})",
+      "other": "المتاح: {count} هدف · {biome} (الإجمالي: {total})"
+    },
+    "bn": {
+      "one": "পাওয়া যায়: {count}টি লক্ষ্য · {biome} (মোট: {total})",
+      "other": "পাওয়া যায়: {count}টি লক্ষ্য · {biome} (মোট: {total})"
+    },
+    "ru": {
+      "one": "Доступно: {count} цель · {biome} (всего: {total})",
+      "few": "Доступно: {count} цели · {biome} (всего: {total})",
+      "many": "Доступно: {count} целей · {biome} (всего: {total})",
+      "other": "Доступно: {count} цели · {biome} (всего: {total})"
+    },
+    "ja": {
+      "other": "到達可能：{count} 体の対象 · {biome} (合計: {total})"
+    },
+    "id": {
+      "other": "Terjangkau: {count} target · {biome} (total: {total})"
+    }
   }
 }

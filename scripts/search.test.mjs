@@ -172,8 +172,11 @@ test('hub message catalog covers all 13 languages with zero missing translations
   for (const [source, entries] of Object.entries(catalog)) {
     const tokens = value => [...value.matchAll(/\{(\w+)\}/g)].map(m => m[1]).sort();
     for (const lang of languages) {
-      assert.ok(entries[lang]?.trim(), `hub: ${lang}: ${source}`);
-      assert.deepEqual(tokens(entries[lang]), tokens(source), `hub: ${lang}: ${source}`);
+      assert.ok(entries[lang], `hub: ${lang}: ${source}`);
+      for (const text of typeof entries[lang] === 'string' ? [entries[lang]] : Object.values(entries[lang])) {
+        assert.ok(text.trim(), `hub: ${lang}: ${source}`);
+        assert.deepEqual(tokens(text), tokens(source), `hub: ${lang}: ${source}`);
+      }
     }
   }
 

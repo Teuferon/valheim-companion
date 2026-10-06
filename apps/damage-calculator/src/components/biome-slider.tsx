@@ -63,7 +63,7 @@ export function BiomeSlider({
   visibleTargets: number;
   totalTargets: number;
 }) {
-  const { t, formatCount } = useLanguage();
+  const { t, tn, formatCount } = useLanguage();
   const index = biomeIndex(value);
   const biome = BIOMES[index];
 
@@ -132,7 +132,7 @@ export function BiomeSlider({
         </div>
 
         <p className="text-xs text-muted-foreground">
-          {t("Showing {weapons} of {allWeapons} weapons and {targets} of {allTargets} targets reachable in {biome}.", { weapons: formatCount(visibleWeapons), allWeapons: formatCount(totalWeapons), targets: formatCount(visibleTargets), allTargets: formatCount(totalTargets), biome: biome.name })} {biome.note ? formatGameText(biome.note, t) : ''}
+          {tn("{count} weapons reachable in {biome} (total: {total})", visibleWeapons, { count: formatCount(visibleWeapons), total: formatCount(totalWeapons), biome: biome.name })}{" · "}{tn("{count} targets reachable in {biome} (total: {total})", visibleTargets, { count: formatCount(visibleTargets), total: formatCount(totalTargets), biome: biome.name })} {biome.note ? formatGameText(biome.note, t) : ''}
         </p>
         <a href="../progress/" className="text-xs text-muted-foreground hover:text-foreground">
           {t("Track your progress →")}

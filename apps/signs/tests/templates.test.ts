@@ -61,6 +61,6 @@ void test('template names, categories and free text are translated in all 13 lan
   ];
   for (const key of keys) {
     for (const { code } of languages)
-      assert.ok(messages[key]?.[code]?.trim(), `${key}/${code}`);
+      assert.ok(typeof messages[key]?.[code] === 'string' && String(messages[key][code]).trim(), `${key}/${code}`);
   }
 });

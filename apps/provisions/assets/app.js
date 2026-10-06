@@ -6,10 +6,11 @@
     meads: VPR_DATA.meads.map(mead => ({ ...mead, biome: VPAdvisor.availableBiome(mead) })),
   };
   const t = (key, values) => VCI18n.t(key, values);
+  const tn = (key, count, values) => VCI18n.tn(globalThis.VC_MESSAGES, key, count, values);
   const name = entity => VCI18n.name(entity);
   const byId = (list, id) => list.find(item => item.id === id);
   const number = value => new Intl.NumberFormat(VCI18n.locale(), { maximumFractionDigits: 2 }).format(value);
-  const time = seconds => t('{minutes} min', { minutes: number(seconds / 60) });
+  const time = seconds => tn('{minutes} min', seconds / 60, { minutes: number(seconds / 60) });
   let focus = 'All';
   let activity = 'balanced';
   try {
@@ -99,7 +100,7 @@
     const node = el('article', 'food-card');
     node.dataset.item = food.id;
     node.append(heading(food));
-    if (food.isFeast) node.append(el('span', 'badge', t('Feast · {count} servings', { count: number(food.servings) })));
+    if (food.isFeast) node.append(el('span', 'badge', tn('Feast · {count} servings', food.servings, { count: number(food.servings) })));
     if (food.availability === 'console-only') node.append(el('span', 'badge', t('Console-only')));
     for (const [key, label] of [['health', 'Health'], ['stamina', 'Stamina'], ['eitr', 'Eitr']]) {
       const row = el('div', 'stat-row ' + key);
@@ -172,7 +173,7 @@
       row.setAttribute('aria-label', t('Food slot {number}', { number: number(index + 1) }));
       const info = el('div');
       if (line) {
-        info.append(el('strong', '', name(line.definition)), el('p', 'hint', t('{count} servings', { count: number(line.quantity) })));
+        info.append(el('strong', '', name(line.definition)), el('p', 'hint', tn('{count} servings', line.quantity, { count: number(line.quantity) })));
         row.append(info, removeButton(line.definition, () => { state.foods.splice(index, 1); update(); }));
       } else row.append(el('span', 'hint', number(index + 1) + ' · ' + t('Empty')));
       foods.append(row);
@@ -204,7 +205,7 @@
         state = VPPlanner.sanitize(state, data); renderLoadout();
       });
       const controls = el('div', 'mead-controls'); controls.append(mode, quantity);
-      row.append(title, controls, el('p', 'hint', t('{count} servings', { count: number(line.quantity) })));
+      row.append(title, controls, el('p', 'hint', tn('{count} servings', line.quantity, { count: number(line.quantity) })));
       meads.append(row);
     }
     const hours = el('label', 'hours-control');
@@ -256,7 +257,7 @@
     return container;
   }
   function shoppingText(plan) {
-    const lines = [t('Loadout'), ...[...plan.foods, ...plan.meads].map(line => t('{count} servings', { count: number(line.quantity) }) + ' · ' + name(line.definition)),
+    const lines = [t('Loadout'), ...[...plan.foods, ...plan.meads].map(line => tn('{count} servings', line.quantity, { count: number(line.quantity) }) + ' · ' + name(line.definition)),
       '', t('Hours of play') + ': ' + number(state.hours), '', t('Shopping list'), materialList(plan.materials, plan), '', t('Station steps')];
     lines.push(...plan.steps.map(step => t('{amount}× {product} at {station}', { amount: number(step.amount), product: materialName(plan, step.product), station: step.station })));
     lines.push('', t('Required stations'), ...plan.stations.map(station => t('{station} · level {level}', { station: name(station), level: number(station.level) })));
@@ -296,7 +297,7 @@
     shopping.append(el('p', 'hint', t('Full crafting batches; feast servings are included.')));
     if (plan.foods.length || plan.meads.length) {
       const batches = el('ul', 'batch-list');
-      for (const line of [...plan.foods, ...plan.meads]) batches.append(el('li', '', name(line.definition) + ' · ' + t('{count} batches', { count: number(line.batches) })));
+      for (const line of [...plan.foods, ...plan.meads]) batches.append(el('li', '', name(line.definition) + ' · ' + tn('{count} batches', line.batches, { count: number(line.batches) })));
       shopping.append(batches);
     }
     if (plan.steps.length) {
@@ -498,6 +499,15 @@
       const values = { ...tip.values };
       for (const [key, value] of Object.entries(values)) if (typeof value === 'number') values[key] = number(value);
       if (tip.key === 'Shortest food duration: {time}.') values.time = time(tip.values.time * 60);
+      if (tip.key === '{name}: {count} servings for {hours} hours.') {
+        // Two counts in one sentence: pluralize each part separately.
+        list.append(tipRow(t('{name}: {servings} for {hours}.', {
+          name: values.name,
+          servings: tn('{count} servings', tip.values.count, { count: values.count }),
+          hours: tn('{count} hours', tip.values.hours, { count: values.hours }),
+        }), tip.source));
+        continue;
+      }
       list.append(tipRow(t(tip.key, values), tip.source));
     }
     const general = {

@@ -2084,51 +2084,6 @@
     "ja": "参考プレビューです。フォント、サイズ、光はゲームと異なる場合があります。",
     "id": "Pratinjau perkiraan. Font, ukuran, dan cahaya bisa berbeda di game."
   },
-  "Nad limitem: {count}. Zkrať text nebo uber formátování.": {
-    "cs": "Nad limitem: {count}. Zkrať text nebo uber formátování.",
-    "en": "Over limit by {count}. Shorten the text or reduce formatting.",
-    "de": "{count} über dem Limit. Text kürzen oder Formatierung reduzieren.",
-    "es": "Supera el límite en {count}. Acorta el texto o reduce el formato.",
-    "fr": "Limite dépassée de {count}. Raccourcis le texte ou réduis le formatage.",
-    "pt": "Excede o limite em {count}. Encurte o texto ou reduza a formatação.",
-    "zh": "超出上限 {count}。请缩短文本或减少格式标签。",
-    "hi": "सीमा से {count} अधिक। पाठ या स्वरूपण कम करें।",
-    "ar": "تجاوز الحد بمقدار {count}. اختصر النص أو قلل التنسيق.",
-    "bn": "সীমার চেয়ে {count} বেশি। লেখা বা বিন্যাস কমান।",
-    "ru": "Превышение на {count}. Сократи текст или форматирование.",
-    "ja": "上限を{count}超過。テキストか書式を減らしてください。",
-    "id": "Melebihi batas {count}. Pendekkan teks atau kurangi format."
-  },
-  "{bytes} UTF-8 bajtů: Unicode může překročit limit hry.": {
-    "cs": "{bytes} UTF-8 bajtů: Unicode může překročit limit hry.",
-    "en": "{bytes} UTF-8 bytes: Unicode may exceed the game limit.",
-    "de": "{bytes} UTF-8-Bytes: Unicode kann das Spiellimit überschreiten.",
-    "es": "{bytes} bytes UTF-8: Unicode puede superar el límite del juego.",
-    "fr": "{bytes} octets UTF-8 : Unicode peut dépasser la limite du jeu.",
-    "pt": "{bytes} bytes UTF-8: Unicode pode exceder o limite do jogo.",
-    "zh": "{bytes} 个 UTF-8 字节：Unicode 字符可能超出游戏上限。",
-    "hi": "{bytes} UTF-8 बाइट: Unicode खेल की सीमा पार कर सकता है।",
-    "ar": "{bytes} بايت UTF-8: قد يتجاوز Unicode حد اللعبة.",
-    "bn": "{bytes} UTF-8 বাইট: Unicode খেলার সীমা ছাড়াতে পারে।",
-    "ru": "{bytes} байт UTF-8: Unicode может превысить лимит игры.",
-    "ja": "UTF-8で{bytes}バイト：Unicode文字はゲームの上限を超える場合があります。",
-    "id": "{bytes} byte UTF-8: Unicode mungkin melebihi batas game."
-  },
-  "{bytes} UTF-8 bajtů · Zbývá znaků: {count}, včetně značek.": {
-    "cs": "{bytes} UTF-8 bajtů · Zbývá znaků: {count}, včetně značek.",
-    "en": "{bytes} UTF-8 bytes · Characters left: {count}, including tags.",
-    "de": "{bytes} UTF-8-Bytes · Verbleibende Zeichen: {count}, inklusive Tags.",
-    "es": "{bytes} bytes UTF-8 · Caracteres restantes: {count}, con etiquetas.",
-    "fr": "{bytes} octets UTF-8 · Caractères restants : {count}, balises comprises.",
-    "pt": "{bytes} bytes UTF-8 · Caracteres restantes: {count}, incluindo tags.",
-    "zh": "{bytes} 个 UTF-8 字节 · 剩余字符：{count}，含标签。",
-    "hi": "{bytes} UTF-8 बाइट · टैग सहित शेष अक्षर: {count}।",
-    "ar": "{bytes} بايت UTF-8 · الأحرف المتبقية: {count}، شاملة الوسوم.",
-    "bn": "{bytes} UTF-8 বাইট · ট্যাগসহ বাকি অক্ষর: {count}।",
-    "ru": "{bytes} байт UTF-8 · Осталось символов: {count}, включая теги.",
-    "ja": "UTF-8で{bytes}バイト · タグを含め残り{count}文字。",
-    "id": "{bytes} byte UTF-8 · Sisa karakter: {count}, termasuk tag."
-  },
   "Neznámá značka: {value}": {
     "cs": "Neznámá značka: {value}",
     "en": "Unknown tag: {value}",
@@ -2895,19 +2850,66 @@
     "id": "Pilih papan untuk mengganti teks dan format. Semua templat sesuai batas Vanilla."
   },
   "{count}/50 characters": {
-    "en": "{count}/50 characters",
-    "cs": "{count}/50 znaků",
-    "de": "{count}/50 Zeichen",
-    "es": "{count}/50 caracteres",
-    "fr": "{count}/50 caractères",
-    "pt": "{count}/50 caracteres",
-    "zh": "{count}/50 字符",
-    "hi": "{count}/50 अक्षर",
-    "ar": "{count}/50 حرفًا",
-    "bn": "{count}/50 অক্ষর",
-    "ru": "{count}/50 символов",
-    "ja": "{count}/50文字",
-    "id": "{count}/50 karakter"
+    "en": {
+      "one": "{count}/50 character",
+      "other": "{count}/50 characters"
+    },
+    "cs": {
+      "one": "{count}/50 znak",
+      "few": "{count}/50 znaky",
+      "many": "{count}/50 znaku",
+      "other": "{count}/50 znaků"
+    },
+    "de": {
+      "one": "{count}/50 Zeichen",
+      "other": "{count}/50 Zeichen"
+    },
+    "es": {
+      "one": "{count}/50 carácter",
+      "many": "{count}/50 caracteres",
+      "other": "{count}/50 caracteres"
+    },
+    "fr": {
+      "one": "{count}/50 caractère",
+      "many": "{count}/50 caractères",
+      "other": "{count}/50 caractères"
+    },
+    "pt": {
+      "one": "{count}/50 caractere",
+      "many": "{count}/50 caracteres",
+      "other": "{count}/50 caracteres"
+    },
+    "zh": {
+      "other": "{count}/50 个字符"
+    },
+    "hi": {
+      "one": "{count}/50 अक्षर",
+      "other": "{count}/50 अक्षर"
+    },
+    "ar": {
+      "zero": "{count}/50 أحرف",
+      "one": "{count}/50 حرف",
+      "two": "{count}/50 حرفان",
+      "few": "{count}/50 أحرف",
+      "many": "{count}/50 حرفًا",
+      "other": "{count}/50 حرف"
+    },
+    "bn": {
+      "one": "{count}/50 টি অক্ষর",
+      "other": "{count}/50 টি অক্ষর"
+    },
+    "ru": {
+      "one": "{count}/50 символ",
+      "few": "{count}/50 символа",
+      "many": "{count}/50 символов",
+      "other": "{count}/50 символа"
+    },
+    "ja": {
+      "other": "{count}/50 文字"
+    },
+    "id": {
+      "other": "{count}/50 karakter"
+    }
   },
   "Share sign": {
     "en": "Share sign",
@@ -3013,5 +3015,315 @@
     "ru": "Ссылка на табличку недействительна или использует неподдерживаемую версию.",
     "ja": "看板のリンクが無効か、未対応のバージョンです。",
     "id": "Tautan papan tidak valid atau menggunakan versi yang tidak didukung."
+  },
+  "Over limit by {count}. Shorten the text or reduce formatting.": {
+    "cs": {
+      "one": "Nad limitem: {count}. Zkrať text nebo uber formátování.",
+      "few": "Nad limitem: {count}. Zkrať text nebo uber formátování.",
+      "many": "Nad limitem: {count}. Zkrať text nebo uber formátování.",
+      "other": "Nad limitem: {count}. Zkrať text nebo uber formátování."
+    },
+    "en": {
+      "one": "Over limit by {count}. Shorten the text or reduce formatting.",
+      "other": "Over limit by {count}. Shorten the text or reduce formatting."
+    },
+    "de": {
+      "one": "{count} über dem Limit. Text kürzen oder Formatierung reduzieren.",
+      "other": "{count} über dem Limit. Text kürzen oder Formatierung reduzieren."
+    },
+    "es": {
+      "one": "Supera el límite en {count}. Acorta el texto o reduce el formato.",
+      "many": "Supera el límite en {count}. Acorta el texto o reduce el formato.",
+      "other": "Supera el límite en {count}. Acorta el texto o reduce el formato."
+    },
+    "fr": {
+      "one": "Limite dépassée de {count}. Raccourcis le texte ou réduis le formatage.",
+      "many": "Limite dépassée de {count}. Raccourcis le texte ou réduis le formatage.",
+      "other": "Limite dépassée de {count}. Raccourcis le texte ou réduis le formatage."
+    },
+    "pt": {
+      "one": "Excede o limite em {count}. Encurte o texto ou reduza a formatação.",
+      "many": "Excede o limite em {count}. Encurte o texto ou reduza a formatação.",
+      "other": "Excede o limite em {count}. Encurte o texto ou reduza a formatação."
+    },
+    "zh": {
+      "other": "超出上限 {count}。请缩短文本或减少格式标签。"
+    },
+    "hi": {
+      "one": "सीमा से {count} अधिक। पाठ या स्वरूपण कम करें।",
+      "other": "सीमा से {count} अधिक। पाठ या स्वरूपण कम करें।"
+    },
+    "ar": {
+      "zero": "تجاوز الحد بمقدار {count}. اختصر النص أو قلل التنسيق.",
+      "one": "تجاوز الحد بمقدار {count}. اختصر النص أو قلل التنسيق.",
+      "two": "تجاوز الحد بمقدار {count}. اختصر النص أو قلل التنسيق.",
+      "few": "تجاوز الحد بمقدار {count}. اختصر النص أو قلل التنسيق.",
+      "many": "تجاوز الحد بمقدار {count}. اختصر النص أو قلل التنسيق.",
+      "other": "تجاوز الحد بمقدار {count}. اختصر النص أو قلل التنسيق."
+    },
+    "bn": {
+      "one": "সীমার চেয়ে {count} বেশি। লেখা বা বিন্যাস কমান।",
+      "other": "সীমার চেয়ে {count} বেশি। লেখা বা বিন্যাস কমান।"
+    },
+    "ru": {
+      "one": "Превышение на {count}. Сократи текст или форматирование.",
+      "few": "Превышение на {count}. Сократи текст или форматирование.",
+      "many": "Превышение на {count}. Сократи текст или форматирование.",
+      "other": "Превышение на {count}. Сократи текст или форматирование."
+    },
+    "ja": {
+      "other": "上限を{count}超過。テキストか書式を減らしてください。"
+    },
+    "id": {
+      "other": "Melebihi batas {count}. Pendekkan teks atau kurangi format."
+    }
+  },
+  "{count} UTF-8 bytes: Unicode may exceed the game limit.": {
+    "en": {
+      "one": "{count} UTF-8 byte: Unicode may exceed the game limit.",
+      "other": "{count} UTF-8 bytes: Unicode may exceed the game limit."
+    },
+    "cs": {
+      "one": "{count} UTF-8 bajt: Unicode může překročit limit hry.",
+      "few": "{count} UTF-8 bajty: Unicode může překročit limit hry.",
+      "many": "{count} UTF-8 bajtu: Unicode může překročit limit hry.",
+      "other": "{count} UTF-8 bajtů: Unicode může překročit limit hry."
+    },
+    "de": {
+      "one": "{count} UTF-8 Byte: Unicode kann das Spiellimit überschreiten.",
+      "other": "{count} UTF-8 Bytes: Unicode kann das Spiellimit überschreiten."
+    },
+    "es": {
+      "one": "{count} UTF-8 byte: Unicode puede superar el límite del juego.",
+      "many": "{count} UTF-8 bytes: Unicode puede superar el límite del juego.",
+      "other": "{count} UTF-8 bytes: Unicode puede superar el límite del juego."
+    },
+    "fr": {
+      "one": "{count} UTF-8 octet: Unicode peut dépasser la limite du jeu.",
+      "many": "{count} UTF-8 octets: Unicode peut dépasser la limite du jeu.",
+      "other": "{count} UTF-8 octets: Unicode peut dépasser la limite du jeu."
+    },
+    "pt": {
+      "one": "{count} UTF-8 byte: Unicode pode exceder o limite do jogo.",
+      "many": "{count} UTF-8 bytes: Unicode pode exceder o limite do jogo.",
+      "other": "{count} UTF-8 bytes: Unicode pode exceder o limite do jogo."
+    },
+    "zh": {
+      "other": "{count} UTF-8 个字节：Unicode 字符可能超出游戏上限。"
+    },
+    "hi": {
+      "one": "{count} UTF-8 बाइट: Unicode खेल की सीमा पार कर सकता है।",
+      "other": "{count} UTF-8 बाइट: Unicode खेल की सीमा पार कर सकता है।"
+    },
+    "ar": {
+      "zero": "{count} UTF-8 بايتات: قد يتجاوز Unicode حد اللعبة.",
+      "one": "{count} UTF-8 بايت: قد يتجاوز Unicode حد اللعبة.",
+      "two": "{count} UTF-8 بايتان: قد يتجاوز Unicode حد اللعبة.",
+      "few": "{count} UTF-8 بايتات: قد يتجاوز Unicode حد اللعبة.",
+      "many": "{count} UTF-8 بايتًا: قد يتجاوز Unicode حد اللعبة.",
+      "other": "{count} UTF-8 بايت: قد يتجاوز Unicode حد اللعبة."
+    },
+    "bn": {
+      "one": "{count} UTF-8 টি বাইট: Unicode খেলার সীমা ছাড়াতে পারে।",
+      "other": "{count} UTF-8 টি বাইট: Unicode খেলার সীমা ছাড়াতে পারে।"
+    },
+    "ru": {
+      "one": "{count} UTF-8 байт: Unicode может превысить лимит игры.",
+      "few": "{count} UTF-8 байта: Unicode может превысить лимит игры.",
+      "many": "{count} UTF-8 байтов: Unicode может превысить лимит игры.",
+      "other": "{count} UTF-8 байта: Unicode может превысить лимит игры."
+    },
+    "ja": {
+      "other": "{count} UTF-8 バイト：Unicode文字はゲームの上限を超える場合があります。"
+    },
+    "id": {
+      "other": "{count} UTF-8 byte: Unicode mungkin melebihi batas game."
+    }
+  },
+  "{count} UTF-8 bytes": {
+    "en": {
+      "one": "{count} UTF-8 byte",
+      "other": "{count} UTF-8 bytes"
+    },
+    "cs": {
+      "one": "{count} UTF-8 bajt",
+      "few": "{count} UTF-8 bajty",
+      "many": "{count} UTF-8 bajtu",
+      "other": "{count} UTF-8 bajtů"
+    },
+    "de": {
+      "one": "{count} UTF-8 Byte",
+      "other": "{count} UTF-8 Bytes"
+    },
+    "es": {
+      "one": "{count} UTF-8 byte",
+      "many": "{count} UTF-8 bytes",
+      "other": "{count} UTF-8 bytes"
+    },
+    "fr": {
+      "one": "{count} UTF-8 octet",
+      "many": "{count} UTF-8 octets",
+      "other": "{count} UTF-8 octets"
+    },
+    "pt": {
+      "one": "{count} UTF-8 byte",
+      "many": "{count} UTF-8 bytes",
+      "other": "{count} UTF-8 bytes"
+    },
+    "zh": {
+      "other": "{count} UTF-8 个字节"
+    },
+    "hi": {
+      "one": "{count} UTF-8 बाइट",
+      "other": "{count} UTF-8 बाइट"
+    },
+    "ar": {
+      "zero": "{count} UTF-8 بايتات",
+      "one": "{count} UTF-8 بايت",
+      "two": "{count} UTF-8 بايتان",
+      "few": "{count} UTF-8 بايتات",
+      "many": "{count} UTF-8 بايتًا",
+      "other": "{count} UTF-8 بايت"
+    },
+    "bn": {
+      "one": "{count} UTF-8 টি বাইট",
+      "other": "{count} UTF-8 টি বাইট"
+    },
+    "ru": {
+      "one": "{count} UTF-8 байт",
+      "few": "{count} UTF-8 байта",
+      "many": "{count} UTF-8 байтов",
+      "other": "{count} UTF-8 байта"
+    },
+    "ja": {
+      "other": "{count} UTF-8 バイト"
+    },
+    "id": {
+      "other": "{count} UTF-8 byte"
+    }
+  },
+  "{count} characters left, including tags.": {
+    "en": {
+      "one": "{count} character left, including tags.",
+      "other": "{count} characters left, including tags."
+    },
+    "cs": {
+      "one": "Zbývá {count} znak, včetně značek.",
+      "few": "Zbývají {count} znaky, včetně značek.",
+      "many": "Zbývá {count} znaku, včetně značek.",
+      "other": "Zbývá {count} znaků, včetně značek."
+    },
+    "de": {
+      "one": "Verbleibend: {count} Zeichen, inklusive Tags.",
+      "other": "Verbleibend: {count} Zeichen, inklusive Tags."
+    },
+    "es": {
+      "one": "Restantes: {count} carácter, con etiquetas.",
+      "many": "Restantes: {count} caracteres, con etiquetas.",
+      "other": "Restantes: {count} caracteres, con etiquetas."
+    },
+    "fr": {
+      "one": "Il reste {count} caractère, balises comprises.",
+      "many": "Il reste {count} caractères, balises comprises.",
+      "other": "Il reste {count} caractères, balises comprises."
+    },
+    "pt": {
+      "one": "Restam: {count} caractere, incluindo tags.",
+      "many": "Restam: {count} caracteres, incluindo tags.",
+      "other": "Restam: {count} caracteres, incluindo tags."
+    },
+    "zh": {
+      "other": "剩余 {count} 个字符，含标签。"
+    },
+    "hi": {
+      "one": "टैग सहित {count} अक्षर शेष।",
+      "other": "टैग सहित {count} अक्षर शेष।"
+    },
+    "ar": {
+      "zero": "المتبقي (شامل الوسوم): {count} أحرف.",
+      "one": "المتبقي (شامل الوسوم): {count} حرف.",
+      "two": "المتبقي (شامل الوسوم): {count} حرفان.",
+      "few": "المتبقي (شامل الوسوم): {count} أحرف.",
+      "many": "المتبقي (شامل الوسوم): {count} حرفًا.",
+      "other": "المتبقي (شامل الوسوم): {count} حرف."
+    },
+    "bn": {
+      "one": "ট্যাগসহ {count}টি অক্ষর অবশিষ্ট।",
+      "other": "ট্যাগসহ {count}টি অক্ষর অবশিষ্ট।"
+    },
+    "ru": {
+      "one": "Осталось (включая теги): {count} символ.",
+      "few": "Осталось (включая теги): {count} символа.",
+      "many": "Осталось (включая теги): {count} символов.",
+      "other": "Осталось (включая теги): {count} символа."
+    },
+    "ja": {
+      "other": "残り {count} 文字（タグ込み）。"
+    },
+    "id": {
+      "other": "Tersisa {count} karakter, termasuk tag."
+    }
+  },
+  "{count} / {limit} characters": {
+    "en": {
+      "one": "{count} / {limit} character",
+      "other": "{count} / {limit} characters"
+    },
+    "cs": {
+      "one": "{count} / {limit} znak",
+      "few": "{count} / {limit} znaky",
+      "many": "{count} / {limit} znaku",
+      "other": "{count} / {limit} znaků"
+    },
+    "de": {
+      "one": "{count} / {limit} Zeichen",
+      "other": "{count} / {limit} Zeichen"
+    },
+    "es": {
+      "one": "{count} / {limit} carácter",
+      "many": "{count} / {limit} caracteres",
+      "other": "{count} / {limit} caracteres"
+    },
+    "fr": {
+      "one": "{count} / {limit} caractère",
+      "many": "{count} / {limit} caractères",
+      "other": "{count} / {limit} caractères"
+    },
+    "pt": {
+      "one": "{count} / {limit} caractere",
+      "many": "{count} / {limit} caracteres",
+      "other": "{count} / {limit} caracteres"
+    },
+    "zh": {
+      "other": "{count} / {limit} 个字符"
+    },
+    "hi": {
+      "one": "{count} / {limit} अक्षर",
+      "other": "{count} / {limit} अक्षर"
+    },
+    "ar": {
+      "zero": "{count} / {limit} أحرف",
+      "one": "{count} / {limit} حرف",
+      "two": "{count} / {limit} حرفان",
+      "few": "{count} / {limit} أحرف",
+      "many": "{count} / {limit} حرفًا",
+      "other": "{count} / {limit} حرف"
+    },
+    "bn": {
+      "one": "{count} / {limit} টি অক্ষর",
+      "other": "{count} / {limit} টি অক্ষর"
+    },
+    "ru": {
+      "one": "{count} / {limit} символ",
+      "few": "{count} / {limit} символа",
+      "many": "{count} / {limit} символов",
+      "other": "{count} / {limit} символа"
+    },
+    "ja": {
+      "other": "{count} / {limit} 文字"
+    },
+    "id": {
+      "other": "{count} / {limit} karakter"
+    }
   }
 }

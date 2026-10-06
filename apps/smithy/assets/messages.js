@@ -886,34 +886,128 @@ globalThis.VC_MESSAGES = {
     "id": "bahan bakar"
   },
   "{count} items": {
-    "en": "{count} items",
-    "cs": "{count} položek",
-    "de": "{count} Gegenstände",
-    "es": "{count} objetos",
-    "fr": "{count} objets",
-    "pt": "{count} itens",
-    "zh": "{count} 件物品",
-    "hi": "{count} वस्तुएँ",
-    "ar": "{count} عناصر",
-    "bn": "{count} বস্তু",
-    "ru": "{count} предметов",
-    "ja": "{count} 個のアイテム",
-    "id": "{count} item"
+    "en": {
+      "one": "{count} item",
+      "other": "{count} items"
+    },
+    "cs": {
+      "one": "{count} položka",
+      "few": "{count} položky",
+      "many": "{count} položky",
+      "other": "{count} položek"
+    },
+    "de": {
+      "one": "{count} Gegenstand",
+      "other": "{count} Gegenstände"
+    },
+    "es": {
+      "one": "{count} objeto",
+      "many": "{count} objetos",
+      "other": "{count} objetos"
+    },
+    "fr": {
+      "one": "{count} objet",
+      "many": "{count} objets",
+      "other": "{count} objets"
+    },
+    "pt": {
+      "one": "{count} item",
+      "many": "{count} itens",
+      "other": "{count} itens"
+    },
+    "zh": {
+      "other": "{count} 件物品"
+    },
+    "hi": {
+      "one": "{count} वस्तु",
+      "other": "{count} वस्तुएँ"
+    },
+    "ar": {
+      "zero": "{count} عناصر",
+      "one": "{count} عنصر",
+      "two": "{count} عنصران",
+      "few": "{count} عناصر",
+      "many": "{count} عنصرًا",
+      "other": "{count} عنصر"
+    },
+    "bn": {
+      "one": "{count}টি বস্তু",
+      "other": "{count}টি বস্তু"
+    },
+    "ru": {
+      "one": "{count} предмет",
+      "few": "{count} предмета",
+      "many": "{count} предметов",
+      "other": "{count} предмета"
+    },
+    "ja": {
+      "other": "{count} 個のアイテム"
+    },
+    "id": {
+      "other": "{count} item"
+    }
   },
   "{count} sets": {
-    "en": "{count} sets",
-    "cs": "{count} sad",
-    "de": "{count} Sets",
-    "es": "{count} conjuntos",
-    "fr": "{count} ensembles",
-    "pt": "{count} conjuntos",
-    "zh": "{count} 套",
-    "hi": "{count} सेट",
-    "ar": "{count} أطقم",
-    "bn": "{count} সেট",
-    "ru": "{count} комплектов",
-    "ja": "{count} セット",
-    "id": "{count} set"
+    "en": {
+      "one": "{count} set",
+      "other": "{count} sets"
+    },
+    "cs": {
+      "one": "{count} sada",
+      "few": "{count} sady",
+      "many": "{count} sady",
+      "other": "{count} sad"
+    },
+    "de": {
+      "one": "{count} Set",
+      "other": "{count} Sets"
+    },
+    "es": {
+      "one": "{count} conjunto",
+      "many": "{count} conjuntos",
+      "other": "{count} conjuntos"
+    },
+    "fr": {
+      "one": "{count} ensemble",
+      "many": "{count} ensembles",
+      "other": "{count} ensembles"
+    },
+    "pt": {
+      "one": "{count} conjunto",
+      "many": "{count} conjuntos",
+      "other": "{count} conjuntos"
+    },
+    "zh": {
+      "other": "{count} 套"
+    },
+    "hi": {
+      "one": "{count} सेट",
+      "other": "{count} सेट"
+    },
+    "ar": {
+      "zero": "{count} أطقم",
+      "one": "{count} طقم",
+      "two": "{count} طقمان",
+      "few": "{count} أطقم",
+      "many": "{count} طقمًا",
+      "other": "{count} طقم"
+    },
+    "bn": {
+      "one": "{count}টি সেট",
+      "other": "{count}টি সেট"
+    },
+    "ru": {
+      "one": "{count} комплект",
+      "few": "{count} комплекта",
+      "many": "{count} комплектов",
+      "other": "{count} комплекта"
+    },
+    "ja": {
+      "other": "{count} セット"
+    },
+    "id": {
+      "other": "{count} set"
+    }
   },
   "{action} {amount}× {product} at {station}": {
     "en": "{action} {amount}× {product} at {station}",
@@ -961,19 +1055,66 @@ globalThis.VC_MESSAGES = {
     "id": "🔒 makhluk dari {biome}"
   },
   "Set Bonus: {name} ({count} pieces)": {
-    "en": "Set Bonus: {name} ({count} pieces)",
-    "cs": "Bonus sady: {name} ({count} kusů)",
-    "de": "Set-Bonus: {name} ({count} Teile)",
-    "es": "Bonificación: {name} ({count} piezas)",
-    "fr": "Bonus d'ensemble : {name} ({count} pièces)",
-    "pt": "Bônus de conjunto: {name} ({count} peças)",
-    "zh": "套装加成：{name}（{count} 件）",
-    "hi": "सेट बोनस: {name} ({count} भाग)",
-    "ar": "مكافأة الطقم: {name} ({count} قطع)",
-    "bn": "সেট বোনাস: {name} ({count} অংশ)",
-    "ru": "Бонус комплекта: {name} ({count} предметов)",
-    "ja": "セット効果：{name}（{count} 部位）",
-    "id": "Bonus set: {name} ({count} bagian)"
+    "en": {
+      "one": "Set Bonus: {name} ({count} piece)",
+      "other": "Set Bonus: {name} ({count} pieces)"
+    },
+    "cs": {
+      "one": "Bonus sady: {name} ({count} kus)",
+      "few": "Bonus sady: {name} ({count} kusy)",
+      "many": "Bonus sady: {name} ({count} kusu)",
+      "other": "Bonus sady: {name} ({count} kusů)"
+    },
+    "de": {
+      "one": "Set-Bonus: {name} ({count} Teil)",
+      "other": "Set-Bonus: {name} ({count} Teile)"
+    },
+    "es": {
+      "one": "Bonificación: {name} ({count} pieza)",
+      "many": "Bonificación: {name} ({count} piezas)",
+      "other": "Bonificación: {name} ({count} piezas)"
+    },
+    "fr": {
+      "one": "Bonus d'ensemble : {name} ({count} pièce)",
+      "many": "Bonus d'ensemble : {name} ({count} pièces)",
+      "other": "Bonus d'ensemble : {name} ({count} pièces)"
+    },
+    "pt": {
+      "one": "Bônus de conjunto: {name} ({count} peça)",
+      "many": "Bônus de conjunto: {name} ({count} peças)",
+      "other": "Bônus de conjunto: {name} ({count} peças)"
+    },
+    "zh": {
+      "other": "套装加成：{name}（{count} 件）"
+    },
+    "hi": {
+      "one": "सेट बोनस: {name} ({count} भाग)",
+      "other": "सेट बोनस: {name} ({count} भाग)"
+    },
+    "ar": {
+      "zero": "مكافأة الطقم: {name} ({count} قطع)",
+      "one": "مكافأة الطقم: {name} ({count} قطعة)",
+      "two": "مكافأة الطقم: {name} ({count} قطعتان)",
+      "few": "مكافأة الطقم: {name} ({count} قطع)",
+      "many": "مكافأة الطقم: {name} ({count} قطعةً)",
+      "other": "مكافأة الطقم: {name} ({count} قطعة)"
+    },
+    "bn": {
+      "one": "সেট বোনাস: {name} ({count}টি অংশ)",
+      "other": "সেট বোনাস: {name} ({count}টি অংশ)"
+    },
+    "ru": {
+      "one": "Бонус комплекта: {name} ({count} предмет)",
+      "few": "Бонус комплекта: {name} ({count} предмета)",
+      "many": "Бонус комплекта: {name} ({count} предметов)",
+      "other": "Бонус комплекта: {name} ({count} предмета)"
+    },
+    "ja": {
+      "other": "セット効果：{name}（{count} 部位）"
+    },
+    "id": {
+      "other": "Bonus set: {name} ({count} bagian)"
+    }
   },
   "Active Bonus: {name}": {
     "en": "Active Bonus: {name}",
@@ -1636,19 +1777,66 @@ globalThis.VC_MESSAGES = {
     "id": "Senjata & perisai"
   },
   "{count} weapons": {
-    "en": "{count} weapons",
-    "cs": "{count} zbraní",
-    "de": "{count} Waffen",
-    "es": "{count} armas",
-    "fr": "{count} armes",
-    "pt": "{count} armas",
-    "zh": "{count} 件武器",
-    "hi": "{count} हथियार",
-    "ar": "{count} أسلحة",
-    "bn": "{count} টি অস্ত্র",
-    "ru": "{count} оружия",
-    "ja": "{count} 個の武器",
-    "id": "{count} senjata"
+    "en": {
+      "one": "{count} weapon",
+      "other": "{count} weapons"
+    },
+    "cs": {
+      "one": "{count} zbraň",
+      "few": "{count} zbraně",
+      "many": "{count} zbraně",
+      "other": "{count} zbraní"
+    },
+    "de": {
+      "one": "{count} Waffe",
+      "other": "{count} Waffen"
+    },
+    "es": {
+      "one": "{count} arma",
+      "many": "{count} armas",
+      "other": "{count} armas"
+    },
+    "fr": {
+      "one": "{count} arme",
+      "many": "{count} armes",
+      "other": "{count} armes"
+    },
+    "pt": {
+      "one": "{count} arma",
+      "many": "{count} armas",
+      "other": "{count} armas"
+    },
+    "zh": {
+      "other": "{count} 件武器"
+    },
+    "hi": {
+      "one": "{count} हथियार",
+      "other": "{count} हथियार"
+    },
+    "ar": {
+      "zero": "{count} أسلحة",
+      "one": "{count} سلاح",
+      "two": "{count} سلاحان",
+      "few": "{count} أسلحة",
+      "many": "{count} سلاحًا",
+      "other": "{count} سلاح"
+    },
+    "bn": {
+      "one": "{count}টি অস্ত্র",
+      "other": "{count}টি অস্ত্র"
+    },
+    "ru": {
+      "one": "{count} единица оружия",
+      "few": "{count} единицы оружия",
+      "many": "{count} единиц оружия",
+      "other": "{count} единицы оружия"
+    },
+    "ja": {
+      "other": "{count} 個の武器"
+    },
+    "id": {
+      "other": "{count} senjata"
+    }
   },
   "Can't be teleported": {
     "en": "Can't be teleported",
@@ -1711,19 +1899,66 @@ globalThis.VC_MESSAGES = {
     "id": "Tungku peleburan:"
   },
   "{count} × furnace": {
-    "en": "{count} × furnace",
-    "cs": "{count} × pec",
-    "de": "{count} × Schmelzofen",
-    "es": "{count} × horno",
-    "fr": "{count} × four",
-    "pt": "{count} × forno",
-    "zh": "{count} × 熔炉",
-    "hi": "{count} × भट्टी",
-    "ar": "{count} × فرن",
-    "bn": "{count} × চুল্লি",
-    "ru": "{count} × печь",
-    "ja": "{count} × 炉",
-    "id": "{count} × tungku"
+    "en": {
+      "one": "{count} furnace",
+      "other": "{count} furnaces"
+    },
+    "cs": {
+      "one": "{count} pec",
+      "few": "{count} pece",
+      "many": "{count} pece",
+      "other": "{count} pecí"
+    },
+    "de": {
+      "one": "{count} Schmelzofen",
+      "other": "{count} Schmelzöfen"
+    },
+    "es": {
+      "one": "{count} horno",
+      "many": "{count} hornos",
+      "other": "{count} hornos"
+    },
+    "fr": {
+      "one": "{count} four",
+      "many": "{count} fours",
+      "other": "{count} fours"
+    },
+    "pt": {
+      "one": "{count} forno",
+      "many": "{count} fornos",
+      "other": "{count} fornos"
+    },
+    "zh": {
+      "other": "{count} 座熔炉"
+    },
+    "hi": {
+      "one": "{count} भट्टी",
+      "other": "{count} भट्टियाँ"
+    },
+    "ar": {
+      "zero": "{count} أفران",
+      "one": "{count} فرن",
+      "two": "{count} فرنان",
+      "few": "{count} أفران",
+      "many": "{count} فرنًا",
+      "other": "{count} فرن"
+    },
+    "bn": {
+      "one": "{count}টি চুল্লি",
+      "other": "{count}টি চুল্লি"
+    },
+    "ru": {
+      "one": "{count} печь",
+      "few": "{count} печи",
+      "many": "{count} печей",
+      "other": "{count} печи"
+    },
+    "ja": {
+      "other": "{count} 基の炉"
+    },
+    "id": {
+      "other": "{count} tungku"
+    }
   },
   "Total bars to smelt:": {
     "en": "Total bars to smelt:",
@@ -1771,19 +2006,66 @@ globalThis.VC_MESSAGES = {
     "id": "Waktu per tungku:"
   },
   "{time} min": {
-    "en": "{time} min",
-    "cs": "{time} min",
-    "de": "{time} Min.",
-    "es": "{time} min",
-    "fr": "{time} min",
-    "pt": "{time} min",
-    "zh": "{time} 分钟",
-    "hi": "{time} मिनट",
-    "ar": "{time} دقيقة",
-    "bn": "{time} মিনিট",
-    "ru": "{time} мин",
-    "ja": "{time} 分",
-    "id": "{time} mnt"
+    "en": {
+      "one": "{time} min",
+      "other": "{time} min"
+    },
+    "cs": {
+      "one": "{time} min",
+      "few": "{time} min",
+      "many": "{time} min",
+      "other": "{time} min"
+    },
+    "de": {
+      "one": "{time} Min.",
+      "other": "{time} Min."
+    },
+    "es": {
+      "one": "{time} min",
+      "many": "{time} min",
+      "other": "{time} min"
+    },
+    "fr": {
+      "one": "{time} min",
+      "many": "{time} min",
+      "other": "{time} min"
+    },
+    "pt": {
+      "one": "{time} min",
+      "many": "{time} min",
+      "other": "{time} min"
+    },
+    "zh": {
+      "other": "{time} 分钟"
+    },
+    "hi": {
+      "one": "{time} मिनट",
+      "other": "{time} मिनट"
+    },
+    "ar": {
+      "zero": "{time} دقيقة",
+      "one": "{time} دقيقة",
+      "two": "{time} دقيقة",
+      "few": "{time} دقيقة",
+      "many": "{time} دقيقة",
+      "other": "{time} دقيقة"
+    },
+    "bn": {
+      "one": "{time} মিনিট",
+      "other": "{time} মিনিট"
+    },
+    "ru": {
+      "one": "{time} мин",
+      "few": "{time} мин",
+      "many": "{time} мин",
+      "other": "{time} мин"
+    },
+    "ja": {
+      "other": "{time} 分"
+    },
+    "id": {
+      "other": "{time} mnt"
+    }
   },
   "Block Armor: {value}": {
     "en": "Block Armor: {value}",

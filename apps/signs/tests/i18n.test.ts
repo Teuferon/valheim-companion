@@ -6,6 +6,7 @@ import {
   readPreference,
   resolveLocale,
   translate,
+  translateNumber,
   languages,
   messages,
 } from '../lib/i18n.ts';
@@ -29,18 +30,14 @@ void test('saved selection wins and invalid storage returns to automatic detecti
 });
 void test('all languages have complete messages with matching interpolation fields', () => {
   for (const [key, entry] of Object.entries(messages)) {
-    const fields = [...entry.en!.matchAll(/\{(\w+)\}/g)]
-      .map((match) => match[1])
-      .sort();
+    const fields = [...key.matchAll(/\{(\w+)\}/g)].map(match => match[1]).sort();
     for (const { code } of languages) {
-      assert.ok(entry[code]?.trim(), `${code}: ${key}`);
-      assert.deepEqual(
-        [...entry[code]!.matchAll(/\{(\w+)\}/g)]
-          .map((match) => match[1])
-          .sort(),
-        fields,
-        `${code}: ${key}`,
-      );
+      const value = entry[code];
+      assert.ok(value, `${code}: ${key}`);
+      for (const text of typeof value === 'string' ? [value] : Object.values(value)) {
+        assert.ok(text?.trim(), `${code}: ${key}`);
+        assert.deepEqual([...text.matchAll(/\{(\w+)\}/g)].map(match => match[1]).sort(), fields, `${code}: ${key}`);
+      }
     }
   }
 });
@@ -57,7 +54,7 @@ void test('editor messages, templates and guide labels are included in the catal
     new URL('../components/share-sign.tsx', import.meta.url),
     'utf8',
   );
-  const keys = [...(page + gallery + share).matchAll(/\bt\(\s*'([^']+)'/g)].map(
+  const keys = [...(page + gallery + share).matchAll(/\btn?\(\s*'([^']+)'/g)].map(
     (match) => match[1],
   );
   for (const group of tagGroups)
@@ -81,4 +78,22 @@ void test('warning translation preserves authored text and styles', () => {
     translate('en', 'Vložit {value}', { value: '<br>' }),
     'Insert <br>',
   );
+});
+
+void test('counted editor and gallery messages render in all 13 languages at plural boundaries', () => {
+  for (const { code } of languages) {
+    for (const count of [0, 1, 2, 5, 21]) {
+      for (const [key, entry] of Object.entries(messages)) {
+        if (typeof entry.en === 'string') continue;
+        const result = translateNumber(code, key, count, { limit: 50 });
+        assert.ok(result.length > 0, `${code}/${count}: ${key}`);
+        assert.notEqual(result, key);
+        assert.doesNotMatch(result, /undefined|\[object Object\]|\{\w+\}/);
+      }
+    }
+  }
+  assert.equal(translateNumber('en', '{count}/50 characters', 1), '1/50 character');
+  assert.equal(translateNumber('cs', '{count} UTF-8 bytes', 1), '1 UTF-8 bajt');
+  assert.equal(translateNumber('cs', '{count} UTF-8 bytes', 2), '2 UTF-8 bajty');
+  assert.equal(translateNumber('cs', '{count} UTF-8 bytes', 5), '5 UTF-8 bajtů');
 });

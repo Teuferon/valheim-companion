@@ -51,12 +51,12 @@ test('hub summary counts known bosses, updates across tabs, and translates in al
   const { context, values, summary, storage } = setup();
   context.VCProgress.defeat('the-elder', true);
   assert.equal(summary.hidden, false);
-  assert.equal(summary.textContent, '4 / 9 biomes · 1 bosses');
+  assert.equal(summary.textContent, '4 / 9 biomes · 1 boss');
   context.VCProgress.defeat('brenna', true);
-  assert.equal(summary.textContent, '4 / 9 biomes · 1 bosses');
+  assert.equal(summary.textContent, '4 / 9 biomes · 1 boss');
   for (const { code } of context.VCI18n.languages) {
     context.VCI18n.setPreference(code);
-    assert.equal(summary.textContent, context.VCI18n.t('{revealed} / {total} biomes · {bosses} bosses', { revealed: 4, total: 9, bosses: 1 }));
+    assert.equal(summary.textContent, context.VCI18n.tn(context.VC_MESSAGES, '{count} / {total} biomes', 4, { total: 9 }) + ' · ' + context.VCI18n.tn(context.VC_MESSAGES, '{count} bosses', 1));
     assert.ok(!summary.textContent.includes('{'));
   }
   values.delete('vc.progress'); storage('vc.progress');
@@ -67,7 +67,7 @@ test('hub summary counts known bosses, updates across tabs, and translates in al
   values.clear(); storage(null);
   assert.equal(summary.hidden, true);
   context.VCProgress.milestone('forge', true);
-  assert.equal(summary.textContent, '1 / 9 biomes · 0 bosses');
+  assert.equal(summary.textContent, '1 / 9 biome · 0 bosses');
 });
 
 test('active hub search follows tracked reveals and reset without leaking locked names', () => {

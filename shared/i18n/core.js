@@ -151,6 +151,25 @@
     });
   }
 
+  const pluralRules = new Map();
+
+  function tn(catalog, key, count, values = {}) {
+    const currentLocale = locale();
+    if (!pluralRules.has(currentLocale)) {
+      pluralRules.set(currentLocale, new Intl.PluralRules(currentLocale));
+    }
+    const entry = catalog?.[key];
+    const category = pluralRules.get(currentLocale).select(count);
+    const localized = entry?.[currentLocale];
+    const english = entry?.en;
+    const template = (typeof localized === 'string' ? localized : localized?.[category] ?? localized?.other)
+      ?? (typeof english === 'string' ? english : english?.[new Intl.PluralRules('en').select(count)] ?? english?.other)
+      ?? key;
+    const replacements = { count, ...values };
+    return template.replace(/\{(\w+)\}/g, (match, token) =>
+      replacements[token] !== undefined ? String(replacements[token]) : match);
+  }
+
   function name(entity) {
     if (!entity || typeof entity !== 'object') return '';
     // Game names stay English in every language; only the surrounding UI is translated (VC-29).
@@ -284,6 +303,7 @@
     setPreference,
     locale,
     t,
+    tn,
     name,
     apply,
     onChange,

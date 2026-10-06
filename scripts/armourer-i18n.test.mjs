@@ -54,8 +54,11 @@ for (const app of ['bestiary', 'smithy']) {
     for (const [source, entries] of Object.entries(catalog)) {
       const tokens = value => [...value.matchAll(/\{(\w+)\}/g)].map(m => m[1]).sort();
       for (const lang of languages) {
-        assert.ok(entries[lang]?.trim(), `${app}: ${lang}: ${source}`);
-        assert.deepEqual(tokens(entries[lang]), tokens(source), `${app}: ${lang}: ${source}`);
+    assert.ok(entries[lang], `${source}: missing ${lang}`);
+    for (const text of typeof entries[lang] === 'string' ? [entries[lang]] : Object.values(entries[lang])) {
+      assert.ok(text.trim(), `${source}: empty ${lang}`);
+      assert.deepEqual(tokens(text), tokens(source), `${source}: placeholders in ${lang}`);
+    }
       }
     }
     const bundle = vm.createContext({});
