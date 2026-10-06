@@ -3,6 +3,9 @@
 import { useCallback, useEffect, useMemo, useSyncExternalStore } from 'react';
 import {
   LANGUAGE_STORAGE_KEY,
+  LEGACY_STORAGE_KEY,
+  getStoredPreference,
+  setStoredPreference,
   readPreference,
   resolveLocale,
   translate,
@@ -13,6 +16,7 @@ import {
 
 const changeEvent = 'runopis:language';
 let sessionPreference: LanguagePreference | undefined;
+
 function browserLanguages(): readonly string[] {
   return navigator.languages?.length
     ? navigator.languages
@@ -20,19 +24,27 @@ function browserLanguages(): readonly string[] {
       ? [navigator.language]
       : [];
 }
+
 function snapshot() {
   let preference = sessionPreference ?? 'auto';
   try {
     if (sessionPreference === undefined)
-      preference = readPreference(localStorage.getItem(LANGUAGE_STORAGE_KEY));
+      preference = getStoredPreference();
   } catch {
     /* Use session choice if browser privacy settings block storage. */
   }
   return `${preference}:${resolveLocale(preference, browserLanguages())}`;
 }
+
 function subscribe(notify: () => void) {
   const onStorage = (event: StorageEvent) => {
-    if (event.key === LANGUAGE_STORAGE_KEY || event.key === null) notify();
+    if (
+      event.key === LANGUAGE_STORAGE_KEY ||
+      event.key === LEGACY_STORAGE_KEY ||
+      event.key === null
+    ) {
+      notify();
+    }
   };
   window.addEventListener('languagechange', notify);
   window.addEventListener(changeEvent, notify);
@@ -43,6 +55,7 @@ function subscribe(notify: () => void) {
     window.removeEventListener('storage', onStorage);
   };
 }
+
 export function useLanguage() {
   // Stable server snapshot prevents hydration mismatches; browser state is an external store.
   const current = useSyncExternalStore(subscribe, snapshot, () => 'auto:en');
@@ -53,7 +66,7 @@ export function useLanguage() {
   const setPreference = useCallback((value: string) => {
     const choice = readPreference(value);
     try {
-      localStorage.setItem(LANGUAGE_STORAGE_KEY, choice);
+      setStoredPreference(choice);
       sessionPreference = undefined;
     } catch {
       sessionPreference = choice;

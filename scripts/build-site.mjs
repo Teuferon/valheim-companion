@@ -9,11 +9,14 @@ import { cpSync, existsSync, mkdirSync, readdirSync, rmSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { buildI18n } from './build-i18n.mjs';
+
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST_DIR = path.join(REPO_ROOT, 'dist');
 const HUB_DIR = path.join(REPO_ROOT, 'apps', 'hub');
 const BESTIARY_DIR = path.join(REPO_ROOT, 'apps', 'bestiary');
 const ARMOURER_DIR = path.join(REPO_ROOT, 'apps', 'armourer');
+const SHARED_I18N_DIR = path.join(REPO_ROOT, 'shared', 'i18n');
 const SIGNS_DIST = path.join(REPO_ROOT, 'apps', 'signs', 'dist-static');
 const DAMAGE_DIST = path.join(REPO_ROOT, 'apps', 'damage-calculator', 'dist-static');
 
@@ -31,6 +34,8 @@ export function buildSite() {
     );
     process.exit(1);
   }
+
+  buildI18n();
 
   console.log('assembling dist/…');
   rmSync(DIST_DIR, { recursive: true, force: true });
@@ -78,6 +83,17 @@ export function buildSite() {
   const damageDistTarget = path.join(DIST_DIR, 'damage-calculator');
   mkdirSync(damageDistTarget, { recursive: true });
   cpSync(DAMAGE_DIST, damageDistTarget, { recursive: true });
+
+  // 5. shared/i18n/*.js -> dist/shared/i18n/
+  const sharedDistTarget = path.join(DIST_DIR, 'shared', 'i18n');
+  mkdirSync(sharedDistTarget, { recursive: true });
+  if (existsSync(SHARED_I18N_DIR)) {
+    for (const file of readdirSync(SHARED_I18N_DIR)) {
+      if (file.endsWith('.js')) {
+        cpSync(path.join(SHARED_I18N_DIR, file), path.join(sharedDistTarget, file));
+      }
+    }
+  }
 
   console.log('done: site assembled in dist/');
 }

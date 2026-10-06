@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- meta:start -->
-  <title>Valheim Companion — tools for your Valheim journey</title>
+  <title data-i18n="Valheim Companion — tools for your Valheim journey">Valheim Companion — tools for your Valheim journey</title>
   <meta name="description" content="Spoiler-free bestiary with weaknesses and best weapons for your skills, armor shopping lists and a rich-text sign editor. Updated for Valheim 1.0 and the Deep North.">
   <link rel="canonical" href="https://valheim-companion.teuferon.click/">
   <meta property="og:type" content="website">
@@ -31,8 +31,11 @@
 <body>
   <div class="hub-container">
     <header class="hub-header">
+      <div class="hub-top-bar">
+        <div id="lang-picker-container" class="lang-picker-container"></div>
+      </div>
       <h1 class="hub-title">Valheim Companion</h1>
-      <p class="hub-subtitle">Tools for your Valheim journey.</p>
+      <p class="hub-subtitle" data-i18n="Tools for your Valheim journey.">Tools for your Valheim journey.</p>
     </header>
 
     <main class="hub-main">
@@ -40,8 +43,8 @@
         <a href="bestiary/" class="hub-card card-bestiary">
           <div class="card-content">
             <h2 class="card-title">Bestiary</h2>
-            <p class="card-desc">Every creature and boss, biome by biome — spoiler-free. Stats, weaknesses and the best weapons for your progress.</p>
-            <span class="card-cta">Explore Bestiary →</span>
+            <p class="card-desc" data-i18n="Every creature and boss, biome by biome — spoiler-free. Stats, weaknesses and the best weapons for your progress.">Every creature and boss, biome by biome — spoiler-free. Stats, weaknesses and the best weapons for your progress.</p>
+            <span class="card-cta" data-i18n="Explore Bestiary →">Explore Bestiary →</span>
           </div>
         </a>
 
@@ -51,45 +54,50 @@
               <h2 class="card-title">Sign Editor</h2>
               <span class="card-badge">Runopis</span>
             </div>
-            <p class="card-desc">Write rich-text signs with colors and live preview, then copy them straight into the game. 13 languages.</p>
-            <span class="card-cta">Open Editor →</span>
+            <p class="card-desc" data-i18n="Write rich-text signs with colors and live preview, then copy them straight into the game. 13 languages.">Write rich-text signs with colors and live preview, then copy them straight into the game. 13 languages.</p>
+            <span class="card-cta" data-i18n="Open Editor →">Open Editor →</span>
           </div>
         </a>
 
         <a href="armourer/" class="hub-card card-armourer">
           <div class="card-content">
             <h2 class="card-title">Armourer</h2>
-            <p class="card-desc">Every armor set by biome. Pick pieces and levels — get the full shopping list and where to farm it.</p>
-            <span class="card-cta">Browse Armor →</span>
+            <p class="card-desc" data-i18n="Every armor set by biome. Pick pieces and levels — get the full shopping list and where to farm it.">Every armor set by biome. Pick pieces and levels — get the full shopping list and where to farm it.</p>
+            <span class="card-cta" data-i18n="Browse Armor →">Browse Armor →</span>
           </div>
         </a>
 
         <a href="damage-calculator/" class="hub-card card-damage-calculator">
           <div class="card-content">
             <h2 class="card-title">Damage Calculator</h2>
-            <p class="card-desc">Pick a target, pick a weapon and see the damage that actually lands — resistances, upgrade levels, DPS and time-to-kill.</p>
-            <span class="card-cta">Open Calculator →</span>
+            <p class="card-desc" data-i18n="Pick a target, pick a weapon and see the damage that actually lands — resistances, upgrade levels, DPS and time-to-kill.">Pick a target, pick a weapon and see the damage that actually lands — resistances, upgrade levels, DPS and time-to-kill.</p>
+            <span class="card-cta" data-i18n="Open Calculator →">Open Calculator →</span>
           </div>
         </a>
 
         <div class="hub-card card-muted" aria-disabled="true">
           <div class="card-content">
-            <h2 class="card-title">More tools coming soon…</h2>
-            <p class="card-desc">New calculators, guides and utilities are in development.</p>
+            <h2 class="card-title" data-i18n="More tools coming soon…">More tools coming soon…</h2>
+            <p class="card-desc" data-i18n="New calculators, guides and utilities are in development.">New calculators, guides and utilities are in development.</p>
           </div>
         </div>
       </div>
     </main>
 
     <footer class="hub-footer">
-      <p>Fan project, not affiliated with Iron Gate. Data: Valheim Wiki (CC BY-SA 4.0).</p>
+      <p data-i18n="Fan project, not affiliated with Iron Gate. Data: Valheim Wiki (CC BY-SA 4.0).">Fan project, not affiliated with Iron Gate. Data: Valheim Wiki (CC BY-SA 4.0).</p>
       <p class="support">
-        <span><strong>Free, ad-free and made in my spare time.</strong> If it helped your run, you can buy me a coffee.</span>
+        <span><strong data-i18n="Free, ad-free and made in my spare time.">Free, ad-free and made in my spare time.</strong> <span data-i18n="If it helped your run, you can buy me a coffee.">If it helped your run, you can buy me a coffee.</span></span>
         <a href="https://ko-fi.com/N2A528ACE3" target="_blank" rel="noopener noreferrer">
-          <img src="/support/kofi.png" alt="Buy Me a Coffee at ko-fi.com" width="143" height="36" loading="lazy" />
+          <img src="/support/kofi.png" alt="Buy Me a Coffee at ko-fi.com" data-i18n-attr="alt:Buy Me a Coffee at ko-fi.com" width="143" height="36" loading="lazy" />
         </a>
       </p>
     </footer>
   </div>
+
+  <script src="/shared/i18n/languages.js"></script>
+  <script src="/shared/i18n/core.js"></script>
+  <script src="locales/messages.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
