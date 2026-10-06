@@ -66,6 +66,8 @@ Pracovníci od 6. 10.: agy je vyčerpaný (týden 4 %, obnova 8. 10.), práci d�
 
 ## Známé drobnosti (neřešené)
 
+- Přesměrování `/armourer/` → `/smithy/` (a `/bestiary` → `/bestiary/`) vrací `Location: http://…` a teprve EasyPanel přesměruje na https (o jeden skok navíc, funkčně OK). `absolute_redirect off` v `deploy/nginx.conf` se po nasazení neprojevilo. Ověřit v EasyPanelu, jestli běží nejnovější image.
+
 
 - Čeština: chybí množná čísla („1 hráčů“). Řešit plural pravidly v `shared/i18n` (`Intl.PluralRules`) při další i18n úloze.
 
