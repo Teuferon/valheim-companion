@@ -206,13 +206,13 @@ test('VCI18n: placeholder interpolation handles values and keeps missing tokens'
   );
 });
 
-test('VCI18n: name() uses localized names and falls back to base name when missing', () => {
+test('VCI18n: name() always uses English game names', () => {
   VCI18n.setPreference('cs');
   const localizedCreature = {
     name: 'Boar',
     names: { cs: 'Divočák', de: 'Wildschwein' },
   };
-  assert.equal(VCI18n.name(localizedCreature), 'Divočák');
+  assert.equal(VCI18n.name(localizedCreature), 'Boar');
 
   const creatureWithoutNames = { name: 'Wolf' };
   assert.equal(VCI18n.name(creatureWithoutNames), 'Wolf');

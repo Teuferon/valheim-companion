@@ -106,7 +106,7 @@ export function ShareViewButton({
   };
 
   const summary = [
-    t(BIOME_NAME[view.biome]),
+    BIOME_NAME[view.biome],
     TARGET_BY_SLUG.has(view.target) ? nameOf(TARGET_BY_SLUG.get(view.target)!) : view.target,
     t(view.cls === "all" ? "All classes" : CLASS_LABELS[view.cls]),
   ].join(" · ");

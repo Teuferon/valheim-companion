@@ -74,11 +74,11 @@ export function WeaponDetail({
                 onClick={() => onToggleClass(weapon.cls)}
                 title={
                   classActive
-                    ? t("Clear the {type} filter", { type: t(weapon.clsLabel) })
-                    : t("Filter the ranking to {type}", { type: t(weapon.clsLabel) })
+                    ? t("Clear the {type} filter", { type: weapon.clsLabel })
+                    : t("Filter the ranking to {type}", { type: weapon.clsLabel })
                 }
               >
-                {t(weapon.clsLabel)}
+                {weapon.clsLabel}
               </Badge>
               {weapon.ammo && ammo ? (
                 <Badge variant="outline" className="gap-1 font-normal">
@@ -189,7 +189,7 @@ export function WeaponDetail({
                       DAMAGE_COLOR[line.type],
                     )}
                   >
-                    {t(DAMAGE_LABEL[line.type])}
+                    {DAMAGE_LABEL[line.type]}
                   </td>
                   <td className="px-2.5 py-1.5 text-right tabular-nums">
                     {formatDamage(line.base)}
@@ -301,7 +301,7 @@ export function WeaponDetail({
         {result.lines.length === 0 ? (
           <p className="flex gap-1.5 rounded-md border border-amber-500/40 bg-amber-500/10 px-2.5 py-2 text-[11px] leading-snug">
             <TriangleAlert className="mt-0.5 size-3 shrink-0 text-amber-400" />
-            {t("This item deals only terrain damage (chop, pickaxe or pure), which the wiki lists as woodcutting, mining and structure damage. It does nothing to creatures, so it never shows up in the ranking.")}
+            {t("Terrain damage ({types}) is excluded from creature damage.", { types: "Chop, Pickaxe, Pure" })}
             </p>
         ) : null}
       </CardContent>

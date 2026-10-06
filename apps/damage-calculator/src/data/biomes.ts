@@ -1,3 +1,5 @@
+import { gameText, type GameText } from '../lib/game-text';
+
 /**
  * The progression ladder.
  *
@@ -35,7 +37,7 @@ export type Biome = {
   /** Boss slug for the Forsaken of this biome, when it has one. */
   boss?: string;
   /** Shown in the slider tooltip / assumptions panel. */
-  note?: string;
+  note?: GameText;
 };
 
 export const BIOMES: Biome[] = [
@@ -43,54 +45,54 @@ export const BIOMES: Biome[] = [
     id: "meadows",
     name: "Meadows",
     boss: "eikthyr",
-    note: "Starting biome: wood, flint, hides, and the Workbench.",
+    note: gameText("Resources: {items}. Station: {station}.", { items: "Wood, Flint, Deer Hide", station: "Workbench" }),
   },
   {
     id: "black-forest",
     name: "Black Forest",
     boss: "the-elder",
-    note: "Copper and tin unlock the Forge; finewood unlocks the first boats.",
+    note: gameText("{items} unlock {station}; {material} unlocks the first boats.", { items: "Copper, Tin", station: "Forge", material: "Finewood" }),
   },
   {
     id: "ocean",
     name: "Ocean",
-    note: "No Forsaken. Reachable once you can sail; leviathans drop chitin.",
+    note: gameText("Reachable once you can sail; {creature} drops {item}.", { creature: "Leviathan", item: "Chitin" }),
   },
   {
     id: "swamp",
     name: "Swamp",
     boss: "bonemass",
-    note: "Iron, ancient bark and the wishbone.",
+    note: gameText("Resources: {items}.", { items: "Iron, Ancient Bark, Wishbone" }),
   },
   {
     id: "mountain",
     name: "Mountain",
     boss: "moder",
-    note: "Silver, obsidian, wolf and drake materials.",
+    note: gameText("Resources: {items}.", { items: "Silver, Obsidian, Wolf, Drake" }),
   },
   {
     id: "plains",
     name: "Plains",
     boss: "yagluth",
-    note: "Black metal, linen and the Artisan Table.",
+    note: gameText("Resources: {items}. Station: {station}.", { items: "Black Metal, Linen Thread", station: "Artisan Table" }),
   },
   {
     id: "mistlands",
     name: "Mistlands",
     boss: "the-queen",
-    note: "Carapace, refined eitr and the Galdr Table.",
+    note: gameText("Resources: {items}. Station: {station}.", { items: "Carapace, Refined Eitr", station: "Galdr Table" }),
   },
   {
     id: "ashlands",
     name: "Ashlands",
     boss: "fader",
-    note: "Flametal, charred bone and the Black Forge.",
+    note: gameText("Resources: {items}. Station: {station}.", { items: "Flametal, Charred Bone", station: "Black Forge" }),
   },
   {
     id: "deep-north",
     name: "Deep North",
     boss: "kall-fimbulbringer",
-    note: "Bloodgold, frostcore and the Frost Foundry.",
+    note: gameText("Resources: {items}. Station: {station}.", { items: "Bloodgold, Frostcore", station: "Frost Foundry" }),
   },
 ];
 

@@ -33,7 +33,7 @@ export function ResistanceBadge({
         className,
       )}
     >
-      <span>{t(DAMAGE_LABEL[type])}
+      <span>{DAMAGE_LABEL[type]}
             </span>
       <span className="opacity-70">{t(RESISTANCE_LABEL[tier])}
             </span>
