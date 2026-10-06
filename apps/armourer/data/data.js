@@ -1,5 +1,5 @@
 window.VA_DATA = {
-  "generatedAt": "2026-10-06T09:25:47.422Z",
+  "generatedAt": "2026-10-06T10:47:58.388Z",
   "source": {
     "name": "Valheim Wiki",
     "url": "https://valheim.weirdgloop.org",
@@ -2435,7 +2435,8 @@ window.VA_DATA = {
       "id": "crown-of-roots",
       "name": "Crown of Roots",
       "wiki": "https://valheim.weirdgloop.org/w/Crown_of_Roots",
-      "kind": "single",
+      "kind": "special",
+      "tag": "Not craftable",
       "biome": null,
       "tier": null,
       "setBonus": null,
@@ -2454,34 +2455,15 @@ window.VA_DATA = {
               "durability": 800,
               "stationLevel": 1,
               "materials": []
-            },
-            {
-              "quality": 2,
-              "armor": 3,
-              "durability": 1000,
-              "stationLevel": 2,
-              "materials": []
-            },
-            {
-              "quality": 3,
-              "armor": 5,
-              "durability": 1200,
-              "stationLevel": 3,
-              "materials": []
-            },
-            {
-              "quality": 4,
-              "armor": 7,
-              "durability": 1400,
-              "stationLevel": 4,
-              "materials": []
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "infobox",
           "weight": 3,
           "movementSpeed": 0,
           "resistances": [],
-          "description": "Crown of Roots is an armor piece."
+          "description": "Crown of Roots is an armor piece.",
+          "kind": "special",
+          "tag": "Not craftable"
         }
       ]
     },
@@ -2517,30 +2499,9 @@ window.VA_DATA = {
                   "amount": 1
                 }
               ]
-            },
-            {
-              "quality": 2,
-              "armor": 52,
-              "durability": 1200,
-              "stationLevel": 5,
-              "materials": []
-            },
-            {
-              "quality": 3,
-              "armor": 54,
-              "durability": 1400,
-              "stationLevel": 6,
-              "materials": []
-            },
-            {
-              "quality": 4,
-              "armor": 56,
-              "durability": 1600,
-              "stationLevel": 7,
-              "materials": []
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "infobox",
           "weight": 1,
           "movementSpeed": 5,
           "resistances": [],

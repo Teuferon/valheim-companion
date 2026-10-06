@@ -529,7 +529,7 @@
         biomesContainer.appendChild(biomeCard);
       });
 
-      // Render DLC & seasonal section (collapsed by default)
+      // Render Special, DLC & seasonal section (collapsed by default)
       if (dlcSeasonal.length > 0) {
         const dlcCard = el('section', 'biome-card');
         const headerBtn = el('button', 'biome-header');
@@ -540,7 +540,7 @@
 
         const headerContent = el('div', 'biome-header-content');
         const badge = el('span', 'biome-order-badge', 'Special');
-        const nameHeading = el('span', 'biome-name', 'DLC & seasonal');
+        const nameHeading = el('span', 'biome-name', 'Special, DLC & seasonal');
         const countBadge = el('span', 'biome-count-badge', dlcSeasonal.length + (dlcSeasonal.length === 1 ? ' item' : ' items'));
 
         headerContent.appendChild(badge);
@@ -686,22 +686,27 @@
       infoCol.appendChild(badgesRow);
       summaryLeft.appendChild(infoCol);
 
-      // Right: Add set button + details toggle button
+      // Right: Add set button + details toggle button. A set that cannot be
+      // crafted (tag "Not craftable", e.g. Crown of Roots) has no materials to
+      // shop for, so it gets no Add button.
       const summaryRight = el('div', 'set-summary-right');
+      const notCraftable = armor.tag === 'Not craftable';
 
-      const addSetBtn = el('button', 'action-btn action-btn-primary', 'Add set');
-      addSetBtn.type = 'button';
-      addSetBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        // Handled in Step 3 / cart integration
-        const evt = new CustomEvent('va:add-set', { detail: { armor } });
-        window.dispatchEvent(evt);
-      });
+      if (!notCraftable) {
+        const addSetBtn = el('button', 'action-btn action-btn-primary', 'Add set');
+        addSetBtn.type = 'button';
+        addSetBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          // Handled in Step 3 / cart integration
+          const evt = new CustomEvent('va:add-set', { detail: { armor } });
+          window.dispatchEvent(evt);
+        });
+        summaryRight.appendChild(addSetBtn);
+      }
 
       const toggleDetailsBtn = el('button', 'set-detail-toggle-btn', 'Details ▾');
       toggleDetailsBtn.type = 'button';
 
-      summaryRight.appendChild(addSetBtn);
       summaryRight.appendChild(toggleDetailsBtn);
 
       summary.appendChild(summaryLeft);
@@ -872,15 +877,17 @@
           tdResist.textContent = '—';
         }
 
-        // Add Piece Action
+        // Add Piece Action (not for sets that cannot be crafted)
         const tdAction = el('td');
-        const addPieceBtn = el('button', 'action-btn action-btn-sm', '+ Add piece');
-        addPieceBtn.type = 'button';
-        addPieceBtn.addEventListener('click', function () {
-          const evt = new CustomEvent('va:add-piece', { detail: { piece, armor } });
-          window.dispatchEvent(evt);
-        });
-        tdAction.appendChild(addPieceBtn);
+        if (armor.tag !== 'Not craftable') {
+          const addPieceBtn = el('button', 'action-btn action-btn-sm', '+ Add piece');
+          addPieceBtn.type = 'button';
+          addPieceBtn.addEventListener('click', function () {
+            const evt = new CustomEvent('va:add-piece', { detail: { piece, armor } });
+            window.dispatchEvent(evt);
+          });
+          tdAction.appendChild(addPieceBtn);
+        }
 
         tr.appendChild(tdPiece);
         tr.appendChild(tdSlot);
@@ -1012,16 +1019,18 @@
         container.appendChild(bonusBox);
       }
 
-      // --- 4. Add Full Set Action ---
-      const detailActions = el('div', 'controls-actions');
-      const addFullSetBtn = el('button', 'action-btn action-btn-primary', 'Add full set to shopping list');
-      addFullSetBtn.type = 'button';
-      addFullSetBtn.addEventListener('click', function () {
-        const evt = new CustomEvent('va:add-set', { detail: { armor } });
-        window.dispatchEvent(evt);
-      });
-      detailActions.appendChild(addFullSetBtn);
-      container.appendChild(detailActions);
+      // --- 4. Add Full Set Action (not for sets that cannot be crafted) ---
+      if (armor.tag !== 'Not craftable') {
+        const detailActions = el('div', 'controls-actions');
+        const addFullSetBtn = el('button', 'action-btn action-btn-primary', 'Add full set to shopping list');
+        addFullSetBtn.type = 'button';
+        addFullSetBtn.addEventListener('click', function () {
+          const evt = new CustomEvent('va:add-set', { detail: { armor } });
+          window.dispatchEvent(evt);
+        });
+        detailActions.appendChild(addFullSetBtn);
+        container.appendChild(detailActions);
+      }
     }
 
     // --- 5. Shopping Cart Controller ---

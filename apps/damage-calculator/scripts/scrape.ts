@@ -761,10 +761,11 @@ const BOSS_PAGES: { title: string; biome: BiomeId; note?: string }[] = [
 
 const RESISTANCE_FIELDS: Record<
   string,
-  "very-weak" | "weak" | "resistant" | "very-resistant" | "immune"
+  "very-weak" | "weak" | "neutral" | "resistant" | "very-resistant" | "immune"
 > = {
   veryweak: "very-weak",
   weak: "weak",
+  neutral: "neutral",
   resistant: "resistant",
   veryresistant: "very-resistant",
   immune: "immune",
@@ -968,9 +969,12 @@ function cleanWikiText(raw: string): string {
  *
  * Chop and pickaxe are kept when — and only when — the wiki lists them
  * explicitly for the creature (Stone Golem is very weak to pickaxe, Kvastur
- * weak to chop); the engine counts terrain damage only against such targets.
+ * weak to chop, Barka neutral to chop); the engine counts terrain damage only
+ * against such targets. `neutral` is published the same way for ordinary
+ * damage types (Eikthyr lists "Spirit: neutral"), which the default tier
+ * already models, and for terrain types it is what makes them count at x1.
  * Pure cannot come out of labelToDamageType and stays dropped, as do "Stagger"
- * and other non damage-type entries. */
+ * and other non damage-type entries ("All" on the bird pages). */
 function parseResistances(
   fields: Record<string, string>,
 ): Creature["resistances"] {
@@ -1449,14 +1453,14 @@ async function main() {
   };
 
   const sortByName = <T extends { name: string }>(a: T, b: T) =>
-    a.name.localeCompare(b.name);
+    a.name.localeCompare(b.name, "en");
 
   /* Only keep recipes for items that survived every filter. */
   const included = new Set([...weapons, ...ammo].map((i) => i.slug));
   const recipeBook: RecipeBook = Object.fromEntries(
     Object.entries(recipes)
       .filter(([slug]) => included.has(slug))
-      .sort(([a], [b]) => a.localeCompare(b)),
+      .sort(([a], [b]) => a.localeCompare(b, "en")),
   );
 
   writeFileSync(join(OUT_DIR, "weapons.json"), JSON.stringify(weapons.sort(sortByName), null, 2));
@@ -1469,7 +1473,7 @@ async function main() {
         (a, b) =>
           BIOME_ORDER[a.biome] - BIOME_ORDER[b.biome] ||
           (a.kind === b.kind ? 0 : a.kind === "miniboss" ? -1 : 1) ||
-          a.name.localeCompare(b.name),
+          a.name.localeCompare(b.name, "en"),
       ),
       null,
       2,
@@ -1521,7 +1525,7 @@ async function main() {
       ? `unmapped crafting stations: ${[...missingStations].join(", ")}`
       : "",
     missingMaterials.size > 0
-      ? `unmapped materials: ${[...missingMaterials].sort().join(", ")}`
+      ? `unmapped materials: ${[...missingMaterials].sort((a, b) => a.localeCompare(b, "en")).join(", ")}`
       : "",
     unmappedItems.length > 0
       ? `items whose biome could not be derived:\n    - ${unmappedItems.join("\n    - ")}`
