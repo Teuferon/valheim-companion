@@ -1,7 +1,7 @@
 # Stav projektu Valheim Companion
 
 > **Živý dokument.** Orchestrátor ho aktualizuje po každé přejímce, merge nebo změně fronty. Nová session začíná tady.
-> Poslední aktualizace: **6. 10. 2026, 16:40**
+> Poslední aktualizace: **6. 10. 2026, 19:30**
 
 - Web: https://valheim-companion.teuferon.click (EasyPanel, deploy webhookem při každém pushi do repa)
 - Repo: https://github.com/pawlig/valheim-companion (public), lokálně `~/gameroot/valheim-units`
