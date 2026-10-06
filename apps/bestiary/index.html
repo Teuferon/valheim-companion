@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- meta:start -->
-  <title>Bestiary — Valheim Companion</title>
+  <title data-i18n="Bestiary — Valheim Companion">Bestiary — Valheim Companion</title>
   <meta name="description" content="Every Valheim creature and boss by biome, spoiler-free. Stats per star level, weaknesses, and the best weapons for your skills — with hits to kill.">
   <link rel="canonical" href="https://valheim-companion.teuferon.click/bestiary/">
   <meta property="og:type" content="website">
@@ -30,6 +30,9 @@
   <script src="/shared/analytics/consent.js" defer></script>
   <!-- meta:end -->
   <link rel="stylesheet" href="assets/styles.css">
+  <script src="../../shared/i18n/languages.js"></script>
+  <script src="../../shared/i18n/core.js"></script>
+  <script src="assets/messages.js"></script>
   <script src="data/data.js"></script>
   <script src="assets/rank.js"></script>
   <script src="assets/app.js" defer></script>
@@ -37,42 +40,43 @@
 <body>
   <div class="page-wrapper">
     <header class="page-header">
-      <nav class="hub-nav" aria-label="Navigation">
-        <a href="../">← Valheim Companion</a>
+      <div id="language-picker" class="language-picker"></div>
+      <nav class="hub-nav" aria-label="Navigation" data-i18n-attr="aria-label:Navigation">
+        <a href="../" data-i18n="← Valheim Companion">← Valheim Companion</a>
       </nav>
       <div class="header-main">
-        <h1 class="header-title">Bestiary</h1>
-        <p class="header-subtitle">Creatures, bosses, weaknesses &amp; the best weapons — biome by biome, spoiler-free.</p>
+        <h1 class="header-title" data-i18n="Bestiary">Bestiary</h1>
+        <p class="header-subtitle" data-i18n="Creatures, bosses, weaknesses &amp; the best weapons — biome by biome, spoiler-free.">Creatures, bosses, weaknesses &amp; the best weapons — biome by biome, spoiler-free.</p>
       </div>
 
-      <div class="header-controls" role="region" aria-label="Controls">
+      <div class="header-controls" role="region" aria-label="Controls" data-i18n-attr="aria-label:Controls">
         <div class="controls-search-kind">
           <div class="search-box">
-            <input type="search" id="creature-search" placeholder="Search open biomes…" aria-label="Search creatures in open biomes">
+            <input type="search" id="creature-search" placeholder="Search open biomes…" aria-label="Search creatures in open biomes" data-i18n-attr="placeholder:Search open biomes…;aria-label:Search creatures in open biomes">
           </div>
-          <div class="kind-filter" role="group" aria-label="Filter creatures by kind">
-            <button type="button" class="filter-btn active" data-kind="all">All</button>
-            <button type="button" class="filter-btn" data-kind="boss">Bosses</button>
-            <button type="button" class="filter-btn" data-kind="hostile">Hostile</button>
-            <button type="button" class="filter-btn" data-kind="passive">Passive</button>
-            <button type="button" class="filter-btn" data-kind="fish">Fish</button>
+          <div class="kind-filter" role="group" aria-label="Filter creatures by kind" data-i18n-attr="aria-label:Filter creatures by kind">
+            <button type="button" class="filter-btn active" data-kind="all" data-i18n="All">All</button>
+            <button type="button" class="filter-btn" data-kind="boss" data-i18n="Bosses">Bosses</button>
+            <button type="button" class="filter-btn" data-kind="hostile" data-i18n="Hostile">Hostile</button>
+            <button type="button" class="filter-btn" data-kind="passive" data-i18n="Passive">Passive</button>
+            <button type="button" class="filter-btn" data-kind="fish" data-i18n="Fish">Fish</button>
           </div>
         </div>
 
         <div class="controls-actions">
-          <button type="button" id="btn-collapse-all" class="action-btn">Collapse all</button>
-          <button type="button" id="btn-reset-progress" class="action-btn action-btn-danger">Reset spoiler progress</button>
+          <button type="button" id="btn-collapse-all" class="action-btn" data-i18n="Collapse all">Collapse all</button>
+          <button type="button" id="btn-reset-progress" class="action-btn action-btn-danger" data-i18n="Reset spoiler progress">Reset spoiler progress</button>
         </div>
       </div>
     </header>
 
-    <section id="character-section" class="character-section" aria-label="Your Character"></section>
+    <section id="character-section" class="character-section" aria-label="Your Character" data-i18n-attr="aria-label:Your Character"></section>
 
-    <section id="legend-section" class="legend-section" aria-label="Game Legend"></section>
+    <section id="legend-section" class="legend-section" aria-label="Game Legend" data-i18n-attr="aria-label:Game Legend"></section>
 
-    <main id="biomes-container" class="biomes-container" aria-label="Biomes"></main>
+    <main id="biomes-container" class="biomes-container" aria-label="Biomes" data-i18n-attr="aria-label:Biomes"></main>
 
-    <section id="armory-section" class="armory-section" aria-label="Armory"></section>
+    <section id="armory-section" class="armory-section" aria-label="Armory" data-i18n-attr="aria-label:Armory"></section>
 
     <footer id="page-footer" class="page-footer"></footer>
   </div>

@@ -1,3 +1,4 @@
+import { addLocalizedNames } from './api.mjs';
 // Fetches biomes and creatures from valheim.weirdgloop.org (MediaWiki API) and
 // builds data/biomes.json, data/creatures.json, data/report.md plus images in
 // img/creatures/ and img/biomes/.
@@ -488,6 +489,8 @@ async function mainInner() {
   for (const biome of biomeRecords) {
     for (const section of SECTIONS) biome.creatures[section] = [...new Set(biome.creatures[section])].sort(byCodepoint);
   }
+
+  await addLocalizedNames([...creatures, ...biomeRecords]);
 
   // Creatures without a biome, recomputed after overrides.
   report.noBiome = creatures

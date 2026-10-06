@@ -1969,3 +1969,9 @@ body {
 }
 
 
+
+/* Shared language control and active spoiler warning. */
+.page-header { position: relative; }
+.language-picker { display: flex; justify-content: flex-end; margin-bottom: .75rem; }
+.vc-language-picker { color: var(--text-primary, #eee); background: var(--bg-card, #20252b); border: 1px solid var(--border-color, #555); border-radius: 6px; padding: .4rem; max-width: 100%; }
+.spoilers-active { color: #f4b942; }
