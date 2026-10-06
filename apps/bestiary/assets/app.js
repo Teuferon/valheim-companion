@@ -1339,15 +1339,66 @@
     }
 
     // Trophy
-    if (creature.trophy && gameName(creature.trophy.name)) {
+    if (creature.trophy?.name) {
       const row = el('div', 'details-row');
       row.appendChild(el('span', 'details-key', 'Trophy'));
       const trophyVal = el('div', 'trophy-val');
       if (creature.trophy.image) {
-        trophyVal.appendChild(createImage(creature.trophy.image, gameName(creature.trophy.name), 'trophy-img', 'T'));
+        trophyVal.appendChild(createImage(creature.trophy.image, creature.trophy.name, 'trophy-img', 'T'));
       }
-      trophyVal.appendChild(el('span', 'details-val', gameName(creature.trophy.name)));
+      const trophyText = el('div', 'details-val');
+      trophyText.appendChild(document.createTextNode(creature.trophy.name));
+      if (creature.trophy.dropChance !== null && creature.trophy.dropChance !== undefined) {
+        trophyText.appendChild(el('div', 'extra-note', t('Drop chance: {chance}%', {
+          chance: creature.trophy.dropChance.toLocaleString(VCI18n.locale()),
+        })));
+      }
+      if (creature.trophy.usage?.length) {
+        const usage = creature.trophy.usage.map(value => {
+          const summon = value.match(/^(?:Re-summoning|Summoning) (.+)$/);
+          return summon ? t('Summon {name}', { name: summon[1] }) : value;
+        });
+        trophyText.appendChild(el('div', 'extra-note', t('Used for: {usage}', { usage: usage.join(', ') })));
+      }
+      trophyVal.appendChild(trophyText);
       row.appendChild(trophyVal);
+      detailsContent.appendChild(row);
+    }
+
+    if (creature.taming) {
+      const row = el('div', 'details-row');
+      row.appendChild(el('span', 'details-key', 'Taming'));
+      const value = el('div', 'details-val');
+      value.appendChild(el('div', 'extra-note', 'Food'));
+      const foods = el('div', 'taming-foods');
+      creature.taming.foods.forEach(name => {
+        const food = el('span', 'taming-food');
+        const item = Object.values(data.items || {}).find(item => item.name.toLowerCase() === name.toLowerCase());
+        if (item?.image) food.appendChild(createImage('../armourer/' + item.image, name, 'trophy-img'));
+        food.appendChild(document.createTextNode(name));
+        foods.appendChild(food);
+      });
+      value.appendChild(foods);
+      value.appendChild(el('div', 'extra-note', creature.taming.eatingRange === null
+        ? t('Eating range: unknown')
+        : t('Eating range: {range} m', { range: creature.taming.eatingRange.toLocaleString(VCI18n.locale()) })));
+      if (creature.taming.tameTime !== undefined) {
+        value.appendChild(el('div', 'extra-note', t('Taming time: {minutes} min', { minutes: creature.taming.tameTime })));
+      }
+      row.appendChild(value);
+      detailsContent.appendChild(row);
+    }
+
+    if (creature.raids?.length) {
+      const row = el('div', 'details-row raid-row');
+      const refreshRaids = () => {
+        const openBiomes = new Set(getStoredOpenBiomes());
+        const names = [...new Set(creature.raids.map(raid => window.VCExtras.raidIsHidden(raid, data.creatures, openBiomes)
+          ? t('a later raid') : raid.name))];
+        row.textContent = t('Appears in raids: {raids}', { raids: names.join('; ') });
+      };
+      card._refreshRaids = refreshRaids;
+      refreshRaids();
       detailsContent.appendChild(row);
     }
 
@@ -2611,6 +2662,7 @@
           .filter(c => c.querySelector('.biome-header[aria-expanded="true"]'))
           .map(c => c.dataset.biomeId);
         setStoredOpenBiomes(currentlyOpen);
+        document.querySelectorAll('.creature-card').forEach(card => card._refreshRaids?.());
         if (armoryController) armoryController.refresh();
       });
 
@@ -2647,6 +2699,7 @@
           details: !!e.querySelector('.creature-details')?.open,
         }));
         const details = [...wrapper.querySelectorAll('details')].map(e => e.open);
+        wrapper.replaceChildren();
         renderBiomeContent(biome, wrapper, data);
         fish.forEach(id => wrapper.querySelector('.fish-wrapper[data-creature-id="' + id + '"] .fish-tile')?.click());
         states.forEach(state => {
@@ -2696,6 +2749,7 @@
           }
         });
         setStoredOpenBiomes([]);
+        document.querySelectorAll('.creature-card').forEach(card => card._refreshRaids?.());
         if (armoryController) armoryController.refresh();
       });
     }

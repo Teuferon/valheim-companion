@@ -1975,3 +1975,10 @@ body {
 .language-picker { display: flex; justify-content: flex-end; margin-bottom: .75rem; }
 .vc-language-picker { color: var(--text-primary, #eee); background: var(--bg-card, #20252b); border: 1px solid var(--border-color, #555); border-radius: 6px; padding: .4rem; max-width: 100%; }
 .spoilers-active { color: #f4b942; }
+
+/* Wiki extras keep food names and raid messages readable on narrow cards. */
+.trophy-val { align-items: flex-start; }
+.extra-note { margin-top: 4px; color: var(--text-secondary); }
+.taming-foods { display: flex; flex-wrap: wrap; gap: 6px 12px; }
+.taming-food { display: inline-flex; align-items: center; gap: 5px; }
+.raid-row { display: block; line-height: 1.5; }
