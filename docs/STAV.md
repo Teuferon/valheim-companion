@@ -1,7 +1,7 @@
 # Stav projektu Valheim Companion
 
 > **Živý dokument.** Orchestrátor ho aktualizuje po každé přejímce, merge nebo změně fronty. Nová session začíná tady.
-> Poslední aktualizace: **6. 10. 2026, 13:50**
+> Poslední aktualizace: **6. 10. 2026, 16:40**
 
 - Web: https://valheim-companion.teuferon.click (EasyPanel, deploy webhookem při každém pushi do repa)
 - Repo: https://github.com/pawlig/valheim-companion (public), lokálně `~/gameroot/valheim-units`
@@ -61,7 +61,7 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | VC-21 | Provisions data (90 jídel, 21 medovin, 9 feastů) + sdílený košík `shared/shopping` | Sol | ✅ |
 | VC-32 | Progress jako vysouvací panel na každé stránce („⛓ Progress N/9“), nástroje reagují hned | Sol | ✅ |
 | VC-22 | stránka Provisions `/provisions/`: loadout, porce na hodiny hraní, nákupní seznam | Sol | ✅ |
-| **VC-33** | množná čísla ve všech jazycích (`tn` + `Intl.PluralRules`) | Sol | 🔄 běží (`../valheim-units-CS`) |
+| VC-33 | množná čísla ve všech 13 jazycích (`tn` + `Intl.PluralRules`, test `plural-rendering`), tip porcí v Provisions skloňuje porce i hodiny | Sol | ✅ |
 | VC-34 | Provisions: plánovač podle činnosti (top 3 kombinace, medoviny podle biomu/bosse, 13 ověřených tipů) | Sol | ✅ |
 
 ### Po frontě
@@ -73,8 +73,6 @@ Pracovníci od 6. 10.: agy je vyčerpaný (týden 4 %, obnova 8. 10.), práci d�
 
 - Přesměrování `/armourer/` → `/smithy/` (a `/bestiary` → `/bestiary/`) vrací `Location: http://…` a teprve EasyPanel přesměruje na https (o jeden skok navíc, funkčně OK). `absolute_redirect off` v `deploy/nginx.conf` se po nasazení neprojevilo. Ověřit v EasyPanelu, jestli běží nejnovější image.
 
-
-- Množná čísla: čeština „1 hráčů“, angličtina „1 bosses defeated“. Řešit plural pravidly v `shared/i18n` (`Intl.PluralRules`) při další i18n úloze.
 
 - Ember Charge je jediná doporučovaná bomba. Ostatní bomby mají `recommendable: false`, protože wiki neuvádí plošné poškození.
 - Popisy z wiki zůstanou po překladu anglicky (ANALYZA § 15).
