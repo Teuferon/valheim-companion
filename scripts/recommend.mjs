@@ -5,6 +5,22 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const DATA_DIR = path.join(REPO_ROOT, 'data');
+
+if (!globalThis.VC_DATA) {
+  const attackProfilesPath = path.join(DATA_DIR, 'attack-profiles.json');
+  const weaponQualityPath = path.join(DATA_DIR, 'weapon-quality.json');
+  globalThis.VC_DATA = {
+    attackProfiles: existsSync(attackProfilesPath)
+      ? JSON.parse(readFileSync(attackProfilesPath, 'utf8'))
+      : null,
+    weaponQuality: existsSync(weaponQualityPath)
+      ? JSON.parse(readFileSync(weaponQualityPath, 'utf8'))
+      : null,
+  };
+}
+
 await import('../apps/bestiary/assets/rank.js');
 
 const {
@@ -15,6 +31,7 @@ const {
   SKILLS,
   DIFFICULTY,
   SET_BONUSES,
+  DEFAULT_BACKSTAB,
   DEFAULT_PLAYER,
   skillFactor,
   effectiveSkill,
@@ -28,6 +45,15 @@ const {
   creatureHp,
   recommend,
   capitalize,
+  bowDrawSeconds,
+  bowCycleSeconds,
+  crossbowReloadSeconds,
+  crossbowCycleSeconds,
+  attackProfileFor,
+  hasSecondaryAttack,
+  attackStats,
+  backstabOf,
+  setData,
 } = globalThis.VCRank;
 
 export {
@@ -38,6 +64,7 @@ export {
   SKILLS,
   DIFFICULTY,
   SET_BONUSES,
+  DEFAULT_BACKSTAB,
   DEFAULT_PLAYER,
   skillFactor,
   effectiveSkill,
@@ -52,10 +79,17 @@ export {
   recommend,
   recommend as recommendFor,
   capitalize,
+  bowDrawSeconds,
+  bowCycleSeconds,
+  crossbowReloadSeconds,
+  crossbowCycleSeconds,
+  attackProfileFor,
+  hasSecondaryAttack,
+  attackStats,
+  backstabOf,
+  setData,
 };
 
-const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const DATA_DIR = path.join(REPO_ROOT, 'data');
 const byCodepoint = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 
 export async function main() {

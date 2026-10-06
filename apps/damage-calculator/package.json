@@ -11,6 +11,7 @@
     "preview": "vite preview --config vite.config.ts",
     "typecheck": "tsc --noEmit",
     "verify:engine": "tsx scripts/verify-engine.ts",
+    "export:shared": "tsx scripts/export-shared.ts",
     "scrape": "tsx scripts/scrape.ts",
     "test": "tsx scripts/verify-engine.ts"
   },
