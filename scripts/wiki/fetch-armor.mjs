@@ -1,3 +1,4 @@
+import { addLocalizedNames } from './api.mjs';
 // Fetches armor, materials, and recipes from valheim.weirdgloop.org (MediaWiki API)
 // and builds data/armor.json, data/items.json, data/report-armor.md plus images.
 //
@@ -908,6 +909,8 @@ async function main() {
     delete it._imageFile;
     delete it._imageDownloaded;
   }
+
+  await addLocalizedNames([...parsedArmor, ...parsedArmor.flatMap(a => a.pieces), ...allItems]);
 
   // 9. Write outputs
   mkdirSync(DATA_DIR, { recursive: true });

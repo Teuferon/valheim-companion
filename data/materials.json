@@ -3,705 +3,1061 @@
     "name": "Ancient Bark",
     "biome": "swamp",
     "tier": 4,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Starověká kůra",
+      "de": "Alte Rinde",
+      "fr": "Écorce ancienne",
+      "ru": "Древняя кора"
+    }
   },
   {
     "name": "Ash Fang",
     "biome": "ashlands",
     "tier": 8,
     "how": "wiki",
-    "note": "crafted from Ashwood, Charred Bone, Flametal, Bonemaw Tooth"
+    "note": "crafted from Ashwood, Charred Bone, Flametal, Bonemaw Tooth",
+    "names": {
+      "ru": "Пепельный клык"
+    }
   },
   {
     "name": "Ashwood",
     "biome": "ashlands",
     "tier": 8,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "ru": "Пепельная древесина"
+    }
   },
   {
     "name": "Asksvin Bladder",
     "biome": "ashlands",
     "tier": 8,
     "how": "wiki",
-    "note": "linked creature Asksvin"
+    "note": "linked creature Asksvin",
+    "names": {
+      "ru": "Мочевой пузырь пеплозавра"
+    }
   },
   {
     "name": "Asksvin Hide",
     "biome": "ashlands",
     "tier": 8,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "ru": "Шкура пеплозавра"
+    }
   },
   {
     "name": "Bear Hide",
     "biome": "black-forest",
     "tier": 2,
     "how": "wiki",
-    "note": "linked creature Bear"
+    "note": "linked creature Bear",
+    "names": {
+      "ru": "Медвежья шкура"
+    }
   },
   {
     "name": "Bear Paw",
     "biome": "black-forest",
     "tier": 2,
     "how": "wiki",
-    "note": "linked creature Bear"
+    "note": "linked creature Bear",
+    "names": {
+      "ru": "Медвежья лапа"
+    }
   },
   {
     "name": "Berserkir Axes",
     "biome": "ashlands",
     "tier": 8,
     "how": "wiki",
-    "note": "crafted from Charred Bone, Flametal, Asksvin Hide"
+    "note": "crafted from Charred Bone, Flametal, Asksvin Hide",
+    "names": {
+      "de": "Berserkir-Äxte",
+      "ru": "Топоры берсеркира"
+    }
   },
   {
     "name": "Bilebag",
     "biome": "mistlands",
     "tier": 7,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Žlučník",
+      "ru": "Желчный мешок"
+    }
   },
   {
     "name": "Black Metal",
     "biome": "plains",
     "tier": 6,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Černý kov",
+      "de": "Schwarzmetall",
+      "fr": "Sombracier",
+      "ru": "Черный металл"
+    }
   },
   {
     "name": "Bloodgold",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Petrified Tissue"
+    "note": "crafted from Petrified Tissue",
+    "names": {}
   },
   {
     "name": "Bloodstone",
     "biome": "ashlands",
     "tier": 8,
     "how": "wiki",
-    "note": "found in Charred Fortress (ashlands)"
+    "note": "found in Charred Fortress (ashlands)",
+    "names": {
+      "ru": "Кровавый камень"
+    }
   },
   {
     "name": "Bone Fragments",
     "biome": "black-forest",
     "tier": 2,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Fragmenty kostí",
+      "de": "Knochenfragmente",
+      "fr": "Fragments d'os",
+      "ru": "Обломки костей"
+    }
   },
   {
     "name": "Bonemaw Tooth",
     "biome": "ashlands",
     "tier": 8,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "ru": "Зуб Костепасти"
+    }
   },
   {
     "name": "Bronze",
     "biome": "black-forest",
     "tier": 2,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Bronz",
+      "de": "Bronze",
+      "fr": "Bronze",
+      "ru": "Бронза"
+    }
   },
   {
     "name": "Carapace",
     "biome": "mistlands",
     "tier": 7,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Krunýř",
+      "de": "Chitinpanzer",
+      "fr": "Carapace",
+      "ru": "Панцирь"
+    }
   },
   {
     "name": "Cast Echo Spike",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Nornathread, Frostfire Essence, Mould Echo Spike"
+    "note": "crafted from Bloodgold, Nornathread, Frostfire Essence, Mould Echo Spike",
+    "names": {}
   },
   {
     "name": "Cast Lightning Strike",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Nornathread, Thunderblood Essence, Mould Lightning Strike"
+    "note": "crafted from Bloodgold, Nornathread, Thunderblood Essence, Mould Lightning Strike",
+    "names": {}
   },
   {
     "name": "Cast Nord Atgeir",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Atgeir, Timberwood"
+    "note": "crafted from Bloodgold, Mould Nord Atgeir, Timberwood",
+    "names": {}
   },
   {
     "name": "Cast Nord Axe",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Axe, Timberwood"
+    "note": "crafted from Bloodgold, Mould Nord Axe, Timberwood",
+    "names": {}
   },
   {
     "name": "Cast Nord Bow",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Bow, Timberwood"
+    "note": "crafted from Bloodgold, Mould Nord Bow, Timberwood",
+    "names": {}
   },
   {
     "name": "Cast Nord Crossbow",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Crossbow, Timberwood"
+    "note": "crafted from Bloodgold, Mould Nord Crossbow, Timberwood",
+    "names": {}
   },
   {
     "name": "Cast Nord Dagger",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Dagger, Timberwood"
+    "note": "crafted from Bloodgold, Mould Nord Dagger, Timberwood",
+    "names": {}
   },
   {
     "name": "Cast Nord Greataxe",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Greataxe, Timberwood"
+    "note": "crafted from Bloodgold, Mould Nord Greataxe, Timberwood",
+    "names": {}
   },
   {
     "name": "Cast Nord Greatsword",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Greatsword, Frozen Branch"
+    "note": "crafted from Bloodgold, Mould Nord Greatsword, Frozen Branch",
+    "names": {}
   },
   {
     "name": "Cast Nord Knucklechains",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Knucklechains, Long Claws"
+    "note": "crafted from Bloodgold, Mould Nord Knucklechains, Long Claws",
+    "names": {}
   },
   {
     "name": "Cast Nord Mace",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Mace, Timberwood"
+    "note": "crafted from Bloodgold, Mould Nord Mace, Timberwood",
+    "names": {}
   },
   {
     "name": "Cast Nord Sledge",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Sledge, Timberwood"
+    "note": "crafted from Bloodgold, Mould Nord Sledge, Timberwood",
+    "names": {}
   },
   {
     "name": "Cast Nord Spear",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Spear, Timberwood"
+    "note": "crafted from Bloodgold, Mould Nord Spear, Timberwood",
+    "names": {}
   },
   {
     "name": "Cast Nord Sword",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Sword, Timberwood"
+    "note": "crafted from Bloodgold, Mould Nord Sword, Timberwood",
+    "names": {}
   },
   {
     "name": "Cast Northern Vengeance",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Ice, Nornathread, Hexen Trophy, Mould Northern Vengeance"
+    "note": "crafted from Ice, Nornathread, Hexen Trophy, Mould Northern Vengeance",
+    "names": {}
   },
   {
     "name": "Celestial Feather",
     "biome": "ashlands",
     "tier": 8,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "ru": "Небесное перо"
+    }
   },
   {
     "name": "Charred Bone",
     "biome": "ashlands",
     "tier": 8,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "ru": "Обугленная кость"
+    }
   },
   {
     "name": "Chitin",
     "biome": "ocean",
     "tier": 3,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Chitin",
+      "fr": "Chitine",
+      "ru": "Хитин"
+    }
   },
   {
     "name": "Copper",
     "biome": "black-forest",
     "tier": 2,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Měď",
+      "de": "Kupfer",
+      "fr": "Cuivre",
+      "ru": "Медь"
+    }
   },
   {
     "name": "Corewood",
     "biome": "black-forest",
     "tier": 2,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Jádrové dřevo",
+      "de": "Kernholz",
+      "fr": "Bois robuste",
+      "ru": "Цельная древесина"
+    }
   },
   {
     "name": "Crystal",
     "biome": "mountain",
     "tier": 5,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Krystal",
+      "ru": "Кристалл"
+    }
   },
   {
     "name": "Curious Axe Head",
     "biome": "meadows",
     "tier": 1,
     "how": "wiki",
-    "note": "found in Abandoned House (meadows)"
+    "note": "found in Abandoned House (meadows)",
+    "names": {
+      "ru": "Древние топоры"
+    }
   },
   {
     "name": "Deer Hide",
     "biome": "meadows",
     "tier": 1,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Jelení kůže",
+      "de": "Hirschfell",
+      "fr": "Peau de cerf",
+      "ru": "Шкура оленя"
+    }
   },
   {
     "name": "Deer Trophy",
     "biome": "meadows",
     "tier": 1,
     "how": "wiki",
-    "note": "drops from creature Deer"
+    "note": "drops from creature Deer",
+    "names": {
+      "cs": "Trofeje",
+      "ru": "Категория:Трофеи"
+    }
   },
   {
     "name": "Draugr Elite Trophy",
     "biome": "swamp",
     "tier": 4,
     "how": "wiki",
-    "note": "drops from creature Draugr Elite"
+    "note": "drops from creature Draugr Elite",
+    "names": {
+      "cs": "Trofeje",
+      "ru": "Категория:Трофеи"
+    }
   },
   {
     "name": "Dyrnwyn blade fragment",
     "biome": "ashlands",
     "tier": 8,
     "how": "wiki",
-    "note": "crafted from Dyrnwyn hilt fragment, Dyrnwyn blade fragment, Dyrnwyn tip fragment, Flametal, Bloodstone"
+    "note": "crafted from Dyrnwyn hilt fragment, Dyrnwyn blade fragment, Dyrnwyn tip fragment, Flametal, Bloodstone",
+    "names": {
+      "cs": "Dyrnwyn",
+      "ru": "Дирнвин"
+    }
   },
   {
     "name": "Dyrnwyn hilt fragment",
     "biome": "ashlands",
     "tier": 8,
     "how": "wiki",
-    "note": "crafted from Dyrnwyn hilt fragment, Dyrnwyn blade fragment, Dyrnwyn tip fragment, Flametal, Bloodstone"
+    "note": "crafted from Dyrnwyn hilt fragment, Dyrnwyn blade fragment, Dyrnwyn tip fragment, Flametal, Bloodstone",
+    "names": {
+      "cs": "Dyrnwyn",
+      "ru": "Дирнвин"
+    }
   },
   {
     "name": "Dyrnwyn tip fragment",
     "biome": "ashlands",
     "tier": 8,
     "how": "wiki",
-    "note": "crafted from Dyrnwyn hilt fragment, Dyrnwyn blade fragment, Dyrnwyn tip fragment, Flametal, Bloodstone"
+    "note": "crafted from Dyrnwyn hilt fragment, Dyrnwyn blade fragment, Dyrnwyn tip fragment, Flametal, Bloodstone",
+    "names": {
+      "cs": "Dyrnwyn",
+      "ru": "Дирнвин"
+    }
   },
   {
     "name": "Embers",
     "biome": "meadows",
     "tier": 1,
     "how": "wiki",
-    "note": "structure Eternal Pyre built from Stone, Kindled Ribs"
+    "note": "structure Eternal Pyre built from Stone, Kindled Ribs",
+    "names": {}
   },
   {
     "name": "Feathers",
     "biome": "meadows",
     "tier": 1,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Peří",
+      "ru": "Перья"
+    }
   },
   {
     "name": "Fenris Claw",
     "biome": "mountain",
     "tier": 5,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Fenridův dráp",
+      "ru": "Коготь Фенриса"
+    }
   },
   {
     "name": "Fenris Hair",
     "biome": "mountain",
     "tier": 5,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Fenridovy chlupy",
+      "ru": "Шерсть Фенриса"
+    }
   },
   {
     "name": "Fiddlehead",
     "biome": "ashlands",
     "tier": 8,
     "how": "wiki",
-    "note": "mentioned biome ashlands"
+    "note": "mentioned biome ashlands",
+    "names": {
+      "cs": "Houslihlavka",
+      "ru": "Рахис"
+    }
   },
   {
     "name": "Finewood",
     "biome": "black-forest",
     "tier": 2,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Jemné dřevo",
+      "de": "Edelholz",
+      "fr": "Bois précieux",
+      "ru": "Качественная древесина"
+    }
   },
   {
     "name": "Flametal",
     "biome": "ashlands",
     "tier": 8,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Plamenný kov",
+      "de": "Flammenkern",
+      "fr": "Flametal",
+      "ru": "Огнеметалл"
+    }
   },
   {
     "name": "Flametal Mace",
     "biome": "ashlands",
     "tier": 8,
     "how": "wiki",
-    "note": "crafted from Charred Bone, Flametal, Sulfur, Asksvin Hide"
+    "note": "crafted from Charred Bone, Flametal, Sulfur, Asksvin Hide",
+    "names": {
+      "de": "Flammenkern-Streitkolben",
+      "ru": "Огнеметаллическая булава"
+    }
   },
   {
     "name": "Flint",
     "biome": "meadows",
     "tier": 1,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Pazourek",
+      "fr": "Silex",
+      "ru": "Кремень"
+    }
   },
   {
     "name": "Freeze Gland",
     "biome": "mountain",
     "tier": 5,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Zmrzlá žláza",
+      "de": "Gefrorene Drüse",
+      "fr": "Glande gelée",
+      "ru": "Морозная железа"
+    }
   },
   {
     "name": "Frostfire Essence",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "lead mentioned creature Fallen Warrior"
+    "note": "lead mentioned creature Fallen Warrior",
+    "names": {}
   },
   {
     "name": "Guck",
     "biome": "swamp",
     "tier": 4,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Sliz",
+      "de": "Glibber",
+      "fr": "Viscosité",
+      "ru": "Слизь"
+    }
   },
   {
     "name": "Hard Antler",
     "biome": "meadows",
     "tier": 1,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Tvrdý paroh",
+      "de": "Hartes Geweih",
+      "fr": "Bois dur",
+      "ru": "Твердый рог"
+    }
   },
   {
     "name": "Iolite",
     "biome": "mistlands",
     "tier": 7,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "ru": "Иолит"
+    }
   },
   {
     "name": "Iron",
     "biome": "swamp",
     "tier": 4,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Železo",
+      "de": "Eisen",
+      "fr": "Fer",
+      "ru": "Железо"
+    }
   },
   {
     "name": "Jade",
     "biome": "mistlands",
     "tier": 7,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "ru": "Нефрит"
+    }
   },
   {
     "name": "Leather Scraps",
     "biome": "meadows",
     "tier": 1,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Zbytky z kůže",
+      "de": "Lederreste",
+      "fr": "Bouts de cuir",
+      "ru": "Кожаные обрывки"
+    }
   },
   {
     "name": "Linen",
     "biome": "plains",
     "tier": 6,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Lněné vlákno",
+      "fr": "Toile de lin",
+      "ru": "Льняная нить"
+    }
   },
   {
     "name": "Linen Thread",
     "biome": "plains",
     "tier": 6,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Lněné vlákno",
+      "fr": "Toile de lin",
+      "ru": "Льняная нить"
+    }
   },
   {
     "name": "Liquid Frost",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "structure Frigid Kiln built from Stone, Frostcore, Ice"
+    "note": "structure Frigid Kiln built from Stone, Frostcore, Ice",
+    "names": {}
   },
   {
     "name": "Mandible",
     "biome": "mistlands",
     "tier": 7,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Kusadlo",
+      "ru": "Мандибула"
+    }
   },
   {
     "name": "Morgen Sinew",
     "biome": "ashlands",
     "tier": 8,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "ru": "Сухожилие моргена"
+    }
   },
   {
     "name": "Mysterious Axe Head",
     "biome": "meadows",
     "tier": 1,
     "how": "wiki",
-    "note": "found in Abandoned House (meadows)"
+    "note": "found in Abandoned House (meadows)",
+    "names": {
+      "ru": "Древние топоры"
+    }
   },
   {
     "name": "Needle",
     "biome": "plains",
     "tier": 6,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Jehla",
+      "ru": "Игла"
+    }
   },
   {
     "name": "Nidhögg",
     "biome": "ashlands",
     "tier": 8,
     "how": "wiki",
-    "note": "crafted from Charred Bone, Flametal, Asksvin Hide"
+    "note": "crafted from Charred Bone, Flametal, Asksvin Hide",
+    "names": {
+      "ru": "Нидхёгг"
+    }
   },
   {
     "name": "Nord Atgeir",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Atgeir, Timberwood"
+    "note": "crafted from Bloodgold, Mould Nord Atgeir, Timberwood",
+    "names": {}
   },
   {
     "name": "Nord Axe",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Axe, Timberwood"
+    "note": "crafted from Bloodgold, Mould Nord Axe, Timberwood",
+    "names": {}
   },
   {
     "name": "Nord Bow",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Bow, Timberwood"
+    "note": "crafted from Bloodgold, Mould Nord Bow, Timberwood",
+    "names": {}
   },
   {
     "name": "Nord Crossbow",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Crossbow, Timberwood"
+    "note": "crafted from Bloodgold, Mould Nord Crossbow, Timberwood",
+    "names": {}
   },
   {
     "name": "Nord Dagger",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Dagger, Timberwood"
+    "note": "crafted from Bloodgold, Mould Nord Dagger, Timberwood",
+    "names": {}
   },
   {
     "name": "Nord Greataxe",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Greataxe, Timberwood"
+    "note": "crafted from Bloodgold, Mould Nord Greataxe, Timberwood",
+    "names": {}
   },
   {
     "name": "Nord Greatsword",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Greatsword, Frozen Branch"
+    "note": "crafted from Bloodgold, Mould Nord Greatsword, Frozen Branch",
+    "names": {}
   },
   {
     "name": "Nord Knucklechains",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Knucklechains, Long Claws"
+    "note": "crafted from Bloodgold, Mould Nord Knucklechains, Long Claws",
+    "names": {}
   },
   {
     "name": "Nord Mace",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Mace, Timberwood"
+    "note": "crafted from Bloodgold, Mould Nord Mace, Timberwood",
+    "names": {}
   },
   {
     "name": "Nord Sledge",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Sledge, Timberwood"
+    "note": "crafted from Bloodgold, Mould Nord Sledge, Timberwood",
+    "names": {}
   },
   {
     "name": "Nord Spear",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Spear, Timberwood"
+    "note": "crafted from Bloodgold, Mould Nord Spear, Timberwood",
+    "names": {}
   },
   {
     "name": "Nord Sword",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "crafted from Bloodgold, Mould Nord Sword, Timberwood"
+    "note": "crafted from Bloodgold, Mould Nord Sword, Timberwood",
+    "names": {}
   },
   {
     "name": "Obsidian",
     "biome": "mountain",
     "tier": 5,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Obsidián",
+      "ru": "Обсидиан"
+    }
   },
   {
     "name": "Ooze",
     "biome": "swamp",
     "tier": 4,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Kal",
+      "de": "Schlamm",
+      "fr": "Gadoue",
+      "ru": "Жижа"
+    }
   },
   {
     "name": "Proustite Powder",
     "biome": "ashlands",
     "tier": 8,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "ru": "Пруститовый порошок"
+    }
   },
   {
     "name": "Refined Eitr",
     "biome": "mistlands",
     "tier": 7,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Zpracovaný Éitr",
+      "ru": "Переработанный эйтр"
+    }
   },
   {
     "name": "Resin",
     "biome": "meadows",
     "tier": 1,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Pryskyřice",
+      "de": "Harz",
+      "fr": "Résine",
+      "ru": "Смола"
+    }
   },
   {
     "name": "Ripper",
     "biome": "ashlands",
     "tier": 8,
     "how": "wiki",
-    "note": "crafted from Ashwood, Flametal, Morgen Sinew, Bonemaw Tooth"
+    "note": "crafted from Ashwood, Flametal, Morgen Sinew, Bonemaw Tooth",
+    "names": {
+      "ru": "Разрыватель"
+    }
   },
   {
     "name": "Root",
     "biome": "swamp",
     "tier": 4,
-    "how": "table"
+    "how": "table",
+    "names": {}
   },
   {
     "name": "Sap",
     "biome": "mistlands",
     "tier": 7,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Míza",
+      "ru": "Живица"
+    }
   },
   {
     "name": "Scale Hide",
     "biome": "mistlands",
     "tier": 7,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Šupinatá kožešina",
+      "de": "Schuppenhaut",
+      "fr": "Peau écailleuse",
+      "ru": "Чешуйчатая шкура"
+    }
   },
   {
     "name": "Seal Pelt",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "linked creature Seal"
+    "note": "linked creature Seal",
+    "names": {}
   },
   {
     "name": "Silver",
     "biome": "mountain",
     "tier": 5,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Stříbro",
+      "de": "Silber",
+      "fr": "Argent",
+      "ru": "Серебро"
+    }
   },
   {
     "name": "Slayer",
     "biome": "ashlands",
     "tier": 8,
     "how": "wiki",
-    "note": "crafted from Flametal, Asksvin Hide, Morgen Sinew"
+    "note": "crafted from Flametal, Asksvin Hide, Morgen Sinew",
+    "names": {
+      "ru": "Убийца"
+    }
   },
   {
     "name": "Smoke Puff",
     "biome": "ashlands",
     "tier": 8,
     "how": "wiki",
-    "note": "mentioned biome ashlands"
+    "note": "mentioned biome ashlands",
+    "names": {
+      "cs": "Kouřovka",
+      "ru": "Дымчатый гриб"
+    }
   },
   {
     "name": "Splitnir",
     "biome": "ashlands",
     "tier": 8,
     "how": "wiki",
-    "note": "crafted from Ashwood, Flametal, Asksvin Hide, Bonemaw Tooth"
+    "note": "crafted from Ashwood, Flametal, Asksvin Hide, Bonemaw Tooth",
+    "names": {
+      "ru": "Расколнир"
+    }
   },
   {
     "name": "Stone",
     "biome": "meadows",
     "tier": 1,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Kámen",
+      "de": "Stein",
+      "fr": "Pierre",
+      "ru": "Камень"
+    }
   },
   {
     "name": "Sulfur",
     "biome": "ashlands",
     "tier": 8,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "ru": "Сера"
+    }
   },
   {
     "name": "Surtling Core",
     "biome": "black-forest",
     "tier": 2,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Jádro Surtlinga",
+      "ru": "Ядро суртлинга"
+    }
   },
   {
     "name": "Thunderblood Essence",
     "biome": "deep-north",
     "tier": 9,
     "how": "wiki",
-    "note": "lead mentioned creature Fallen Warrior"
+    "note": "lead mentioned creature Fallen Warrior",
+    "names": {}
   },
   {
     "name": "Timberwood",
     "biome": "deep-north",
     "tier": 9,
-    "how": "table"
+    "how": "table",
+    "names": {}
   },
   {
     "name": "Troll Hide",
     "biome": "black-forest",
     "tier": 2,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Trollí kůže",
+      "de": "Trollleder",
+      "fr": "Peau de troll",
+      "ru": "Шкура тролля"
+    }
   },
   {
     "name": "Troll Trophy",
     "biome": "black-forest",
     "tier": 2,
     "how": "wiki",
-    "note": "drops from creature Troll"
+    "note": "drops from creature Troll",
+    "names": {
+      "cs": "Trofeje",
+      "ru": "Категория:Трофеи"
+    }
   },
   {
     "name": "Vile Ribcage",
     "biome": "plains",
     "tier": 6,
     "how": "wiki",
-    "note": "linked creature Vile"
+    "note": "linked creature Vile",
+    "names": {
+      "ru": "Гнилостные ребра"
+    }
   },
   {
     "name": "Wisp",
     "biome": "plains",
     "tier": 6,
     "how": "wiki",
-    "note": "structure Wisp Fountain built from Stone, Torn Spirit"
+    "note": "structure Wisp Fountain built from Stone, Torn Spirit",
+    "names": {
+      "cs": "Dušička",
+      "ru": "Светлячок"
+    }
   },
   {
     "name": "Wolf Fang",
     "biome": "mountain",
     "tier": 5,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Vlčí tesák",
+      "ru": "Волчий клык"
+    }
   },
   {
     "name": "Wood",
     "biome": "meadows",
     "tier": 1,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Dřevo",
+      "de": "Holz",
+      "fr": "Bois",
+      "ru": "Древесина"
+    }
   },
   {
     "name": "Yggdrasil Wood",
     "biome": "mistlands",
     "tier": 7,
-    "how": "table"
+    "how": "table",
+    "names": {
+      "cs": "Dřevo Yggdrasilu",
+      "de": "Yggdrasil-Holz",
+      "fr": "Bois d'Yggdrasil",
+      "ru": "Древесина Иггдрасиля"
+    }
   },
   {
     "name": "Ymir Flesh",
     "biome": "swamp",
     "tier": 4,
     "how": "wiki",
-    "note": "purchased from Haldor after The Elder"
+    "note": "purchased from Haldor after The Elder",
+    "names": {
+      "cs": "Maso Ymira",
+      "fr": "Chair d'Ymir",
+      "ru": "Плоть Имира"
+    }
   }
 ]

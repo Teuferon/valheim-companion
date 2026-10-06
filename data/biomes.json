@@ -24,6 +24,14 @@
         "perch",
         "pike"
       ]
+    },
+    "names": {
+      "cs": "Louky",
+      "de": "Grasland",
+      "fr": "Prairies",
+      "pt": "Prados",
+      "ru": "Луга",
+      "zh": "草原"
     }
   },
   {
@@ -60,6 +68,12 @@
         "pike",
         "trollfish"
       ]
+    },
+    "names": {
+      "cs": "Černý Les",
+      "de": "Düsterwald",
+      "fr": "Forêt noire",
+      "ru": "Черный лес"
     }
   },
   {
@@ -84,6 +98,13 @@
         "pufferfish",
         "tuna"
       ]
+    },
+    "names": {
+      "cs": "Oceán",
+      "de": "Ozean",
+      "fr": "Océan",
+      "ru": "Океан",
+      "zh": "海洋"
     }
   },
   {
@@ -115,6 +136,13 @@
       "fish": [
         "giant-herring"
       ]
+    },
+    "names": {
+      "cs": "Bažiny",
+      "de": "Sumpf",
+      "fr": "Marécages",
+      "ru": "Болото",
+      "zh": "沼澤"
     }
   },
   {
@@ -146,6 +174,12 @@
       "fish": [
         "tetra"
       ]
+    },
+    "names": {
+      "cs": "Hory",
+      "fr": "Montagne",
+      "ru": "Гора",
+      "zh": "雪山"
     }
   },
   {
@@ -179,6 +213,12 @@
       "fish": [
         "grouper"
       ]
+    },
+    "names": {
+      "cs": "Planiny",
+      "fr": "Plaines",
+      "ru": "Равнины",
+      "zh": "平原"
     }
   },
   {
@@ -210,6 +250,10 @@
         "anglerfish",
         "pufferfish"
       ]
+    },
+    "names": {
+      "cs": "Mlžné krajiny",
+      "ru": "Туманные земли"
     }
   },
   {
@@ -246,6 +290,10 @@
       "fish": [
         "magmafish"
       ]
+    },
+    "names": {
+      "cs": "Prašné končiny",
+      "ru": "Пепельные земли"
     }
   },
   {
@@ -286,6 +334,10 @@
       "fish": [
         "northern-salmon"
       ]
+    },
+    "names": {
+      "cs": "Daleký sever",
+      "ru": "Дальний север"
     }
   }
 ]

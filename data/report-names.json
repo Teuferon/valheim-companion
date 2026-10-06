@@ -1,0 +1,386 @@
+{
+  "cs": {
+    "creatures": {
+      "count": 65,
+      "total": 106,
+      "percent": 61.3
+    },
+    "weapons": {
+      "count": 62,
+      "total": 153,
+      "percent": 40.5
+    },
+    "items": {
+      "count": 54,
+      "total": 85,
+      "percent": 63.5
+    },
+    "armor": {
+      "count": 35,
+      "total": 113,
+      "percent": 31
+    },
+    "sets": {
+      "count": 15,
+      "total": 68,
+      "percent": 22.1
+    },
+    "biomes": {
+      "count": 9,
+      "total": 9,
+      "percent": 100
+    }
+  },
+  "de": {
+    "creatures": {
+      "count": 59,
+      "total": 106,
+      "percent": 55.7
+    },
+    "weapons": {
+      "count": 25,
+      "total": 153,
+      "percent": 16.3
+    },
+    "items": {
+      "count": 39,
+      "total": 85,
+      "percent": 45.9
+    },
+    "armor": {
+      "count": 2,
+      "total": 113,
+      "percent": 1.8
+    },
+    "sets": {
+      "count": 2,
+      "total": 68,
+      "percent": 2.9
+    },
+    "biomes": {
+      "count": 4,
+      "total": 9,
+      "percent": 44.4
+    }
+  },
+  "es": {
+    "creatures": {
+      "count": 0,
+      "total": 106,
+      "percent": 0
+    },
+    "weapons": {
+      "count": 0,
+      "total": 153,
+      "percent": 0
+    },
+    "items": {
+      "count": 0,
+      "total": 85,
+      "percent": 0
+    },
+    "armor": {
+      "count": 0,
+      "total": 113,
+      "percent": 0
+    },
+    "sets": {
+      "count": 0,
+      "total": 68,
+      "percent": 0
+    },
+    "biomes": {
+      "count": 0,
+      "total": 9,
+      "percent": 0
+    }
+  },
+  "fr": {
+    "creatures": {
+      "count": 54,
+      "total": 106,
+      "percent": 50.9
+    },
+    "weapons": {
+      "count": 51,
+      "total": 153,
+      "percent": 33.3
+    },
+    "items": {
+      "count": 41,
+      "total": 85,
+      "percent": 48.2
+    },
+    "armor": {
+      "count": 5,
+      "total": 113,
+      "percent": 4.4
+    },
+    "sets": {
+      "count": 2,
+      "total": 68,
+      "percent": 2.9
+    },
+    "biomes": {
+      "count": 6,
+      "total": 9,
+      "percent": 66.7
+    }
+  },
+  "pt": {
+    "creatures": {
+      "count": 3,
+      "total": 106,
+      "percent": 2.8
+    },
+    "weapons": {
+      "count": 0,
+      "total": 153,
+      "percent": 0
+    },
+    "items": {
+      "count": 0,
+      "total": 85,
+      "percent": 0
+    },
+    "armor": {
+      "count": 0,
+      "total": 113,
+      "percent": 0
+    },
+    "sets": {
+      "count": 0,
+      "total": 68,
+      "percent": 0
+    },
+    "biomes": {
+      "count": 1,
+      "total": 9,
+      "percent": 11.1
+    }
+  },
+  "zh": {
+    "creatures": {
+      "count": 0,
+      "total": 106,
+      "percent": 0
+    },
+    "weapons": {
+      "count": 0,
+      "total": 153,
+      "percent": 0
+    },
+    "items": {
+      "count": 0,
+      "total": 85,
+      "percent": 0
+    },
+    "armor": {
+      "count": 0,
+      "total": 113,
+      "percent": 0
+    },
+    "sets": {
+      "count": 0,
+      "total": 68,
+      "percent": 0
+    },
+    "biomes": {
+      "count": 5,
+      "total": 9,
+      "percent": 55.6
+    }
+  },
+  "hi": {
+    "creatures": {
+      "count": 0,
+      "total": 106,
+      "percent": 0
+    },
+    "weapons": {
+      "count": 0,
+      "total": 153,
+      "percent": 0
+    },
+    "items": {
+      "count": 0,
+      "total": 85,
+      "percent": 0
+    },
+    "armor": {
+      "count": 0,
+      "total": 113,
+      "percent": 0
+    },
+    "sets": {
+      "count": 0,
+      "total": 68,
+      "percent": 0
+    },
+    "biomes": {
+      "count": 0,
+      "total": 9,
+      "percent": 0
+    }
+  },
+  "ar": {
+    "creatures": {
+      "count": 0,
+      "total": 106,
+      "percent": 0
+    },
+    "weapons": {
+      "count": 0,
+      "total": 153,
+      "percent": 0
+    },
+    "items": {
+      "count": 0,
+      "total": 85,
+      "percent": 0
+    },
+    "armor": {
+      "count": 0,
+      "total": 113,
+      "percent": 0
+    },
+    "sets": {
+      "count": 0,
+      "total": 68,
+      "percent": 0
+    },
+    "biomes": {
+      "count": 0,
+      "total": 9,
+      "percent": 0
+    }
+  },
+  "bn": {
+    "creatures": {
+      "count": 0,
+      "total": 106,
+      "percent": 0
+    },
+    "weapons": {
+      "count": 0,
+      "total": 153,
+      "percent": 0
+    },
+    "items": {
+      "count": 0,
+      "total": 85,
+      "percent": 0
+    },
+    "armor": {
+      "count": 0,
+      "total": 113,
+      "percent": 0
+    },
+    "sets": {
+      "count": 0,
+      "total": 68,
+      "percent": 0
+    },
+    "biomes": {
+      "count": 0,
+      "total": 9,
+      "percent": 0
+    }
+  },
+  "ru": {
+    "creatures": {
+      "count": 85,
+      "total": 106,
+      "percent": 80.2
+    },
+    "weapons": {
+      "count": 109,
+      "total": 153,
+      "percent": 71.2
+    },
+    "items": {
+      "count": 61,
+      "total": 85,
+      "percent": 71.8
+    },
+    "armor": {
+      "count": 96,
+      "total": 113,
+      "percent": 85
+    },
+    "sets": {
+      "count": 60,
+      "total": 68,
+      "percent": 88.2
+    },
+    "biomes": {
+      "count": 9,
+      "total": 9,
+      "percent": 100
+    }
+  },
+  "ja": {
+    "creatures": {
+      "count": 0,
+      "total": 106,
+      "percent": 0
+    },
+    "weapons": {
+      "count": 0,
+      "total": 153,
+      "percent": 0
+    },
+    "items": {
+      "count": 0,
+      "total": 85,
+      "percent": 0
+    },
+    "armor": {
+      "count": 0,
+      "total": 113,
+      "percent": 0
+    },
+    "sets": {
+      "count": 0,
+      "total": 68,
+      "percent": 0
+    },
+    "biomes": {
+      "count": 0,
+      "total": 9,
+      "percent": 0
+    }
+  },
+  "id": {
+    "creatures": {
+      "count": 0,
+      "total": 106,
+      "percent": 0
+    },
+    "weapons": {
+      "count": 0,
+      "total": 153,
+      "percent": 0
+    },
+    "items": {
+      "count": 0,
+      "total": 85,
+      "percent": 0
+    },
+    "armor": {
+      "count": 0,
+      "total": 113,
+      "percent": 0
+    },
+    "sets": {
+      "count": 0,
+      "total": 68,
+      "percent": 0
+    },
+    "biomes": {
+      "count": 0,
+      "total": 9,
+      "percent": 0
+    }
+  }
+}

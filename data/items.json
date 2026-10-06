@@ -28,7 +28,11 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Amber_Pearl"
+    "wiki": "https://valheim.weirdgloop.org/w/Amber_Pearl",
+    "names": {
+      "cs": "Jantarová Perla",
+      "ru": "Янтарная жемчужина"
+    }
   },
   {
     "id": "ancient-bark",
@@ -43,7 +47,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Ancient_Bark"
+    "wiki": "https://valheim.weirdgloop.org/w/Ancient_Bark",
+    "names": {
+      "cs": "Starověká kůra",
+      "de": "Alte Rinde",
+      "fr": "Écorce ancienne",
+      "ru": "Древняя кора"
+    }
   },
   {
     "id": "anglerfish",
@@ -58,7 +68,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Anglerfish"
+    "wiki": "https://valheim.weirdgloop.org/w/Anglerfish",
+    "names": {
+      "cs": "Ďas",
+      "de": "Seeteufel",
+      "fr": "Poisson-pêcheur",
+      "ru": "Удильщик"
+    }
   },
   {
     "id": "asksvin-hide",
@@ -81,7 +97,10 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Asksvin_Hide"
+    "wiki": "https://valheim.weirdgloop.org/w/Asksvin_Hide",
+    "names": {
+      "ru": "Шкура пеплозавра"
+    }
   },
   {
     "id": "bear-hide",
@@ -108,7 +127,10 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Bear_Hide"
+    "wiki": "https://valheim.weirdgloop.org/w/Bear_Hide",
+    "names": {
+      "ru": "Медвежья шкура"
+    }
   },
   {
     "id": "bear-paw",
@@ -127,7 +149,10 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Bear_Paw"
+    "wiki": "https://valheim.weirdgloop.org/w/Bear_Paw",
+    "names": {
+      "ru": "Медвежья лапа"
+    }
   },
   {
     "id": "bear-trophy",
@@ -146,7 +171,11 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Bear_Trophy"
+    "wiki": "https://valheim.weirdgloop.org/w/Bear_Trophy",
+    "names": {
+      "cs": "Trofeje",
+      "ru": "Категория:Трофеи"
+    }
   },
   {
     "id": "bloodgold",
@@ -170,7 +199,8 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Bloodgold"
+    "wiki": "https://valheim.weirdgloop.org/w/Bloodgold",
+    "names": {}
   },
   {
     "id": "blueberries",
@@ -185,7 +215,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Blueberries"
+    "wiki": "https://valheim.weirdgloop.org/w/Blueberries",
+    "names": {
+      "cs": "Borůvky",
+      "de": "Blaubeeren",
+      "fr": "Myrtilles",
+      "ru": "Черника"
+    }
   },
   {
     "id": "bone-fragments",
@@ -223,7 +259,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Bone_Fragments"
+    "wiki": "https://valheim.weirdgloop.org/w/Bone_Fragments",
+    "names": {
+      "cs": "Fragmenty kostí",
+      "de": "Knochenfragmente",
+      "fr": "Fragments d'os",
+      "ru": "Обломки костей"
+    }
   },
   {
     "id": "bronze",
@@ -255,7 +297,13 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Bronze"
+    "wiki": "https://valheim.weirdgloop.org/w/Bronze",
+    "names": {
+      "cs": "Bronz",
+      "de": "Bronze",
+      "fr": "Bronze",
+      "ru": "Бронза"
+    }
   },
   {
     "id": "carapace",
@@ -282,7 +330,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Carapace"
+    "wiki": "https://valheim.weirdgloop.org/w/Carapace",
+    "names": {
+      "cs": "Krunýř",
+      "de": "Chitinpanzer",
+      "fr": "Carapace",
+      "ru": "Панцирь"
+    }
   },
   {
     "id": "cast-breastplate-of-the-protector",
@@ -314,7 +368,8 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Cast_Breastplate_of_the_Protector"
+    "wiki": "https://valheim.weirdgloop.org/w/Cast_Breastplate_of_the_Protector",
+    "names": {}
   },
   {
     "id": "cast-chestpiece-of-the-vanguard",
@@ -350,7 +405,8 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Cast_Chestpiece_of_the_Vanguard"
+    "wiki": "https://valheim.weirdgloop.org/w/Cast_Chestpiece_of_the_Vanguard",
+    "names": {}
   },
   {
     "id": "cast-headdress-of-the-caller",
@@ -386,7 +442,8 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Cast_Headdress_of_the_Caller"
+    "wiki": "https://valheim.weirdgloop.org/w/Cast_Headdress_of_the_Caller",
+    "names": {}
   },
   {
     "id": "cast-helmet-of-the-protector",
@@ -418,7 +475,8 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Cast_Helmet_of_the_Protector"
+    "wiki": "https://valheim.weirdgloop.org/w/Cast_Helmet_of_the_Protector",
+    "names": {}
   },
   {
     "id": "cast-hood-of-the-vanguard",
@@ -454,7 +512,8 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Cast_Hood_of_the_Vanguard"
+    "wiki": "https://valheim.weirdgloop.org/w/Cast_Hood_of_the_Vanguard",
+    "names": {}
   },
   {
     "id": "cast-robes-of-the-caller",
@@ -490,7 +549,8 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Cast_Robes_of_the_Caller"
+    "wiki": "https://valheim.weirdgloop.org/w/Cast_Robes_of_the_Caller",
+    "names": {}
   },
   {
     "id": "cast-trousers-of-the-caller",
@@ -526,7 +586,8 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Cast_Trousers_of_the_Caller"
+    "wiki": "https://valheim.weirdgloop.org/w/Cast_Trousers_of_the_Caller",
+    "names": {}
   },
   {
     "id": "cast-trousers-of-the-protector",
@@ -558,7 +619,8 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Cast_Trousers_of_the_Protector"
+    "wiki": "https://valheim.weirdgloop.org/w/Cast_Trousers_of_the_Protector",
+    "names": {}
   },
   {
     "id": "cast-trousers-of-the-vanguard",
@@ -594,7 +656,8 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Cast_Trousers_of_the_Vanguard"
+    "wiki": "https://valheim.weirdgloop.org/w/Cast_Trousers_of_the_Vanguard",
+    "names": {}
   },
   {
     "id": "chain",
@@ -617,7 +680,12 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Chain"
+    "wiki": "https://valheim.weirdgloop.org/w/Chain",
+    "names": {
+      "cs": "Řetěz",
+      "fr": "Chaîne",
+      "ru": "Цепь"
+    }
   },
   {
     "id": "charred-bone",
@@ -660,7 +728,10 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Charred_Bone"
+    "wiki": "https://valheim.weirdgloop.org/w/Charred_Bone",
+    "names": {
+      "ru": "Обугленная кость"
+    }
   },
   {
     "id": "coal",
@@ -691,7 +762,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Coal"
+    "wiki": "https://valheim.weirdgloop.org/w/Coal",
+    "names": {
+      "cs": "Uhlí",
+      "de": "Kohle",
+      "fr": "Charbon",
+      "ru": "Уголь"
+    }
   },
   {
     "id": "copper",
@@ -719,7 +796,13 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Copper"
+    "wiki": "https://valheim.weirdgloop.org/w/Copper",
+    "names": {
+      "cs": "Měď",
+      "de": "Kupfer",
+      "fr": "Cuivre",
+      "ru": "Медь"
+    }
   },
   {
     "id": "copper-ore",
@@ -734,7 +817,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Copper_Ore"
+    "wiki": "https://valheim.weirdgloop.org/w/Copper_Ore",
+    "names": {
+      "cs": "Měděná ruda",
+      "de": "Kupfererz",
+      "fr": "Minerai de cuivre",
+      "ru": "Медная руда"
+    }
   },
   {
     "id": "coral-cod",
@@ -749,7 +838,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Coral_Cod"
+    "wiki": "https://valheim.weirdgloop.org/w/Coral_Cod",
+    "names": {
+      "cs": "Korálová Treska",
+      "de": "Korallenbarsch",
+      "fr": "Vieille de corail",
+      "ru": "Коралловая треска"
+    }
   },
   {
     "id": "crown-jewel",
@@ -768,7 +863,8 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Crown_Jewel"
+    "wiki": "https://valheim.weirdgloop.org/w/Crown_Jewel",
+    "names": {}
   },
   {
     "id": "cultist-trophy",
@@ -787,7 +883,11 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Cultist_Trophy"
+    "wiki": "https://valheim.weirdgloop.org/w/Cultist_Trophy",
+    "names": {
+      "cs": "Trofeje",
+      "ru": "Категория:Трофеи"
+    }
   },
   {
     "id": "dandelion",
@@ -802,7 +902,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Dandelion"
+    "wiki": "https://valheim.weirdgloop.org/w/Dandelion",
+    "names": {
+      "cs": "Pampeliška",
+      "de": "Löwenzahn",
+      "fr": "Pissenlit",
+      "ru": "Одуванчик"
+    }
   },
   {
     "id": "deer-hide",
@@ -822,7 +928,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Deer_Hide"
+    "wiki": "https://valheim.weirdgloop.org/w/Deer_Hide",
+    "names": {
+      "cs": "Jelení kůže",
+      "de": "Hirschfell",
+      "fr": "Peau de cerf",
+      "ru": "Шкура оленя"
+    }
   },
   {
     "id": "drake-trophy",
@@ -841,7 +953,11 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Drake_Trophy"
+    "wiki": "https://valheim.weirdgloop.org/w/Drake_Trophy",
+    "names": {
+      "cs": "Trofeje",
+      "ru": "Категория:Трофеи"
+    }
   },
   {
     "id": "elaking-hair-bundle",
@@ -860,7 +976,8 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Elaking_Hair_Bundle"
+    "wiki": "https://valheim.weirdgloop.org/w/Elaking_Hair_Bundle",
+    "names": {}
   },
   {
     "id": "feathers",
@@ -883,7 +1000,11 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Feathers"
+    "wiki": "https://valheim.weirdgloop.org/w/Feathers",
+    "names": {
+      "cs": "Peří",
+      "ru": "Перья"
+    }
   },
   {
     "id": "fenris-hair",
@@ -898,7 +1019,11 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Fenris_Hair"
+    "wiki": "https://valheim.weirdgloop.org/w/Fenris_Hair",
+    "names": {
+      "cs": "Fenridovy chlupy",
+      "ru": "Шерсть Фенриса"
+    }
   },
   {
     "id": "flametal",
@@ -922,7 +1047,13 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Flametal"
+    "wiki": "https://valheim.weirdgloop.org/w/Flametal",
+    "names": {
+      "cs": "Plamenný kov",
+      "de": "Flammenkern",
+      "fr": "Flametal",
+      "ru": "Огнеметалл"
+    }
   },
   {
     "id": "flametal-ore",
@@ -937,7 +1068,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Flametal_Ore"
+    "wiki": "https://valheim.weirdgloop.org/w/Flametal_Ore",
+    "names": {
+      "cs": "Plamenná kovová ruda",
+      "de": "Flammenkernerz",
+      "fr": "Minerai de flametal",
+      "ru": "Огнеметаллическая руда"
+    }
   },
   {
     "id": "flax",
@@ -956,7 +1093,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Flax"
+    "wiki": "https://valheim.weirdgloop.org/w/Flax",
+    "names": {
+      "cs": "Len",
+      "de": "Flachs",
+      "fr": "Lin",
+      "ru": "Лен"
+    }
   },
   {
     "id": "giant-herring",
@@ -971,7 +1114,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Giant_Herring"
+    "wiki": "https://valheim.weirdgloop.org/w/Giant_Herring",
+    "names": {
+      "cs": "Obří Sleď",
+      "de": "Riesenhering",
+      "fr": "Guinée saumon",
+      "ru": "Гигантская сельдь"
+    }
   },
   {
     "id": "grouper",
@@ -986,7 +1135,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Grouper"
+    "wiki": "https://valheim.weirdgloop.org/w/Grouper",
+    "names": {
+      "cs": "Kanic",
+      "de": "Zackenbarsch",
+      "fr": "Mérou",
+      "ru": "Групер"
+    }
   },
   {
     "id": "ice",
@@ -1032,7 +1187,8 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Ice"
+    "wiki": "https://valheim.weirdgloop.org/w/Ice",
+    "names": {}
   },
   {
     "id": "iron",
@@ -1056,7 +1212,13 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Iron"
+    "wiki": "https://valheim.weirdgloop.org/w/Iron",
+    "names": {
+      "cs": "Železo",
+      "de": "Eisen",
+      "fr": "Fer",
+      "ru": "Железо"
+    }
   },
   {
     "id": "leather-scraps",
@@ -1087,7 +1249,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Leather_Scraps"
+    "wiki": "https://valheim.weirdgloop.org/w/Leather_Scraps",
+    "names": {
+      "cs": "Zbytky z kůže",
+      "de": "Lederreste",
+      "fr": "Bouts de cuir",
+      "ru": "Кожаные обрывки"
+    }
   },
   {
     "id": "leather-straps",
@@ -1106,7 +1274,8 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Leather_Straps"
+    "wiki": "https://valheim.weirdgloop.org/w/Leather_Straps",
+    "names": {}
   },
   {
     "id": "linen-thread",
@@ -1130,7 +1299,12 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Linen_Thread"
+    "wiki": "https://valheim.weirdgloop.org/w/Linen_Thread",
+    "names": {
+      "cs": "Lněné vlákno",
+      "fr": "Toile de lin",
+      "ru": "Льняная нить"
+    }
   },
   {
     "id": "liquid-frost",
@@ -1154,7 +1328,8 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Liquid_Frost"
+    "wiki": "https://valheim.weirdgloop.org/w/Liquid_Frost",
+    "names": {}
   },
   {
     "id": "lox-pelt",
@@ -1173,7 +1348,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Lox_Pelt"
+    "wiki": "https://valheim.weirdgloop.org/w/Lox_Pelt",
+    "names": {
+      "cs": "Kůže z Loxe",
+      "de": "Lox-Pelz",
+      "fr": "Peau de Lox",
+      "ru": "Шкура быкоящера"
+    }
   },
   {
     "id": "magmafish",
@@ -1188,7 +1369,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Magmafish"
+    "wiki": "https://valheim.weirdgloop.org/w/Magmafish",
+    "names": {
+      "cs": "Magmaplavka",
+      "de": "Magmafisch",
+      "fr": "Poisson-magma",
+      "ru": "Магмарыбка"
+    }
   },
   {
     "id": "mandible",
@@ -1207,7 +1394,11 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Mandible"
+    "wiki": "https://valheim.weirdgloop.org/w/Mandible",
+    "names": {
+      "cs": "Kusadlo",
+      "ru": "Мандибула"
+    }
   },
   {
     "id": "moose-hide",
@@ -1230,7 +1421,8 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Moose_Hide"
+    "wiki": "https://valheim.weirdgloop.org/w/Moose_Hide",
+    "names": {}
   },
   {
     "id": "moose-sinew",
@@ -1249,7 +1441,8 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Moose_Sinew"
+    "wiki": "https://valheim.weirdgloop.org/w/Moose_Sinew",
+    "names": {}
   },
   {
     "id": "moose-trophy",
@@ -1268,7 +1461,11 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Moose_Trophy"
+    "wiki": "https://valheim.weirdgloop.org/w/Moose_Trophy",
+    "names": {
+      "cs": "Trofeje",
+      "ru": "Категория:Трофеи"
+    }
   },
   {
     "id": "morgen-heart",
@@ -1287,7 +1484,10 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Morgen_Heart"
+    "wiki": "https://valheim.weirdgloop.org/w/Morgen_Heart",
+    "names": {
+      "ru": "Сердце моргена"
+    }
   },
   {
     "id": "morgen-sinew",
@@ -1306,7 +1506,10 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Morgen_Sinew"
+    "wiki": "https://valheim.weirdgloop.org/w/Morgen_Sinew",
+    "names": {
+      "ru": "Сухожилие моргена"
+    }
   },
   {
     "id": "mould-headdress-of-the-caller",
@@ -1342,7 +1545,8 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Mould_Headdress_of_the_Caller"
+    "wiki": "https://valheim.weirdgloop.org/w/Mould_Headdress_of_the_Caller",
+    "names": {}
   },
   {
     "id": "mould-helmet-of-the-protector",
@@ -1374,7 +1578,8 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Mould_Helmet_of_the_Protector"
+    "wiki": "https://valheim.weirdgloop.org/w/Mould_Helmet_of_the_Protector",
+    "names": {}
   },
   {
     "id": "mould-hood-of-the-vanguard",
@@ -1410,7 +1615,8 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Mould_Hood_of_the_Vanguard"
+    "wiki": "https://valheim.weirdgloop.org/w/Mould_Hood_of_the_Vanguard",
+    "names": {}
   },
   {
     "id": "nornathread",
@@ -1429,7 +1635,8 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Nornathread"
+    "wiki": "https://valheim.weirdgloop.org/w/Nornathread",
+    "names": {}
   },
   {
     "id": "northern-salmon",
@@ -1444,7 +1651,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Northern_Salmon"
+    "wiki": "https://valheim.weirdgloop.org/w/Northern_Salmon",
+    "names": {
+      "cs": "Severní Losos",
+      "de": "Nordlachs",
+      "fr": "Saumon nordique",
+      "ru": "Северный лосось"
+    }
   },
   {
     "id": "perch",
@@ -1459,7 +1672,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Perch"
+    "wiki": "https://valheim.weirdgloop.org/w/Perch",
+    "names": {
+      "cs": "Okoun",
+      "de": "Barsch",
+      "fr": "Perche",
+      "ru": "Окунь"
+    }
   },
   {
     "id": "petrified-tissue",
@@ -1474,7 +1693,8 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Petrified_Tissue"
+    "wiki": "https://valheim.weirdgloop.org/w/Petrified_Tissue",
+    "names": {}
   },
   {
     "id": "pike",
@@ -1489,7 +1709,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Pike"
+    "wiki": "https://valheim.weirdgloop.org/w/Pike",
+    "names": {
+      "cs": "Štika",
+      "de": "Hecht",
+      "fr": "Brochet",
+      "ru": "Щука"
+    }
   },
   {
     "id": "pufferfish",
@@ -1504,7 +1730,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Pufferfish"
+    "wiki": "https://valheim.weirdgloop.org/w/Pufferfish",
+    "names": {
+      "cs": "Čtverzubka",
+      "de": "Kugelfisch",
+      "fr": "Poisson-globe",
+      "ru": "Иглобрюх"
+    }
   },
   {
     "id": "refined-eitr",
@@ -1532,7 +1764,11 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Refined_Eitr"
+    "wiki": "https://valheim.weirdgloop.org/w/Refined_Eitr",
+    "names": {
+      "cs": "Zpracovaný Éitr",
+      "ru": "Переработанный эйтр"
+    }
   },
   {
     "id": "root",
@@ -1551,7 +1787,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Root_(item)"
+    "wiki": "https://valheim.weirdgloop.org/w/Root_(item)",
+    "names": {
+      "cs": "Kořen",
+      "de": "Wurzel",
+      "fr": "Racine",
+      "ru": "Корень"
+    }
   },
   {
     "id": "roots",
@@ -1570,7 +1812,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Root_(item)"
+    "wiki": "https://valheim.weirdgloop.org/w/Root_(item)",
+    "names": {
+      "cs": "Kořen",
+      "de": "Wurzel",
+      "fr": "Racine",
+      "ru": "Корень"
+    }
   },
   {
     "id": "sap",
@@ -1585,7 +1833,11 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Sap"
+    "wiki": "https://valheim.weirdgloop.org/w/Sap",
+    "names": {
+      "cs": "Míza",
+      "ru": "Живица"
+    }
   },
   {
     "id": "scale-hide",
@@ -1604,7 +1856,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Scale_Hide"
+    "wiki": "https://valheim.weirdgloop.org/w/Scale_Hide",
+    "names": {
+      "cs": "Šupinatá kožešina",
+      "de": "Schuppenhaut",
+      "fr": "Peau écailleuse",
+      "ru": "Чешуйчатая шкура"
+    }
   },
   {
     "id": "scrap-iron",
@@ -1639,7 +1897,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Scrap_Iron"
+    "wiki": "https://valheim.weirdgloop.org/w/Scrap_Iron",
+    "names": {
+      "cs": "Železný šrot",
+      "de": "Eisenschrott",
+      "fr": "Ferraille",
+      "ru": "Металлолом"
+    }
   },
   {
     "id": "seal-pelt",
@@ -1658,7 +1922,8 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Seal_Pelt"
+    "wiki": "https://valheim.weirdgloop.org/w/Seal_Pelt",
+    "names": {}
   },
   {
     "id": "silver",
@@ -1682,7 +1947,13 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Silver"
+    "wiki": "https://valheim.weirdgloop.org/w/Silver",
+    "names": {
+      "cs": "Stříbro",
+      "de": "Silber",
+      "fr": "Argent",
+      "ru": "Серебро"
+    }
   },
   {
     "id": "silver-ore",
@@ -1697,7 +1968,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Silver_Ore"
+    "wiki": "https://valheim.weirdgloop.org/w/Silver_Ore",
+    "names": {
+      "cs": "Stříbrná ruda",
+      "de": "Silbererz",
+      "fr": "Minerai d'argent",
+      "ru": "Серебряная руда"
+    }
   },
   {
     "id": "soft-tissue",
@@ -1720,7 +1997,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Soft_Tissue"
+    "wiki": "https://valheim.weirdgloop.org/w/Soft_Tissue",
+    "names": {
+      "cs": "Měkká Tkáň",
+      "de": "Weichgewebe",
+      "fr": "Tissu délicat",
+      "ru": "Мягкая ткань"
+    }
   },
   {
     "id": "tetra",
@@ -1735,7 +2018,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Tetra"
+    "wiki": "https://valheim.weirdgloop.org/w/Tetra",
+    "names": {
+      "cs": "Tetra",
+      "de": "Salmler",
+      "fr": "Tétra",
+      "ru": "Тетра"
+    }
   },
   {
     "id": "tin",
@@ -1759,7 +2048,13 @@
       ],
       "yields": 1
     },
-    "wiki": "https://valheim.weirdgloop.org/w/Tin"
+    "wiki": "https://valheim.weirdgloop.org/w/Tin",
+    "names": {
+      "cs": "Cín",
+      "de": "Zinn",
+      "fr": "Étain",
+      "ru": "Олово"
+    }
   },
   {
     "id": "tin-ore",
@@ -1774,7 +2069,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Tin_Ore"
+    "wiki": "https://valheim.weirdgloop.org/w/Tin_Ore",
+    "names": {
+      "cs": "Cínová ruda",
+      "de": "Zinnerz",
+      "fr": "Minerai d'étain",
+      "ru": "Оловянная руда"
+    }
   },
   {
     "id": "troll-hide",
@@ -1801,7 +2102,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Troll_Hide"
+    "wiki": "https://valheim.weirdgloop.org/w/Troll_Hide",
+    "names": {
+      "cs": "Trollí kůže",
+      "de": "Trollleder",
+      "fr": "Peau de troll",
+      "ru": "Шкура тролля"
+    }
   },
   {
     "id": "trollfish",
@@ -1816,7 +2123,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Trollfish"
+    "wiki": "https://valheim.weirdgloop.org/w/Trollfish",
+    "names": {
+      "cs": "Trollyba",
+      "de": "Trollfisch",
+      "fr": "Poisson-troll",
+      "ru": "Тролль-рыба"
+    }
   },
   {
     "id": "tuna",
@@ -1831,7 +2144,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Tuna"
+    "wiki": "https://valheim.weirdgloop.org/w/Tuna",
+    "names": {
+      "cs": "Tuňák",
+      "de": "Thunfisch",
+      "fr": "Thon",
+      "ru": "Тунец"
+    }
   },
   {
     "id": "vile-ribcage",
@@ -1850,7 +2169,10 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Vile_Ribcage"
+    "wiki": "https://valheim.weirdgloop.org/w/Vile_Ribcage",
+    "names": {
+      "ru": "Гнилостные ребра"
+    }
   },
   {
     "id": "vile-trophy",
@@ -1869,7 +2191,11 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Vile_Trophy"
+    "wiki": "https://valheim.weirdgloop.org/w/Vile_Trophy",
+    "names": {
+      "cs": "Trofeje",
+      "ru": "Категория:Трофеи"
+    }
   },
   {
     "id": "wolf-fang",
@@ -1904,7 +2230,11 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Wolf_Fang"
+    "wiki": "https://valheim.weirdgloop.org/w/Wolf_Fang",
+    "names": {
+      "cs": "Vlčí tesák",
+      "ru": "Волчий клык"
+    }
   },
   {
     "id": "wolf-pelt",
@@ -1923,7 +2253,13 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Wolf_Pelt"
+    "wiki": "https://valheim.weirdgloop.org/w/Wolf_Pelt",
+    "names": {
+      "cs": "Vlčí kůže",
+      "de": "Wolfspelz",
+      "fr": "Peau de loup",
+      "ru": "Шкура волка"
+    }
   },
   {
     "id": "wolf-trophy",
@@ -1942,7 +2278,11 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Wolf_Trophy"
+    "wiki": "https://valheim.weirdgloop.org/w/Wolf_Trophy",
+    "names": {
+      "cs": "Trofeje",
+      "ru": "Категория:Трофеи"
+    }
   },
   {
     "id": "writhan-roots",
@@ -1961,6 +2301,7 @@
       }
     ],
     "recipe": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Writhan_Roots"
+    "wiki": "https://valheim.weirdgloop.org/w/Writhan_Roots",
+    "names": {}
   }
 ]
