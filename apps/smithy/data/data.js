@@ -9648,46 +9648,6 @@ window.VA_DATA = {
       }
     },
     {
-      "id": "bare-fists",
-      "name": "Bare Fists",
-      "wiki": "https://valheim.weirdgloop.org/w/Bare_Fists",
-      "gameId": "PlayerUnarmed",
-      "category": "fists",
-      "hands": "1h",
-      "type": "Fists",
-      "image": "../bestiary/img/weapons/bare-fists.png",
-      "station": "Always available",
-      "stationLevel": 1,
-      "maxQuality": 1,
-      "levels": [
-        {
-          "quality": 1,
-          "stationLevel": 1,
-          "materials": []
-        }
-      ],
-      "materials": [],
-      "damage": {
-        "blunt": 5
-      },
-      "perLevel": {},
-      "damageMax": {
-        "blunt": 5
-      },
-      "stamina": 4,
-      "knockback": 40,
-      "skill": "fists",
-      "backstab": 3,
-      "quantity": null,
-      "tier": 1,
-      "biome": "meadows",
-      "description": "",
-      "blockArmor": 2,
-      "blockForce": null,
-      "parryBonus": 1.5,
-      "names": {}
-    },
-    {
       "id": "battleaxe",
       "name": "Battleaxe",
       "wiki": "https://valheim.weirdgloop.org/w/Battleaxe",

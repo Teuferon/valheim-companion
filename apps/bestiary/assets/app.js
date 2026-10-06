@@ -1428,7 +1428,7 @@
       creature.taming.foods.forEach(name => {
         const food = el('span', 'taming-food');
         const item = Object.values(data.items || {}).find(item => item.name.toLowerCase() === name.toLowerCase());
-        if (item?.image) food.appendChild(createImage('../armourer/' + item.image, name, 'trophy-img'));
+        if (item?.image) food.appendChild(createImage('../smithy/' + item.image, name, 'trophy-img'));
         food.appendChild(document.createTextNode(name));
         foods.appendChild(food);
       });

@@ -1,5 +1,5 @@
-// Builds apps/armourer/data/data.js from data/*.json for the Armourer frontend.
-// Follows docs/DATA-SCHEMA.md § apps/armourer/data/data.js.
+// Builds apps/smithy/data/data.js from data/*.json for the Smithy frontend.
+// Follows docs/DATA-SCHEMA.md § apps/smithy/data/data.js.
 
 import { existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
@@ -7,7 +7,19 @@ import { fileURLToPath } from 'node:url';
 
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_DIR = path.join(REPO_ROOT, 'data');
-const ARMOURER_DATA_DIR = path.join(REPO_ROOT, 'apps', 'armourer', 'data');
+const ARMOURER_DATA_DIR = path.join(REPO_ROOT, 'apps', 'smithy', 'data');
+
+export function hasCraftingCost(item) {
+  return (item.levels ?? []).some(level => (level.materials ?? []).length > 0);
+}
+
+export function filterSmithyArmor(armor) {
+  return armor.map(entry => {
+    // These entries already live in Cosmetics or DLC & seasonal, not the crafting catalog.
+    if (entry.kind === 'cosmetic' || entry.kind === 'special' || !entry.biome) return entry;
+    return { ...entry, pieces: entry.pieces.filter(hasCraftingCost) };
+  }).filter(entry => entry.pieces.length > 0);
+}
 
 export function buildArmourerBundle() {
   const biomesPath = path.join(DATA_DIR, 'biomes.json');
@@ -18,12 +30,12 @@ export function buildArmourerBundle() {
   if (!existsSync(armorPath)) throw new Error('Missing data/armor.json');
   if (!existsSync(itemsPath)) throw new Error('Missing data/items.json');
 
-  // Biome images live in the Bestiary; point to them from /armourer/.
+  // Biome images live in the Bestiary; point to them from /smithy/.
   const biomes = JSON.parse(readFileSync(biomesPath, 'utf8')).map((b) => ({
     ...b,
     image: b.image ? `../bestiary/${b.image}` : null,
   }));
-  const armor = JSON.parse(readFileSync(armorPath, 'utf8'));
+  const armor = filterSmithyArmor(JSON.parse(readFileSync(armorPath, 'utf8')));
   const itemsList = JSON.parse(readFileSync(itemsPath, 'utf8'));
 
   const items = {};
@@ -36,7 +48,7 @@ export function buildArmourerBundle() {
 
   const weaponsPath = path.join(DATA_DIR, 'weapons.json');
   const weapons = existsSync(weaponsPath)
-    ? JSON.parse(readFileSync(weaponsPath, 'utf8')).map((w) => ({
+    ? JSON.parse(readFileSync(weaponsPath, 'utf8')).filter(hasCraftingCost).map((w) => ({
         ...w,
         image: w.image ? `../bestiary/${w.image}` : null,
       }))
@@ -95,7 +107,7 @@ export function buildArmourerBundle() {
 }
 
 export function main() {
-  console.log('building apps/armourer/data/data.js…');
+  console.log('building apps/smithy/data/data.js…');
   const bundle = buildArmourerBundle();
   mkdirSync(ARMOURER_DATA_DIR, { recursive: true });
   const outputPath = path.join(ARMOURER_DATA_DIR, 'data.js');
@@ -107,8 +119,8 @@ export function main() {
     creatures: Object.values(bundle.creatures),
     weapons: JSON.parse(readFileSync(path.join(DATA_DIR, 'weapons.json'), 'utf8')),
     items: Object.values(bundle.items),
-    armor: bundle.armor.flatMap(entry => entry.pieces),
-    sets: bundle.armor,
+    armor: JSON.parse(readFileSync(path.join(DATA_DIR, 'armor.json'), 'utf8')).flatMap(entry => entry.pieces),
+    sets: JSON.parse(readFileSync(path.join(DATA_DIR, 'armor.json'), 'utf8')),
     biomes: bundle.biomes,
     stations: bundle.stations,
   };
@@ -123,7 +135,7 @@ export function main() {
   const reportPath = path.join(DATA_DIR, 'report-names.json');
   const report = JSON.stringify(coverage, null, 2) + '\n';
   if (!existsSync(reportPath) || readFileSync(reportPath, 'utf8') !== report) writeFileSync(reportPath, report);
-  console.log(`done: built apps/armourer/data/data.js (${(content.length / 1024).toFixed(1)} kB)`);
+  console.log(`done: built apps/smithy/data/data.js (${(content.length / 1024).toFixed(1)} kB)`);
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {

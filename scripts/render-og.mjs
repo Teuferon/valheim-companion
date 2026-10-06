@@ -47,7 +47,7 @@ export function renderOgImages() {
   const ogSections = [
     'hub',
     'bestiary',
-    'armourer',
+    'smithy',
     'damage-calculator',
     'signs',
   ];

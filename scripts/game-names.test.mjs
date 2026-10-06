@@ -118,7 +118,7 @@ function staticApp(app, locale) {
     source = source.replace('    calculateCartMaterials,\n    calculateSmelting,', '    initArmourer,\n    calculateCartMaterials,\n    calculateSmelting,');
   }
   vm.runInContext(source, context);
-  if (app === 'armourer') context.VACart.initArmourer();
+  if (app === 'smithy') context.VACart.initArmourer();
   return { context, document, nodes, data: context.VC_DATA ?? context.VA_DATA };
 }
 
@@ -149,7 +149,7 @@ for (const { code } of languages) {
     assert.ok(modal.textContent.includes(data.biomes.find(b => b.id === weapon.biome).name));
     assert.equal(b.renderers.normalizeSearch('  NÍDHÖGG  '.trim()), 'nidhogg');
 
-    const armourer = staticApp('armourer', code);
+    const armourer = staticApp('smithy', code);
     const { context: a, data: armorData } = armourer;
     a.renderers.renderCatalog();
     const headings = armourer.nodes.get('biomes-container').querySelectorAll('.biome-name').map(node => node.textContent);
@@ -220,7 +220,7 @@ for (const { code } of languages) {
 
 test('VC-29: catalogs cannot translate game names and UI cannot consume names.json', () => {
   const terms = ['Meadows', 'Black Forest', 'Ocean', 'Swamp', 'Mountain', 'Plains', 'Mistlands', 'Ashlands', 'Deep North', 'Slash', 'Pierce', 'Blunt', 'Fire', 'Frost', 'Lightning', 'Poison', 'Spirit', 'Chop', 'Pickaxe', 'Pure'];
-  for (const path of ['apps/bestiary/locales/messages.json', 'apps/armourer/locales/messages.json', 'apps/damage-calculator/src/locales/messages.json']) {
+  for (const path of ['apps/bestiary/locales/messages.json', 'apps/smithy/locales/messages.json', 'apps/damage-calculator/src/locales/messages.json']) {
     const catalog = JSON.parse(read(path));
     for (const term of terms) assert.equal(catalog[term], undefined, `${path}: ${term}`);
   }

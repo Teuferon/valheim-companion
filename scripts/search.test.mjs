@@ -89,7 +89,7 @@ test('search index builds valid bundle under 150 kB with required fields', () =>
     assert.ok(typeof item.names === 'object' && item.names !== null);
     assert.ok(item.biome === null || typeof item.biome === 'string');
     assert.ok(typeof item.order === 'number');
-    assert.ok(typeof item.url === 'string' && (item.url.startsWith('/bestiary/') || item.url.startsWith('/armourer/')));
+    assert.ok(typeof item.url === 'string' && (item.url.startsWith('/bestiary/') || item.url.startsWith('/smithy/')));
     assert.ok(item.image === null || typeof item.image === 'string');
   }
 });
@@ -138,7 +138,7 @@ test('spoilers hide locked biomes and count remaining matches', () => {
   assert.equal(unlockedResult.lockedCount, 0);
 });
 
-test('deep links route correctly to bestiary and armourer', () => {
+test('deep links route correctly to bestiary and smithy', () => {
   const sandbox = {};
   vm.runInNewContext(readFileSync('apps/hub/data/search.js', 'utf8'), sandbox);
   const index = sandbox.VC_SEARCH_INDEX;
@@ -147,13 +147,13 @@ test('deep links route correctly to bestiary and armourer', () => {
   assert.equal(creature.url, '/bestiary/#c=eikthyr');
 
   const set = index.find(item => item.type === 'armor' && item.name === 'Troll Set');
-  assert.equal(set.url, '/armourer/#set=troll-set');
+  assert.equal(set.url, '/smithy/#set=troll-set');
 
   const piece = index.find(item => item.type === 'armor' && item.name.toLowerCase() === 'troll leather hood');
-  assert.equal(piece.url, '/armourer/#item=troll-leather-hood');
+  assert.equal(piece.url, '/smithy/#item=troll-leather-hood');
 
   const weapon = index.find(item => item.type === 'weapon' && item.name === 'Abyssal Harpoon');
-  assert.equal(weapon.url, '/armourer/#item=abyssal-harpoon');
+  assert.equal(weapon.url, '/smithy/#item=abyssal-harpoon');
 });
 
 test('hub message catalog covers all 13 languages with zero missing translations', () => {

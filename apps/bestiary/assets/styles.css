@@ -130,6 +130,7 @@ body {
 }
 
 .controls-search-kind {
+  min-width: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -138,6 +139,7 @@ body {
 }
 
 .search-box {
+  min-width: 0;
   flex: 1 1 220px;
 }
 
@@ -159,6 +161,8 @@ body {
 }
 
 .kind-filter {
+  min-width: 0;
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
@@ -1573,10 +1577,8 @@ body {
     flex: 1 1 100%;
   }
   .kind-filter {
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    flex-wrap: wrap;
     width: 100%;
-    -webkit-overflow-scrolling: touch;
   }
   .controls-actions {
     width: 100%;

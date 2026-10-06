@@ -16,7 +16,7 @@ const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..
 const DIST_DIR = path.join(REPO_ROOT, 'dist');
 const HUB_DIR = path.join(REPO_ROOT, 'apps', 'hub');
 const BESTIARY_DIR = path.join(REPO_ROOT, 'apps', 'bestiary');
-const ARMOURER_DIR = path.join(REPO_ROOT, 'apps', 'armourer');
+const ARMOURER_DIR = path.join(REPO_ROOT, 'apps', 'smithy');
 const SHARED_I18N_DIR = path.join(REPO_ROOT, 'shared', 'i18n');
 const SHARED_ANALYTICS_DIR = path.join(REPO_ROOT, 'shared', 'analytics');
 const SIGNS_DIST = path.join(REPO_ROOT, 'apps', 'signs', 'dist-static');
@@ -67,8 +67,8 @@ export function buildSite() {
   cpSync(path.join(BESTIARY_DIR, 'data', 'data.js'), path.join(bestiaryDist, 'data', 'data.js'));
   cpSync(path.join(BESTIARY_DIR, 'img'), path.join(bestiaryDist, 'img'), { recursive: true });
 
-  // 3. apps/armourer/{index.html, assets, data/data.js, img} -> dist/armourer/
-  const armourerDist = path.join(DIST_DIR, 'armourer');
+  // 3. apps/smithy/{index.html, assets, data/data.js, img} -> dist/smithy/
+  const armourerDist = path.join(DIST_DIR, 'smithy');
   mkdirSync(armourerDist, { recursive: true });
   mkdirSync(path.join(armourerDist, 'data'), { recursive: true });
 

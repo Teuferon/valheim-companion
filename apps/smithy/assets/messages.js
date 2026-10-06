@@ -270,20 +270,20 @@ globalThis.VC_MESSAGES = {
     "ja": "ファンによるプロジェクト。Iron Gate とは関係ありません。",
     "id": "Proyek penggemar, tidak berafiliasi dengan Iron Gate."
   },
-  "Armourer": {
-    "en": "Armourer",
-    "cs": "Armourer",
-    "de": "Armourer",
-    "es": "Armourer",
-    "fr": "Armourer",
-    "pt": "Armourer",
-    "zh": "Armourer",
-    "hi": "Armourer",
-    "ar": "Armourer",
-    "bn": "Armourer",
-    "ru": "Armourer",
-    "ja": "Armourer",
-    "id": "Armourer"
+  "Smithy": {
+    "en": "Smithy",
+    "cs": "Smithy",
+    "de": "Smithy",
+    "es": "Smithy",
+    "fr": "Smithy",
+    "pt": "Smithy",
+    "zh": "Smithy",
+    "hi": "Smithy",
+    "ar": "Smithy",
+    "bn": "Smithy",
+    "ru": "Smithy",
+    "ja": "Smithy",
+    "id": "Smithy"
   },
   "+ Add piece": {
     "en": "+ Add piece",
@@ -555,20 +555,20 @@ globalThis.VC_MESSAGES = {
     "ja": "作成手順",
     "id": "Langkah pembuatan"
   },
-  "Every armor set, what it costs and where to find the materials.": {
-    "en": "Every armor set, what it costs and where to find the materials.",
-    "cs": "Všechny sady brnění, jejich cena a kde najít suroviny.",
-    "de": "Jedes Rüstungsset, seine Kosten und die Fundorte der Materialien.",
-    "es": "Todos los conjuntos de armadura, sus costes y dónde encontrar materiales.",
-    "fr": "Chaque ensemble d'armure, son coût et où trouver les matériaux.",
-    "pt": "Todos os conjuntos de armadura, seus custos e onde encontrar materiais.",
-    "zh": "所有护甲套装、所需材料及其获取地点。",
-    "hi": "हर कवच सेट, उसकी लागत और सामग्री कहाँ मिलेगी।",
-    "ar": "كل أطقم الدروع وتكاليفها وأماكن العثور على المواد.",
-    "bn": "সব বর্ম সেট, তার খরচ ও উপকরণ কোথায় পাবেন।",
-    "ru": "Все комплекты брони, их стоимость и места добычи материалов.",
-    "ja": "全防具セット、必要素材と入手場所。",
-    "id": "Semua set zirah, biaya, dan tempat mencari bahan."
+  "Every armor set, weapon and shield — what it costs to craft and upgrade, and where to find the materials.": {
+    "en": "Every armor set, weapon and shield — what it costs to craft and upgrade, and where to find the materials.",
+    "cs": "Každá sada brnění, zbraň a štít — kolik stojí výroba a vylepšení a kde najít suroviny.",
+    "de": "Alle Rüstungssets, Waffen und Schilde — Herstellungskosten, Aufwertungskosten und Fundorte der Materialien.",
+    "es": "Cada conjunto de armadura, arma y escudo — cuánto cuesta fabricarlos y mejorarlos, y dónde encontrar los materiales.",
+    "fr": "Tous les ensembles d’armure, armes et boucliers — leur coût de fabrication et d’amélioration, et où trouver les matériaux.",
+    "pt": "Cada conjunto de armadura, arma e escudo — quanto custa fabricar e melhorar, e onde encontrar os materiais.",
+    "zh": "所有护甲套装、武器和盾牌——制作与升级的材料消耗，以及材料的获取地点。",
+    "hi": "हर कवच सेट, हथियार और ढाल — बनाने और अपग्रेड करने की लागत और सामग्री कहाँ मिलेगी।",
+    "ar": "كل أطقم الدروع والأسلحة والتروس — تكلفة التصنيع والترقية وأماكن العثور على المواد.",
+    "bn": "প্রতিটি বর্ম সেট, অস্ত্র ও ঢাল — তৈরি ও আপগ্রেডের খরচ এবং উপকরণ কোথায় পাওয়া যাবে।",
+    "ru": "Все комплекты брони, оружие и щиты — стоимость изготовления и улучшения и где найти материалы.",
+    "ja": "すべての防具セット・武器・盾 — 作成とアップグレードに必要な素材と、その入手場所。",
+    "id": "Setiap set baju zirah, senjata dan perisai — biaya pembuatan dan peningkatan, serta tempat menemukan bahannya."
   },
   "Have": {
     "en": "Have",
@@ -1425,20 +1425,20 @@ globalThis.VC_MESSAGES = {
     "ja": " 冒険の役に立ったら、コーヒーを奢っていただけると嬉しいです。",
     "id": " Jika ini membantu permainan Anda, Anda bisa mentraktir saya kopi."
   },
-  "Armourer — Valheim Companion": {
-    "en": "Armourer — Valheim Companion",
-    "cs": "Armourer — Valheim Companion",
-    "de": "Armourer — Valheim Companion",
-    "es": "Armourer — Valheim Companion",
-    "fr": "Armourer — Valheim Companion",
-    "pt": "Armourer — Valheim Companion",
-    "zh": "Armourer — Valheim Companion",
-    "hi": "Armourer — Valheim Companion",
-    "ar": "Armourer — Valheim Companion",
-    "bn": "Armourer — Valheim Companion",
-    "ru": "Armourer — Valheim Companion",
-    "ja": "Armourer — Valheim Companion",
-    "id": "Armourer — Valheim Companion"
+  "Smithy — Valheim Companion": {
+    "en": "Smithy — Valheim Companion",
+    "cs": "Smithy — Valheim Companion",
+    "de": "Smithy — Valheim Companion",
+    "es": "Smithy — Valheim Companion",
+    "fr": "Smithy — Valheim Companion",
+    "pt": "Smithy — Valheim Companion",
+    "zh": "Smithy — Valheim Companion",
+    "hi": "Smithy — Valheim Companion",
+    "ar": "Smithy — Valheim Companion",
+    "bn": "Smithy — Valheim Companion",
+    "ru": "Smithy — Valheim Companion",
+    "ja": "Smithy — Valheim Companion",
+    "id": "Smithy — Valheim Companion"
   },
   "Valheim Wiki (valheim.weirdgloop.org)": {
     "en": "Valheim Wiki (valheim.weirdgloop.org)",
