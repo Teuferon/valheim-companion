@@ -69,7 +69,7 @@ export function buildSearchIndex() {
     }
   }
 
-  // 2. Weapons (/armourer/#item=<id>)
+  // 2. Weapons (/smithy/#item=<id>)
   const weaponsPath = path.join(DATA_DIR, 'weapons.json');
   if (existsSync(weaponsPath)) {
     const rawWeapons = JSON.parse(readFileSync(weaponsPath, 'utf8'));
@@ -86,13 +86,13 @@ export function buildSearchIndex() {
         names: cleanNames(w.names, w.name),
         biome: b,
         order: o,
-        url: `/armourer/#item=${encodeURIComponent(w.id)}`,
+        url: `/smithy/#item=${encodeURIComponent(w.id)}`,
         image: img,
       });
     }
   }
 
-  // 3. Armor Sets & Pieces (/armourer/#set=<id> and /armourer/#item=<id>)
+  // 3. Armor Sets & Pieces (/smithy/#set=<id> and /smithy/#item=<id>)
   const armorPath = path.join(DATA_DIR, 'armor.json');
   if (existsSync(armorPath)) {
     const armorSets = JSON.parse(readFileSync(armorPath, 'utf8'));
@@ -101,7 +101,7 @@ export function buildSearchIndex() {
       const b = a.biome || null;
       const o = b ? (biomeOrder[b] || 99) : 99;
       const pieceWithImg = a.pieces?.find(p => p.slot === 'chest' && p.image) || a.pieces?.find(p => p.image);
-      const setImg = pieceWithImg?.image ? `/armourer/${pieceWithImg.image}` : null;
+      const setImg = pieceWithImg?.image ? `/smithy/${pieceWithImg.image}` : null;
 
       index.push({
         type: 'armor',
@@ -109,7 +109,7 @@ export function buildSearchIndex() {
         names: cleanNames(a.names, a.name),
         biome: b,
         order: o,
-        url: `/armourer/#set=${encodeURIComponent(a.id)}`,
+        url: `/smithy/#set=${encodeURIComponent(a.id)}`,
         image: setImg,
       });
 
@@ -117,7 +117,7 @@ export function buildSearchIndex() {
         if (!p || !p.id || !p.name) continue;
         const pb = p.biome || b;
         const po = pb ? (biomeOrder[pb] || 99) : 99;
-        const pImg = p.image ? `/armourer/${p.image}` : null;
+        const pImg = p.image ? `/smithy/${p.image}` : null;
 
         index.push({
           type: 'armor',
@@ -125,14 +125,14 @@ export function buildSearchIndex() {
           names: cleanNames(p.names, p.name),
           biome: pb,
           order: po,
-          url: `/armourer/#item=${encodeURIComponent(p.id)}`,
+          url: `/smithy/#item=${encodeURIComponent(p.id)}`,
           image: pImg,
         });
       }
     }
   }
 
-  // 4. Materials / items (/armourer/#item=<id>)
+  // 4. Materials / items (/smithy/#item=<id>)
   const itemsPath = path.join(DATA_DIR, 'items.json');
   if (existsSync(itemsPath)) {
     const rawItems = JSON.parse(readFileSync(itemsPath, 'utf8'));
@@ -141,7 +141,7 @@ export function buildSearchIndex() {
       if (!it || !it.id || !it.name) continue;
       const b = it.biome || null;
       const o = b ? (biomeOrder[b] || 99) : 99;
-      const itImg = it.image ? `/armourer/${it.image}` : null;
+      const itImg = it.image ? `/smithy/${it.image}` : null;
 
       index.push({
         type: 'material',
@@ -149,7 +149,7 @@ export function buildSearchIndex() {
         names: cleanNames(it.names, it.name),
         biome: b,
         order: o,
-        url: `/armourer/#item=${encodeURIComponent(it.id)}`,
+        url: `/smithy/#item=${encodeURIComponent(it.id)}`,
         image: itImg,
       });
     }
