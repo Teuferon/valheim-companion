@@ -17,6 +17,7 @@ import {
   parseMaterialList,
   parseQualityTables,
   parseTemplates,
+  resolveDisambiguationTitle,
   slug,
 } from './wikitext.mjs';
 import { BIOMES } from './biomes.mjs';
@@ -59,6 +60,8 @@ const KNOWN_STATIONS = [
 ];
 
 const KNOWN_NPCS = ['haldor', 'hildir', 'bog-witch'];
+
+export { resolveDisambiguationTitle };
 
 export function resolvePieceName(boxTitle, pageTitle) {
   const fromBox = boxTitle ? cleanText(boxTitle).trim() : '';
@@ -393,13 +396,6 @@ async function main() {
       (!firstBox['materials 1'] || firstBox['materials 1'].trim() === '') &&
       (firstBox.source && /hildir|haldor|npc/i.test(firstBox.source));
 
-    let kind = 'single';
-    if (isCosmetic) {
-      kind = 'cosmetic';
-    } else if (boxes.length > 1 || boxes.some((b) => b['set pieces'] && b['set pieces'].trim() !== '')) {
-      kind = 'set';
-    }
-
     // Deduplication rule:
     // "Stejný díl uvedený na stránce setu i na samostatné stránce (Troll Hide Cape) se v single neduplikuje, zůstane jen v setu."
     if (boxes.length === 1) {
@@ -420,6 +416,25 @@ async function main() {
 
     const qTables = parseQualityTables(wt);
     const description = extractDescription(wt);
+
+    const seasonBox = boxes.find((b) => b.season && b.season.trim());
+    const seasonTag = seasonBox ? cleanText(seasonBox.season).trim() : null;
+    const isDlc =
+      title !== 'Crown of Valheim' &&
+      (boxes.some((b) => b.description && /\(DLC item\)/i.test(b.description)) ||
+        /\(DLC item\)/i.test(wt) ||
+        /\(DLC item\)/i.test(description));
+    const isSpecial = title !== 'Crown of Valheim' && (Boolean(seasonTag) || isDlc);
+    const specialTag = seasonTag || (isDlc ? 'DLC' : null);
+
+    let kind = 'single';
+    if (isSpecial) {
+      kind = 'special';
+    } else if (isCosmetic) {
+      kind = 'cosmetic';
+    } else if (boxes.length > 1 || boxes.some((b) => b['set pieces'] && b['set pieces'].trim() !== '')) {
+      kind = 'set';
+    }
 
     const pieces = [];
 
@@ -505,8 +520,37 @@ async function main() {
       if (levels.length <= 1) {
         armorSource = 'infobox';
       } else if (usedEstimate) {
-        armorSource = 'estimate';
-        report.estimatedArmor.push({ piece: pieceName, set: title, levels: levels.length });
+        let renderedData = null;
+        for (const pageName of [pieceName, b.title, title]) {
+          if (!pageName) continue;
+          const html = await api.getRenderedText(pageName);
+          if (!html) continue;
+          const stripped = html.replace(/<[^>]+>/g, ' | ').replace(/\s+/g, ' ');
+          const armMatches = [...stripped.matchAll(/Armor\s*\|\s*\|\s*(\d+(?:\.\d+)?)/gi)].map((m) => parseFloat(m[1]));
+          const durMatches = [...stripped.matchAll(/Durability\s*\|\s*\|\s*(\d+)/gi)].map((m) => parseInt(m[1], 10));
+          if (armMatches.length >= levels.length && durMatches.length >= levels.length) {
+            renderedData = {
+              armors: armMatches.slice(0, levels.length),
+              durs: durMatches.slice(0, levels.length),
+            };
+            break;
+          }
+        }
+
+        if (renderedData) {
+          for (let i = 0; i < levels.length; i++) {
+            levels[i].armor = renderedData.armors[i];
+            levels[i].durability = renderedData.durs[i];
+          }
+          armorSource = 'rendered';
+          usedEstimate = false;
+        } else {
+          armorSource = 'estimate';
+          let reason = 'only 1 quality level on wiki';
+          if (pieceName === 'Crown of Valheim') reason = 'only 1 quality level on wiki (cannot be upgraded)';
+          if (pieceName === 'Crown of Roots') reason = 'only 1 quality level on wiki (cosmetic item)';
+          report.estimatedArmor.push({ piece: pieceName, set: title, levels: levels.length, reason });
+        }
       } else {
         armorSource = 'table';
       }
@@ -524,6 +568,7 @@ async function main() {
         movementSpeed,
         resistances,
         description,
+        ...(isSpecial ? { kind: 'special', tag: specialTag } : {}),
         _imageFile: imageFile,
       });
     }
@@ -537,6 +582,7 @@ async function main() {
       name: title,
       wiki: wikiPageUrl(title),
       kind,
+      ...(isSpecial ? { tag: specialTag } : {}),
       biome: null, // filled after material resolution
       tier: null,  // filled after material resolution
       setBonus,
@@ -558,6 +604,30 @@ async function main() {
     console.log(`fetching material pages (depth ${depth}): ${unvisited.length} titles…`);
     const fetched = await api.getWikitext(unvisited);
     Object.assign(allMaterialPages, fetched);
+
+    const disambigPairs = [];
+    for (const pageTitle of unvisited) {
+      const page = allMaterialPages[pageTitle];
+      if (!page?.wikitext) continue;
+      const targetTitle = resolveDisambiguationTitle(page.wikitext, pageTitle);
+      if (targetTitle) {
+        disambigPairs.push({ original: pageTitle, target: targetTitle });
+      }
+    }
+    if (disambigPairs.length > 0) {
+      const fetchedDisambigs = await api.getWikitext(disambigPairs.map((d) => d.target));
+      for (const d of disambigPairs) {
+        if (fetchedDisambigs[d.target]?.wikitext) {
+          allMaterialPages[d.target] = fetchedDisambigs[d.target];
+          allMaterialPages[d.original] = {
+            ...fetchedDisambigs[d.target],
+            disambiguatedFrom: d.original,
+            disambiguatedTo: d.target,
+            wiki: wikiPageUrl(d.target),
+          };
+        }
+      }
+    }
 
     for (const pageTitle of unvisited) {
       const page = allMaterialPages[pageTitle];
@@ -593,7 +663,7 @@ async function main() {
   const armorSetTitles = new Set(parsedArmor.map((a) => a.name));
   const canonicalNameByRaw = new Map();
   for (const [rawName, page] of Object.entries(allMaterialPages)) {
-    const target = page?.title ?? rawName;
+    const target = page?.disambiguatedFrom ? rawName : (page?.title ?? rawName);
     if (target.toLowerCase() === 'trophies' && rawName.toLowerCase() !== 'trophies') {
       canonicalNameByRaw.set(rawName, rawName);
     } else if (armorSetTitles.has(target) && !armorSetTitles.has(rawName)) {
@@ -707,7 +777,7 @@ async function main() {
       tier: res.tier,
       sources,
       recipe,
-      wiki: wikiPageUrl(matName),
+      wiki: page?.wiki ?? wikiPageUrl(matName),
       _imageFile: imageFile,
     });
   }
@@ -734,7 +804,7 @@ async function main() {
   const itemsById = new Map(allItems.map((i) => [i.id, i]));
 
   for (const a of parsedArmor) {
-    if (a.kind === 'cosmetic') {
+    if (a.kind === 'cosmetic' || a.kind === 'special') {
       a.tier = null;
       a.biome = null;
       continue;
@@ -875,7 +945,8 @@ function renderReport(report, armor, items) {
     lines.push('None. All pieces with quality upgrades found in quality tables.');
   } else {
     for (const ea of report.estimatedArmor) {
-      lines.push(`- **${ea.piece}** (${ea.set}, ${ea.levels} levels)`);
+      const reason = ea.reason ? `: ${ea.reason}` : '';
+      lines.push(`- **${ea.piece}** (${ea.set}, ${ea.levels} levels)${reason}`);
     }
   }
 
@@ -902,6 +973,7 @@ function renderReport(report, armor, items) {
     '## Open questions',
     '',
     '- Cosmetic items from Hildir / Haldor have no crafting materials or levels (`levels: []`, `biome: null`, `tier: null`).',
+    '- DLC and seasonal armor pieces (Cape of Oden, Hood of Oden, Pointy Hat, Midsummer Crown) have `kind: "special"` and `tag: "DLC"` / `"Halloween"` / `"Midsummer"`, and are shown in their own section.',
     '- Pieces like Troll Hide Cape, Deer Hide Cape, Wolf Fur Cape, Feather Cape exist both as standalone wiki pages and as set pieces. Standalone duplicates are omitted to preserve set integrity.',
     ''
   );

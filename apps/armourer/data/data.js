@@ -1,5 +1,5 @@
 window.VA_DATA = {
-  "generatedAt": "2026-10-06T07:25:30.986Z",
+  "generatedAt": "2026-10-06T09:25:47.422Z",
   "source": {
     "name": "Valheim Wiki",
     "url": "https://valheim.weirdgloop.org",
@@ -337,7 +337,7 @@ window.VA_DATA = {
             {
               "quality": 2,
               "armor": 14,
-              "durability": 1400,
+              "durability": 1250,
               "stationLevel": 4,
               "materials": [
                 {
@@ -349,7 +349,7 @@ window.VA_DATA = {
             {
               "quality": 3,
               "armor": 16,
-              "durability": 1600,
+              "durability": 1300,
               "stationLevel": 5,
               "materials": [
                 {
@@ -361,7 +361,7 @@ window.VA_DATA = {
             {
               "quality": 4,
               "armor": 18,
-              "durability": 1800,
+              "durability": 1350,
               "stationLevel": 6,
               "materials": [
                 {
@@ -371,7 +371,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 4,
           "movementSpeed": 0,
           "resistances": [],
@@ -703,7 +703,7 @@ window.VA_DATA = {
           "levels": [
             {
               "quality": 1,
-              "armor": 0,
+              "armor": 1,
               "durability": 1500,
               "stationLevel": 2,
               "materials": [
@@ -720,7 +720,7 @@ window.VA_DATA = {
             {
               "quality": 2,
               "armor": 2,
-              "durability": 1700,
+              "durability": 1550,
               "stationLevel": 3,
               "materials": [
                 {
@@ -731,8 +731,8 @@ window.VA_DATA = {
             },
             {
               "quality": 3,
-              "armor": 4,
-              "durability": 1900,
+              "armor": 3,
+              "durability": 1600,
               "stationLevel": 4,
               "materials": [
                 {
@@ -743,8 +743,8 @@ window.VA_DATA = {
             },
             {
               "quality": 4,
-              "armor": 6,
-              "durability": 2100,
+              "armor": 4,
+              "durability": 1650,
               "stationLevel": 5,
               "materials": [
                 {
@@ -754,7 +754,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 4,
           "movementSpeed": 0,
           "resistances": [],
@@ -1414,7 +1414,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 10,
           "movementSpeed": -5,
           "resistances": [],
@@ -1715,9 +1715,10 @@ window.VA_DATA = {
       "id": "cape-of-oden",
       "name": "Cape of Oden",
       "wiki": "https://valheim.weirdgloop.org/w/Cape_of_Oden",
-      "kind": "set",
-      "biome": "swamp",
-      "tier": 4,
+      "kind": "special",
+      "tag": "DLC",
+      "biome": null,
+      "tier": null,
       "setBonus": null,
       "pieces": [
         {
@@ -1746,8 +1747,8 @@ window.VA_DATA = {
             },
             {
               "quality": 2,
-              "armor": 3,
-              "durability": 1700,
+              "armor": 2,
+              "durability": 1550,
               "stationLevel": 2,
               "materials": [
                 {
@@ -1762,8 +1763,8 @@ window.VA_DATA = {
             },
             {
               "quality": 3,
-              "armor": 5,
-              "durability": 1900,
+              "armor": 3,
+              "durability": 1600,
               "stationLevel": 3,
               "materials": [
                 {
@@ -1778,8 +1779,8 @@ window.VA_DATA = {
             },
             {
               "quality": 4,
-              "armor": 7,
-              "durability": 2100,
+              "armor": 4,
+              "durability": 1650,
               "stationLevel": 4,
               "materials": [
                 {
@@ -1793,11 +1794,13 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 4,
           "movementSpeed": 0,
           "resistances": [],
-          "description": "Cape of Oden is a DLC armor piece. It is only available for the early supporters of Valheim via a Steam code sent out in an email from Iron Gate Studios to those who signed up for the Valheim Beta. Check your email if you signed up!"
+          "description": "Cape of Oden is a DLC armor piece. It is only available for the early supporters of Valheim via a Steam code sent out in an email from Iron Gate Studios to those who signed up for the Valheim Beta. Check your email if you signed up!",
+          "kind": "special",
+          "tag": "DLC"
         }
       ]
     },
@@ -1845,7 +1848,7 @@ window.VA_DATA = {
             {
               "quality": 2,
               "armor": 14,
-              "durability": 1400,
+              "durability": 1250,
               "stationLevel": 5,
               "materials": [
                 {
@@ -1869,7 +1872,7 @@ window.VA_DATA = {
             {
               "quality": 3,
               "armor": 16,
-              "durability": 1600,
+              "durability": 1300,
               "stationLevel": 6,
               "materials": [
                 {
@@ -1893,7 +1896,7 @@ window.VA_DATA = {
             {
               "quality": 4,
               "armor": 18,
-              "durability": 1800,
+              "durability": 1350,
               "stationLevel": 7,
               "materials": [
                 {
@@ -1915,7 +1918,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 4,
           "movementSpeed": 0,
           "resistances": [],
@@ -2124,7 +2127,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 3,
           "movementSpeed": 0,
           "resistances": [],
@@ -2223,7 +2226,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 10,
           "movementSpeed": -5,
           "resistances": [],
@@ -2322,7 +2325,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 10,
           "movementSpeed": -5,
           "resistances": [],
@@ -2420,7 +2423,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 3,
           "movementSpeed": 0,
           "resistances": [],
@@ -2664,7 +2667,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 1,
           "movementSpeed": 0,
           "resistances": [],
@@ -2751,7 +2754,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 5,
           "movementSpeed": -2,
           "resistances": [],
@@ -2834,7 +2837,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 5,
           "movementSpeed": -2,
           "resistances": [],
@@ -2870,8 +2873,8 @@ window.VA_DATA = {
             },
             {
               "quality": 2,
-              "armor": 3,
-              "durability": 1400,
+              "armor": 2,
+              "durability": 1250,
               "stationLevel": 2,
               "materials": [
                 {
@@ -2890,8 +2893,8 @@ window.VA_DATA = {
             },
             {
               "quality": 3,
-              "armor": 5,
-              "durability": 1600,
+              "armor": 3,
+              "durability": 1300,
               "stationLevel": 3,
               "materials": [
                 {
@@ -2910,8 +2913,8 @@ window.VA_DATA = {
             },
             {
               "quality": 4,
-              "armor": 7,
-              "durability": 1800,
+              "armor": 4,
+              "durability": 1350,
               "stationLevel": 4,
               "materials": [
                 {
@@ -2929,7 +2932,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 4,
           "movementSpeed": 0,
           "resistances": [
@@ -3650,7 +3653,7 @@ window.VA_DATA = {
             },
             {
               "quality": 2,
-              "armor": 10,
+              "armor": 12,
               "durability": 1200,
               "stationLevel": 2,
               "materials": [
@@ -3706,7 +3709,7 @@ window.VA_DATA = {
             },
             {
               "quality": 3,
-              "armor": 12,
+              "armor": 16,
               "durability": 1400,
               "stationLevel": 3,
               "materials": [
@@ -3762,7 +3765,7 @@ window.VA_DATA = {
             },
             {
               "quality": 4,
-              "armor": 14,
+              "armor": 20,
               "durability": 1600,
               "stationLevel": 4,
               "materials": [
@@ -3817,7 +3820,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 3,
           "movementSpeed": 0,
           "resistances": [],
@@ -4286,9 +4289,10 @@ window.VA_DATA = {
       "id": "hood-of-oden",
       "name": "Hood of Oden",
       "wiki": "https://valheim.weirdgloop.org/w/Hood_of_Oden",
-      "kind": "set",
-      "biome": "swamp",
-      "tier": 4,
+      "kind": "special",
+      "tag": "DLC",
+      "biome": null,
+      "tier": null,
       "setBonus": null,
       "pieces": [
         {
@@ -4317,7 +4321,7 @@ window.VA_DATA = {
             },
             {
               "quality": 2,
-              "armor": 3,
+              "armor": 2,
               "durability": 500,
               "stationLevel": 2,
               "materials": [
@@ -4333,7 +4337,7 @@ window.VA_DATA = {
             },
             {
               "quality": 3,
-              "armor": 5,
+              "armor": 3,
               "durability": 700,
               "stationLevel": 3,
               "materials": [
@@ -4349,7 +4353,7 @@ window.VA_DATA = {
             },
             {
               "quality": 4,
-              "armor": 7,
+              "armor": 4,
               "durability": 900,
               "stationLevel": 4,
               "materials": [
@@ -4364,11 +4368,13 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 1,
           "movementSpeed": 0,
           "resistances": [],
-          "description": "Hood of Oden is a DLC armor piece. It is only available for the early supporters of Valheim via a Steam code sent out in an email from Iron Gate Studios to those who signed up for the Valheim Beta. Check your email if you signed up!"
+          "description": "Hood of Oden is a DLC armor piece. It is only available for the early supporters of Valheim via a Steam code sent out in an email from Iron Gate Studios to those who signed up for the Valheim Beta. Check your email if you signed up!",
+          "kind": "special",
+          "tag": "DLC"
         }
       ]
     },
@@ -5033,7 +5039,7 @@ window.VA_DATA = {
                   "amount": 8
                 },
                 {
-                  "item": "root",
+                  "item": "roots",
                   "amount": 2
                 }
               ]
@@ -5053,7 +5059,7 @@ window.VA_DATA = {
                   "amount": 4
                 },
                 {
-                  "item": "root",
+                  "item": "roots",
                   "amount": 1
                 }
               ]
@@ -5073,7 +5079,7 @@ window.VA_DATA = {
                   "amount": 8
                 },
                 {
-                  "item": "root",
+                  "item": "roots",
                   "amount": 2
                 }
               ]
@@ -5093,7 +5099,7 @@ window.VA_DATA = {
                   "amount": 16
                 },
                 {
-                  "item": "root",
+                  "item": "roots",
                   "amount": 4
                 }
               ]
@@ -5128,7 +5134,7 @@ window.VA_DATA = {
                   "amount": 8
                 },
                 {
-                  "item": "root",
+                  "item": "roots",
                   "amount": 2
                 }
               ]
@@ -5148,7 +5154,7 @@ window.VA_DATA = {
                   "amount": 4
                 },
                 {
-                  "item": "root",
+                  "item": "roots",
                   "amount": 1
                 }
               ]
@@ -5168,7 +5174,7 @@ window.VA_DATA = {
                   "amount": 8
                 },
                 {
-                  "item": "root",
+                  "item": "roots",
                   "amount": 2
                 }
               ]
@@ -5188,7 +5194,7 @@ window.VA_DATA = {
                   "amount": 16
                 },
                 {
-                  "item": "root",
+                  "item": "roots",
                   "amount": 4
                 }
               ]
@@ -5275,9 +5281,10 @@ window.VA_DATA = {
       "id": "midsummer-crown",
       "name": "Midsummer Crown",
       "wiki": "https://valheim.weirdgloop.org/w/Midsummer_Crown",
-      "kind": "single",
-      "biome": "meadows",
-      "tier": 1,
+      "kind": "special",
+      "tag": "Midsummer",
+      "biome": null,
+      "tier": null,
       "setBonus": null,
       "pieces": [
         {
@@ -5305,7 +5312,9 @@ window.VA_DATA = {
           "weight": 1,
           "movementSpeed": 0,
           "resistances": [],
-          "description": "Midsummer crown is a seasonal armor piece available during midsummer."
+          "description": "Midsummer crown is a seasonal armor piece available during midsummer.",
+          "kind": "special",
+          "tag": "Midsummer"
         }
       ]
     },
@@ -5349,7 +5358,7 @@ window.VA_DATA = {
             {
               "quality": 2,
               "armor": 14,
-              "durability": 1400,
+              "durability": 1250,
               "stationLevel": 5,
               "materials": [
                 {
@@ -5369,7 +5378,7 @@ window.VA_DATA = {
             {
               "quality": 3,
               "armor": 16,
-              "durability": 1600,
+              "durability": 1300,
               "stationLevel": 6,
               "materials": [
                 {
@@ -5389,7 +5398,7 @@ window.VA_DATA = {
             {
               "quality": 4,
               "armor": 18,
-              "durability": 1800,
+              "durability": 1350,
               "stationLevel": 7,
               "materials": [
                 {
@@ -5407,7 +5416,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 4,
           "movementSpeed": 0,
           "resistances": [],
@@ -5734,9 +5743,10 @@ window.VA_DATA = {
       "id": "pointy-hat",
       "name": "Pointy Hat",
       "wiki": "https://valheim.weirdgloop.org/w/Pointy_Hat",
-      "kind": "single",
-      "biome": "swamp",
-      "tier": 4,
+      "kind": "special",
+      "tag": "Halloween",
+      "biome": null,
+      "tier": null,
       "setBonus": null,
       "pieces": [
         {
@@ -5804,11 +5814,13 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 3,
           "movementSpeed": 0,
           "resistances": [],
-          "description": "Pointy hat is an armor piece which can be crafted and upgraded at the Workbench. It is only available during the Halloween seasonal event, – ."
+          "description": "Pointy hat is an armor piece which can be crafted and upgraded at the Workbench. It is only available during the Halloween seasonal event, – .",
+          "kind": "special",
+          "tag": "Halloween"
         }
       ]
     },
@@ -6120,7 +6132,7 @@ window.VA_DATA = {
             },
             {
               "quality": 2,
-              "armor": 3,
+              "armor": 2,
               "durability": 400,
               "stationLevel": 2,
               "materials": [
@@ -6131,7 +6143,7 @@ window.VA_DATA = {
               ]
             }
           ],
-          "armorSource": "estimate",
+          "armorSource": "rendered",
           "weight": 2,
           "movementSpeed": 0,
           "resistances": [],
@@ -9851,9 +9863,37 @@ window.VA_DATA = {
       "image": "img/items/root.png",
       "biome": "swamp",
       "tier": 4,
-      "sources": [],
+      "sources": [
+        {
+          "text": "Abomination",
+          "kind": "creature",
+          "creatureId": "abomination",
+          "biomes": [
+            "swamp"
+          ]
+        }
+      ],
       "recipe": null,
-      "wiki": "https://valheim.weirdgloop.org/w/Root"
+      "wiki": "https://valheim.weirdgloop.org/w/Root_(item)"
+    },
+    "roots": {
+      "id": "roots",
+      "name": "Roots",
+      "image": "img/items/roots.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Abomination",
+          "kind": "creature",
+          "creatureId": "abomination",
+          "biomes": [
+            "swamp"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Root_(item)"
     },
     "sap": {
       "id": "sap",

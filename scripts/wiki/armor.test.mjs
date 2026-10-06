@@ -15,6 +15,7 @@ import {
   parseTrophySource,
   parseConversionRecipe,
   resolveRecipeBiomes,
+  resolveDisambiguationTitle,
 } from './fetch-armor.mjs';
 import { buildArmourerBundle } from '../build-armourer-data.mjs';
 import { statSync } from 'node:fs';
@@ -297,4 +298,70 @@ test('buildArmourerBundle uses deterministic generatedAt from data/armor.json mt
   const bundle = buildArmourerBundle();
   assert.equal(bundle.generatedAt, stat.mtime.toISOString());
 });
+
+test('resolveDisambiguationTitle detects Root disambiguation and returns Root (item)', () => {
+  const rootDisambig = `'''Root''' may refer to:
+*[[File:Root.png|30px]] [[Root (item)]], the [[Abomination]] drop.
+*[[File:Roots summoned by The Elder.png|30px]] [[Root (creature)]], summoned by [[The Elder]].
+{{disambig}}`;
+  assert.equal(resolveDisambiguationTitle(rootDisambig, 'Root'), 'Root (item)');
+  assert.equal(resolveDisambiguationTitle('{{infobox item|title=Iron}}', 'Iron'), null);
+  assert.equal(resolveDisambiguationTitle(null, 'Root'), null);
+});
+
+test('armor per quality: Carapace helmet has 32/34/36/38 and armorSource rendered', async () => {
+  const { readFileSync } = await import('node:fs');
+  const armor = JSON.parse(readFileSync('data/armor.json', 'utf8'));
+  const carapaceSet = armor.find((a) => a.name === 'Carapace Armor');
+  const helmet = carapaceSet?.pieces?.find((p) => p.name === 'Carapace helmet');
+  assert.ok(helmet, 'Carapace helmet exists');
+  assert.equal(helmet.armorSource, 'rendered');
+  assert.deepEqual(
+    helmet.levels.map((l) => l.armor),
+    [32, 34, 36, 38]
+  );
+  assert.deepEqual(
+    helmet.levels.map((l) => l.durability),
+    [1200, 1400, 1600, 1800]
+  );
+});
+
+test('DLC and seasonal armor pieces have kind special and appropriate tag; Crown of Valheim stays normal', async () => {
+  const { readFileSync } = await import('node:fs');
+  const armor = JSON.parse(readFileSync('data/armor.json', 'utf8'));
+
+  const capeOden = armor.find((a) => a.name === 'Cape of Oden');
+  assert.ok(capeOden, 'Cape of Oden exists');
+  assert.equal(capeOden.kind, 'special');
+  assert.equal(capeOden.tag, 'DLC');
+  assert.equal(capeOden.biome, null);
+  assert.equal(capeOden.pieces[0].kind, 'special');
+  assert.equal(capeOden.pieces[0].tag, 'DLC');
+
+  const hoodOden = armor.find((a) => a.name === 'Hood of Oden');
+  assert.ok(hoodOden, 'Hood of Oden exists');
+  assert.equal(hoodOden.kind, 'special');
+  assert.equal(hoodOden.tag, 'DLC');
+  assert.equal(hoodOden.biome, null);
+
+  const pointyHat = armor.find((a) => a.name === 'Pointy Hat');
+  assert.ok(pointyHat, 'Pointy Hat exists');
+  assert.equal(pointyHat.kind, 'special');
+  assert.equal(pointyHat.tag, 'Halloween');
+  assert.equal(pointyHat.biome, null);
+
+  const midsummer = armor.find((a) => a.name === 'Midsummer Crown');
+  assert.ok(midsummer, 'Midsummer Crown exists');
+  assert.equal(midsummer.kind, 'special');
+  assert.equal(midsummer.tag, 'Midsummer');
+  assert.equal(midsummer.biome, null);
+
+  const crownValheim = armor.find((a) => a.name === 'Crown of Valheim');
+  assert.ok(crownValheim, 'Crown of Valheim exists');
+  assert.equal(crownValheim.kind, 'single');
+  assert.equal(crownValheim.biome, 'deep-north');
+  assert.equal(crownValheim.tag, undefined);
+});
+
+
 
