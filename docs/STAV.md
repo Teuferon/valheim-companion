@@ -61,7 +61,6 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | VC-21 | Provisions data (90 jídel, 21 medovin, 9 feastů) + sdílený košík `shared/shopping` | Sol | ✅ |
 | VC-32 | Progress jako vysouvací panel na každé stránce („⛓ Progress N/9“), nástroje reagují hned | Sol | ✅ |
 | VC-22 | stránka Provisions `/provisions/`: loadout, porce na hodiny hraní, nákupní seznam | Sol | ✅ |
-
 | **VC-33** | množná čísla ve všech jazycích (`tn` + `Intl.PluralRules`) | Sol | 🔄 běží (`../valheim-units-CS`) |
 | **VC-34** | Provisions: nejlepší kombinace podle činnosti, medoviny podle biomu/bosse, tipy | Sol | 🔄 běží (`../valheim-units-GL`) |
 
