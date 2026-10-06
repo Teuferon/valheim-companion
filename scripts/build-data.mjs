@@ -46,9 +46,15 @@ export function buildDataBundle() {
   const creaturesList = JSON.parse(readFileSync(creaturesPath, 'utf8'));
   const weaponsList = JSON.parse(readFileSync(weaponsPath, 'utf8'));
   const recommendations = JSON.parse(readFileSync(recommendationsPath, 'utf8'));
+  const calculatorDataDir = path.join(REPO_ROOT, 'apps', 'damage-calculator', 'src', 'data');
+  const calculatorSlugs = new Set(['bosses.json', 'enemies.json'].flatMap(file =>
+    JSON.parse(readFileSync(path.join(calculatorDataDir, file), 'utf8')).map(target => target.slug)
+  ));
 
   const creatures = {};
-  for (const c of creaturesList) creatures[c.id] = c;
+  for (const c of creaturesList) {
+    creatures[c.id] = calculatorSlugs.has(c.id) ? { ...c, calculatorSlug: c.id } : c;
+  }
 
   const weapons = {};
   for (const w of weaponsList) weapons[w.id] = w;

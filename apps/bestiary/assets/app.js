@@ -1346,6 +1346,15 @@
       }
     }
 
+    if (creature.calculatorSlug) {
+      const calcLinkPara = el('p', 'card-calculator-link');
+      const calcLink = el('a', 'card-calc-link', 'Compare all weapons in the Damage Calculator →');
+      calcLink.href = '../damage-calculator/?biome=' + encodeURIComponent(biome.id) +
+        '&target=' + encodeURIComponent(creature.calculatorSlug);
+      calcLinkPara.appendChild(calcLink);
+      card.appendChild(calcLinkPara);
+    }
+
     // Also found in (only biomes with order < current biome)
     if (creature.biomes && creature.biomes.length > 1) {
       const earlierBiomes = creature.biomes
