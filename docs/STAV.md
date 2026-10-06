@@ -45,13 +45,18 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | **VC-16** | sdílené jádro i18n (13 jazyků, `vc.language`), rozcestník přeložený, Runopis napojený | — | ⏳ fronta 1 |
 | **VC-17** | Bestiary + Armourer v 13 jazycích, místní názvy z jazykových odkazů wiki | — | ⏳ fronta 2 |
 | **VC-18** | Damage Calculator v 13 jazycích + místní názvy | — | ⏳ fronta 3 |
-| **VC-19** | Progress Tracker: sdílený stav `vc.progress` + stránka `/progress/` | — | ⏳ fronta 4 |
-| **VC-20** | napojení Progress na Bestiary, Armourer, kalkulačku a rozcestník | — | ⏳ fronta 5 |
-| **VC-21** | Provisions data (jídla, medoviny, feasty, stanice) + sdílený košík `shared/shopping` | — | ⏳ fronta 6 |
-| **VC-22** | stránka Provisions `/provisions/` | — | ⏳ fronta 7 |
+| **VC-23** | Armourer: zbraně, štíty a nástroje v košíku, „Can't be teleported“, kalkulačka tavení, deep link | — | ⏳ fronta 4 |
+| **VC-24** | Bestiary: trofeje, ochočování, nájezdy, sdílení profilu, deep link na jednotku | — | ⏳ fronta 5 |
+| **VC-25** | Damage Calculator: sdílený profil hráče (`shared/player`), odkaz z Bestiary | — | ⏳ fronta 6 |
+| **VC-26** | Sign Editor: galerie šablon, sdílení cedule v URL | — | ⏳ fronta 7 |
+| **VC-27** | rozcestník: společné hledání napříč sekcemi | — | ⏳ fronta 8 |
+| **VC-19** | Progress Tracker: sdílený stav `vc.progress` + stránka `/progress/` | — | ⏳ fronta 9 |
+| **VC-20** | napojení Progress na Bestiary, Armourer, kalkulačku a rozcestník | — | ⏳ fronta 10 |
+| **VC-21** | Provisions data (jídla, medoviny, feasty, stanice) + sdílený košík `shared/shopping` | — | ⏳ fronta 11 |
+| **VC-22** | stránka Provisions `/provisions/` | — | ⏳ fronta 12 |
 
 ### Po frontě
-Pavel 6. 10. schválil **Progress Tracker** a **Provisions** (VC-19 až VC-22, po dokončení VC-15 až VC-18). Další kandidáti z [`NAVRHY-NASTROJU.md`](NAVRHY-NASTROJU.md): Comfort Planner, Expedition, Trader Ledger, Fishing, Taming. Zatím nejsou schválené.
+Pavel 6. 10. schválil pořadí: překlady (VC-16 až VC-18), **vylepšení stávajících nástrojů** (VC-23 až VC-27), potom **Progress Tracker** a **Provisions** (VC-19 až VC-22). Další kandidáti z [`NAVRHY-NASTROJU.md`](NAVRHY-NASTROJU.md): Comfort Planner, Expedition, Trader Ledger, Fishing, Taming. Zatím nejsou schválené.
 
 **Zásada:** každý nový nástroj a funkce je od začátku ve 13 jazycích (ANALYZA § 15 a zásada před § 16).
 

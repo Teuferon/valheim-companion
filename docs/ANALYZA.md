@@ -351,3 +351,25 @@ Ověřeno 6. 10. 2026. Infobox zbraně rychlost útoku nemá. Je ve **vykreslen�
   - nákupní seznam s rozpadem na základní suroviny, stanicemi a jejich potřebnou úrovní a zdroji (jednotky v Bestiary, místa)
   - uložení `vp.loadout`, sdílení v URL
 - **Sdílený košík:** výpočet nákupního seznamu a rozpadu z Armouru se vytáhne do `shared/shopping/core.js` a používá ho Armourer i Provisions. Bez kopie logiky.
+
+## 18. Vylepšení stávajících nástrojů (VC-23 až VC-27, Pavel 6. 10. 2026: před Progress a Provisions)
+
+Vychází z `docs/NAVRHY-NASTROJU.md` § „Menší vylepšení“. Platí zásada 13 jazyků.
+- **Armourer (VC-23):**
+  - Do košíku jde přidat i zbraně, štíty a nástroje, se všemi úrovněmi a cenami vylepšení. Štíty dosud z dat vypadávaly, teď se stahují jako kategorie `shield` s `recommendable: false`.
+  - Suroviny z `Category:Can't be Teleported` mají štítek „Can't be teleported“ a košík varuje.
+  - **Kalkulačka tavení:** z wiki *Smelter* (1 Coal / 15 s, 30 s na ingot, tedy 2 uhlí na ingot), *Blast Furnace*, *Charcoal Kiln* (dřevo → uhlí) se pro tavené suroviny v rozpadu spočítá uhlí, dřevo do pece a čas na N tavicích pecí (volitelný počet). Hodnoty se ⛔ neopisují ručně, berou se z wiki stránek stanic.
+  - Deep link `#set=<id>` otevře set.
+- **Bestiary (VC-24):**
+  - **Trofeje:** šance na drop a použití z tabulky *Trophies* (`Trophy | Drop chance | Usage | …`).
+  - **Ochočování:** u ochočitelných jednotek krmení a dosah z tabulky *Taming* („Creature Feeding Habits“) a doba ochočení, pokud je na stránce.
+  - **Nájezdy:** „Appears in raids: …“ z tabulky *Events* (Event name, creatures, biome, enabled by). Spoilery se respektují: nájezd, který spouští boss ze zamčeného biomu, se ukáže jen jako „a later raid“.
+  - Sdílení profilu skillů v URL (`#player=…`, base64url, s potvrzením importu).
+  - Deep link `#c=<creatureId>` otevře biom a odscrolluje na kartu (spoilery: zamčený biom nabídne „Reveal“).
+- **Damage Calculator (VC-25):**
+  - Sdílený profil hráče: když URL nemá vlastní skill, výchozí skill = skill hráče z `vc.player` pro třídu zbraně. Výchozí kvalita podle `vc.player.quality`. Přepínač „Use my Bestiary profile“.
+  - Z karty jednotky v Bestiary vede odkaz „Open in Damage Calculator“ s předvyplněným cílem a doporučenou zbraní (URL formát kalkulačky `view-url.ts`).
+- **Sign Editor (VC-26):**
+  - Galerie šablon: štítky truhel (suroviny podle biomů), portálové tagy, značky cest, uvítací cedule. Šablony jsou v datech, přeložené do 13 jazyků, kromě jmen z hry.
+  - Sdílení cedule v URL (`#sign=…`).
+- **Rozcestník (VC-27):** společné hledání napříč sekcemi (jednotky, zbraně, brnění, suroviny) s místními názvy. Výsledek vede přes deep link do příslušné sekce. Index se generuje při buildu (`apps/hub/data/search.js`). Souhrn postupu v záhlaví řeší VC-20.
