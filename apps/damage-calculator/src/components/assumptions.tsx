@@ -151,7 +151,7 @@ listed damage = weapon value + ammo value`)}
             ))}
           </div>
           <p className="text-xs text-muted-foreground">
-            {t("Chop, Pickaxe and Pure are terrain damage (woodcutting, mining and structure damage) and are excluded — the wiki lists every creature except Barka as immune to chop, and all except a few Deep North creatures as immune to pickaxe. That is why a Stone Axe's chop damage never shows up as creature damage, and why the siege items are listed with little or no creature damage at all.")}
+            {t("{types} are terrain damage (woodcutting, mining and structure damage) and are excluded — the wiki lists every creature except {creature} as immune to {chop}, and all except a few {biome} creatures as immune to {pickaxe}. That is why a {weapon}'s {chop} damage never shows up as creature damage, and why the siege items are listed with little or no creature damage at all.", { types: "Chop, Pickaxe, Pure", creature: "Barka", biome: "Deep North", weapon: "Stone Axe", chop: "Chop", pickaxe: "Pickaxe" })}
             </p>
         </div>
 
@@ -173,7 +173,7 @@ listed damage = weapon value + ammo value`)}
             <ul className="space-y-1 text-[11px] leading-snug text-muted-foreground">
               {CONFLICTS.map(({ key, cls, attack, profile }) => (
                 <li key={key}>
-                  <span className="text-foreground">{t("{class} ({attack})", { class: t(CLASS_LABELS[cls]), attack: t(attack) })}
+                  <span className="text-foreground">{t("{class} ({attack})", { class: CLASS_LABELS[cls], attack: t(attack) })}
             </span> —{" "}
                   {profile.note ? `${t(profile.note)} ` : ""}
                   {profile.alternates?.length
@@ -196,7 +196,7 @@ listed damage = weapon value + ammo value`)}
             <ul className="space-y-1 border-t px-2.5 py-2 text-[11px]">
               {TIMING_ROWS.map(({ key, cls, attack, profile }) => (
                 <li key={key} className="flex flex-wrap items-baseline gap-x-2">
-                  <span className="text-muted-foreground">{t("{class} ({attack})", { class: t(CLASS_LABELS[cls]), attack: t(attack) })}
+                  <span className="text-muted-foreground">{t("{class} ({attack})", { class: CLASS_LABELS[cls], attack: t(attack) })}
             </span>
                   <a
                     className="tabular-nums text-primary underline decoration-dotted underline-offset-2"
@@ -277,11 +277,11 @@ listed damage = weapon value + ammo value`)}
             </span> {t("the eight Forsaken, Hildir's four minibosses and every aggressive creature are scraped with the wiki's base (0-star) health and resistances; 1★/2★ variants are not modelled. Aggressive creatures are grouped by the biome the wiki lists them under, and miniboss biomes come from the dungeon each one occupies.")}</li>
             <li>
               <span className="text-foreground">{t("Backstab:")}
-            </span> {t("an unaware enemy takes the weapon's tooltip bonus on the first hit. The wiki names Abyssal Harpoon 1×, two-handed clubs 2×, knives and Flesh Rippers 6×, and every other weapon 3×; a value the item publishes itself (Dundr 1×, the siege payloads 4×) wins. A backstab grants the target five minutes of backstab immunity, so only the opening hit is boosted — turn it on with the Enemy state control.")}</li>
+            </span> {t("An unaware enemy takes the weapon's backstab bonus on the first hit — 1× to 6×, shown per weapon below. The hit then gives it five minutes of backstab immunity, so later hits are normal. {examples}", { examples: "Abyssal Harpoon 1×; Two-handed Club 2×; Knife / Flesh Rippers 6×; Dundr 1×; Siege 4×; 3×." })}</li>
             <li>
               {t("Excluded on purpose: shields (no damage), summon and support staves whose damage comes from minions, dev/cheat items, and gear whose recipe is disabled in the current build.")}</li>
             <li>
-              {t("Not modelled: armour (creatures have none), blocking, parrying, stagger, multi-target penalties, and multi-projectile or area effects (Dundr's 12-bolt grapeshot and explosion damage). All of those multiply the numbers shown here rather than changing the ranking.")}</li>
+              {t("Not modelled: armour (creatures have none), blocking, parrying, stagger, multi-target penalties, and multi-projectile or area effects ({weapon}'s 12-bolt grapeshot and explosion damage). All of those multiply the numbers shown here rather than changing the ranking.", { weapon: "Dundr" })}</li>
           </ul>
           <p className="text-xs text-muted-foreground">
             {t("Refresh data with {command}.", { command: "npm run scrape" })}

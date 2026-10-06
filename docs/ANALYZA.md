@@ -391,3 +391,18 @@ Vychází z `docs/NAVRHY-NASTROJU.md` § „Menší vylepšení“. Platí zása
 - **Stránka Privacy** `/privacy/` (rozcestník, 13 jazyků): co se měří, proč, jak odvolat souhlas, žádné reklamy a žádný prodej dat, kontakt.
 
 > **Zásada (Pavel, 6. 10. 2026): názvy z hry se nepřekládají.** Jednotky, bossové, zbraně, munice, brnění, suroviny, jídla, stanice i biomy zůstávají **anglicky ve všech jazycích** a ve všech nástrojích, stejně jako je hráč zná ze hry. Překládá se jen rozhraní: popisky, tlačítka, nápovědy, legenda a věty kolem názvů. Data `names` z jazykových odkazů wiki (VC-17) mohou zůstat v datech, UI je ale ⛔ nepoužívá. Tato zásada ruší body § 15 o místních názvech.
+
+## 20. Odkazy mezi nástroji (kontrakty URL)
+
+| Cíl | Tvar | Kdo ho používá |
+|---|---|---|
+| Bestiary, jednotka | `/bestiary/#c=<creatureId>` | hledání v rozcestníku (VC-27) |
+| Bestiary, profil hráče | `/bestiary/#player=<base64url>` | sdílení profilu (VC-24) |
+| Armourer | `/armourer/#set=<id>`, `#item=<id>` | hledání (VC-27) |
+| Damage Calculator | `/damage-calculator/?biome=<biomeId>&target=<slug>` (+ volitelně `weapon`, `class`, `level`, `skill`, `roll`, `attack`, `state`; formát `src/lib/view-url.ts`) | karty Bestiary (VC-30), hledání |
+| Sign Editor | `/signs/#sign=<base64url>` | sdílení cedule (VC-26) |
+
+- Id biomů a jednotek jsou ve všech nástrojích stejná (`creature.id` v Bestiary = `slug` v kalkulačce). Bestiary odkazuje do kalkulačky jen u jednotek, které kalkulačka zná (`calculatorSlug` v bundlu); dnes je to 78 ze 106.
+- Z Bestiary do kalkulačky se posílá **jen `biome` a `target`**. Zbraň, úroveň a skill si kalkulačka vezme z profilu hráče (VC-25) a návštěvník je doladí sám (návrh od Teuferona, 6. 10. 2026).
+
+> **Doplnění zásady (6. 10. 2026):** nepřekládají se ani **názvy nástrojů** (Valheim Companion, Bestiary, Armourer, Armory, Damage Calculator, Sign Editor, Runopis, Progress Tracker, Provisions). Jsou to vlastní jména.

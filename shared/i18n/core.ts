@@ -115,8 +115,9 @@ export function entityName(
     | { name: string; names?: Partial<Record<Locale, string>> }
     | null
     | undefined,
-  locale: Locale,
+  _locale: Locale,
 ): string {
   if (!entity) return '';
-  return entity.names?.[locale] ?? entity.name;
+  // Keep the locale argument for compatibility; game names always stay English (VC-29).
+  return entity.name;
 }

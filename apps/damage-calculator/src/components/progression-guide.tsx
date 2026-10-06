@@ -1,3 +1,4 @@
+import { formatGameText } from '@/lib/game-text';
 import { useLanguage } from '@/hooks/use-language';
 
 import { useMemo, useState } from "react";
@@ -74,7 +75,7 @@ export function ProgressionGuide({
           {t("Progression guide")}
             </CardTitle>
         <CardDescription>
-          {t("What to craft and upgrade before you leave {biome}.", { biome: t(step.biome.name) })}
+          {t("What to craft and upgrade before you leave {biome}.", { biome: step.biome.name })}
         </CardDescription>
         <CardAction>
           <button
@@ -162,7 +163,7 @@ export function ProgressionGuide({
             </h3>
               <ul className="list-disc space-y-1 pl-4 text-xs text-muted-foreground">
                 {GUIDE_NOTES[biome].map((note) => (
-                  <li key={note}>{t(note)}</li>
+                  <li key={note.source + JSON.stringify(note.values)}>{formatGameText(note, t)}</li>
                 ))}
               </ul>
             </div>
@@ -207,7 +208,7 @@ function GuidePickRow({
             </span>
             <WikiLink href={weapon.wikiUrl} name={nameOf(weapon)} />
             <Badge variant="secondary" className="font-normal">
-              {t(weapon.clsLabel)}
+              {weapon.clsLabel}
             </Badge>
             {upgradeable && quality > 1 ? (
               <Badge variant="outline" className="font-normal">
@@ -259,7 +260,7 @@ function GuidePickRow({
               {locked.materials
                 .map(
                   (material) =>
-                    `${material.name}${material.biome ? ` (${t(BIOME_NAME[material.biome])})` : ""}`,
+                    `${material.name}${material.biome ? ` (${BIOME_NAME[material.biome]})` : ""}`,
                 )
                 .join(", ")}
               .

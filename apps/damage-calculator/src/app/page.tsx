@@ -256,7 +256,7 @@ export default function Home() {
   const selectedQuality = qualityFor(selectedWeapon);
   const qualityNote =
     selectedQuality < quality
-      ? t("Upgrade level {requested} needs later materials; showing level {shown}, reachable in {biome}.", { requested: formatCount(quality), shown: formatCount(selectedQuality), biome: t(BIOME_NAME[biome]) })
+      ? t("Upgrade level {requested} needs later materials; showing level {shown}, reachable in {biome}.", { requested: formatCount(quality), shown: formatCount(selectedQuality), biome: BIOME_NAME[biome] })
       : undefined;
 
   /* --- shareable URL --------------------------------------------------- *
@@ -495,13 +495,13 @@ export default function Home() {
             </Label>
             <div className="grid grid-cols-2 gap-2">
               <AmmoSelect
-                label={t("Arrow")}
+                label={"Arrow"}
                 items={reachableArrows}
                 value={arrow?.slug ?? ""}
                 onChange={setPickedArrow}
               />
               <AmmoSelect
-                label={t("Bolt")}
+                label={"Bolt"}
                 items={reachableBolts}
                 value={bolt?.slug ?? ""}
                 onChange={setPickedBolt}
@@ -535,17 +535,17 @@ export default function Home() {
                   onClick={() => toggleClass(selectedWeapon.cls)}
                   title={
                     classFilter === selectedWeapon.cls
-                      ? t("Clear the {type} filter", { type: t(CLASS_LABELS[selectedWeapon.cls]) })
-                      : t("Filter the ranking to {type}", { type: t(CLASS_LABELS[selectedWeapon.cls]) })
+                      ? t("Clear the {type} filter", { type: CLASS_LABELS[selectedWeapon.cls] })
+                      : t("Filter the ranking to {type}", { type: CLASS_LABELS[selectedWeapon.cls] })
                   }
                   aria-label={
                     classFilter === selectedWeapon.cls
-                      ? t("Clear the {type} filter", { type: t(CLASS_LABELS[selectedWeapon.cls]) })
-                      : t("Filter the ranking to {type}", { type: t(CLASS_LABELS[selectedWeapon.cls]) })
+                      ? t("Clear the {type} filter", { type: CLASS_LABELS[selectedWeapon.cls] })
+                      : t("Filter the ranking to {type}", { type: CLASS_LABELS[selectedWeapon.cls] })
                   }
                   className="cursor-pointer rounded-sm underline-offset-2 transition-colors hover:text-foreground hover:underline focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                 >
-                  {t(CLASS_LABELS[selectedWeapon.cls])}
+                  {CLASS_LABELS[selectedWeapon.cls]}
                 </button>
                 <WikiLink
                   href={selectedWeapon.wikiUrl}

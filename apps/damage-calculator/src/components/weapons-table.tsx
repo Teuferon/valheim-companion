@@ -86,7 +86,7 @@ export function WeaponsTable({
     const present = new Set(rows.map((r) => r.weapon.cls));
     return CLASS_ORDER.filter((c) => present.has(c)).map((c) => ({
       value: c,
-      label: t(CLASS_LABELS[c]),
+      label: CLASS_LABELS[c],
     }));
   }, [rows, t]);
 
@@ -123,11 +123,7 @@ export function WeaponsTable({
       }
       if (!query.trim()) return true;
       const q = query.trim().toLowerCase();
-      return (
-        matchesName(r.weapon, q, locale) ||
-        r.weapon.clsLabel.toLowerCase().includes(q) ||
-        t(r.weapon.clsLabel).toLocaleLowerCase(locale).includes(q)
-      );
+      return matchesName(r.weapon, q, locale);
     });
     return [...filtered].sort((a, b) => {
       if (sortKey === "ttk") {
@@ -207,10 +203,10 @@ export function WeaponsTable({
             <button
               type="button"
               onClick={() => setDamage("all")}
-              title={t("Clear the {type} filter", { type: t(DAMAGE_LABEL[damage]) })}
+              title={t("Clear the {type} filter", { type: DAMAGE_LABEL[damage] })}
               className="flex h-8 shrink-0 cursor-pointer items-center gap-1.5 rounded-lg border border-input px-2.5 text-xs font-medium transition-colors outline-none hover:bg-accent hover:text-accent-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50"
             >
-              {t("{type} only", { type: t(DAMAGE_LABEL[damage]) })}<X className="size-3.5" />
+              {t("{type} only", { type: DAMAGE_LABEL[damage] })}<X className="size-3.5" />
             </button>
           ) : null}
         </div>
@@ -308,17 +304,17 @@ export function WeaponsTable({
                               }}
                               title={
                                 classActive
-                                  ? t("Clear the {type} filter", { type: t(row.weapon.clsLabel) })
-                                  : t("Filter the ranking to {type}", { type: t(row.weapon.clsLabel) })
+                                  ? t("Clear the {type} filter", { type: row.weapon.clsLabel })
+                                  : t("Filter the ranking to {type}", { type: row.weapon.clsLabel })
                               }
                               aria-label={
                                 classActive
-                                  ? t("Clear the {type} filter", { type: t(row.weapon.clsLabel) })
-                                  : t("Filter the ranking to {type}", { type: t(row.weapon.clsLabel) })
+                                  ? t("Clear the {type} filter", { type: row.weapon.clsLabel })
+                                  : t("Filter the ranking to {type}", { type: row.weapon.clsLabel })
                               }
                               className="cursor-pointer rounded-sm text-[11px] text-muted-foreground underline-offset-2 transition-colors hover:text-foreground hover:underline focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                             >
-                              {t(row.weapon.clsLabel)}
+                              {row.weapon.clsLabel}
                             </button>
                             {row.weapon.group !== "melee" ? (
                               <Badge
@@ -337,8 +333,8 @@ export function WeaponsTable({
                         {row.result.lines.map((line) => {
                           const typeActive = damage === line.type;
                           const typeAction = typeActive
-                            ? t("Clear the {type} filter", { type: t(DAMAGE_LABEL[line.type]) })
-                            : t("Show only weapons that deal {type} damage", { type: t(DAMAGE_LABEL[line.type]) });
+                            ? t("Clear the {type} filter", { type: DAMAGE_LABEL[line.type] })
+                            : t("Show only weapons that deal {type} damage", { type: DAMAGE_LABEL[line.type] });
                           return (
                             <span
                               key={line.type}
@@ -346,7 +342,7 @@ export function WeaponsTable({
                                 "whitespace-nowrap",
                                 DAMAGE_COLOR[line.type],
                               )}
-                              title={t("{type}: {base} base × {resistance} resistance × skill", { type: t(DAMAGE_LABEL[line.type]), base: formatDamage(line.base), resistance: number(line.multiplier) })}
+                              title={t("{type}: {base} base × {resistance} resistance × skill", { type: DAMAGE_LABEL[line.type], base: formatDamage(line.base), resistance: number(line.multiplier) })}
                             >
                               {formatDamage(line.effective)}
                               <button
@@ -367,7 +363,7 @@ export function WeaponsTable({
                                     : "opacity-60",
                                 )}
                               >
-                                {t(DAMAGE_LABEL[line.type])}
+                                {DAMAGE_LABEL[line.type]}
                               </button>
                             </span>
                           );

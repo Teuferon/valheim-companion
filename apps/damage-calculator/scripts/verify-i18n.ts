@@ -10,7 +10,7 @@ import { languageSnapshot, setLanguagePreference, subscribeLanguage } from '../s
 const root = fileURLToPath(new URL('../src/', import.meta.url));
 const catalog = JSON.parse(readFileSync(join(root, 'locales/messages.json'), 'utf8')) as Record<string, Record<string, string>>;
 const keys = new Set<string>();
-const dictionaries = new Set(['TITLE', 'SUMMARY', 'SKILL_MODE_LABEL', 'SORT_LABELS', 'KIND_LABEL', 'KIND_FILTERS', 'GROUP_FILTERS', 'WEAPON_CLASS_LABELS', 'CONFIDENCE_LABEL', 'DAMAGE_LABEL', 'RESISTANCE_LABEL', 'GROUP_LABELS', 'GUIDE_NOTES', 'BIOMES']);
+const dictionaries = new Set(['TITLE', 'SUMMARY', 'SKILL_MODE_LABEL', 'SORT_LABELS', 'KIND_LABEL', 'KIND_FILTERS', 'GROUP_FILTERS', 'CONFIDENCE_LABEL', 'RESISTANCE_LABEL', 'GROUP_LABELS']);
 const brands = new Set(['← Valheim Companion', 'Valheim Companion', 'Valheim Wiki', 'valheim.weirdgloop.org', 'valheim.gaming.tools', 'MaxDPS', 'npm run scrape']);
 function literal(node: ts.Node) {
   if (ts.isStringLiteral(node) || ts.isNoSubstitutionTemplateLiteral(node)) {
@@ -28,7 +28,7 @@ function scan(file: string) {
     ts.forEachChild(node, dictionary);
   }
   function walk(node: ts.Node) {
-    if (ts.isCallExpression(node) && node.expression.getText(ast) === 't' && node.arguments[0]) literal(node.arguments[0]);
+    if (ts.isCallExpression(node) && ['t', 'gameText'].includes(node.expression.getText(ast)) && node.arguments[0]) literal(node.arguments[0]);
     if (ts.isVariableDeclaration(node) && dictionaries.has(node.name.getText(ast)) && node.initializer) {
       literal(node.initializer);
       dictionary(node.initializer);
@@ -123,17 +123,23 @@ const before = JSON.stringify(entities);
 for (const entity of entities) {
   assert.ok(Object.hasOwn(exportedNames, entity.slug), `Missing name export entry: ${entity.slug}`);
   for (const { code } of languages) {
-    const expected = exportedNames[entity.slug][code] ?? entity.name;
+    const expected = entity.name;
     assert.equal(localizedName(entity, code), expected);
     assert.ok(matchesName(entity, entity.name, code), `English search failed: ${entity.slug}/${code}`);
-    assert.ok(matchesName(entity, expected, code), `Local search failed: ${entity.slug}/${code}`);
+    const localName = exportedNames[entity.slug][code];
+    if (localName) {
+      const normalized = (value: string) => value.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
+      assert.equal(matchesName(entity, localName, code), normalized(entity.name).includes(normalized(localName.trim())), `Search uses only English: ${entity.slug}/${code}`);
+    }
   }
 }
 assert.equal(JSON.stringify(entities), before, 'Display names must never mutate English data or URL slugs');
 const abomination = entities.find(entity => entity.slug === 'abomination')!;
-assert.equal(localizedName(abomination, 'cs'), 'Ohavnost');
-assert.equal(matchesName(abomination, '  OHAVNOST  ', 'cs'), true);
+assert.equal(localizedName(abomination, 'cs'), 'Abomination');
+assert.equal(matchesName(abomination, '  OHAVNOST  ', 'cs'), false);
 assert.equal(matchesName(abomination, 'ABOMINATION', 'cs'), true);
 assert.equal(matchesName(abomination, 'not a creature', 'cs'), false);
 assert.equal(localizedName({ slug: 'not-in-wiki', name: 'English fallback' }, 'ja'), 'English fallback');
-console.log(`i18n: ${entities.length} entity names verified against VC-17; local and English search passed`);
+assert.equal(localizedName(entities.find(entity => entity.slug === 'greydwarf')!, 'cs'), 'Greydwarf');
+assert.ok(matchesName(abomination, '  ÁBÓMINÁTION  ', 'cs'));
+console.log(`i18n: ${entities.length} English game names verified in all 13 languages; normalized English search passed`);

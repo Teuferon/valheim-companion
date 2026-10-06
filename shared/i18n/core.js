@@ -153,8 +153,8 @@
 
   function name(entity) {
     if (!entity || typeof entity !== 'object') return '';
-    const currentLocale = locale();
-    return entity.names?.[currentLocale] ?? entity.name ?? '';
+    // Game names stay English in every language; only the surrounding UI is translated (VC-29).
+    return entity.name ?? '';
   }
 
   function apply(root) {

@@ -1,3 +1,4 @@
+import { formatGameText } from '@/lib/game-text';
 import { useLanguage } from '@/hooks/use-language';
 
 import { useState, useSyncExternalStore } from "react";
@@ -83,7 +84,7 @@ export function BiomeSlider({
             </Label>
           <span className="text-sm">
             <span className="font-heading font-semibold tracking-wide">
-              {t(biome.name)}
+              {biome.name}
             </span>
             {bossName ? (
               <span className="text-muted-foreground"> {t(" · boss: {boss}", { boss: bossName })}
@@ -122,7 +123,7 @@ export function BiomeSlider({
               key={entry.id}
               type="button"
               onClick={() => onChange(entry.id)}
-              title={t(entry.note ?? entry.name)}
+              title={entry.note ? formatGameText(entry.note, t) : entry.name}
               className={cn(
                 "flex-1 truncate text-[10px] transition-colors",
                 position === index
@@ -132,13 +133,13 @@ export function BiomeSlider({
                     : "text-muted-foreground/50 hover:text-muted-foreground",
               )}
             >
-              {t(entry.name)}
+              {entry.name}
             </button>
           ))}
         </div>
 
         <p className="text-xs text-muted-foreground">
-          {t("Showing {weapons} of {allWeapons} weapons and {targets} of {allTargets} targets reachable in {biome}.", { weapons: formatCount(visibleWeapons), allWeapons: formatCount(totalWeapons), targets: formatCount(visibleTargets), allTargets: formatCount(totalTargets), biome: t(biome.name) })} {biome.note ? t(biome.note) : ''}
+          {t("Showing {weapons} of {allWeapons} weapons and {targets} of {allTargets} targets reachable in {biome}.", { weapons: formatCount(visibleWeapons), allWeapons: formatCount(totalWeapons), targets: formatCount(visibleTargets), allTargets: formatCount(totalTargets), biome: biome.name })} {biome.note ? formatGameText(biome.note, t) : ''}
         </p>
       </CardContent>
     </Card>

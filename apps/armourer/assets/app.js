@@ -20,17 +20,21 @@
     ? VCI18n.t(globalThis.VC_MESSAGES || {}, source, values)
     : String(source).replace(/\{(\w+)\}/g, (match, key) => values?.[key] ?? match);
   const entityName = entity => globalThis.VCI18n ? VCI18n.name(entity) : entity?.name || '';
-  const biomeName = biome => biome?.names?.[globalThis.VCI18n?.locale()] ? entityName(biome) : t(biome?.name || 'Unknown');
-  const stationName = station => t((station || 'Station').split(/[·,;\/]/)[0].trim());
+  const biomeName = biome => entityName(biome) || t('Unknown');
+  const stationName = station => station ? station.split(/[·,;\/]/)[0].trim() : t('Station');
   const effectText = value => {
     const raw = String(value);
     const resistance = raw.match(/^(Resistant|Very Weak|Weak|Slightly weak)(?: \(([^)]+)\))?\s+(?:vs\.?|VS)\s+(.+)$/i);
     if (resistance) return t('{resistance} vs. {types}', {
       resistance: t(resistance[1].toLowerCase().replace(/(^| )\w/g, c => c.toUpperCase())) + (resistance[2] ? ' (' + resistance[2] + ')' : ''),
-      types: resistance[3].split(/, | and /).map(t).join(', '),
+      types: resistance[3].split(/, | and /).join(', '),
     });
     const amount = raw.match(/^([+-]\d+%?)\s+(.+)$/);
-    if (amount) return amount[1] + ' ' + t(amount[2].toLowerCase());
+    if (amount) {
+      const damage = amount[2].match(/^(slash|pierce|blunt|fire|frost|lightning|poison|spirit|chop|pickaxe|pure) damage$/i);
+      if (damage) return amount[1] + ' ' + t('{type} damage', { type: damage[1].charAt(0).toUpperCase() + damage[1].slice(1).toLowerCase() });
+      return amount[1] + ' ' + t(amount[2].toLowerCase());
+    }
     const trailing = raw.match(/^(.+?)(?::| skill)?\s+([+-]\d+%?)$/);
     if (trailing) return t(trailing[1]) + ' ' + trailing[2];
     return t(raw);
@@ -1032,7 +1036,7 @@
       // Weapon damage
       const dmgEntries = Object.entries(weapon.damage || {});
       if (dmgEntries.length > 0) {
-        const dmgText = dmgEntries.map(([dtype, val]) => t(dtype.charAt(0).toUpperCase() + dtype.slice(1)) + ' ' + val).join(', ');
+        const dmgText = dmgEntries.map(([dtype, val]) => (dtype.charAt(0).toUpperCase() + dtype.slice(1)) + ' ' + val).join(', ');
         const dmgBadge = el('span', 'badge badge-armor', dmgText);
         badgesRow.appendChild(dmgBadge);
       }
@@ -1561,7 +1565,7 @@
           const costHeader = el('div', 'cost-card-header');
 
           const pieceName = el('span', 'cost-piece-name', entityName(piece) + ' · Q' + lvl.quality + (lvl.quality === 1 ? ' (' + t('Craft') + ')' : ' (' + t('Upgrade') + ')'));
-          const stationName = t(piece.station || 'Station');
+          const stationName = piece.station || t('Station');
           const stationText = lvl.stationLevel ? stationName + ' ' + t('Level {level}', { level: lvl.stationLevel }) : stationName;
           const stationBadge = el('span', 'cost-station-badge', stationText);
 
@@ -2010,14 +2014,14 @@
         metricsBox.appendChild(barsRow);
 
         const coalRow = el('div', 'cart-summary-metric');
-        const coalLabel = el('span', 'metric-label', t('Coal needed:'));
+        const coalLabel = el('span', 'metric-label', t('{item} needed:', { item: 'Coal' }));
         const coalVal = el('span', 'metric-value metric-value-gold', String(calc.smelting.totalCoal));
         coalRow.appendChild(coalLabel);
         coalRow.appendChild(coalVal);
         metricsBox.appendChild(coalRow);
 
         const woodRow = el('div', 'cart-summary-metric');
-        const woodLabel = el('span', 'metric-label', t('Wood in Charcoal Kiln:'));
+        const woodLabel = el('span', 'metric-label', t('{item} in {station}:', { item: 'Wood', station: 'Charcoal Kiln' }));
         const woodVal = el('span', 'metric-value', String(calc.smelting.totalKilnWood));
         woodRow.appendChild(woodLabel);
         woodRow.appendChild(woodVal);
