@@ -6,7 +6,7 @@ Testy: `node --test 'scripts/**/*.test.mjs'`.
 
 Úkol VC-9: metadata pro sdílení na sítích (Open Graph a Twitter), náhledové obrázky s logem, favicony a manifest na všech stránkách Valheim Companion.
 
-PŘEČTI NEJDŘÍV: `docs/ANALYZA.md` § 11. Hlavičky `<head>` v `apps/hub/index.html`, `apps/bestiary/index.html`, `apps/armourer/index.html` a `apps/signs/index.html`.
+PŘEČTI NEJDŘÍV: `docs/ANALYZA.md` § 11. Hlavičky `<head>` v `apps/hub/index.html`, `apps/bestiary/index.html`, `apps/armourer/index.html`, `apps/signs/index.html` a `apps/damage-calculator/index.html`.
 
 ROZSAH (⛔ jiné soubory neupravuj):
 - `site.config.json` (nový)
@@ -18,8 +18,8 @@ ROZSAH (⛔ jiné soubory neupravuj):
 - `README.md`
 
 KROK 1: obrázky, commit
-- `apps/hub/og/card.html`: šablona 1200×630, bez JS frameworků. Parametry přes `?section=hub|bestiary|signs|armourer` čte malý inline-free skript `card.js`.
-  - Pozadí: obrázek biomu (`../../bestiary/img/biomes/<biom>.png`; hub = black-forest, bestiary = mistlands, armourer = mountain, signs = `../../signs/public/sign-scene.png` přes relativní cestu v repu) s tmavým přechodem zleva.
+- `apps/hub/og/card.html`: šablona 1200×630, bez JS frameworků. Parametry přes `?section=hub|bestiary|signs|armourer|damage-calculator` čte malý inline-free skript `card.js`.
+  - Pozadí: obrázek biomu (`../../bestiary/img/biomes/<biom>.png`; hub = black-forest, bestiary = mistlands, armourer = mountain, damage-calculator = ashlands, signs = `../../signs/public/sign-scene.png` přes relativní cestu v repu) s tmavým přechodem zleva.
   - Vlevo nahoře logo: runový štít, vlastní inline SVG v jantarové `#d9a441`, stejný motiv jako `favicon.svg`.
   - Nadpis fontem Norse (`../fonts/Norse.otf`): „VALHEIM COMPANION“, u sekcí nadpis sekce a pod ním menší „Valheim Companion“.
   - Podtitul 1–2 řádky (texty jsou v KROKU 2) a dole drobně URL webu ze `site.config.json` (načte ho `card.js`; když je prázdný, nic nezobrazí).
@@ -51,10 +51,13 @@ KROK 2: meta tagy, commit
   - **armourer**:
     - title „Armourer — Valheim Companion“
     - desc „Every Valheim armor set by biome. Pick pieces and upgrade levels and get the full material list — and where to farm it.“
+  - **damage-calculator**:
+    - title „Damage Calculator — Valheim Companion“
+    - desc „Pick a Valheim creature and a weapon, set skill and upgrade level and see the damage that actually lands — resistances, DPS and time-to-kill.“
   - **signs**:
     - title „Sign Editor (Runopis) — Valheim Companion“
     - desc „Write Valheim signs with colors, sizes and rich-text tags, see a live in-game preview and copy them straight into the game. 13 languages.“
-- Runopis (`apps/signs/index.html`) zpracovává Vite. Blok vlož do zdrojového `index.html`. Cesty `/og/…`, `/icons/…` a `/site.webmanifest` jsou absolutní ke kořeni webu, takže je Vite nesmí přepsat: ověř po `npm --prefix apps/signs run build` v `dist-static/index.html`. Pokud je Vite mění, dej je do `public/` a uprav cestu.
+- Runopis (`apps/signs/index.html`) a Damage Calculator (`apps/damage-calculator/index.html`) zpracovává Vite (u kalkulačky `npm --prefix apps/damage-calculator run build`). Blok vlož do zdrojového `index.html`. Cesty `/og/…`, `/icons/…` a `/site.webmanifest` jsou absolutní ke kořeni webu, takže je Vite nesmí přepsat: ověř po `npm --prefix apps/signs run build` v `dist-static/index.html`. Pokud je Vite mění, dej je do `public/` a uprav cestu.
 - `scripts/build-site.mjs` kopíruje `apps/hub/og/*.png` (bez šablon `*.html` a `*.js`), `icons/` a `site.webmanifest` do `dist/`.
 - `Dockerfile`: hub se kopíruje celý, takže by to mělo fungovat samo. Šablony `og/*.html` a `og/*.js` v obrazu nevadí. Jinak uprav `.dockerignore`.
 - `README.md`: sekce „Sharing metadata“ (jak změnit doménu: `site.config.json` → `node scripts/apply-meta.mjs` → commit; jak přegenerovat obrázky: `node scripts/render-og.mjs`).
@@ -63,7 +66,7 @@ KROK 2: meta tagy, commit
 ZKOUŠKA:
 - `node scripts/render-og.mjs 2>&1 | tail -6` (vypíše rozměry a velikosti)
 - `node scripts/apply-meta.mjs` 2× za sebou: druhý běh nic nezmění
-- `npm run build 2>&1 | tail -3`, pak `ls dist/og dist/icons` a `grep -c "og:title" dist/index.html dist/bestiary/index.html dist/armourer/index.html dist/signs/index.html`
+- `npm run build 2>&1 | tail -3`, pak `ls dist/og dist/icons` a `grep -c "og:title" dist/index.html dist/bestiary/index.html dist/armourer/index.html dist/signs/index.html dist/damage-calculator/index.html`
 - `git status --short` prázdné
 Vizuální kontrolu PNG a validaci tagů udělá orchestrátor.
 
