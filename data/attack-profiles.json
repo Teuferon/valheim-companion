@@ -1,0 +1,6353 @@
+{
+  "weapons": {
+    "abyssal-harpoon": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 0.68
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.04
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "abyssal-razor": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.74
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.52
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "ancient-bark-spear": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 0.68
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.04
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "antler-pickaxe": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.4
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "arbalest": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "crossbow"
+        },
+        "damageMult": 1,
+        "confidence": "model"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "ash-fang": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "bow"
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "bare-fists": {
+      "primary": {
+        "comboMults": [
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.48
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.48
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "battleaxe": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 3.2
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 0.84
+        },
+        "damageMult": 0.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "berserkir-axes": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 3.521
+        },
+        "damageMult": 1,
+        "confidence": "model"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.93
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "bile-bomb": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.2
+        },
+        "damageMult": 1,
+        "confidence": "estimate"
+      },
+      "secondary": null,
+      "skillScaled": false
+    },
+    "black-metal-atgeir": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.98
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.56
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "black-metal-axe": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.58
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "black-metal-battleaxe": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 3.2
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 0.84
+        },
+        "damageMult": 0.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "black-metal-knife": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.74
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.52
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "black-metal-missile": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2
+        },
+        "damageMult": 1,
+        "confidence": "model"
+      },
+      "secondary": null,
+      "skillScaled": false
+    },
+    "black-metal-pickaxe": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.4
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "black-metal-sword": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.84
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "bleeding-berserkir-axes": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 3.62
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.93
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "blood-fang": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "bow"
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "bloodgeon": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.72
+        },
+        "damageMult": 2.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "bloodgold-missile": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2
+        },
+        "damageMult": 1,
+        "confidence": "model"
+      },
+      "secondary": null,
+      "skillScaled": false
+    },
+    "bloodgold-payload": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 6
+        },
+        "damageMult": 1,
+        "confidence": "estimate"
+      },
+      "secondary": null,
+      "skillScaled": false
+    },
+    "bronze-atgeir": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.98
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.56
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "bronze-axe": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.58
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "bronze-mace": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.72
+        },
+        "damageMult": 2.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "bronze-pickaxe": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.4
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "bronze-spear": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 0.68
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.04
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "bronze-sword": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.84
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "brutal-slayer": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 3.44
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.16
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "carapace-spear": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 0.68
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.04
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "club": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.72
+        },
+        "damageMult": 2.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "copper-knife": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.74
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.52
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "crude-bow": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "bow"
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "crystal-battleaxe": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 3.2
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 0.84
+        },
+        "damageMult": 0.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "demolisher": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.7
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "draugr-fang": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "bow"
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "dundr": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.9
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "dyrnwyn": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.84
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "early-axes": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 3.62
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.93
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "echo-spike": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.6
+        },
+        "damageMult": 1,
+        "confidence": "estimate"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "ember-charge": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.2
+        },
+        "damageMult": 1,
+        "confidence": "estimate"
+      },
+      "secondary": null,
+      "skillScaled": false
+    },
+    "explosive-payload": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 6
+        },
+        "damageMult": 1,
+        "confidence": "estimate"
+      },
+      "secondary": null,
+      "skillScaled": false
+    },
+    "fang-spear": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 0.68
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.04
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "finewood-bow": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "bow"
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "flametal-mace": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.72
+        },
+        "damageMult": 2.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "flametal-missile": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2
+        },
+        "damageMult": 1,
+        "confidence": "model"
+      },
+      "secondary": null,
+      "skillScaled": false
+    },
+    "flesh-rippers": {
+      "primary": {
+        "comboMults": [
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.48
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.48
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "flint-axe": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.58
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "flint-knife": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.74
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.52
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "flint-spear": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 0.68
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.04
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "frostfire-atgeir": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.98
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.56
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "frostfire-axe": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.58
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "frostfire-bow": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "bow"
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "frostfire-crossbow": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "crossbow"
+        },
+        "damageMult": 1,
+        "confidence": "model"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "frostfire-dagger": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.74
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.52
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "frostfire-greataxe": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 3.2
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 0.84
+        },
+        "damageMult": 0.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "frostfire-greatsword": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 3.44
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.16
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "frostfire-knucklechains": {
+      "primary": {
+        "comboMults": [
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.48
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.48
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "frostfire-mace": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.72
+        },
+        "damageMult": 2.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "frostfire-sledge": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.7
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "frostfire-spear": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 0.68
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.04
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "frostfire-sword": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.84
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "frostner": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.72
+        },
+        "damageMult": 2.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "grausten-payload": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 6
+        },
+        "damageMult": 1,
+        "confidence": "estimate"
+      },
+      "secondary": null,
+      "skillScaled": false
+    },
+    "himminafl": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.98
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.56
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "huntsman-bow": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "bow"
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "iron-atgeir": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.98
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.56
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "iron-axe": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.58
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "iron-mace": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.72
+        },
+        "damageMult": 2.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "iron-pickaxe": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.4
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "iron-sledge": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.7
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "iron-sword": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.425
+        },
+        "damageMult": 1,
+        "confidence": "model"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.84
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "jotun-bane": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.58
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "klossen": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.72
+        },
+        "damageMult": 2.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "krom": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 3.44
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.16
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "lightning-strike": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.1
+        },
+        "damageMult": 1,
+        "confidence": "estimate"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "mistwalker": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.84
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "nidhogg": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.84
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "nidhogg-the-bleeding": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.84
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "nidhogg-the-primal": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.84
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "nidhogg-the-thundering": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.84
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "nord-atgeir": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.98
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.56
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "nord-axe": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.58
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "nord-bow": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "bow"
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "nord-crossbow": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "crossbow"
+        },
+        "damageMult": 1,
+        "confidence": "model"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "nord-dagger": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.74
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.52
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "nord-greataxe": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 3.2
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 0.84
+        },
+        "damageMult": 0.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "nord-greatsword": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 3.44
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.16
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "nord-knucklechains": {
+      "primary": {
+        "comboMults": [
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.48
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.48
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "nord-mace": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.72
+        },
+        "damageMult": 2.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "nord-sledge": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.7
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "nord-spear": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 0.68
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.04
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "nord-sword": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.84
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "northern-vengeance": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.6
+        },
+        "damageMult": 1,
+        "confidence": "estimate"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "ooze-bomb": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.2
+        },
+        "damageMult": 1,
+        "confidence": "estimate"
+      },
+      "secondary": null,
+      "skillScaled": false
+    },
+    "paws-of-the-bear": {
+      "primary": {
+        "comboMults": [
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.48
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.48
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "porcupine": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.72
+        },
+        "damageMult": 2.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "primal-berserkir-axes": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 3.62
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.93
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "primal-slayer": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 3.44
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.16
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "ripper": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "crossbow"
+        },
+        "damageMult": 1,
+        "confidence": "model"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "root-fang": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "bow"
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "root-ripper": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "crossbow"
+        },
+        "damageMult": 1,
+        "confidence": "model"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "scourging-slayer": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 3.44
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.16
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "silver-knife": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.74
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.52
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "silver-sword": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.84
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "skoll-and-hati": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.74
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.52
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "skull-splittur": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 3.2
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 0.84
+        },
+        "damageMult": 0.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "slayer": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 3.44
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.16
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "smoke-bomb": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.2
+        },
+        "damageMult": 1,
+        "confidence": "estimate"
+      },
+      "secondary": null,
+      "skillScaled": false
+    },
+    "snowball": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.2
+        },
+        "damageMult": 1,
+        "confidence": "estimate"
+      },
+      "secondary": null,
+      "skillScaled": false
+    },
+    "spinesnap": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "bow"
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "splitnir": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 0.68
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.04
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "splitnir-the-bleeding": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 0.68
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.04
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "splitnir-the-primal": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 0.68
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.04
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "splitnir-the-storming": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 0.68
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.04
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "staff-of-embers": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.1
+        },
+        "damageMult": 1,
+        "confidence": "estimate"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "staff-of-fracturing": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.1
+        },
+        "damageMult": 1,
+        "confidence": "estimate"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "staff-of-frost": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.1
+        },
+        "damageMult": 1,
+        "confidence": "estimate"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "staff-of-the-wild": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.1
+        },
+        "damageMult": 1,
+        "confidence": "estimate"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "stagbreaker": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.7
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "stone-axe": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.58
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "storm-fang": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "bow"
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "storm-ripper": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "crossbow"
+        },
+        "damageMult": 1,
+        "confidence": "model"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "storm-star": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.72
+        },
+        "damageMult": 2.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "thunderblood-atgeir": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.98
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.56
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "thunderblood-axe": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.58
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "thunderblood-bow": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "bow"
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "thunderblood-crossbow": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "crossbow"
+        },
+        "damageMult": 1,
+        "confidence": "model"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "thunderblood-dagger": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.74
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.52
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "thunderblood-greataxe": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 3.2
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 0.84
+        },
+        "damageMult": 0.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "thunderblood-greatsword": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 3.44
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.16
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "thunderblood-knucklechains": {
+      "primary": {
+        "comboMults": [
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.48
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.48
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "thunderblood-mace": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.72
+        },
+        "damageMult": 2.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "thunderblood-sledge": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.7
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": null,
+      "skillScaled": true
+    },
+    "thunderblood-spear": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 0.68
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.04
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "thunderblood-sword": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.84
+        },
+        "damageMult": 3,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "thundering-berserkir-axes": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 3.62
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.93
+        },
+        "damageMult": 1.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "torch": {
+      "primary": {
+        "comboMults": [
+          1,
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2.46
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.72
+        },
+        "damageMult": 2.5,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "vilebone-maulclaws": {
+      "primary": {
+        "comboMults": [
+          1,
+          2
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.48
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "secondary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 1.48
+        },
+        "damageMult": 1,
+        "confidence": "wiki"
+      },
+      "skillScaled": true
+    },
+    "wooden-missile": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "fixed",
+          "seconds": 2
+        },
+        "damageMult": 1,
+        "confidence": "model"
+      },
+      "secondary": null,
+      "skillScaled": false
+    },
+    "wound-ripper": {
+      "primary": {
+        "comboMults": [
+          1
+        ],
+        "cycle": {
+          "kind": "crossbow"
+        },
+        "damageMult": 1,
+        "confidence": "model"
+      },
+      "secondary": null,
+      "skillScaled": true
+    }
+  },
+  "abyssal-harpoon": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 0.68
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.04
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "abyssal-razor": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.74
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.52
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "ancient-bark-spear": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 0.68
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.04
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "antler-pickaxe": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.4
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "arbalest": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "crossbow"
+      },
+      "damageMult": 1,
+      "confidence": "model"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "ash-fang": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "bow"
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "bare-fists": {
+    "primary": {
+      "comboMults": [
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.48
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.48
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "battleaxe": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 3.2
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 0.84
+      },
+      "damageMult": 0.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "berserkir-axes": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 3.521
+      },
+      "damageMult": 1,
+      "confidence": "model"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.93
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "bile-bomb": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.2
+      },
+      "damageMult": 1,
+      "confidence": "estimate"
+    },
+    "secondary": null,
+    "skillScaled": false
+  },
+  "black-metal-atgeir": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.98
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.56
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "black-metal-axe": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.58
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "black-metal-battleaxe": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 3.2
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 0.84
+      },
+      "damageMult": 0.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "black-metal-knife": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.74
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.52
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "black-metal-missile": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2
+      },
+      "damageMult": 1,
+      "confidence": "model"
+    },
+    "secondary": null,
+    "skillScaled": false
+  },
+  "black-metal-pickaxe": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.4
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "black-metal-sword": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.84
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "bleeding-berserkir-axes": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 3.62
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.93
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "blood-fang": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "bow"
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "bloodgeon": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.72
+      },
+      "damageMult": 2.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "bloodgold-missile": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2
+      },
+      "damageMult": 1,
+      "confidence": "model"
+    },
+    "secondary": null,
+    "skillScaled": false
+  },
+  "bloodgold-payload": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 6
+      },
+      "damageMult": 1,
+      "confidence": "estimate"
+    },
+    "secondary": null,
+    "skillScaled": false
+  },
+  "bronze-atgeir": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.98
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.56
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "bronze-axe": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.58
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "bronze-mace": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.72
+      },
+      "damageMult": 2.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "bronze-pickaxe": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.4
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "bronze-spear": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 0.68
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.04
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "bronze-sword": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.84
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "brutal-slayer": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 3.44
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.16
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "carapace-spear": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 0.68
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.04
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "club": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.72
+      },
+      "damageMult": 2.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "copper-knife": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.74
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.52
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "crude-bow": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "bow"
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "crystal-battleaxe": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 3.2
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 0.84
+      },
+      "damageMult": 0.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "demolisher": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.7
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "draugr-fang": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "bow"
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "dundr": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.9
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "dyrnwyn": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.84
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "early-axes": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 3.62
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.93
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "echo-spike": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.6
+      },
+      "damageMult": 1,
+      "confidence": "estimate"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "ember-charge": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.2
+      },
+      "damageMult": 1,
+      "confidence": "estimate"
+    },
+    "secondary": null,
+    "skillScaled": false
+  },
+  "explosive-payload": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 6
+      },
+      "damageMult": 1,
+      "confidence": "estimate"
+    },
+    "secondary": null,
+    "skillScaled": false
+  },
+  "fang-spear": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 0.68
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.04
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "finewood-bow": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "bow"
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "flametal-mace": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.72
+      },
+      "damageMult": 2.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "flametal-missile": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2
+      },
+      "damageMult": 1,
+      "confidence": "model"
+    },
+    "secondary": null,
+    "skillScaled": false
+  },
+  "flesh-rippers": {
+    "primary": {
+      "comboMults": [
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.48
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.48
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "flint-axe": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.58
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "flint-knife": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.74
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.52
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "flint-spear": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 0.68
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.04
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "frostfire-atgeir": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.98
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.56
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "frostfire-axe": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.58
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "frostfire-bow": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "bow"
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "frostfire-crossbow": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "crossbow"
+      },
+      "damageMult": 1,
+      "confidence": "model"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "frostfire-dagger": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.74
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.52
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "frostfire-greataxe": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 3.2
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 0.84
+      },
+      "damageMult": 0.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "frostfire-greatsword": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 3.44
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.16
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "frostfire-knucklechains": {
+    "primary": {
+      "comboMults": [
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.48
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.48
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "frostfire-mace": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.72
+      },
+      "damageMult": 2.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "frostfire-sledge": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.7
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "frostfire-spear": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 0.68
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.04
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "frostfire-sword": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.84
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "frostner": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.72
+      },
+      "damageMult": 2.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "grausten-payload": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 6
+      },
+      "damageMult": 1,
+      "confidence": "estimate"
+    },
+    "secondary": null,
+    "skillScaled": false
+  },
+  "himminafl": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.98
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.56
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "huntsman-bow": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "bow"
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "iron-atgeir": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.98
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.56
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "iron-axe": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.58
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "iron-mace": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.72
+      },
+      "damageMult": 2.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "iron-pickaxe": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.4
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "iron-sledge": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.7
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "iron-sword": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.425
+      },
+      "damageMult": 1,
+      "confidence": "model"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.84
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "jotun-bane": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.58
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "klossen": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.72
+      },
+      "damageMult": 2.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "krom": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 3.44
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.16
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "lightning-strike": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.1
+      },
+      "damageMult": 1,
+      "confidence": "estimate"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "mistwalker": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.84
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "nidhogg": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.84
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "nidhogg-the-bleeding": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.84
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "nidhogg-the-primal": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.84
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "nidhogg-the-thundering": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.84
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "nord-atgeir": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.98
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.56
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "nord-axe": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.58
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "nord-bow": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "bow"
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "nord-crossbow": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "crossbow"
+      },
+      "damageMult": 1,
+      "confidence": "model"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "nord-dagger": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.74
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.52
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "nord-greataxe": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 3.2
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 0.84
+      },
+      "damageMult": 0.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "nord-greatsword": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 3.44
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.16
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "nord-knucklechains": {
+    "primary": {
+      "comboMults": [
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.48
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.48
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "nord-mace": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.72
+      },
+      "damageMult": 2.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "nord-sledge": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.7
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "nord-spear": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 0.68
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.04
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "nord-sword": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.84
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "northern-vengeance": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.6
+      },
+      "damageMult": 1,
+      "confidence": "estimate"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "ooze-bomb": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.2
+      },
+      "damageMult": 1,
+      "confidence": "estimate"
+    },
+    "secondary": null,
+    "skillScaled": false
+  },
+  "paws-of-the-bear": {
+    "primary": {
+      "comboMults": [
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.48
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.48
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "porcupine": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.72
+      },
+      "damageMult": 2.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "primal-berserkir-axes": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 3.62
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.93
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "primal-slayer": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 3.44
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.16
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "ripper": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "crossbow"
+      },
+      "damageMult": 1,
+      "confidence": "model"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "root-fang": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "bow"
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "root-ripper": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "crossbow"
+      },
+      "damageMult": 1,
+      "confidence": "model"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "scourging-slayer": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 3.44
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.16
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "silver-knife": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.74
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.52
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "silver-sword": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.84
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "skoll-and-hati": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.74
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.52
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "skull-splittur": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 3.2
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 0.84
+      },
+      "damageMult": 0.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "slayer": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 3.44
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.16
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "smoke-bomb": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.2
+      },
+      "damageMult": 1,
+      "confidence": "estimate"
+    },
+    "secondary": null,
+    "skillScaled": false
+  },
+  "snowball": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.2
+      },
+      "damageMult": 1,
+      "confidence": "estimate"
+    },
+    "secondary": null,
+    "skillScaled": false
+  },
+  "spinesnap": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "bow"
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "splitnir": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 0.68
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.04
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "splitnir-the-bleeding": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 0.68
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.04
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "splitnir-the-primal": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 0.68
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.04
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "splitnir-the-storming": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 0.68
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.04
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "staff-of-embers": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.1
+      },
+      "damageMult": 1,
+      "confidence": "estimate"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "staff-of-fracturing": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.1
+      },
+      "damageMult": 1,
+      "confidence": "estimate"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "staff-of-frost": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.1
+      },
+      "damageMult": 1,
+      "confidence": "estimate"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "staff-of-the-wild": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.1
+      },
+      "damageMult": 1,
+      "confidence": "estimate"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "stagbreaker": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.7
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "stone-axe": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.58
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "storm-fang": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "bow"
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "storm-ripper": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "crossbow"
+      },
+      "damageMult": 1,
+      "confidence": "model"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "storm-star": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.72
+      },
+      "damageMult": 2.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "thunderblood-atgeir": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.98
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.56
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "thunderblood-axe": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.58
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "thunderblood-bow": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "bow"
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "thunderblood-crossbow": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "crossbow"
+      },
+      "damageMult": 1,
+      "confidence": "model"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "thunderblood-dagger": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.74
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.52
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "thunderblood-greataxe": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 3.2
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 0.84
+      },
+      "damageMult": 0.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "thunderblood-greatsword": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 3.44
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.16
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "thunderblood-knucklechains": {
+    "primary": {
+      "comboMults": [
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.48
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.48
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "thunderblood-mace": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.72
+      },
+      "damageMult": 2.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "thunderblood-sledge": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.7
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "thunderblood-spear": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 0.68
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.04
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "thunderblood-sword": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.84
+      },
+      "damageMult": 3,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "thundering-berserkir-axes": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 3.62
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.93
+      },
+      "damageMult": 1.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "torch": {
+    "primary": {
+      "comboMults": [
+        1,
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2.46
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.72
+      },
+      "damageMult": 2.5,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "vilebone-maulclaws": {
+    "primary": {
+      "comboMults": [
+        1,
+        2
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.48
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "secondary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 1.48
+      },
+      "damageMult": 1,
+      "confidence": "wiki"
+    },
+    "skillScaled": true
+  },
+  "wooden-missile": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "fixed",
+        "seconds": 2
+      },
+      "damageMult": 1,
+      "confidence": "model"
+    },
+    "secondary": null,
+    "skillScaled": false
+  },
+  "wound-ripper": {
+    "primary": {
+      "comboMults": [
+        1
+      ],
+      "cycle": {
+        "kind": "crossbow"
+      },
+      "damageMult": 1,
+      "confidence": "model"
+    },
+    "secondary": null,
+    "skillScaled": true
+  },
+  "bow": {
+    "drawBase": 2.5,
+    "drawPerSkill": 0.02,
+    "minInterval": 0.8
+  },
+  "crossbow": {
+    "reloadBase": 3.5,
+    "reloadPerSkill": 0.5,
+    "readying": 1.15,
+    "firing": 0.7
+  }
+}

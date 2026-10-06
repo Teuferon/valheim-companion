@@ -1,0 +1,1712 @@
+{
+  "abyssal-harpoon": {
+    "pierce": [
+      10
+    ]
+  },
+  "abyssal-razor": {
+    "pierce": [
+      20,
+      21,
+      22,
+      23
+    ],
+    "slash": [
+      20,
+      21,
+      22,
+      23
+    ]
+  },
+  "ancient-bark-spear": {
+    "pierce": [
+      55,
+      61,
+      67,
+      73
+    ]
+  },
+  "antler-pickaxe": {
+    "pierce": [
+      18
+    ]
+  },
+  "arbalest": {
+    "pierce": [
+      200,
+      203,
+      206,
+      209
+    ]
+  },
+  "ash-fang": {
+    "pierce": [
+      82,
+      86,
+      90,
+      94
+    ],
+    "spirit": [
+      0,
+      5,
+      10,
+      15
+    ]
+  },
+  "bare-fists": {
+    "blunt": [
+      5
+    ]
+  },
+  "battleaxe": {
+    "slash": [
+      70,
+      76,
+      82,
+      88
+    ]
+  },
+  "berserkir-axes": {
+    "slash": [
+      140,
+      145,
+      150,
+      155
+    ]
+  },
+  "bile-bomb": {
+    "blunt": [
+      5
+    ]
+  },
+  "black-metal-atgeir": {
+    "pierce": [
+      105,
+      111,
+      117,
+      123
+    ]
+  },
+  "black-metal-axe": {
+    "slash": [
+      100,
+      105,
+      110,
+      115
+    ]
+  },
+  "black-metal-battleaxe": {
+    "slash": [
+      110,
+      116,
+      122,
+      128
+    ]
+  },
+  "black-metal-knife": {
+    "pierce": [
+      34,
+      35,
+      36,
+      37
+    ],
+    "slash": [
+      34,
+      35,
+      36,
+      37
+    ]
+  },
+  "black-metal-missile": {
+    "pierce": [
+      120
+    ]
+  },
+  "black-metal-pickaxe": {
+    "pierce": [
+      49,
+      54,
+      59,
+      64
+    ]
+  },
+  "black-metal-sword": {
+    "slash": [
+      95,
+      101,
+      107,
+      113
+    ]
+  },
+  "bleeding-berserkir-axes": {
+    "slash": [
+      140,
+      145,
+      150,
+      155
+    ]
+  },
+  "blood-fang": {
+    "pierce": [
+      82,
+      86,
+      90,
+      94
+    ],
+    "spirit": [
+      0,
+      5,
+      10,
+      15
+    ]
+  },
+  "bloodgeon": {
+    "blunt": [
+      135,
+      141,
+      147,
+      153
+    ]
+  },
+  "bloodgold-missile": {
+    "pierce": [
+      200
+    ]
+  },
+  "bloodgold-payload": {
+    "blunt": [
+      20
+    ]
+  },
+  "bronze-atgeir": {
+    "pierce": [
+      45,
+      51,
+      57,
+      63
+    ]
+  },
+  "bronze-axe": {
+    "slash": [
+      40,
+      45,
+      50,
+      55
+    ]
+  },
+  "bronze-mace": {
+    "blunt": [
+      35,
+      41,
+      47,
+      53
+    ]
+  },
+  "bronze-pickaxe": {
+    "pierce": [
+      25,
+      30,
+      35,
+      40
+    ]
+  },
+  "bronze-spear": {
+    "pierce": [
+      35,
+      41,
+      47,
+      53
+    ]
+  },
+  "bronze-sword": {
+    "slash": [
+      35,
+      41,
+      47,
+      53
+    ]
+  },
+  "brutal-slayer": {
+    "slash": [
+      170,
+      176,
+      182,
+      188
+    ]
+  },
+  "carapace-spear": {
+    "pierce": [
+      115,
+      121,
+      127,
+      133
+    ]
+  },
+  "club": {
+    "blunt": [
+      12,
+      18,
+      24,
+      30
+    ]
+  },
+  "copper-knife": {
+    "pierce": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "slash": [
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "crude-bow": {
+    "pierce": [
+      22,
+      25,
+      28,
+      31
+    ]
+  },
+  "crystal-battleaxe": {
+    "slash": [
+      90,
+      96,
+      102,
+      108
+    ],
+    "spirit": [
+      30,
+      30,
+      30,
+      30
+    ]
+  },
+  "demolisher": {
+    "blunt": [
+      145,
+      151,
+      157,
+      163
+    ]
+  },
+  "draugr-fang": {
+    "pierce": [
+      47,
+      50,
+      53,
+      56
+    ],
+    "poison": [
+      5,
+      10,
+      15,
+      20
+    ]
+  },
+  "dundr": {
+    "lightning": [
+      20,
+      23,
+      26,
+      29
+    ]
+  },
+  "dyrnwyn": {
+    "slash": [
+      145,
+      151,
+      157,
+      163
+    ],
+    "fire": [
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  "early-axes": {
+    "slash": [
+      30,
+      35,
+      40,
+      45
+    ]
+  },
+  "echo-spike": {
+    "fire": [
+      50,
+      50,
+      50,
+      50
+    ],
+    "frost": [
+      50,
+      50,
+      50,
+      50
+    ]
+  },
+  "ember-charge": {
+    "blunt": [
+      140
+    ]
+  },
+  "fang-spear": {
+    "pierce": [
+      75,
+      81,
+      87,
+      93
+    ]
+  },
+  "finewood-bow": {
+    "pierce": [
+      32,
+      35,
+      38,
+      41
+    ]
+  },
+  "flametal-mace": {
+    "blunt": [
+      135,
+      141,
+      147,
+      153
+    ]
+  },
+  "flametal-missile": {
+    "pierce": [
+      140
+    ]
+  },
+  "flesh-rippers": {
+    "slash": [
+      60,
+      64,
+      68,
+      72
+    ]
+  },
+  "flint-axe": {
+    "slash": [
+      20,
+      25,
+      30,
+      35
+    ]
+  },
+  "flint-knife": {
+    "pierce": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "slash": [
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "flint-spear": {
+    "pierce": [
+      20,
+      26,
+      32,
+      38
+    ]
+  },
+  "frostfire-atgeir": {
+    "pierce": [
+      148,
+      158,
+      168,
+      178
+    ],
+    "fire": [
+      12,
+      15,
+      18,
+      21
+    ],
+    "frost": [
+      88,
+      91,
+      94,
+      97
+    ]
+  },
+  "frostfire-axe": {
+    "slash": [
+      144,
+      154,
+      164,
+      174
+    ],
+    "fire": [
+      12,
+      15,
+      18,
+      21
+    ],
+    "frost": [
+      88,
+      91,
+      94,
+      97
+    ]
+  },
+  "frostfire-bow": {
+    "pierce": [
+      68,
+      76,
+      82,
+      88
+    ],
+    "fire": [
+      12,
+      15,
+      18,
+      21
+    ],
+    "frost": [
+      88,
+      91,
+      94,
+      97
+    ],
+    "spirit": [
+      10,
+      15,
+      20,
+      25
+    ]
+  },
+  "frostfire-crossbow": {
+    "pierce": [
+      232,
+      240,
+      248,
+      256
+    ],
+    "fire": [
+      12,
+      15,
+      18,
+      21
+    ],
+    "frost": [
+      88,
+      91,
+      94,
+      97
+    ]
+  },
+  "frostfire-dagger": {
+    "pierce": [
+      62,
+      67,
+      72,
+      77
+    ],
+    "slash": [
+      62,
+      67,
+      72,
+      77
+    ],
+    "fire": [
+      10,
+      13,
+      16,
+      19
+    ],
+    "frost": [
+      88,
+      91,
+      94,
+      97
+    ]
+  },
+  "frostfire-greataxe": {
+    "slash": [
+      154,
+      164,
+      174,
+      184
+    ],
+    "fire": [
+      12,
+      15,
+      18,
+      21
+    ],
+    "frost": [
+      88,
+      91,
+      94,
+      97
+    ]
+  },
+  "frostfire-greatsword": {
+    "slash": [
+      186,
+      196,
+      206,
+      216
+    ],
+    "fire": [
+      12,
+      15,
+      18,
+      21
+    ],
+    "frost": [
+      88,
+      91,
+      94,
+      97
+    ]
+  },
+  "frostfire-knucklechains": {
+    "blunt": [
+      80,
+      88,
+      96,
+      102
+    ],
+    "fire": [
+      12,
+      15,
+      18,
+      21
+    ],
+    "frost": [
+      88,
+      91,
+      94,
+      97
+    ]
+  },
+  "frostfire-mace": {
+    "blunt": [
+      144,
+      154,
+      164,
+      174
+    ],
+    "fire": [
+      12,
+      15,
+      18,
+      21
+    ],
+    "frost": [
+      88,
+      91,
+      94,
+      97
+    ]
+  },
+  "frostfire-sledge": {
+    "blunt": [
+      200,
+      210,
+      220,
+      230
+    ],
+    "fire": [
+      12,
+      15,
+      18,
+      21
+    ],
+    "frost": [
+      88,
+      91,
+      94,
+      97
+    ]
+  },
+  "frostfire-spear": {
+    "pierce": [
+      148,
+      158,
+      168,
+      178
+    ],
+    "fire": [
+      12,
+      15,
+      18,
+      21
+    ],
+    "frost": [
+      88,
+      91,
+      94,
+      97
+    ]
+  },
+  "frostfire-sword": {
+    "slash": [
+      138,
+      148,
+      158,
+      168
+    ],
+    "fire": [
+      12,
+      15,
+      18,
+      21
+    ],
+    "frost": [
+      88,
+      91,
+      94,
+      97
+    ]
+  },
+  "frostner": {
+    "blunt": [
+      35,
+      35,
+      35,
+      35
+    ],
+    "frost": [
+      40,
+      46,
+      52,
+      58
+    ],
+    "spirit": [
+      20,
+      20,
+      20,
+      20
+    ]
+  },
+  "grausten-payload": {
+    "blunt": [
+      25
+    ]
+  },
+  "himminafl": {
+    "pierce": [
+      85,
+      85,
+      85,
+      85
+    ],
+    "lightning": [
+      40,
+      46,
+      52,
+      58
+    ]
+  },
+  "huntsman-bow": {
+    "pierce": [
+      42,
+      45,
+      48,
+      51
+    ]
+  },
+  "iron-atgeir": {
+    "pierce": [
+      65,
+      71,
+      77,
+      83
+    ]
+  },
+  "iron-axe": {
+    "slash": [
+      60,
+      65,
+      70,
+      75
+    ]
+  },
+  "iron-mace": {
+    "blunt": [
+      55,
+      61,
+      67,
+      73
+    ]
+  },
+  "iron-pickaxe": {
+    "pierce": [
+      33,
+      38,
+      43,
+      48
+    ]
+  },
+  "iron-sledge": {
+    "blunt": [
+      55,
+      61,
+      67,
+      73
+    ]
+  },
+  "iron-sword": {
+    "slash": [
+      55,
+      61,
+      67,
+      73
+    ]
+  },
+  "jotun-bane": {
+    "slash": [
+      80,
+      85,
+      90,
+      95
+    ],
+    "poison": [
+      40,
+      40,
+      40,
+      40
+    ]
+  },
+  "klossen": {
+    "blunt": [
+      135,
+      141,
+      147,
+      153
+    ],
+    "poison": [
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  "krom": {
+    "slash": [
+      150,
+      156,
+      162,
+      168
+    ]
+  },
+  "lightning-strike": {
+    "lightning": [
+      300,
+      320,
+      340,
+      360
+    ]
+  },
+  "mistwalker": {
+    "slash": [
+      75,
+      75,
+      75,
+      75
+    ],
+    "frost": [
+      40,
+      46,
+      52,
+      58
+    ],
+    "spirit": [
+      0,
+      5,
+      10,
+      15
+    ]
+  },
+  "nidhogg": {
+    "slash": [
+      135,
+      141,
+      147,
+      153
+    ]
+  },
+  "nidhogg-the-bleeding": {
+    "slash": [
+      135,
+      141,
+      147,
+      153
+    ]
+  },
+  "nidhogg-the-primal": {
+    "slash": [
+      135,
+      141,
+      147,
+      153
+    ],
+    "poison": [
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  "nidhogg-the-thundering": {
+    "slash": [
+      135,
+      141,
+      147,
+      153
+    ],
+    "lightning": [
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  "nord-atgeir": {
+    "pierce": [
+      182,
+      192,
+      202,
+      212
+    ]
+  },
+  "nord-axe": {
+    "slash": [
+      176,
+      186,
+      196,
+      206
+    ]
+  },
+  "nord-bow": {
+    "pierce": [
+      100,
+      108,
+      116,
+      124
+    ],
+    "spirit": [
+      10,
+      22,
+      34,
+      46
+    ]
+  },
+  "nord-crossbow": {
+    "pierce": [
+      264,
+      272,
+      280,
+      288
+    ]
+  },
+  "nord-dagger": {
+    "pierce": [
+      75,
+      80,
+      85,
+      90
+    ],
+    "slash": [
+      75,
+      80,
+      85,
+      90
+    ]
+  },
+  "nord-greataxe": {
+    "slash": [
+      188,
+      198,
+      208,
+      218
+    ]
+  },
+  "nord-greatsword": {
+    "slash": [
+      210,
+      220,
+      230,
+      240
+    ]
+  },
+  "nord-knucklechains": {
+    "blunt": [
+      114,
+      114,
+      114,
+      114
+    ],
+    "slash": [
+      0,
+      8,
+      16,
+      24
+    ]
+  },
+  "nord-mace": {
+    "blunt": [
+      170,
+      180,
+      190,
+      200
+    ]
+  },
+  "nord-sledge": {
+    "blunt": [
+      225,
+      235,
+      245,
+      255
+    ]
+  },
+  "nord-spear": {
+    "pierce": [
+      170,
+      180,
+      190,
+      200
+    ]
+  },
+  "nord-sword": {
+    "slash": [
+      170,
+      180,
+      190,
+      200
+    ]
+  },
+  "northern-vengeance": {
+    "frost": [
+      75,
+      83,
+      91,
+      99
+    ]
+  },
+  "ooze-bomb": {
+    "blunt": [
+      5
+    ]
+  },
+  "paws-of-the-bear": {
+    "slash": [
+      25,
+      29,
+      33,
+      37
+    ]
+  },
+  "porcupine": {
+    "blunt": [
+      50,
+      50,
+      50,
+      50
+    ],
+    "pierce": [
+      45,
+      51,
+      57,
+      63
+    ]
+  },
+  "primal-berserkir-axes": {
+    "slash": [
+      140,
+      145,
+      150,
+      155
+    ],
+    "poison": [
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  "primal-slayer": {
+    "slash": [
+      170,
+      176,
+      182,
+      188
+    ],
+    "poison": [
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  "ripper": {
+    "pierce": [
+      220,
+      223,
+      226,
+      229
+    ]
+  },
+  "root-fang": {
+    "pierce": [
+      82,
+      86,
+      90,
+      94
+    ],
+    "poison": [
+      10,
+      10,
+      10,
+      10
+    ],
+    "spirit": [
+      0,
+      5,
+      10,
+      15
+    ]
+  },
+  "root-ripper": {
+    "pierce": [
+      220,
+      223,
+      226,
+      229
+    ],
+    "poison": [
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  "scourging-slayer": {
+    "slash": [
+      170,
+      176,
+      182,
+      188
+    ],
+    "lightning": [
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  "silver-knife": {
+    "pierce": [
+      25,
+      26,
+      27,
+      28
+    ],
+    "slash": [
+      25,
+      26,
+      27,
+      28
+    ],
+    "spirit": [
+      12,
+      12,
+      12,
+      12
+    ]
+  },
+  "silver-sword": {
+    "slash": [
+      75,
+      81,
+      87,
+      93
+    ],
+    "spirit": [
+      30,
+      35,
+      40,
+      45
+    ]
+  },
+  "skoll-and-hati": {
+    "pierce": [
+      45,
+      46,
+      47,
+      48
+    ],
+    "slash": [
+      45,
+      46,
+      47,
+      48
+    ]
+  },
+  "skull-splittur": {
+    "slash": [
+      130,
+      136,
+      142,
+      148
+    ]
+  },
+  "slayer": {
+    "slash": [
+      170,
+      176,
+      182,
+      188
+    ]
+  },
+  "smoke-bomb": {
+    "blunt": [
+      5
+    ]
+  },
+  "snowball": {
+    "blunt": [
+      5
+    ],
+    "frost": [
+      10
+    ]
+  },
+  "spinesnap": {
+    "pierce": [
+      72,
+      76,
+      80,
+      84
+    ],
+    "spirit": [
+      5,
+      10,
+      15,
+      20
+    ]
+  },
+  "splitnir": {
+    "pierce": [
+      135,
+      141,
+      147,
+      153
+    ]
+  },
+  "splitnir-the-bleeding": {
+    "pierce": [
+      135,
+      141,
+      147,
+      153
+    ]
+  },
+  "splitnir-the-primal": {
+    "pierce": [
+      135,
+      141,
+      147,
+      153
+    ],
+    "poison": [
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  "splitnir-the-storming": {
+    "pierce": [
+      135,
+      141,
+      147,
+      153
+    ],
+    "lightning": [
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  "staff-of-embers": {
+    "blunt": [
+      120,
+      120,
+      120,
+      120
+    ],
+    "fire": [
+      120,
+      126,
+      132,
+      138
+    ]
+  },
+  "staff-of-fracturing": {
+    "blunt": [
+      12,
+      12,
+      12,
+      12
+    ],
+    "fire": [
+      12,
+      18,
+      24,
+      30
+    ]
+  },
+  "staff-of-frost": {
+    "frost": [
+      30,
+      32,
+      34,
+      36
+    ]
+  },
+  "staff-of-the-wild": {
+    "blunt": [
+      20,
+      40,
+      60,
+      80
+    ],
+    "poison": [
+      20,
+      40,
+      60,
+      80
+    ]
+  },
+  "stagbreaker": {
+    "blunt": [
+      20,
+      26,
+      32,
+      38
+    ],
+    "pierce": [
+      5,
+      5,
+      5,
+      5
+    ]
+  },
+  "stone-axe": {
+    "slash": [
+      15,
+      20,
+      25,
+      30
+    ]
+  },
+  "storm-fang": {
+    "pierce": [
+      82,
+      86,
+      90,
+      94
+    ],
+    "lightning": [
+      10,
+      10,
+      10,
+      10
+    ],
+    "spirit": [
+      0,
+      5,
+      10,
+      15
+    ]
+  },
+  "storm-ripper": {
+    "pierce": [
+      220,
+      223,
+      226,
+      229
+    ],
+    "lightning": [
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  "storm-star": {
+    "blunt": [
+      135,
+      141,
+      147,
+      153
+    ],
+    "lightning": [
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  "thunderblood-atgeir": {
+    "pierce": [
+      192,
+      202,
+      212,
+      222
+    ],
+    "lightning": [
+      45,
+      50,
+      55,
+      60
+    ]
+  },
+  "thunderblood-axe": {
+    "slash": [
+      186,
+      196,
+      206,
+      216
+    ],
+    "lightning": [
+      45,
+      50,
+      55,
+      60
+    ]
+  },
+  "thunderblood-bow": {
+    "pierce": [
+      110,
+      118,
+      126,
+      134
+    ],
+    "lightning": [
+      45,
+      50,
+      55,
+      60
+    ],
+    "spirit": [
+      10,
+      15,
+      20,
+      25
+    ]
+  },
+  "thunderblood-crossbow": {
+    "pierce": [
+      274,
+      282,
+      290,
+      298
+    ],
+    "lightning": [
+      45,
+      50,
+      55,
+      60
+    ]
+  },
+  "thunderblood-dagger": {
+    "pierce": [
+      80,
+      85,
+      90,
+      95
+    ],
+    "slash": [
+      80,
+      85,
+      90,
+      95
+    ],
+    "lightning": [
+      45,
+      50,
+      55,
+      60
+    ]
+  },
+  "thunderblood-greataxe": {
+    "slash": [
+      198,
+      208,
+      218,
+      228
+    ],
+    "frost": [
+      88,
+      91,
+      94,
+      97
+    ],
+    "lightning": [
+      45,
+      50,
+      55,
+      60
+    ]
+  },
+  "thunderblood-greatsword": {
+    "slash": [
+      220,
+      230,
+      240,
+      250
+    ],
+    "lightning": [
+      45,
+      50,
+      55,
+      60
+    ]
+  },
+  "thunderblood-knucklechains": {
+    "blunt": [
+      122,
+      130,
+      138,
+      146
+    ],
+    "lightning": [
+      45,
+      50,
+      55,
+      60
+    ]
+  },
+  "thunderblood-mace": {
+    "blunt": [
+      180,
+      190,
+      200,
+      210
+    ],
+    "lightning": [
+      45,
+      50,
+      55,
+      60
+    ]
+  },
+  "thunderblood-sledge": {
+    "blunt": [
+      235,
+      245,
+      255,
+      265
+    ],
+    "lightning": [
+      45,
+      50,
+      55,
+      60
+    ]
+  },
+  "thunderblood-spear": {
+    "pierce": [
+      180,
+      190,
+      200,
+      210
+    ],
+    "lightning": [
+      45,
+      50,
+      55,
+      60
+    ]
+  },
+  "thunderblood-sword": {
+    "slash": [
+      180,
+      190,
+      200,
+      210
+    ],
+    "lightning": [
+      45,
+      50,
+      55,
+      60
+    ]
+  },
+  "thundering-berserkir-axes": {
+    "slash": [
+      140,
+      145,
+      150,
+      155
+    ],
+    "lightning": [
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  "torch": {
+    "blunt": [
+      4
+    ],
+    "fire": [
+      15
+    ]
+  },
+  "vilebone-maulclaws": {
+    "pierce": [
+      60,
+      60,
+      60,
+      60
+    ],
+    "slash": [
+      20,
+      24,
+      28,
+      32
+    ]
+  },
+  "wooden-missile": {
+    "pierce": [
+      75
+    ]
+  },
+  "wound-ripper": {
+    "pierce": [
+      220,
+      223,
+      226,
+      229
+    ]
+  },
+  "black-metal-bolt": {
+    "pierce": [
+      62
+    ]
+  },
+  "bloodgold-arrow": {
+    "pierce": [
+      100
+    ]
+  },
+  "bloodgold-bolt": {
+    "pierce": [
+      92
+    ]
+  },
+  "bone-bolt": {
+    "pierce": [
+      32
+    ]
+  },
+  "bronzehead-arrow": {
+    "pierce": [
+      32
+    ]
+  },
+  "carapace-arrow": {
+    "pierce": [
+      72
+    ]
+  },
+  "carapace-bolt": {
+    "pierce": [
+      72
+    ]
+  },
+  "fire-arrow": {
+    "pierce": [
+      11
+    ],
+    "fire": [
+      22
+    ]
+  },
+  "flinthead-arrow": {
+    "pierce": [
+      27
+    ]
+  },
+  "frost-arrow": {
+    "pierce": [
+      26
+    ],
+    "frost": [
+      52
+    ]
+  },
+  "charred-arrow": {
+    "pierce": [
+      82
+    ]
+  },
+  "charred-bolt": {
+    "pierce": [
+      82
+    ]
+  },
+  "iron-bolt": {
+    "pierce": [
+      42
+    ]
+  },
+  "ironhead-arrow": {
+    "pierce": [
+      42
+    ]
+  },
+  "needle-arrow": {
+    "pierce": [
+      62
+    ]
+  },
+  "obsidian-arrow": {
+    "pierce": [
+      52
+    ]
+  },
+  "poison-arrow": {
+    "pierce": [
+      26
+    ],
+    "poison": [
+      52
+    ]
+  },
+  "silver-arrow": {
+    "pierce": [
+      52
+    ],
+    "spirit": [
+      20
+    ]
+  },
+  "wood-arrow": {
+    "pierce": [
+      22
+    ]
+  }
+}
