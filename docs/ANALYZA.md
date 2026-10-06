@@ -404,3 +404,5 @@ Vychází z `docs/NAVRHY-NASTROJU.md` § „Menší vylepšení“. Platí zása
 
 - Id biomů a jednotek jsou ve všech nástrojích stejná (`creature.id` v Bestiary = `slug` v kalkulačce). Bestiary odkazuje do kalkulačky jen u jednotek, které kalkulačka zná (`calculatorSlug` v bundlu); dnes je to 78 ze 106.
 - Z Bestiary do kalkulačky se posílá **jen `biome` a `target`**. Zbraň, úroveň a skill si kalkulačka vezme z profilu hráče (VC-25) a návštěvník je doladí sám (návrh od Teuferona, 6. 10. 2026).
+
+> **Doplnění zásady (6. 10. 2026):** nepřekládají se ani **názvy nástrojů** (Valheim Companion, Bestiary, Armourer, Armory, Damage Calculator, Sign Editor, Runopis, Progress Tracker, Provisions). Jsou to vlastní jména.
