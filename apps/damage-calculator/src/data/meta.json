@@ -1,0 +1,15 @@
+{
+  "generatedAt": "2026-10-05T18:59:21.131Z",
+  "source": "https://valheim.weirdgloop.org/wiki/Valheim_Wiki",
+  "sourceApi": "https://valheim.weirdgloop.org/api.php",
+  "counts": {
+    "weapons": 141,
+    "ammo": 19,
+    "bosses": 8,
+    "minibosses": 4,
+    "enemies": 67,
+    "biomes": 9,
+    "recipes": 159
+  },
+  "availability": "Item tier is derived from wiki recipes plus the curated tables in src/data/materials.ts; creature biomes come from the wiki's Creatures overview and the curated DUNGEON_BIOME table in scripts/scrape.ts."
+}

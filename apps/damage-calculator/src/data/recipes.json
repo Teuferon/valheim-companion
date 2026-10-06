@@ -1,0 +1,7461 @@
+{
+  "abyssal-harpoon": {
+    "station": "Workbench",
+    "stationLevel": 2,
+    "qualities": [
+      [
+        {
+          "name": "Finewood",
+          "quantity": 8
+        },
+        {
+          "name": "Chitin",
+          "quantity": 30
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 3
+        }
+      ],
+      [],
+      [],
+      []
+    ]
+  },
+  "abyssal-razor": {
+    "station": "Workbench",
+    "stationLevel": 2,
+    "qualities": [
+      [
+        {
+          "name": "Finewood",
+          "quantity": 4
+        },
+        {
+          "name": "Chitin",
+          "quantity": 20
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Chitin",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Chitin",
+          "quantity": 20
+        }
+      ],
+      [
+        {
+          "name": "Chitin",
+          "quantity": 40
+        }
+      ]
+    ]
+  },
+  "ancient-bark-spear": {
+    "station": "Forge",
+    "stationLevel": 3,
+    "qualities": [
+      [
+        {
+          "name": "Troll Hide",
+          "quantity": 4
+        },
+        {
+          "name": "Iron",
+          "quantity": 10
+        },
+        {
+          "name": "Ancient Bark",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Troll Hide",
+          "quantity": 1
+        },
+        {
+          "name": "Iron",
+          "quantity": 5
+        },
+        {
+          "name": "Ancient Bark",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Troll Hide",
+          "quantity": 2
+        },
+        {
+          "name": "Iron",
+          "quantity": 10
+        },
+        {
+          "name": "Ancient Bark",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Troll Hide",
+          "quantity": 4
+        },
+        {
+          "name": "Iron",
+          "quantity": 20
+        },
+        {
+          "name": "Ancient Bark",
+          "quantity": 20
+        }
+      ]
+    ]
+  },
+  "antler-pickaxe": {
+    "station": "Workbench",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 10
+        },
+        {
+          "name": "Hard Antler",
+          "quantity": 1
+        }
+      ],
+      [],
+      [],
+      []
+    ]
+  },
+  "arbalest": {
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 10
+        },
+        {
+          "name": "Iron",
+          "quantity": 8
+        },
+        {
+          "name": "Root (item)",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 5
+        },
+        {
+          "name": "Iron",
+          "quantity": 4
+        },
+        {
+          "name": "Root (item)",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 10
+        },
+        {
+          "name": "Iron",
+          "quantity": 8
+        },
+        {
+          "name": "Root (item)",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 20
+        },
+        {
+          "name": "Iron",
+          "quantity": 16
+        },
+        {
+          "name": "Root (item)",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "ash-fang": {
+    "station": "Black Forge",
+    "stationLevel": 3,
+    "qualities": [
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 10
+        },
+        {
+          "name": "Charred Bone",
+          "quantity": 16
+        },
+        {
+          "name": "Flametal",
+          "quantity": 5
+        },
+        {
+          "name": "Bonemaw Tooth",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 5
+        },
+        {
+          "name": "Charred Bone",
+          "quantity": 10
+        },
+        {
+          "name": "Flametal",
+          "quantity": 5
+        },
+        {
+          "name": "Bonemaw Tooth",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 10
+        },
+        {
+          "name": "Charred Bone",
+          "quantity": 20
+        },
+        {
+          "name": "Flametal",
+          "quantity": 10
+        },
+        {
+          "name": "Bonemaw Tooth",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 20
+        },
+        {
+          "name": "Charred Bone",
+          "quantity": 40
+        },
+        {
+          "name": "Flametal",
+          "quantity": 20
+        },
+        {
+          "name": "Bonemaw Tooth",
+          "quantity": 20
+        }
+      ]
+    ]
+  },
+  "battleaxe": {
+    "station": "Forge",
+    "stationLevel": 2,
+    "qualities": [
+      [
+        {
+          "name": "Ancient Bark",
+          "quantity": 30
+        },
+        {
+          "name": "Iron",
+          "quantity": 35
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Ancient Bark",
+          "quantity": 5
+        },
+        {
+          "name": "Iron",
+          "quantity": 15
+        }
+      ],
+      [
+        {
+          "name": "Ancient Bark",
+          "quantity": 10
+        },
+        {
+          "name": "Iron",
+          "quantity": 30
+        }
+      ],
+      [
+        {
+          "name": "Ancient Bark",
+          "quantity": 20
+        },
+        {
+          "name": "Iron",
+          "quantity": 60
+        }
+      ]
+    ]
+  },
+  "berserkir-axes": {
+    "station": "Black Forge",
+    "stationLevel": 3,
+    "qualities": [
+      [
+        {
+          "name": "Charred Bone",
+          "quantity": 15
+        },
+        {
+          "name": "Flametal",
+          "quantity": 24
+        },
+        {
+          "name": "Asksvin Hide",
+          "quantity": 3
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 15
+        },
+        {
+          "name": "Asksvin Hide",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 30
+        },
+        {
+          "name": "Asksvin Hide",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 60
+        },
+        {
+          "name": "Asksvin Hide",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "bile-bomb": {
+    "station": "Workbench",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Sap",
+          "quantity": 1
+        },
+        {
+          "name": "Bilebag",
+          "quantity": 1
+        },
+        {
+          "name": "Resin",
+          "quantity": 3
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 3
+  },
+  "black-metal-atgeir": {
+    "station": "Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Finewood",
+          "quantity": 10
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 30
+        },
+        {
+          "name": "Linen Thread",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Black Metal",
+          "quantity": 15
+        },
+        {
+          "name": "Linen Thread",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Black Metal",
+          "quantity": 30
+        },
+        {
+          "name": "Linen Thread",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Black Metal",
+          "quantity": 60
+        },
+        {
+          "name": "Linen Thread",
+          "quantity": 20
+        }
+      ]
+    ]
+  },
+  "black-metal-axe": {
+    "station": "Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Finewood",
+          "quantity": 6
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 20
+        },
+        {
+          "name": "Linen Thread",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Black Metal",
+          "quantity": 10
+        },
+        {
+          "name": "Linen Thread",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Black Metal",
+          "quantity": 20
+        },
+        {
+          "name": "Linen Thread",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Black Metal",
+          "quantity": 40
+        },
+        {
+          "name": "Linen Thread",
+          "quantity": 20
+        }
+      ]
+    ]
+  },
+  "black-metal-battleaxe": {
+    "station": "Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Linen",
+          "quantity": 5
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 30
+        },
+        {
+          "name": "Finewood",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Linen",
+          "quantity": 5
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 15
+        }
+      ],
+      [
+        {
+          "name": "Linen",
+          "quantity": 10
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 30
+        }
+      ],
+      [
+        {
+          "name": "Linen",
+          "quantity": 20
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 60
+        }
+      ]
+    ]
+  },
+  "black-metal-bolt": {
+    "station": "Black Forge",
+    "stationLevel": 2,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 8
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 2
+        },
+        {
+          "name": "Feathers",
+          "quantity": 2
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "black-metal-knife": {
+    "station": "Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Finewood",
+          "quantity": 4
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 10
+        },
+        {
+          "name": "Linen Thread",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Black Metal",
+          "quantity": 4
+        },
+        {
+          "name": "Linen Thread",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Black Metal",
+          "quantity": 8
+        },
+        {
+          "name": "Linen Thread",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Black Metal",
+          "quantity": 16
+        },
+        {
+          "name": "Linen Thread",
+          "quantity": 20
+        }
+      ]
+    ]
+  },
+  "black-metal-missile": {
+    "station": "Artisan table",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 10
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 1
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "black-metal-pickaxe": {
+    "station": "Forge",
+    "stationLevel": 2,
+    "qualities": [
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 3
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 25
+        }
+      ],
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 1
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 15
+        }
+      ],
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 2
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 30
+        }
+      ],
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 4
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 60
+        }
+      ]
+    ]
+  },
+  "black-metal-sword": {
+    "station": "Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Finewood",
+          "quantity": 2
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 20
+        },
+        {
+          "name": "Linen Thread",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Black Metal",
+          "quantity": 10
+        },
+        {
+          "name": "Linen Thread",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Black Metal",
+          "quantity": 20
+        },
+        {
+          "name": "Linen Thread",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Black Metal",
+          "quantity": 40
+        },
+        {
+          "name": "Linen Thread",
+          "quantity": 20
+        }
+      ]
+    ]
+  },
+  "bleeding-berserkir-axes": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Berserkir Axes",
+          "quantity": 1
+        },
+        {
+          "name": "Flametal",
+          "quantity": 5
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 5
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 10
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 20
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "blood-fang": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Ash Fang",
+          "quantity": 1
+        },
+        {
+          "name": "Flametal",
+          "quantity": 5
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 5
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 10
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 20
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "bloodgeon": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Flametal Mace",
+          "quantity": 1
+        },
+        {
+          "name": "Flametal",
+          "quantity": 8
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 8
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 16
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 32
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "bloodgold-arrow": {
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 1
+        },
+        {
+          "name": "Feathers",
+          "quantity": 2
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 8
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "bloodgold-bolt": {
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 1
+        },
+        {
+          "name": "Feathers",
+          "quantity": 2
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 8
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "bloodgold-missile": {
+    "station": "Artisan table",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 1
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 10
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "bloodgold-payload": {
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Ice",
+          "quantity": 2
+        },
+        {
+          "name": "Bloodgold",
+          "quantity": 2
+        },
+        {
+          "name": "Proustite Powder",
+          "quantity": 3
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 5
+  },
+  "bone-bolt": {
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Bone Fragments",
+          "quantity": 8
+        },
+        {
+          "name": "Feathers",
+          "quantity": 2
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "bronze-atgeir": {
+    "station": "Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 10
+        },
+        {
+          "name": "Bronze",
+          "quantity": 8
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bronze",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Bronze",
+          "quantity": 8
+        }
+      ],
+      [
+        {
+          "name": "Bronze",
+          "quantity": 16
+        }
+      ]
+    ]
+  },
+  "bronze-axe": {
+    "station": "Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 4
+        },
+        {
+          "name": "Bronze",
+          "quantity": 8
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bronze",
+          "quantity": 4
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bronze",
+          "quantity": 8
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bronze",
+          "quantity": 16
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "bronze-mace": {
+    "station": "Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 4
+        },
+        {
+          "name": "Bronze",
+          "quantity": 8
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 3
+        }
+      ],
+      [
+        {
+          "name": "Bronze",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Bronze",
+          "quantity": 8
+        }
+      ],
+      [
+        {
+          "name": "Bronze",
+          "quantity": 16
+        }
+      ]
+    ]
+  },
+  "bronze-pickaxe": {
+    "station": "Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Corewood",
+          "quantity": 3
+        },
+        {
+          "name": "Bronze",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Corewood",
+          "quantity": 1
+        },
+        {
+          "name": "Bronze",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Corewood",
+          "quantity": 2
+        },
+        {
+          "name": "Bronze",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Corewood",
+          "quantity": 4
+        },
+        {
+          "name": "Bronze",
+          "quantity": 20
+        }
+      ]
+    ]
+  },
+  "bronze-spear": {
+    "station": "Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 5
+        },
+        {
+          "name": "Bronze",
+          "quantity": 6
+        },
+        {
+          "name": "Deer Hide",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "name": "Bronze",
+          "quantity": 4
+        },
+        {
+          "name": "Deer Hide",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 6
+        },
+        {
+          "name": "Bronze",
+          "quantity": 8
+        },
+        {
+          "name": "Deer Hide",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 12
+        },
+        {
+          "name": "Bronze",
+          "quantity": 16
+        },
+        {
+          "name": "Deer Hide",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "bronze-sword": {
+    "station": "Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 2
+        },
+        {
+          "name": "Bronze",
+          "quantity": 8
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 1
+        },
+        {
+          "name": "Bronze",
+          "quantity": 4
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 2
+        },
+        {
+          "name": "Bronze",
+          "quantity": 8
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 4
+        },
+        {
+          "name": "Bronze",
+          "quantity": 16
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "bronzehead-arrow": {
+    "station": "Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 8
+        },
+        {
+          "name": "Bronze",
+          "quantity": 1
+        },
+        {
+          "name": "Feathers",
+          "quantity": 2
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "brutal-slayer": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Slayer",
+          "quantity": 1
+        },
+        {
+          "name": "Flametal",
+          "quantity": 15
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 15
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 30
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 60
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "carapace-arrow": {
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Carapace",
+          "quantity": 4
+        },
+        {
+          "name": "Feathers",
+          "quantity": 2
+        },
+        {
+          "name": "Wood",
+          "quantity": 8
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "carapace-bolt": {
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 8
+        },
+        {
+          "name": "Carapace",
+          "quantity": 2
+        },
+        {
+          "name": "Feathers",
+          "quantity": 2
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "carapace-spear": {
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 10
+        },
+        {
+          "name": "Carapace",
+          "quantity": 4
+        },
+        {
+          "name": "Mandible",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 5
+        },
+        {
+          "name": "Carapace",
+          "quantity": 4
+        },
+        {
+          "name": "Mandible",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 10
+        },
+        {
+          "name": "Carapace",
+          "quantity": 8
+        },
+        {
+          "name": "Mandible",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 20
+        },
+        {
+          "name": "Carapace",
+          "quantity": 16
+        },
+        {
+          "name": "Mandible",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "club": {
+    "station": "Crafting_Menu#Player_Inventory",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 6
+        }
+      ],
+      [
+        {
+          "name": "Bone Fragments",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bone Fragments",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Bone Fragments",
+          "quantity": 20
+        }
+      ]
+    ]
+  },
+  "copper-knife": {
+    "station": "Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 2
+        },
+        {
+          "name": "Copper",
+          "quantity": 8
+        }
+      ],
+      [
+        {
+          "name": "Greydwarf Eye",
+          "quantity": 8
+        },
+        {
+          "name": "Copper",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Greydwarf Eye",
+          "quantity": 16
+        },
+        {
+          "name": "Copper",
+          "quantity": 8
+        }
+      ],
+      [
+        {
+          "name": "Greydwarf Eye",
+          "quantity": 32
+        },
+        {
+          "name": "Copper",
+          "quantity": 16
+        }
+      ]
+    ]
+  },
+  "crude-bow": {
+    "station": "Workbench",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 10
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 8
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 5
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 4
+        },
+        {
+          "name": "Deer Hide",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 10
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 8
+        },
+        {
+          "name": "Deer Hide",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 20
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 16
+        },
+        {
+          "name": "Deer Hide",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "crystal-battleaxe": {
+    "station": "Forge",
+    "stationLevel": 3,
+    "qualities": [
+      [
+        {
+          "name": "Ancient Bark",
+          "quantity": 40
+        },
+        {
+          "name": "Silver",
+          "quantity": 30
+        },
+        {
+          "name": "Crystal",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Ancient Bark",
+          "quantity": 5
+        },
+        {
+          "name": "Silver",
+          "quantity": 15
+        }
+      ],
+      [
+        {
+          "name": "Ancient Bark",
+          "quantity": 10
+        },
+        {
+          "name": "Silver",
+          "quantity": 30
+        }
+      ],
+      [
+        {
+          "name": "Ancient Bark",
+          "quantity": 20
+        },
+        {
+          "name": "Silver",
+          "quantity": 60
+        }
+      ]
+    ]
+  },
+  "demolisher": {
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 10
+        },
+        {
+          "name": "Iron",
+          "quantity": 20
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 2
+        },
+        {
+          "name": "Iron",
+          "quantity": 15
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 4
+        },
+        {
+          "name": "Iron",
+          "quantity": 30
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 8
+        },
+        {
+          "name": "Iron",
+          "quantity": 60
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 8
+        }
+      ]
+    ]
+  },
+  "draugr-fang": {
+    "station": "Forge",
+    "stationLevel": 2,
+    "qualities": [
+      [
+        {
+          "name": "Ancient Bark",
+          "quantity": 10
+        },
+        {
+          "name": "Silver",
+          "quantity": 20
+        },
+        {
+          "name": "Deer Hide",
+          "quantity": 2
+        },
+        {
+          "name": "Guck",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Ancient Bark",
+          "quantity": 5
+        },
+        {
+          "name": "Silver",
+          "quantity": 10
+        },
+        {
+          "name": "Deer Hide",
+          "quantity": 2
+        },
+        {
+          "name": "Guck",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Ancient Bark",
+          "quantity": 10
+        },
+        {
+          "name": "Silver",
+          "quantity": 20
+        },
+        {
+          "name": "Deer Hide",
+          "quantity": 4
+        },
+        {
+          "name": "Guck",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Ancient Bark",
+          "quantity": 20
+        },
+        {
+          "name": "Silver",
+          "quantity": 40
+        },
+        {
+          "name": "Deer Hide",
+          "quantity": 8
+        },
+        {
+          "name": "Guck",
+          "quantity": 8
+        }
+      ]
+    ]
+  },
+  "dundr": {
+    "station": "Galdr Table",
+    "stationLevel": 2,
+    "qualities": [
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 10
+        },
+        {
+          "name": "Flametal",
+          "quantity": 4
+        },
+        {
+          "name": "Celestial Feather",
+          "quantity": 3
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 5
+        },
+        {
+          "name": "Flametal",
+          "quantity": 2
+        },
+        {
+          "name": "Celestial Feather",
+          "quantity": 3
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 10
+        },
+        {
+          "name": "Flametal",
+          "quantity": 4
+        },
+        {
+          "name": "Celestial Feather",
+          "quantity": 6
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 20
+        },
+        {
+          "name": "Flametal",
+          "quantity": 8
+        },
+        {
+          "name": "Celestial Feather",
+          "quantity": 12
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "dyrnwyn": {
+    "station": "Black forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Flametal",
+          "quantity": 20
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 10
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 20
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 40
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "early-axes": {
+    "station": "Workbench",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Curious Axe Head",
+          "quantity": 1
+        },
+        {
+          "name": "Mysterious Axe Head",
+          "quantity": 1
+        },
+        {
+          "name": "Wood",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 2
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 4
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 8
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 8
+        }
+      ]
+    ]
+  },
+  "echo-spike": {
+    "station": "Frost Foundry",
+    "stationLevel": 3,
+    "qualities": [
+      [
+        {
+          "name": "Cast Echo Spike",
+          "quantity": 1
+        },
+        {
+          "name": "Liquid Frost",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 5
+        },
+        {
+          "name": "Nornathread",
+          "quantity": 2
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Nornathread",
+          "quantity": 4
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nornathread",
+          "quantity": 8
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "ember-charge": {
+    "station": "Workbench",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Seal Pelt",
+          "quantity": 2
+        },
+        {
+          "name": "Embers",
+          "quantity": 1
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 10
+  },
+  "explosive-payload": {
+    "station": "Workbench",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Sulfur",
+          "quantity": 2
+        },
+        {
+          "name": "Proustite Powder",
+          "quantity": 3
+        },
+        {
+          "name": "Asksvin Hide",
+          "quantity": 2
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 5
+  },
+  "fang-spear": {
+    "station": "Forge",
+    "stationLevel": 3,
+    "qualities": [
+      [
+        {
+          "name": "Ancient Bark",
+          "quantity": 10
+        },
+        {
+          "name": "Wolf Fang",
+          "quantity": 4
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        },
+        {
+          "name": "Silver",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Ancient Bark",
+          "quantity": 5
+        },
+        {
+          "name": "Wolf Fang",
+          "quantity": 2
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 1
+        },
+        {
+          "name": "Silver",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Ancient Bark",
+          "quantity": 10
+        },
+        {
+          "name": "Wolf Fang",
+          "quantity": 4
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        },
+        {
+          "name": "Silver",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Ancient Bark",
+          "quantity": 20
+        },
+        {
+          "name": "Wolf Fang",
+          "quantity": 8
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 4
+        },
+        {
+          "name": "Silver",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "finewood-bow": {
+    "station": "Workbench",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Finewood",
+          "quantity": 10
+        },
+        {
+          "name": "Corewood",
+          "quantity": 10
+        },
+        {
+          "name": "Deer Hide",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Finewood",
+          "quantity": 5
+        },
+        {
+          "name": "Corewood",
+          "quantity": 5
+        },
+        {
+          "name": "Deer Hide",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Finewood",
+          "quantity": 10
+        },
+        {
+          "name": "Corewood",
+          "quantity": 10
+        },
+        {
+          "name": "Deer Hide",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Finewood",
+          "quantity": 20
+        },
+        {
+          "name": "Corewood",
+          "quantity": 20
+        },
+        {
+          "name": "Deer Hide",
+          "quantity": 8
+        }
+      ]
+    ]
+  },
+  "fire-arrow": {
+    "station": "Workbench",
+    "stationLevel": 2,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 8
+        },
+        {
+          "name": "Resin",
+          "quantity": 8
+        },
+        {
+          "name": "Feathers",
+          "quantity": 2
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "flametal-mace": {
+    "station": "Black Forge",
+    "stationLevel": 3,
+    "qualities": [
+      [
+        {
+          "name": "Charred Bone",
+          "quantity": 10
+        },
+        {
+          "name": "Flametal",
+          "quantity": 15
+        },
+        {
+          "name": "Sulfur",
+          "quantity": 5
+        },
+        {
+          "name": "Asksvin Hide",
+          "quantity": 3
+        }
+      ],
+      [
+        {
+          "name": "Charred Bone",
+          "quantity": 5
+        },
+        {
+          "name": "Flametal",
+          "quantity": 8
+        },
+        {
+          "name": "Sulfur",
+          "quantity": 3
+        },
+        {
+          "name": "Asksvin Hide",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Charred Bone",
+          "quantity": 10
+        },
+        {
+          "name": "Flametal",
+          "quantity": 16
+        },
+        {
+          "name": "Sulfur",
+          "quantity": 6
+        },
+        {
+          "name": "Asksvin Hide",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Charred Bone",
+          "quantity": 20
+        },
+        {
+          "name": "Flametal",
+          "quantity": 32
+        },
+        {
+          "name": "Sulfur",
+          "quantity": 12
+        },
+        {
+          "name": "Asksvin Hide",
+          "quantity": 8
+        }
+      ]
+    ]
+  },
+  "flametal-missile": {
+    "station": "Artisan table",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 10
+        },
+        {
+          "name": "Flametal",
+          "quantity": 1
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "flesh-rippers": {
+    "station": "Forge",
+    "stationLevel": 3,
+    "qualities": [
+      [
+        {
+          "name": "Fenris Hair",
+          "quantity": 10
+        },
+        {
+          "name": "Fenris Claw",
+          "quantity": 6
+        },
+        {
+          "name": "Silver",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Fenris Hair",
+          "quantity": 1
+        },
+        {
+          "name": "Fenris Claw",
+          "quantity": 1
+        },
+        {
+          "name": "Silver",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Fenris Hair",
+          "quantity": 2
+        },
+        {
+          "name": "Fenris Claw",
+          "quantity": 2
+        },
+        {
+          "name": "Silver",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Fenris Hair",
+          "quantity": 3
+        },
+        {
+          "name": "Fenris Claw",
+          "quantity": 3
+        },
+        {
+          "name": "Silver",
+          "quantity": 3
+        }
+      ]
+    ]
+  },
+  "flint-axe": {
+    "station": "Workbench",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 4
+        },
+        {
+          "name": "Flint",
+          "quantity": 6
+        }
+      ],
+      [
+        {
+          "name": "Flint",
+          "quantity": 3
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flint",
+          "quantity": 6
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Flint",
+          "quantity": 12
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 8
+        }
+      ]
+    ]
+  },
+  "flint-knife": {
+    "station": "Workbench",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 2
+        },
+        {
+          "name": "Flint",
+          "quantity": 4
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flint",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flint",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Flint",
+          "quantity": 8
+        }
+      ]
+    ]
+  },
+  "flint-spear": {
+    "station": "Workbench",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 5
+        },
+        {
+          "name": "Flint",
+          "quantity": 10
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 3
+        },
+        {
+          "name": "Flint",
+          "quantity": 5
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 6
+        },
+        {
+          "name": "Flint",
+          "quantity": 10
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 12
+        },
+        {
+          "name": "Flint",
+          "quantity": 20
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "flinthead-arrow": {
+    "station": "Workbench",
+    "stationLevel": 2,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 8
+        },
+        {
+          "name": "Flint",
+          "quantity": 2
+        },
+        {
+          "name": "Feathers",
+          "quantity": 2
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "frost-arrow": {
+    "station": "Workbench",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 8
+        },
+        {
+          "name": "Obsidian",
+          "quantity": 4
+        },
+        {
+          "name": "Feathers",
+          "quantity": 2
+        },
+        {
+          "name": "Freeze Gland",
+          "quantity": 1
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "frostfire-atgeir": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Atgeir",
+          "quantity": 1
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "frostfire-axe": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Axe",
+          "quantity": 1
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "frostfire-bow": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Bow",
+          "quantity": 1
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "frostfire-crossbow": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Crossbow",
+          "quantity": 1
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "frostfire-dagger": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Dagger",
+          "quantity": 1
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "frostfire-greataxe": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Greataxe",
+          "quantity": 1
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "frostfire-greatsword": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Greatsword",
+          "quantity": 1
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "frostfire-knucklechains": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Knucklechains",
+          "quantity": 1
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "frostfire-mace": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Mace",
+          "quantity": 1
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "frostfire-sledge": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Sledge",
+          "quantity": 1
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "frostfire-spear": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Spear",
+          "quantity": 1
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "frostfire-sword": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Sword",
+          "quantity": 1
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Frostfire Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "frostner": {
+    "station": "Forge",
+    "stationLevel": 3,
+    "qualities": [
+      [
+        {
+          "name": "Ancient Bark",
+          "quantity": 10
+        },
+        {
+          "name": "Silver",
+          "quantity": 30
+        },
+        {
+          "name": "Ymir Flesh",
+          "quantity": 5
+        },
+        {
+          "name": "Freeze Gland",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Silver",
+          "quantity": 15
+        }
+      ],
+      [
+        {
+          "name": "Silver",
+          "quantity": 30
+        }
+      ],
+      [
+        {
+          "name": "Silver",
+          "quantity": 60
+        }
+      ]
+    ]
+  },
+  "grausten-payload": {
+    "station": "Workbench",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Grausten",
+          "quantity": 10
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 5
+  },
+  "himminafl": {
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 10
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 15
+        },
+        {
+          "name": "Silver",
+          "quantity": 5
+        },
+        {
+          "name": "Mandible",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Refined Eitr",
+          "quantity": 15
+        },
+        {
+          "name": "Silver",
+          "quantity": 5
+        },
+        {
+          "name": "Mandible",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Refined Eitr",
+          "quantity": 30
+        },
+        {
+          "name": "Silver",
+          "quantity": 10
+        },
+        {
+          "name": "Mandible",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Refined Eitr",
+          "quantity": 60
+        },
+        {
+          "name": "Silver",
+          "quantity": 20
+        },
+        {
+          "name": "Mandible",
+          "quantity": 8
+        }
+      ]
+    ]
+  },
+  "huntsman-bow": {
+    "station": "Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Finewood",
+          "quantity": 10
+        },
+        {
+          "name": "Iron",
+          "quantity": 20
+        },
+        {
+          "name": "Feathers",
+          "quantity": 10
+        },
+        {
+          "name": "Deer Hide",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Finewood",
+          "quantity": 5
+        },
+        {
+          "name": "Iron",
+          "quantity": 10
+        },
+        {
+          "name": "Feathers",
+          "quantity": 5
+        },
+        {
+          "name": "Deer Hide",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Finewood",
+          "quantity": 10
+        },
+        {
+          "name": "Iron",
+          "quantity": 20
+        },
+        {
+          "name": "Feathers",
+          "quantity": 10
+        },
+        {
+          "name": "Deer Hide",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Finewood",
+          "quantity": 20
+        },
+        {
+          "name": "Iron",
+          "quantity": 40
+        },
+        {
+          "name": "Feathers",
+          "quantity": 20
+        },
+        {
+          "name": "Deer Hide",
+          "quantity": 8
+        }
+      ]
+    ]
+  },
+  "charred-arrow": {
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Charred Bone",
+          "quantity": 4
+        },
+        {
+          "name": "Feathers",
+          "quantity": 2
+        },
+        {
+          "name": "Ashwood",
+          "quantity": 8
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "charred-bolt": {
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 8
+        },
+        {
+          "name": "Charred Bone",
+          "quantity": 2
+        },
+        {
+          "name": "Feathers",
+          "quantity": 2
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "iron-atgeir": {
+    "station": "Forge",
+    "stationLevel": 2,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 10
+        },
+        {
+          "name": "Iron",
+          "quantity": 30
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 15
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 30
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 60
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "iron-axe": {
+    "station": "Forge",
+    "stationLevel": 2,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 4
+        },
+        {
+          "name": "Iron",
+          "quantity": 20
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 10
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 20
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 40
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "iron-bolt": {
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 8
+        },
+        {
+          "name": "Iron",
+          "quantity": 1
+        },
+        {
+          "name": "Feathers",
+          "quantity": 2
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "iron-mace": {
+    "station": "Forge",
+    "stationLevel": 2,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 4
+        },
+        {
+          "name": "Iron",
+          "quantity": 20
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 3
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 20
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 40
+        }
+      ]
+    ]
+  },
+  "iron-pickaxe": {
+    "station": "Forge",
+    "stationLevel": 2,
+    "qualities": [
+      [
+        {
+          "name": "Corewood",
+          "quantity": 3
+        },
+        {
+          "name": "Iron",
+          "quantity": 20
+        }
+      ],
+      [
+        {
+          "name": "Corewood",
+          "quantity": 1
+        },
+        {
+          "name": "Iron",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Corewood",
+          "quantity": 2
+        },
+        {
+          "name": "Iron",
+          "quantity": 20
+        }
+      ],
+      [
+        {
+          "name": "Corewood",
+          "quantity": 4
+        },
+        {
+          "name": "Iron",
+          "quantity": 40
+        }
+      ]
+    ]
+  },
+  "iron-sledge": {
+    "station": "Forge",
+    "stationLevel": 2,
+    "qualities": [
+      [
+        {
+          "name": "Ancient Bark",
+          "quantity": 10
+        },
+        {
+          "name": "Iron",
+          "quantity": 30
+        },
+        {
+          "name": "Ymir Flesh",
+          "quantity": 4
+        },
+        {
+          "name": "Draugr Elite Trophy",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Ancient Bark",
+          "quantity": 2
+        },
+        {
+          "name": "Iron",
+          "quantity": 15
+        },
+        {
+          "name": "Ymir Flesh",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Ancient Bark",
+          "quantity": 4
+        },
+        {
+          "name": "Iron",
+          "quantity": 30
+        },
+        {
+          "name": "Ymir Flesh",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Ancient Bark",
+          "quantity": 8
+        },
+        {
+          "name": "Iron",
+          "quantity": 60
+        },
+        {
+          "name": "Ymir Flesh",
+          "quantity": 8
+        }
+      ]
+    ]
+  },
+  "iron-sword": {
+    "station": "Forge",
+    "stationLevel": 2,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 2
+        },
+        {
+          "name": "Iron",
+          "quantity": 20
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 3
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 1
+        },
+        {
+          "name": "Iron",
+          "quantity": 10
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 2
+        },
+        {
+          "name": "Iron",
+          "quantity": 20
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 4
+        },
+        {
+          "name": "Iron",
+          "quantity": 40
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 8
+        }
+      ]
+    ]
+  },
+  "ironhead-arrow": {
+    "station": "Forge",
+    "stationLevel": 2,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 8
+        },
+        {
+          "name": "Iron",
+          "quantity": 1
+        },
+        {
+          "name": "Feathers",
+          "quantity": 2
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "jotun-bane": {
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 5
+        },
+        {
+          "name": "Iron",
+          "quantity": 15
+        },
+        {
+          "name": "Bilebag",
+          "quantity": 3
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 10
+        },
+        {
+          "name": "Bilebag",
+          "quantity": 1
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 20
+        },
+        {
+          "name": "Bilebag",
+          "quantity": 2
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 40
+        },
+        {
+          "name": "Bilebag",
+          "quantity": 4
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "klossen": {
+    "station": "Black forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Flametal Mace",
+          "quantity": 1
+        },
+        {
+          "name": "Flametal",
+          "quantity": 8
+        },
+        {
+          "name": "Jade",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 8
+        },
+        {
+          "name": "Jade",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 16
+        },
+        {
+          "name": "Jade",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 32
+        },
+        {
+          "name": "Jade",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "krom": {
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Iron",
+          "quantity": 30
+        },
+        {
+          "name": "Bronze",
+          "quantity": 20
+        },
+        {
+          "name": "Scale Hide",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 15
+        },
+        {
+          "name": "Bronze",
+          "quantity": 10
+        },
+        {
+          "name": "Scale Hide",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 30
+        },
+        {
+          "name": "Bronze",
+          "quantity": 20
+        },
+        {
+          "name": "Scale Hide",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 60
+        },
+        {
+          "name": "Bronze",
+          "quantity": 40
+        },
+        {
+          "name": "Scale Hide",
+          "quantity": 20
+        }
+      ]
+    ]
+  },
+  "lightning-strike": {
+    "station": "Frost Foundry",
+    "stationLevel": 3,
+    "qualities": [
+      [
+        {
+          "name": "Cast Lightning Strike",
+          "quantity": 1
+        },
+        {
+          "name": "Liquid Frost",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 5
+        },
+        {
+          "name": "Nornathread",
+          "quantity": 2
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Nornathread",
+          "quantity": 4
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nornathread",
+          "quantity": 8
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "mistwalker": {
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Finewood",
+          "quantity": 3
+        },
+        {
+          "name": "Iron",
+          "quantity": 15
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 10
+        },
+        {
+          "name": "Wisp",
+          "quantity": 3
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 10
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 5
+        },
+        {
+          "name": "Wisp",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 20
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 10
+        },
+        {
+          "name": "Wisp",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 40
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 20
+        },
+        {
+          "name": "Wisp",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "needle-arrow": {
+    "station": "Workbench",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Needle",
+          "quantity": 4
+        },
+        {
+          "name": "Feathers",
+          "quantity": 2
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "nidhogg": {
+    "station": "Black forge",
+    "stationLevel": 3,
+    "qualities": [
+      [
+        {
+          "name": "Charred Bone",
+          "quantity": 3
+        },
+        {
+          "name": "Flametal",
+          "quantity": 12
+        },
+        {
+          "name": "Asksvin Hide",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 10
+        },
+        {
+          "name": "Asksvin Hide",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 20
+        },
+        {
+          "name": "Asksvin Hide",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 40
+        },
+        {
+          "name": "Asksvin Hide",
+          "quantity": 8
+        }
+      ]
+    ]
+  },
+  "nidhogg-the-bleeding": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Nidhögg",
+          "quantity": 1
+        },
+        {
+          "name": "Flametal",
+          "quantity": 6
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 6
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 12
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 24
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "nidhogg-the-primal": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Nidhögg",
+          "quantity": 1
+        },
+        {
+          "name": "Flametal",
+          "quantity": 6
+        },
+        {
+          "name": "Jade",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 6
+        },
+        {
+          "name": "Jade",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 12
+        },
+        {
+          "name": "Jade",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 24
+        },
+        {
+          "name": "Jade",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "nidhogg-the-thundering": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Nidhögg",
+          "quantity": 1
+        },
+        {
+          "name": "Flametal",
+          "quantity": 6
+        },
+        {
+          "name": "Iolite",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 6
+        },
+        {
+          "name": "Iolite",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 12
+        },
+        {
+          "name": "Iolite",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 24
+        },
+        {
+          "name": "Iolite",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "nord-atgeir": {
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Cast Nord Atgeir",
+          "quantity": 1
+        },
+        {
+          "name": "Liquid Frost",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 20
+        }
+      ]
+    ]
+  },
+  "nord-axe": {
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Cast Nord Axe",
+          "quantity": 1
+        },
+        {
+          "name": "Liquid Frost",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 20
+        }
+      ]
+    ]
+  },
+  "nord-bow": {
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Cast Nord Bow",
+          "quantity": 1
+        },
+        {
+          "name": "Liquid Frost",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 20
+        }
+      ]
+    ]
+  },
+  "nord-crossbow": {
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Cast Nord Crossbow",
+          "quantity": 1
+        },
+        {
+          "name": "Liquid Frost",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 20
+        }
+      ]
+    ]
+  },
+  "nord-dagger": {
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Cast Nord Dagger",
+          "quantity": 1
+        },
+        {
+          "name": "Liquid Frost",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 20
+        }
+      ]
+    ]
+  },
+  "nord-greataxe": {
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Cast Nord Greataxe",
+          "quantity": 1
+        },
+        {
+          "name": "Liquid Frost",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 20
+        }
+      ]
+    ]
+  },
+  "nord-greatsword": {
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Cast Nord Greatsword",
+          "quantity": 1
+        },
+        {
+          "name": "Liquid Frost",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Frozen Branch",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Frozen Branch",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Frozen Branch",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "nord-knucklechains": {
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Cast Nord Knucklechains",
+          "quantity": 1
+        },
+        {
+          "name": "Liquid Frost",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 20
+        }
+      ]
+    ]
+  },
+  "nord-mace": {
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Cast Nord Mace",
+          "quantity": 1
+        },
+        {
+          "name": "Liquid Frost",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 20
+        }
+      ]
+    ]
+  },
+  "nord-sledge": {
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Cast Nord Sledge",
+          "quantity": 1
+        },
+        {
+          "name": "Liquid Frost",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 20
+        }
+      ]
+    ]
+  },
+  "nord-spear": {
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Cast Nord Spear",
+          "quantity": 1
+        },
+        {
+          "name": "Liquid Frost",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 20
+        }
+      ]
+    ]
+  },
+  "nord-sword": {
+    "station": "Frost Foundry",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Cast Nord Sword",
+          "quantity": 1
+        },
+        {
+          "name": "Liquid Frost",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Timberwood",
+          "quantity": 20
+        }
+      ]
+    ]
+  },
+  "northern-vengeance": {
+    "station": "Frost Foundry",
+    "stationLevel": 3,
+    "qualities": [
+      [
+        {
+          "name": "Cast Northern Vengeance",
+          "quantity": 1
+        },
+        {
+          "name": "Liquid Frost",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Ice",
+          "quantity": 5
+        },
+        {
+          "name": "Nornathread",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Ice",
+          "quantity": 10
+        },
+        {
+          "name": "Nornathread",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Ice",
+          "quantity": 20
+        },
+        {
+          "name": "Nornathread",
+          "quantity": 8
+        }
+      ]
+    ]
+  },
+  "obsidian-arrow": {
+    "station": "Workbench",
+    "stationLevel": 3,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 8
+        },
+        {
+          "name": "Obsidian",
+          "quantity": 4
+        },
+        {
+          "name": "Feathers",
+          "quantity": 2
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "ooze-bomb": {
+    "station": "Workbench",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Leather Scraps",
+          "quantity": 5
+        },
+        {
+          "name": "Ooze",
+          "quantity": 5
+        },
+        {
+          "name": "Resin",
+          "quantity": 3
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 5
+  },
+  "paws-of-the-bear": {
+    "station": "Workbench",
+    "stationLevel": 2,
+    "qualities": [
+      [
+        {
+          "name": "Bear Hide",
+          "quantity": 2
+        },
+        {
+          "name": "Bear Paw",
+          "quantity": 2
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Bear Hide",
+          "quantity": 2
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bear Hide",
+          "quantity": 4
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Bear Hide",
+          "quantity": 6
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 6
+        }
+      ]
+    ]
+  },
+  "poison-arrow": {
+    "station": "Workbench",
+    "stationLevel": 3,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 8
+        },
+        {
+          "name": "Obsidian",
+          "quantity": 4
+        },
+        {
+          "name": "Feathers",
+          "quantity": 2
+        },
+        {
+          "name": "Ooze",
+          "quantity": 2
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "porcupine": {
+    "station": "Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Finewood",
+          "quantity": 5
+        },
+        {
+          "name": "Iron",
+          "quantity": 20
+        },
+        {
+          "name": "Needle",
+          "quantity": 5
+        },
+        {
+          "name": "Linen Thread",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 2
+        },
+        {
+          "name": "Needle",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 4
+        },
+        {
+          "name": "Needle",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 8
+        },
+        {
+          "name": "Needle",
+          "quantity": 8
+        }
+      ]
+    ]
+  },
+  "primal-berserkir-axes": {
+    "station": "Black forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Berserkir Axes",
+          "quantity": 1
+        },
+        {
+          "name": "Flametal",
+          "quantity": 5
+        },
+        {
+          "name": "Jade",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 5
+        },
+        {
+          "name": "Jade",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 10
+        },
+        {
+          "name": "Jade",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 20
+        },
+        {
+          "name": "Jade",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "primal-slayer": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Slayer",
+          "quantity": 1
+        },
+        {
+          "name": "Flametal",
+          "quantity": 15
+        },
+        {
+          "name": "Jade",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 15
+        },
+        {
+          "name": "Jade",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 30
+        },
+        {
+          "name": "Jade",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 60
+        },
+        {
+          "name": "Jade",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "ripper": {
+    "station": "Black Forge",
+    "stationLevel": 3,
+    "qualities": [
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 10
+        },
+        {
+          "name": "Flametal",
+          "quantity": 8
+        },
+        {
+          "name": "Morgen Sinew",
+          "quantity": 2
+        },
+        {
+          "name": "Bonemaw Tooth",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 5
+        },
+        {
+          "name": "Flametal",
+          "quantity": 4
+        },
+        {
+          "name": "Morgen Sinew",
+          "quantity": 1
+        },
+        {
+          "name": "Bonemaw Tooth",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 10
+        },
+        {
+          "name": "Flametal",
+          "quantity": 8
+        },
+        {
+          "name": "Morgen Sinew",
+          "quantity": 2
+        },
+        {
+          "name": "Bonemaw Tooth",
+          "quantity": 8
+        }
+      ],
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 20
+        },
+        {
+          "name": "Flametal",
+          "quantity": 16
+        },
+        {
+          "name": "Morgen Sinew",
+          "quantity": 4
+        },
+        {
+          "name": "Bonemaw Tooth",
+          "quantity": 16
+        }
+      ]
+    ]
+  },
+  "root-fang": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Ash Fang",
+          "quantity": 1
+        },
+        {
+          "name": "Flametal",
+          "quantity": 5
+        },
+        {
+          "name": "Jade",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 5
+        },
+        {
+          "name": "Jade",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 10
+        },
+        {
+          "name": "Jade",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 20
+        },
+        {
+          "name": "Jade",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "root-ripper": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Ripper",
+          "quantity": 1
+        },
+        {
+          "name": "Flametal",
+          "quantity": 8
+        },
+        {
+          "name": "Jade",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 8
+        },
+        {
+          "name": "Jade",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 16
+        },
+        {
+          "name": "Jade",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 32
+        },
+        {
+          "name": "Jade",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "scourging-slayer": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Slayer",
+          "quantity": 1
+        },
+        {
+          "name": "Flametal",
+          "quantity": 15
+        },
+        {
+          "name": "Iolite",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 15
+        },
+        {
+          "name": "Iolite",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 30
+        },
+        {
+          "name": "Iolite",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 60
+        },
+        {
+          "name": "Iolite",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "silver-arrow": {
+    "station": "Forge",
+    "stationLevel": 3,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 8
+        },
+        {
+          "name": "Silver",
+          "quantity": 1
+        },
+        {
+          "name": "Feathers",
+          "quantity": 2
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "silver-knife": {
+    "station": "Forge",
+    "stationLevel": 3,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 2
+        },
+        {
+          "name": "Silver",
+          "quantity": 10
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 3
+        },
+        {
+          "name": "Iron",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 1
+        },
+        {
+          "name": "Silver",
+          "quantity": 5
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 1
+        },
+        {
+          "name": "Iron",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 2
+        },
+        {
+          "name": "Silver",
+          "quantity": 10
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        },
+        {
+          "name": "Iron",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 4
+        },
+        {
+          "name": "Silver",
+          "quantity": 20
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 4
+        },
+        {
+          "name": "Iron",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "silver-sword": {
+    "station": "Forge",
+    "stationLevel": 3,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 2
+        },
+        {
+          "name": "Silver",
+          "quantity": 40
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 3
+        },
+        {
+          "name": "Iron",
+          "quantity": 5
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 1
+        },
+        {
+          "name": "Silver",
+          "quantity": 20
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 1
+        },
+        {
+          "name": "Iron",
+          "quantity": 3
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 2
+        },
+        {
+          "name": "Silver",
+          "quantity": 40
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        },
+        {
+          "name": "Iron",
+          "quantity": 6
+        }
+      ],
+      [
+        {
+          "name": "Wood",
+          "quantity": 4
+        },
+        {
+          "name": "Silver",
+          "quantity": 80
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 4
+        },
+        {
+          "name": "Iron",
+          "quantity": 12
+        }
+      ]
+    ]
+  },
+  "skoll-and-hati": {
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Finewood",
+          "quantity": 4
+        },
+        {
+          "name": "Iron",
+          "quantity": 10
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 4
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 8
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 8
+        }
+      ],
+      [
+        {
+          "name": "Iron",
+          "quantity": 16
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 16
+        }
+      ]
+    ]
+  },
+  "skull-splittur": {
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 15
+        },
+        {
+          "name": "Iron",
+          "quantity": 30
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 5
+        },
+        {
+          "name": "Iron",
+          "quantity": 15
+        }
+      ],
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 10
+        },
+        {
+          "name": "Iron",
+          "quantity": 30
+        }
+      ],
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 20
+        },
+        {
+          "name": "Iron",
+          "quantity": 60
+        }
+      ]
+    ]
+  },
+  "slayer": {
+    "station": "Black Forge",
+    "stationLevel": 3,
+    "qualities": [
+      [
+        {
+          "name": "Flametal",
+          "quantity": 30
+        },
+        {
+          "name": "Asksvin Hide",
+          "quantity": 5
+        },
+        {
+          "name": "Morgen Sinew",
+          "quantity": 3
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 15
+        },
+        {
+          "name": "Asksvin Hide",
+          "quantity": 5
+        },
+        {
+          "name": "Morgen Sinew",
+          "quantity": 3
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 30
+        },
+        {
+          "name": "Asksvin Hide",
+          "quantity": 10
+        },
+        {
+          "name": "Morgen Sinew",
+          "quantity": 6
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 60
+        },
+        {
+          "name": "Asksvin Hide",
+          "quantity": 20
+        },
+        {
+          "name": "Morgen Sinew",
+          "quantity": 12
+        }
+      ]
+    ]
+  },
+  "smoke-bomb": {
+    "station": "Workbench",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Smoke Puff",
+          "quantity": 1
+        },
+        {
+          "name": "Asksvin Bladder",
+          "quantity": 1
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 10
+  },
+  "snowball": {
+    "station": "Crafted by hand, Deep North.",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Ice",
+          "quantity": 5
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 10
+  },
+  "spinesnap": {
+    "station": "Black Forge",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Finewood",
+          "quantity": 10
+        },
+        {
+          "name": "Bone Fragments",
+          "quantity": 40
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Finewood",
+          "quantity": 5
+        },
+        {
+          "name": "Bone Fragments",
+          "quantity": 20
+        }
+      ],
+      [
+        {
+          "name": "Finewood",
+          "quantity": 10
+        },
+        {
+          "name": "Bone Fragments",
+          "quantity": 40
+        }
+      ],
+      [
+        {
+          "name": "Finewood",
+          "quantity": 20
+        },
+        {
+          "name": "Bone Fragments",
+          "quantity": 80
+        }
+      ]
+    ]
+  },
+  "splitnir": {
+    "station": "Black forge",
+    "stationLevel": 3,
+    "qualities": [
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 10
+        },
+        {
+          "name": "Flametal",
+          "quantity": 6
+        },
+        {
+          "name": "Asksvin Hide",
+          "quantity": 2
+        },
+        {
+          "name": "Bonemaw Tooth",
+          "quantity": 3
+        }
+      ],
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 5
+        },
+        {
+          "name": "Flametal",
+          "quantity": 6
+        },
+        {
+          "name": "Asksvin Hide",
+          "quantity": 1
+        },
+        {
+          "name": "Bonemaw Tooth",
+          "quantity": 3
+        }
+      ],
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 10
+        },
+        {
+          "name": "Flametal",
+          "quantity": 12
+        },
+        {
+          "name": "Asksvin Hide",
+          "quantity": 2
+        },
+        {
+          "name": "Bonemaw Tooth",
+          "quantity": 6
+        }
+      ],
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 20
+        },
+        {
+          "name": "Flametal",
+          "quantity": 24
+        },
+        {
+          "name": "Asksvin Hide",
+          "quantity": 4
+        },
+        {
+          "name": "Bonemaw Tooth",
+          "quantity": 12
+        }
+      ]
+    ]
+  },
+  "splitnir-the-bleeding": {
+    "station": "Black forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Splitnir",
+          "quantity": 1
+        },
+        {
+          "name": "Flametal",
+          "quantity": 6
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 6
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 12
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 24
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "splitnir-the-primal": {
+    "station": "Black forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Splitnir",
+          "quantity": 1
+        },
+        {
+          "name": "Flametal",
+          "quantity": 6
+        },
+        {
+          "name": "Jade",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 6
+        },
+        {
+          "name": "Jade",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 12
+        },
+        {
+          "name": "Jade",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 24
+        },
+        {
+          "name": "Jade",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "splitnir-the-storming": {
+    "station": "Black forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Splitnir",
+          "quantity": 1
+        },
+        {
+          "name": "Flametal",
+          "quantity": 6
+        },
+        {
+          "name": "Iolite",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 6
+        },
+        {
+          "name": "Iolite",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 12
+        },
+        {
+          "name": "Iolite",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 24
+        },
+        {
+          "name": "Iolite",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "staff-of-embers": {
+    "station": "Galdr Table",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 20
+        },
+        {
+          "name": "Surtling Core",
+          "quantity": 4
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 16
+        }
+      ],
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 10
+        },
+        {
+          "name": "Surtling Core",
+          "quantity": 2
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 8
+        }
+      ],
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 20
+        },
+        {
+          "name": "Surtling Core",
+          "quantity": 4
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 16
+        }
+      ],
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 40
+        },
+        {
+          "name": "Surtling Core",
+          "quantity": 8
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 32
+        }
+      ]
+    ]
+  },
+  "staff-of-fracturing": {
+    "station": "Galdr Table",
+    "stationLevel": 2,
+    "qualities": [
+      [
+        {
+          "name": "Charred Bone",
+          "quantity": 15
+        },
+        {
+          "name": "Ashwood",
+          "quantity": 5
+        },
+        {
+          "name": "Proustite Powder",
+          "quantity": 8
+        }
+      ],
+      [
+        {
+          "name": "Charred Bone",
+          "quantity": 5
+        },
+        {
+          "name": "Ashwood",
+          "quantity": 3
+        },
+        {
+          "name": "Proustite Powder",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Charred Bone",
+          "quantity": 10
+        },
+        {
+          "name": "Ashwood",
+          "quantity": 6
+        },
+        {
+          "name": "Proustite Powder",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Charred Bone",
+          "quantity": 20
+        },
+        {
+          "name": "Ashwood",
+          "quantity": 12
+        },
+        {
+          "name": "Proustite Powder",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "staff-of-frost": {
+    "station": "Galdr Table",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 20
+        },
+        {
+          "name": "Freeze Gland",
+          "quantity": 4
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 16
+        }
+      ],
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 10
+        },
+        {
+          "name": "Freeze Gland",
+          "quantity": 2
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 8
+        }
+      ],
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 20
+        },
+        {
+          "name": "Freeze Gland",
+          "quantity": 4
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 16
+        }
+      ],
+      [
+        {
+          "name": "Yggdrasil Wood",
+          "quantity": 40
+        },
+        {
+          "name": "Freeze Gland",
+          "quantity": 8
+        },
+        {
+          "name": "Refined Eitr",
+          "quantity": 32
+        }
+      ]
+    ]
+  },
+  "staff-of-the-wild": {
+    "station": "Galdr Table",
+    "stationLevel": 2,
+    "qualities": [
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 15
+        },
+        {
+          "name": "Fiddlehead",
+          "quantity": 10
+        },
+        {
+          "name": "Celestial Feather",
+          "quantity": 3
+        },
+        {
+          "name": "Jade",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 5
+        },
+        {
+          "name": "Fiddlehead",
+          "quantity": 2
+        },
+        {
+          "name": "Celestial Feather",
+          "quantity": 3
+        },
+        {
+          "name": "Jade",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 10
+        },
+        {
+          "name": "Fiddlehead",
+          "quantity": 4
+        },
+        {
+          "name": "Celestial Feather",
+          "quantity": 6
+        },
+        {
+          "name": "Jade",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Ashwood",
+          "quantity": 20
+        },
+        {
+          "name": "Fiddlehead",
+          "quantity": 8
+        },
+        {
+          "name": "Celestial Feather",
+          "quantity": 12
+        },
+        {
+          "name": "Jade",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "stagbreaker": {
+    "station": "Workbench",
+    "stationLevel": 2,
+    "qualities": [
+      [
+        {
+          "name": "Corewood",
+          "quantity": 20
+        },
+        {
+          "name": "Deer Trophy",
+          "quantity": 5
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Corewood",
+          "quantity": 5
+        },
+        {
+          "name": "Deer Trophy",
+          "quantity": 2
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 1
+        },
+        {
+          "name": "Bone Fragments",
+          "quantity": 10
+        }
+      ],
+      [
+        {
+          "name": "Corewood",
+          "quantity": 10
+        },
+        {
+          "name": "Deer Trophy",
+          "quantity": 4
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 2
+        },
+        {
+          "name": "Bone Fragments",
+          "quantity": 20
+        }
+      ],
+      [
+        {
+          "name": "Corewood",
+          "quantity": 20
+        },
+        {
+          "name": "Deer Trophy",
+          "quantity": 8
+        },
+        {
+          "name": "Leather Scraps",
+          "quantity": 4
+        },
+        {
+          "name": "Bone Fragments",
+          "quantity": 40
+        }
+      ]
+    ]
+  },
+  "stone-axe": {
+    "station": "Crafting_Menu#Player_Inventory",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 5
+        },
+        {
+          "name": "Stone",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Stone",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Stone",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Stone",
+          "quantity": 8
+        }
+      ]
+    ]
+  },
+  "storm-fang": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Ash Fang",
+          "quantity": 1
+        },
+        {
+          "name": "Flametal",
+          "quantity": 5
+        },
+        {
+          "name": "Iolite",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 5
+        },
+        {
+          "name": "Iolite",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 10
+        },
+        {
+          "name": "Iolite",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 20
+        },
+        {
+          "name": "Iolite",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "storm-ripper": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Ripper",
+          "quantity": 1
+        },
+        {
+          "name": "Flametal",
+          "quantity": 8
+        },
+        {
+          "name": "Iolite",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 8
+        },
+        {
+          "name": "Iolite",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 16
+        },
+        {
+          "name": "Iolite",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 32
+        },
+        {
+          "name": "Iolite",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "storm-star": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Flametal Mace",
+          "quantity": 1
+        },
+        {
+          "name": "Flametal",
+          "quantity": 8
+        },
+        {
+          "name": "Iolite",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 8
+        },
+        {
+          "name": "Iolite",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 16
+        },
+        {
+          "name": "Iolite",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 32
+        },
+        {
+          "name": "Iolite",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "thunderblood-atgeir": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Atgeir",
+          "quantity": 1
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "thunderblood-axe": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Axe",
+          "quantity": 1
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "thunderblood-bow": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Bow",
+          "quantity": 1
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "thunderblood-crossbow": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Crossbow",
+          "quantity": 1
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "thunderblood-dagger": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Dagger",
+          "quantity": 1
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "thunderblood-greataxe": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Greataxe",
+          "quantity": 1
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "thunderblood-greatsword": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Greatsword",
+          "quantity": 1
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "thunderblood-knucklechains": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Knucklechains",
+          "quantity": 1
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "thunderblood-mace": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Mace",
+          "quantity": 1
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "thunderblood-sledge": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Sledge",
+          "quantity": 1
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "thunderblood-spear": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Spear",
+          "quantity": 1
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "thunderblood-sword": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Nord Sword",
+          "quantity": 1
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 10
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 20
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bloodgold",
+          "quantity": 40
+        },
+        {
+          "name": "Thunderblood Essence",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "thundering-berserkir-axes": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Berserkir Axes",
+          "quantity": 1
+        },
+        {
+          "name": "Flametal",
+          "quantity": 5
+        },
+        {
+          "name": "Iolite",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 5
+        },
+        {
+          "name": "Iolite",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 10
+        },
+        {
+          "name": "Iolite",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 20
+        },
+        {
+          "name": "Iolite",
+          "quantity": 4
+        }
+      ]
+    ]
+  },
+  "torch": {
+    "station": "Crafting_Menu#Player_Inventory",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 1
+        },
+        {
+          "name": "Resin",
+          "quantity": 1
+        }
+      ],
+      [],
+      [],
+      []
+    ]
+  },
+  "vilebone-maulclaws": {
+    "station": "Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Bear Hide",
+          "quantity": 2
+        },
+        {
+          "name": "Vile Ribcage",
+          "quantity": 2
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 2
+        },
+        {
+          "name": "Linen Thread",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Bear Hide",
+          "quantity": 1
+        },
+        {
+          "name": "Vile Ribcage",
+          "quantity": 1
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 1
+        },
+        {
+          "name": "Linen Thread",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Bear Hide",
+          "quantity": 2
+        },
+        {
+          "name": "Vile Ribcage",
+          "quantity": 2
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 2
+        },
+        {
+          "name": "Linen Thread",
+          "quantity": 4
+        }
+      ],
+      [
+        {
+          "name": "Bear Hide",
+          "quantity": 3
+        },
+        {
+          "name": "Vile Ribcage",
+          "quantity": 3
+        },
+        {
+          "name": "Black Metal",
+          "quantity": 3
+        },
+        {
+          "name": "Linen Thread",
+          "quantity": 6
+        }
+      ]
+    ]
+  },
+  "wood-arrow": {
+    "station": "Workbench",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Wood",
+          "quantity": 8
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "wooden-missile": {
+    "station": "Artisan table",
+    "stationLevel": 1,
+    "qualities": [
+      [
+        {
+          "name": "Corewood",
+          "quantity": 5
+        },
+        {
+          "name": "Feathers",
+          "quantity": 2
+        }
+      ],
+      [],
+      [],
+      []
+    ],
+    "quantity": 20
+  },
+  "wound-ripper": {
+    "station": "Black Forge",
+    "stationLevel": 4,
+    "qualities": [
+      [
+        {
+          "name": "Ripper",
+          "quantity": 1
+        },
+        {
+          "name": "Flametal",
+          "quantity": 8
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 8
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 1
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 16
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 2
+        }
+      ],
+      [
+        {
+          "name": "Flametal",
+          "quantity": 32
+        },
+        {
+          "name": "Bloodstone",
+          "quantity": 4
+        }
+      ]
+    ]
+  }
+}
