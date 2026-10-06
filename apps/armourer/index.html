@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Armourer — Valheim Companion</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="data/data.js"></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="page-header">
+      <nav class="hub-nav" aria-label="Navigation">
+        <a href="../">← Valheim Companion</a>
+      </nav>
+      <div class="header-main">
+        <h1 class="header-title">Armourer</h1>
+        <p class="header-subtitle">Every armor set, what it costs and where to find the materials.</p>
+      </div>
+
+      <div class="header-controls" role="region" aria-label="Controls">
+        <div class="controls-toggles">
+          <label class="toggle-control" id="toggle-spoilers-label">
+            <input type="checkbox" id="toggle-spoilers" aria-describedby="toggle-spoilers-desc">
+            <span class="toggle-slider" aria-hidden="true"></span>
+            <span class="toggle-text">Show all (spoilers)</span>
+          </label>
+        </div>
+
+        <div class="controls-actions">
+          <button type="button" id="btn-collapse-all" class="action-btn">Collapse all</button>
+          <button type="button" id="btn-reset-progress" class="action-btn action-btn-danger">Reset spoiler progress</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="armourer-layout">
+      <main class="armourer-catalog" aria-label="Armor Sets">
+        <div id="biomes-container" class="biomes-container"></div>
+        <div id="cosmetics-container" class="cosmetics-container"></div>
+      </main>
+
+      <!-- Shopping cart panel: sticky on desktop, sliding drawer on mobile -->
+      <aside id="cart-panel" class="cart-panel" aria-label="Shopping list">
+        <div class="cart-header">
+          <div class="cart-header-title-row">
+            <h2 class="cart-title">Shopping List</h2>
+            <span id="cart-count-badge" class="badge badge-count">0 items</span>
+          </div>
+          <button type="button" id="btn-cart-mobile-close" class="cart-mobile-close-btn" aria-label="Close shopping list">✕</button>
+        </div>
+
+        <div id="cart-content" class="cart-content">
+          <!-- Cart items and breakdown rendered by app.js -->
+        </div>
+      </aside>
+    </div>
+
+    <footer id="page-footer" class="page-footer"></footer>
+  </div>
+
+  <!-- Mobile floating bar to toggle the shopping cart drawer -->
+  <div id="mobile-cart-bar" class="mobile-cart-bar" aria-hidden="true">
+    <button type="button" id="btn-mobile-cart-toggle" class="mobile-cart-btn">
+      <span class="mobile-cart-icon">🛒</span>
+      <span class="mobile-cart-text">Shopping List</span>
+      <span id="mobile-cart-badge" class="badge badge-count">0</span>
+    </button>
+  </div>
+</body>
+</html>

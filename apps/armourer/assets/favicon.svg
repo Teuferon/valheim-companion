@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="helmGrad" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#343d48"/>
+      <stop offset="70%" stop-color="#181d23"/>
+      <stop offset="100%" stop-color="#0f1216"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ecc068"/>
+      <stop offset="50%" stop-color="#d9a441"/>
+      <stop offset="100%" stop-color="#8a5a1e"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Badge -->
+  <circle cx="32" cy="32" r="30" fill="url(#helmGrad)" stroke="url(#goldGrad)" stroke-width="3"/>
+  <circle cx="32" cy="32" r="25" fill="none" stroke="#2b333c" stroke-width="1.2" stroke-dasharray="4 2"/>
+  <!-- Helmet Dome -->
+  <path d="M18 36 C18 22 24 16 32 16 C40 16 46 22 46 36 L43 36 C43 28 39 22 32 22 C25 22 21 28 21 36 Z" fill="url(#goldGrad)"/>
+  <!-- Nasal Guard and Brow -->
+  <path d="M19 35 L45 35 L44 38 L34 38 L34 46 L30 46 L30 38 L20 38 Z" fill="url(#goldGrad)"/>
+  <!-- Cheek Plates -->
+  <path d="M20 38 L24 38 L23 47 L19 44 Z" fill="#717b88" stroke="url(#goldGrad)" stroke-width="1"/>
+  <path d="M44 38 L40 38 L41 47 L45 44 Z" fill="#717b88" stroke="url(#goldGrad)" stroke-width="1"/>
+  <!-- Central Crest Spike -->
+  <path d="M32 12 L35 17 L29 17 Z" fill="url(#goldGrad)"/>
+  <!-- Rivets -->
+  <circle cx="26" cy="36.5" r="1.2" fill="#0f1216"/>
+  <circle cx="38" cy="36.5" r="1.2" fill="#0f1216"/>
+  <circle cx="32" cy="27" r="1.5" fill="#d9a441"/>
+</svg>
