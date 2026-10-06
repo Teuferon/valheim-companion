@@ -2863,5 +2863,50 @@
     "ru": "Ушёл на рыбалку",
     "ja": "釣りに行った",
     "id": "Pergi memancing"
+  },
+  "Templates": {
+    "en": "Templates",
+    "cs": "Šablony",
+    "de": "Vorlagen",
+    "es": "Plantillas",
+    "fr": "Modèles",
+    "pt": "Modelos",
+    "zh": "模板",
+    "hi": "नमूने",
+    "ar": "قوالب",
+    "bn": "নমুনা",
+    "ru": "Шаблоны",
+    "ja": "テンプレート",
+    "id": "Templat"
+  },
+  "Choose a sign to replace your text and formatting. All templates fit Vanilla.": {
+    "en": "Choose a sign to replace your text and formatting. All templates fit Vanilla.",
+    "cs": "Vyber ceduli, která nahradí tvůj text i formátování. Všechny šablony se vejdou do Vanilla limitu.",
+    "de": "Wähle ein Schild, um Text und Formatierung zu ersetzen. Alle Vorlagen passen ins Vanilla-Limit.",
+    "es": "Elige un letrero para reemplazar el texto y el formato. Todas las plantillas caben en el límite de Vanilla.",
+    "fr": "Choisis une pancarte pour remplacer le texte et la mise en forme. Tous les modèles respectent la limite Vanilla.",
+    "pt": "Escolha uma placa para substituir o texto e a formatação. Todos os modelos cabem no limite Vanilla.",
+    "zh": "选择告示牌以替换文字和格式。所有模板均符合原版限制。",
+    "hi": "अपना पाठ और स्वरूप बदलने के लिए तख्ती चुनें। सभी नमूने Vanilla सीमा में हैं।",
+    "ar": "اختر لافتة لاستبدال النص والتنسيق. كل القوالب ضمن حد اللعبة الأصلية.",
+    "bn": "লেখা ও বিন্যাস বদলাতে একটি ফলক বাছুন। সব নমুনা Vanilla সীমার মধ্যে।",
+    "ru": "Выбери табличку для замены текста и оформления. Все шаблоны укладываются в лимит Vanilla.",
+    "ja": "看板を選ぶとテキストと書式を置き換えます。すべてのテンプレートがバニラの制限内です。",
+    "id": "Pilih papan untuk mengganti teks dan format. Semua templat sesuai batas Vanilla."
+  },
+  "{count}/50 characters": {
+    "en": "{count}/50 characters",
+    "cs": "{count}/50 znaků",
+    "de": "{count}/50 Zeichen",
+    "es": "{count}/50 caracteres",
+    "fr": "{count}/50 caractères",
+    "pt": "{count}/50 caracteres",
+    "zh": "{count}/50 字符",
+    "hi": "{count}/50 अक्षर",
+    "ar": "{count}/50 حرفًا",
+    "bn": "{count}/50 অক্ষর",
+    "ru": "{count}/50 символов",
+    "ja": "{count}/50文字",
+    "id": "{count}/50 karakter"
   }
 }

@@ -20,10 +20,6 @@ import {
   BookOpen,
   RotateCcw,
   ChevronDown,
-  Home,
-  Package,
-  Compass,
-  Skull,
   Sun,
   Moon,
   Info,
@@ -31,6 +27,12 @@ import {
   Wand2,
 } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
+import { TemplateCard, TemplateGallery } from '@/components/template-gallery';
+import {
+  signTemplates,
+  templateText,
+  type SignTemplate,
+} from '@/lib/templates';
 import { languages } from '@/lib/i18n';
 import { DirectionProvider } from '@/components/ui/direction';
 import { Slider } from '@/components/ui/slider';
@@ -57,7 +59,6 @@ import {
   compileSign,
   countText,
   parseRichText,
-  templates,
   tagGroups,
   type SignSettings,
 } from '@/lib/rich-text';
@@ -128,7 +129,6 @@ const signSymbols = [
   '⛓',
   '⛔',
 ];
-const templateIcons = [Home, Package, Compass, Skull];
 const sources = [
   [
     'TextMesh Pro · přehled značek',
@@ -282,6 +282,15 @@ export default function Page() {
       output.current?.select();
       setCopyError(true);
     }
+  };
+  const chooseTemplate = (template: SignTemplate) => {
+    setText(templateText(template, t));
+    setSettings({ ...defaults });
+    setRaw(null);
+    setMode('visual');
+    setCopied(false);
+    setCopyError(false);
+    selection.current = { start: -1, end: -1 };
   };
   const reset = () => {
     setText('');
@@ -447,14 +456,17 @@ export default function Page() {
                 <h2>
                   <Feather size={19} /> {t('Tvůj nápis')}
                 </h2>
-                <button
-                  className="icon-button"
-                  onClick={reset}
-                  aria-label={t('Vymazat a obnovit nastavení')}
-                  title={t('Nová prázdná cedule')}
-                >
-                  <RotateCcw size={16} />
-                </button>
+                <div className="editor-actions">
+                  <TemplateGallery onChoose={chooseTemplate} />
+                  <button
+                    className="icon-button"
+                    onClick={reset}
+                    aria-label={t('Vymazat a obnovit nastavení')}
+                    title={t('Nová prázdná cedule')}
+                  >
+                    <RotateCcw size={16} />
+                  </button>
+                </div>
               </div>
               <Tabs
                 value={mode}
@@ -952,34 +964,15 @@ export default function Page() {
               <span>{t('Jedno kliknutí. Pak už po svém.')}</span>
             </div>
             <div className="template-grid">
-              {templates.map((template, i) => {
-                const Icon = templateIcons[i];
-                return (
-                  <button
-                    key={template.name}
-                    className="template-card"
-                    onClick={() => {
-                      setText(t(template.text));
-                      setSettings({ ...defaults, color: template.color });
-                      setRaw(null);
-                      setMode('visual');
-                      setCopied(false);
-                      selection.current = { start: -1, end: -1 };
-                    }}
-                    style={
-                      { '--template-color': template.color } as CSSProperties
-                    }
-                  >
-                    <div className="template-top">
-                      <Icon size={17} />
-                      <span>{t(template.name)}</span>
-                      <ArrowRight size={16} />
-                    </div>
-                    <strong>{t(template.text)}</strong>
-                    <small>{t(template.eyebrow)}</small>
-                  </button>
-                );
-              })}
+              {['welcome', 'wood', 'portal-mistlands', 'warning'].map((id) => (
+                <TemplateCard
+                  key={id}
+                  template={signTemplates.find(
+                    (template) => template.id === id,
+                  )!}
+                  onChoose={chooseTemplate}
+                />
+              ))}
             </div>
           </section>
           <div className="bottom-note">
@@ -1001,9 +994,22 @@ export default function Page() {
           <span>{t('Vyrobeno pro dlouhé večery v desátém světě.')}</span>
           <span>{t('Neoficiální nástroj pro Valheim')}</span>
           <p className="support">
-            <span><strong>Free, ad-free and made in my spare time.</strong> If it helped your run, you can buy me a coffee.</span>
-            <a href="https://ko-fi.com/N2A528ACE3" target="_blank" rel="noopener noreferrer">
-              <img src="/support/kofi.png" alt="Buy Me a Coffee at ko-fi.com" width={143} height={36} loading="lazy" />
+            <span>
+              <strong>Free, ad-free and made in my spare time.</strong> If it
+              helped your run, you can buy me a coffee.
+            </span>
+            <a
+              href="https://ko-fi.com/N2A528ACE3"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/support/kofi.png"
+                alt="Buy Me a Coffee at ko-fi.com"
+                width={143}
+                height={36}
+                loading="lazy"
+              />
             </a>
           </p>
         </footer>
