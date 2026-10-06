@@ -308,3 +308,35 @@ test('VCI18n: mountPicker creates select with auto and all 13 languages, reactin
 
   unsubscribe();
 });
+
+
+test('VCI18n: plural categories, interpolation and fallback', () => {
+  const catalog = {
+    '{count} units': {
+      cs: { one: '{count} jednotka', few: '{count} jednotky', many: '{count} jednotky', other: '{count} jednotek' },
+      ar: Object.fromEntries(['zero', 'one', 'two', 'few', 'many', 'other'].map(category => [category, category + ': {count}'])),
+      ja: { other: '{count}体' },
+      en: { one: '{count} unit', other: '{count} units' },
+    },
+    fallback: { cs: { other: 'ostatní {count}' }, en: { one: 'one {count}', other: 'other {count}' } },
+    english: { cs: { few: 'několik' }, en: { one: 'one {count}', other: 'other {count}' } },
+  };
+  VCI18n.setPreference('cs');
+  for (const [count, expected] of [[1, '1 jednotka'], [2, '2 jednotky'], [5, '5 jednotek'], [1.5, '1.5 jednotky']]) {
+    assert.equal(VCI18n.tn(catalog, '{count} units', count), expected);
+  }
+  assert.equal(VCI18n.tn(catalog, 'fallback', 1), 'ostatní 1');
+  assert.equal(VCI18n.tn(catalog, 'english', 1), 'one 1');
+  assert.equal(VCI18n.tn(catalog, 'english', 5), 'other 5');
+  VCI18n.setPreference('ar');
+  for (const [count, category] of [[0, 'zero'], [1, 'one'], [2, 'two'], [3, 'few'], [11, 'many'], [100, 'other']]) {
+    assert.equal(VCI18n.tn(catalog, '{count} units', count), category + ': ' + count);
+  }
+  VCI18n.setPreference('ja');
+  for (const count of [0, 1, 2, 5]) assert.equal(VCI18n.tn(catalog, '{count} units', count), count + '体');
+  VCI18n.setPreference('de');
+  assert.equal(VCI18n.tn(catalog, '{count} units', 1), '1 unit');
+  assert.equal(VCI18n.tn(catalog, '{count} units', 2, { count: '2,000' }), '2,000 units');
+  assert.equal(VCI18n.tn({}, 'Missing {count}', 3), 'Missing 3');
+  assert.equal(VCI18n.tn({ legacy: { en: '{count} old' } }, 'legacy', 1), '1 old');
+});

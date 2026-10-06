@@ -110,6 +110,39 @@ export function translate(
   );
 }
 
+export type PluralForms = Partial<Record<Intl.LDMLPluralRule, string>>;
+export type Catalog = Record<string, Partial<Record<Locale, string | PluralForms>>>;
+export type TranslateNumber = (
+  source: string,
+  count: number,
+  values?: Record<string, string | number>,
+) => string;
+
+const pluralRules = new Map<Locale, Intl.PluralRules>();
+
+export function tn(
+  catalog: Catalog,
+  key: string,
+  count: number,
+  values: Record<string, string | number> = {},
+  locale: Locale = resolveLocale(getStoredPreference(),
+    typeof navigator === 'undefined' ? [] : navigator.languages),
+): string {
+  if (!pluralRules.has(locale)) {
+    pluralRules.set(locale, new Intl.PluralRules(locale));
+  }
+  const entry = catalog[key];
+  const category = pluralRules.get(locale)!.select(count);
+  const localized = entry?.[locale];
+  const english = entry?.en;
+  const template = (typeof localized === 'string' ? localized : localized?.[category] ?? localized?.other)
+    ?? (typeof english === 'string' ? english : english?.[new Intl.PluralRules('en').select(count)] ?? english?.other)
+    ?? key;
+  const replacements: Record<string, string | number> = { count, ...values };
+  return template.replace(/\{(\w+)\}/g, (match, token: string) =>
+    replacements[token] !== undefined ? String(replacements[token]) : match);
+}
+
 export function entityName(
   entity:
     | { name: string; names?: Partial<Record<Locale, string>> }
