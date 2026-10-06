@@ -674,7 +674,41 @@
       onPlayerChange();
     });
     actions.appendChild(resetBtn);
+    const shareBtn = el('button', 'action-btn', 'Share my profile');
+    shareBtn.type = 'button';
+    const shareResult = el('div', 'profile-share-result');
+    shareResult.hidden = true;
+    shareBtn.addEventListener('click', async () => {
+      const url = new URL(window.location.href);
+      const params = new URLSearchParams();
+      params.set('player', window.VCExtras.encodeProfile(sanitizePlayer(player)));
+      const creatureId = new URLSearchParams(window.location.hash.slice(1)).get('c');
+      if (creatureId) params.set('c', creatureId);
+      url.hash = params.toString();
+      shareResult.replaceChildren();
+      shareResult.hidden = false;
+      const label = el('label', 'extra-note', 'Profile link');
+      const input = el('input', 'profile-link-input');
+      input.type = 'text';
+      input.readOnly = true;
+      input.value = url.href;
+      label.appendChild(input);
+      shareResult.appendChild(label);
+      const status = el('p', 'extra-note');
+      status.setAttribute('role', 'status');
+      shareResult.appendChild(status);
+      try {
+        await navigator.clipboard.writeText(url.href);
+        status.textContent = t('Link copied');
+      } catch {
+        status.textContent = t('Copy this link to share your profile.');
+        input.focus();
+        input.select();
+      }
+    });
+    actions.appendChild(shareBtn);
     body.appendChild(actions);
+    body.appendChild(shareResult);
 
     details.appendChild(body);
     container.appendChild(details);
@@ -962,6 +996,16 @@
     const titleRow = el('div', 'card-title-row');
     const nameEl = el('h4', 'card-name', entityName(creature));
     titleRow.appendChild(nameEl);
+    const creatureLink = el('a', 'creature-link', '↗');
+    creatureLink.href = '#c=' + encodeURIComponent(creature.id);
+    creatureLink.title = t('Link to creature');
+    creatureLink.setAttribute('aria-label', t('Link to creature'));
+    creatureLink.addEventListener('click', () => {
+      if (window.location.hash === creatureLink.getAttribute('href')) {
+        window.dispatchEvent(new Event('hashchange'));
+      }
+    });
+    titleRow.appendChild(creatureLink);
     headerInfo.appendChild(titleRow);
 
     // Badges Row
@@ -2553,6 +2597,134 @@
   /**
    * Main App Initialization
    */
+  function confirmationDialog(title, message, confirmText, previewPlayer) {
+    document.querySelector('.link-dialog')?.close();
+    return new Promise(resolve => {
+      const dialog = el('dialog', 'link-dialog weapon-modal');
+      dialog.setAttribute('aria-labelledby', 'link-dialog-title');
+      let accepted = false;
+      const render = () => {
+        dialog.replaceChildren();
+        const content = el('div', 'modal-content');
+        const heading = el('h2', 'modal-title', title);
+        heading.id = 'link-dialog-title';
+        content.appendChild(heading);
+        content.appendChild(el('p', 'link-dialog-message', message));
+        if (previewPlayer) {
+          const list = el('dl', 'profile-preview');
+          const add = (key, value) => {
+            list.appendChild(el('dt', null, key));
+            const description = el('dd');
+            description.textContent = value;
+            list.appendChild(description);
+          };
+          window.VCRank.SKILLS.forEach(skill => add(skill.name, previewPlayer.skills[skill.id]));
+          add('Difficulty', t(DIFFICULTY_OPTIONS.find(option => option.id === previewPlayer.difficulty).short));
+          add('Players nearby', previewPlayer.players);
+          add('Quality', previewPlayer.quality === 'max' ? t('Max quality') : previewPlayer.quality);
+          add('Equipment sets', previewPlayer.sets.map(id => SET_LABELS[id]).join(', ') || '—');
+          add('Sneak / backstab', t(previewPlayer.sneak ? 'Yes' : 'No'));
+          add('Enemy staggered (×2)', t(previewPlayer.staggered ? 'Yes' : 'No'));
+          add('Ranking', t(previewPlayer.rankBy === 'hit' ? 'Damage per hit' : 'Damage per second'));
+          content.appendChild(list);
+        }
+        const actions = el('div', 'character-actions');
+        const cancel = el('button', 'action-btn', confirmText ? 'Cancel' : 'Close');
+        cancel.type = 'button';
+        cancel.autofocus = true;
+        cancel.addEventListener('click', () => dialog.close());
+        actions.appendChild(cancel);
+        if (confirmText) {
+          const confirm = el('button', 'action-btn', confirmText);
+          confirm.type = 'button';
+          confirm.addEventListener('click', () => { accepted = true; dialog.close(); });
+          actions.appendChild(confirm);
+        }
+        content.appendChild(actions);
+        dialog.appendChild(content);
+      };
+      dialog._translate = render;
+      render();
+      dialog.addEventListener('close', () => { dialog.remove(); resolve(accepted); }, { once: true });
+      document.body.appendChild(dialog);
+      dialog.showModal();
+    });
+  }
+
+  async function openCreatureLink(id, data, stillCurrent) {
+    const creature = Object.hasOwn(data.creatures, id) ? data.creatures[id] : null;
+    const biome = creature && window.VCExtras.creatureBiome(creature, data.biomes, new Set(getStoredOpenBiomes()));
+    if (!biome) {
+      await confirmationDialog('Link to creature', 'Creature not found.');
+      return;
+    }
+    const biomeCard = document.querySelector('.biome-card[data-biome-id="' + biome.id + '"]');
+    const header = biomeCard?.querySelector('.biome-header');
+    if (!header) return;
+    if (!new Set(getStoredOpenBiomes()).has(biome.id)) {
+      const reveal = await confirmationDialog('Reveal creature', 'This creature is in a hidden biome. Reveal it?', 'Reveal');
+      if (!reveal || !stillCurrent()) return;
+    }
+    if (!stillCurrent()) return;
+    const search = document.getElementById('creature-search');
+    if (search) search.value = '';
+    document.querySelectorAll('.kind-filter .filter-btn').forEach(button => {
+      button.classList.toggle('active', button.dataset.kind === 'all');
+    });
+    if (header.getAttribute('aria-expanded') !== 'true') header.click();
+    applyFiltersToAllOpenBiomes();
+    const fish = biomeCard.querySelector('.fish-wrapper[data-creature-id="' + creature.id + '"]');
+    if (fish && !fish.classList.contains('expanded')) fish.querySelector('.fish-tile').click();
+    const card = biomeCard.querySelector('.creature-card[data-creature-id="' + creature.id + '"]');
+    if (!card) return;
+    document.querySelectorAll('.creature-linked').forEach(element => element.classList.remove('creature-linked'));
+    card.classList.add('creature-linked');
+    card.setAttribute('tabindex', '-1');
+    card.querySelector('.creature-details').open = true;
+    const scroll = () => {
+      if (!stillCurrent() || !card.isConnected) return;
+      card.scrollIntoView({ block: 'center', behavior: 'instant' });
+      card.focus({ preventScroll: true });
+    };
+    requestAnimationFrame(scroll);
+    // Scroll again once the biome accordion has finished expanding.
+    setTimeout(scroll, 350);
+  }
+
+  function initLinks(data) {
+    let request = 0;
+    const handleHash = async () => {
+      const current = ++request;
+      const stillCurrent = () => current === request;
+      document.querySelector('.link-dialog')?.close();
+      const params = new URLSearchParams(window.location.hash.slice(1));
+      if (params.has('player')) {
+        try {
+          const imported = sanitizePlayer(window.VCExtras.decodeProfile(params.get('player')));
+          const accept = await confirmationDialog('Import player profile',
+            'Import this profile? Your current character settings will be replaced.', 'Import profile', imported);
+          if (!stillCurrent()) return;
+          if (accept) {
+            Object.assign(playerState, imported);
+            savePlayerState(playerState);
+            buildCharacterPanel(document.getElementById('character-section'), true);
+            refreshRenderedCards();
+          }
+        } catch {
+          await confirmationDialog('Profile link', 'This profile link is invalid.');
+        }
+        if (!stillCurrent()) return;
+        params.delete('player');
+        const url = new URL(window.location.href);
+        url.hash = params.toString();
+        history.replaceState(null, '', url);
+      }
+      if (stillCurrent() && params.has('c')) await openCreatureLink(params.get('c'), data, stillCurrent);
+    };
+    window.addEventListener('hashchange', handleHash);
+    handleHash();
+  }
+
   function initApp() {
     const data = window.VC_DATA;
     if (!data || !data.biomes) {
@@ -2697,6 +2869,7 @@
         const states = [...wrapper.querySelectorAll('.creature-card')].map(e => ({
           id: e.dataset.creatureId, star: [...e.querySelectorAll('.star-btn')].findIndex(b => b.classList.contains('active')),
           details: !!e.querySelector('.creature-details')?.open,
+          linked: e.classList.contains('creature-linked'),
         }));
         const details = [...wrapper.querySelectorAll('details')].map(e => e.open);
         wrapper.replaceChildren();
@@ -2706,17 +2879,23 @@
           const creature = wrapper.querySelector('.creature-card[data-creature-id="' + state.id + '"]');
           creature?.querySelectorAll('.star-btn')[state.star]?.click();
           if (creature?.querySelector('.creature-details')) creature.querySelector('.creature-details').open = state.details;
+          if (state.linked && creature) {
+            creature.classList.add('creature-linked');
+            creature.setAttribute('tabindex', '-1');
+          }
         });
         [...wrapper.querySelectorAll('details')].forEach((e, i) => { e.open = details[i] ?? e.open; });
       });
       armoryController = buildArmorySection(armoryContainer, data, armoryController?.snapshot());
       if (document.getElementById('weapon-modal').open && modalWeapon) openWeaponModal(modalWeapon, data);
       applyFiltersToAllOpenBiomes();
+      document.querySelector('.link-dialog')?._translate?.();
     }
     VCI18n.onChange(translatePage);
     VCI18n.apply(document);
     picker.setAttribute('aria-label', t('Language'));
     picker.options[0].textContent = t('Auto (browser)');
+    initLinks(data);
 
     // Search Box Listener
     const searchInput = document.getElementById('creature-search');
