@@ -28,9 +28,14 @@ cd ~/gameroot/marchbound
 node scripts/pust-gm.mjs --zadani $SCRATCH/VC-<n>.zadani.md --strom /Users/paveldvorak/gameroot/valheim-units-GM --vystup $SCRATCH/gm-VC-<n>.json --znacka VC-<n>
 # zai (GLM):
 node scripts/pust-gl.mjs --zadani $SCRATCH/VC-<n>.zadani.md --strom /Users/paveldvorak/gameroot/valheim-units-GL --vystup $SCRATCH/gl-VC-<n>.json --znacka VC-<n> --minut 75
+# Codex Sol (GPT-6.1 Sol), od 6. 10. 2026 hlavní pracovník po vyčerpání agy:
+node scripts/pust-cs.mjs --zadani $SCRATCH/VC-<n>.zadani.md --strom /Users/paveldvorak/gameroot/valheim-units-CS --vystup $SCRATCH/cs-VC-<n>.json --minut 90
 ```
 
-Kvóty: `node scripts/limit-agy.mjs --ted` a `node scripts/limit-zai.mjs --ted`.
+Kvóty: `node scripts/limit-agy.mjs --ted` a `node scripts/limit-zai.mjs --ted`. Codex podle `docs/prace/45` v marchboundu: pouští se, dokud limit nedojde (návratový kód 10).
+
+- **Sol** běží s `--dangerously-bypass-approvals-and-sandbox` a smí npm, testy i git. Pravidla zadání jsou stejná jako u agy: hotové zadání, kroky s commitem a výčet souborů v ROZSAHU. Worktree `../valheim-units-CS`. Commity značkuj `[CS/sol]`.
+- Sol může běžet souběžně s agy nebo zai, protože je to jiný slot. Musí ale mít vlastní worktree a úlohy se nesmějí překrývat v souborech.
 
 ### Pravidla a pasti (všechny se už staly)
 
