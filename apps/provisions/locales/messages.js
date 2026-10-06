@@ -1274,5 +1274,20 @@ globalThis.VC_MESSAGES = {
     "ru": "В данных нет рецепта изготовления.",
     "ja": "データに製作レシピがありません。",
     "id": "Tidak ada resep pembuatan dalam data."
+  },
+  "Console-only": {
+    "en": "Console-only",
+    "cs": "Jen přes konzoli",
+    "de": "Nur per Konsole",
+    "es": "Solo por consola",
+    "fr": "Console uniquement",
+    "pt": "Somente pelo console",
+    "zh": "仅限控制台",
+    "hi": "केवल कंसोल से",
+    "ar": "عبر وحدة الأوامر فقط",
+    "bn": "শুধু কনসোলের মাধ্যমে",
+    "ru": "Только через консоль",
+    "ja": "コンソール限定",
+    "id": "Hanya lewat konsol"
   }
 };

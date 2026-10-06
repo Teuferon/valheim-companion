@@ -19,6 +19,11 @@
 !apps/progress/assets/
 !apps/progress/data/data.js
 !apps/progress/locales/messages.js
+!apps/provisions/index.html
+!apps/provisions/assets/
+!apps/provisions/locales/messages.js
+!apps/provisions/data/data.js
+!apps/provisions/img/
 !apps/signs/
 !apps/damage-calculator/
 apps/signs/node_modules/

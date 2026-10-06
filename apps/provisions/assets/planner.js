@@ -69,6 +69,21 @@
     const direct = VCShopping.sumMaterials(products, items);
     const expanded = VCShopping.breakdown(direct, items, 20);
     const all = VCShopping.breakdown(products.map(line => ({ item: line.item, amount: line.quantity })), items, 21);
+    // Order shared steps by their dependencies, including ingredients used by
+    // multiple selected dishes. Reversing traversal order is insufficient.
+    const stepsByProduct = new Map(all.steps.map(step => [step.product, step]));
+    const visited = new Set();
+    const steps = [];
+    function visit(step) {
+      if (visited.has(step.product)) return;
+      visited.add(step.product);
+      for (const material of items[step.product]?.recipe?.materials || []) {
+        const dependency = stepsByProduct.get(material.item);
+        if (dependency) visit(dependency);
+      }
+      steps.push(step);
+    }
+    for (const step of all.steps) visit(step);
     const stations = new Map();
     for (const step of all.steps) {
       const station = data.stations.find(item => item.name === step.station || item.id === step.station);
@@ -81,7 +96,7 @@
     const missing = data.stations.filter(station => station.upgrades === 'cauldron' && station.progressionLevel > plan.state.cauldronLevel && station.progressionLevel <= needed);
     if (needed && plan.state.cauldronLevel === 0) missing.unshift(data.stations.find(station => station.id === 'cauldron'));
     return { ...plan, items, materials: plan.state.breakdown ? expanded.materials : direct,
-      steps: [...all.steps].reverse(), stations: [...stations.values()], missing,
+      steps, stations: [...stations.values()], missing,
       upgradeMaterials: VCShopping.sumMaterials(missing.map(station => ({ materials: station.materials, quantity: 1 })), items) };
   }
   function encode(value, data) {

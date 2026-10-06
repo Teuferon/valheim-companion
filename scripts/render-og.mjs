@@ -51,6 +51,7 @@ export function renderOgImages() {
     'damage-calculator',
     'signs',
     'progress',
+    'provisions',
   ];
 
   const renderedFiles = [];

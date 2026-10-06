@@ -47,6 +47,12 @@
     node.addEventListener('click', action);
     return node;
   }
+  function removeButton(item, action) {
+    const node = button('×', action, 'remove');
+    node.setAttribute('aria-label', t('Remove {name}', { name: name(item) }));
+    node.title = t('Remove {name}', { name: name(item) });
+    return node;
+  }
   function heading(item) {
     const node = el('div', 'item-heading');
     const image = el('img');
@@ -66,6 +72,7 @@
     node.dataset.item = food.id;
     node.append(heading(food));
     if (food.isFeast) node.append(el('span', 'badge', t('Feast · {count} servings', { count: number(food.servings) })));
+    if (food.availability === 'console-only') node.append(el('span', 'badge', t('Console-only')));
     for (const [key, label] of [['health', 'Health'], ['stamina', 'Stamina'], ['eitr', 'Eitr']]) {
       const row = el('div', 'stat-row ' + key);
       const bar = el('progress');
@@ -138,7 +145,7 @@
       const info = el('div');
       if (line) {
         info.append(el('strong', '', name(line.definition)), el('p', 'hint', t('{count} servings', { count: number(line.quantity) })));
-        row.append(info, button(t('Remove {name}', { name: name(line.definition) }), () => { state.foods.splice(index, 1); update(); }, 'remove'));
+        row.append(info, removeButton(line.definition, () => { state.foods.splice(index, 1); update(); }));
       } else row.append(el('span', 'hint', number(index + 1) + ' · ' + t('Empty')));
       foods.append(row);
     }
@@ -147,9 +154,9 @@
     for (const line of plan.meads) {
       const row = el('div', 'mead-slot');
       const title = el('div', 'slot-title');
-      title.append(el('strong', '', name(line.definition)), button(t('Remove {name}', { name: name(line.definition) }), () => {
+      title.append(el('strong', '', name(line.definition)), removeButton(line.definition, () => {
         state.meads = state.meads.filter(item => item.id !== line.id); update();
-      }, 'remove'));
+      }));
       const mode = el('select');
       mode.id = 'mode-' + line.id;
       mode.setAttribute('aria-label', t('Mead use') + ' · ' + name(line.definition));
@@ -334,6 +341,13 @@
         section.append(body);
       }
       catalog.append(section);
+    }
+    const consoleFoods = data.food.filter(food => food.availability === 'console-only');
+    if (consoleFoods.length) {
+      const extra = el('details', 'biome biome-body');
+      extra.append(el('summary', '', t('Console-only')));
+      const grid = el('div', 'item-grid'); grid.append(...consoleFoods.map(foodCard));
+      extra.append(grid); catalog.append(extra);
     }
   }
   function render() {

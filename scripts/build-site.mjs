@@ -106,10 +106,10 @@ export function buildSite() {
   mkdirSync(progressCoreDist, { recursive: true });
   cpSync(path.join(REPO_ROOT, 'shared', 'progress', 'core.js'), path.join(progressCoreDist, 'core.js'));
 
-  // Provisions data and images are ready for the upcoming frontend.
+  // Provisions static page, planner, locale catalog, data and images.
   const provisionsDist = path.join(DIST_DIR, 'provisions');
   mkdirSync(provisionsDist, { recursive: true });
-  for (const file of ['data', 'img']) {
+  for (const file of ['index.html', 'assets', 'locales', 'data', 'img']) {
     cpSync(path.join(REPO_ROOT, 'apps', 'provisions', file), path.join(provisionsDist, file), { recursive: true });
   }
 

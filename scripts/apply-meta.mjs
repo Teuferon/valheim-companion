@@ -72,7 +72,7 @@ export const PAGES = [
     section: 'provisions',
     path: '/provisions/',
     title: 'Provisions — Valheim Companion',
-    description: 'Valheim food and mead planner.',
+    description: 'Plan your Valheim food and meads for the next trip — stats, servings and the full shopping list, with crafting stations and ingredient sources.',
   },
 ];
 

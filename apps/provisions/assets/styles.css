@@ -48,7 +48,7 @@ progress::-moz-progress-bar { background: var(--stat-color); border-radius: 4px;
 .slot, .mead-slot { background: var(--sub); border: 1px solid var(--line); border-radius: 6px; padding: 10px; margin-top: 8px; min-width: 0; }
 .slot, .slot-title { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .slot > div, .slot-title strong { min-width: 0; }
-.remove { flex: 0 1 38%; font-size: .75rem; padding: 5px 7px; color: #e57373; }
+.remove { flex: 0 0 36px; min-height: 36px; font-size: 1.2rem; padding: 2px 7px; color: #e57373; }
 .mead-controls { display: grid; grid-template-columns: minmax(0, 1fr) 64px; gap: 8px; margin: 10px 0 6px; }
 input[type="number"] { width: 100%; min-width: 0; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 5px; padding: 6px; }
 .hours-control { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; }
