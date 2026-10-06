@@ -43,12 +43,13 @@ export function parseMead(title, wt) {
   if (!box) return null;
   const baseBox = boxes.find(b => /^(mead|barley wine) base$/i.test(cleanText(b.type)));
   const effects = [box.effect, box['health regen'], box['stamina regen'], box['eitr regen']].filter(Boolean);
-  const text = effects.length ? effects.map(cleanText).join('; ') : cleanText((wt.match(/==\s*Effect\s*==([\s\S]*?)(?=\n==|$)/i)?.[1] ?? box.description ?? '').split('{|')[0]).trim();
+  const rawText = effects.length ? effects.map(cleanText).join('; ') : cleanText((wt.match(/==\s*Effect\s*==([\s\S]*?)(?=\n==|$)/i)?.[1] ?? box.description ?? '').split('{|')[0]).trim();
+  const text = rawText.replace(/^\s*\*+\s*/gm, '').trim();
   const resistances = [];
-  for (const match of text.matchAll(/(Resistant|Very resistant|Weak)\s*\(?([\d.]+)x\)?\s*(?:VS|against)\s+([A-Za-z, ]+)/gi)) {
-    for (const type of match[3].split(/,\s*|\s+and\s+/)) {
+  for (const match of text.matchAll(/(Very resistant|Resistan(?:t|ce)|Weak)\s*(?:\((?:x)?([\d.]+)(?:x)?\))?\s*(?:VS\.?|against)\s+([^\n;]+)/gi)) {
+    for (const type of match[3].replace(/\s+damage.*$/i, '').split(/,\s*|\s+and\s+/)) {
       const damage = type.trim().toLowerCase();
-      if (['fire', 'frost', 'poison', 'slash', 'blunt', 'pierce'].includes(damage)) resistances.push({ type: damage, multiplier: Number(match[2]) });
+      if (['fire', 'frost', 'poison', 'slash', 'blunt', 'pierce'].includes(damage)) resistances.push({ type: damage, multiplier: match[2] ? Number(match[2]) : ({ 'very resistant': 0.25, resistant: 0.5, resistance: 0.5, weak: 1.5 })[match[1].toLowerCase()] });
     }
   }
   return {
@@ -64,6 +65,11 @@ export function parseFeasts(wt) {
     const name = cleanText(row[0]);
     return parseFood(name, { type: 'Feast', health: row[2], stamina: row[3], eitr: row[4], healing: `${row[5]} hp/tick`, materials: row[6], source: 'Food Preparation Table', duration: number(wt.match(/each serving lasts (\d+) minutes/i)?.[1]) * 60, uses: number(wt.match(/has (\d+) servings/i)?.[1], 10) });
   });
+}
+export function parseCauldronUpgrades(wt) {
+  const section = wt.match(/==\s*Upgrades\s*==([\s\S]*?)(?=\n==[^=]|$)/i)?.[1] ?? '';
+  return (parseWikiTables(section)[0]?.rows ?? [])
+    .filter(row => /^\[\[/.test(row[0])).map(row => cleanText(row[0]));
 }
 export function parseProvisionsStation(title, wt) {
   const box = parseInfobox(wt, 'structure') ?? {};
@@ -126,15 +132,14 @@ export async function fetchProvisions() {
   }
   const food = [...foodById.values()].sort(sortNames);
   meads.sort(sortNames);
-  const upgrades = parseWikiTables(pages.Cauldron.wikitext).find(t => t.headers.some(h => cleanText(h) === 'Materials'))?.rows
-    .filter(row => /^\[\[/.test(row[0])).map(row => cleanText(row[0])) ?? [];
+  const upgrades = parseCauldronUpgrades(pages.Cauldron.wikitext);
   Object.assign(pages, await api.getWikitext(upgrades));
   const additions = [...stationTitles, ...upgrades].map(title => parseProvisionsStation(title, pages[title]?.wikitext ?? ''));
   const cauldron = additions.find(s => s.id === 'cauldron');
   cauldron.maxLevel = upgrades.length + 1;
   cauldron.levels = [{ level: 1, upgrade: null }, ...upgrades.map((title, i) => ({ level: i + 2, upgrade: slug(title) }))];
-  upgrades.forEach((title, i) => Object.assign(additions.find(s => s.id === slug(title)), { upgrades: 'cauldron', stationLevel: i + 1, providesLevel: i + 2 }));
-  const stations = load('stations.json');
+  upgrades.forEach((title, i) => Object.assign(additions.find(s => s.id === slug(title)), { upgrades: 'cauldron', stationLevel: 1, levelIncrement: 1, progressionLevel: i + 2 }));
+  const stations = load('stations.json').filter(station => station.type !== 'provisions');
   const existingStationIds = new Set(stations.map(s => s.id));
   const newStations = additions.filter(s => !existingStationIds.has(s.id));
   await addLocalizedNames(additions);

@@ -467,6 +467,26 @@
     }
   },
   {
+    "id": "black-marble",
+    "name": "Black Marble",
+    "provisions": true,
+    "image": "../provisions/img/items/black-marble.png",
+    "biome": "mistlands",
+    "tier": 7,
+    "sources": [
+      {
+        "text": "Giant Remains and various structures in the Mistlands biome",
+        "kind": "other"
+      }
+    ],
+    "recipe": null,
+    "wiki": "https://valheim.weirdgloop.org/w/black_marble",
+    "names": {
+      "cs": "Černý mramor",
+      "ru": "Черный мрамор"
+    }
+  },
+  {
     "id": "black-metal",
     "name": "Black Metal",
     "image": "img/items/black-metal.png",

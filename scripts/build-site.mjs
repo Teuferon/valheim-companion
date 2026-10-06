@@ -13,6 +13,7 @@ import { fileURLToPath } from 'node:url';
 import { buildI18n } from './build-i18n.mjs';
 import { buildSearchIndex } from './build-search-index.mjs';
 import { buildProgressData } from './build-progress-data.mjs';
+import { buildProvisionsData } from './build-provisions-data.mjs';
 
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST_DIR = path.join(REPO_ROOT, 'dist');
@@ -56,6 +57,7 @@ export function buildSite() {
   buildI18n();
   buildSearchIndex();
   buildProgressData();
+  buildProvisionsData();
 
   console.log('assembling dist/…');
   rmSync(DIST_DIR, { recursive: true, force: true });
@@ -103,6 +105,13 @@ export function buildSite() {
   const progressCoreDist = path.join(DIST_DIR, 'shared', 'progress');
   mkdirSync(progressCoreDist, { recursive: true });
   cpSync(path.join(REPO_ROOT, 'shared', 'progress', 'core.js'), path.join(progressCoreDist, 'core.js'));
+
+  // Provisions data and images are ready for the upcoming frontend.
+  const provisionsDist = path.join(DIST_DIR, 'provisions');
+  mkdirSync(provisionsDist, { recursive: true });
+  for (const file of ['data', 'img']) {
+    cpSync(path.join(REPO_ROOT, 'apps', 'provisions', file), path.join(provisionsDist, file), { recursive: true });
+  }
 
   // 4. apps/signs/dist-static/* -> dist/signs/
   const signsDistTarget = path.join(DIST_DIR, 'signs');

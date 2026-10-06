@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { parseTemplates } from './wikitext.mjs';
-import { parseFood, parseMead, parseFeasts, parseProvisionsStation, categoryRecursive } from './fetch-provisions.mjs';
+import { parseFood, parseMead, parseFeasts, parseProvisionsStation, parseCauldronUpgrades, categoryRecursive } from './fetch-provisions.mjs';
 
 const stew = `{{infobox item
 | title = Serpent Stew
@@ -82,4 +82,68 @@ test('recursive categories handle pagination, duplicates and category cycles', a
   } };
   assert.deepEqual(await categoryRecursive('Food', client), ['Berry', 'Meat']);
   assert.equal(count, 3);
+});
+
+test('cauldron upgrades survive a total footer that replaces table headers', () => {
+  const result = parseCauldronUpgrades(`== Upgrades ==
+{| class="wikitable"
+! Name
+! Icon
+! Materials
+|-
+|[[Spice Rack]]
+|[[File:Spice Rack.png]]
+|{{Item link|Carrot|2}}
+|-
+|[[Butcher's Table]]
+|[[File:Table.png]]
+|{{Item link|Silver|2}}
+|-
+! colspan="2" | Total (Cauldron included)
+|{{Item link|Tin|10}}
+|}
+== Recipes ==`);
+  assert.deepEqual(result, ['Spice Rack', "Butcher's Table"]);
+});
+
+test('mead effects handle qualitative resistance and x-prefix multipliers', () => {
+  const poison = parseMead('Poison Resistance Mead', '{{infobox item|type=Mead|effect=Very resistant vs. [[Poison]]}}');
+  assert.deepEqual(poison.effect.resistances, [{ type: 'poison', multiplier: 0.25 }]);
+  const berserk = parseMead('Berserkir Mead', '{{infobox item|type=Mead|effect=* Weak (x1.5) against [[Slash]], [[Blunt]] and [[Pierce]] damage}}');
+  assert.deepEqual(berserk.effect.resistances, [{ type: 'slash', multiplier: 1.5 }, { type: 'blunt', multiplier: 1.5 }, { type: 'pierce', multiplier: 1.5 }]);
+  assert.ok(!berserk.effect.text.includes('*'));
+});
+
+test('generated provisions have complete recipes and all six cauldron upgrades', async () => {
+  const { readFileSync } = await import('node:fs');
+  const load = name => JSON.parse(readFileSync(`data/${name}.json`));
+  const food = load('food');
+  const meads = load('meads');
+  const stations = load('stations');
+  const items = load('items');
+  const byId = new Map(items.map(item => [item.id, item]));
+  assert.equal(food.filter(f => f.isFeast).length, 9);
+  assert.equal(stations.find(s => s.id === 'cauldron').maxLevel, 7);
+  assert.equal(stations.filter(s => s.upgrades === 'cauldron').length, 6);
+  assert.ok(stations.filter(s => s.type === 'provisions').every(s => s.materials.length > 0));
+  assert.deepEqual(food.filter(f => f.tier == null).map(f => f.id), ['blue-mushroom']);
+  assert.ok(food.filter(f => f.isFeast).every(f => f.servings === 10 && f.duration === 3000));
+  assert.equal(food.find(f => f.id === 'whole-roasted-meadow-boar').biome, 'swamp');
+  assert.equal(byId.get('bread-dough').recipe.yields, 2);
+  assert.equal(byId.get('unbaked-sweetbread').recipe.yields, 2);
+  assert.equal(byId.get('cooked-boar-meat').recipe.materials[0].item, 'boar-meat');
+  for (const item of items.filter(i => i.provisions)) {
+    for (const material of item.recipe?.materials ?? []) {
+      assert.ok(byId.has(material.item), `${item.id}: missing ${material.item}`);
+      assert.notEqual(material.item, item.id, `${item.id}: self-referencing recipe`);
+    }
+  }
+  for (const mead of meads.filter(m => m.base)) {
+    assert.ok(mead.base.materials.length > 0, mead.id);
+    assert.ok(byId.has(mead.base.item), mead.id);
+    assert.equal(mead.base.station, 'mead-ketill');
+    assert.equal(mead.fermenterTime, 2400);
+  }
+  assert.equal(meads.find(m => m.id === 'love-potion').yields, 5);
+  assert.ok([...food, ...meads].every(e => e.image && e.names && !JSON.stringify(e).includes('[[')));
 });

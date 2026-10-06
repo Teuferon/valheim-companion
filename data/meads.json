@@ -9,7 +9,7 @@
     "wiki": "https://valheim.weirdgloop.org/w/Anti-Sting_Concoction",
     "image": "img/meads/anti-sting-concoction.png",
     "effect": {
-      "text": "* Prevent Deathsquito attacks",
+      "text": "Prevent Deathsquito attacks",
       "resistances": []
     },
     "duration": 600,
@@ -49,8 +49,21 @@
     "wiki": "https://valheim.weirdgloop.org/w/Berserkir_Mead",
     "image": "img/meads/berserkir-mead.png",
     "effect": {
-      "text": "* Attack, Block and Dodge Stamina use -80%\n* Weak (x1.5) against Slash, Blunt and Pierce damage",
-      "resistances": []
+      "text": "Attack, Block and Dodge Stamina use -80%\nWeak (x1.5) against Slash, Blunt and Pierce damage",
+      "resistances": [
+        {
+          "type": "slash",
+          "multiplier": 1.5
+        },
+        {
+          "type": "blunt",
+          "multiplier": 1.5
+        },
+        {
+          "type": "pierce",
+          "multiplier": 1.5
+        }
+      ]
     },
     "duration": 20,
     "cooldown": 20,
@@ -170,7 +183,12 @@
     "image": "img/meads/fire-resistance-barley-wine.png",
     "effect": {
       "text": "Resistance vs. Fire",
-      "resistances": []
+      "resistances": [
+        {
+          "type": "fire",
+          "multiplier": 0.5
+        }
+      ]
     },
     "duration": 600,
     "cooldown": 600,
@@ -254,7 +272,7 @@
     "wiki": "https://valheim.weirdgloop.org/w/Lightfoot_Mead",
     "image": "img/meads/lightfoot-mead.png",
     "effect": {
-      "text": "* -30% jump stamina cost\n* +20% jump height",
+      "text": "-30% jump stamina cost\n+20% jump height",
       "resistances": []
     },
     "duration": 600,
@@ -475,7 +493,7 @@
     "wiki": "https://valheim.weirdgloop.org/w/Mead_of_Troll_Endurance",
     "image": "img/meads/mead-of-troll-endurance.png",
     "effect": {
-      "text": "* +250.0 carry weight",
+      "text": "+250.0 carry weight",
       "resistances": []
     },
     "duration": 300,
@@ -728,7 +746,12 @@
     "image": "img/meads/poison-resistance-mead.png",
     "effect": {
       "text": "Very resistant vs. Poison",
-      "resistances": []
+      "resistances": [
+        {
+          "type": "poison",
+          "multiplier": 0.25
+        }
+      ]
     },
     "duration": 600,
     "cooldown": 600,
@@ -811,7 +834,7 @@
     "wiki": "https://valheim.weirdgloop.org/w/Tonic_of_Ratatosk",
     "image": "img/meads/tonic-of-ratatosk.png",
     "effect": {
-      "text": "* +15% walking and running speed\n* +7.5% swimming speed\n* Run +10",
+      "text": "+15% walking and running speed\n+7.5% swimming speed\nRun +10",
       "resistances": []
     },
     "duration": 600,
