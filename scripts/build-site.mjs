@@ -105,6 +105,11 @@ export function buildSite() {
     cpSync(SHARED_ANALYTICS_DIR, sharedAnalyticsDistTarget, { recursive: true });
   }
 
+  // Shared player profile used by the Bestiary modules.
+  const playerDist = path.join(DIST_DIR, 'shared', 'player');
+  mkdirSync(playerDist, { recursive: true });
+  cpSync(path.join(REPO_ROOT, 'shared', 'player', 'core.js'), path.join(playerDist, 'core.js'));
+
   console.log('done: site assembled in dist/');
 }
 

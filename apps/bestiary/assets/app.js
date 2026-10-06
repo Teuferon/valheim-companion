@@ -1,3 +1,6 @@
+import './rank.js';
+import { PLAYER_STORAGE_KEY, defaultPlayer, sanitizePlayer, readPlayerState } from '../../../shared/player/core.js';
+
 'use strict';
 
 (function () {
@@ -173,8 +176,6 @@
   // Player character settings (VC-5)
   // ---------------------------------------------------------------------------
 
-  const PLAYER_STORAGE_KEY = 'vc.player';
-
   const DIFFICULTY_OPTIONS = [
     { id: 'veryeasy', label: 'Very easy (125 %)', short: 'Very easy' },
     { id: 'easy', label: 'Easy (110 %)', short: 'Easy' },
@@ -195,73 +196,6 @@
     const n = Math.round(Number(val));
     if (!Number.isFinite(n)) return fallback;
     return Math.max(min, Math.min(max, n));
-  }
-
-  function defaultPlayer() {
-    return JSON.parse(JSON.stringify(window.VCRank.DEFAULT_PLAYER));
-  }
-
-  /**
-   * Replace unknown or corrupted values with DEFAULT_PLAYER values
-   * @param {object} raw
-   * @returns {object}
-   */
-  function sanitizePlayer(raw) {
-    const player = defaultPlayer();
-    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return player;
-
-    if (raw.skills && typeof raw.skills === 'object' && !Array.isArray(raw.skills)) {
-      for (const s of window.VCRank.SKILLS) {
-        const v = raw.skills[s.id];
-        if (v !== undefined && v !== null && Number.isFinite(Number(v))) {
-          player.skills[s.id] = clampInt(v, 0, 100, 50);
-        }
-      }
-    }
-
-    if (
-      typeof raw.difficulty === 'string' &&
-      Object.prototype.hasOwnProperty.call(window.VCRank.DIFFICULTY, raw.difficulty)
-    ) {
-      player.difficulty = raw.difficulty;
-    }
-
-    if (raw.players !== undefined && raw.players !== null && Number.isFinite(Number(raw.players))) {
-      player.players = clampInt(raw.players, 1, 5, 1);
-    }
-
-    if (raw.quality === 'max') {
-      player.quality = 'max';
-    } else if (raw.quality !== undefined && raw.quality !== null && Number.isFinite(Number(raw.quality))) {
-      player.quality = clampInt(raw.quality, 1, 4, 4);
-    }
-
-    if (Array.isArray(raw.sets)) {
-      const valid = new Set(Object.keys(window.VCRank.SET_BONUSES));
-      player.sets = [...new Set(raw.sets.filter((s) => typeof s === 'string' && valid.has(s)))];
-    }
-
-    player.sneak = raw.sneak === true;
-    player.staggered = raw.staggered === true;
-    player.rankBy = raw.rankBy === 'hit' ? 'hit' : 'dps';
-
-    return player;
-  }
-
-  /**
-   * Load player state from localStorage; firstVisit is true when the key
-   * has never been written (panel starts expanded in that case)
-   */
-  function loadPlayerState() {
-    try {
-      const raw = localStorage.getItem(PLAYER_STORAGE_KEY);
-      if (raw === null) {
-        return { player: defaultPlayer(), firstVisit: true };
-      }
-      return { player: sanitizePlayer(JSON.parse(raw)), firstVisit: false };
-    } catch {
-      return { player: defaultPlayer(), firstVisit: false };
-    }
   }
 
   function savePlayerState(player) {
@@ -289,7 +223,7 @@
     return sum;
   }
 
-  const loadedPlayerState = window.VCRank ? loadPlayerState() : null;
+  const loadedPlayerState = window.VCRank ? readPlayerState() : null;
   const playerState = loadedPlayerState ? loadedPlayerState.player : null;
   const playerFirstVisit = loadedPlayerState ? loadedPlayerState.firstVisit : false;
 
