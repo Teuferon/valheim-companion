@@ -21,12 +21,11 @@ Source: valheim.weirdgloop.org (MediaWiki API). No dates on purpose: the report 
 | mistlands | 2 | 7 |
 | ashlands | 5 | 11 |
 | deep-north | 7 | 13 |
-| (cosmetic / unresolved) | 6 | 6 |
+| (cosmetic / unresolved) | 5 | 5 |
 
 ## Pieces with estimated armor (armorSource: estimate)
 
-- **Crown of Roots** (Crown of Roots, 4 levels): only 1 quality level on wiki (cosmetic item)
-- **Crown of Valheim** (Crown of Valheim, 4 levels): only 1 quality level on wiki (cannot be upgraded)
+None. All pieces with quality upgrades found in quality tables.
 
 ## Materials without source or biome
 
@@ -48,4 +47,5 @@ None.
 
 - Cosmetic items from Hildir / Haldor have no crafting materials or levels (`levels: []`, `biome: null`, `tier: null`).
 - DLC and seasonal armor pieces (Cape of Oden, Hood of Oden, Pointy Hat, Midsummer Crown) have `kind: "special"` and `tag: "DLC"` / `"Halloween"` / `"Midsummer"`, and are shown in their own section.
+- Pieces with no crafting materials whose source is not an NPC (Crown of Roots) have `kind: "special"` and `tag: "Not craftable"`: one quality level, no materials, no Add button in the Armourer.
 - Pieces like Troll Hide Cape, Deer Hide Cape, Wolf Fur Cape, Feather Cape exist both as standalone wiki pages and as set pieces. Standalone duplicates are omitted to preserve set integrity.

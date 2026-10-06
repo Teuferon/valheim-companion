@@ -363,5 +363,60 @@ test('DLC and seasonal armor pieces have kind special and appropriate tag; Crown
   assert.equal(crownValheim.tag, undefined);
 });
 
+test('Crown of Valheim has only quality 1 (empty materials 2-4 are not upgrades)', async () => {
+  const { readFileSync } = await import('node:fs');
+  const armor = JSON.parse(readFileSync('data/armor.json', 'utf8'));
+
+  const crownValheim = armor.find((a) => a.name === 'Crown of Valheim');
+  assert.ok(crownValheim, 'Crown of Valheim exists');
+  const piece = crownValheim.pieces[0];
+  assert.equal(piece.levels.length, 1, 'only quality 1 exists');
+  assert.equal(piece.levels[0].armor, 50);
+  assert.deepEqual(
+    piece.levels[0].materials,
+    [
+      { item: 'bloodgold', amount: 5 },
+      { item: 'crown-jewel', amount: 1 },
+    ],
+  );
+  assert.equal(piece.armorSource, 'infobox');
+});
+
+test('Crown of Roots is special, not craftable, with one material-less level', async () => {
+  const { readFileSync } = await import('node:fs');
+  const armor = JSON.parse(readFileSync('data/armor.json', 'utf8'));
+
+  const crownRoots = armor.find((a) => a.name === 'Crown of Roots');
+  assert.ok(crownRoots, 'Crown of Roots exists');
+  assert.equal(crownRoots.kind, 'special');
+  assert.equal(crownRoots.tag, 'Not craftable');
+  assert.equal(crownRoots.biome, null);
+  const piece = crownRoots.pieces[0];
+  assert.equal(piece.kind, 'special');
+  assert.equal(piece.tag, 'Not craftable');
+  assert.equal(piece.levels.length, 1, 'one level, no upgrades');
+  assert.deepEqual(piece.levels[0].materials, []);
+  assert.equal(piece.armorSource, 'infobox');
+});
+
+test('upgrade levels exist only where the wiki lists materials; no estimated armor', async () => {
+  const { readFileSync } = await import('node:fs');
+  const armor = JSON.parse(readFileSync('data/armor.json', 'utf8'));
+
+  for (const entry of armor) {
+    for (const piece of entry.pieces) {
+      assert.notEqual(piece.armorSource, 'estimate', `${piece.name} must not use estimated armor`);
+      for (const level of piece.levels) {
+        if (level.quality >= 2) {
+          assert.ok(
+            level.materials.length > 0,
+            `${piece.name} quality ${level.quality} must have upgrade materials`,
+          );
+        }
+      }
+    }
+  }
+});
+
 
 
