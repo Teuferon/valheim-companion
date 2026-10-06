@@ -157,3 +157,21 @@ test('deep links route correctly to bestiary and armourer', () => {
   const weapon = index.find(item => item.type === 'weapon' && item.name === 'Abyssal Harpoon');
   assert.equal(weapon.url, '/armourer/#item=abyssal-harpoon');
 });
+
+test('hub message catalog covers all 13 languages with zero missing translations', () => {
+  const catalog = JSON.parse(readFileSync('apps/hub/locales/messages.json', 'utf8'));
+  const languages = JSON.parse(readFileSync('shared/i18n/languages.json', 'utf8')).map(l => l.code);
+  assert.equal(languages.length, 13);
+
+  for (const [source, entries] of Object.entries(catalog)) {
+    const tokens = value => [...value.matchAll(/\{(\w+)\}/g)].map(m => m[1]).sort();
+    for (const lang of languages) {
+      assert.ok(entries[lang]?.trim(), `hub: ${lang}: ${source}`);
+      assert.deepEqual(tokens(entries[lang]), tokens(source), `hub: ${lang}: ${source}`);
+    }
+  }
+
+  const bundle = vm.createContext({});
+  vm.runInNewContext(readFileSync('apps/hub/locales/messages.js', 'utf8'), bundle);
+  assert.equal(JSON.stringify(bundle.VC_MESSAGES), JSON.stringify(catalog));
+});
