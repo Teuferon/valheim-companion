@@ -10631,7 +10631,9 @@ window.VC_DATA = {
       "quantity": 3,
       "tier": 7,
       "biome": "mistlands",
-      "description": "Handle with care."
+      "description": "Handle with care.",
+      "recommendable": false,
+      "note": "Area/DoT damage not listed on the wiki"
     },
     "black-metal-atgeir": {
       "id": "black-metal-atgeir",
@@ -14823,7 +14825,9 @@ window.VC_DATA = {
       "quantity": 5,
       "tier": 4,
       "biome": "swamp",
-      "description": "The stench is unbearable..."
+      "description": "The stench is unbearable...",
+      "recommendable": false,
+      "note": "Area/DoT damage not listed on the wiki"
     },
     "paws-of-the-bear": {
       "id": "paws-of-the-bear",
@@ -15558,7 +15562,9 @@ window.VC_DATA = {
       "quantity": 10,
       "tier": 8,
       "biome": "ashlands",
-      "description": "Everyone knows you can't breathe in the smoke."
+      "description": "Everyone knows you can't breathe in the smoke.",
+      "recommendable": false,
+      "note": "Area/DoT damage not listed on the wiki"
     },
     "spinesnap": {
       "id": "spinesnap",
