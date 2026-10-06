@@ -5,7 +5,7 @@
 //   dist/signs/            <- apps/signs/dist-static/*
 //   dist/damage-calculator/ <- apps/damage-calculator/dist-static/*
 
-import { cpSync, existsSync, mkdirSync, rmSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, readdirSync, rmSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -38,6 +38,16 @@ export function buildSite() {
 
   // 1. apps/hub/* -> dist/
   cpSync(HUB_DIR, DIST_DIR, { recursive: true });
+
+  // Clean up template files from dist/og so only *.png remain
+  const distOgDir = path.join(DIST_DIR, 'og');
+  if (existsSync(distOgDir)) {
+    for (const file of readdirSync(distOgDir)) {
+      if (!file.endsWith('.png')) {
+        rmSync(path.join(distOgDir, file), { recursive: true, force: true });
+      }
+    }
+  }
 
   // 2. apps/bestiary/{index.html, assets, data/data.js, img} -> dist/bestiary/
   const bestiaryDist = path.join(DIST_DIR, 'bestiary');
