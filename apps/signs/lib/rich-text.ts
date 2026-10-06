@@ -328,36 +328,6 @@ export function parseRichText(
   }
   return { runs, warnings: [...warnings], align };
 }
-export const templates = [
-  {
-    name: 'Domov',
-    eyebrow: 'VÍTEJ, VIKINGU',
-    text: 'VÍTEJ DOMA',
-    color: '#EBC789',
-    icon: 'home',
-  },
-  {
-    name: 'Sklad',
-    eyebrow: 'VŠE NA SVÉM MÍSTĚ',
-    text: 'DŘEVO A KÁMEN',
-    color: '#A9C89F',
-    icon: 'box',
-  },
-  {
-    name: 'Portál',
-    eyebrow: 'ZA DALŠÍM DOBRODRUŽSTVÍM',
-    text: '← ČERNÝ LES',
-    color: '#90C9E3',
-    icon: 'compass',
-  },
-  {
-    name: 'Nebezpečí',
-    eyebrow: 'TADY KONČÍ POHODA',
-    text: 'POZOR! TROLL',
-    color: '#EB8D77',
-    icon: 'skull',
-  },
-];
 export const tagGroups = [
   {
     name: 'Základní formátování',

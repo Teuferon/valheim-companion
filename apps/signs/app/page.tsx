@@ -3,7 +3,13 @@
 // This component is shared with a standalone Vite SPA; use portable HTML links and images.
 /* oxlint-disable next/no-html-link-for-pages, next/no-img-element */
 
-import { useMemo, useRef, useState, type CSSProperties } from 'react';
+import {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type CSSProperties,
+} from 'react';
 import {
   ArrowRight,
   AlignLeft,
@@ -20,10 +26,6 @@ import {
   BookOpen,
   RotateCcw,
   ChevronDown,
-  Home,
-  Package,
-  Compass,
-  Skull,
   Sun,
   Moon,
   Info,
@@ -31,6 +33,14 @@ import {
   Wand2,
 } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
+import { ShareSign } from '@/components/share-sign';
+import { decodeSignHash, type SignEditorState } from '@/lib/sign-url';
+import { TemplateCard, TemplateGallery } from '@/components/template-gallery';
+import {
+  signTemplates,
+  templateText,
+  type SignTemplate,
+} from '@/lib/templates';
 import { languages } from '@/lib/i18n';
 import { DirectionProvider } from '@/components/ui/direction';
 import { Slider } from '@/components/ui/slider';
@@ -57,7 +67,6 @@ import {
   compileSign,
   countText,
   parseRichText,
-  templates,
   tagGroups,
   type SignSettings,
 } from '@/lib/rich-text';
@@ -128,7 +137,6 @@ const signSymbols = [
   '⛓',
   '⛔',
 ];
-const templateIcons = [Home, Package, Compass, Skull];
 const sources = [
   [
     'TextMesh Pro · přehled značek',
@@ -189,17 +197,44 @@ export default function Page() {
   const [settings, setSettings] = useState<SignSettings>(defaults);
   const [compact, setCompact] = useState(true);
   const [raw, setRaw] = useState<string | null>(null);
-  const [mode, setMode] = useState('visual');
+  const [mode, setMode] = useState<SignEditorState['mode']>('visual');
   const [advanced, setAdvanced] = useState(false);
   const [day, setDay] = useState(false);
   const [copied, setCopied] = useState(false);
   const [copyError, setCopyError] = useState(false);
-  const [limit, setLimit] = useState('50');
+  const [limit, setLimit] = useState<SignEditorState['limit']>('50');
+  const [linkError, setLinkError] = useState(false);
   const [guideOpen, setGuideOpen] = useState(false);
   const input = useRef<HTMLTextAreaElement>(null),
     output = useRef<HTMLTextAreaElement>(null);
   const selection = useRef({ start: -1, end: -1 });
   const copyTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => {
+    const restore = () => {
+      const hash = window.location.hash;
+      if (!hash.startsWith('#sign=')) {
+        setLinkError(false);
+        return;
+      }
+      const state = decodeSignHash(hash);
+      setLinkError(!state);
+      if (!state) return;
+      setText(state.text);
+      setSettings(state.settings);
+      setRaw(state.raw);
+      setMode(state.mode);
+      setCompact(state.compact);
+      setLimit(state.limit);
+      setAdvanced(state.advanced);
+      setDay(state.day);
+      setCopied(false);
+      setCopyError(false);
+      selection.current = { start: -1, end: -1 };
+    };
+    restore();
+    window.addEventListener('hashchange', restore);
+    return () => window.removeEventListener('hashchange', restore);
+  }, []);
   const code = raw ?? compileSign(text, settings, compact);
   const count = countText(code);
   const preview = useMemo(() => parseRichText(code, t), [code, t]);
@@ -216,6 +251,7 @@ export default function Page() {
     setCopied(false);
   };
   const changeMode = (value: string) => {
+    if (value !== 'visual' && value !== 'code') return;
     if (value === 'code') setRaw(code);
     else if (raw !== null) {
       setText(raw);
@@ -282,6 +318,15 @@ export default function Page() {
       output.current?.select();
       setCopyError(true);
     }
+  };
+  const chooseTemplate = (template: SignTemplate) => {
+    setText(templateText(template, t));
+    setSettings({ ...defaults });
+    setRaw(null);
+    setMode('visual');
+    setCopied(false);
+    setCopyError(false);
+    selection.current = { start: -1, end: -1 };
   };
   const reset = () => {
     setText('');
@@ -441,20 +486,28 @@ export default function Page() {
               01 <span>{t('/ TVOJE CEDULE')}</span>
             </span>
           </section>
+          {linkError && (
+            <p role="alert" className="warning sign-link-warning">
+              {t('This sign link is invalid or uses an unsupported version.')}
+            </p>
+          )}
           <div className="workspace">
             <section className="editor-panel" aria-label={t('Editor cedule')}>
               <div className="panel-title">
                 <h2>
                   <Feather size={19} /> {t('Tvůj nápis')}
                 </h2>
-                <button
-                  className="icon-button"
-                  onClick={reset}
-                  aria-label={t('Vymazat a obnovit nastavení')}
-                  title={t('Nová prázdná cedule')}
-                >
-                  <RotateCcw size={16} />
-                </button>
+                <div className="editor-actions">
+                  <TemplateGallery onChoose={chooseTemplate} />
+                  <button
+                    className="icon-button"
+                    onClick={reset}
+                    aria-label={t('Vymazat a obnovit nastavení')}
+                    title={t('Nová prázdná cedule')}
+                  >
+                    <RotateCcw size={16} />
+                  </button>
+                </div>
               </div>
               <Tabs
                 value={mode}
@@ -867,7 +920,12 @@ export default function Page() {
                     />{' '}
                     {t('Úsporný zápis')}
                   </label>
-                  <Select value={limit} onValueChange={(v) => v && setLimit(v)}>
+                  <Select
+                    value={limit}
+                    onValueChange={(v) =>
+                      (v === '50' || v === '999') && setLimit(v)
+                    }
+                  >
                     <SelectTrigger
                       aria-label={t('Limit cedule')}
                       className="limit-select"
@@ -926,6 +984,18 @@ export default function Page() {
                     )}
                   </p>
                 )}
+                <ShareSign
+                  state={{
+                    text,
+                    settings,
+                    raw,
+                    mode,
+                    compact,
+                    limit,
+                    advanced,
+                    day,
+                  }}
+                />
                 <p className="paste-help">
                   {t('Ve hře otevři ceduli klávesou')} <kbd>E</kbd>{' '}
                   {t('a vlož text pomocí')} <kbd>Ctrl</kbd> + <kbd>V</kbd>.
@@ -952,34 +1022,15 @@ export default function Page() {
               <span>{t('Jedno kliknutí. Pak už po svém.')}</span>
             </div>
             <div className="template-grid">
-              {templates.map((template, i) => {
-                const Icon = templateIcons[i];
-                return (
-                  <button
-                    key={template.name}
-                    className="template-card"
-                    onClick={() => {
-                      setText(t(template.text));
-                      setSettings({ ...defaults, color: template.color });
-                      setRaw(null);
-                      setMode('visual');
-                      setCopied(false);
-                      selection.current = { start: -1, end: -1 };
-                    }}
-                    style={
-                      { '--template-color': template.color } as CSSProperties
-                    }
-                  >
-                    <div className="template-top">
-                      <Icon size={17} />
-                      <span>{t(template.name)}</span>
-                      <ArrowRight size={16} />
-                    </div>
-                    <strong>{t(template.text)}</strong>
-                    <small>{t(template.eyebrow)}</small>
-                  </button>
-                );
-              })}
+              {['welcome', 'wood', 'portal-mistlands', 'warning'].map((id) => (
+                <TemplateCard
+                  key={id}
+                  template={signTemplates.find(
+                    (template) => template.id === id,
+                  )!}
+                  onChoose={chooseTemplate}
+                />
+              ))}
             </div>
           </section>
           <div className="bottom-note">
@@ -1001,9 +1052,22 @@ export default function Page() {
           <span>{t('Vyrobeno pro dlouhé večery v desátém světě.')}</span>
           <span>{t('Neoficiální nástroj pro Valheim')}</span>
           <p className="support">
-            <span><strong>Free, ad-free and made in my spare time.</strong> If it helped your run, you can buy me a coffee.</span>
-            <a href="https://ko-fi.com/N2A528ACE3" target="_blank" rel="noopener noreferrer">
-              <img src="/support/kofi.png" alt="Buy Me a Coffee at ko-fi.com" width={143} height={36} loading="lazy" />
+            <span>
+              <strong>Free, ad-free and made in my spare time.</strong> If it
+              helped your run, you can buy me a coffee.
+            </span>
+            <a
+              href="https://ko-fi.com/N2A528ACE3"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/support/kofi.png"
+                alt="Buy Me a Coffee at ko-fi.com"
+                width={143}
+                height={36}
+                loading="lazy"
+              />
             </a>
           </p>
         </footer>

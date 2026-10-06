@@ -9,7 +9,7 @@ import {
   languages,
   messages,
 } from '../lib/i18n.ts';
-import { parseRichText, templates, tagGroups } from '../lib/rich-text.ts';
+import { parseRichText, tagGroups } from '../lib/rich-text.ts';
 
 void test('browser preferences match region variants in order and fall back to English', () => {
   assert.equal(detectLocale(['pl-PL', 'de-AT', 'en-US']), 'de');
@@ -49,11 +49,17 @@ void test('editor messages, templates and guide labels are included in the catal
     new URL('../app/page.tsx', import.meta.url),
     'utf8',
   );
-  const keys = [...page.matchAll(/\bt\(\s*'([^']+)'/g)].map(
+  const gallery = readFileSync(
+    new URL('../components/template-gallery.tsx', import.meta.url),
+    'utf8',
+  );
+  const share = readFileSync(
+    new URL('../components/share-sign.tsx', import.meta.url),
+    'utf8',
+  );
+  const keys = [...(page + gallery + share).matchAll(/\bt\(\s*'([^']+)'/g)].map(
     (match) => match[1],
   );
-  for (const template of templates)
-    keys.push(template.name, template.text, template.eyebrow);
   for (const group of tagGroups)
     keys.push(group.name, group.note, ...group.tags.map((tag) => tag[1]));
   for (const key of keys)
