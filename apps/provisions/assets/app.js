@@ -520,7 +520,14 @@
     const ids = [...new Set([...(cold ? [11] : fire ? [12] : poison ? [13] : []), ...general])].slice(0, 3);
     for (const id of ids) {
       const tip = data.tips.find(item => item.id === 'tip-' + id);
-      if (tip) list.append(tipRow(t(tip.text), tip.source));
+      if (tip) {
+        const row = tipRow(t(tip.text), tip.source);
+        const comfortLink = tip.link || (['tip-4', 'tip-5'].includes(tip.id) ? '/comfort/' : null);
+        if (comfortLink) {
+          const link = el('a', '', t('Plan your comfort → Comfort Planner')); link.href = comfortLink; row.append(link);
+        }
+        list.append(row);
+      }
     }
     container.append(list);
   }

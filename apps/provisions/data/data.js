@@ -13871,7 +13871,8 @@ window.VPR_DATA = {
         "farming",
         "exploration",
         "magic"
-      ]
+      ],
+      "link": "/comfort/"
     },
     {
       "id": "tip-5",
@@ -13881,7 +13882,8 @@ window.VPR_DATA = {
         "exploration",
         "farming",
         "mining"
-      ]
+      ],
+      "link": "/comfort/"
     },
     {
       "id": "tip-6",

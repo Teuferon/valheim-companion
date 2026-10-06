@@ -14,6 +14,7 @@ import { buildI18n } from './build-i18n.mjs';
 import { buildSearchIndex } from './build-search-index.mjs';
 import { buildProgressData } from './build-progress-data.mjs';
 import { buildProvisionsData } from './build-provisions-data.mjs';
+import { buildComfortData } from './build-comfort-data.mjs';
 
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST_DIR = path.join(REPO_ROOT, 'dist');
@@ -58,6 +59,7 @@ export function buildSite() {
   buildSearchIndex();
   buildProgressData();
   buildProvisionsData();
+  buildComfortData();
 
   console.log('assembling dist/…');
   rmSync(DIST_DIR, { recursive: true, force: true });
@@ -111,6 +113,13 @@ export function buildSite() {
   mkdirSync(provisionsDist, { recursive: true });
   for (const file of ['index.html', 'assets', 'locales', 'data', 'img']) {
     cpSync(path.join(REPO_ROOT, 'apps', 'provisions', file), path.join(provisionsDist, file), { recursive: true });
+  }
+
+  // Comfort Planner uses the shared shopping and Progress cores.
+  const comfortDist = path.join(DIST_DIR, 'comfort');
+  mkdirSync(comfortDist, { recursive: true });
+  for (const file of ['index.html', 'assets', 'locales', 'data', 'img']) {
+    cpSync(path.join(REPO_ROOT, 'apps', 'comfort', file), path.join(comfortDist, file), { recursive: true });
   }
 
   // 4. apps/signs/dist-static/* -> dist/signs/

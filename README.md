@@ -8,6 +8,7 @@ Tools for your Valheim journey:
 - **Damage Calculator**: Pick a target and a weapon, set the upgrade level and see the damage that actually lands — resistances applied, with DPS, time-to-kill and a biome progression slider.
 - **Progress Tracker**: Track visited biomes, defeated bosses and non-trophy boss drops. Locked biomes hide spoilers; share your checklist between devices with a URL. Available in 13 languages.
 - **Provisions**: Plan three different foods and up to four meads for a trip. Compare health, stamina and eitr, calculate servings for 0.5–10 hours, and get a shopping list with ingredient sources, crafting stations and missing Cauldron upgrades. Follows your progress and supports all 13 languages.
+- **Comfort Planner**: Plan furniture for your current progress, compare comfort and Rested duration, pick the best affordable pieces and see upgrades and a shopping list. Seasonal bonuses are optional; all 13 languages are supported.
 - **Sign Editor (Runopis)**: Rich-text editor for Valheim signs with colors, formatting, live preview and copy to game in 13 languages.
 
 ## Project Structure
@@ -18,7 +19,8 @@ Tools for your Valheim journey:
 - `apps/damage-calculator/`: Damage calculator SPA (`/damage-calculator/`)
 - `apps/progress/`: Progress Tracker static application (`/progress/`)
 - `apps/provisions/`: Food, feast and mead planner (`/provisions/`)
-- `shared/shopping/`: Pure shopping-list calculations shared by Smithy and Provisions (`VCShopping`)
+- `apps/comfort/`: Comfort and Rested planner (`/comfort/`)
+- `shared/shopping/`: Pure shopping-list calculations shared by Smithy, Provisions and Comfort Planner (`VCShopping`)
 - `shared/progress/`: Classic-script progress API (`VCProgress`), versioned state in `vc.progress`
 - `apps/signs/`: Runopis sign editor SPA (`/signs/`)
 - `shared/analytics/`: Google Analytics 4 Consent Mode v2 banner and manager
@@ -65,7 +67,7 @@ Locally:
 docker compose up --build -d   # http://localhost:8080
 ```
 
-`deploy/nginx.conf` sets strict security headers and location routing for `/`, `/bestiary/`, `/damage-calculator/`, `/smithy/`, `/progress/`, `/provisions/` and `/signs/`.
+`deploy/nginx.conf` sets strict security headers and location routing for `/`, `/bestiary/`, `/damage-calculator/`, `/smithy/`, `/progress/`, `/provisions/`, `/comfort/` and `/signs/`.
 
 ## Data
 
@@ -85,6 +87,12 @@ Manual fixes go in `data/overrides.json`.
 `vp.loadout` stores a versioned selection of up to three unique food IDs, four unique meads with continuous or on-demand usage, trip hours, the ingredient breakdown preference and the owned Cauldron level. `#l=<base64url>` shares this state; a valid URL selection takes precedence over local storage. Invalid IDs, duplicates and out-of-range values are sanitized.
 
 Food servings are `ceil(hours × 3600 / duration)`. Continuous mead usage uses the greater of duration and cooldown; on-demand meads use a manually entered quantity. Product batches round up to complete recipes, including feast servings and fermentation yields. `VCShopping` calculates ingredients and their proportional recipe breakdown. Station construction and missing Cauldron upgrade materials appear separately from food ingredients. Love Potion has no crafting recipe in the current dataset and appears as a finished item to acquire.
+
+## Comfort Planner
+
+Run `node scripts/wiki/fetch-comfort.mjs` and `node scripts/build-comfort-data.mjs` to regenerate the cached wiki data and browser bundle. `data/report-comfort.md` records missing recipes, source fallbacks and comfort-only overrides. The sheltered non-seasonal maxima are tested against the wiki: Meadows 5, Black Forest/Ocean 13, Swamp 15, Mountain 17, Plains 19, Mistlands 20, Ashlands/Deep North 22.
+
+`vco.build` stores furniture IDs, owned pieces, shelter and seasonal toggles, ingredient breakdown and lit/heated/range conditions. `#b=<base64url>` shares this versioned state; valid URL state takes precedence over storage. `#item=<id>` highlights a catalog piece without revealing locked biomes. The planner reacts to Progress changes immediately and excludes locked or unresolved pieces from totals, recommendations and shopping. Rested duration is seven minutes plus comfort; furniture in the same category does not stack. Station building materials are shown separately from furniture costs.
 
 ## Progress state
 

@@ -189,6 +189,10 @@ body {
     url('bestiary/img/biomes/plains.png');
 }
 
+.card-comfort {
+  background-image: linear-gradient(180deg, rgba(15,18,22,.25), rgba(15,18,22,.95)), url('/bestiary/img/biomes/mountain.png');
+}
+
 .card-featured {
   grid-column: 1 / -1;
   min-height: 0;

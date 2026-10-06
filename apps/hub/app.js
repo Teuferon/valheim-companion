@@ -41,6 +41,7 @@
     { type: 'armor', label: 'Armor' },
     { type: 'material', label: 'Materials' },
     { type: 'food', label: 'Food & Mead' },
+    { type: 'comfort', label: 'Furniture' },
   ];
 
   function initSearch() {

@@ -9,7 +9,7 @@ if (!Number.isInteger(port) || port < 1 || port > 65535) {
   throw new Error('Expected a preview server port between 1 and 65535');
 }
 const origin = `http://localhost:${port}`;
-const pages = ['/', '/bestiary/', '/smithy/', '/signs/', '/damage-calculator/', '/privacy/', '/progress/', '/provisions/'];
+const pages = ['/', '/bestiary/', '/smithy/', '/signs/', '/damage-calculator/', '/privacy/', '/progress/', '/provisions/', '/comfort/'];
 const languages = JSON.parse(readFileSync(new URL('../shared/i18n/languages.json', import.meta.url), 'utf8'));
 const biomes = ['meadows', 'black-forest', 'ocean', 'swamp'];
 const progressBiomes = JSON.parse(readFileSync(new URL('../data/biomes.json', import.meta.url), 'utf8')).map(biome => biome.id);
@@ -50,7 +50,16 @@ try {
           await new Promise(resolve => setTimeout(resolve, 350));
           await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
         })();`);
-        for (const drawerOpen of page === '/progress/' ? [false] : [false, true]) {
+        const states = page === '/progress/' ? ['page'] : page === '/comfort/' ? ['page', 'drawer', 'shopping'] : ['page', 'drawer'];
+        for (const state of states) {
+          const drawerOpen = state === 'drawer';
+          if (state === 'shopping') {
+            await evaluate(cdp, `VCProgressDrawer.close();
+              document.getElementById('seasonal').click();
+              document.getElementById('best-build').click();
+              document.getElementById('open-shopping').click();
+              if (document.getElementById('shopping-panel').getAttribute('aria-modal') !== 'true') throw new Error('Shopping drawer did not open');`);
+          }
           if (drawerOpen) {
             await evaluate(cdp, `return (async () => {
               const trigger = document.querySelector('.vc-progress-trigger');
@@ -90,7 +99,7 @@ try {
           const first = scrollWidth > width && overflowing ? overflowing.tagName.toLowerCase() +
             (overflowing.id ? '#' + overflowing.id : '') +
             [...overflowing.classList].slice(0, 3).map(name => '.' + name).join('') : null;
-          const panel = document.querySelector('.vc-progress-panel');
+          const panel = document.querySelector(${JSON.stringify(state === 'shopping' ? '#shopping-panel' : '.vc-progress-panel')});
           const panelOverflow = panel && !panel.closest('[hidden]') ? panel.scrollWidth > panel.clientWidth : false;
           return { width, scrollWidth, first, panelOverflow };
         `);
@@ -98,7 +107,7 @@ try {
           checked++;
           const failed = result.scrollWidth > 360 || result.panelOverflow;
           if (failed) failures++;
-          console.log(`${failed ? 'FAIL' : 'OK  '} ${code.padEnd(2)} ${(page + (drawerOpen ? " [drawer]" : "")).padEnd(29)} scrollWidth=${result.scrollWidth} first=${result.first ?? 'none'}`);
+          console.log(`${failed ? 'FAIL' : 'OK  '} ${code.padEnd(2)} ${(page + (state === 'page' ? '' : ' [' + state + ']')).padEnd(29)} scrollWidth=${result.scrollWidth} first=${result.first ?? 'none'}`);
         }
       }
     } finally {

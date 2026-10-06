@@ -6,11 +6,11 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const load = name => JSON.parse(readFileSync(path.join(ROOT, 'data', `${name}.json`), 'utf8'));
 export function buildProvisionsData() {
   const biomes = load('biomes').map(b => ({ ...b, image: b.image ? `../bestiary/${b.image}` : null }));
-  const items = Object.fromEntries(load('items').map(item => {
+  const items = Object.fromEntries(load('items').filter(item => !item.comfort).map(item => {
     const image = item.image ? (item.image.startsWith('../provisions/') ? item.image.slice('../provisions/'.length) : `../smithy/${item.image}`) : null;
     return [item.id, { ...item, image: image && existsSync(path.resolve(ROOT, 'apps/provisions', image)) ? image : null }];
   }));
-  const bundle = { biomes, food: load('food'), meads: load('meads'), stations: load('stations'), items, tips: load('provisions-tips') };
+  const bundle = { biomes, food: load('food'), meads: load('meads'), stations: load('stations').filter(station => station.type !== 'comfort'), items, tips: load('provisions-tips') };
   const tipsDestination = path.join(ROOT, 'apps/provisions/data/tips.json');
   writeFileSync(tipsDestination, JSON.stringify(bundle.tips, null, 2) + '\n');
   const imageReferences = new Set([...bundle.food, ...bundle.meads, ...Object.values(items)].map(e => e.image).filter(Boolean));

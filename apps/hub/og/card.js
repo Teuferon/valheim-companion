@@ -3,6 +3,11 @@
 
 (function () {
   const SECTIONS = {
+    comfort: {
+      title: 'COMFORT PLANNER', sub: 'Valheim Companion',
+      desc: 'Build the coziest base you can right now — comfort, Rested time and the full shopping list.',
+      bg: '../../bestiary/img/biomes/mountain.png',
+    },
     hub: {
       title: 'VALHEIM COMPANION',
       sub: '',
