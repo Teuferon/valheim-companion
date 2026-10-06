@@ -441,3 +441,37 @@ test('11. 13 languages catalog has 0 missing translations', () => {
 
   assert.deepEqual(missing, [], 'All messages translated across 13 locales with 0 missing');
 });
+
+test('12. Privacy messages catalog has 0 missing translations across 13 locales', () => {
+  const privacyMessagesPath = path.join(
+    REPO_ROOT,
+    'apps',
+    'hub',
+    'privacy',
+    'locales',
+    'messages.json',
+  );
+  assert.ok(readFileSync(privacyMessagesPath, 'utf8'), 'Privacy messages file exists');
+  const privacyMessages = JSON.parse(readFileSync(privacyMessagesPath, 'utf8'));
+
+  const requiredLocales = LANGUAGES.map((l) => l.code);
+  assert.equal(requiredLocales.length, 13);
+
+  const keys = Object.keys(privacyMessages);
+  assert.ok(keys.length >= 20);
+
+  const missing = [];
+  for (const key of keys) {
+    for (const loc of requiredLocales) {
+      if (!privacyMessages[key]?.[loc]) {
+        missing.push({ key, locale: loc });
+      }
+    }
+  }
+
+  assert.deepEqual(
+    missing,
+    [],
+    'All privacy messages translated across 13 locales with 0 missing',
+  );
+});

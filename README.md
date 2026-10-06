@@ -10,13 +10,15 @@ Tools for your Valheim journey:
 
 ## Project Structure
 
-- `apps/hub/`: Main landing / hub page (`/`)
+- `apps/hub/`: Main landing / hub page (`/`) and Privacy policy (`/privacy/`)
 - `apps/bestiary/`: Bestiary static application (`/bestiary/`)
 - `apps/armourer/`: Armourer static application (`/armourer/`)
 - `apps/damage-calculator/`: Damage calculator SPA (`/damage-calculator/`)
 - `apps/signs/`: Runopis sign editor SPA (`/signs/`)
+- `shared/analytics/`: Google Analytics 4 Consent Mode v2 banner and manager
+- `shared/i18n/`: 13-language internationalization core and language catalogs
 - `data/`: Extracted wiki data (biomes, creatures, weapons, recommendations)
-- `scripts/`: Data fetching, calculation, build and preview scripts
+- `scripts/`: Data fetching, calculation, build, test, and preview scripts
 - `deploy/`: nginx configuration and security headers
 
 ## Building & Preview
@@ -79,6 +81,15 @@ Open Graph preview cards, Twitter cards, PWA icons and web manifests are configu
   3. Commit the changes.
 - **Regenerate preview cards and icons**:
   Run `node scripts/render-og.mjs` (renders 1200×630 cards and icons with headless Chrome).
+
+## Analytics & Privacy
+
+- **Google Analytics 4** (`G-CXQVNCCJKE`) operates with **Consent Mode v2**:
+  - Default state: all storage is denied (`analytics_storage: denied`, `ad_storage: denied`, etc.). Only cookieless anonymous pings are sent.
+  - Analytics cookies are enabled only when the user explicitly grants consent in the banner.
+  - Scripts load only on the production domain (`siteUrl` in `site.config.json`). Never on localhost or preview.
+- **Privacy Policy**: Dedicated page at `/privacy/` with interactive cookie and analytics controls.
+- **Languages**: Consent banner, footer links and `/privacy/` support all 13 languages.
 
 ## Docs
 
