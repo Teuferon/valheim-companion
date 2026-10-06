@@ -112,3 +112,5 @@
   content: none;
   display: none;
 }
+/* Keep page content clear of the fixed desktop tab on the right edge (the tab stays right in RTL too). */
+@media (min-width: 640px) { body { padding-right: 46px; } }

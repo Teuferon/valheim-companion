@@ -1,0 +1,68 @@
+[
+  {
+    "id": "range",
+    "text": "Keep furniture within {count} meters of your character.",
+    "count": 10,
+    "biome": "meadows",
+    "source": "https://valheim.weirdgloop.org/w/Comfort"
+  },
+  {
+    "id": "shelter",
+    "text": "Without shelter, sitting near a fire caps comfort at {count}.",
+    "count": 1,
+    "biome": "meadows",
+    "source": "https://valheim.weirdgloop.org/w/Comfort"
+  },
+  {
+    "id": "hearth",
+    "text": "Hearth gives its extra comfort only within {count} meters.",
+    "count": 8,
+    "biome": "swamp",
+    "source": "https://valheim.weirdgloop.org/w/Comfort"
+  },
+  {
+    "id": "fire",
+    "text": "Fires must be lit to provide comfort.",
+    "biome": "meadows",
+    "source": "https://valheim.weirdgloop.org/w/Comfort"
+  },
+  {
+    "id": "tub",
+    "text": "Hot Tub provides comfort only when fueled and heated.",
+    "biome": "plains",
+    "source": "https://valheim.weirdgloop.org/w/Hot_Tub"
+  },
+  {
+    "id": "categories",
+    "text": "Only the highest comfort piece in each category counts.",
+    "biome": "meadows",
+    "source": "https://valheim.weirdgloop.org/w/Comfort"
+  },
+  {
+    "id": "dungeon",
+    "text": "A Campfire in a dungeon entrance can restore a {count}-minute Rested effect.",
+    "count": 10,
+    "biome": "meadows",
+    "source": "https://valheim.weirdgloop.org/w/Rested"
+  },
+  {
+    "id": "wet",
+    "text": "Wet prevents Resting, except while sitting in a Hot Tub.",
+    "biome": "plains",
+    "source": "https://valheim.weirdgloop.org/w/Resting"
+  },
+  {
+    "id": "rested",
+    "text": "Rested lasts {count} minutes plus your comfort level.",
+    "count": 7,
+    "biome": "meadows",
+    "source": "https://valheim.weirdgloop.org/w/Resting"
+  },
+  {
+    "id": "wait",
+    "text": "Rest for {count} uninterrupted seconds, away from hostile creatures, to gain Rested.",
+    "count": 20,
+    "biome": "meadows",
+    "source": "https://valheim.weirdgloop.org/w/Resting"
+  }
+]

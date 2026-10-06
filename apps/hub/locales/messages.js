@@ -710,5 +710,50 @@ globalThis.VC_MESSAGES = {
     "id": {
       "other": "{count} bos"
     }
+  },
+  "Build the coziest base you can right now — comfort, Rested time and the full shopping list.": {
+    "en": "Build the coziest base you can right now — comfort, Rested time and the full shopping list.",
+    "cs": "Postav si nejútulnější základnu, kterou teď zvládneš — comfort, dobu Rested a úplný nákupní seznam.",
+    "de": "Baue die gemütlichste Basis, die du jetzt bauen kannst — Komfort, Rested-Dauer und die vollständige Einkaufsliste.",
+    "es": "Construye la base más acogedora que puedas ahora — confort, duración de Rested y lista de compras completa.",
+    "fr": "Construisez la base la plus confortable possible — confort, durée de Rested et liste de courses complète.",
+    "pt": "Construa a base mais aconchegante possível agora — conforto, duração de Rested e lista completa de compras.",
+    "zh": "打造当前能建造的最舒适基地——舒适度、Rested 时长和完整购物清单。",
+    "hi": "अभी उपलब्ध चीज़ों से सबसे आरामदायक बेस बनाएं — आराम, Rested अवधि और पूरी खरीदारी सूची।",
+    "ar": "ابنِ أكثر قاعدة راحة يمكنك بناؤها الآن — الراحة ومدة Rested وقائمة المشتريات الكاملة.",
+    "bn": "এখনই সবচেয়ে আরামদায়ক ঘাঁটি বানান — আরাম, Rested-এর সময় ও সম্পূর্ণ কেনাকাটার তালিকা।",
+    "ru": "Постройте самую уютную базу из доступного — комфорт, время Rested и полный список покупок.",
+    "ja": "今作れる最も快適な拠点を計画 — 快適度、Rested の時間、買い物リスト。",
+    "id": "Bangun markas paling nyaman yang bisa dibuat sekarang — kenyamanan, durasi Rested, dan daftar belanja lengkap."
+  },
+  "Open Comfort Planner →": {
+    "en": "Open Comfort Planner →",
+    "cs": "Otevřít Comfort Planner →",
+    "de": "Comfort Planner öffnen →",
+    "es": "Abrir Comfort Planner →",
+    "fr": "Ouvrir Comfort Planner →",
+    "pt": "Abrir Comfort Planner →",
+    "zh": "打开 Comfort Planner →",
+    "hi": "Comfort Planner खोलें →",
+    "ar": "افتح Comfort Planner →",
+    "bn": "Comfort Planner খুলুন →",
+    "ru": "Открыть Comfort Planner →",
+    "ja": "Comfort Planner を開く →",
+    "id": "Buka Comfort Planner →"
+  },
+  "Furniture": {
+    "en": "Furniture",
+    "cs": "Nábytek",
+    "de": "Möbel",
+    "es": "Muebles",
+    "fr": "Mobilier",
+    "pt": "Móveis",
+    "zh": "家具",
+    "hi": "फर्नीचर",
+    "ar": "الأثاث",
+    "bn": "আসবাব",
+    "ru": "Мебель",
+    "ja": "家具",
+    "id": "Perabot"
   }
 };

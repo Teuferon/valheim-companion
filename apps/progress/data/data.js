@@ -236,7 +236,10 @@ window.VP_DATA = {
         {
           "id": "dragon-tear",
           "name": "Dragon Tear",
-          "names": {},
+          "names": {
+            "cs": "Dračí slza",
+            "ru": "Драконья слеза"
+          },
           "image": null,
           "bossId": "moder",
           "drop": "Dragon Tear"

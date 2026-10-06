@@ -13,6 +13,7 @@ const paths = [
   'apps/hub/locales/messages.json', 'apps/hub/privacy/locales/messages.json',
   'apps/bestiary/locales/messages.json', 'apps/smithy/locales/messages.json',
   'apps/progress/locales/messages.json', 'apps/provisions/locales/messages.json',
+  'apps/comfort/locales/messages.json',
   'apps/damage-calculator/src/locales/messages.json', 'apps/signs/lib/locales/messages.json',
   'shared/progress/messages.json', 'shared/analytics/messages.json',
 ];
@@ -76,6 +77,25 @@ function provisions(locale) {
   return context;
 }
 
+function comfort(locale) {
+  const nodes = new Map();
+  class ComfortElement extends Element {
+    replaceChildren(...children) { this.textContent = ''; this.append(...children); }
+  }
+  const values = new Map([['vc.language', locale]]);
+  const context = vm.createContext({ console, URLSearchParams, TextEncoder, TextDecoder, atob, btoa,
+    location: { hash: '' }, localStorage: { getItem: key => values.get(key) ?? null },
+    document: { documentElement: new ComfortElement('html'), createElement: tag => new ComfortElement(tag),
+      getElementById(id) { if (!nodes.has(id)) nodes.set(id, new ComfortElement('div')); return nodes.get(id); } },
+  });
+  context.window = context; context.addEventListener = () => {};
+  for (const path of ['shared/i18n/core.js', 'shared/shopping/core.js', 'shared/progress/core.js', 'apps/comfort/data/data.js', 'apps/comfort/locales/messages.js', 'apps/comfort/assets/planner.js']) vm.runInContext(read(path), context);
+  const source = read('apps/comfort/assets/app.js').replace('  const panel = document',
+    '  globalThis.renderers = { materialList, renderSummary, renderShopping }; return;\n  const panel = document');
+  vm.runInContext(source, context);
+  return { context, nodes };
+}
+
 for (const { code } of languages) {
   test(`production UI renders independent counts (${code}: 0/1/2/5/21)`, () => {
     const calc = calculator(code);
@@ -85,12 +105,24 @@ for (const { code } of languages) {
     const calcCatalog = json('apps/damage-calculator/src/locales/messages.json');
     const formatted = value => new Intl.NumberFormat(code).format(value);
     const provision = provisions(code);
+    const cozy = comfort(code);
     const feast = provision.VPR_DATA.food.find(food => food.isFeast);
     assert.ok(feast);
     const bestiary = staticApp('bestiary', code, { playerCount: 1 });
     const smithy = staticApp('smithy', code);
     for (const [index, count] of counts.entries()) {
       const bossCount = counts[(index + 1) % counts.length];
+      const materialText = cozy.context.renderers.materialList([{ item: 'wood', amount: count }]);
+      clean(materialText, `comfort materials ${code}/${count}`);
+      assert.equal(materialText, cozy.context.VCI18n.tn(cozy.context.VC_MESSAGES, '{count}× {name}', count, { count: formatted(count), name: 'Wood' }));
+      const realCore = cozy.context.VCComfort;
+      cozy.context.VCComfort = { ...realCore, comfortLevel: () => ({ total: count, parts: [] }) };
+      cozy.context.renderers.renderSummary();
+      const comfortSummary = cozy.nodes.get('summary').textContent;
+      clean(comfortSummary, `comfort summary ${code}/${count}`);
+      assert.ok(comfortSummary.includes(cozy.context.VCI18n.tn(cozy.context.VC_MESSAGES, 'Comfort {count} / {max}', count, { count: formatted(count), max: formatted(count) })));
+      assert.ok(comfortSummary.includes(cozy.context.VCI18n.tn(cozy.context.VC_MESSAGES, 'Rested {count} min', count + 7, { count: formatted(count + 7) })));
+      cozy.context.VCComfort = realCore;
       // Synthetic counts exercise plural boundaries beyond the game's player/biome limits.
       const progress = fixture();
       progress.context.VCI18n.setPreference(code);

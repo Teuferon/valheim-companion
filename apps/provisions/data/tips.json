@@ -43,7 +43,8 @@
       "farming",
       "exploration",
       "magic"
-    ]
+    ],
+    "link": "/comfort/"
   },
   {
     "id": "tip-5",
@@ -53,7 +54,8 @@
       "exploration",
       "farming",
       "mining"
-    ]
+    ],
+    "link": "/comfort/"
   },
   {
     "id": "tip-6",

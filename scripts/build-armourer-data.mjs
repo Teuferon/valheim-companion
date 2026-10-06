@@ -36,7 +36,7 @@ export function buildArmourerBundle() {
     image: b.image ? `../bestiary/${b.image}` : null,
   }));
   const armor = filterSmithyArmor(JSON.parse(readFileSync(armorPath, 'utf8')));
-  const itemsList = JSON.parse(readFileSync(itemsPath, 'utf8'));
+  const itemsList = JSON.parse(readFileSync(itemsPath, 'utf8')).filter(item => !item.comfort);
 
   const items = {};
   for (const item of itemsList) {
@@ -44,7 +44,7 @@ export function buildArmourerBundle() {
   }
 
   const stationsPath = path.join(DATA_DIR, 'stations.json');
-  const stations = existsSync(stationsPath) ? JSON.parse(readFileSync(stationsPath, 'utf8')) : [];
+  const stations = existsSync(stationsPath) ? JSON.parse(readFileSync(stationsPath, 'utf8')).filter(station => station.type !== 'comfort') : [];
 
   const weaponsPath = path.join(DATA_DIR, 'weapons.json');
   const weapons = existsSync(weaponsPath)

@@ -1,12 +1,38 @@
 {
   "creatures": {
-    "frysling": { "biomes": ["deep-north"], "kind": "hostile", "reason": "No location on wiki; drops Frostcore (Deep North) and throws frost snowballs." },
-    "chicken": { "biomes": ["plains"], "kind": "passive", "reason": "Hatches from eggs, which come from Plains-tier progression (Fuling villages / Haldor after Yagluth)." },
-    "hen": { "biomes": ["plains"], "kind": "passive", "reason": "Grown chicken, see chicken." }
+    "frysling": {
+      "biomes": [
+        "deep-north"
+      ],
+      "kind": "hostile",
+      "reason": "No location on wiki; drops Frostcore (Deep North) and throws frost snowballs."
+    },
+    "chicken": {
+      "biomes": [
+        "plains"
+      ],
+      "kind": "passive",
+      "reason": "Hatches from eggs, which come from Plains-tier progression (Fuling villages / Haldor after Yagluth)."
+    },
+    "hen": {
+      "biomes": [
+        "plains"
+      ],
+      "kind": "passive",
+      "reason": "Grown chicken, see chicken."
+    }
   },
   "materials": {},
   "exclude": {
-    "creatures": ["fish", "hive", "the-hive", "riktig-fuling", "spirit-caller", "staff-of-the-wild", "frost-blob"],
+    "creatures": [
+      "fish",
+      "hive",
+      "the-hive",
+      "riktig-fuling",
+      "spirit-caller",
+      "staff-of-the-wild",
+      "frost-blob"
+    ],
     "weapons": []
   },
   "_notes": {
@@ -14,5 +40,49 @@
     "hive / the-hive / riktig-fuling": "Console-only creatures (wiki: 'can only be spawned via Console Commands').",
     "spirit-caller / staff-of-the-wild": "Weapons whose summons have creature infoboxes.",
     "frost-blob": "Only spawned by the player's Blob Bomb: Frost, not a natural creature."
+  },
+  "comfort": {
+    "materials": {
+      "Coal": {
+        "biome": "meadows",
+        "tier": 1,
+        "reason": "Coal wiki: overcook any meat at a Cooking Station. Existing Smithy Coal is Swamp-tier from Surtling drops; keep that record intact and use the early acquisition route for Comfort."
+      },
+      "Barber Kit": {
+        "biome": "meadows",
+        "tier": 1,
+        "reason": "Barber Kit and Hildir wiki: always available from Hildir in Meadows. Barber Station still needs Black Forest Finewood and Bronze Nails."
+      },
+      "Iron Pit": {
+        "biome": "meadows",
+        "tier": 1,
+        "reason": "Iron Pit and Hildir wiki: always available from Hildir in Meadows."
+      },
+      "Charcoal Resin": {
+        "biome": "ashlands",
+        "tier": 8,
+        "reason": "Charcoal Resin drops from Scorched Tree; its wiki lists Ashlands."
+      },
+      "Pot Shard": {
+        "biome": "ashlands",
+        "tier": 8,
+        "reason": "Pot Shard wiki: Ancient Pots inside Putrid Holes or Charred Ruins in Ashlands."
+      },
+      "Fir Cone": {
+        "biome": "black-forest",
+        "tier": 2,
+        "reason": "Comfort wiki maximum section: both Maypole and Yule Tree require visiting Black Forest. Fir Cone lists growing biomes, not the earliest natural acquisition; use the early Fir route."
+      },
+      "Pine Cone": {
+        "biome": "black-forest",
+        "tier": 2,
+        "reason": "Pine wiki: naturally found in Black Forest. Growing biomes in the seed infobox do not determine acquisition tier."
+      },
+      "Turnip": {
+        "biome": "swamp",
+        "tier": 4,
+        "reason": "Turnip wiki: seeds first found in Swamp. Preserve the existing Provisions item record and use its actual acquisition tier for Jack-O-Turnip."
+      }
+    }
   }
 }

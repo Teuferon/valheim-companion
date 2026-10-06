@@ -26,6 +26,11 @@
 !apps/provisions/locales/messages.js
 !apps/provisions/data/data.js
 !apps/provisions/img/
+!apps/comfort/index.html
+!apps/comfort/assets/
+!apps/comfort/locales/messages.js
+!apps/comfort/data/data.js
+!apps/comfort/img/
 !apps/signs/
 !apps/damage-calculator/
 apps/signs/node_modules/

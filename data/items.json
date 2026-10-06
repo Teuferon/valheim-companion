@@ -186,6 +186,86 @@
     }
   },
   {
+    "id": "asksvin-neck",
+    "name": "Asksvin Neck",
+    "comfort": true,
+    "names": {
+      "ru": "Шея пеплозавра"
+    },
+    "image": "../comfort/img/items/asksvin-neck.png",
+    "biome": "ashlands",
+    "tier": 8,
+    "sources": [
+      {
+        "text": "Found in the Ashlands",
+        "kind": "other"
+      }
+    ],
+    "recipe": null,
+    "teleportable": true,
+    "wiki": "https://valheim.weirdgloop.org/w/Asksvin_Neck"
+  },
+  {
+    "id": "asksvin-pelvis",
+    "name": "Asksvin Pelvis",
+    "comfort": true,
+    "names": {
+      "ru": "Таз пеплозавра"
+    },
+    "image": "../comfort/img/items/asksvin-pelvis.png",
+    "biome": "ashlands",
+    "tier": 8,
+    "sources": [
+      {
+        "text": "Found in the Ashlands",
+        "kind": "other"
+      }
+    ],
+    "recipe": null,
+    "teleportable": true,
+    "wiki": "https://valheim.weirdgloop.org/w/Asksvin_Pelvis"
+  },
+  {
+    "id": "asksvin-ribcage",
+    "name": "Asksvin Ribcage",
+    "comfort": true,
+    "names": {
+      "ru": "Ребра пеплозавра"
+    },
+    "image": "../comfort/img/items/asksvin-ribcage.png",
+    "biome": "ashlands",
+    "tier": 8,
+    "sources": [
+      {
+        "text": "Found in the Ashlands",
+        "kind": "other"
+      }
+    ],
+    "recipe": null,
+    "teleportable": true,
+    "wiki": "https://valheim.weirdgloop.org/w/Asksvin_Ribcage"
+  },
+  {
+    "id": "asksvin-skull",
+    "name": "Asksvin Skull",
+    "comfort": true,
+    "names": {
+      "ru": "Череп пеплозавра"
+    },
+    "image": "../comfort/img/items/asksvin-skull.png",
+    "biome": "ashlands",
+    "tier": 8,
+    "sources": [
+      {
+        "text": "Found in the Ashlands",
+        "kind": "other"
+      }
+    ],
+    "recipe": null,
+    "teleportable": true,
+    "wiki": "https://valheim.weirdgloop.org/w/Asksvin_Skull"
+  },
+  {
     "id": "asksvin-tail",
     "name": "Asksvin Tail",
     "provisions": true,
@@ -212,6 +292,26 @@
       "cs": "Asksvinův ocas",
       "ru": "Хвост пеплозавра"
     }
+  },
+  {
+    "id": "barber-kit",
+    "name": "Barber Kit",
+    "comfort": true,
+    "names": {
+      "ru": "Набор цирюльника"
+    },
+    "image": "../comfort/img/items/barber-kit.png",
+    "biome": "meadows",
+    "tier": 1,
+    "sources": [
+      {
+        "text": "Hildir",
+        "kind": "npc"
+      }
+    ],
+    "recipe": null,
+    "teleportable": true,
+    "wiki": "https://valheim.weirdgloop.org/w/Barber_Kit"
   },
   {
     "id": "barley",
@@ -467,6 +567,31 @@
     }
   },
   {
+    "id": "black-core",
+    "name": "Black Core",
+    "comfort": true,
+    "names": {
+      "cs": "Černé Jádro",
+      "ru": "Черное ядро"
+    },
+    "image": "../comfort/img/items/black-core.png",
+    "biome": "mistlands",
+    "tier": 7,
+    "sources": [
+      {
+        "text": "Dungeons",
+        "kind": "other"
+      },
+      {
+        "text": "random chests",
+        "kind": "location"
+      }
+    ],
+    "recipe": null,
+    "teleportable": true,
+    "wiki": "https://valheim.weirdgloop.org/w/Black_Core"
+  },
+  {
     "id": "black-marble",
     "name": "Black Marble",
     "provisions": true,
@@ -656,6 +781,29 @@
     "names": {
       "ru": "Кровавый камень"
     }
+  },
+  {
+    "id": "blue-jute",
+    "name": "Blue Jute",
+    "comfort": true,
+    "names": {
+      "cs": "Modrá juta",
+      "de": "Blaue Jute",
+      "fr": "Jute bleue",
+      "ru": "Голубой джут"
+    },
+    "image": "../comfort/img/items/blue-jute.png",
+    "biome": "mistlands",
+    "tier": 7,
+    "sources": [
+      {
+        "text": "Mistlands",
+        "kind": "other"
+      }
+    ],
+    "recipe": null,
+    "teleportable": true,
+    "wiki": "https://valheim.weirdgloop.org/w/Blue_Jute"
   },
   {
     "id": "blueberries",
@@ -887,6 +1035,37 @@
       "fr": "Bronze",
       "ru": "Бронза"
     }
+  },
+  {
+    "id": "bronze-nails",
+    "name": "Bronze Nails",
+    "comfort": true,
+    "names": {
+      "cs": "Bronzové hřebíky",
+      "fr": "Clous en bronze",
+      "ru": "Бронзовые гвозди"
+    },
+    "image": "../comfort/img/items/bronze-nails.png",
+    "biome": "black-forest",
+    "tier": 2,
+    "sources": [
+      {
+        "text": "Forge",
+        "kind": "station"
+      }
+    ],
+    "recipe": {
+      "station": "Forge",
+      "materials": [
+        {
+          "item": "bronze",
+          "amount": 1
+        }
+      ],
+      "yields": 20
+    },
+    "teleportable": true,
+    "wiki": "https://valheim.weirdgloop.org/w/Bronze_Nails"
   },
   {
     "id": "carapace",
@@ -1921,6 +2100,29 @@
     }
   },
   {
+    "id": "charcoal-resin",
+    "name": "Charcoal Resin",
+    "comfort": true,
+    "names": {
+      "cs": "Uhelná pryskyřice",
+      "de": "Holzkohleharz",
+      "fr": "Résine de charbon",
+      "ru": "Угольная смола"
+    },
+    "image": "../comfort/img/items/charcoal-resin.png",
+    "biome": "ashlands",
+    "tier": 8,
+    "sources": [
+      {
+        "text": "Scorched Trees",
+        "kind": "other"
+      }
+    ],
+    "recipe": null,
+    "teleportable": true,
+    "wiki": "https://valheim.weirdgloop.org/w/Charcoal_Resin"
+  },
+  {
     "id": "charred-bone",
     "name": "Charred Bone",
     "image": "img/items/charred-bone.png",
@@ -1965,6 +2167,26 @@
     "names": {
       "ru": "Обугленная кость"
     }
+  },
+  {
+    "id": "charred-skull",
+    "name": "Charred Skull",
+    "comfort": true,
+    "names": {
+      "ru": "Обугленный череп"
+    },
+    "image": "../comfort/img/items/charred-skull.png",
+    "biome": "ashlands",
+    "tier": 8,
+    "sources": [
+      {
+        "text": "Ashlands",
+        "kind": "other"
+      }
+    ],
+    "recipe": null,
+    "teleportable": true,
+    "wiki": "https://valheim.weirdgloop.org/w/Charred_Skull"
   },
   {
     "id": "chicken-meat",
@@ -2666,6 +2888,31 @@
     }
   },
   {
+    "id": "dragon-tear",
+    "name": "Dragon Tear",
+    "comfort": true,
+    "names": {
+      "cs": "Dračí slza",
+      "ru": "Драконья слеза"
+    },
+    "image": "../comfort/img/items/dragon-tear.png",
+    "biome": "mountain",
+    "tier": 5,
+    "sources": [
+      {
+        "text": "Moder",
+        "kind": "creature",
+        "creatureId": "moder",
+        "biomes": [
+          "mountain"
+        ]
+      }
+    ],
+    "recipe": null,
+    "teleportable": true,
+    "wiki": "https://valheim.weirdgloop.org/w/Dragon_Tear"
+  },
+  {
     "id": "drake-trophy",
     "name": "Drake Trophy",
     "image": "img/items/drake-trophy.png",
@@ -2710,6 +2957,48 @@
       "cs": "Trofeje",
       "ru": "Категория:Трофеи"
     }
+  },
+  {
+    "id": "dvergr-lantern",
+    "name": "Dvergr Lantern",
+    "comfort": true,
+    "names": {
+      "cs": "Dvergská lucerna",
+      "ru": "Светильник двергов"
+    },
+    "image": "../comfort/img/items/dvergr-lantern.png",
+    "biome": "mountain",
+    "tier": 5,
+    "sources": [
+      {
+        "text": "Black Forge",
+        "kind": "station"
+      },
+      {
+        "text": "Dvergr Buildings",
+        "kind": "other"
+      }
+    ],
+    "recipe": {
+      "station": "Black Forge, Dvergr Buildings",
+      "materials": [
+        {
+          "item": "bronze",
+          "amount": 2
+        },
+        {
+          "item": "surtling-core",
+          "amount": 1
+        },
+        {
+          "item": "crystal",
+          "amount": 1
+        }
+      ],
+      "yields": 1
+    },
+    "teleportable": true,
+    "wiki": "https://valheim.weirdgloop.org/w/Dvergr_Lantern"
   },
   {
     "id": "dyrnwyn-blade-fragment",
@@ -3080,6 +3369,29 @@
     }
   },
   {
+    "id": "fir-cone",
+    "name": "Fir Cone",
+    "comfort": true,
+    "names": {
+      "cs": "Šiška z jedle",
+      "de": "Tannenzapfen",
+      "fr": "Cône de sapin",
+      "ru": "Пихтовая шишка"
+    },
+    "image": "../comfort/img/items/fir-cone.png",
+    "biome": "plains",
+    "tier": 6,
+    "sources": [
+      {
+        "text": "Fir trees",
+        "kind": "other"
+      }
+    ],
+    "recipe": null,
+    "teleportable": true,
+    "wiki": "https://valheim.weirdgloop.org/w/Fir_Cone"
+  },
+  {
     "id": "flametal",
     "name": "Flametal",
     "image": "img/items/flametal.png",
@@ -3364,6 +3676,26 @@
     "names": {
       "ru": "Урожай лугового травника"
     }
+  },
+  {
+    "id": "grausten",
+    "name": "Grausten",
+    "comfort": true,
+    "names": {
+      "ru": "Серокамень"
+    },
+    "image": "../comfort/img/items/grausten.png",
+    "biome": "ashlands",
+    "tier": 8,
+    "sources": [
+      {
+        "text": "Building ruins and rock formations in Ashlands",
+        "kind": "location"
+      }
+    ],
+    "recipe": null,
+    "teleportable": true,
+    "wiki": "https://valheim.weirdgloop.org/w/Grausten"
   },
   {
     "id": "greydwarf-eye",
@@ -3668,6 +4000,57 @@
       "fr": "Fer",
       "ru": "Железо"
     }
+  },
+  {
+    "id": "iron-nails",
+    "name": "Iron Nails",
+    "comfort": true,
+    "names": {
+      "cs": "Železné hřebíky",
+      "fr": "Clous en fer",
+      "ru": "Железные гвозди"
+    },
+    "image": "../comfort/img/items/iron-nails.png",
+    "biome": "swamp",
+    "tier": 4,
+    "sources": [
+      {
+        "text": "Forge",
+        "kind": "station"
+      }
+    ],
+    "recipe": {
+      "station": "Forge",
+      "materials": [
+        {
+          "item": "iron",
+          "amount": 1
+        }
+      ],
+      "yields": 10
+    },
+    "teleportable": true,
+    "wiki": "https://valheim.weirdgloop.org/w/Iron_Nails"
+  },
+  {
+    "id": "iron-pit",
+    "name": "Iron Pit",
+    "comfort": true,
+    "names": {
+      "ru": "Железная чаша"
+    },
+    "image": "../comfort/img/items/iron-pit.png",
+    "biome": "meadows",
+    "tier": 1,
+    "sources": [
+      {
+        "text": "Hildir",
+        "kind": "npc"
+      }
+    ],
+    "recipe": null,
+    "teleportable": false,
+    "wiki": "https://valheim.weirdgloop.org/w/Iron_Pit"
   },
   {
     "id": "jade",
@@ -6544,6 +6927,49 @@
     }
   },
   {
+    "id": "pine-cone",
+    "name": "Pine Cone",
+    "comfort": true,
+    "names": {
+      "cs": "Šiška z borovice",
+      "de": "Kieferzapfen",
+      "fr": "Cône de pin",
+      "ru": "Сосновая шишка"
+    },
+    "image": "../comfort/img/items/pine-cone.png",
+    "biome": "plains",
+    "tier": 6,
+    "sources": [
+      {
+        "text": "Pine",
+        "kind": "other"
+      }
+    ],
+    "recipe": null,
+    "teleportable": true,
+    "wiki": "https://valheim.weirdgloop.org/w/Pine_Cone"
+  },
+  {
+    "id": "pot-shard",
+    "name": "Pot Shard",
+    "comfort": true,
+    "names": {
+      "ru": "Осколок горшка"
+    },
+    "image": "../comfort/img/items/pot-shard.png",
+    "biome": "ashlands",
+    "tier": 8,
+    "sources": [
+      {
+        "text": "Ancient Pot",
+        "kind": "other"
+      }
+    ],
+    "recipe": null,
+    "teleportable": true,
+    "wiki": "https://valheim.weirdgloop.org/w/Pot_Shard"
+  },
+  {
     "id": "poteitr",
     "name": "Poteitr",
     "provisions": true,
@@ -6764,6 +7190,33 @@
     },
     "wiki": "https://valheim.weirdgloop.org/w/Raw_Kale_Chips",
     "names": {}
+  },
+  {
+    "id": "red-jute",
+    "name": "Red Jute",
+    "comfort": true,
+    "names": {
+      "cs": "Červená juta",
+      "de": "Rote Jute",
+      "fr": "Jute rouge",
+      "ru": "Красный джут"
+    },
+    "image": "../comfort/img/items/red-jute.png",
+    "biome": "mountain",
+    "tier": 5,
+    "sources": [
+      {
+        "text": "Cultist",
+        "kind": "creature",
+        "creatureId": "cultist",
+        "biomes": [
+          "mountain"
+        ]
+      }
+    ],
+    "recipe": null,
+    "teleportable": true,
+    "wiki": "https://valheim.weirdgloop.org/w/Red_Jute"
   },
   {
     "id": "refined-eitr",
@@ -7480,6 +7933,37 @@
     }
   },
   {
+    "id": "snowball",
+    "name": "Snowball",
+    "comfort": true,
+    "names": {},
+    "image": "../comfort/img/items/snowball.png",
+    "biome": "deep-north",
+    "tier": 9,
+    "sources": [
+      {
+        "text": "Crafted by hand",
+        "kind": "other"
+      },
+      {
+        "text": "Deep North.",
+        "kind": "other"
+      }
+    ],
+    "recipe": {
+      "station": "Crafted by hand, Deep North.",
+      "materials": [
+        {
+          "item": "ice",
+          "amount": 5
+        }
+      ],
+      "yields": 10
+    },
+    "teleportable": true,
+    "wiki": "https://valheim.weirdgloop.org/w/Snowball"
+  },
+  {
     "id": "soft-tissue",
     "name": "Soft Tissue",
     "image": "img/items/soft-tissue.png",
@@ -7648,6 +8132,31 @@
       "cs": "Jádro Surtlinga",
       "ru": "Ядро суртлинга"
     }
+  },
+  {
+    "id": "tar",
+    "name": "Tar",
+    "comfort": true,
+    "names": {
+      "cs": "Dehet",
+      "ru": "Деготь"
+    },
+    "image": "../comfort/img/items/tar.png",
+    "biome": "plains",
+    "tier": 6,
+    "sources": [
+      {
+        "text": "Growth",
+        "kind": "creature",
+        "creatureId": "growth",
+        "biomes": [
+          "plains"
+        ]
+      }
+    ],
+    "recipe": null,
+    "teleportable": true,
+    "wiki": "https://valheim.weirdgloop.org/w/Tar"
   },
   {
     "id": "tetra",

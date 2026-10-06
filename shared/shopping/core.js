@@ -66,7 +66,8 @@
       steps.set(key, step);
       const path = new Set(visited);
       path.add(id);
-      const batches = amount / positive(recipe.yields);
+      // Recipes are crafted in whole batches: 15 Iron Nails (10 per craft) need 2 Iron, not 1.5.
+      const batches = Math.ceil(amount / positive(recipe.yields) - 1e-9);
       for (const material of recipe.materials) expand(material.item, material.amount * batches, material.fuel, level + 1, path);
     }
     for (const material of materials || []) {

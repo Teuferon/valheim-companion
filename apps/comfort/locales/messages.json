@@ -1,0 +1,2211 @@
+{
+  "← Valheim Companion": {
+    "en": "← Valheim Companion",
+    "cs": "← Valheim Companion",
+    "de": "← Valheim Companion",
+    "es": "← Valheim Companion",
+    "fr": "← Valheim Companion",
+    "pt": "← Valheim Companion",
+    "zh": "← Valheim Companion",
+    "hi": "← Valheim Companion",
+    "ar": "← Valheim Companion",
+    "bn": "← Valheim Companion",
+    "ru": "← Valheim Companion",
+    "ja": "← Valheim Companion",
+    "id": "← Valheim Companion"
+  },
+  "Catalog": {
+    "en": "Catalog",
+    "cs": "Katalog",
+    "de": "Katalog",
+    "es": "Catálogo",
+    "fr": "Catalogue",
+    "pt": "Catálogo",
+    "zh": "目录",
+    "hi": "कैटलॉग",
+    "ar": "الفهرس",
+    "bn": "ক্যাটালগ",
+    "ru": "Каталог",
+    "ja": "カタログ",
+    "id": "Katalog"
+  },
+  "Reveal": {
+    "en": "Reveal",
+    "cs": "Odhalit",
+    "de": "Enthüllen",
+    "es": "Revelar",
+    "fr": "Révéler",
+    "pt": "Revelar",
+    "zh": "揭示",
+    "hi": "दिखाएँ",
+    "ar": "كشف",
+    "bn": "প্রকাশ করুন",
+    "ru": "Показать",
+    "ja": "表示",
+    "id": "Ungkap"
+  },
+  "Language": {
+    "en": "Language",
+    "cs": "Jazyk",
+    "de": "Sprache",
+    "es": "Idioma",
+    "fr": "Langue",
+    "pt": "Idioma",
+    "zh": "语言",
+    "hi": "भाषा",
+    "ar": "اللغة",
+    "bn": "ভাষা",
+    "ru": "Язык",
+    "ja": "言語",
+    "id": "Bahasa"
+  },
+  "Auto (browser)": {
+    "en": "Auto (browser)",
+    "cs": "Automaticky (prohlížeč)",
+    "de": "Automatisch (Browser)",
+    "es": "Automático (navegador)",
+    "fr": "Auto (navigateur)",
+    "pt": "Automático (navegador)",
+    "zh": "自动（浏览器）",
+    "hi": "स्वचालित (ब्राउज़र)",
+    "ar": "تلقائي (المتصفح)",
+    "bn": "স্বয়ংক্রিয় (ব্রাউজার)",
+    "ru": "Авто (браузер)",
+    "ja": "自動（ブラウザー）",
+    "id": "Otomatis (browser)"
+  },
+  "Fan project, not affiliated with Iron Gate. Data: Valheim Wiki (CC BY-SA 4.0).": {
+    "en": "Fan project, not affiliated with Iron Gate. Data: Valheim Wiki (CC BY-SA 4.0).",
+    "cs": "Fanouškovský projekt, není spojen s Iron Gate. Data: Valheim Wiki (CC BY-SA 4.0).",
+    "de": "Fanprojekt, nicht mit Iron Gate verbunden. Daten: Valheim Wiki (CC BY-SA 4.0).",
+    "es": "Proyecto de fans, no afiliado a Iron Gate. Datos: Valheim Wiki (CC BY-SA 4.0).",
+    "fr": "Projet de fans, non affilié à Iron Gate. Données : Valheim Wiki (CC BY-SA 4.0).",
+    "pt": "Projeto de fãs, não afiliado à Iron Gate. Dados: Valheim Wiki (CC BY-SA 4.0).",
+    "zh": "粉丝自制项目，与 Iron Gate 无关。数据来源：Valheim Wiki (CC BY-SA 4.0)。",
+    "hi": "प्रशंसक परियोजना, Iron Gate से संबद्ध नहीं। डेटा: Valheim Wiki (CC BY-SA 4.0)।",
+    "ar": "مشروع من المعجبين، غير تابع لـ Iron Gate. البيانات: Valheim Wiki (CC BY-SA 4.0).",
+    "bn": "ভক্তদের তৈরি প্রকল্প, Iron Gate এর সাথে অনুমোদিত নয়। তথ্য: Valheim Wiki (CC BY-SA 4.0)।",
+    "ru": "Фанатский проект, не связанный с Iron Gate. Данные: Valheim Wiki (CC BY-SA 4.0).",
+    "ja": "ファンプロジェクトであり、Iron Gate社とは提携していません。データ提供: Valheim Wiki (CC BY-SA 4.0)。",
+    "id": "Proyek penggemar, tidak berafiliasi dengan Iron Gate. Data: Valheim Wiki (CC BY-SA 4.0)."
+  },
+  "Free, ad-free and made in my spare time.": {
+    "en": "Free, ad-free and made in my spare time.",
+    "cs": "Zdarma, bez reklam a vytvořeno ve volném čase.",
+    "de": "Kostenlos, werbefrei und in meiner Freizeit erstellt.",
+    "es": "Gratis, sin publicidad y hecho en mi tiempo libre.",
+    "fr": "Gratuit, sans publicité et créé sur mon temps libre.",
+    "pt": "Gratuito, sem anúncios e feito no meu tempo livre.",
+    "zh": "免费无广告，利用业余时间开发。",
+    "hi": "निःशुल्क, विज्ञापन-मुक्त और मेरे खाली समय में निर्मित।",
+    "ar": "مجاني وبدون إعلانات ومصنوع في وقت فراغي.",
+    "bn": "সম্পূর্ণ বিনামূল্যে, বিজ্ঞাপনহীন এবং অবসরে তৈরি।",
+    "ru": "Бесплатно, без рекламы и создано в свободное время.",
+    "ja": "完全無料・広告なし・個人の趣味で制作。",
+    "id": "Gratis, bebas iklan, dan dibuat di waktu luang saya."
+  },
+  "If it helped your run, you can buy me a coffee.": {
+    "en": "If it helped your run, you can buy me a coffee.",
+    "cs": "Pokud ti web pomohl při hraní, můžeš mi koupit kávu.",
+    "de": "Wenn es dir bei deinem Durchlauf geholfen hat, kannst du mir einen Kaffee ausgeben.",
+    "es": "Si te ha servido en tu partida, puedes invitarme a un café.",
+    "fr": "Si cela vous a été utile dans votre partie, vous pouvez m'offrir un café.",
+    "pt": "Se ajudou na sua jornada, você pode me pagar um café.",
+    "zh": "如果对你的游戏旅程有所帮助，不妨请我喝杯咖啡。",
+    "hi": "यदि इससे आपके खेल में मदद मिली, तो आप मुझे एक कॉफ़ी पिला सकते हैं।",
+    "ar": "إذا ساعدك في رحلتك، يمكنك دعوتي لتناول القهوة.",
+    "bn": "যদি এটি আপনার খেলায় সাহায্য করে থাকে, তবে আমাকে একটি কফি কিনে দিতে পারেন।",
+    "ru": "Если проект помог в прохождении, можете угостить меня кофе.",
+    "ja": "冒険の役に立ったら、コーヒーを奢っていただけると嬉しいです。",
+    "id": "Jika ini membantu permainan Anda, Anda bisa mentraktir saya kopi."
+  },
+  "Buy Me a Coffee at ko-fi.com": {
+    "en": "Buy Me a Coffee at ko-fi.com",
+    "cs": "Koupit mi kávu na ko-fi.com",
+    "de": "Kauf mir einen Kaffee auf ko-fi.com",
+    "es": "Invítame a un café en ko-fi.com",
+    "fr": "Offrez-moi un café sur ko-fi.com",
+    "pt": "Pague-me um café no ko-fi.com",
+    "zh": "在 ko-fi.com 上请我喝杯咖啡",
+    "hi": "ko-fi.com पर मुझे कॉफ़ी पिलाएँ",
+    "ar": "اشترِ لي قهوة عبر ko-fi.com",
+    "bn": "ko-fi.com-এ আমাকে একটি কফি দিন",
+    "ru": "Купить мне кофе на ko-fi.com",
+    "ja": "ko-fi.com でコーヒーを支援する",
+    "id": "Beli saya kopi di ko-fi.com"
+  },
+  "Close": {
+    "en": "Close",
+    "cs": "Zavřít",
+    "de": "Schließen",
+    "es": "Cerrar",
+    "fr": "Fermer",
+    "pt": "Fechar",
+    "zh": "关闭",
+    "hi": "बंद करें",
+    "ar": "إغلاق",
+    "bn": "বন্ধ করুন",
+    "ru": "Закрыть",
+    "ja": "閉じる",
+    "id": "Tutup"
+  },
+  "Shopping list": {
+    "en": "Shopping list",
+    "cs": "Nákupní seznam",
+    "de": "Einkaufsliste",
+    "es": "Lista de compras",
+    "fr": "Liste de courses",
+    "pt": "Lista de compras",
+    "zh": "采购清单",
+    "hi": "खरीद सूची",
+    "ar": "قائمة التسوق",
+    "bn": "কেনাকাটার তালিকা",
+    "ru": "Список покупок",
+    "ja": "買い物リスト",
+    "id": "Daftar belanja"
+  },
+  "Copy list": {
+    "en": "Copy list",
+    "cs": "Kopírovat seznam",
+    "de": "Liste kopieren",
+    "es": "Copiar lista",
+    "fr": "Copier la liste",
+    "pt": "Copiar lista",
+    "zh": "复制清单",
+    "hi": "सूची कॉपी करें",
+    "ar": "نسخ القائمة",
+    "bn": "তালিকা কপি করুন",
+    "ru": "Скопировать список",
+    "ja": "リストをコピー",
+    "id": "Salin daftar"
+  },
+  "Copied!": {
+    "en": "Copied!",
+    "cs": "Zkopírováno!",
+    "de": "Kopiert!",
+    "es": "¡Copiado!",
+    "fr": "Copié !",
+    "pt": "Copiado!",
+    "zh": "已复制！",
+    "hi": "कॉपी हो गया!",
+    "ar": "تم النسخ!",
+    "bn": "কপি হয়েছে!",
+    "ru": "Скопировано!",
+    "ja": "コピーしました！",
+    "id": "Disalin!"
+  },
+  "No station": {
+    "en": "No station",
+    "cs": "Bez stanice",
+    "de": "Keine Station",
+    "es": "Sin estación",
+    "fr": "Sans station",
+    "pt": "Sem estação",
+    "zh": "无需工作台",
+    "hi": "कोई स्टेशन नहीं",
+    "ar": "بلا محطة",
+    "bn": "কোনো স্টেশন নেই",
+    "ru": "Без станции",
+    "ja": "設備不要",
+    "id": "Tanpa stasiun"
+  },
+  "Selected": {
+    "en": "Selected",
+    "cs": "Vybráno",
+    "de": "Ausgewählt",
+    "es": "Seleccionado",
+    "fr": "Sélectionné",
+    "pt": "Selecionado",
+    "zh": "已选择",
+    "hi": "चयनित",
+    "ar": "محدد",
+    "bn": "নির্বাচিত",
+    "ru": "Выбрано",
+    "ja": "選択済み",
+    "id": "Dipilih"
+  },
+  "Locked until you reach this biome.": {
+    "en": "Locked until you reach this biome.",
+    "cs": "Zamčeno, dokud se nedostanete do tohoto biomu.",
+    "de": "Gesperrt, bis du dieses Biom erreichst.",
+    "es": "Bloqueado hasta llegar a este bioma.",
+    "fr": "Verrouillé jusqu'à votre arrivée dans ce biome.",
+    "pt": "Bloqueado até alcançar este bioma.",
+    "zh": "到达此生物群系后解锁。",
+    "hi": "इस बायोम तक पहुँचने पर खुलेगा।",
+    "ar": "مقفل حتى تصل إلى هذه المنطقة.",
+    "bn": "এই বায়োমে পৌঁছালে খুলবে।",
+    "ru": "Закрыто, пока вы не достигнете этого биома.",
+    "ja": "このバイオームに到達すると解除されます。",
+    "id": "Terkunci sampai Anda mencapai bioma ini."
+  },
+  "Use this": {
+    "en": "Use this",
+    "cs": "Použít",
+    "de": "Übernehmen",
+    "es": "Usar esta",
+    "fr": "Utiliser",
+    "pt": "Usar esta",
+    "zh": "使用此组合",
+    "hi": "इसे चुनें",
+    "ar": "استخدم هذه",
+    "bn": "এটি ব্যবহার করুন",
+    "ru": "Использовать",
+    "ja": "これを使う",
+    "id": "Gunakan ini"
+  },
+  "Sources": {
+    "en": "Sources",
+    "cs": "Zdroje",
+    "de": "Quellen",
+    "es": "Fuentes",
+    "fr": "Sources",
+    "pt": "Fontes",
+    "zh": "来源",
+    "hi": "स्रोत",
+    "ar": "المصادر",
+    "bn": "উৎস",
+    "ru": "Источники",
+    "ja": "入手先",
+    "id": "Sumber"
+  },
+  "Station steps": {
+    "en": "Station steps",
+    "cs": "Kroky na stanicích",
+    "de": "Stationsschritte",
+    "es": "Pasos en estaciones",
+    "fr": "Étapes aux stations",
+    "pt": "Etapas nas estações",
+    "zh": "工作台步骤",
+    "hi": "स्टेशन के चरण",
+    "ar": "خطوات المحطات",
+    "bn": "স্টেশনের ধাপ",
+    "ru": "Этапы на станциях",
+    "ja": "設備での工程",
+    "id": "Langkah stasiun"
+  },
+  "Required stations": {
+    "en": "Required stations",
+    "cs": "Potřebné stanice",
+    "de": "Benötigte Stationen",
+    "es": "Estaciones necesarias",
+    "fr": "Stations requises",
+    "pt": "Estações necessárias",
+    "zh": "所需工作台",
+    "hi": "आवश्यक स्टेशन",
+    "ar": "المحطات المطلوبة",
+    "bn": "প্রয়োজনীয় স্টেশন",
+    "ru": "Нужные станции",
+    "ja": "必要な設備",
+    "id": "Stasiun yang dibutuhkan"
+  },
+  "Link copied!": {
+    "en": "Link copied!",
+    "cs": "Odkaz zkopírován!",
+    "de": "Link kopiert!",
+    "es": "¡Enlace copiado!",
+    "fr": "Lien copié !",
+    "pt": "Link copiado!",
+    "zh": "链接已复制！",
+    "hi": "लिंक कॉपी हुआ!",
+    "ar": "تم نسخ الرابط!",
+    "bn": "লিঙ্ক কপি হয়েছে!",
+    "ru": "Ссылка скопирована!",
+    "ja": "リンクをコピーしました！",
+    "id": "Tautan disalin!"
+  },
+  "Copy failed. Select and copy the text below.": {
+    "en": "Copy failed. Select and copy the text below.",
+    "cs": "Kopírování selhalo. Označte a zkopírujte text níže.",
+    "de": "Kopieren fehlgeschlagen. Text unten auswählen und kopieren.",
+    "es": "Error al copiar. Selecciona y copia el texto de abajo.",
+    "fr": "Échec de copie. Sélectionnez et copiez le texte ci-dessous.",
+    "pt": "Falha ao copiar. Selecione e copie o texto abaixo.",
+    "zh": "复制失败。请选择并复制下面的文本。",
+    "hi": "कॉपी विफल। नीचे का पाठ चुनकर कॉपी करें।",
+    "ar": "فشل النسخ. حدد النص أدناه وانسخه.",
+    "bn": "কপি ব্যর্থ। নিচের লেখা বেছে কপি করুন।",
+    "ru": "Не удалось скопировать. Выделите и скопируйте текст ниже.",
+    "ja": "コピー失敗。下のテキストを選択してコピーしてください。",
+    "id": "Gagal menyalin. Pilih dan salin teks di bawah."
+  },
+  "Show raw materials": {
+    "en": "Show raw materials",
+    "cs": "Ukázat základní suroviny",
+    "de": "Rohmaterialien anzeigen",
+    "es": "Mostrar materias primas",
+    "fr": "Afficher les matières premières",
+    "pt": "Mostrar matérias-primas",
+    "zh": "显示原材料",
+    "hi": "कच्ची सामग्री दिखाएँ",
+    "ar": "إظهار المواد الخام",
+    "bn": "কাঁচামাল দেখান",
+    "ru": "Показать сырьё",
+    "ja": "原材料を表示",
+    "id": "Tampilkan bahan mentah"
+  },
+  "Tips": {
+    "en": "Tips",
+    "cs": "Tipy",
+    "de": "Tipps",
+    "es": "Consejos",
+    "fr": "Conseils",
+    "pt": "Dicas",
+    "zh": "提示",
+    "hi": "सुझाव",
+    "ar": "نصائح",
+    "bn": "পরামর্শ",
+    "ru": "Советы",
+    "ja": "ヒント",
+    "id": "Tips"
+  },
+  "Source": {
+    "en": "Source",
+    "cs": "Zdroj",
+    "de": "Quelle",
+    "es": "Fuente",
+    "fr": "Source",
+    "pt": "Fonte",
+    "zh": "来源",
+    "hi": "स्रोत",
+    "ar": "المصدر",
+    "bn": "উৎস",
+    "ru": "Источник",
+    "ja": "出典",
+    "id": "Sumber"
+  },
+  "Fire": {
+    "en": "Fire",
+    "cs": "ohni",
+    "de": "Feuer",
+    "es": "fuego",
+    "fr": "feu",
+    "pt": "fogo",
+    "zh": "火焰",
+    "hi": "आग",
+    "ar": "النار",
+    "bn": "আগুন",
+    "ru": "огню",
+    "ja": "火炎",
+    "id": "api"
+  },
+  "Can't be teleported": {
+    "en": "Can't be teleported",
+    "cs": "Nelze teleportovat",
+    "de": "Kann nicht teleportiert werden",
+    "es": "No se puede teletransportar",
+    "fr": "Ne peut pas être téléporté",
+    "pt": "Não pode ser teleportado",
+    "zh": "无法传送",
+    "hi": "टेलीपोर्ट नहीं किया जा सकता",
+    "ar": "لا يمكن الانتقال به آنياً",
+    "bn": "টেলিপোর্ট করা যাবে না",
+    "ru": "Нельзя телепортировать",
+    "ja": "テレポート不可",
+    "id": "Tidak dapat diteleportasikan"
+  },
+  "Clear": {
+    "en": "Clear",
+    "cs": "Vymazat",
+    "de": "Leeren",
+    "es": "Vaciar",
+    "fr": "Vider",
+    "pt": "Limpar",
+    "zh": "清空",
+    "hi": "खाली करें",
+    "ar": "مسح",
+    "bn": "খালি করুন",
+    "ru": "Очистить",
+    "ja": "クリア",
+    "id": "Kosongkan"
+  },
+  "Build the coziest base you can right now — comfort, Rested time and the full shopping list.": {
+    "en": "Build the coziest base you can right now — comfort, Rested time and the full shopping list.",
+    "cs": "Postav si nejútulnější základnu, kterou teď zvládneš — comfort, dobu Rested a úplný nákupní seznam.",
+    "de": "Baue die gemütlichste Basis, die du jetzt bauen kannst — Komfort, Rested-Dauer und die vollständige Einkaufsliste.",
+    "es": "Construye la base más acogedora que puedas ahora — confort, duración de Rested y lista de compras completa.",
+    "fr": "Construisez la base la plus confortable possible — confort, durée de Rested et liste de courses complète.",
+    "pt": "Construa a base mais aconchegante possível agora — conforto, duração de Rested e lista completa de compras.",
+    "zh": "打造当前能建造的最舒适基地——舒适度、Rested 时长和完整购物清单。",
+    "hi": "अभी उपलब्ध चीज़ों से सबसे आरामदायक बेस बनाएं — आराम, Rested अवधि और पूरी खरीदारी सूची।",
+    "ar": "ابنِ أكثر قاعدة راحة يمكنك بناؤها الآن — الراحة ومدة Rested وقائمة المشتريات الكاملة.",
+    "bn": "এখনই সবচেয়ে আরামদায়ক ঘাঁটি বানান — আরাম, Rested-এর সময় ও সম্পূর্ণ কেনাকাটার তালিকা।",
+    "ru": "Постройте самую уютную базу из доступного — комфорт, время Rested и полный список покупок.",
+    "ja": "今作れる最も快適な拠点を計画 — 快適度、Rested の時間、買い物リスト。",
+    "id": "Bangun markas paling nyaman yang bisa dibuat sekarang — kenyamanan, durasi Rested, dan daftar belanja lengkap."
+  },
+  "Comfort and Rested": {
+    "en": "Comfort and Rested",
+    "cs": "Comfort a Rested",
+    "de": "Komfort und Rested",
+    "es": "Confort y Rested",
+    "fr": "Confort et Rested",
+    "pt": "Conforto e Rested",
+    "zh": "舒适度与 Rested",
+    "hi": "आराम और Rested",
+    "ar": "الراحة وRested",
+    "bn": "আরাম ও Rested",
+    "ru": "Комфорт и Rested",
+    "ja": "快適度と Rested",
+    "id": "Kenyamanan dan Rested"
+  },
+  "Build controls": {
+    "en": "Build controls",
+    "cs": "Nastavení stavby",
+    "de": "Bauoptionen",
+    "es": "Controles de construcción",
+    "fr": "Options de construction",
+    "pt": "Opções de construção",
+    "zh": "建造选项",
+    "hi": "निर्माण विकल्प",
+    "ar": "خيارات البناء",
+    "bn": "নির্মাণের বিকল্প",
+    "ru": "Настройки постройки",
+    "ja": "建築設定",
+    "id": "Opsi bangunan"
+  },
+  "Sheltered": {
+    "en": "Sheltered",
+    "cs": "Pod střechou",
+    "de": "Geschützt",
+    "es": "Bajo techo",
+    "fr": "À l’abri",
+    "pt": "Sob abrigo",
+    "zh": "有遮蔽",
+    "hi": "आश्रय में",
+    "ar": "تحت مأوى",
+    "bn": "আশ্রয়ে",
+    "ru": "Под крышей",
+    "ja": "屋根あり",
+    "id": "Terlindung"
+  },
+  "Include seasonal items": {
+    "en": "Include seasonal items",
+    "cs": "Zahrnout sezónní kusy",
+    "de": "Saisonale Gegenstände einbeziehen",
+    "es": "Incluir objetos de temporada",
+    "fr": "Inclure les objets saisonniers",
+    "pt": "Incluir itens sazonais",
+    "zh": "包含季节物品",
+    "hi": "मौसमी वस्तुएं शामिल करें",
+    "ar": "تضمين العناصر الموسمية",
+    "bn": "মৌসুমি জিনিস অন্তর্ভুক্ত করুন",
+    "ru": "Включить сезонные предметы",
+    "ja": "季節限定アイテムを含める",
+    "id": "Sertakan item musiman"
+  },
+  "Best I can build": {
+    "en": "Best I can build",
+    "cs": "Nejlepší dostupná stavba",
+    "de": "Beste verfügbare Einrichtung",
+    "es": "Lo mejor que puedo construir",
+    "fr": "Le meilleur que je peux construire",
+    "pt": "O melhor que posso construir",
+    "zh": "当前最佳建造方案",
+    "hi": "सबसे अच्छा जो बना सकता हूं",
+    "ar": "أفضل ما يمكنني بناؤه",
+    "bn": "আমার পক্ষে সেরা নির্মাণ",
+    "ru": "Лучшее из доступного",
+    "ja": "今作れる最高の構成",
+    "id": "Bangunan terbaik yang bisa dibuat"
+  },
+  "Share build": {
+    "en": "Share build",
+    "cs": "Sdílet stavbu",
+    "de": "Einrichtung teilen",
+    "es": "Compartir construcción",
+    "fr": "Partager la construction",
+    "pt": "Compartilhar construção",
+    "zh": "分享建造方案",
+    "hi": "निर्माण साझा करें",
+    "ar": "مشاركة البناء",
+    "bn": "নির্মাণ শেয়ার করুন",
+    "ru": "Поделиться постройкой",
+    "ja": "構成を共有",
+    "id": "Bagikan bangunan"
+  },
+  "Comfort breakdown": {
+    "en": "Comfort breakdown",
+    "cs": "Rozpis comfortu",
+    "de": "Komfortübersicht",
+    "es": "Desglose del confort",
+    "fr": "Détail du confort",
+    "pt": "Detalhamento do conforto",
+    "zh": "舒适度明细",
+    "hi": "आराम का विवरण",
+    "ar": "تفصيل الراحة",
+    "bn": "আরামের বিবরণ",
+    "ru": "Состав комфорта",
+    "ja": "快適度の内訳",
+    "id": "Rincian kenyamanan"
+  },
+  "Base comfort": {
+    "en": "Base comfort",
+    "cs": "Základní comfort",
+    "de": "Grundkomfort",
+    "es": "Confort base",
+    "fr": "Confort de base",
+    "pt": "Conforto base",
+    "zh": "基础舒适度",
+    "hi": "मूल आराम",
+    "ar": "الراحة الأساسية",
+    "bn": "মূল আরাম",
+    "ru": "Базовый комфорт",
+    "ja": "基本快適度",
+    "id": "Kenyamanan dasar"
+  },
+  "Shelter": {
+    "en": "Shelter",
+    "cs": "Přístřeší",
+    "de": "Unterstand",
+    "es": "Refugio",
+    "fr": "Abri",
+    "pt": "Abrigo",
+    "zh": "遮蔽",
+    "hi": "आश्रय",
+    "ar": "المأوى",
+    "bn": "আশ্রয়",
+    "ru": "Укрытие",
+    "ja": "屋根",
+    "id": "Perlindungan"
+  },
+  "Without shelter, all other comfort sources are ignored.": {
+    "en": "Without shelter, all other comfort sources are ignored.",
+    "cs": "Bez střechy se ostatní zdroje comfortu nepočítají.",
+    "de": "Ohne Schutz zählen alle anderen Komfortquellen nicht.",
+    "es": "Sin techo se ignoran las demás fuentes de confort.",
+    "fr": "Sans abri, les autres sources de confort sont ignorées.",
+    "pt": "Sem abrigo, todas as outras fontes de conforto são ignoradas.",
+    "zh": "没有遮蔽时，其他舒适度来源都不计入。",
+    "hi": "आश्रय के बिना आराम के अन्य स्रोत नहीं गिने जाते।",
+    "ar": "بدون مأوى، تُتجاهل جميع مصادر الراحة الأخرى.",
+    "bn": "আশ্রয় ছাড়া আরামের অন্য উৎসগুলো গণনা হয় না।",
+    "ru": "Без крыши остальные источники комфорта не учитываются.",
+    "ja": "屋根がない場合、他の快適度は計算されません。",
+    "id": "Tanpa perlindungan, semua sumber kenyamanan lain diabaikan."
+  },
+  "Next upgrades": {
+    "en": "Next upgrades",
+    "cs": "Další vylepšení",
+    "de": "Nächste Verbesserungen",
+    "es": "Próximas mejoras",
+    "fr": "Prochaines améliorations",
+    "pt": "Próximas melhorias",
+    "zh": "下一步升级",
+    "hi": "अगले सुधार",
+    "ar": "الترقيات التالية",
+    "bn": "পরবর্তী উন্নতি",
+    "ru": "Следующие улучшения",
+    "ja": "次の改善",
+    "id": "Peningkatan berikutnya"
+  },
+  "Enable Sheltered to benefit from furniture upgrades.": {
+    "en": "Enable Sheltered to benefit from furniture upgrades.",
+    "cs": "Zapni přístřeší, aby nábytek zvyšoval comfort.",
+    "de": "Aktiviere den Schutz, damit Möbel den Komfort erhöhen.",
+    "es": "Activa Bajo techo para aprovechar las mejoras de muebles.",
+    "fr": "Activez À l’abri pour profiter des améliorations de mobilier.",
+    "pt": "Ative Sob abrigo para aproveitar as melhorias de móveis.",
+    "zh": "启用遮蔽以获得家具升级收益。",
+    "hi": "फर्नीचर के सुधारों का लाभ लेने के लिए आश्रय सक्षम करें।",
+    "ar": "فعّل المأوى للاستفادة من ترقيات الأثاث.",
+    "bn": "আসবাবের উন্নতি কাজে লাগাতে আশ্রয় চালু করুন।",
+    "ru": "Включите крышу, чтобы улучшения мебели давали комфорт.",
+    "ja": "家具の改善を反映するには屋根ありを有効にしてください。",
+    "id": "Aktifkan Terlindung agar peningkatan perabot menambah kenyamanan."
+  },
+  "No comfort upgrades available at your current progress.": {
+    "en": "No comfort upgrades available at your current progress.",
+    "cs": "Pro tvůj současný postup není dostupné další vylepšení comfortu.",
+    "de": "Für deinen Fortschritt sind keine Komfortverbesserungen verfügbar.",
+    "es": "No hay mejoras de confort disponibles con tu progreso actual.",
+    "fr": "Aucune amélioration de confort disponible avec votre progression.",
+    "pt": "Não há melhorias de conforto disponíveis no seu progresso atual.",
+    "zh": "当前进度下没有可用的舒适度升级。",
+    "hi": "वर्तमान प्रगति में आराम का कोई सुधार उपलब्ध नहीं है।",
+    "ar": "لا توجد ترقيات راحة متاحة لتقدمك الحالي.",
+    "bn": "বর্তমান অগ্রগতিতে আরামের আর উন্নতি নেই।",
+    "ru": "На текущем этапе улучшений комфорта нет.",
+    "ja": "現在の進行状況で利用できる改善はありません。",
+    "id": "Tidak ada peningkatan kenyamanan untuk progres saat ini."
+  },
+  "Instead of {name}": {
+    "en": "Instead of {name}",
+    "cs": "Místo {name}",
+    "de": "Anstelle von {name}",
+    "es": "En lugar de {name}",
+    "fr": "À la place de {name}",
+    "pt": "Em vez de {name}",
+    "zh": "替换 {name}",
+    "hi": "{name} की जगह",
+    "ar": "بدلاً من {name}",
+    "bn": "{name}-এর পরিবর্তে",
+    "ru": "Вместо {name}",
+    "ja": "{name} の代わりに",
+    "id": "Menggantikan {name}"
+  },
+  "Select": {
+    "en": "Select",
+    "cs": "Vybrat",
+    "de": "Auswählen",
+    "es": "Seleccionar",
+    "fr": "Sélectionner",
+    "pt": "Selecionar",
+    "zh": "选择",
+    "hi": "चुनें",
+    "ar": "اختيار",
+    "bn": "বাছুন",
+    "ru": "Выбрать",
+    "ja": "選択",
+    "id": "Pilih"
+  },
+  "Select {name}": {
+    "en": "Select {name}",
+    "cs": "Vybrat {name}",
+    "de": "{name} auswählen",
+    "es": "Seleccionar {name}",
+    "fr": "Sélectionner {name}",
+    "pt": "Selecionar {name}",
+    "zh": "选择 {name}",
+    "hi": "{name} चुनें",
+    "ar": "اختيار {name}",
+    "bn": "{name} বাছুন",
+    "ru": "Выбрать {name}",
+    "ja": "{name} を選択",
+    "id": "Pilih {name}"
+  },
+  "Deselect {name}": {
+    "en": "Deselect {name}",
+    "cs": "Odebrat {name}",
+    "de": "{name} abwählen",
+    "es": "Quitar {name}",
+    "fr": "Désélectionner {name}",
+    "pt": "Desmarcar {name}",
+    "zh": "取消选择 {name}",
+    "hi": "{name} हटाएं",
+    "ar": "إلغاء اختيار {name}",
+    "bn": "{name} বাদ দিন",
+    "ru": "Убрать {name}",
+    "ja": "{name} の選択を解除",
+    "id": "Batalkan {name}"
+  },
+  "I have it": {
+    "en": "I have it",
+    "cs": "Už mám",
+    "de": "Habe ich",
+    "es": "Ya lo tengo",
+    "fr": "Je l’ai déjà",
+    "pt": "Já tenho",
+    "zh": "已拥有",
+    "hi": "मेरे पास है",
+    "ar": "أملكه",
+    "bn": "আমার আছে",
+    "ru": "У меня есть",
+    "ja": "持っている",
+    "id": "Sudah punya"
+  },
+  "Lit": {
+    "en": "Lit",
+    "cs": "Hoří",
+    "de": "Brennt",
+    "es": "Encendido",
+    "fr": "Allumé",
+    "pt": "Aceso",
+    "zh": "已点燃",
+    "hi": "जल रहा है",
+    "ar": "مشتعل",
+    "bn": "জ্বলছে",
+    "ru": "Горит",
+    "ja": "点火済み",
+    "id": "Menyala"
+  },
+  "Heated": {
+    "en": "Heated",
+    "cs": "Zatopený",
+    "de": "Beheizt",
+    "es": "Calentado",
+    "fr": "Chauffé",
+    "pt": "Aquecido",
+    "zh": "已加热",
+    "hi": "गरम किया गया",
+    "ar": "مُسخّن",
+    "bn": "গরম করা",
+    "ru": "Нагрето",
+    "ja": "加熱済み",
+    "id": "Dipanaskan"
+  },
+  "Within Hearth bonus range": {
+    "en": "Within Hearth bonus range",
+    "cs": "V dosahu bonusu Hearth",
+    "de": "In Hearth-Bonusreichweite",
+    "es": "Dentro del alcance del bono de Hearth",
+    "fr": "À portée du bonus de Hearth",
+    "pt": "No alcance do bônus de Hearth",
+    "zh": "在 Hearth 额外加成范围内",
+    "hi": "Hearth बोनस की सीमा में",
+    "ar": "ضمن نطاق مكافأة Hearth",
+    "bn": "Hearth বোনাসের সীমার মধ্যে",
+    "ru": "В радиусе бонуса Hearth",
+    "ja": "Hearth の追加効果範囲内",
+    "id": "Dalam jangkauan bonus Hearth"
+  },
+  "Seasonal bonuses": {
+    "en": "Seasonal bonuses",
+    "cs": "Sezónní bonusy",
+    "de": "Saisonale Boni",
+    "es": "Bonos de temporada",
+    "fr": "Bonus saisonniers",
+    "pt": "Bônus sazonais",
+    "zh": "季节加成",
+    "hi": "मौसमी बोनस",
+    "ar": "المكافآت الموسمية",
+    "bn": "মৌসুমি বোনাস",
+    "ru": "Сезонные бонусы",
+    "ja": "季節ボーナス",
+    "id": "Bonus musiman"
+  },
+  "Maypole and Yule Tree each add their own bonus.": {
+    "en": "Maypole and Yule Tree each add their own bonus.",
+    "cs": "Maypole a Yule Tree přidávají každý vlastní bonus.",
+    "de": "Maypole und Yule Tree geben jeweils einen eigenen Bonus.",
+    "es": "Maypole y Yule Tree añaden cada uno su propio bono.",
+    "fr": "Maypole et Yule Tree ajoutent chacun leur propre bonus.",
+    "pt": "Maypole e Yule Tree adicionam seus próprios bônus.",
+    "zh": "Maypole 和 Yule Tree 各自提供独立加成。",
+    "hi": "Maypole और Yule Tree अपने अलग बोनस देते हैं।",
+    "ar": "يضيف كل من Maypole وYule Tree مكافأة مستقلة.",
+    "bn": "Maypole ও Yule Tree প্রত্যেকটি আলাদা বোনাস দেয়।",
+    "ru": "Maypole и Yule Tree дают отдельные бонусы.",
+    "ja": "Maypole と Yule Tree はそれぞれ独立したボーナスです。",
+    "id": "Maypole dan Yule Tree masing-masing menambah bonus sendiri."
+  },
+  "Some wiki recipes are incomplete. Unverified pieces are excluded from recommendations.": {
+    "en": "Some wiki recipes are incomplete. Unverified pieces are excluded from recommendations.",
+    "cs": "Některé recepty na wiki chybí. Neověřené kusy nejsou v doporučeních.",
+    "de": "Einige Wiki-Rezepte sind unvollständig. Ungeprüfte Möbel werden nicht empfohlen.",
+    "es": "Algunas recetas de la wiki están incompletas. Los objetos sin verificar no se recomiendan.",
+    "fr": "Certaines recettes du wiki sont incomplètes. Les objets non vérifiés ne sont pas recommandés.",
+    "pt": "Algumas receitas da wiki estão incompletas. Itens não verificados não são recomendados.",
+    "zh": "部分维基配方不完整。未验证物品不参与推荐。",
+    "hi": "कुछ विकी विधियां अधूरी हैं। अप्रमाणित वस्तुएं सुझावों में शामिल नहीं हैं।",
+    "ar": "بعض وصفات الويكي ناقصة. لا تُدرج القطع غير الموثقة في التوصيات.",
+    "bn": "কিছু উইকি রেসিপি অসম্পূর্ণ। যাচাই না করা জিনিস সুপারিশে নেই।",
+    "ru": "Некоторые рецепты в вики неполные. Непроверенные предметы не рекомендуются.",
+    "ja": "一部のレシピが不完全です。未確認の家具はおすすめから除外されます。",
+    "id": "Beberapa resep wiki belum lengkap. Item yang belum terverifikasi tidak direkomendasikan."
+  },
+  "Enable Include seasonal items to see seasonal bonuses.": {
+    "en": "Enable Include seasonal items to see seasonal bonuses.",
+    "cs": "Pro sezónní bonusy zapni zahrnutí sezónních kusů.",
+    "de": "Aktiviere saisonale Gegenstände, um saisonale Boni zu sehen.",
+    "es": "Activa los objetos de temporada para ver sus bonos.",
+    "fr": "Activez les objets saisonniers pour voir leurs bonus.",
+    "pt": "Ative os itens sazonais para ver seus bônus.",
+    "zh": "启用季节物品以查看季节加成。",
+    "hi": "मौसमी बोनस देखने के लिए मौसमी वस्तुएं सक्षम करें।",
+    "ar": "فعّل العناصر الموسمية لرؤية مكافآتها.",
+    "bn": "মৌসুমি বোনাস দেখতে মৌসুমি জিনিস চালু করুন।",
+    "ru": "Включите сезонные предметы, чтобы увидеть их бонусы.",
+    "ja": "季節ボーナスを見るには季節限定アイテムを有効にしてください。",
+    "id": "Aktifkan item musiman untuk melihat bonusnya."
+  },
+  "Snow Lantern breaks quickly outside Mountain and Deep North.": {
+    "en": "Snow Lantern breaks quickly outside Mountain and Deep North.",
+    "cs": "Snow Lantern se mimo Mountain a Deep North rychle rozbije.",
+    "de": "Snow Lantern zerbricht außerhalb von Mountain und Deep North schnell.",
+    "es": "Snow Lantern se rompe rápidamente fuera de Mountain y Deep North.",
+    "fr": "Snow Lantern se brise vite hors de Mountain et Deep North.",
+    "pt": "Snow Lantern quebra rapidamente fora de Mountain e Deep North.",
+    "zh": "Snow Lantern 在 Mountain 和 Deep North 以外会快速损坏。",
+    "hi": "Mountain और Deep North के बाहर Snow Lantern जल्दी टूटता है।",
+    "ar": "تتكسر Snow Lantern سريعاً خارج Mountain وDeep North.",
+    "bn": "Mountain ও Deep North-এর বাইরে Snow Lantern দ্রুত ভেঙে যায়।",
+    "ru": "Snow Lantern быстро ломается вне Mountain и Deep North.",
+    "ja": "Snow Lantern は Mountain と Deep North 以外ではすぐ壊れます。",
+    "id": "Snow Lantern cepat rusak di luar Mountain dan Deep North."
+  },
+  "Choose furniture you still need to build a shopping list.": {
+    "en": "Choose furniture you still need to build a shopping list.",
+    "cs": "Vyber nábytek, který ještě potřebuješ, a sestav nákupní seznam.",
+    "de": "Wähle noch benötigte Möbel für deine Einkaufsliste.",
+    "es": "Elige muebles que aún necesites para crear una lista de compras.",
+    "fr": "Choisissez les meubles qu’il vous manque pour créer une liste de courses.",
+    "pt": "Escolha os móveis que ainda precisa para criar uma lista de compras.",
+    "zh": "选择尚需制作的家具来生成购物清单。",
+    "hi": "खरीदारी सूची के लिए वह फर्नीचर चुनें जिसकी अभी जरूरत है।",
+    "ar": "اختر الأثاث الذي ما زلت تحتاجه لإنشاء قائمة المشتريات.",
+    "bn": "কেনাকাটার তালিকা পেতে এখনও দরকার এমন আসবাব বাছুন।",
+    "ru": "Выберите недостающую мебель для списка покупок.",
+    "ja": "まだ必要な家具を選ぶと買い物リストが作成されます。",
+    "id": "Pilih perabot yang masih dibutuhkan untuk membuat daftar belanja."
+  },
+  "Station building materials are shown separately.": {
+    "en": "Station building materials are shown separately.",
+    "cs": "Materiál na stavbu stanic je uveden zvlášť.",
+    "de": "Baumaterialien für Stationen werden separat angezeigt.",
+    "es": "Los materiales para construir estaciones se muestran aparte.",
+    "fr": "Les matériaux de construction des ateliers sont affichés séparément.",
+    "pt": "Os materiais para construir estações são mostrados separadamente.",
+    "zh": "工作台建造材料单独列出。",
+    "hi": "स्टेशन बनाने की सामग्री अलग दिखाई जाती है।",
+    "ar": "تُعرض مواد بناء المحطات بشكل منفصل.",
+    "bn": "স্টেশন তৈরির উপকরণ আলাদাভাবে দেখানো হয়।",
+    "ru": "Материалы для станций показаны отдельно.",
+    "ja": "作業設備の建築材料は別に表示されます。",
+    "id": "Bahan untuk membangun stasiun ditampilkan terpisah."
+  },
+  "Reveal the biome to view this piece.": {
+    "en": "Reveal the biome to view this piece.",
+    "cs": "Pro zobrazení kusu odhal jeho biom.",
+    "de": "Enthülle das Biom, um dieses Möbel zu sehen.",
+    "es": "Revela el bioma para ver este objeto.",
+    "fr": "Révélez le biome pour voir cet objet.",
+    "pt": "Revele o bioma para ver este item.",
+    "zh": "揭示该生物群系以查看此物品。",
+    "hi": "इस वस्तु को देखने के लिए बायोम खोलें।",
+    "ar": "اكشف المنطقة لرؤية هذه القطعة.",
+    "bn": "এই জিনিস দেখতে বায়োম খুলুন।",
+    "ru": "Откройте биом, чтобы увидеть предмет.",
+    "ja": "この家具を見るにはバイオームを公開してください。",
+    "id": "Ungkap bioma untuk melihat item ini."
+  },
+  "Rug": {
+    "en": "Rug",
+    "cs": "Koberce",
+    "de": "Teppiche",
+    "es": "Alfombras",
+    "fr": "Tapis",
+    "pt": "Tapetes",
+    "zh": "地毯",
+    "hi": "कालीन",
+    "ar": "السجاد",
+    "bn": "গালিচা",
+    "ru": "Ковры",
+    "ja": "敷物",
+    "id": "Karpet"
+  },
+  "Table": {
+    "en": "Table",
+    "cs": "Stoly",
+    "de": "Tische",
+    "es": "Mesas",
+    "fr": "Tables",
+    "pt": "Mesas",
+    "zh": "桌子",
+    "hi": "मेज़",
+    "ar": "الطاولات",
+    "bn": "টেবিল",
+    "ru": "Столы",
+    "ja": "テーブル",
+    "id": "Meja"
+  },
+  "Chair": {
+    "en": "Chair",
+    "cs": "Židle",
+    "de": "Stühle",
+    "es": "Sillas",
+    "fr": "Sièges",
+    "pt": "Cadeiras",
+    "zh": "椅子",
+    "hi": "कुर्सियां",
+    "ar": "الكراسي",
+    "bn": "চেয়ার",
+    "ru": "Стулья",
+    "ja": "椅子",
+    "id": "Kursi"
+  },
+  "Bed": {
+    "en": "Bed",
+    "cs": "Postele",
+    "de": "Betten",
+    "es": "Camas",
+    "fr": "Lits",
+    "pt": "Camas",
+    "zh": "床",
+    "hi": "बिस्तर",
+    "ar": "الأسرّة",
+    "bn": "বিছানা",
+    "ru": "Кровати",
+    "ja": "ベッド",
+    "id": "Tempat tidur"
+  },
+  "Banner": {
+    "en": "Banner",
+    "cs": "Prapory a závěsy",
+    "de": "Banner und Vorhänge",
+    "es": "Estandartes y cortinas",
+    "fr": "Bannières et rideaux",
+    "pt": "Estandartes e cortinas",
+    "zh": "旗帜与窗帘",
+    "hi": "बैनर और पर्दे",
+    "ar": "الرايات والستائر",
+    "bn": "পতাকা ও পর্দা",
+    "ru": "Знамёна и шторы",
+    "ja": "旗とカーテン",
+    "id": "Panji dan tirai"
+  },
+  "Plants": {
+    "en": "Plants",
+    "cs": "Rostliny",
+    "de": "Pflanzen",
+    "es": "Plantas",
+    "fr": "Plantes",
+    "pt": "Plantas",
+    "zh": "植物",
+    "hi": "पौधे",
+    "ar": "النباتات",
+    "bn": "গাছপালা",
+    "ru": "Растения",
+    "ja": "植物",
+    "id": "Tanaman"
+  },
+  "Stands": {
+    "en": "Stands",
+    "cs": "Stojany",
+    "de": "Ständer",
+    "es": "Soportes",
+    "fr": "Présentoirs",
+    "pt": "Suportes",
+    "zh": "展示架",
+    "hi": "स्टैंड",
+    "ar": "الحوامل",
+    "bn": "স্ট্যান্ড",
+    "ru": "Стойки",
+    "ja": "スタンド",
+    "id": "Dudukan"
+  },
+  "Bathroom": {
+    "en": "Bathroom",
+    "cs": "Koupelna",
+    "de": "Bad",
+    "es": "Baño",
+    "fr": "Salle de bain",
+    "pt": "Banheiro",
+    "zh": "浴室",
+    "hi": "स्नानघर",
+    "ar": "الحمّام",
+    "bn": "স্নানঘর",
+    "ru": "Ванная",
+    "ja": "浴室",
+    "id": "Kamar mandi"
+  },
+  "Lights": {
+    "en": "Lights",
+    "cs": "Světla",
+    "de": "Leuchten",
+    "es": "Luces",
+    "fr": "Éclairage",
+    "pt": "Luzes",
+    "zh": "灯具",
+    "hi": "रोशनी",
+    "ar": "الأضواء",
+    "bn": "আলো",
+    "ru": "Светильники",
+    "ja": "照明",
+    "id": "Lampu"
+  },
+  "Ashlands": {
+    "en": "Ashlands",
+    "cs": "Ashlands",
+    "de": "Ashlands",
+    "es": "Ashlands",
+    "fr": "Ashlands",
+    "pt": "Ashlands",
+    "zh": "Ashlands",
+    "hi": "Ashlands",
+    "ar": "Ashlands",
+    "bn": "Ashlands",
+    "ru": "Ashlands",
+    "ja": "Ashlands",
+    "id": "Ashlands"
+  },
+  "Maypole": {
+    "en": "Maypole",
+    "cs": "Maypole",
+    "de": "Maypole",
+    "es": "Maypole",
+    "fr": "Maypole",
+    "pt": "Maypole",
+    "zh": "Maypole",
+    "hi": "Maypole",
+    "ar": "Maypole",
+    "bn": "Maypole",
+    "ru": "Maypole",
+    "ja": "Maypole",
+    "id": "Maypole"
+  },
+  "Yule Tree": {
+    "en": "Yule Tree",
+    "cs": "Yule Tree",
+    "de": "Yule Tree",
+    "es": "Yule Tree",
+    "fr": "Yule Tree",
+    "pt": "Yule Tree",
+    "zh": "Yule Tree",
+    "hi": "Yule Tree",
+    "ar": "Yule Tree",
+    "bn": "Yule Tree",
+    "ru": "Yule Tree",
+    "ja": "Yule Tree",
+    "id": "Yule Tree"
+  },
+  "Comfort Planner": {
+    "en": "Comfort Planner",
+    "cs": "Comfort Planner",
+    "de": "Comfort Planner",
+    "es": "Comfort Planner",
+    "fr": "Comfort Planner",
+    "pt": "Comfort Planner",
+    "zh": "Comfort Planner",
+    "hi": "Comfort Planner",
+    "ar": "Comfort Planner",
+    "bn": "Comfort Planner",
+    "ru": "Comfort Planner",
+    "ja": "Comfort Planner",
+    "id": "Comfort Planner"
+  },
+  "Comfort Planner — Valheim Companion": {
+    "en": "Comfort Planner — Valheim Companion",
+    "cs": "Comfort Planner — Valheim Companion",
+    "de": "Comfort Planner — Valheim Companion",
+    "es": "Comfort Planner — Valheim Companion",
+    "fr": "Comfort Planner — Valheim Companion",
+    "pt": "Comfort Planner — Valheim Companion",
+    "zh": "Comfort Planner — Valheim Companion",
+    "hi": "Comfort Planner — Valheim Companion",
+    "ar": "Comfort Planner — Valheim Companion",
+    "bn": "Comfort Planner — Valheim Companion",
+    "ru": "Comfort Planner — Valheim Companion",
+    "ja": "Comfort Planner — Valheim Companion",
+    "id": "Comfort Planner — Valheim Companion"
+  },
+  "Comfort {count} / {max}": {
+    "en": {
+      "one": "Comfort {count} / {max}",
+      "other": "Comfort {count} / {max}"
+    },
+    "cs": {
+      "one": "Comfort {count} / {max}",
+      "few": "Comfort {count} / {max}",
+      "many": "Comfort {count} / {max}",
+      "other": "Comfort {count} / {max}"
+    },
+    "de": {
+      "one": "Komfort {count} / {max}",
+      "other": "Komfort {count} / {max}"
+    },
+    "es": {
+      "one": "Confort {count} / {max}",
+      "many": "Confort {count} / {max}",
+      "other": "Confort {count} / {max}"
+    },
+    "fr": {
+      "one": "Confort {count} / {max}",
+      "many": "Confort {count} / {max}",
+      "other": "Confort {count} / {max}"
+    },
+    "pt": {
+      "one": "Conforto {count} / {max}",
+      "many": "Conforto {count} / {max}",
+      "other": "Conforto {count} / {max}"
+    },
+    "zh": {
+      "other": "舒适度 {count} / {max}"
+    },
+    "hi": {
+      "one": "आराम {count} / {max}",
+      "other": "आराम {count} / {max}"
+    },
+    "ar": {
+      "zero": "الراحة {count} / {max}",
+      "one": "الراحة {count} / {max}",
+      "two": "الراحة {count} / {max}",
+      "few": "الراحة {count} / {max}",
+      "many": "الراحة {count} / {max}",
+      "other": "الراحة {count} / {max}"
+    },
+    "bn": {
+      "one": "আরাম {count} / {max}",
+      "other": "আরাম {count} / {max}"
+    },
+    "ru": {
+      "one": "Комфорт {count} / {max}",
+      "few": "Комфорт {count} / {max}",
+      "many": "Комфорт {count} / {max}",
+      "other": "Комфорт {count} / {max}"
+    },
+    "ja": {
+      "other": "快適度 {count} / {max}"
+    },
+    "id": {
+      "other": "Kenyamanan {count} / {max}"
+    }
+  },
+  "Comfort {count}": {
+    "en": {
+      "one": "Comfort {count}",
+      "other": "Comfort {count}"
+    },
+    "cs": {
+      "one": "Comfort {count}",
+      "few": "Comfort {count}",
+      "many": "Comfort {count}",
+      "other": "Comfort {count}"
+    },
+    "de": {
+      "one": "Komfort {count}",
+      "other": "Komfort {count}"
+    },
+    "es": {
+      "one": "Confort {count}",
+      "many": "Confort {count}",
+      "other": "Confort {count}"
+    },
+    "fr": {
+      "one": "Confort {count}",
+      "many": "Confort {count}",
+      "other": "Confort {count}"
+    },
+    "pt": {
+      "one": "Conforto {count}",
+      "many": "Conforto {count}",
+      "other": "Conforto {count}"
+    },
+    "zh": {
+      "other": "舒适度 {count}"
+    },
+    "hi": {
+      "one": "आराम {count}",
+      "other": "आराम {count}"
+    },
+    "ar": {
+      "zero": "الراحة {count}",
+      "one": "الراحة {count}",
+      "two": "الراحة {count}",
+      "few": "الراحة {count}",
+      "many": "الراحة {count}",
+      "other": "الراحة {count}"
+    },
+    "bn": {
+      "one": "আরাম {count}",
+      "other": "আরাম {count}"
+    },
+    "ru": {
+      "one": "Комфорт {count}",
+      "few": "Комфорт {count}",
+      "many": "Комфорт {count}",
+      "other": "Комфорт {count}"
+    },
+    "ja": {
+      "other": "快適度 {count}"
+    },
+    "id": {
+      "other": "Kenyamanan {count}"
+    }
+  },
+  "Rested {count} min": {
+    "en": {
+      "one": "Rested {count} min",
+      "other": "Rested {count} min"
+    },
+    "cs": {
+      "one": "Rested {count} min",
+      "few": "Rested {count} min",
+      "many": "Rested {count} min",
+      "other": "Rested {count} min"
+    },
+    "de": {
+      "one": "Rested {count} Min.",
+      "other": "Rested {count} Min."
+    },
+    "es": {
+      "one": "Rested {count} min",
+      "many": "Rested {count} min",
+      "other": "Rested {count} min"
+    },
+    "fr": {
+      "one": "Rested {count} min",
+      "many": "Rested {count} min",
+      "other": "Rested {count} min"
+    },
+    "pt": {
+      "one": "Rested {count} min",
+      "many": "Rested {count} min",
+      "other": "Rested {count} min"
+    },
+    "zh": {
+      "other": "Rested {count} 分钟"
+    },
+    "hi": {
+      "one": "Rested {count} मिनट",
+      "other": "Rested {count} मिनट"
+    },
+    "ar": {
+      "zero": "Rested {count} دقيقة",
+      "one": "Rested {count} دقيقة",
+      "two": "Rested {count} دقيقة",
+      "few": "Rested {count} دقيقة",
+      "many": "Rested {count} دقيقة",
+      "other": "Rested {count} دقيقة"
+    },
+    "bn": {
+      "one": "Rested {count} মিনিট",
+      "other": "Rested {count} মিনিট"
+    },
+    "ru": {
+      "one": "Rested {count} мин",
+      "few": "Rested {count} мин",
+      "many": "Rested {count} мин",
+      "other": "Rested {count} мин"
+    },
+    "ja": {
+      "other": "Rested {count} 分"
+    },
+    "id": {
+      "other": "Rested {count} mnt"
+    }
+  },
+  "+{count} comfort": {
+    "en": {
+      "one": "+{count} comfort",
+      "other": "+{count} comfort"
+    },
+    "cs": {
+      "one": "+{count} comfort",
+      "few": "+{count} comfort",
+      "many": "+{count} comfort",
+      "other": "+{count} comfort"
+    },
+    "de": {
+      "one": "+{count} Komfort",
+      "other": "+{count} Komfort"
+    },
+    "es": {
+      "one": "+{count} confort",
+      "many": "+{count} confort",
+      "other": "+{count} confort"
+    },
+    "fr": {
+      "one": "+{count} confort",
+      "many": "+{count} confort",
+      "other": "+{count} confort"
+    },
+    "pt": {
+      "one": "+{count} conforto",
+      "many": "+{count} conforto",
+      "other": "+{count} conforto"
+    },
+    "zh": {
+      "other": "+{count} 舒适度"
+    },
+    "hi": {
+      "one": "+{count} आराम",
+      "other": "+{count} आराम"
+    },
+    "ar": {
+      "zero": "+{count} راحة",
+      "one": "+{count} راحة",
+      "two": "+{count} راحة",
+      "few": "+{count} راحة",
+      "many": "+{count} راحة",
+      "other": "+{count} راحة"
+    },
+    "bn": {
+      "one": "+{count} আরাম",
+      "other": "+{count} আরাম"
+    },
+    "ru": {
+      "one": "+{count} комфорта",
+      "few": "+{count} комфорта",
+      "many": "+{count} комфорта",
+      "other": "+{count} комфорта"
+    },
+    "ja": {
+      "other": "快適度 +{count}"
+    },
+    "id": {
+      "other": "+{count} kenyamanan"
+    }
+  },
+  "+{count} · {name}": {
+    "en": {
+      "one": "+{count} · {name}",
+      "other": "+{count} · {name}"
+    },
+    "cs": {
+      "one": "+{count} · {name}",
+      "few": "+{count} · {name}",
+      "many": "+{count} · {name}",
+      "other": "+{count} · {name}"
+    },
+    "de": {
+      "one": "+{count} · {name}",
+      "other": "+{count} · {name}"
+    },
+    "es": {
+      "one": "+{count} · {name}",
+      "many": "+{count} · {name}",
+      "other": "+{count} · {name}"
+    },
+    "fr": {
+      "one": "+{count} · {name}",
+      "many": "+{count} · {name}",
+      "other": "+{count} · {name}"
+    },
+    "pt": {
+      "one": "+{count} · {name}",
+      "many": "+{count} · {name}",
+      "other": "+{count} · {name}"
+    },
+    "zh": {
+      "other": "+{count} · {name}"
+    },
+    "hi": {
+      "one": "+{count} · {name}",
+      "other": "+{count} · {name}"
+    },
+    "ar": {
+      "zero": "+{count} · {name}",
+      "one": "+{count} · {name}",
+      "two": "+{count} · {name}",
+      "few": "+{count} · {name}",
+      "many": "+{count} · {name}",
+      "other": "+{count} · {name}"
+    },
+    "bn": {
+      "one": "+{count} · {name}",
+      "other": "+{count} · {name}"
+    },
+    "ru": {
+      "one": "+{count} · {name}",
+      "few": "+{count} · {name}",
+      "many": "+{count} · {name}",
+      "other": "+{count} · {name}"
+    },
+    "ja": {
+      "other": "+{count} · {name}"
+    },
+    "id": {
+      "other": "+{count} · {name}"
+    }
+  },
+  "{count}× {name}": {
+    "en": {
+      "one": "{count}× {name}",
+      "other": "{count}× {name}"
+    },
+    "cs": {
+      "one": "{count}× {name}",
+      "few": "{count}× {name}",
+      "many": "{count}× {name}",
+      "other": "{count}× {name}"
+    },
+    "de": {
+      "one": "{count}× {name}",
+      "other": "{count}× {name}"
+    },
+    "es": {
+      "one": "{count}× {name}",
+      "many": "{count}× {name}",
+      "other": "{count}× {name}"
+    },
+    "fr": {
+      "one": "{count}× {name}",
+      "many": "{count}× {name}",
+      "other": "{count}× {name}"
+    },
+    "pt": {
+      "one": "{count}× {name}",
+      "many": "{count}× {name}",
+      "other": "{count}× {name}"
+    },
+    "zh": {
+      "other": "{count}× {name}"
+    },
+    "hi": {
+      "one": "{count}× {name}",
+      "other": "{count}× {name}"
+    },
+    "ar": {
+      "zero": "{count}× {name}",
+      "one": "{count}× {name}",
+      "two": "{count}× {name}",
+      "few": "{count}× {name}",
+      "many": "{count}× {name}",
+      "other": "{count}× {name}"
+    },
+    "bn": {
+      "one": "{count}× {name}",
+      "other": "{count}× {name}"
+    },
+    "ru": {
+      "one": "{count}× {name}",
+      "few": "{count}× {name}",
+      "many": "{count}× {name}",
+      "other": "{count}× {name}"
+    },
+    "ja": {
+      "other": "{count}× {name}"
+    },
+    "id": {
+      "other": "{count}× {name}"
+    }
+  },
+  "{count}× {name} at {station}": {
+    "en": {
+      "one": "{count}× {name} at {station}",
+      "other": "{count}× {name} at {station}"
+    },
+    "cs": {
+      "one": "{count}× {name} ve stanici {station}",
+      "few": "{count}× {name} ve stanici {station}",
+      "many": "{count}× {name} ve stanici {station}",
+      "other": "{count}× {name} ve stanici {station}"
+    },
+    "de": {
+      "one": "{count}× {name} bei {station}",
+      "other": "{count}× {name} bei {station}"
+    },
+    "es": {
+      "one": "{count}× {name} en {station}",
+      "many": "{count}× {name} en {station}",
+      "other": "{count}× {name} en {station}"
+    },
+    "fr": {
+      "one": "{count}× {name} à {station}",
+      "many": "{count}× {name} à {station}",
+      "other": "{count}× {name} à {station}"
+    },
+    "pt": {
+      "one": "{count}× {name} em {station}",
+      "many": "{count}× {name} em {station}",
+      "other": "{count}× {name} em {station}"
+    },
+    "zh": {
+      "other": "在 {station} 制作 {count}× {name}"
+    },
+    "hi": {
+      "one": "{station} पर {count}× {name}",
+      "other": "{station} पर {count}× {name}"
+    },
+    "ar": {
+      "zero": "{count}× {name} في {station}",
+      "one": "{count}× {name} في {station}",
+      "two": "{count}× {name} في {station}",
+      "few": "{count}× {name} في {station}",
+      "many": "{count}× {name} في {station}",
+      "other": "{count}× {name} في {station}"
+    },
+    "bn": {
+      "one": "{station}-এ {count}× {name}",
+      "other": "{station}-এ {count}× {name}"
+    },
+    "ru": {
+      "one": "{count}× {name} на {station}",
+      "few": "{count}× {name} на {station}",
+      "many": "{count}× {name} на {station}",
+      "other": "{count}× {name} на {station}"
+    },
+    "ja": {
+      "other": "{station} で {count}× {name}"
+    },
+    "id": {
+      "other": "{count}× {name} di {station}"
+    }
+  },
+  "HP regeneration +{count}%": {
+    "en": {
+      "one": "HP regeneration +{count}%",
+      "other": "HP regeneration +{count}%"
+    },
+    "cs": {
+      "one": "Regenerace HP +{count}%",
+      "few": "Regenerace HP +{count}%",
+      "many": "Regenerace HP +{count}%",
+      "other": "Regenerace HP +{count}%"
+    },
+    "de": {
+      "one": "HP-Regeneration +{count}%",
+      "other": "HP-Regeneration +{count}%"
+    },
+    "es": {
+      "one": "Regeneración de HP +{count}%",
+      "many": "Regeneración de HP +{count}%",
+      "other": "Regeneración de HP +{count}%"
+    },
+    "fr": {
+      "one": "Régénération HP +{count}%",
+      "many": "Régénération HP +{count}%",
+      "other": "Régénération HP +{count}%"
+    },
+    "pt": {
+      "one": "Regeneração de HP +{count}%",
+      "many": "Regeneração de HP +{count}%",
+      "other": "Regeneração de HP +{count}%"
+    },
+    "zh": {
+      "other": "HP 恢复 +{count}%"
+    },
+    "hi": {
+      "one": "HP पुनर्जनन +{count}%",
+      "other": "HP पुनर्जनन +{count}%"
+    },
+    "ar": {
+      "zero": "تجدد HP +{count}%",
+      "one": "تجدد HP +{count}%",
+      "two": "تجدد HP +{count}%",
+      "few": "تجدد HP +{count}%",
+      "many": "تجدد HP +{count}%",
+      "other": "تجدد HP +{count}%"
+    },
+    "bn": {
+      "one": "HP পুনরুদ্ধার +{count}%",
+      "other": "HP পুনরুদ্ধার +{count}%"
+    },
+    "ru": {
+      "one": "Восстановление HP +{count}%",
+      "few": "Восстановление HP +{count}%",
+      "many": "Восстановление HP +{count}%",
+      "other": "Восстановление HP +{count}%"
+    },
+    "ja": {
+      "other": "HP 回復 +{count}%"
+    },
+    "id": {
+      "other": "Regenerasi HP +{count}%"
+    }
+  },
+  "Stamina regeneration +{count}%": {
+    "en": {
+      "one": "Stamina regeneration +{count}%",
+      "other": "Stamina regeneration +{count}%"
+    },
+    "cs": {
+      "one": "Regenerace staminy +{count}%",
+      "few": "Regenerace staminy +{count}%",
+      "many": "Regenerace staminy +{count}%",
+      "other": "Regenerace staminy +{count}%"
+    },
+    "de": {
+      "one": "Ausdauerregeneration +{count}%",
+      "other": "Ausdauerregeneration +{count}%"
+    },
+    "es": {
+      "one": "Regeneración de resistencia +{count}%",
+      "many": "Regeneración de resistencia +{count}%",
+      "other": "Regeneración de resistencia +{count}%"
+    },
+    "fr": {
+      "one": "Régénération d’endurance +{count}%",
+      "many": "Régénération d’endurance +{count}%",
+      "other": "Régénération d’endurance +{count}%"
+    },
+    "pt": {
+      "one": "Regeneração de vigor +{count}%",
+      "many": "Regeneração de vigor +{count}%",
+      "other": "Regeneração de vigor +{count}%"
+    },
+    "zh": {
+      "other": "耐力恢复 +{count}%"
+    },
+    "hi": {
+      "one": "स्टैमिना पुनर्जनन +{count}%",
+      "other": "स्टैमिना पुनर्जनन +{count}%"
+    },
+    "ar": {
+      "zero": "تجدد التحمل +{count}%",
+      "one": "تجدد التحمل +{count}%",
+      "two": "تجدد التحمل +{count}%",
+      "few": "تجدد التحمل +{count}%",
+      "many": "تجدد التحمل +{count}%",
+      "other": "تجدد التحمل +{count}%"
+    },
+    "bn": {
+      "one": "স্ট্যামিনা পুনরুদ্ধার +{count}%",
+      "other": "স্ট্যামিনা পুনরুদ্ধার +{count}%"
+    },
+    "ru": {
+      "one": "Восстановление выносливости +{count}%",
+      "few": "Восстановление выносливости +{count}%",
+      "many": "Восстановление выносливости +{count}%",
+      "other": "Восстановление выносливости +{count}%"
+    },
+    "ja": {
+      "other": "スタミナ回復 +{count}%"
+    },
+    "id": {
+      "other": "Regenerasi stamina +{count}%"
+    }
+  },
+  "Eitr regeneration +{count}%": {
+    "en": {
+      "one": "Eitr regeneration +{count}%",
+      "other": "Eitr regeneration +{count}%"
+    },
+    "cs": {
+      "one": "Regenerace eitr +{count}%",
+      "few": "Regenerace eitr +{count}%",
+      "many": "Regenerace eitr +{count}%",
+      "other": "Regenerace eitr +{count}%"
+    },
+    "de": {
+      "one": "Eitr-Regeneration +{count}%",
+      "other": "Eitr-Regeneration +{count}%"
+    },
+    "es": {
+      "one": "Regeneración de eitr +{count}%",
+      "many": "Regeneración de eitr +{count}%",
+      "other": "Regeneración de eitr +{count}%"
+    },
+    "fr": {
+      "one": "Régénération d’eitr +{count}%",
+      "many": "Régénération d’eitr +{count}%",
+      "other": "Régénération d’eitr +{count}%"
+    },
+    "pt": {
+      "one": "Regeneração de eitr +{count}%",
+      "many": "Regeneração de eitr +{count}%",
+      "other": "Regeneração de eitr +{count}%"
+    },
+    "zh": {
+      "other": "Eitr 恢复 +{count}%"
+    },
+    "hi": {
+      "one": "Eitr पुनर्जनन +{count}%",
+      "other": "Eitr पुनर्जनन +{count}%"
+    },
+    "ar": {
+      "zero": "تجدد Eitr +{count}%",
+      "one": "تجدد Eitr +{count}%",
+      "two": "تجدد Eitr +{count}%",
+      "few": "تجدد Eitr +{count}%",
+      "many": "تجدد Eitr +{count}%",
+      "other": "تجدد Eitr +{count}%"
+    },
+    "bn": {
+      "one": "Eitr পুনরুদ্ধার +{count}%",
+      "other": "Eitr পুনরুদ্ধার +{count}%"
+    },
+    "ru": {
+      "one": "Восстановление eitr +{count}%",
+      "few": "Восстановление eitr +{count}%",
+      "many": "Восстановление eitr +{count}%",
+      "other": "Восстановление eitr +{count}%"
+    },
+    "ja": {
+      "other": "Eitr 回復 +{count}%"
+    },
+    "id": {
+      "other": "Regenerasi eitr +{count}%"
+    }
+  },
+  "XP +{count}%": {
+    "en": {
+      "one": "XP +{count}%",
+      "other": "XP +{count}%"
+    },
+    "cs": {
+      "one": "XP +{count}%",
+      "few": "XP +{count}%",
+      "many": "XP +{count}%",
+      "other": "XP +{count}%"
+    },
+    "de": {
+      "one": "XP +{count}%",
+      "other": "XP +{count}%"
+    },
+    "es": {
+      "one": "XP +{count}%",
+      "many": "XP +{count}%",
+      "other": "XP +{count}%"
+    },
+    "fr": {
+      "one": "XP +{count}%",
+      "many": "XP +{count}%",
+      "other": "XP +{count}%"
+    },
+    "pt": {
+      "one": "XP +{count}%",
+      "many": "XP +{count}%",
+      "other": "XP +{count}%"
+    },
+    "zh": {
+      "other": "XP +{count}%"
+    },
+    "hi": {
+      "one": "XP +{count}%",
+      "other": "XP +{count}%"
+    },
+    "ar": {
+      "zero": "XP +{count}%",
+      "one": "XP +{count}%",
+      "two": "XP +{count}%",
+      "few": "XP +{count}%",
+      "many": "XP +{count}%",
+      "other": "XP +{count}%"
+    },
+    "bn": {
+      "one": "XP +{count}%",
+      "other": "XP +{count}%"
+    },
+    "ru": {
+      "one": "XP +{count}%",
+      "few": "XP +{count}%",
+      "many": "XP +{count}%",
+      "other": "XP +{count}%"
+    },
+    "ja": {
+      "other": "XP +{count}%"
+    },
+    "id": {
+      "other": "XP +{count}%"
+    }
+  },
+  "Keep furniture within {count} meters of your character.": {
+    "en": {
+      "one": "Keep furniture within {count} meter of your character.",
+      "other": "Keep furniture within {count} meters of your character."
+    },
+    "cs": {
+      "one": "Nábytek musí být do {count} metru od tvé postavy.",
+      "few": "Nábytek musí být do {count} metrů od tvé postavy.",
+      "many": "Nábytek musí být do {count} metrů od tvé postavy.",
+      "other": "Nábytek musí být do {count} metrů od tvé postavy."
+    },
+    "de": {
+      "one": "Stelle Möbel innerhalb von {count} Meter um deinen Charakter auf.",
+      "other": "Stelle Möbel innerhalb von {count} Metern um deinen Charakter auf."
+    },
+    "es": {
+      "one": "Mantén los muebles a menos de {count} metro de tu personaje.",
+      "many": "Mantén los muebles a menos de {count} metros de tu personaje.",
+      "other": "Mantén los muebles a menos de {count} metros de tu personaje."
+    },
+    "fr": {
+      "one": "Gardez les meubles à moins de {count} mètre de votre personnage.",
+      "many": "Gardez les meubles à moins de {count} mètres de votre personnage.",
+      "other": "Gardez les meubles à moins de {count} mètres de votre personnage."
+    },
+    "pt": {
+      "one": "Mantenha os móveis a até {count} metro do seu personagem.",
+      "many": "Mantenha os móveis a até {count} metros do seu personagem.",
+      "other": "Mantenha os móveis a até {count} metros do seu personagem."
+    },
+    "zh": {
+      "other": "家具应位于角色周围 {count} 米以内。"
+    },
+    "hi": {
+      "one": "फर्नीचर को अपने पात्र से {count} मीटर के भीतर रखें।",
+      "other": "फर्नीचर को अपने पात्र से {count} मीटर के भीतर रखें।"
+    },
+    "ar": {
+      "zero": "ضع الأثاث ضمن {count} أمتار من شخصيتك.",
+      "one": "ضع الأثاث ضمن {count} متر من شخصيتك.",
+      "two": "ضع الأثاث ضمن {count} متر من شخصيتك.",
+      "few": "ضع الأثاث ضمن {count} أمتار من شخصيتك.",
+      "many": "ضع الأثاث ضمن {count} متراً من شخصيتك.",
+      "other": "ضع الأثاث ضمن {count} متر من شخصيتك."
+    },
+    "bn": {
+      "one": "চরিত্রের {count} মিটারের মধ্যে আসবাব রাখুন।",
+      "other": "চরিত্রের {count} মিটারের মধ্যে আসবাব রাখুন।"
+    },
+    "ru": {
+      "one": "Держите мебель в пределах {count} метра от персонажа.",
+      "few": "Держите мебель в пределах {count} метров от персонажа.",
+      "many": "Держите мебель в пределах {count} метров от персонажа.",
+      "other": "Держите мебель в пределах {count} метра от персонажа."
+    },
+    "ja": {
+      "other": "家具はキャラクターから {count} メートル以内に置いてください。"
+    },
+    "id": {
+      "other": "Letakkan perabot dalam jarak {count} meter dari karakter."
+    }
+  },
+  "Hearth gives its extra comfort only within {count} meters.": {
+    "en": {
+      "one": "Hearth gives its extra comfort only within {count} meter.",
+      "other": "Hearth gives its extra comfort only within {count} meters."
+    },
+    "cs": {
+      "one": "Hearth dává bonusový comfort jen do {count} metru.",
+      "few": "Hearth dává bonusový comfort jen do {count} metrů.",
+      "many": "Hearth dává bonusový comfort jen do {count} metrů.",
+      "other": "Hearth dává bonusový comfort jen do {count} metrů."
+    },
+    "de": {
+      "one": "Hearth gibt zusätzlichen Komfort nur innerhalb von {count} Meter.",
+      "other": "Hearth gibt zusätzlichen Komfort nur innerhalb von {count} Metern."
+    },
+    "es": {
+      "one": "Hearth da confort adicional solo a menos de {count} metro.",
+      "many": "Hearth da confort adicional solo a menos de {count} metros.",
+      "other": "Hearth da confort adicional solo a menos de {count} metros."
+    },
+    "fr": {
+      "one": "Hearth donne son confort supplémentaire dans un rayon de {count} mètre.",
+      "many": "Hearth donne son confort supplémentaire dans un rayon de {count} mètres.",
+      "other": "Hearth donne son confort supplémentaire dans un rayon de {count} mètres."
+    },
+    "pt": {
+      "one": "Hearth dá conforto extra apenas a até {count} metro.",
+      "many": "Hearth dá conforto extra apenas a até {count} metros.",
+      "other": "Hearth dá conforto extra apenas a até {count} metros."
+    },
+    "zh": {
+      "other": "Hearth 仅在 {count} 米以内提供额外舒适度。"
+    },
+    "hi": {
+      "one": "Hearth का अतिरिक्त आराम केवल {count} मीटर के भीतर मिलता है।",
+      "other": "Hearth का अतिरिक्त आराम केवल {count} मीटर के भीतर मिलता है।"
+    },
+    "ar": {
+      "zero": "تمنح Hearth راحة إضافية فقط ضمن {count} أمتار.",
+      "one": "تمنح Hearth راحة إضافية فقط ضمن {count} متر.",
+      "two": "تمنح Hearth راحة إضافية فقط ضمن {count} متر.",
+      "few": "تمنح Hearth راحة إضافية فقط ضمن {count} أمتار.",
+      "many": "تمنح Hearth راحة إضافية فقط ضمن {count} متراً.",
+      "other": "تمنح Hearth راحة إضافية فقط ضمن {count} متر."
+    },
+    "bn": {
+      "one": "Hearth-এর অতিরিক্ত আরাম শুধু {count} মিটারের মধ্যে মেলে।",
+      "other": "Hearth-এর অতিরিক্ত আরাম শুধু {count} মিটারের মধ্যে মেলে।"
+    },
+    "ru": {
+      "one": "Hearth даёт дополнительный комфорт только в пределах {count} метра.",
+      "few": "Hearth даёт дополнительный комфорт только в пределах {count} метров.",
+      "many": "Hearth даёт дополнительный комфорт только в пределах {count} метров.",
+      "other": "Hearth даёт дополнительный комфорт только в пределах {count} метра."
+    },
+    "ja": {
+      "other": "Hearth の追加快適度は {count} メートル以内で有効です。"
+    },
+    "id": {
+      "other": "Hearth memberi kenyamanan tambahan hanya dalam jarak {count} meter."
+    }
+  },
+  "Fires must be lit to provide comfort.": {
+    "en": "Fires must be lit to provide comfort.",
+    "cs": "Ohně musí hořet, aby dávaly comfort.",
+    "de": "Feuer müssen brennen, um Komfort zu geben.",
+    "es": "Los fuegos deben estar encendidos para dar confort.",
+    "fr": "Les feux doivent être allumés pour fournir du confort.",
+    "pt": "As fogueiras devem estar acesas para dar conforto.",
+    "zh": "火源必须点燃才能提供舒适度。",
+    "hi": "आराम देने के लिए आग जलनी चाहिए।",
+    "ar": "يجب إشعال النار لتوفير الراحة.",
+    "bn": "আরাম দিতে আগুন জ্বলতে হবে।",
+    "ru": "Огонь должен гореть, чтобы давать комфорт.",
+    "ja": "火は点火されている場合のみ快適度を与えます。",
+    "id": "Api harus menyala untuk memberi kenyamanan."
+  },
+  "Hot Tub provides comfort only when fueled and heated.": {
+    "en": "Hot Tub provides comfort only when fueled and heated.",
+    "cs": "Hot Tub dává comfort jen s palivem a zatopený.",
+    "de": "Hot Tub gibt Komfort nur mit Brennstoff und beheizt.",
+    "es": "Hot Tub da confort solo con combustible y calentado.",
+    "fr": "Hot Tub fournit du confort seulement avec du combustible et chauffé.",
+    "pt": "Hot Tub dá conforto apenas com combustível e aquecido.",
+    "zh": "Hot Tub 只有添加燃料并加热时才提供舒适度。",
+    "hi": "Hot Tub केवल ईंधन भरा और गरम होने पर आराम देता है।",
+    "ar": "تمنح Hot Tub الراحة فقط عند تزويدها بالوقود وتسخينها.",
+    "bn": "Hot Tub-এ জ্বালানি দিয়ে গরম করলেই আরাম মেলে।",
+    "ru": "Hot Tub даёт комфорт только с топливом и при нагреве.",
+    "ja": "Hot Tub は燃料を入れて加熱した場合のみ快適度を与えます。",
+    "id": "Hot Tub memberi kenyamanan hanya saat diisi bahan bakar dan dipanaskan."
+  },
+  "Only the highest comfort piece in each category counts.": {
+    "en": "Only the highest comfort piece in each category counts.",
+    "cs": "V každé kategorii se počítá jen kus s nejvyšším comfortem.",
+    "de": "In jeder Kategorie zählt nur das Möbel mit dem höchsten Komfort.",
+    "es": "Solo cuenta el objeto de mayor confort de cada categoría.",
+    "fr": "Seul l’objet au confort le plus élevé de chaque catégorie compte.",
+    "pt": "Só conta o item de maior conforto em cada categoria.",
+    "zh": "每个类别仅计入舒适度最高的物品。",
+    "hi": "हर श्रेणी में केवल सबसे अधिक आराम वाली वस्तु गिनी जाती है।",
+    "ar": "تُحسب فقط القطعة ذات أعلى راحة في كل فئة.",
+    "bn": "প্রতি বিভাগে সবচেয়ে বেশি আরাম দেওয়া জিনিসই গণনা হয়।",
+    "ru": "В каждой категории учитывается только самый комфортный предмет.",
+    "ja": "各カテゴリで快適度が最も高い家具だけが計算されます。",
+    "id": "Hanya perabot dengan kenyamanan tertinggi di tiap kategori yang dihitung."
+  },
+  "A Campfire in a dungeon entrance can restore a {count}-minute Rested effect.": {
+    "en": {
+      "one": "A Campfire in a dungeon entrance can restore a {count}-minute Rested effect.",
+      "other": "A Campfire in a dungeon entrance can restore a {count}-minute Rested effect."
+    },
+    "cs": {
+      "one": "Campfire u vchodu do dungeonu může obnovit Rested na {count} minutu.",
+      "few": "Campfire u vchodu do dungeonu může obnovit Rested na {count} minuty.",
+      "many": "Campfire u vchodu do dungeonu může obnovit Rested na {count} minuty.",
+      "other": "Campfire u vchodu do dungeonu může obnovit Rested na {count} minut."
+    },
+    "de": {
+      "one": "Ein Campfire am Dungeon-Eingang kann Rested für {count} Minute erneuern.",
+      "other": "Ein Campfire am Dungeon-Eingang kann Rested für {count} Minuten erneuern."
+    },
+    "es": {
+      "one": "Un Campfire en la entrada de una mazmorra puede renovar Rested por {count} minuto.",
+      "many": "Un Campfire en la entrada de una mazmorra puede renovar Rested por {count} minutos.",
+      "other": "Un Campfire en la entrada de una mazmorra puede renovar Rested por {count} minutos."
+    },
+    "fr": {
+      "one": "Un Campfire à l’entrée d’un donjon peut renouveler Rested pour {count} minute.",
+      "many": "Un Campfire à l’entrée d’un donjon peut renouveler Rested pour {count} minutes.",
+      "other": "Un Campfire à l’entrée d’un donjon peut renouveler Rested pour {count} minutes."
+    },
+    "pt": {
+      "one": "Um Campfire na entrada de uma masmorra pode renovar Rested por {count} minuto.",
+      "many": "Um Campfire na entrada de uma masmorra pode renovar Rested por {count} minutos.",
+      "other": "Um Campfire na entrada de uma masmorra pode renovar Rested por {count} minutos."
+    },
+    "zh": {
+      "other": "地牢入口的 Campfire 可恢复 {count} 分钟的 Rested 效果。"
+    },
+    "hi": {
+      "one": "कालकोठरी के प्रवेश पर Campfire से {count} मिनट का Rested मिल सकता है।",
+      "other": "कालकोठरी के प्रवेश पर Campfire से {count} मिनट का Rested मिल सकता है।"
+    },
+    "ar": {
+      "zero": "يمكن أن تستعيد Rested لمدة {count} دقائق عند Campfire في مدخل زنزانة.",
+      "one": "يمكن أن تستعيد Rested لمدة {count} دقيقة عند Campfire في مدخل زنزانة.",
+      "two": "يمكن أن تستعيد Rested لمدة {count} دقيقة عند Campfire في مدخل زنزانة.",
+      "few": "يمكن أن تستعيد Rested لمدة {count} دقائق عند Campfire في مدخل زنزانة.",
+      "many": "يمكن أن تستعيد Rested لمدة {count} دقيقة عند Campfire في مدخل زنزانة.",
+      "other": "يمكن أن تستعيد Rested لمدة {count} دقيقة عند Campfire في مدخل زنزانة."
+    },
+    "bn": {
+      "one": "ডানজিয়নের প্রবেশে Campfire থেকে {count} মিনিটের Rested পাওয়া যায়।",
+      "other": "ডানজিয়নের প্রবেশে Campfire থেকে {count} মিনিটের Rested পাওয়া যায়।"
+    },
+    "ru": {
+      "one": "Campfire у входа в подземелье даёт Rested на {count} минуту.",
+      "few": "Campfire у входа в подземелье даёт Rested на {count} минуты.",
+      "many": "Campfire у входа в подземелье даёт Rested на {count} минут.",
+      "other": "Campfire у входа в подземелье даёт Rested на {count} минуты."
+    },
+    "ja": {
+      "other": "ダンジョン入口の Campfire で {count} 分間の Rested を更新できます。"
+    },
+    "id": {
+      "other": "Campfire di pintu masuk dungeon dapat memulihkan Rested selama {count} menit."
+    }
+  },
+  "Wet prevents Resting, except while sitting in a Hot Tub.": {
+    "en": "Wet prevents Resting, except while sitting in a Hot Tub.",
+    "cs": "Wet brání Resting, kromě sezení v Hot Tub.",
+    "de": "Wet verhindert Resting, außer beim Sitzen in einem Hot Tub.",
+    "es": "Wet impide Resting, salvo al sentarse en un Hot Tub.",
+    "fr": "Wet empêche Resting, sauf en étant assis dans un Hot Tub.",
+    "pt": "Wet impede Resting, exceto sentado em um Hot Tub.",
+    "zh": "Wet 会阻止 Resting，但坐在 Hot Tub 中时除外。",
+    "hi": "Wet के दौरान Resting नहीं मिलता, सिवाय Hot Tub में बैठने के।",
+    "ar": "تمنع Wet تأثير Resting، إلا أثناء الجلوس في Hot Tub.",
+    "bn": "Hot Tub-এ বসা ছাড়া Wet অবস্থায় Resting হয় না।",
+    "ru": "Wet мешает Resting, кроме сидения в Hot Tub.",
+    "ja": "Wet 状態では Hot Tub に座っている場合を除き Resting を得られません。",
+    "id": "Wet mencegah Resting, kecuali saat duduk dalam Hot Tub."
+  },
+  "Rested lasts {count} minutes plus your comfort level.": {
+    "en": {
+      "one": "Rested lasts {count} minute plus your comfort level.",
+      "other": "Rested lasts {count} minutes plus your comfort level."
+    },
+    "cs": {
+      "one": "Rested trvá {count} minutu plus tvůj comfort.",
+      "few": "Rested trvá {count} minuty plus tvůj comfort.",
+      "many": "Rested trvá {count} minuty plus tvůj comfort.",
+      "other": "Rested trvá {count} minut plus tvůj comfort."
+    },
+    "de": {
+      "one": "Rested dauert {count} Minute plus dein Komfortlevel.",
+      "other": "Rested dauert {count} Minuten plus dein Komfortlevel."
+    },
+    "es": {
+      "one": "Rested dura {count} minuto más tu nivel de confort.",
+      "many": "Rested dura {count} minutos más tu nivel de confort.",
+      "other": "Rested dura {count} minutos más tu nivel de confort."
+    },
+    "fr": {
+      "one": "Rested dure {count} minute plus votre niveau de confort.",
+      "many": "Rested dure {count} minutes plus votre niveau de confort.",
+      "other": "Rested dure {count} minutes plus votre niveau de confort."
+    },
+    "pt": {
+      "one": "Rested dura {count} minuto mais seu nível de conforto.",
+      "many": "Rested dura {count} minutos mais seu nível de conforto.",
+      "other": "Rested dura {count} minutos mais seu nível de conforto."
+    },
+    "zh": {
+      "other": "Rested 持续 {count} 分钟加上舒适度等级。"
+    },
+    "hi": {
+      "one": "Rested की अवधि {count} मिनट और आपके आराम स्तर का योग है।",
+      "other": "Rested की अवधि {count} मिनट और आपके आराम स्तर का योग है।"
+    },
+    "ar": {
+      "zero": "تستمر Rested لمدة {count} دقائق إضافة إلى مستوى راحتك.",
+      "one": "تستمر Rested لمدة {count} دقيقة إضافة إلى مستوى راحتك.",
+      "two": "تستمر Rested لمدة {count} دقيقة إضافة إلى مستوى راحتك.",
+      "few": "تستمر Rested لمدة {count} دقائق إضافة إلى مستوى راحتك.",
+      "many": "تستمر Rested لمدة {count} دقيقة إضافة إلى مستوى راحتك.",
+      "other": "تستمر Rested لمدة {count} دقيقة إضافة إلى مستوى راحتك."
+    },
+    "bn": {
+      "one": "Rested-এর সময় {count} মিনিটের সঙ্গে আরামের স্তর যোগ করে পাওয়া যায়।",
+      "other": "Rested-এর সময় {count} মিনিটের সঙ্গে আরামের স্তর যোগ করে পাওয়া যায়।"
+    },
+    "ru": {
+      "one": "Rested длится {count} минуту плюс уровень комфорта.",
+      "few": "Rested длится {count} минуты плюс уровень комфорта.",
+      "many": "Rested длится {count} минут плюс уровень комфорта.",
+      "other": "Rested длится {count} минуты плюс уровень комфорта."
+    },
+    "ja": {
+      "other": "Rested は {count} 分に快適度の値を足した時間持続します。"
+    },
+    "id": {
+      "other": "Rested berlangsung selama {count} menit ditambah tingkat kenyamanan."
+    }
+  },
+  "Rest for {count} uninterrupted seconds, away from hostile creatures, to gain Rested.": {
+    "en": {
+      "one": "Rest for {count} uninterrupted second, away from hostile creatures, to gain Rested.",
+      "other": "Rest for {count} uninterrupted seconds, away from hostile creatures, to gain Rested."
+    },
+    "cs": {
+      "one": "Pro Rested odpočívej {count} sekundu bez přerušení a mimo dosah nepřátel.",
+      "few": "Pro Rested odpočívej {count} sekundy bez přerušení a mimo dosah nepřátel.",
+      "many": "Pro Rested odpočívej {count} sekundy bez přerušení a mimo dosah nepřátel.",
+      "other": "Pro Rested odpočívej {count} sekund bez přerušení a mimo dosah nepřátel."
+    },
+    "de": {
+      "one": "Ruhe für Rested {count} Sekunde ununterbrochen fern von feindlichen Kreaturen.",
+      "other": "Ruhe für Rested {count} Sekunden ununterbrochen fern von feindlichen Kreaturen."
+    },
+    "es": {
+      "one": "Descansa {count} segundo sin interrupciones, lejos de enemigos, para obtener Rested.",
+      "many": "Descansa {count} segundos sin interrupciones, lejos de enemigos, para obtener Rested.",
+      "other": "Descansa {count} segundos sin interrupciones, lejos de enemigos, para obtener Rested."
+    },
+    "fr": {
+      "one": "Reposez-vous {count} seconde sans interruption, loin des ennemis, pour obtenir Rested.",
+      "many": "Reposez-vous {count} secondes sans interruption, loin des ennemis, pour obtenir Rested.",
+      "other": "Reposez-vous {count} secondes sans interruption, loin des ennemis, pour obtenir Rested."
+    },
+    "pt": {
+      "one": "Descanse {count} segundo sem interrupção, longe de inimigos, para obter Rested.",
+      "many": "Descanse {count} segundos sem interrupção, longe de inimigos, para obter Rested.",
+      "other": "Descanse {count} segundos sem interrupção, longe de inimigos, para obter Rested."
+    },
+    "zh": {
+      "other": "远离敌对生物，连续休息 {count} 秒以获得 Rested。"
+    },
+    "hi": {
+      "one": "Rested पाने के लिए शत्रुओं से दूर {count} सेकंड बिना रुके आराम करें।",
+      "other": "Rested पाने के लिए शत्रुओं से दूर {count} सेकंड बिना रुके आराम करें।"
+    },
+    "ar": {
+      "zero": "استرح {count} ثانية متواصلة بعيداً عن المخلوقات المعادية للحصول على Rested.",
+      "one": "استرح {count} ثانية متواصلة بعيداً عن المخلوقات المعادية للحصول على Rested.",
+      "two": "استرح {count} ثانية متواصلة بعيداً عن المخلوقات المعادية للحصول على Rested.",
+      "few": "استرح {count} ثوانٍ متواصلة بعيداً عن المخلوقات المعادية للحصول على Rested.",
+      "many": "استرح {count} ثانية متواصلة بعيداً عن المخلوقات المعادية للحصول على Rested.",
+      "other": "استرح {count} ثانية متواصلة بعيداً عن المخلوقات المعادية للحصول على Rested."
+    },
+    "bn": {
+      "one": "Rested পেতে শত্রুদের থেকে দূরে টানা {count} সেকেন্ড বিশ্রাম নিন।",
+      "other": "Rested পেতে শত্রুদের থেকে দূরে টানা {count} সেকেন্ড বিশ্রাম নিন।"
+    },
+    "ru": {
+      "one": "Для Rested отдыхайте {count} секунду без перерыва вдали от врагов.",
+      "few": "Для Rested отдыхайте {count} секунды без перерыва вдали от врагов.",
+      "many": "Для Rested отдыхайте {count} секунд без перерыва вдали от врагов.",
+      "other": "Для Rested отдыхайте {count} секунды без перерыва вдали от врагов."
+    },
+    "ja": {
+      "other": "敵から離れて {count} 秒間中断せず休むと Rested を得られます。"
+    },
+    "id": {
+      "other": "Beristirahatlah {count} detik tanpa gangguan, jauh dari musuh, untuk mendapat Rested."
+    }
+  },
+  "Recipe": {
+    "en": "Recipe",
+    "cs": "Recept",
+    "de": "Rezept",
+    "es": "Receta",
+    "fr": "Recette",
+    "pt": "Receita",
+    "zh": "配方",
+    "hi": "विधि",
+    "ar": "الوصفة",
+    "bn": "রেসিপি",
+    "ru": "Рецепт",
+    "ja": "レシピ",
+    "id": "Resep"
+  },
+  "Without shelter, sitting near a fire caps comfort at {count}.": {
+    "en": {
+      "one": "Without shelter, sitting near a fire caps comfort at {count}.",
+      "other": "Without shelter, sitting near a fire caps comfort at {count}."
+    },
+    "cs": {
+      "one": "Bez střechy je comfort při sezení u ohně nejvýše {count}.",
+      "few": "Bez střechy je comfort při sezení u ohně nejvýše {count}.",
+      "many": "Bez střechy je comfort při sezení u ohně nejvýše {count}.",
+      "other": "Bez střechy je comfort při sezení u ohně nejvýše {count}."
+    },
+    "de": {
+      "one": "Ohne Schutz ist der Komfort beim Sitzen am Feuer auf {count} begrenzt.",
+      "other": "Ohne Schutz ist der Komfort beim Sitzen am Feuer auf {count} begrenzt."
+    },
+    "es": {
+      "one": "Sin techo, sentarse junto a un fuego limita el confort a {count}.",
+      "many": "Sin techo, sentarse junto a un fuego limita el confort a {count}.",
+      "other": "Sin techo, sentarse junto a un fuego limita el confort a {count}."
+    },
+    "fr": {
+      "one": "Sans abri, s’asseoir près du feu limite le confort à {count}.",
+      "many": "Sans abri, s’asseoir près du feu limite le confort à {count}.",
+      "other": "Sans abri, s’asseoir près du feu limite le confort à {count}."
+    },
+    "pt": {
+      "one": "Sem abrigo, sentar perto do fogo limita o conforto a {count}.",
+      "many": "Sem abrigo, sentar perto do fogo limita o conforto a {count}.",
+      "other": "Sem abrigo, sentar perto do fogo limita o conforto a {count}."
+    },
+    "zh": {
+      "other": "没有遮蔽时，坐在火旁的舒适度最多为{count}。"
+    },
+    "hi": {
+      "one": "आश्रय के बिना आग के पास बैठने पर आराम अधिकतम {count} है।",
+      "other": "आश्रय के बिना आग के पास बैठने पर आराम अधिकतम {count} है।"
+    },
+    "ar": {
+      "zero": "بدون مأوى، الجلوس قرب النار يحد الراحة بـ{count}.",
+      "one": "بدون مأوى، الجلوس قرب النار يحد الراحة بـ{count}.",
+      "two": "بدون مأوى، الجلوس قرب النار يحد الراحة بـ{count}.",
+      "few": "بدون مأوى، الجلوس قرب النار يحد الراحة بـ{count}.",
+      "many": "بدون مأوى، الجلوس قرب النار يحد الراحة بـ{count}.",
+      "other": "بدون مأوى، الجلوس قرب النار يحد الراحة بـ{count}."
+    },
+    "bn": {
+      "one": "আশ্রয় ছাড়া আগুনের পাশে বসলে আরাম সর্বোচ্চ {count}।",
+      "other": "আশ্রয় ছাড়া আগুনের পাশে বসলে আরাম সর্বোচ্চ {count}।"
+    },
+    "ru": {
+      "one": "Без крыши комфорт у огня ограничен {count}.",
+      "few": "Без крыши комфорт у огня ограничен {count}.",
+      "many": "Без крыши комфорт у огня ограничен {count}.",
+      "other": "Без крыши комфорт у огня ограничен {count}."
+    },
+    "ja": {
+      "other": "屋根なしで火の近くに座ると快適度は{count}までです。"
+    },
+    "id": {
+      "other": "Tanpa perlindungan, duduk dekat api membatasi kenyamanan menjadi {count}."
+    }
+  }
+}

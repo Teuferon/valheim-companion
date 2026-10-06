@@ -2229,5 +2229,20 @@ globalThis.VC_MESSAGES = {
     "id": {
       "other": "{count} jam"
     }
+  },
+  "Plan your comfort → Comfort Planner": {
+    "en": "Plan your comfort → Comfort Planner",
+    "cs": "Naplánuj svůj comfort → Comfort Planner",
+    "de": "Plane deinen Komfort → Comfort Planner",
+    "es": "Planifica tu confort → Comfort Planner",
+    "fr": "Planifiez votre confort → Comfort Planner",
+    "pt": "Planeje seu conforto → Comfort Planner",
+    "zh": "规划舒适度 → Comfort Planner",
+    "hi": "अपना आराम तय करें → Comfort Planner",
+    "ar": "خطط لراحتك → Comfort Planner",
+    "bn": "আরামের পরিকল্পনা করুন → Comfort Planner",
+    "ru": "Планируйте комфорт → Comfort Planner",
+    "ja": "快適度を計画 → Comfort Planner",
+    "id": "Rencanakan kenyamanan → Comfort Planner"
   }
 };

@@ -42,6 +42,11 @@ COPY apps/provisions/assets/ /usr/share/nginx/html/provisions/assets/
 COPY apps/provisions/locales/messages.js /usr/share/nginx/html/provisions/locales/messages.js
 COPY apps/provisions/data/data.js /usr/share/nginx/html/provisions/data/data.js
 COPY apps/provisions/img/ /usr/share/nginx/html/provisions/img/
+COPY apps/comfort/index.html /usr/share/nginx/html/comfort/
+COPY apps/comfort/assets/ /usr/share/nginx/html/comfort/assets/
+COPY apps/comfort/locales/messages.js /usr/share/nginx/html/comfort/locales/messages.js
+COPY apps/comfort/data/data.js /usr/share/nginx/html/comfort/data/data.js
+COPY apps/comfort/img/ /usr/share/nginx/html/comfort/img/
 COPY --from=signs /repo/apps/signs/dist-static/ /usr/share/nginx/html/signs/
 COPY --from=damage-calculator /repo/apps/damage-calculator/dist-static/ /usr/share/nginx/html/damage-calculator/
 EXPOSE 80

@@ -52,6 +52,7 @@ export function renderOgImages() {
     'signs',
     'progress',
     'provisions',
+    'comfort',
   ];
 
   const renderedFiles = [];

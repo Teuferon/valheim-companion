@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- meta:start -->
+  <title>Comfort Planner — Valheim Companion</title>
+  <meta name="description" content="Build the coziest Valheim base you can right now — comfort, Rested time and the full shopping list.">
+  <link rel="canonical" href="https://valheim-companion.teuferon.click/comfort/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Valheim Companion">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Comfort Planner — Valheim Companion">
+  <meta property="og:description" content="Build the coziest Valheim base you can right now — comfort, Rested time and the full shopping list.">
+  <meta property="og:url" content="https://valheim-companion.teuferon.click/comfort/">
+  <meta property="og:image" content="https://valheim-companion.teuferon.click/og/comfort.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Comfort Planner — Valheim Companion">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Comfort Planner — Valheim Companion">
+  <meta name="twitter:description" content="Build the coziest Valheim base you can right now — comfort, Rested time and the full shopping list.">
+  <meta name="twitter:image" content="https://valheim-companion.teuferon.click/og/comfort.png">
+  <meta name="theme-color" content="#0f1216">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="vc-ga" content="G-CXQVNCCJKE">
+  <meta name="vc-site" content="https://valheim-companion.teuferon.click">
+  <script src="/shared/analytics/consent.js" defer></script>
+  <script src="/shared/progress/ui.js" defer></script>
+  <script src="/shared/progress/drawer.js" defer></script>
+  <!-- meta:end -->
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="/shared/i18n/languages.js" defer></script>
+  <script src="/shared/i18n/core.js" defer></script>
+  <script src="locales/messages.js" defer></script>
+  <script src="data/data.js" defer></script>
+  <script src="/shared/progress/core.js" defer></script>
+  <script src="/shared/shopping/core.js" defer></script>
+  <script src="assets/planner.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="page-header">
+      <div class="top-bar"><a href="/" data-i18n="← Valheim Companion">← Valheim Companion</a><div id="language-picker"></div></div>
+      <h1>Comfort Planner</h1>
+      <p class="subtitle" data-i18n="Build the coziest base you can right now — comfort, Rested time and the full shopping list.">Build the coziest base you can right now — comfort, Rested time and the full shopping list.</p>
+    </header>
+    <main>
+      <section id="summary" class="summary" aria-live="polite" aria-label="Comfort and Rested" data-i18n-attr="aria-label:Comfort and Rested"></section>
+      <section id="controls" class="controls" aria-label="Build controls" data-i18n-attr="aria-label:Build controls"></section>
+      <div class="comfort-layout">
+        <div class="comfort-main">
+          <section id="upgrades" class="upgrades" aria-labelledby="upgrades-title"></section>
+          <div id="catalog" aria-label="Catalog" data-i18n-attr="aria-label:Catalog"></div>
+          <section id="tips" class="tips" aria-labelledby="tips-title"></section>
+        </div>
+        <aside id="shopping-panel" class="shopping-panel" aria-labelledby="shopping-title">
+          <div class="panel-heading"><h2 id="shopping-title" data-i18n="Shopping list">Shopping list</h2><button id="close-shopping" class="mobile-close" type="button" data-i18n="Close">Close</button></div>
+          <div id="shopping-content"></div>
+        </aside>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <p data-i18n="Fan project, not affiliated with Iron Gate. Data: Valheim Wiki (CC BY-SA 4.0).">Fan project, not affiliated with Iron Gate. Data: Valheim Wiki (CC BY-SA 4.0).</p>
+      <p class="support"><span><strong data-i18n="Free, ad-free and made in my spare time.">Free, ad-free and made in my spare time.</strong> <span data-i18n="If it helped your run, you can buy me a coffee.">If it helped your run, you can buy me a coffee.</span></span><a href="https://ko-fi.com/N2A528ACE3" target="_blank" rel="noopener noreferrer"><img src="/support/kofi.png" width="143" height="36" loading="lazy" alt="Buy Me a Coffee at ko-fi.com" data-i18n-attr="alt:Buy Me a Coffee at ko-fi.com"></a></p>
+    </footer>
+  </div>
+  <button id="shopping-backdrop" class="shopping-backdrop" type="button" hidden aria-label="Close" data-i18n-attr="aria-label:Close"></button>
+  <div class="mobile-bar"><button id="open-shopping" type="button" aria-controls="shopping-panel" aria-expanded="false"><span data-i18n="Shopping list">Shopping list</span><span id="mobile-summary"></span></button></div>
+  <p id="notice" class="notice" role="status" aria-live="polite"></p>
+</body>
+</html>
