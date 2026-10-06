@@ -33,6 +33,12 @@
       desc: 'Tick off bosses, biomes and key drops — every Valheim Companion tool unlocks spoilers as you progress.',
       bg: '../../bestiary/img/biomes/meadows.png',
     },
+    provisions: {
+      title: 'PROVISIONS',
+      sub: 'Valheim Companion',
+      desc: 'Plan your Valheim food and meads for the next trip — stats, servings and the full shopping list, with crafting stations and ingredient sources.',
+      bg: '../../bestiary/img/biomes/plains.png',
+    },
     signs: {
       title: 'SIGN EDITOR (RUNOPIS)',
       sub: 'Valheim Companion',

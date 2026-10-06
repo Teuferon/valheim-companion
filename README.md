@@ -7,6 +7,7 @@ Tools for your Valheim journey:
 - **Smithy**: Armor, weapons and shields by biome. Pick pieces and upgrade levels — get the full shopping list, smelting plan and where to farm it.
 - **Damage Calculator**: Pick a target and a weapon, set the upgrade level and see the damage that actually lands — resistances applied, with DPS, time-to-kill and a biome progression slider.
 - **Progress Tracker**: Track visited biomes, defeated bosses and non-trophy boss drops. Locked biomes hide spoilers; share your checklist between devices with a URL. Available in 13 languages.
+- **Provisions**: Plan three different foods and up to four meads for a trip. Compare health, stamina and eitr, calculate servings for 0.5–10 hours, and get a shopping list with ingredient sources, crafting stations and missing Cauldron upgrades. Follows your progress and supports all 13 languages.
 - **Sign Editor (Runopis)**: Rich-text editor for Valheim signs with colors, formatting, live preview and copy to game in 13 languages.
 
 ## Project Structure
@@ -16,6 +17,8 @@ Tools for your Valheim journey:
 - `apps/smithy/`: Smithy static application (`/smithy/`)
 - `apps/damage-calculator/`: Damage calculator SPA (`/damage-calculator/`)
 - `apps/progress/`: Progress Tracker static application (`/progress/`)
+- `apps/provisions/`: Food, feast and mead planner (`/provisions/`)
+- `shared/shopping/`: Pure shopping-list calculations shared by Smithy and Provisions (`VCShopping`)
 - `shared/progress/`: Classic-script progress API (`VCProgress`), versioned state in `vc.progress`
 - `apps/signs/`: Runopis sign editor SPA (`/signs/`)
 - `shared/analytics/`: Google Analytics 4 Consent Mode v2 banner and manager
@@ -42,6 +45,7 @@ Run tests:
 
 ```sh
 npm test
+node --test apps/provisions/planner.test.mjs  # loadout, servings, shopping, sharing and locale coverage
 ```
 
 ## Docker / EasyPanel
@@ -61,7 +65,7 @@ Locally:
 docker compose up --build -d   # http://localhost:8080
 ```
 
-`deploy/nginx.conf` sets strict security headers and location routing for `/`, `/bestiary/`, `/damage-calculator/`, `/smithy/`, `/progress/` and `/signs/`.
+`deploy/nginx.conf` sets strict security headers and location routing for `/`, `/bestiary/`, `/damage-calculator/`, `/smithy/`, `/progress/`, `/provisions/` and `/signs/`.
 
 ## Data
 
@@ -75,6 +79,12 @@ npm run data              # weapons, recommendations, apps/bestiary/data/data.js
 Progress data is generated during the site build, or separately with `node scripts/build-progress-data.mjs`. It reads `data/biomes.json` and `data/creatures.json`; the complete non-trophy boss-drop checklist is documented in `data/report-progress.md`. Images reuse Bestiary and Smithy assets.
 
 Manual fixes go in `data/overrides.json`.
+
+## Provisions loadout
+
+`vp.loadout` stores a versioned selection of up to three unique food IDs, four unique meads with continuous or on-demand usage, trip hours, the ingredient breakdown preference and the owned Cauldron level. `#l=<base64url>` shares this state; a valid URL selection takes precedence over local storage. Invalid IDs, duplicates and out-of-range values are sanitized.
+
+Food servings are `ceil(hours × 3600 / duration)`. Continuous mead usage uses the greater of duration and cooldown; on-demand meads use a manually entered quantity. Product batches round up to complete recipes, including feast servings and fermentation yields. `VCShopping` calculates ingredients and their proportional recipe breakdown. Station construction and missing Cauldron upgrade materials appear separately from food ingredients. Love Potion has no crafting recipe in the current dataset and appears as a finished item to acquire.
 
 ## Progress state
 

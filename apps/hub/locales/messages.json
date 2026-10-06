@@ -523,5 +523,35 @@
     "ru": "Следует твоему прогрессу",
     "ja": "進行状況に連動",
     "id": "Mengikuti progresmu"
+  },
+  "Plan your food and meads for the next trip — stats, servings and the full shopping list.": {
+    "en": "Plan your food and meads for the next trip — stats, servings and the full shopping list.",
+    "cs": "Naplánujte jídlo a medoviny na další výpravu — statistiky, porce a úplný nákupní seznam.",
+    "de": "Plane Essen und Met für die nächste Reise — Werte, Portionen und die komplette Einkaufsliste.",
+    "es": "Planifica comida e hidromiel para tu próxima expedición: estadísticas, raciones y lista de compras completa.",
+    "fr": "Préparez nourriture et hydromels pour votre prochaine expédition : statistiques, portions et liste de courses complète.",
+    "pt": "Planeje comida e hidroméis para a próxima viagem — atributos, porções e lista de compras completa.",
+    "zh": "规划下次旅程的食物和蜜酒——属性、份数和完整采购清单。",
+    "hi": "अगली यात्रा के लिए भोजन और मीड की योजना बनाएँ — आँकड़े, परोसने की संख्या और पूरी खरीद सूची।",
+    "ar": "خطط للطعام وشراب العسل لرحلتك القادمة — الإحصاءات والحصص وقائمة التسوق الكاملة.",
+    "bn": "পরের যাত্রার খাবার ও মীড পরিকল্পনা করুন — পরিসংখ্যান, পরিবেশন ও সম্পূর্ণ কেনাকাটার তালিকা।",
+    "ru": "Планируйте еду и медовуху для следующего похода — характеристики, порции и полный список покупок.",
+    "ja": "次の旅の食事と蜂蜜酒を計画しましょう。能力値、食数、買い物リストをまとめて確認。",
+    "id": "Rencanakan makanan dan mead untuk perjalanan berikutnya — statistik, porsi, dan daftar belanja lengkap."
+  },
+  "Open Provisions →": {
+    "en": "Open Provisions →",
+    "cs": "Otevřít Provisions →",
+    "de": "Provisions öffnen →",
+    "es": "Abrir Provisions →",
+    "fr": "Ouvrir Provisions →",
+    "pt": "Abrir Provisions →",
+    "zh": "打开 Provisions →",
+    "hi": "Provisions खोलें →",
+    "ar": "افتح Provisions →",
+    "bn": "Provisions খুলুন →",
+    "ru": "Открыть Provisions →",
+    "ja": "Provisions を開く →",
+    "id": "Buka Provisions →"
   }
 }

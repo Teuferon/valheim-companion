@@ -1,0 +1,3219 @@
+[
+  {
+    "id": "ashlands-gourmet-bowl",
+    "name": "Ashlands Gourmet Bowl",
+    "names": {
+      "cs": "Gurmánská mísa ze země popela",
+      "ru": "Пир из Пепельных земель"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Ashlands_Gourmet_Bowl",
+    "image": "img/food/ashlands-gourmet-bowl.png",
+    "health": 75,
+    "stamina": 75,
+    "eitr": 38,
+    "duration": 3000,
+    "healing": {
+      "amount": 6,
+      "interval": null
+    },
+    "station": "food-preparation-table",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "cooked-asksvin-tail",
+        "amount": 3
+      },
+      {
+        "item": "vineberry-cluster",
+        "amount": 5
+      },
+      {
+        "item": "scorching-medley",
+        "amount": 2
+      },
+      {
+        "item": "fiery-spice-powder",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "deep-north",
+    "tier": 9,
+    "isFeast": true,
+    "servings": 10
+  },
+  {
+    "id": "baked-poteitr",
+    "name": "Baked Poteitr",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Baked_Poteitr",
+    "image": "img/food/baked-poteitr.png",
+    "health": 34,
+    "stamina": 17,
+    "eitr": 100,
+    "duration": 1500,
+    "healing": {
+      "amount": 5,
+      "interval": null
+    },
+    "station": "oven",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "unbaked-poteitr",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "deep-north",
+    "tier": 9,
+    "isFeast": false
+  },
+  {
+    "id": "black-forest-buffet-platter",
+    "name": "Black Forest Buffet Platter",
+    "names": {
+      "cs": "Obložený talíř z černého lesa",
+      "ru": "Деликатесы Черного леса"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Black_Forest_Buffet_Platter",
+    "image": "img/food/black-forest-buffet-platter.png",
+    "health": 35,
+    "stamina": 35,
+    "eitr": 0,
+    "duration": 3000,
+    "healing": {
+      "amount": 3,
+      "interval": null
+    },
+    "station": "food-preparation-table",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "deer-stew",
+        "amount": 3
+      },
+      {
+        "item": "thistle",
+        "amount": 5
+      },
+      {
+        "item": "queen-s-jam",
+        "amount": 4
+      },
+      {
+        "item": "woodland-herb-blend",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "swamp",
+    "tier": 4,
+    "isFeast": true,
+    "servings": 10
+  },
+  {
+    "id": "black-soup",
+    "name": "Black Soup",
+    "names": {
+      "cs": "Černá polévka",
+      "ru": "Черный суп"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Black_Soup",
+    "image": "img/food/black-soup.png",
+    "health": 50,
+    "stamina": 17,
+    "eitr": 0,
+    "duration": 1200,
+    "healing": {
+      "amount": 3,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 2,
+    "materials": [
+      {
+        "item": "bloodbag",
+        "amount": 1
+      },
+      {
+        "item": "honey",
+        "amount": 1
+      },
+      {
+        "item": "turnip",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "swamp",
+    "tier": 4,
+    "isFeast": false
+  },
+  {
+    "id": "blood-pudding",
+    "name": "Blood Pudding",
+    "names": {
+      "cs": "Krvavý puding",
+      "fr": "Boudin",
+      "ru": "Кровяная колбаса"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Blood_Pudding",
+    "image": "img/food/blood-pudding.png",
+    "health": 25,
+    "stamina": 75,
+    "eitr": 0,
+    "duration": 1800,
+    "healing": {
+      "amount": 2,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 4,
+    "materials": [
+      {
+        "item": "thistle",
+        "amount": 2
+      },
+      {
+        "item": "bloodbag",
+        "amount": 2
+      },
+      {
+        "item": "barley-flour",
+        "amount": 4
+      }
+    ],
+    "yields": 1,
+    "biome": "plains",
+    "tier": 6,
+    "isFeast": false
+  },
+  {
+    "id": "blue-mushroom",
+    "name": "Blue mushroom",
+    "names": {
+      "ru": "Голубой гриб"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Blue_mushroom",
+    "image": "img/food/blue-mushroom.png",
+    "health": 20,
+    "stamina": 20,
+    "eitr": 0,
+    "duration": 600,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [],
+    "yields": 1,
+    "biome": null,
+    "tier": null,
+    "isFeast": false,
+    "availability": "console-only"
+  },
+  {
+    "id": "blueberries",
+    "name": "Blueberries",
+    "names": {
+      "cs": "Borůvky",
+      "de": "Blaubeeren",
+      "fr": "Myrtilles",
+      "ru": "Черника"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Blueberries",
+    "image": "img/food/blueberries.png",
+    "health": 8,
+    "stamina": 25,
+    "eitr": 0,
+    "duration": 600,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [],
+    "yields": 1,
+    "biome": "black-forest",
+    "tier": 2,
+    "isFeast": false
+  },
+  {
+    "id": "boar-jerky",
+    "name": "Boar Jerky",
+    "names": {
+      "ru": "Вяленая кабанина"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Boar_Jerky",
+    "image": "img/food/boar-jerky.png",
+    "health": 23,
+    "stamina": 23,
+    "eitr": 0,
+    "duration": 1800,
+    "healing": {
+      "amount": 2,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "boar-meat",
+        "amount": 1
+      },
+      {
+        "item": "honey",
+        "amount": 1
+      }
+    ],
+    "yields": 2,
+    "biome": "meadows",
+    "tier": 1,
+    "isFeast": false
+  },
+  {
+    "id": "bread",
+    "name": "Bread",
+    "names": {
+      "cs": "Chleba",
+      "ru": "Хлеб"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Bread",
+    "image": "img/food/bread.png",
+    "health": 23,
+    "stamina": 70,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 2,
+      "interval": null
+    },
+    "station": "oven",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "bread-dough",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "plains",
+    "tier": 6,
+    "isFeast": false
+  },
+  {
+    "id": "bukeperries",
+    "name": "Bukeperries",
+    "names": {
+      "cs": "Grcinky",
+      "de": "Brechbeeren",
+      "fr": "Dégobibaies",
+      "ru": "Тошника"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Bukeperries",
+    "image": "img/food/bukeperries.png",
+    "health": 0,
+    "stamina": 0,
+    "eitr": 0,
+    "duration": 15,
+    "healing": {
+      "amount": null,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [],
+    "yields": 1,
+    "biome": "plains",
+    "tier": 6,
+    "isFeast": false
+  },
+  {
+    "id": "carrot",
+    "name": "Carrot",
+    "names": {
+      "cs": "Mrkev",
+      "de": "Karotte",
+      "fr": "Carotte",
+      "ru": "Морковь"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Carrot",
+    "image": "img/food/carrot.png",
+    "health": 10,
+    "stamina": 32,
+    "eitr": 0,
+    "duration": 900,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [],
+    "yields": 1,
+    "biome": "meadows",
+    "tier": 1,
+    "isFeast": false
+  },
+  {
+    "id": "carrot-soup",
+    "name": "Carrot Soup",
+    "names": {
+      "cs": "Mrkvová polévka",
+      "fr": "Soupe de carottes",
+      "ru": "Морковный суп"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Carrot_Soup",
+    "image": "img/food/carrot-soup.png",
+    "health": 15,
+    "stamina": 45,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 2,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "mushroom",
+        "amount": 1
+      },
+      {
+        "item": "carrot",
+        "amount": 3
+      }
+    ],
+    "yields": 1,
+    "biome": "meadows",
+    "tier": 1,
+    "isFeast": false
+  },
+  {
+    "id": "cloudberries",
+    "name": "Cloudberries",
+    "names": {
+      "cs": "Morušky",
+      "de": "Moltebeeren",
+      "fr": "Plaquebières",
+      "ru": "Морошка"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Cloudberries",
+    "image": "img/food/cloudberries.png",
+    "health": 13,
+    "stamina": 40,
+    "eitr": 0,
+    "duration": 900,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [],
+    "yields": 1,
+    "biome": "plains",
+    "tier": 6,
+    "isFeast": false
+  },
+  {
+    "id": "cooked-bear-meat",
+    "name": "Cooked Bear Meat",
+    "names": {
+      "ru": "Медвежье мясо"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Bear_Meat",
+    "image": "img/food/cooked-bear-meat.png",
+    "health": 40,
+    "stamina": 13,
+    "eitr": 0,
+    "duration": 1200,
+    "healing": {
+      "amount": 2,
+      "interval": null
+    },
+    "station": "cooking-station",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "bear-meat",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "meadows",
+    "tier": 1,
+    "isFeast": false
+  },
+  {
+    "id": "cooked-boar-meat",
+    "name": "Cooked Boar Meat",
+    "names": {
+      "cs": "Kančí maso",
+      "de": "Wildschweinfleisch",
+      "fr": "Viande de sanglier",
+      "pt": "Carne de Javali",
+      "ru": "Кабанина"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Boar_Meat",
+    "image": "img/food/cooked-boar-meat.png",
+    "health": 30,
+    "stamina": 10,
+    "eitr": 0,
+    "duration": 1200,
+    "healing": {
+      "amount": 2,
+      "interval": null
+    },
+    "station": "cooking-station",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "boar-meat",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "meadows",
+    "tier": 1,
+    "isFeast": false
+  },
+  {
+    "id": "cooked-bonemaw-meat",
+    "name": "Cooked Bonemaw Meat",
+    "names": {
+      "cs": "Kostichřtánovo maso",
+      "ru": "Мясо Костепасти"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Bonemaw_Meat",
+    "image": "img/food/cooked-bonemaw-meat.png",
+    "health": 90,
+    "stamina": 30,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 6,
+      "interval": null
+    },
+    "station": "iron-cooking-station",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "bonemaw-meat",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "ashlands",
+    "tier": 8,
+    "isFeast": false
+  },
+  {
+    "id": "cooked-deer-meat",
+    "name": "Cooked Deer Meat",
+    "names": {
+      "cs": "Jelení maso",
+      "de": "Hirschfleisch",
+      "fr": "Viande de cerf",
+      "ru": "Оленина"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Deer_Meat",
+    "image": "img/food/cooked-deer-meat.png",
+    "health": 35,
+    "stamina": 12,
+    "eitr": 0,
+    "duration": 1200,
+    "healing": {
+      "amount": 2,
+      "interval": null
+    },
+    "station": "cooking-station",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "deer-meat",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "meadows",
+    "tier": 1,
+    "isFeast": false
+  },
+  {
+    "id": "cooked-fish",
+    "name": "Cooked Fish",
+    "names": {
+      "cs": "Syrová ryba",
+      "fr": "Poisson cru",
+      "ru": "Сырая рыба"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Raw_Fish",
+    "image": "img/food/cooked-fish.png",
+    "health": 45,
+    "stamina": 15,
+    "eitr": 0,
+    "duration": 1200,
+    "healing": {
+      "amount": 2,
+      "interval": null
+    },
+    "station": "cooking-station",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "raw-fish",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "meadows",
+    "tier": 1,
+    "isFeast": false
+  },
+  {
+    "id": "cooked-moose-meat",
+    "name": "Cooked Moose Meat",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Moose_Meat",
+    "image": "img/food/cooked-moose-meat.png",
+    "health": 80,
+    "stamina": 27,
+    "eitr": 0,
+    "duration": 1200,
+    "healing": {
+      "amount": 7,
+      "interval": null
+    },
+    "station": "iron-cooking-station",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "moose-meat",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "deep-north",
+    "tier": 9,
+    "isFeast": false
+  },
+  {
+    "id": "cooked-seal-blubber",
+    "name": "Cooked Seal Blubber",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Seal_Blubber",
+    "image": "img/food/cooked-seal-blubber.png",
+    "health": 60,
+    "stamina": 20,
+    "eitr": 0,
+    "duration": 1200,
+    "healing": {
+      "amount": 5,
+      "interval": null
+    },
+    "station": "oven",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "seal-blubber",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "deep-north",
+    "tier": 9,
+    "isFeast": false
+  },
+  {
+    "id": "cooked-serpent-meat",
+    "name": "Cooked Serpent Meat",
+    "names": {
+      "cs": "Maso z hada",
+      "ru": "Мясо змея"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Serpent_Meat",
+    "image": "img/food/cooked-serpent-meat.png",
+    "health": 70,
+    "stamina": 23,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 3,
+      "interval": null
+    },
+    "station": "iron-cooking-station",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "serpent-meat",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "ocean",
+    "tier": 3,
+    "isFeast": false
+  },
+  {
+    "id": "cooked-wolf-meat",
+    "name": "Cooked Wolf Meat",
+    "names": {
+      "cs": "Vlčí maso",
+      "fr": "Viande de loup",
+      "ru": "Волчатина"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Wolf_Meat",
+    "image": "img/food/cooked-wolf-meat.png",
+    "health": 45,
+    "stamina": 15,
+    "eitr": 0,
+    "duration": 1200,
+    "healing": {
+      "amount": 3,
+      "interval": null
+    },
+    "station": "cooking-station",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "wolf-meat",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "mountain",
+    "tier": 5,
+    "isFeast": false
+  },
+  {
+    "id": "cooked-asksvin-tail",
+    "name": "Cooked asksvin tail",
+    "names": {
+      "cs": "Asksvinův ocas",
+      "ru": "Хвост пеплозавра"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Asksvin_Tail",
+    "image": "img/food/cooked-asksvin-tail.png",
+    "health": 70,
+    "stamina": 24,
+    "eitr": 0,
+    "duration": 1200,
+    "healing": {
+      "amount": 6,
+      "interval": null
+    },
+    "station": "iron-cooking-station",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "asksvin-tail",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "swamp",
+    "tier": 4,
+    "isFeast": false
+  },
+  {
+    "id": "cooked-chicken-meat",
+    "name": "Cooked chicken meat",
+    "names": {
+      "cs": "Kuřecí maso",
+      "ru": "Курятина"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Chicken_Meat",
+    "image": "img/food/cooked-chicken-meat.png",
+    "health": 60,
+    "stamina": 20,
+    "eitr": 0,
+    "duration": 1200,
+    "healing": {
+      "amount": 5,
+      "interval": null
+    },
+    "station": "cooking-station",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "chicken-meat",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "meadows",
+    "tier": 1,
+    "isFeast": false
+  },
+  {
+    "id": "cooked-egg",
+    "name": "Cooked egg",
+    "names": {
+      "cs": "Vejce",
+      "ru": "Яйцо"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Egg",
+    "image": "img/food/cooked-egg.png",
+    "health": 35,
+    "stamina": 12,
+    "eitr": 0,
+    "duration": 1200,
+    "healing": {
+      "amount": 2,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "egg",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "black-forest",
+    "tier": 2,
+    "isFeast": false
+  },
+  {
+    "id": "cooked-hare-meat",
+    "name": "Cooked hare meat",
+    "names": {
+      "cs": "Zaječí maso",
+      "ru": "Зайчатина"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Hare_Meat",
+    "image": "img/food/cooked-hare-meat.png",
+    "health": 60,
+    "stamina": 20,
+    "eitr": 0,
+    "duration": 1200,
+    "healing": {
+      "amount": 5,
+      "interval": null
+    },
+    "station": "cooking-station",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "hare-meat",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "mistlands",
+    "tier": 7,
+    "isFeast": false
+  },
+  {
+    "id": "cooked-lox-meat",
+    "name": "Cooked lox meat",
+    "names": {
+      "cs": "Maso z Loxe",
+      "ru": "Мясо быкоящера"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Lox_Meat",
+    "image": "img/food/cooked-lox-meat.png",
+    "health": 50,
+    "stamina": 16,
+    "eitr": 0,
+    "duration": 1200,
+    "healing": {
+      "amount": 4,
+      "interval": null
+    },
+    "station": "iron-cooking-station",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "lox-meat",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "swamp",
+    "tier": 4,
+    "isFeast": false
+  },
+  {
+    "id": "cooked-seeker-meat",
+    "name": "Cooked seeker meat",
+    "names": {
+      "cs": "Maso Hledačů",
+      "ru": "Мясо искателя"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Seeker_Meat",
+    "image": "img/food/cooked-seeker-meat.png",
+    "health": 60,
+    "stamina": 20,
+    "eitr": 0,
+    "duration": 1200,
+    "healing": {
+      "amount": 5,
+      "interval": null
+    },
+    "station": "iron-cooking-station",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "seeker-meat",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "swamp",
+    "tier": 4,
+    "isFeast": false
+  },
+  {
+    "id": "deer-stew",
+    "name": "Deer Stew",
+    "names": {
+      "cs": "Jelení polévka",
+      "fr": "Râgout de cerf",
+      "ru": "Рагу из оленины"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Deer_Stew",
+    "image": "img/food/deer-stew.png",
+    "health": 45,
+    "stamina": 15,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 3,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "cooked-deer-meat",
+        "amount": 1
+      },
+      {
+        "item": "blueberries",
+        "amount": 1
+      },
+      {
+        "item": "carrot",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "black-forest",
+    "tier": 2,
+    "isFeast": false
+  },
+  {
+    "id": "eyescream",
+    "name": "Eyescream",
+    "names": {
+      "cs": "Bulvina",
+      "ru": "Глазированное мороженое"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Eyescream",
+    "image": "img/food/eyescream.png",
+    "health": 21,
+    "stamina": 65,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 3,
+    "materials": [
+      {
+        "item": "greydwarf-eye",
+        "amount": 3
+      },
+      {
+        "item": "freeze-gland",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "mountain",
+    "tier": 5,
+    "isFeast": false
+  },
+  {
+    "id": "fiddlehead",
+    "name": "Fiddlehead",
+    "names": {
+      "cs": "Houslihlavka",
+      "ru": "Рахис"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Fiddlehead",
+    "image": "img/food/fiddlehead.png",
+    "health": 30,
+    "stamina": 30,
+    "eitr": 0,
+    "duration": 900,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [],
+    "yields": 1,
+    "biome": "ashlands",
+    "tier": 8,
+    "isFeast": false
+  },
+  {
+    "id": "fiery-svinstew",
+    "name": "Fiery Svinstew",
+    "names": {
+      "cs": "Pálivá Asksvinovka",
+      "ru": "Огненное тушеное рагу"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Fiery_Svinstew",
+    "image": "img/food/fiery-svinstew.png",
+    "health": 95,
+    "stamina": 32,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 6,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 5,
+    "materials": [
+      {
+        "item": "asksvin-tail",
+        "amount": 1
+      },
+      {
+        "item": "vineberry-cluster",
+        "amount": 2
+      },
+      {
+        "item": "smoke-puff",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "ashlands",
+    "tier": 8,
+    "isFeast": false
+  },
+  {
+    "id": "fish-n-bread",
+    "name": "Fish 'n' Bread",
+    "names": {
+      "cs": "Ryba s chlebem",
+      "ru": "Рыба с хлебом"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Fish_'n'_Bread",
+    "image": "img/food/fish-n-bread.png",
+    "health": 30,
+    "stamina": 90,
+    "eitr": 0,
+    "duration": 1800,
+    "healing": {
+      "amount": 3,
+      "interval": null
+    },
+    "station": "oven",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "uncooked-fish-n-bread",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "ashlands",
+    "tier": 8,
+    "isFeast": false
+  },
+  {
+    "id": "fish-soup",
+    "name": "Fish Soup",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Fish_Soup",
+    "image": "img/food/fish-soup.png",
+    "health": 37,
+    "stamina": 18,
+    "eitr": 105,
+    "duration": 1800,
+    "healing": {
+      "amount": 5,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 7,
+    "materials": [
+      {
+        "item": "raw-fish",
+        "amount": 3
+      },
+      {
+        "item": "kale",
+        "amount": 2
+      },
+      {
+        "item": "ice",
+        "amount": 2
+      }
+    ],
+    "yields": 1,
+    "biome": "deep-north",
+    "tier": 9,
+    "isFeast": false
+  },
+  {
+    "id": "fish-wraps",
+    "name": "Fish Wraps",
+    "names": {
+      "cs": "Rybí wrap",
+      "ru": "Рыбные рулетики"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Fish_Wraps",
+    "image": "img/food/fish-wraps.png",
+    "health": 70,
+    "stamina": 23,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 4,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 4,
+    "materials": [
+      {
+        "item": "cooked-fish",
+        "amount": 2
+      },
+      {
+        "item": "barley-flour",
+        "amount": 4
+      }
+    ],
+    "yields": 1,
+    "biome": "plains",
+    "tier": 6,
+    "isFeast": false
+  },
+  {
+    "id": "frosted-sweetbread",
+    "name": "Frosted Sweetbread",
+    "names": {
+      "ru": "Сдобная булка с глазурью"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Frosted_Sweetbread",
+    "image": "img/food/frosted-sweetbread.png",
+    "health": 43,
+    "stamina": 43,
+    "eitr": 0,
+    "duration": 1800,
+    "healing": {
+      "amount": 4,
+      "interval": null
+    },
+    "station": "oven",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "unbaked-sweetbread",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "plains",
+    "tier": 6,
+    "isFeast": false
+  },
+  {
+    "id": "grilled-neck-tail",
+    "name": "Grilled Neck Tail",
+    "names": {
+      "cs": "Ocas Necka",
+      "de": "Nixenschwanz",
+      "fr": "Queue de Nixe",
+      "ru": "Хвост никса"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Neck_Tail",
+    "image": "img/food/grilled-neck-tail.png",
+    "health": 25,
+    "stamina": 8,
+    "eitr": 0,
+    "duration": 1200,
+    "healing": {
+      "amount": 2,
+      "interval": null
+    },
+    "station": "cooking-station",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "neck-tail",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "meadows",
+    "tier": 1,
+    "isFeast": false
+  },
+  {
+    "id": "hearty-mountain-logger-s-stew",
+    "name": "Hearty Mountain Logger's Stew",
+    "names": {
+      "cs": "Vydatný guláš horského chataře",
+      "ru": "Сытное жаркое горного лесоруба"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Hearty_Mountain_Logger's_Stew",
+    "image": "img/food/hearty-mountain-logger-s-stew.png",
+    "health": 45,
+    "stamina": 45,
+    "eitr": 0,
+    "duration": 3000,
+    "healing": {
+      "amount": 3,
+      "interval": null
+    },
+    "station": "food-preparation-table",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "wolf-skewer",
+        "amount": 2
+      },
+      {
+        "item": "onion-soup",
+        "amount": 3
+      },
+      {
+        "item": "carrot",
+        "amount": 4
+      },
+      {
+        "item": "mountain-peak-pepper-powder",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "plains",
+    "tier": 6,
+    "isFeast": true,
+    "servings": 10
+  },
+  {
+    "id": "honey",
+    "name": "Honey",
+    "names": {
+      "cs": "Med",
+      "fr": "Miel",
+      "ru": "Мед"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Honey",
+    "image": "img/food/honey.png",
+    "health": 8,
+    "stamina": 35,
+    "eitr": 0,
+    "duration": 900,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [],
+    "yields": 1,
+    "biome": "meadows",
+    "tier": 1,
+    "isFeast": false
+  },
+  {
+    "id": "honey-glazed-chicken",
+    "name": "Honey Glazed Chicken",
+    "names": {
+      "cs": "Kuře na medu",
+      "ru": "Курятина в медовой глазури"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Honey_Glazed_Chicken",
+    "image": "img/food/honey-glazed-chicken.png",
+    "health": 80,
+    "stamina": 26,
+    "eitr": 0,
+    "duration": 1800,
+    "healing": {
+      "amount": 5,
+      "interval": null
+    },
+    "station": "oven",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "uncooked-honey-glazed-chicken",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "mistlands",
+    "tier": 7,
+    "isFeast": false
+  },
+  {
+    "id": "jotun-puffs",
+    "name": "Jotun Puffs",
+    "names": {
+      "cs": "Jótunnské obláčky",
+      "ru": "Гриб Йотунов"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Jotun_Puffs",
+    "image": "img/food/jotun-puffs.png",
+    "health": 25,
+    "stamina": 25,
+    "eitr": 0,
+    "duration": 900,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [],
+    "yields": 1,
+    "biome": "mistlands",
+    "tier": 7,
+    "isFeast": false
+  },
+  {
+    "id": "kale",
+    "name": "Kale",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Kale",
+    "image": "img/food/kale.png",
+    "health": 35,
+    "stamina": 35,
+    "eitr": 0,
+    "duration": 900,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "kale-seeds",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "deep-north",
+    "tier": 9,
+    "isFeast": false
+  },
+  {
+    "id": "kale-chips",
+    "name": "Kale Chips",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Kale_Chips",
+    "image": "img/food/kale-chips.png",
+    "health": 35,
+    "stamina": 105,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 5,
+      "interval": null
+    },
+    "station": "oven",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "raw-kale-chips",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "deep-north",
+    "tier": 9,
+    "isFeast": false
+  },
+  {
+    "id": "lingonberries",
+    "name": "Lingonberries",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Lingonberries",
+    "image": "img/food/lingonberries.png",
+    "health": 35,
+    "stamina": 35,
+    "eitr": 0,
+    "duration": 900,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [],
+    "yields": 1,
+    "biome": "deep-north",
+    "tier": 9,
+    "isFeast": false
+  },
+  {
+    "id": "lingonberry-juice",
+    "name": "Lingonberry Juice",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Lingonberry_Juice",
+    "image": "img/food/lingonberry-juice.png",
+    "health": 35,
+    "stamina": 105,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 5,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 6,
+    "materials": [
+      {
+        "item": "lingonberries",
+        "amount": 5
+      },
+      {
+        "item": "ice",
+        "amount": 5
+      }
+    ],
+    "yields": 1,
+    "biome": "deep-north",
+    "tier": 9,
+    "isFeast": false
+  },
+  {
+    "id": "lox-meat-pie",
+    "name": "Lox Meat Pie",
+    "names": {
+      "cs": "Masový koláč z Loxe",
+      "ru": "Пирог из мяса быкоящера"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Lox_Meat_Pie",
+    "image": "img/food/lox-meat-pie.png",
+    "health": 75,
+    "stamina": 24,
+    "eitr": 0,
+    "duration": 1800,
+    "healing": {
+      "amount": 4,
+      "interval": null
+    },
+    "station": "oven",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "unbaked-lox-pie",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "plains",
+    "tier": 6,
+    "isFeast": false
+  },
+  {
+    "id": "luminous-larva",
+    "name": "Luminous Larva",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Luminous_Larva",
+    "image": "img/food/luminous-larva.png",
+    "health": 30,
+    "stamina": 30,
+    "eitr": 0,
+    "duration": 600,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [],
+    "yields": 1,
+    "biome": "deep-north",
+    "tier": 9,
+    "isFeast": false
+  },
+  {
+    "id": "magecap",
+    "name": "Magecap",
+    "names": {
+      "cs": "Mágovka",
+      "ru": "Волшебный гриб"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Magecap",
+    "image": "img/food/magecap.png",
+    "health": 25,
+    "stamina": 25,
+    "eitr": 25,
+    "duration": 900,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [],
+    "yields": 1,
+    "biome": "mistlands",
+    "tier": 7,
+    "isFeast": false
+  },
+  {
+    "id": "marinated-greens",
+    "name": "Marinated Greens",
+    "names": {
+      "cs": "Nakládaná zelenina",
+      "ru": "Маринованные овощи"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Marinated_Greens",
+    "image": "img/food/marinated-greens.png",
+    "health": 32,
+    "stamina": 16,
+    "eitr": 95,
+    "duration": 1800,
+    "healing": {
+      "amount": 4,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 6,
+    "materials": [
+      {
+        "item": "sap",
+        "amount": 3
+      },
+      {
+        "item": "magecap",
+        "amount": 2
+      },
+      {
+        "item": "fiddlehead",
+        "amount": 2
+      },
+      {
+        "item": "smoke-puff",
+        "amount": 2
+      }
+    ],
+    "yields": 1,
+    "biome": "ashlands",
+    "tier": 8,
+    "isFeast": false
+  },
+  {
+    "id": "mashed-meat",
+    "name": "Mashed Meat",
+    "names": {
+      "cs": "Šťouchané maso",
+      "ru": "Отбивное мясо"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Mashed_Meat",
+    "image": "img/food/mashed-meat.png",
+    "health": 100,
+    "stamina": 34,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 6,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 6,
+    "materials": [
+      {
+        "item": "asksvin-tail",
+        "amount": 1
+      },
+      {
+        "item": "volture-meat",
+        "amount": 1
+      },
+      {
+        "item": "fiddlehead",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "ashlands",
+    "tier": 8,
+    "isFeast": false
+  },
+  {
+    "id": "meat-in-bread",
+    "name": "Meat In Bread",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Meat_In_Bread",
+    "image": "img/food/meat-in-bread.png",
+    "health": 110,
+    "stamina": 37,
+    "eitr": 0,
+    "duration": 1800,
+    "healing": {
+      "amount": 7,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 7,
+    "materials": [
+      {
+        "item": "moose-meat",
+        "amount": 1
+      },
+      {
+        "item": "kale",
+        "amount": 2
+      },
+      {
+        "item": "oat-flour",
+        "amount": 1
+      },
+      {
+        "item": "lingonberries",
+        "amount": 2
+      }
+    ],
+    "yields": 2,
+    "biome": "deep-north",
+    "tier": 9,
+    "isFeast": false
+  },
+  {
+    "id": "meat-platter",
+    "name": "Meat Platter",
+    "names": {
+      "cs": "Masový talíř",
+      "ru": "Мясное ассорти"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Meat_Platter",
+    "image": "img/food/meat-platter.png",
+    "health": 80,
+    "stamina": 26,
+    "eitr": 0,
+    "duration": 1800,
+    "healing": {
+      "amount": 5,
+      "interval": null
+    },
+    "station": "oven",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "uncooked-meat-platter",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "mistlands",
+    "tier": 7,
+    "isFeast": false
+  },
+  {
+    "id": "meatballs-and-poteitr",
+    "name": "Meatballs and Poteitr",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Meatballs_and_Poteitr",
+    "image": "img/food/meatballs-and-poteitr.png",
+    "health": 35,
+    "stamina": 18,
+    "eitr": 105,
+    "duration": 1500,
+    "healing": {
+      "amount": 5,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 7,
+    "materials": [
+      {
+        "item": "moose-meat",
+        "amount": 1
+      },
+      {
+        "item": "lingonberries",
+        "amount": 2
+      },
+      {
+        "item": "poteitr",
+        "amount": 2
+      }
+    ],
+    "yields": 1,
+    "biome": "deep-north",
+    "tier": 9,
+    "isFeast": false
+  },
+  {
+    "id": "minced-meat-sauce",
+    "name": "Minced Meat Sauce",
+    "names": {
+      "fr": "Sauce à la viande hachée",
+      "ru": "Соус с мясным фаршем"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Minced_Meat_Sauce",
+    "image": "img/food/minced-meat-sauce.png",
+    "health": 40,
+    "stamina": 13,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 3,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "boar-meat",
+        "amount": 1
+      },
+      {
+        "item": "neck-tail",
+        "amount": 1
+      },
+      {
+        "item": "carrot",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "meadows",
+    "tier": 1,
+    "isFeast": false
+  },
+  {
+    "id": "misthare-supreme",
+    "name": "Misthare Supreme",
+    "names": {
+      "cs": "Supreme z mlžného zajíce",
+      "ru": "Гуляш из зайчатины"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Misthare_Supreme",
+    "image": "img/food/misthare-supreme.png",
+    "health": 85,
+    "stamina": 28,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 5,
+      "interval": null
+    },
+    "station": "oven",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "uncooked-misthare-supreme",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "mistlands",
+    "tier": 7,
+    "isFeast": false
+  },
+  {
+    "id": "muckshake",
+    "name": "Muckshake",
+    "names": {
+      "cs": "Hnusshake",
+      "ru": "Немытая Мэри"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Muckshake",
+    "image": "img/food/muckshake.png",
+    "health": 16,
+    "stamina": 50,
+    "eitr": 0,
+    "duration": 1200,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 2,
+    "materials": [
+      {
+        "item": "ooze",
+        "amount": 1
+      },
+      {
+        "item": "raspberries",
+        "amount": 2
+      },
+      {
+        "item": "blueberries",
+        "amount": 2
+      }
+    ],
+    "yields": 1,
+    "biome": "swamp",
+    "tier": 4,
+    "isFeast": false
+  },
+  {
+    "id": "mushroom",
+    "name": "Mushroom",
+    "names": {
+      "cs": "Houba",
+      "de": "Pilz",
+      "fr": "Champignon",
+      "ru": "Гриб"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Mushroom",
+    "image": "img/food/mushroom.png",
+    "health": 15,
+    "stamina": 15,
+    "eitr": 0,
+    "duration": 900,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [],
+    "yields": 1,
+    "biome": "meadows",
+    "tier": 1,
+    "isFeast": false
+  },
+  {
+    "id": "mushroom-omelette",
+    "name": "Mushroom Omelette",
+    "names": {
+      "cs": "Houbová omeleta",
+      "ru": "Омлет с грибами"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Mushroom_Omelette",
+    "image": "img/food/mushroom-omelette.png",
+    "health": 28,
+    "stamina": 85,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 3,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 5,
+    "materials": [
+      {
+        "item": "egg",
+        "amount": 3
+      },
+      {
+        "item": "jotun-puffs",
+        "amount": 3
+      }
+    ],
+    "yields": 1,
+    "biome": "mistlands",
+    "tier": 7,
+    "isFeast": false
+  },
+  {
+    "id": "mushrooms-galore-a-la-mistlands",
+    "name": "Mushrooms Galore á la Mistlands",
+    "names": {
+      "cs": "Hojnost hub alá mlžné krajiny",
+      "ru": "Грибное ассорти из Туманных земель"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Mushrooms_Galore_%C3%A1_la_Mistlands",
+    "image": "img/food/mushrooms-galore-a-la-mistlands.png",
+    "health": 65,
+    "stamina": 65,
+    "eitr": 33,
+    "duration": 3000,
+    "healing": {
+      "amount": 5,
+      "interval": null
+    },
+    "station": "food-preparation-table",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "misthare-supreme",
+        "amount": 1
+      },
+      {
+        "item": "cooked-seeker-meat",
+        "amount": 3
+      },
+      {
+        "item": "yggdrasil-porridge",
+        "amount": 1
+      },
+      {
+        "item": "herbs-of-the-hidden-hills",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "ashlands",
+    "tier": 8,
+    "isFeast": true,
+    "servings": 10
+  },
+  {
+    "id": "northern-morning-fare",
+    "name": "Northern Morning Fare",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Northern_Morning_Fare",
+    "image": "img/food/northern-morning-fare.png",
+    "health": 85,
+    "stamina": 85,
+    "eitr": 43,
+    "duration": 3000,
+    "healing": {
+      "amount": 7,
+      "interval": null
+    },
+    "station": "food-preparation-table",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "cooked-moose-meat",
+        "amount": 3
+      },
+      {
+        "item": "poteitr",
+        "amount": 5
+      },
+      {
+        "item": "oat-flour",
+        "amount": 2
+      },
+      {
+        "item": "seasoning-of-the-gourd",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "deep-north",
+    "tier": 9,
+    "isFeast": true,
+    "servings": 10
+  },
+  {
+    "id": "oat-milk",
+    "name": "Oat Milk",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Oat_Milk",
+    "image": "img/food/oat-milk.png",
+    "health": 37,
+    "stamina": 110,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 5,
+      "interval": null
+    },
+    "station": "mead-ketill",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "oats",
+        "amount": 5
+      },
+      {
+        "item": "ice",
+        "amount": 5
+      }
+    ],
+    "yields": 1,
+    "biome": "deep-north",
+    "tier": 9,
+    "isFeast": false
+  },
+  {
+    "id": "oatmeal",
+    "name": "Oatmeal",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Oatmeal",
+    "image": "img/food/oatmeal.png",
+    "health": 39,
+    "stamina": 115,
+    "eitr": 85,
+    "duration": 1800,
+    "healing": {
+      "amount": 5,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 6,
+    "materials": [
+      {
+        "item": "oats",
+        "amount": 2
+      },
+      {
+        "item": "lingonberries",
+        "amount": 2
+      },
+      {
+        "item": "oat-milk",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "deep-north",
+    "tier": 9,
+    "isFeast": false
+  },
+  {
+    "id": "oats",
+    "name": "Oats",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Oats",
+    "image": "img/food/oats.png",
+    "health": 33,
+    "stamina": 33,
+    "eitr": 0,
+    "duration": 1800,
+    "healing": {
+      "amount": 3,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "oat-seeds",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "meadows",
+    "tier": 1,
+    "isFeast": false
+  },
+  {
+    "id": "onion",
+    "name": "Onion",
+    "names": {
+      "cs": "Cibule",
+      "ru": "Лук"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Onion",
+    "image": "img/food/onion.png",
+    "health": 13,
+    "stamina": 40,
+    "eitr": 0,
+    "duration": 900,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [],
+    "yields": 1,
+    "biome": "meadows",
+    "tier": 1,
+    "isFeast": false
+  },
+  {
+    "id": "onion-soup",
+    "name": "Onion Soup",
+    "names": {
+      "cs": "Cibulová polévka",
+      "ru": "Луковый суп"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Onion_Soup",
+    "image": "img/food/onion-soup.png",
+    "health": 20,
+    "stamina": 60,
+    "eitr": 0,
+    "duration": 1200,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 2,
+    "materials": [
+      {
+        "item": "onion",
+        "amount": 3
+      }
+    ],
+    "yields": 1,
+    "biome": "meadows",
+    "tier": 1,
+    "isFeast": false
+  },
+  {
+    "id": "oven-pancake",
+    "name": "Oven Pancake",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Oven_Pancake",
+    "image": "img/food/oven-pancake.png",
+    "health": 37,
+    "stamina": 18,
+    "eitr": 105,
+    "duration": 1800,
+    "healing": {
+      "amount": 5,
+      "interval": null
+    },
+    "station": "oven",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "oven-pancake-batter",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "deep-north",
+    "tier": 9,
+    "isFeast": false
+  },
+  {
+    "id": "pancakes",
+    "name": "Pancakes",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Pancakes",
+    "image": "img/food/pancakes.png",
+    "health": 39,
+    "stamina": 115,
+    "eitr": 0,
+    "duration": 1800,
+    "healing": {
+      "amount": 5,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 6,
+    "materials": [
+      {
+        "item": "oat-milk",
+        "amount": 1
+      },
+      {
+        "item": "oat-flour",
+        "amount": 2
+      },
+      {
+        "item": "egg",
+        "amount": 2
+      },
+      {
+        "item": "blueberries",
+        "amount": 2
+      }
+    ],
+    "yields": 3,
+    "biome": "deep-north",
+    "tier": 9,
+    "isFeast": false
+  },
+  {
+    "id": "piquant-pie",
+    "name": "Piquant Pie",
+    "names": {
+      "ru": "Пряный пирог"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Piquant_Pie",
+    "image": "img/food/piquant-pie.png",
+    "health": 105,
+    "stamina": 35,
+    "eitr": 0,
+    "duration": 1800,
+    "healing": {
+      "amount": 6,
+      "interval": null
+    },
+    "station": "oven",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "uncooked-piquant-pie",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "ashlands",
+    "tier": 8,
+    "isFeast": false
+  },
+  {
+    "id": "plains-pie-picnic",
+    "name": "Plains Pie Picnic",
+    "names": {
+      "cs": "Piknikové koláče z planin",
+      "ru": "Равнинный пикник с пирогом"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Plains_Pie_Picnic",
+    "image": "img/food/plains-pie-picnic.png",
+    "health": 55,
+    "stamina": 55,
+    "eitr": 0,
+    "duration": 3000,
+    "healing": {
+      "amount": 4,
+      "interval": null
+    },
+    "station": "food-preparation-table",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "bread",
+        "amount": 3
+      },
+      {
+        "item": "lox-meat-pie",
+        "amount": 2
+      },
+      {
+        "item": "cloudberries",
+        "amount": 5
+      },
+      {
+        "item": "grasslands-herbalist-harvest",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "mistlands",
+    "tier": 7,
+    "isFeast": true,
+    "servings": 10
+  },
+  {
+    "id": "poteitr",
+    "name": "Poteitr",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Poteitr",
+    "image": "img/food/poteitr.png",
+    "health": 35,
+    "stamina": 35,
+    "eitr": 35,
+    "duration": 900,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "seed-poteitr",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "meadows",
+    "tier": 1,
+    "isFeast": false
+  },
+  {
+    "id": "pulled-bear",
+    "name": "Pulled Bear",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Pulled_Bear",
+    "image": "img/food/pulled-bear.png",
+    "health": 37,
+    "stamina": 16,
+    "eitr": 0,
+    "duration": 1800,
+    "healing": {
+      "amount": 3,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "cooked-bear-meat",
+        "amount": 1
+      },
+      {
+        "item": "carrot",
+        "amount": 2
+      },
+      {
+        "item": "blueberries",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "black-forest",
+    "tier": 2,
+    "isFeast": false
+  },
+  {
+    "id": "queen-s-jam",
+    "name": "Queen's Jam",
+    "names": {
+      "cs": "Marmeláda královny",
+      "fr": "Confiture de la reine",
+      "ru": "Королевский джем"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Queen's_Jam",
+    "image": "img/food/queen-s-jam.png",
+    "health": 14,
+    "stamina": 40,
+    "eitr": 0,
+    "duration": 1200,
+    "healing": {
+      "amount": 2,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "raspberries",
+        "amount": 8
+      },
+      {
+        "item": "blueberries",
+        "amount": 6
+      }
+    ],
+    "yields": 4,
+    "biome": "black-forest",
+    "tier": 2,
+    "isFeast": false
+  },
+  {
+    "id": "raspberries",
+    "name": "Raspberries",
+    "names": {
+      "cs": "Maliny",
+      "de": "Himbeeren",
+      "fr": "Framboises",
+      "ru": "Малина"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Raspberries",
+    "image": "img/food/raspberries.png",
+    "health": 7,
+    "stamina": 20,
+    "eitr": 0,
+    "duration": 600,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [],
+    "yields": 1,
+    "biome": "meadows",
+    "tier": 1,
+    "isFeast": false
+  },
+  {
+    "id": "roasted-crust-pie",
+    "name": "Roasted Crust Pie",
+    "names": {
+      "ru": "Пирог с поджаристой коркой"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Roasted_Crust_Pie",
+    "image": "img/food/roasted-crust-pie.png",
+    "health": 34,
+    "stamina": 100,
+    "eitr": 0,
+    "duration": 1800,
+    "healing": {
+      "amount": 4,
+      "interval": null
+    },
+    "station": "oven",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "uncooked-roasted-crust-pie",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "ashlands",
+    "tier": 8,
+    "isFeast": false
+  },
+  {
+    "id": "rotten-meat",
+    "name": "Rotten Meat",
+    "names": {
+      "ru": "Гнилое мясо"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Rotten_Meat",
+    "image": "img/food/rotten-meat.png",
+    "health": 0,
+    "stamina": 0,
+    "eitr": 0,
+    "duration": 15,
+    "healing": {
+      "amount": null,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [],
+    "yields": 1,
+    "biome": "plains",
+    "tier": 6,
+    "isFeast": false
+  },
+  {
+    "id": "royal-jelly",
+    "name": "Royal Jelly",
+    "names": {
+      "cs": "Královské želé",
+      "ru": "Маточное молочко"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Royal_Jelly",
+    "image": "img/food/royal-jelly.png",
+    "health": 15,
+    "stamina": 15,
+    "eitr": 0,
+    "duration": 900,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [],
+    "yields": 1,
+    "biome": "mistlands",
+    "tier": 7,
+    "isFeast": false
+  },
+  {
+    "id": "sailor-s-bounty",
+    "name": "Sailor's Bounty",
+    "names": {
+      "cs": "Námořníkova odměna",
+      "ru": "Добыча моряка"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Sailor's_Bounty",
+    "image": "img/food/sailor-s-bounty.png",
+    "health": 45,
+    "stamina": 45,
+    "eitr": 0,
+    "duration": 3000,
+    "healing": {
+      "amount": 3,
+      "interval": null
+    },
+    "station": "food-preparation-table",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "cooked-fish",
+        "amount": 5
+      },
+      {
+        "item": "thistle",
+        "amount": 4
+      },
+      {
+        "item": "cooked-serpent-meat",
+        "amount": 2
+      },
+      {
+        "item": "seafarer-s-herbs",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "swamp",
+    "tier": 4,
+    "isFeast": true,
+    "servings": 10
+  },
+  {
+    "id": "salad",
+    "name": "Salad",
+    "names": {
+      "cs": "Salát",
+      "ru": "Салат"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Salad",
+    "image": "img/food/salad.png",
+    "health": 26,
+    "stamina": 80,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 3,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 5,
+    "materials": [
+      {
+        "item": "jotun-puffs",
+        "amount": 3
+      },
+      {
+        "item": "onion",
+        "amount": 3
+      },
+      {
+        "item": "cloudberries",
+        "amount": 3
+      }
+    ],
+    "yields": 3,
+    "biome": "mistlands",
+    "tier": 7,
+    "isFeast": false
+  },
+  {
+    "id": "sausages",
+    "name": "Sausages",
+    "names": {
+      "cs": "Klobásy",
+      "fr": "Saucisses",
+      "ru": "Колбаски"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Sausages",
+    "image": "img/food/sausages.png",
+    "health": 55,
+    "stamina": 18,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 3,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 2,
+    "materials": [
+      {
+        "item": "entrails",
+        "amount": 4
+      },
+      {
+        "item": "boar-meat",
+        "amount": 1
+      },
+      {
+        "item": "thistle",
+        "amount": 1
+      }
+    ],
+    "yields": 4,
+    "biome": "swamp",
+    "tier": 4,
+    "isFeast": false
+  },
+  {
+    "id": "scorching-medley",
+    "name": "Scorching Medley",
+    "names": {
+      "cs": "Pálivá směs",
+      "ru": "Обжигающий салат"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Scorching_Medley",
+    "image": "img/food/scorching-medley.png",
+    "health": 32,
+    "stamina": 95,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 4,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 6,
+    "materials": [
+      {
+        "item": "jotun-puffs",
+        "amount": 3
+      },
+      {
+        "item": "onion",
+        "amount": 3
+      },
+      {
+        "item": "fiddlehead",
+        "amount": 3
+      }
+    ],
+    "yields": 3,
+    "biome": "ashlands",
+    "tier": 8,
+    "isFeast": false
+  },
+  {
+    "id": "seal-meat-soup",
+    "name": "Seal Meat Soup",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Seal_Meat_Soup",
+    "image": "img/food/seal-meat-soup.png",
+    "health": 110,
+    "stamina": 37,
+    "eitr": 0,
+    "duration": 1800,
+    "healing": {
+      "amount": 7,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 7,
+    "materials": [
+      {
+        "item": "seal-blubber",
+        "amount": 2
+      },
+      {
+        "item": "kale",
+        "amount": 2
+      },
+      {
+        "item": "ice",
+        "amount": 2
+      }
+    ],
+    "yields": 1,
+    "biome": "deep-north",
+    "tier": 9,
+    "isFeast": false
+  },
+  {
+    "id": "seeker-aspic",
+    "name": "Seeker Aspic",
+    "names": {
+      "cs": "Rosol z Hledače",
+      "ru": "Холодец из искателя"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Seeker_Aspic",
+    "image": "img/food/seeker-aspic.png",
+    "health": 28,
+    "stamina": 14,
+    "eitr": 85,
+    "duration": 1800,
+    "healing": {
+      "amount": 3,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 5,
+    "materials": [
+      {
+        "item": "seeker-meat",
+        "amount": 2
+      },
+      {
+        "item": "magecap",
+        "amount": 2
+      },
+      {
+        "item": "royal-jelly",
+        "amount": 2
+      }
+    ],
+    "yields": 2,
+    "biome": "mistlands",
+    "tier": 7,
+    "isFeast": false
+  },
+  {
+    "id": "serpent-stew",
+    "name": "Serpent Stew",
+    "names": {
+      "cs": "Hadí polévka",
+      "fr": "Soupe de serpent",
+      "ru": "Рагу из змея"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Serpent_Stew",
+    "image": "img/food/serpent-stew.png",
+    "health": 80,
+    "stamina": 26,
+    "eitr": 0,
+    "duration": 1800,
+    "healing": {
+      "amount": 4,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 2,
+    "materials": [
+      {
+        "item": "mushroom",
+        "amount": 1
+      },
+      {
+        "item": "cooked-serpent-meat",
+        "amount": 1
+      },
+      {
+        "item": "honey",
+        "amount": 2
+      }
+    ],
+    "yields": 1,
+    "biome": "ocean",
+    "tier": 3,
+    "isFeast": false
+  },
+  {
+    "id": "sizzling-berry-broth",
+    "name": "Sizzling Berry Broth",
+    "names": {
+      "cs": "Bublající bobulový vývar",
+      "ru": "Шипящая похлебка из ягод"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Sizzling_Berry_Broth",
+    "image": "img/food/sizzling-berry-broth.png",
+    "health": 28,
+    "stamina": 14,
+    "eitr": 85,
+    "duration": 1500,
+    "healing": {
+      "amount": 4,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 5,
+    "materials": [
+      {
+        "item": "sap",
+        "amount": 3
+      },
+      {
+        "item": "fiddlehead",
+        "amount": 2
+      },
+      {
+        "item": "vineberry-cluster",
+        "amount": 2
+      }
+    ],
+    "yields": 1,
+    "biome": "ashlands",
+    "tier": 8,
+    "isFeast": false
+  },
+  {
+    "id": "smoke-puff",
+    "name": "Smoke Puff",
+    "names": {
+      "cs": "Kouřovka",
+      "ru": "Дымчатый гриб"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Smoke_Puff",
+    "image": "img/food/smoke-puff.png",
+    "health": 15,
+    "stamina": 15,
+    "eitr": 0,
+    "duration": 900,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [],
+    "yields": 1,
+    "biome": "ashlands",
+    "tier": 8,
+    "isFeast": false
+  },
+  {
+    "id": "smoked-fish",
+    "name": "Smoked Fish",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Smoked_Fish",
+    "image": "img/food/smoked-fish.png",
+    "health": 30,
+    "stamina": 16,
+    "eitr": 95,
+    "duration": 1500,
+    "healing": {
+      "amount": 5,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 7,
+    "materials": [
+      {
+        "item": "raw-fish",
+        "amount": 1
+      },
+      {
+        "item": "kale",
+        "amount": 1
+      },
+      {
+        "item": "poteitr",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "deep-north",
+    "tier": 9,
+    "isFeast": false
+  },
+  {
+    "id": "smoked-moose-meat",
+    "name": "Smoked Moose Meat",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Smoked_Moose_Meat",
+    "image": "img/food/smoked-moose-meat.png",
+    "health": 105,
+    "stamina": 35,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 7,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 7,
+    "materials": [
+      {
+        "item": "moose-meat",
+        "amount": 1
+      },
+      {
+        "item": "kale",
+        "amount": 2
+      }
+    ],
+    "yields": 1,
+    "biome": "deep-north",
+    "tier": 9,
+    "isFeast": false
+  },
+  {
+    "id": "sparkling-shroomshake",
+    "name": "Sparkling Shroomshake",
+    "names": {
+      "cs": "Jiskřivý Houbový koktejl",
+      "ru": "Грибная шипучка"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Sparkling_Shroomshake",
+    "image": "img/food/sparkling-shroomshake.png",
+    "health": 30,
+    "stamina": 15,
+    "eitr": 90,
+    "duration": 1500,
+    "healing": {
+      "amount": 4,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 6,
+    "materials": [
+      {
+        "item": "sap",
+        "amount": 4
+      },
+      {
+        "item": "vineberry-cluster",
+        "amount": 2
+      },
+      {
+        "item": "smoke-puff",
+        "amount": 2
+      },
+      {
+        "item": "magecap",
+        "amount": 2
+      }
+    ],
+    "yields": 1,
+    "biome": "ashlands",
+    "tier": 8,
+    "isFeast": false
+  },
+  {
+    "id": "spicy-marmalade",
+    "name": "Spicy Marmalade",
+    "names": {
+      "cs": "Pikantní marmeláda",
+      "ru": "Пряный мармелад"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Spicy_Marmalade",
+    "image": "img/food/spicy-marmalade.png",
+    "health": 30,
+    "stamina": 90,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 4,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 5,
+    "materials": [
+      {
+        "item": "vineberry-cluster",
+        "amount": 3
+      },
+      {
+        "item": "honey",
+        "amount": 1
+      },
+      {
+        "item": "fiddlehead",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "ashlands",
+    "tier": 8,
+    "isFeast": false
+  },
+  {
+    "id": "stuffed-mushroom",
+    "name": "Stuffed Mushroom",
+    "names": {
+      "cs": "Plněná houba",
+      "ru": "Фаршированный гриб"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Stuffed_Mushroom",
+    "image": "img/food/stuffed-mushroom.png",
+    "health": 25,
+    "stamina": 12,
+    "eitr": 75,
+    "duration": 1500,
+    "healing": {
+      "amount": 3,
+      "interval": null
+    },
+    "station": "oven",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "uncooked-stuffed-mushroom",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "mistlands",
+    "tier": 7,
+    "isFeast": false
+  },
+  {
+    "id": "swamp-dweller-s-delight",
+    "name": "Swamp Dweller's Delight",
+    "names": {
+      "cs": "Potěšení obyvatele bažin",
+      "ru": "Лакомство болотного жителя"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Swamp_Dweller's_Delight",
+    "image": "img/food/swamp-dweller-s-delight.png",
+    "health": 35,
+    "stamina": 35,
+    "eitr": 0,
+    "duration": 3000,
+    "healing": {
+      "amount": 3,
+      "interval": null
+    },
+    "station": "food-preparation-table",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "sausages",
+        "amount": 8
+      },
+      {
+        "item": "bloodbag",
+        "amount": 4
+      },
+      {
+        "item": "turnip-stew",
+        "amount": 2
+      },
+      {
+        "item": "woodland-herb-blend",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "swamp",
+    "tier": 4,
+    "isFeast": true,
+    "servings": 10
+  },
+  {
+    "id": "turnip-stew",
+    "name": "Turnip Stew",
+    "names": {
+      "cs": "Polévka z tuřínu",
+      "fr": "Soupe de navets",
+      "ru": "Рагу из репы"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Turnip_Stew",
+    "image": "img/food/turnip-stew.png",
+    "health": 18,
+    "stamina": 55,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 2,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 2,
+    "materials": [
+      {
+        "item": "boar-meat",
+        "amount": 1
+      },
+      {
+        "item": "turnip",
+        "amount": 3
+      }
+    ],
+    "yields": 1,
+    "biome": "meadows",
+    "tier": 1,
+    "isFeast": false
+  },
+  {
+    "id": "vineberry-cluster",
+    "name": "Vineberry Cluster",
+    "names": {
+      "cs": "Trs vína",
+      "ru": "Гроздь лозовых ягод"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Vineberry_Cluster",
+    "image": "img/food/vineberry-cluster.png",
+    "health": 30,
+    "stamina": 30,
+    "eitr": 30,
+    "duration": 900,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [],
+    "yields": 1,
+    "biome": "ashlands",
+    "tier": 8,
+    "isFeast": false
+  },
+  {
+    "id": "volture-meat",
+    "name": "Volture Meat",
+    "names": {
+      "cs": "Sopí maso",
+      "ru": "Мясо стервулканника"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Volture_Meat",
+    "image": "img/food/volture-meat.png",
+    "health": 70,
+    "stamina": 24,
+    "eitr": 0,
+    "duration": 1200,
+    "healing": {
+      "amount": 6,
+      "interval": null
+    },
+    "station": "iron-cooking-station",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "volture-meat",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "ashlands",
+    "tier": 8,
+    "isFeast": false
+  },
+  {
+    "id": "whole-roasted-meadow-boar",
+    "name": "Whole Roasted Meadow Boar",
+    "names": {
+      "cs": "Celý pečený kanec",
+      "ru": "Луговой кабан на вертеле"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Whole_Roasted_Meadow_Boar",
+    "image": "img/food/whole-roasted-meadow-boar.png",
+    "health": 35,
+    "stamina": 35,
+    "eitr": 0,
+    "duration": 3000,
+    "healing": {
+      "amount": 2,
+      "interval": null
+    },
+    "station": "food-preparation-table",
+    "stationLevel": 1,
+    "materials": [
+      {
+        "item": "cooked-deer-meat",
+        "amount": 2
+      },
+      {
+        "item": "cooked-boar-meat",
+        "amount": 5
+      },
+      {
+        "item": "dandelion",
+        "amount": 4
+      },
+      {
+        "item": "woodland-herb-blend",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "swamp",
+    "tier": 4,
+    "isFeast": true,
+    "servings": 10
+  },
+  {
+    "id": "wolf-jerky",
+    "name": "Wolf Jerky",
+    "names": {
+      "ru": "Вяленая волчатина"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Wolf_Jerky",
+    "image": "img/food/wolf-jerky.png",
+    "health": 33,
+    "stamina": 33,
+    "eitr": 0,
+    "duration": 1800,
+    "healing": {
+      "amount": 3,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 3,
+    "materials": [
+      {
+        "item": "wolf-meat",
+        "amount": 1
+      },
+      {
+        "item": "honey",
+        "amount": 1
+      }
+    ],
+    "yields": 2,
+    "biome": "mountain",
+    "tier": 5,
+    "isFeast": false
+  },
+  {
+    "id": "wolf-skewer",
+    "name": "Wolf Skewer",
+    "names": {
+      "ru": "Волк на шпажке"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Wolf_Skewer",
+    "image": "img/food/wolf-skewer.png",
+    "health": 65,
+    "stamina": 21,
+    "eitr": 0,
+    "duration": 1500,
+    "healing": {
+      "amount": 3,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 3,
+    "materials": [
+      {
+        "item": "wolf-meat",
+        "amount": 1
+      },
+      {
+        "item": "mushroom",
+        "amount": 2
+      },
+      {
+        "item": "onion",
+        "amount": 1
+      }
+    ],
+    "yields": 1,
+    "biome": "mountain",
+    "tier": 5,
+    "isFeast": false
+  },
+  {
+    "id": "yellow-mushroom",
+    "name": "Yellow Mushroom",
+    "names": {
+      "cs": "Žlutá houba",
+      "de": "Gelber Pilz",
+      "fr": "Champignon jaune",
+      "ru": "Желтый гриб"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Yellow_Mushroom",
+    "image": "img/food/yellow-mushroom.png",
+    "health": 10,
+    "stamina": 30,
+    "eitr": 0,
+    "duration": 600,
+    "healing": {
+      "amount": 1,
+      "interval": null
+    },
+    "station": "none",
+    "stationLevel": 1,
+    "materials": [],
+    "yields": 1,
+    "biome": "black-forest",
+    "tier": 2,
+    "isFeast": false
+  },
+  {
+    "id": "yggdrasil-porridge",
+    "name": "Yggdrasil Porridge",
+    "names": {
+      "cs": "Yggdrasilská kaše",
+      "ru": "Иггдрасильская каша"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Yggdrasil_Porridge",
+    "image": "img/food/yggdrasil-porridge.png",
+    "health": 27,
+    "stamina": 13,
+    "eitr": 80,
+    "duration": 1500,
+    "healing": {
+      "amount": 3,
+      "interval": null
+    },
+    "station": "cauldron",
+    "stationLevel": 5,
+    "materials": [
+      {
+        "item": "sap",
+        "amount": 4
+      },
+      {
+        "item": "barley",
+        "amount": 3
+      },
+      {
+        "item": "royal-jelly",
+        "amount": 2
+      }
+    ],
+    "yields": 1,
+    "biome": "mistlands",
+    "tier": 7,
+    "isFeast": false
+  }
+]

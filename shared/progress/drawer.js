@@ -2,7 +2,8 @@
 (function () {
   'use strict';
   if (globalThis.VCProgressDrawer) return;
-  const P = globalThis.VCProgress;
+  // Resolved in init(): pages may load progress/core.js after this script (all deferred).
+  let P = globalThis.VCProgress;
   const UI = globalThis.VCProgressUI;
   // Minimal spoiler ladder for the trigger; the full checklist stays lazy.
   const ladder = [
@@ -128,7 +129,13 @@
     const visible = banner && !banner.hidden && banner.style.display !== 'none';
     trigger?.style.setProperty('--vc-progress-consent-height', visible ? banner.getBoundingClientRect().height + 'px' : '0px');
   }
+  let waitedForCore = false;
   function init() {
+    P = globalThis.VCProgress;
+    if (!P) {
+      if (!waitedForCore) { waitedForCore = true; document.addEventListener('DOMContentLoaded', init, { once: true }); }
+      return;
+    }
     if (/^\/progress(?:\/|$)/.test(location.pathname) || !document.body || trigger) return;
     if (!document.querySelector('link[href="/shared/progress/drawer.css"]')) {
       const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '/shared/progress/drawer.css'; document.head.appendChild(css);

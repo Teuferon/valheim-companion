@@ -151,5 +151,465 @@
       "cs": "Kolovrat",
       "ru": "Прялка"
     }
+  },
+  {
+    "id": "cauldron",
+    "name": "Cauldron",
+    "names": {
+      "fr": "Chaudron",
+      "ru": "Котел"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Cauldron",
+    "type": "provisions",
+    "materials": [
+      {
+        "item": "tin",
+        "amount": 10
+      }
+    ],
+    "unlock": {
+      "station": "Forge",
+      "materials": [
+        "tin"
+      ]
+    },
+    "maxLevel": 7,
+    "levels": [
+      {
+        "level": 1,
+        "upgrade": null
+      },
+      {
+        "level": 2,
+        "upgrade": "spice-rack"
+      },
+      {
+        "level": 3,
+        "upgrade": "butcher-s-table"
+      },
+      {
+        "level": 4,
+        "upgrade": "pots-and-pans"
+      },
+      {
+        "level": 5,
+        "upgrade": "mortar-and-pestle"
+      },
+      {
+        "level": 6,
+        "upgrade": "rolling-pins-and-cutting-boards"
+      },
+      {
+        "level": 7,
+        "upgrade": "smoker"
+      }
+    ]
+  },
+  {
+    "id": "fermenter",
+    "name": "Fermenter",
+    "names": {
+      "cs": "Fermentor",
+      "ru": "Бродильная бочка"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Fermenter",
+    "type": "provisions",
+    "materials": [
+      {
+        "item": "finewood",
+        "amount": 30
+      },
+      {
+        "item": "bronze",
+        "amount": 5
+      },
+      {
+        "item": "resin",
+        "amount": 10
+      }
+    ],
+    "unlock": {
+      "station": "Forge",
+      "materials": [
+        "finewood",
+        "bronze",
+        "resin"
+      ]
+    },
+    "secondsPerBatch": 2400
+  },
+  {
+    "id": "cooking-station",
+    "name": "Cooking Station",
+    "names": {
+      "fr": "Poste de cuisson",
+      "ru": "Стойка для готовки"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Cooking_Station",
+    "type": "provisions",
+    "materials": [
+      {
+        "item": "wood",
+        "amount": 2
+      }
+    ],
+    "unlock": {
+      "station": null,
+      "materials": [
+        "wood"
+      ]
+    }
+  },
+  {
+    "id": "iron-cooking-station",
+    "name": "Iron Cooking Station",
+    "names": {
+      "cs": "Železná kuchyňka",
+      "ru": "Железная стойка для готовки"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Iron_Cooking_Station",
+    "type": "provisions",
+    "materials": [
+      {
+        "item": "chain",
+        "amount": 3
+      },
+      {
+        "item": "iron",
+        "amount": 3
+      }
+    ],
+    "unlock": {
+      "station": "Workbench",
+      "materials": [
+        "chain",
+        "iron"
+      ]
+    }
+  },
+  {
+    "id": "oven",
+    "name": "Oven",
+    "names": {
+      "cs": "Kamenná pec",
+      "ru": "Каменная печь"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Oven",
+    "type": "provisions",
+    "materials": [
+      {
+        "item": "iron",
+        "amount": 15
+      },
+      {
+        "item": "stone",
+        "amount": 20
+      },
+      {
+        "item": "surtling-core",
+        "amount": 4
+      }
+    ],
+    "unlock": {
+      "station": "Artisan Table",
+      "materials": [
+        "iron",
+        "stone",
+        "surtling-core"
+      ]
+    }
+  },
+  {
+    "id": "mead-ketill",
+    "name": "Mead Ketill",
+    "names": {
+      "ru": "Котел для медовух"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Mead_Ketill",
+    "type": "provisions",
+    "materials": [
+      {
+        "item": "tin",
+        "amount": 4
+      },
+      {
+        "item": "copper",
+        "amount": 6
+      },
+      {
+        "item": "leather-scraps",
+        "amount": 2
+      }
+    ],
+    "unlock": {
+      "station": "Forge",
+      "materials": [
+        "tin",
+        "copper",
+        "leather-scraps"
+      ]
+    }
+  },
+  {
+    "id": "food-preparation-table",
+    "name": "Food Preparation Table",
+    "names": {
+      "cs": "Přípravný stůl",
+      "de": "Lebensmittelzubereitungstisch",
+      "ru": "Разделочный стол"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Food_Preparation_Table",
+    "type": "provisions",
+    "materials": [
+      {
+        "item": "iron",
+        "amount": 5
+      },
+      {
+        "item": "finewood",
+        "amount": 20
+      },
+      {
+        "item": "leather-scraps",
+        "amount": 15
+      }
+    ],
+    "unlock": {
+      "station": "Workbench",
+      "materials": [
+        "iron",
+        "finewood",
+        "leather-scraps"
+      ]
+    }
+  },
+  {
+    "id": "spice-rack",
+    "name": "Spice Rack",
+    "names": {
+      "cs": "Police na koření",
+      "fr": "Seau de forge",
+      "ru": "Сушилка для трав"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Spice_Rack",
+    "type": "provisions",
+    "materials": [
+      {
+        "item": "dandelion",
+        "amount": 3
+      },
+      {
+        "item": "carrot",
+        "amount": 2
+      },
+      {
+        "item": "mushroom",
+        "amount": 5
+      },
+      {
+        "item": "thistle",
+        "amount": 3
+      },
+      {
+        "item": "turnip",
+        "amount": 3
+      }
+    ],
+    "unlock": {
+      "station": "Cauldron, Workbench",
+      "materials": [
+        "dandelion",
+        "carrot",
+        "mushroom",
+        "thistle",
+        "turnip"
+      ]
+    },
+    "upgrades": "cauldron",
+    "stationLevel": 1,
+    "levelIncrement": 1,
+    "progressionLevel": 2
+  },
+  {
+    "id": "butcher-s-table",
+    "name": "Butcher's Table",
+    "names": {
+      "cs": "Řeznický stůl",
+      "fr": "Seau de forge",
+      "ru": "Мясницкий стол"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Butcher's_Table",
+    "type": "provisions",
+    "materials": [
+      {
+        "item": "ancient-bark",
+        "amount": 2
+      },
+      {
+        "item": "corewood",
+        "amount": 4
+      },
+      {
+        "item": "finewood",
+        "amount": 4
+      },
+      {
+        "item": "silver",
+        "amount": 2
+      }
+    ],
+    "unlock": {
+      "station": "Cauldron, Workbench",
+      "materials": [
+        "ancient-bark",
+        "corewood",
+        "finewood",
+        "silver"
+      ]
+    },
+    "upgrades": "cauldron",
+    "stationLevel": 1,
+    "levelIncrement": 1,
+    "progressionLevel": 3
+  },
+  {
+    "id": "pots-and-pans",
+    "name": "Pots and Pans",
+    "names": {
+      "cs": "Hrnce a pánve",
+      "fr": "Seau de forge",
+      "ru": "Кухонная утварь"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Pots_and_Pans",
+    "type": "provisions",
+    "materials": [
+      {
+        "item": "iron",
+        "amount": 5
+      },
+      {
+        "item": "copper",
+        "amount": 5
+      },
+      {
+        "item": "black-metal",
+        "amount": 5
+      },
+      {
+        "item": "finewood",
+        "amount": 10
+      }
+    ],
+    "unlock": {
+      "station": "Cauldron, Workbench",
+      "materials": [
+        "iron",
+        "copper",
+        "black-metal",
+        "finewood"
+      ]
+    },
+    "upgrades": "cauldron",
+    "stationLevel": 1,
+    "levelIncrement": 1,
+    "progressionLevel": 4
+  },
+  {
+    "id": "mortar-and-pestle",
+    "name": "Mortar and Pestle",
+    "names": {
+      "ru": "Ступка и пестик"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Mortar_and_Pestle",
+    "type": "provisions",
+    "materials": [
+      {
+        "item": "black-marble",
+        "amount": 8
+      },
+      {
+        "item": "finewood",
+        "amount": 6
+      },
+      {
+        "item": "corewood",
+        "amount": 4
+      }
+    ],
+    "unlock": {
+      "station": "Cauldron, Workbench",
+      "materials": [
+        "black-marble",
+        "finewood",
+        "corewood"
+      ]
+    },
+    "upgrades": "cauldron",
+    "stationLevel": 1,
+    "levelIncrement": 1,
+    "progressionLevel": 5
+  },
+  {
+    "id": "rolling-pins-and-cutting-boards",
+    "name": "Rolling Pins and Cutting Boards",
+    "names": {
+      "ru": "Скалки и разделочные доски"
+    },
+    "wiki": "https://valheim.weirdgloop.org/w/Rolling_Pins_and_Cutting_Boards",
+    "type": "provisions",
+    "materials": [
+      {
+        "item": "ashwood",
+        "amount": 8
+      },
+      {
+        "item": "finewood",
+        "amount": 6
+      },
+      {
+        "item": "flametal",
+        "amount": 4
+      }
+    ],
+    "unlock": {
+      "station": "Cauldron, Workbench",
+      "materials": [
+        "ashwood",
+        "finewood",
+        "flametal"
+      ]
+    },
+    "upgrades": "cauldron",
+    "stationLevel": 1,
+    "levelIncrement": 1,
+    "progressionLevel": 6
+  },
+  {
+    "id": "smoker",
+    "name": "Smoker",
+    "names": {},
+    "wiki": "https://valheim.weirdgloop.org/w/Smoker",
+    "type": "provisions",
+    "materials": [
+      {
+        "item": "bloodgold",
+        "amount": 5
+      },
+      {
+        "item": "timberwood",
+        "amount": 6
+      }
+    ],
+    "unlock": {
+      "station": "Cauldron, Workbench",
+      "materials": [
+        "bloodgold",
+        "timberwood"
+      ]
+    },
+    "upgrades": "cauldron",
+    "stationLevel": 1,
+    "levelIncrement": 1,
+    "progressionLevel": 7
   }
 ]

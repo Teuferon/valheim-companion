@@ -28,6 +28,7 @@ COPY apps/progress/assets/ /usr/share/nginx/html/progress/assets/
 COPY apps/progress/data/data.js /usr/share/nginx/html/progress/data/data.js
 COPY apps/progress/locales/messages.js /usr/share/nginx/html/progress/locales/messages.js
 COPY shared/player/core.js /usr/share/nginx/html/shared/player/core.js
+COPY shared/shopping/core.js /usr/share/nginx/html/shared/shopping/core.js
 COPY apps/bestiary/index.html /usr/share/nginx/html/bestiary/
 COPY apps/bestiary/assets/ /usr/share/nginx/html/bestiary/assets/
 COPY apps/bestiary/data/data.js /usr/share/nginx/html/bestiary/data/data.js
@@ -36,6 +37,11 @@ COPY apps/smithy/index.html /usr/share/nginx/html/smithy/
 COPY apps/smithy/assets/ /usr/share/nginx/html/smithy/assets/
 COPY apps/smithy/data/data.js /usr/share/nginx/html/smithy/data/data.js
 COPY apps/smithy/img/ /usr/share/nginx/html/smithy/img/
+COPY apps/provisions/index.html /usr/share/nginx/html/provisions/
+COPY apps/provisions/assets/ /usr/share/nginx/html/provisions/assets/
+COPY apps/provisions/locales/messages.js /usr/share/nginx/html/provisions/locales/messages.js
+COPY apps/provisions/data/data.js /usr/share/nginx/html/provisions/data/data.js
+COPY apps/provisions/img/ /usr/share/nginx/html/provisions/img/
 COPY --from=signs /repo/apps/signs/dist-static/ /usr/share/nginx/html/signs/
 COPY --from=damage-calculator /repo/apps/damage-calculator/dist-static/ /usr/share/nginx/html/damage-calculator/
 EXPOSE 80
