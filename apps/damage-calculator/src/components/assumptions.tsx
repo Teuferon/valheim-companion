@@ -1,6 +1,6 @@
 import { useLanguage } from '@/hooks/use-language';
 
-import type { Translate, Locale } from "../../../../shared/i18n/core";
+import type { Translate, TranslateNumber, Locale } from "../../../../shared/i18n/core";
 import type { ReactElement } from "react";
 import { cn } from "cn";
 import { BookOpen, FlaskConical, Info, TriangleAlert } from "lucide-react";
@@ -62,11 +62,11 @@ function timingLabel(profile: AttackProfile, t: Translate, number: (value: numbe
 }
 
 /** Combo shape: hits per cycle and their damage weights. */
-function comboLabel(profile: AttackProfile, t: Translate, number: (value: number) => string): string {
+function comboLabel(profile: AttackProfile, tn: TranslateNumber, number: (value: number) => string): string {
   if (profile.comboMults.length === 1) {
     return profile.damageMult === 1 ? "" : ` · ×${number(profile.damageMult)}`;
   }
-  return t(" · {hits} hits ({weights}×)", { hits: number(profile.comboMults.length), weights: profile.comboMults.map(value => number(value)).join("+") });
+  return tn(" · {count} hits ({weights}×)", profile.comboMults.length, { count: number(profile.comboMults.length), weights: profile.comboMults.map(value => number(value)).join("+") });
 }
 
 /** One line per class paired with its attack profile, for the timing list. */
@@ -108,7 +108,7 @@ const HEADER_BUTTON =
 
 /** The translated methodology shown inside the dialog. */
 function MethodologySections() {
-  const { t, locale, number, formatCount, nameOf } = useLanguage();
+  const { t, tn, locale, number, formatCount, nameOf } = useLanguage();
   return (
     <>
         <div className="space-y-2">
@@ -206,7 +206,7 @@ listed damage = weapon value + ammo value`)}
                     title={profile.source.label}
                   >
                     {timingLabel(profile, t, number)}
-                    {comboLabel(profile, t, number)}
+                    {comboLabel(profile, tn, number)}
                   </a>
                   <span className="text-muted-foreground">
                     {t(CONFIDENCE_LABEL[profile.confidence])}
@@ -227,7 +227,7 @@ listed damage = weapon value + ammo value`)}
                     {WEAPON_BY_SLUG.has(slug) ? nameOf(WEAPON_BY_SLUG.get(slug)!) : slug}
                   </span>{" "}
                   — {timingLabel(profile, t, number)}
-                  {comboLabel(profile, t, number)}
+                  {comboLabel(profile, tn, number)}
                   {profile.hitTimes
                     ? t(" · hits at {times}", { times: profile.hitTimes.map(value => `${number(value, 3)} s`).join(", ") })
                     : ""}{" "}
@@ -266,7 +266,14 @@ listed damage = weapon value + ammo value`)}
               <a className="text-primary underline" href="https://valheim.gaming.tools/structures/piece_turret" target="_blank" rel="noopener noreferrer">valheim.gaming.tools</a>
             </li>
             <li>
-              {t("{weapons} weapons · {ammo} ammo types · {bosses} bosses · {minibosses} minibosses · {enemies} enemies · {biomes} biomes", { weapons: formatCount(datasetMeta.counts.weapons), ammo: formatCount(datasetMeta.counts.ammo), bosses: formatCount(datasetMeta.counts.bosses), minibosses: formatCount(datasetMeta.counts.minibosses ?? 4), enemies: formatCount(datasetMeta.counts.enemies ?? 67), biomes: formatCount(datasetMeta.counts.biomes ?? 9) })}
+              {[
+                tn("{count} weapons", datasetMeta.counts.weapons, { count: formatCount(datasetMeta.counts.weapons) }),
+                tn("{count} ammo types", datasetMeta.counts.ammo, { count: formatCount(datasetMeta.counts.ammo) }),
+                tn("{count} bosses", datasetMeta.counts.bosses, { count: formatCount(datasetMeta.counts.bosses) }),
+                tn("{count} minibosses", datasetMeta.counts.minibosses ?? 4, { count: formatCount(datasetMeta.counts.minibosses ?? 4) }),
+                tn("{count} enemies", datasetMeta.counts.enemies ?? 67, { count: formatCount(datasetMeta.counts.enemies ?? 67) }),
+                tn("{count} biomes", datasetMeta.counts.biomes ?? 9, { count: formatCount(datasetMeta.counts.biomes ?? 9) }),
+              ].join(" · ")}
             </li>
             <li>
               <span className="text-foreground">{t("Availability is derived, not listed:")}

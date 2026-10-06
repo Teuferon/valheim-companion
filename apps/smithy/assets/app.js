@@ -19,6 +19,7 @@
   const t = (source, values) => globalThis.VCI18n
     ? VCI18n.t(globalThis.VC_MESSAGES || {}, source, values)
     : String(source).replace(/\{(\w+)\}/g, (match, key) => values?.[key] ?? match);
+  const tn = (key, count, values) => VCI18n.tn(globalThis.VC_MESSAGES, key, count, values);
   const entityName = entity => globalThis.VCI18n ? VCI18n.name(entity) : entity?.name || '';
   const biomeName = biome => entityName(biome) || t('Unknown');
   const stationName = station => station ? station.split(/[·,;\/]/)[0].trim() : t('Station');
@@ -605,7 +606,7 @@
         const headerContent = el('div', 'biome-header-content');
         const orderBadge = el('span', 'biome-order-badge', t('Biome {order}', { order: biome.order }));
         const nameHeading = el('span', 'biome-name', biomeName(biome));
-        const countBadge = el('span', 'biome-count-badge', t('{count} sets', { count: sets.length }));
+        const countBadge = el('span', 'biome-count-badge', tn('{count} sets', sets.length, { count: sets.length }));
 
         headerContent.appendChild(orderBadge);
         headerContent.appendChild(nameHeading);
@@ -687,7 +688,7 @@
         const headerContent = el('div', 'biome-header-content');
         const badge = el('span', 'biome-order-badge', 'Special');
         const nameHeading = el('span', 'biome-name', 'Special, DLC & seasonal');
-        const countBadge = el('span', 'biome-count-badge', t('{count} items', { count: dlcSeasonal.length }));
+        const countBadge = el('span', 'biome-count-badge', tn('{count} items', dlcSeasonal.length, { count: dlcSeasonal.length }));
 
         headerContent.appendChild(badge);
         headerContent.appendChild(nameHeading);
@@ -738,7 +739,7 @@
         const headerContent = el('div', 'biome-header-content');
         const badge = el('span', 'biome-order-badge', 'Special');
         const nameHeading = el('span', 'biome-name', 'Cosmetics');
-        const countBadge = el('span', 'biome-count-badge', t('{count} items', { count: cosmetics.length }));
+        const countBadge = el('span', 'biome-count-badge', tn('{count} items', cosmetics.length, { count: cosmetics.length }));
 
         headerContent.appendChild(badge);
         headerContent.appendChild(nameHeading);
@@ -810,7 +811,7 @@
         const headerContent = el('div', 'biome-header-content');
         const orderBadge = el('span', 'biome-order-badge', t('Biome {order}', { order: biome.order }));
         const nameHeading = el('span', 'biome-name', biomeName(biome));
-        const countBadge = el('span', 'biome-count-badge', t('{count} weapons', { count: weapons.length }));
+        const countBadge = el('span', 'biome-count-badge', tn('{count} weapons', weapons.length, { count: weapons.length }));
 
         headerContent.appendChild(orderBadge);
         headerContent.appendChild(nameHeading);
@@ -1517,7 +1518,7 @@
         const bonusBox = el('div', 'set-bonus-box');
         const bonusHeader = el('div', 'set-bonus-title');
         const pieceWord = armor.setBonus.pieces === 1 ? 'piece' : 'pieces';
-        bonusHeader.textContent = t('Set Bonus: {name} ({count} pieces)', { name: entityName(armor.setBonus), count: armor.setBonus.pieces });
+        bonusHeader.textContent = tn('Set Bonus: {name} ({count} pieces)', armor.setBonus.pieces, { name: entityName(armor.setBonus) });
         bonusBox.appendChild(bonusHeader);
 
         if (armor.setBonus.effects && armor.setBonus.effects.length > 0) {
@@ -1624,7 +1625,7 @@
 
       const totalPieces = cart.length;
       if (cartCountBadge) {
-        cartCountBadge.textContent = t('{count} items', { count: totalPieces });
+        cartCountBadge.textContent = tn('{count} items', totalPieces, { count: totalPieces });
       }
       if (mobileCartBadge) {
         mobileCartBadge.textContent = String(totalPieces);
@@ -1886,7 +1887,7 @@
         const furnaceLabel = el('span', 'metric-label', t('Furnaces:'));
         const furnaceSelect = el('select', 'level-select furnace-select');
         for (let f = 1; f <= 8; f++) {
-          const opt = el('option', null, t('{count} × furnace', { count: f }));
+          const opt = el('option', null, tn('{count} × furnace', f, { count: f }));
           opt.value = String(f);
           furnaceSelect.appendChild(opt);
         }
@@ -1925,7 +1926,7 @@
 
         const timeRow = el('div', 'cart-summary-metric');
         const timeLabel = el('span', 'metric-label', t('Time per furnace:'));
-        const timeVal = el('span', 'metric-value metric-value-gold', t('{time} min', { time: calc.smelting.timeFormatted }));
+        const timeVal = el('span', 'metric-value metric-value-gold', tn('{time} min', calc.smelting.seconds / 60, { time: calc.smelting.timeFormatted }));
         timeRow.appendChild(timeLabel);
         timeRow.appendChild(timeVal);
         metricsBox.appendChild(timeRow);

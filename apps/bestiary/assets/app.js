@@ -5,6 +5,7 @@ import { PLAYER_STORAGE_KEY, defaultPlayer, sanitizePlayer, readPlayerState } fr
 
 (function () {
   const t = (source, values) => VCI18n.t(VC_MESSAGES, source, values);
+  const tn = (key, count, values) => VCI18n.tn(globalThis.VC_MESSAGES, key, count, values);
   const entityName = entity => VCI18n.name(entity);
   const biomeName = biome => entityName(biome);
   const normalizeSearch = value => value.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
@@ -288,7 +289,7 @@ import { PLAYER_STORAGE_KEY, defaultPlayer, sanitizePlayer, readPlayerState } fr
       const skills = window.VCRank.SKILLS;
       const avg = Math.round(skills.reduce((acc, s) => acc + player.skills[s.id], 0) / skills.length);
       const diffLabel = DIFFICULTY_OPTIONS.find((d) => d.id === player.difficulty);
-      const playersStr = t('{count} players', { count: player.players });
+      const playersStr = tn('{count} players', player.players, { count: player.players });
       const qualityStr = player.quality === 'max' ? t('Max quality') : t('Quality {level}', { level: player.quality });
       const rankByStr = player.rankBy === 'hit' ? t('Per hit') : t('DPS');
       summaryEl.textContent = t('Your character · avg skill {skill} · {difficulty} · {players} · {quality} · {ranking}', { skill: avg, difficulty: t(diffLabel ? diffLabel.short : 'Normal'), players: playersStr, quality: qualityStr, ranking: rankByStr });
@@ -881,7 +882,7 @@ import { PLAYER_STORAGE_KEY, defaultPlayer, sanitizePlayer, readPlayerState } fr
 
       // 3. Hits / TTK: "≈ N hits · ≈ X s"
       if (recItem && recItem.hits != null) {
-        let hitsText = t('≈ {count} hits', { count: recItem.hits });
+        let hitsText = tn('≈ {count} hits', recItem.hits, { count: recItem.hits });
         if (recItem.timeToKill != null && Number.isFinite(recItem.timeToKill)) {
           const ttkVal = recItem.timeToKill < 10 ? recItem.timeToKill.toFixed(1) : Math.round(recItem.timeToKill);
           hitsText += ' · ≈ ' + ttkVal + ' s';
@@ -978,7 +979,7 @@ import { PLAYER_STORAGE_KEY, defaultPlayer, sanitizePlayer, readPlayerState } fr
       starsList.forEach((starObj, idx) => {
         const starBtn = el('button', 'star-btn' + (idx === 0 ? ' active' : ''), getStarSymbol(starObj.star));
         starBtn.type = 'button';
-        starBtn.setAttribute('aria-label', t('{count} stars', { count: starObj.star }));
+        starBtn.setAttribute('aria-label', tn('{count} stars', starObj.star, { count: starObj.star }));
         starBtn.addEventListener('click', function () {
           currentStarIndex = idx;
           Array.from(starSelector.children).forEach(btn => btn.classList.remove('active'));
@@ -1375,7 +1376,7 @@ import { PLAYER_STORAGE_KEY, defaultPlayer, sanitizePlayer, readPlayerState } fr
         ? t('Eating range: unknown')
         : t('Eating range: {range} m', { range: creature.taming.eatingRange.toLocaleString(VCI18n.locale()) })));
       if (creature.taming.tameTime !== undefined) {
-        value.appendChild(el('div', 'extra-note', t('Taming time: {minutes} min', { minutes: creature.taming.tameTime })));
+        value.appendChild(el('div', 'extra-note', tn('Taming time: {minutes} min', creature.taming.tameTime, { minutes: creature.taming.tameTime })));
       }
       row.appendChild(value);
       detailsContent.appendChild(row);
@@ -1611,7 +1612,7 @@ import { PLAYER_STORAGE_KEY, defaultPlayer, sanitizePlayer, readPlayerState } fr
     if (weaponsList.length === 0) return null;
 
     const section = el('details', 'biome-weapons-details');
-    const summary = el('summary', null, t('Weapons & ammo from this biome ({count})', { count: weaponsList.length }));
+    const summary = el('summary', null, tn('Weapons & ammo from this biome ({count})', weaponsList.length, { count: weaponsList.length }));
     section.appendChild(summary);
 
     const tableWrapper = el('div', 'weapons-table-wrapper');
@@ -1751,8 +1752,7 @@ import { PLAYER_STORAGE_KEY, defaultPlayer, sanitizePlayer, readPlayerState } fr
     if (bossesList.length > 0) {
       const bossSection = el('section', 'biome-section biome-section-bosses');
       const bossTitle = el('h3', 'section-title');
-      bossTitle.appendChild(document.createTextNode(t('Bosses ')));
-      bossTitle.appendChild(el('span', 'section-count', '(' + bossesList.length + ')'));
+      bossTitle.textContent = tn('Bosses ({count})', bossesList.length);
       bossSection.appendChild(bossTitle);
 
       const bossGrid = el('div', 'creatures-grid');
@@ -1771,8 +1771,7 @@ import { PLAYER_STORAGE_KEY, defaultPlayer, sanitizePlayer, readPlayerState } fr
     if (hostileList.length > 0) {
       const hostileSection = el('section', 'biome-section biome-section-hostile');
       const hostileTitle = el('h3', 'section-title');
-      hostileTitle.appendChild(document.createTextNode(t('Hostile ')));
-      hostileTitle.appendChild(el('span', 'section-count', '(' + hostileList.length + ')'));
+      hostileTitle.textContent = tn('Hostile ({count})', hostileList.length);
       hostileSection.appendChild(hostileTitle);
 
       const hostileGrid = el('div', 'creatures-grid');
@@ -1791,8 +1790,7 @@ import { PLAYER_STORAGE_KEY, defaultPlayer, sanitizePlayer, readPlayerState } fr
     if (passiveList.length > 0) {
       const passiveSection = el('section', 'biome-section biome-section-passive');
       const passiveTitle = el('h3', 'section-title');
-      passiveTitle.appendChild(document.createTextNode(t('Passive ')));
-      passiveTitle.appendChild(el('span', 'section-count', '(' + passiveList.length + ')'));
+      passiveTitle.textContent = tn('Passive ({count})', passiveList.length);
       passiveSection.appendChild(passiveTitle);
 
       const passiveGrid = el('div', 'creatures-grid');
@@ -1811,8 +1809,7 @@ import { PLAYER_STORAGE_KEY, defaultPlayer, sanitizePlayer, readPlayerState } fr
     if (fishList.length > 0) {
       const fishSection = el('section', 'biome-section biome-section-fish');
       const fishTitle = el('h3', 'section-title');
-      fishTitle.appendChild(document.createTextNode(t('Fish ')));
-      fishTitle.appendChild(el('span', 'section-count', '(' + fishList.length + ')'));
+      fishTitle.textContent = tn('Fish ({count})', fishList.length);
       fishSection.appendChild(fishTitle);
 
       const fishGrid = el('div', 'fish-grid');
@@ -2328,7 +2325,7 @@ import { PLAYER_STORAGE_KEY, defaultPlayer, sanitizePlayer, readPlayerState } fr
       const tr = el('tr', 'armory-locked-row');
       const td = el('td');
       td.colSpan = 12;
-      td.textContent = t('🔒 {count} weapons from {biome} — open the biome to reveal', { count, biome: biomeName(biome) });
+      td.textContent = tn('🔒 {count} weapons from {biome} — open the biome to reveal', count, { biome: biomeName(biome) });
       tr.appendChild(td);
       return tr;
     }
@@ -2756,7 +2753,7 @@ import { PLAYER_STORAGE_KEY, defaultPlayer, sanitizePlayer, readPlayerState } fr
       const headerContent = el('div', 'biome-header-content');
       const orderBadge = el('span', 'biome-order-badge', t('Biome {order}', { order: biome.order }));
       const nameHeading = el('span', 'biome-name', biomeName(biome));
-      const countBadge = el('span', 'biome-count-badge', t('{count} creatures', { count: creaturesCount }));
+      const countBadge = el('span', 'biome-count-badge', tn('{count} creatures', creaturesCount, { count: creaturesCount }));
 
       headerContent.appendChild(orderBadge);
       headerContent.appendChild(nameHeading);
@@ -2832,7 +2829,7 @@ import { PLAYER_STORAGE_KEY, defaultPlayer, sanitizePlayer, readPlayerState } fr
         const biome = data.biomes.find(b => b.id === card.dataset.biomeId);
         card.querySelector('.biome-name').textContent = biomeName(biome);
         card.querySelector('.biome-order-badge').textContent = t('Biome {order}', { order: biome.order });
-        card.querySelector('.biome-count-badge').textContent = t('{count} creatures', { count: Object.values(biome.creatures || {}).flat().length });
+        card.querySelector('.biome-count-badge').textContent = tn('{count} creatures', Object.values(biome.creatures || {}).flat().length);
         const wrapper = card.querySelector('.biome-content-wrapper');
         if (!wrapper.children.length) return;
         const fish = [...wrapper.querySelectorAll('.fish-wrapper.expanded')].map(e => e.dataset.creatureId);

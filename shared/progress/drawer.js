@@ -33,7 +33,7 @@
   function count() { return P.revealedBiomes(globalThis.VP_DATA?.biomes || ladder).length; }
   function update() {
     if (!trigger) return;
-    const label = t('⛓ Progress {revealed}/9', { revealed: count() });
+    const label = UI.tn('⛓ Progress {revealed}/9', count(), { revealed: count() });
     trigger.setAttribute('aria-label', label);
     trigger.querySelector('.vc-progress-trigger-label').textContent = label;
     trigger.querySelector('.vc-progress-trigger-count').textContent = count() + '/9';

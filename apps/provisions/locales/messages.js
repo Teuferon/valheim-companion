@@ -391,19 +391,66 @@ globalThis.VC_MESSAGES = {
     "id": "{station} · level {level}"
   },
   "Feast · {count} servings": {
-    "en": "Feast · {count} servings",
-    "cs": "Hostina · {count} porcí",
-    "de": "Festmahl · {count} Portionen",
-    "es": "Banquete · {count} raciones",
-    "fr": "Festin · {count} portions",
-    "pt": "Banquete · {count} porções",
-    "zh": "盛宴 · {count} 份",
-    "hi": "दावत · {count} परोसने",
-    "ar": "وليمة · {count} حصص",
-    "bn": "ভোজ · {count} পরিবেশন",
-    "ru": "Пир · {count} порций",
-    "ja": "宴会 · {count} 食分",
-    "id": "Pesta · {count} porsi"
+    "en": {
+      "one": "Feast · {count} serving",
+      "other": "Feast · {count} servings"
+    },
+    "cs": {
+      "one": "Hostina · {count} porce",
+      "few": "Hostina · {count} porce",
+      "many": "Hostina · {count} porce",
+      "other": "Hostina · {count} porcí"
+    },
+    "de": {
+      "one": "Festmahl · {count} Portion",
+      "other": "Festmahl · {count} Portionen"
+    },
+    "es": {
+      "one": "Banquete · {count} porción",
+      "many": "Banquete · {count} porciones",
+      "other": "Banquete · {count} porciones"
+    },
+    "fr": {
+      "one": "Festin · {count} portion",
+      "many": "Festin · {count} portions",
+      "other": "Festin · {count} portions"
+    },
+    "pt": {
+      "one": "Banquete · {count} porção",
+      "many": "Banquete · {count} porções",
+      "other": "Banquete · {count} porções"
+    },
+    "zh": {
+      "other": "盛宴 · {count} 份"
+    },
+    "hi": {
+      "one": "दावत · {count} परोस",
+      "other": "दावत · {count} परोस"
+    },
+    "ar": {
+      "zero": "وليمة · {count} حصص",
+      "one": "وليمة · {count} حصة",
+      "two": "وليمة · {count} حصتان",
+      "few": "وليمة · {count} حصص",
+      "many": "وليمة · {count} حصةً",
+      "other": "وليمة · {count} حصة"
+    },
+    "bn": {
+      "one": "ভোজ · {count}টি পরিবেশন",
+      "other": "ভোজ · {count}টি পরিবেশন"
+    },
+    "ru": {
+      "one": "Пир · {count} порция",
+      "few": "Пир · {count} порции",
+      "many": "Пир · {count} порций",
+      "other": "Пир · {count} порции"
+    },
+    "ja": {
+      "other": "宴会 · {count} 食分"
+    },
+    "id": {
+      "other": "Pesta · {count} porsi"
+    }
   },
   "Healing: {amount} HP/tick": {
     "en": "Healing: {amount} HP/tick",
@@ -451,19 +498,66 @@ globalThis.VC_MESSAGES = {
     "id": "Waktu tunggu: {time}"
   },
   "{minutes} min": {
-    "en": "{minutes} min",
-    "cs": "{minutes} min",
-    "de": "{minutes} Min.",
-    "es": "{minutes} min",
-    "fr": "{minutes} min",
-    "pt": "{minutes} min",
-    "zh": "{minutes} 分钟",
-    "hi": "{minutes} मिनट",
-    "ar": "{minutes} دقيقة",
-    "bn": "{minutes} মিনিট",
-    "ru": "{minutes} мин",
-    "ja": "{minutes} 分",
-    "id": "{minutes} menit"
+    "en": {
+      "one": "{minutes} min",
+      "other": "{minutes} min"
+    },
+    "cs": {
+      "one": "{minutes} min",
+      "few": "{minutes} min",
+      "many": "{minutes} min",
+      "other": "{minutes} min"
+    },
+    "de": {
+      "one": "{minutes} Min.",
+      "other": "{minutes} Min."
+    },
+    "es": {
+      "one": "{minutes} min",
+      "many": "{minutes} min",
+      "other": "{minutes} min"
+    },
+    "fr": {
+      "one": "{minutes} min",
+      "many": "{minutes} min",
+      "other": "{minutes} min"
+    },
+    "pt": {
+      "one": "{minutes} min",
+      "many": "{minutes} min",
+      "other": "{minutes} min"
+    },
+    "zh": {
+      "other": "{minutes} 分钟"
+    },
+    "hi": {
+      "one": "{minutes} मिनट",
+      "other": "{minutes} मिनट"
+    },
+    "ar": {
+      "zero": "{minutes} دقيقة",
+      "one": "{minutes} دقيقة",
+      "two": "{minutes} دقيقة",
+      "few": "{minutes} دقيقة",
+      "many": "{minutes} دقيقة",
+      "other": "{minutes} دقيقة"
+    },
+    "bn": {
+      "one": "{minutes} মিনিট",
+      "other": "{minutes} মিনিট"
+    },
+    "ru": {
+      "one": "{minutes} мин",
+      "few": "{minutes} мин",
+      "many": "{minutes} мин",
+      "other": "{minutes} мин"
+    },
+    "ja": {
+      "other": "{minutes} 分"
+    },
+    "id": {
+      "other": "{minutes} menit"
+    }
   },
   "Locked until you reach this biome.": {
     "en": "Locked until you reach this biome.",
@@ -841,19 +935,66 @@ globalThis.VC_MESSAGES = {
     "id": "Jam bermain"
   },
   "{count} servings": {
-    "en": "{count} servings",
-    "cs": "{count} porcí",
-    "de": "{count} Portionen",
-    "es": "{count} raciones",
-    "fr": "{count} portions",
-    "pt": "{count} porções",
-    "zh": "{count} 份",
-    "hi": "{count} परोसने",
-    "ar": "{count} حصص",
-    "bn": "{count} পরিবেশন",
-    "ru": "{count} порций",
-    "ja": "{count} 食分",
-    "id": "{count} porsi"
+    "en": {
+      "one": "{count} serving",
+      "other": "{count} servings"
+    },
+    "cs": {
+      "one": "{count} porce",
+      "few": "{count} porce",
+      "many": "{count} porce",
+      "other": "{count} porcí"
+    },
+    "de": {
+      "one": "{count} Portion",
+      "other": "{count} Portionen"
+    },
+    "es": {
+      "one": "{count} porción",
+      "many": "{count} porciones",
+      "other": "{count} porciones"
+    },
+    "fr": {
+      "one": "{count} portion",
+      "many": "{count} portions",
+      "other": "{count} portions"
+    },
+    "pt": {
+      "one": "{count} porção",
+      "many": "{count} porções",
+      "other": "{count} porções"
+    },
+    "zh": {
+      "other": "{count} 份"
+    },
+    "hi": {
+      "one": "{count} परोस",
+      "other": "{count} परोस"
+    },
+    "ar": {
+      "zero": "{count} حصص",
+      "one": "{count} حصة",
+      "two": "{count} حصتان",
+      "few": "{count} حصص",
+      "many": "{count} حصةً",
+      "other": "{count} حصة"
+    },
+    "bn": {
+      "one": "{count}টি পরিবেশন",
+      "other": "{count}টি পরিবেশন"
+    },
+    "ru": {
+      "one": "{count} порция",
+      "few": "{count} порции",
+      "many": "{count} порций",
+      "other": "{count} порции"
+    },
+    "ja": {
+      "other": "{count} 食分"
+    },
+    "id": {
+      "other": "{count} porsi"
+    }
   },
   "On demand": {
     "en": "On demand",
@@ -1156,19 +1297,66 @@ globalThis.VC_MESSAGES = {
     "id": "Batch pembuatan penuh; porsi pesta disertakan."
   },
   "{count} batches": {
-    "en": "{count} batches",
-    "cs": "{count} dávek",
-    "de": "{count} Durchgänge",
-    "es": "{count} lotes",
-    "fr": "{count} lots",
-    "pt": "{count} lotes",
-    "zh": "{count} 批",
-    "hi": "{count} बैच",
-    "ar": "{count} دفعات",
-    "bn": "{count} ব্যাচ",
-    "ru": "{count} партий",
-    "ja": "{count} 回分",
-    "id": "{count} batch"
+    "en": {
+      "one": "{count} batch",
+      "other": "{count} batches"
+    },
+    "cs": {
+      "one": "{count} dávka",
+      "few": "{count} dávky",
+      "many": "{count} dávky",
+      "other": "{count} dávek"
+    },
+    "de": {
+      "one": "{count} Charge",
+      "other": "{count} Chargen"
+    },
+    "es": {
+      "one": "{count} lote",
+      "many": "{count} lotes",
+      "other": "{count} lotes"
+    },
+    "fr": {
+      "one": "{count} lot",
+      "many": "{count} lots",
+      "other": "{count} lots"
+    },
+    "pt": {
+      "one": "{count} lote",
+      "many": "{count} lotes",
+      "other": "{count} lotes"
+    },
+    "zh": {
+      "other": "{count} 批"
+    },
+    "hi": {
+      "one": "{count} बैच",
+      "other": "{count} बैच"
+    },
+    "ar": {
+      "zero": "{count} دفعات",
+      "one": "{count} دفعة",
+      "two": "{count} دفعتان",
+      "few": "{count} دفعات",
+      "many": "{count} دفعةً",
+      "other": "{count} دفعة"
+    },
+    "bn": {
+      "one": "{count}টি ব্যাচ",
+      "other": "{count}টি ব্যাচ"
+    },
+    "ru": {
+      "one": "{count} партия",
+      "few": "{count} партии",
+      "many": "{count} партий",
+      "other": "{count} партии"
+    },
+    "ja": {
+      "other": "{count} 回の仕込み"
+    },
+    "id": {
+      "other": "{count} batch"
+    }
   },
   "Choose food or mead to build a shopping list.": {
     "en": "Choose food or mead to build a shopping list.",

@@ -99,11 +99,11 @@ export function resolveLocale(
 export function translate(
   locale: Locale,
   source: string,
-  catalog?: Record<string, Partial<Record<Locale, string>>>,
+  catalog?: Catalog,
   values?: Record<string, string | number>,
 ): string {
   const template =
-    catalog?.[source]?.[locale] ?? catalog?.[source]?.en ?? source;
+    (catalog?.[source]?.[locale] ?? catalog?.[source]?.en ?? source) as string;
   if (!values) return template;
   return template.replace(/\{(\w+)\}/g, (match, key: string) =>
     values[key] !== undefined ? String(values[key]) : match,

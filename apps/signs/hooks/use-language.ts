@@ -9,9 +9,11 @@ import {
   readPreference,
   resolveLocale,
   translate,
+  translateNumber,
   type LanguagePreference,
   type Locale,
   type Translate,
+  type TranslateNumber,
 } from '@/lib/i18n';
 
 const changeEvent = 'runopis:language';
@@ -77,6 +79,10 @@ export function useLanguage() {
     () => (source, values) => translate(locale, source, values),
     [locale],
   );
+  const tn: TranslateNumber = useMemo(
+    () => (source, count, values) => translateNumber(locale, source, count, values),
+    [locale],
+  );
   useEffect(() => {
     document.documentElement.lang = locale;
     document.documentElement.dir = locale === 'ar' ? 'rtl' : 'ltr';
@@ -90,5 +96,5 @@ export function useLanguage() {
         ),
       );
   }, [locale, t]);
-  return { locale, preference, setPreference, t };
+  return { locale, preference, setPreference, t, tn };
 }

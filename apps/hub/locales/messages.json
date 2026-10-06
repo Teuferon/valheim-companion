@@ -405,19 +405,66 @@
     "id": "Tidak ada hasil ditemukan"
   },
   "{count} more results in locked biomes": {
-    "en": "{count} more results in locked biomes",
-    "cs": "Další výsledky v zamčených biomech: {count}",
-    "de": "{count} weitere Ergebnisse in gesperrten Biomen",
-    "es": "{count} resultados más en biomas bloqueados",
-    "fr": "{count} autres résultats dans les biomes verrouillés",
-    "pt": "Mais {count} resultados em biomas bloqueados",
-    "zh": "锁定生物群系中还有 {count} 个结果",
-    "hi": "लॉक किए गए बायोम में {count} और परिणाम",
-    "ar": "{count} نتيجة إضافية في المناطق المقفلة",
-    "bn": "লক করা বায়োমে আরও {count}টি ফলাফল রয়েছে",
-    "ru": "Ещё {count} результатов в закрытых биомах",
-    "ja": "未開放のバイオームにあと {count} 件の結果があります",
-    "id": "{count} hasil lainnya di bioma terkunci"
+    "en": {
+      "one": "{count} more result in locked biomes",
+      "other": "{count} more results in locked biomes"
+    },
+    "cs": {
+      "one": "Ještě {count} výsledek v zamčených biomech",
+      "few": "Ještě {count} výsledky v zamčených biomech",
+      "many": "Ještě {count} výsledku v zamčených biomech",
+      "other": "Ještě {count} výsledků v zamčených biomech"
+    },
+    "de": {
+      "one": "{count} weiteres Ergebnis in gesperrten Biomen",
+      "other": "{count} weitere Ergebnisse in gesperrten Biomen"
+    },
+    "es": {
+      "one": "{count} resultado más en biomas bloqueados",
+      "many": "{count} resultados más en biomas bloqueados",
+      "other": "{count} resultados más en biomas bloqueados"
+    },
+    "fr": {
+      "one": "{count} autre résultat dans les biomes verrouillés",
+      "many": "{count} autres résultats dans les biomes verrouillés",
+      "other": "{count} autres résultats dans les biomes verrouillés"
+    },
+    "pt": {
+      "one": "Mais {count} resultado em biomas bloqueados",
+      "many": "Mais {count} resultados em biomas bloqueados",
+      "other": "Mais {count} resultados em biomas bloqueados"
+    },
+    "zh": {
+      "other": "锁定生物群系中还有 {count} 个结果"
+    },
+    "hi": {
+      "one": "लॉक किए गए बायोम में {count} और परिणाम",
+      "other": "लॉक किए गए बायोम में {count} और परिणाम"
+    },
+    "ar": {
+      "zero": "{count} نتائج إضافية في المناطق المقفلة",
+      "one": "{count} نتيجة إضافية في المناطق المقفلة",
+      "two": "{count} نتيجتان إضافيتان في المناطق المقفلة",
+      "few": "{count} نتائج إضافية في المناطق المقفلة",
+      "many": "{count} نتيجةً إضافيةً في المناطق المقفلة",
+      "other": "{count} نتيجة إضافية في المناطق المقفلة"
+    },
+    "bn": {
+      "one": "লক করা বায়োমে আরও {count}টি ফলাফল রয়েছে",
+      "other": "লক করা বায়োমে আরও {count}টি ফলাফল রয়েছে"
+    },
+    "ru": {
+      "one": "Ещё {count} результат в закрытых биомах",
+      "few": "Ещё {count} результата в закрытых биомах",
+      "many": "Ещё {count} результатов в закрытых биомах",
+      "other": "Ещё {count} результата в закрытых биомах"
+    },
+    "ja": {
+      "other": "未開放のバイオームにあと {count} 件の結果があります"
+    },
+    "id": {
+      "other": "{count} hasil lainnya di bioma terkunci"
+    }
   },
   "1 more result in locked biomes": {
     "en": "1 more result in locked biomes",
@@ -448,21 +495,6 @@
     "ru": "Отслеживайте прогресс →",
     "ja": "進行状況を記録 →",
     "id": "Catat progresmu →"
-  },
-  "{revealed} / {total} biomes · {bosses} bosses": {
-    "en": "{revealed} / {total} biomes · {bosses} bosses",
-    "cs": "{revealed} / {total} biomů · {bosses} bossů",
-    "de": "{revealed} / {total} Biome · {bosses} Bosse",
-    "es": "{revealed} / {total} biomas · {bosses} jefes",
-    "fr": "{revealed} / {total} biomes · {bosses} boss",
-    "pt": "{revealed} / {total} biomas · {bosses} chefes",
-    "zh": "{revealed} / {total} 生物群系 · {bosses} 个首领",
-    "hi": "{revealed} / {total} बायोम · {bosses} बॉस",
-    "ar": "{revealed} / {total} مناطق · {bosses} زعماء",
-    "bn": "{revealed} / {total} বায়োম · {bosses} বস",
-    "ru": "{revealed} / {total} биомов · {bosses} боссов",
-    "ja": "{revealed} / {total} バイオーム · {bosses} ボス",
-    "id": "{revealed} / {total} bioma · {bosses} bos"
   },
   "Start here": {
     "en": "Start here",
@@ -553,5 +585,129 @@
     "ru": "Открыть Provisions →",
     "ja": "Provisions を開く →",
     "id": "Buka Provisions →"
+  },
+  "{count} / {total} biomes": {
+    "en": {
+      "one": "{count} / {total} biome",
+      "other": "{count} / {total} biomes"
+    },
+    "cs": {
+      "one": "{count} / {total} biom",
+      "few": "{count} / {total} biomy",
+      "many": "{count} / {total} biomu",
+      "other": "{count} / {total} biomů"
+    },
+    "de": {
+      "one": "{count} / {total} Biom",
+      "other": "{count} / {total} Biome"
+    },
+    "es": {
+      "one": "{count} / {total} bioma",
+      "many": "{count} / {total} biomas",
+      "other": "{count} / {total} biomas"
+    },
+    "fr": {
+      "one": "{count} / {total} biome",
+      "many": "{count} / {total} biomes",
+      "other": "{count} / {total} biomes"
+    },
+    "pt": {
+      "one": "{count} / {total} bioma",
+      "many": "{count} / {total} biomas",
+      "other": "{count} / {total} biomas"
+    },
+    "zh": {
+      "other": "{count} / {total} 个生物群系"
+    },
+    "hi": {
+      "one": "{count} / {total} बायोम",
+      "other": "{count} / {total} बायोम"
+    },
+    "ar": {
+      "zero": "{count} / {total} مناطق",
+      "one": "{count} / {total} منطقة",
+      "two": "{count} / {total} منطقتان",
+      "few": "{count} / {total} مناطق",
+      "many": "{count} / {total} منطقةً",
+      "other": "{count} / {total} منطقة"
+    },
+    "bn": {
+      "one": "{count} / {total} টি বায়োম",
+      "other": "{count} / {total} টি বায়োম"
+    },
+    "ru": {
+      "one": "{count} / {total} биом",
+      "few": "{count} / {total} биома",
+      "many": "{count} / {total} биомов",
+      "other": "{count} / {total} биома"
+    },
+    "ja": {
+      "other": "{count} / {total} バイオーム"
+    },
+    "id": {
+      "other": "{count} / {total} bioma"
+    }
+  },
+  "{count} bosses": {
+    "en": {
+      "one": "{count} boss",
+      "other": "{count} bosses"
+    },
+    "cs": {
+      "one": "{count} boss",
+      "few": "{count} bossové",
+      "many": "{count} bosse",
+      "other": "{count} bossů"
+    },
+    "de": {
+      "one": "{count} Boss",
+      "other": "{count} Bosse"
+    },
+    "es": {
+      "one": "{count} jefe",
+      "many": "{count} jefes",
+      "other": "{count} jefes"
+    },
+    "fr": {
+      "one": "{count} boss",
+      "many": "{count} boss",
+      "other": "{count} boss"
+    },
+    "pt": {
+      "one": "{count} chefe",
+      "many": "{count} chefes",
+      "other": "{count} chefes"
+    },
+    "zh": {
+      "other": "{count} 个首领"
+    },
+    "hi": {
+      "one": "{count} बॉस",
+      "other": "{count} बॉस"
+    },
+    "ar": {
+      "zero": "{count} زعماء",
+      "one": "{count} زعيم",
+      "two": "{count} زعيمان",
+      "few": "{count} زعماء",
+      "many": "{count} زعيمًا",
+      "other": "{count} زعيم"
+    },
+    "bn": {
+      "one": "{count} জন বস",
+      "other": "{count} জন বস"
+    },
+    "ru": {
+      "one": "{count} босс",
+      "few": "{count} босса",
+      "many": "{count} боссов",
+      "other": "{count} босса"
+    },
+    "ja": {
+      "other": "{count} 体のボス"
+    },
+    "id": {
+      "other": "{count} bos"
+    }
   }
 }

@@ -33,6 +33,7 @@ function calculator(locale) {
     const require = specifier => {
       if (specifier === '@/hooks/use-language') return { useLanguage: () => ({
         locale, t: (source, values) => core.translate(locale, source, catalog, values),
+        tn: (source, count, values) => core.tn(catalog, source, count, values, locale),
         nameOf: entity => names.localizedName(entity, locale), ...formats.formatters(locale),
       }) };
       if (!specifier.startsWith('.') && !specifier.startsWith('@/')) return calculatorRequire(specifier);

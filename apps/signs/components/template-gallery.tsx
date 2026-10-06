@@ -34,7 +34,7 @@ export function TemplateCard({
   template: SignTemplate;
   onChoose: (template: SignTemplate) => void;
 }) {
-  const { t } = useLanguage();
+  const { t, tn } = useLanguage();
   const source = templateText(template, t);
   const preview = parseRichText(source, t);
   const Icon = categoryIcons[templateCategories.indexOf(template.category)];
@@ -58,7 +58,7 @@ export function TemplateCard({
         ))}
       </strong>
       <small>
-        {t('{count}/50 characters', { count: countText(source).units })}
+        {tn('{count}/50 characters', countText(source).units)}
       </small>
     </button>
   );

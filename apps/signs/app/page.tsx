@@ -192,7 +192,7 @@ function RangeControl({
   );
 }
 export default function Page() {
-  const { t, locale, preference, setPreference } = useLanguage();
+  const { t, tn, locale, preference, setPreference } = useLanguage();
   const [text, setText] = useState('WELCOME HOME');
   const [settings, setSettings] = useState<SignSettings>(defaults);
   const [compact, setCompact] = useState(true);
@@ -884,11 +884,7 @@ export default function Page() {
                     <Code2 size={18} /> {t('Připraveno do hry')}
                   </h2>
                   <span className={`count ${over ? 'danger' : ''}`}>
-                    {count.units}
-                    <span>
-                      {' '}
-                      / {limit} {t('znaků')}
-                    </span>
+                    {tn('{count} / {limit} characters', count.units, { limit })}
                   </span>
                 </div>
                 <textarea
@@ -947,22 +943,17 @@ export default function Page() {
                   aria-live="polite"
                 >
                   {over
-                    ? t(
-                        'Nad limitem: {count}. Zkrať text nebo uber formátování.',
-                        { count: count.units - Number(limit) },
+                    ? tn(
+                        'Over limit by {count}. Shorten the text or reduce formatting.',
+                        count.units - Number(limit),
                       )
                     : unicodeRisk
-                      ? t(
-                          '{bytes} UTF-8 bajtů: Unicode může překročit limit hry.',
-                          { bytes: count.bytes },
+                      ? tn(
+                          '{count} UTF-8 bytes: Unicode may exceed the game limit.',
+                          count.bytes,
                         )
-                      : t(
-                          '{bytes} UTF-8 bajtů · Zbývá znaků: {count}, včetně značek.',
-                          {
-                            bytes: count.bytes,
-                            count: Number(limit) - count.units,
-                          },
-                        )}
+                      : tn('{count} UTF-8 bytes', count.bytes) + ' · '
+                        + tn('{count} characters left, including tags.', Number(limit) - count.units)}
                 </p>
                 <button
                   className={`copy-button ${copied ? 'copied' : ''}`}

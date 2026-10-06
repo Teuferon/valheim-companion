@@ -29,18 +29,14 @@ void test('saved selection wins and invalid storage returns to automatic detecti
 });
 void test('all languages have complete messages with matching interpolation fields', () => {
   for (const [key, entry] of Object.entries(messages)) {
-    const fields = [...entry.en!.matchAll(/\{(\w+)\}/g)]
-      .map((match) => match[1])
-      .sort();
+    const fields = [...key.matchAll(/\{(\w+)\}/g)].map(match => match[1]).sort();
     for (const { code } of languages) {
-      assert.ok(entry[code]?.trim(), `${code}: ${key}`);
-      assert.deepEqual(
-        [...entry[code]!.matchAll(/\{(\w+)\}/g)]
-          .map((match) => match[1])
-          .sort(),
-        fields,
-        `${code}: ${key}`,
-      );
+      const value = entry[code];
+      assert.ok(value, `${code}: ${key}`);
+      for (const text of typeof value === 'string' ? [value] : Object.values(value)) {
+        assert.ok(text?.trim(), `${code}: ${key}`);
+        assert.deepEqual([...text.matchAll(/\{(\w+)\}/g)].map(match => match[1]).sort(), fields, `${code}: ${key}`);
+      }
     }
   }
 });
@@ -57,7 +53,7 @@ void test('editor messages, templates and guide labels are included in the catal
     new URL('../components/share-sign.tsx', import.meta.url),
     'utf8',
   );
-  const keys = [...(page + gallery + share).matchAll(/\bt\(\s*'([^']+)'/g)].map(
+  const keys = [...(page + gallery + share).matchAll(/\btn?\(\s*'([^']+)'/g)].map(
     (match) => match[1],
   );
   for (const group of tagGroups)

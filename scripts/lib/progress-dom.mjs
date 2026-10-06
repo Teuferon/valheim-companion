@@ -49,7 +49,7 @@ export function fixture(pathname = '/bestiary/') {
     fetch: async () => ({ ok: true, json: async () => JSON.parse(read('shared/progress/messages.json')) }),
     MutationObserver: class { observe() {} }, ResizeObserver: class { observe() {} },
   });
-  for (const file of ['shared/progress/core.js', 'shared/progress/ui.js']) vm.runInContext(read(file), context);
+  for (const file of ['shared/i18n/core.js', 'shared/progress/core.js', 'shared/progress/ui.js']) vm.runInContext(read(file), context);
   context.VCProgressUI.messages = JSON.parse(read('shared/progress/messages.json'));
   const dataContext = vm.createContext({ window: {} });
   vm.runInContext(read('apps/progress/data/data.js'), dataContext);

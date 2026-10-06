@@ -120,8 +120,11 @@ test('All progress messages cover 13 locales and preserve placeholders', () => {
   const tokens = value => [...value.matchAll(/\{\w+\}/g)].map(match => match[0]).sort();
   for (const [key, translations] of Object.entries(catalog)) {
     for (const { code } of languages) {
-      assert.ok(translations[code]?.trim(), `${key}: missing ${code}`);
-      assert.deepEqual(tokens(translations[code]), tokens(key), `${key}: placeholders in ${code}`);
+    assert.ok(translations[code], `${key}: missing ${code}`);
+    for (const text of typeof translations[code] === 'string' ? [translations[code]] : Object.values(translations[code])) {
+      assert.ok(text.trim(), `${key}: empty ${code}`);
+      assert.deepEqual(tokens(text), tokens(key), `${key}: placeholders in ${code}`);
+    }
     }
   }
   const html = readFileSync(new URL('../apps/progress/index.html', import.meta.url), 'utf8');

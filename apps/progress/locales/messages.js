@@ -315,21 +315,6 @@ globalThis.VC_MESSAGES = {
     "ja": "冒険に役立ったら、コーヒーをご馳走していただけます。",
     "id": "Jika membantu petualanganmu, kamu bisa mentraktirku kopi."
   },
-  "{revealed} / {total} biomes revealed · {bosses} bosses defeated": {
-    "en": "{revealed} / {total} biomes revealed · {bosses} bosses defeated",
-    "cs": "{revealed} / {total} biomů odhaleno · {bosses} bossů poraženo",
-    "de": "{revealed} / {total} Biome aufgedeckt · {bosses} Bosse besiegt",
-    "es": "{revealed} / {total} biomas revelados · {bosses} jefes derrotados",
-    "fr": "{revealed} / {total} biomes révélés · {bosses} boss vaincus",
-    "pt": "{revealed} / {total} biomas revelados · {bosses} chefes derrotados",
-    "zh": "已揭示 {revealed} / {total} 个生物群系 · 已击败 {bosses} 个首领",
-    "hi": "{revealed} / {total} बायोम प्रकट · {bosses} बॉस पराजित",
-    "ar": "{revealed} / {total} مناطق مكشوفة · {bosses} زعماء مهزومون",
-    "bn": "{revealed} / {total} বায়োম উন্মোচিত · {bosses} বস পরাজিত",
-    "ru": "{revealed} / {total} биомов открыто · {bosses} боссов побеждено",
-    "ja": "{revealed} / {total} バイオーム公開 · {bosses} ボス討伐",
-    "id": "{revealed} / {total} bioma terungkap · {bosses} bos dikalahkan"
-  },
   "Summon: {items}": {
     "en": "Summon: {items}",
     "cs": "Vyvolání: {items}",
@@ -539,5 +524,129 @@ globalThis.VC_MESSAGES = {
     "ru": "Ссылка на прогресс скопирована.",
     "ja": "進行状況のURLをコピーしました。",
     "id": "URL kemajuan disalin."
+  },
+  "{count} / {total} biomes revealed": {
+    "en": {
+      "one": "{count} / {total} biome revealed",
+      "other": "{count} / {total} biomes revealed"
+    },
+    "cs": {
+      "one": "Odhaleno: {count} biom / {total}",
+      "few": "Odhaleno: {count} biomy / {total}",
+      "many": "Odhaleno: {count} biomu / {total}",
+      "other": "Odhaleno: {count} biomů / {total}"
+    },
+    "de": {
+      "one": "{count} / {total} Biom aufgedeckt",
+      "other": "{count} / {total} Biome aufgedeckt"
+    },
+    "es": {
+      "one": "{count} / {total} bioma revelado",
+      "many": "{count} / {total} biomas revelados",
+      "other": "{count} / {total} biomas revelados"
+    },
+    "fr": {
+      "one": "{count} / {total} biome révélé",
+      "many": "{count} / {total} biomes révélés",
+      "other": "{count} / {total} biomes révélés"
+    },
+    "pt": {
+      "one": "{count} / {total} bioma revelado",
+      "many": "{count} / {total} biomas revelados",
+      "other": "{count} / {total} biomas revelados"
+    },
+    "zh": {
+      "other": "已揭示 {count} / {total} 个生物群系"
+    },
+    "hi": {
+      "one": "{count} / {total} बायोम प्रकट",
+      "other": "{count} / {total} बायोम प्रकट"
+    },
+    "ar": {
+      "zero": "المناطق المكشوفة: {count} مناطق / {total}",
+      "one": "المناطق المكشوفة: {count} منطقة / {total}",
+      "two": "المناطق المكشوفة: {count} منطقتان / {total}",
+      "few": "المناطق المكشوفة: {count} مناطق / {total}",
+      "many": "المناطق المكشوفة: {count} منطقةً / {total}",
+      "other": "المناطق المكشوفة: {count} منطقة / {total}"
+    },
+    "bn": {
+      "one": "{count} / {total} বায়োম উন্মোচিত",
+      "other": "{count} / {total} বায়োম উন্মোচিত"
+    },
+    "ru": {
+      "one": "Открыто: {count} биом / {total}",
+      "few": "Открыто: {count} биома / {total}",
+      "many": "Открыто: {count} биомов / {total}",
+      "other": "Открыто: {count} биома / {total}"
+    },
+    "ja": {
+      "other": "{count} / {total} バイオーム公開"
+    },
+    "id": {
+      "other": "{count} / {total} bioma terungkap"
+    }
+  },
+  "{count} bosses defeated": {
+    "en": {
+      "one": "{count} boss defeated",
+      "other": "{count} bosses defeated"
+    },
+    "cs": {
+      "one": "Poraženo: {count} boss",
+      "few": "Poraženo: {count} bossové",
+      "many": "Poraženo: {count} bosse",
+      "other": "Poraženo: {count} bossů"
+    },
+    "de": {
+      "one": "{count} Boss besiegt",
+      "other": "{count} Bosse besiegt"
+    },
+    "es": {
+      "one": "{count} jefe derrotado",
+      "many": "{count} jefes derrotados",
+      "other": "{count} jefes derrotados"
+    },
+    "fr": {
+      "one": "{count} boss vaincu",
+      "many": "{count} boss vaincus",
+      "other": "{count} boss vaincus"
+    },
+    "pt": {
+      "one": "{count} chefe derrotado",
+      "many": "{count} chefes derrotados",
+      "other": "{count} chefes derrotados"
+    },
+    "zh": {
+      "other": "已击败 {count} 个首领"
+    },
+    "hi": {
+      "one": "{count} बॉस पराजित",
+      "other": "{count} बॉस पराजित"
+    },
+    "ar": {
+      "zero": "الزعماء المهزومون: {count} زعماء",
+      "one": "الزعماء المهزومون: {count} زعيم",
+      "two": "الزعماء المهزومون: {count} زعيمان",
+      "few": "الزعماء المهزومون: {count} زعماء",
+      "many": "الزعماء المهزومون: {count} زعيمًا",
+      "other": "الزعماء المهزومون: {count} زعيم"
+    },
+    "bn": {
+      "one": "{count} বস পরাজিত",
+      "other": "{count} বস পরাজিত"
+    },
+    "ru": {
+      "one": "Побеждено: {count} босс",
+      "few": "Побеждено: {count} босса",
+      "many": "Побеждено: {count} боссов",
+      "other": "Побеждено: {count} босса"
+    },
+    "ja": {
+      "other": "{count} ボス討伐"
+    },
+    "id": {
+      "other": "{count} bos dikalahkan"
+    }
   }
 };
