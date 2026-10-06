@@ -3088,5 +3088,35 @@
     "ru": "Закрыть",
     "ja": "閉じる",
     "id": "Tutup"
+  },
+  "Track your progress →": {
+    "en": "Track your progress →",
+    "cs": "Sledujte svůj postup →",
+    "de": "Fortschritt verfolgen →",
+    "es": "Registra tu progreso →",
+    "fr": "Suivez votre progression →",
+    "pt": "Acompanhe seu progresso →",
+    "zh": "记录你的进度 →",
+    "hi": "अपनी प्रगति दर्ज करें →",
+    "ar": "تتبّع تقدمك →",
+    "bn": "আপনার অগ্রগতি নথিভুক্ত করুন →",
+    "ru": "Отслеживайте прогресс →",
+    "ja": "進行状況を記録 →",
+    "id": "Catat progresmu →"
+  },
+  "Only manual reveals are reset. Manage tracked progress on the Progress page.": {
+    "en": "Only manual reveals are reset. Manage tracked progress on the Progress page.",
+    "cs": "Resetují se pouze ručně odhalené biomy. Uložený postup spravujte na stránce Progress.",
+    "de": "Nur manuelle Freigaben werden zurückgesetzt. Gespeicherten Fortschritt verwalten Sie auf der Seite Progress.",
+    "es": "Solo se restablecen los biomas revelados manualmente. Gestiona el progreso guardado en la página Progress.",
+    "fr": "Seuls les biomes révélés manuellement sont réinitialisés. Gérez la progression enregistrée sur la page Progress.",
+    "pt": "Apenas os biomas revelados manualmente são redefinidos. Gerencie o progresso salvo na página Progress.",
+    "zh": "仅重置手动揭示的生物群系。请在 Progress 页面管理已记录的进度。",
+    "hi": "केवल मैन्युअल रूप से दिखाए गए बायोम रीसेट होंगे। सहेजी गई प्रगति Progress पृष्ठ पर प्रबंधित करें।",
+    "ar": "تُعاد فقط المناطق المكشوفة يدويًا. أدر التقدم المحفوظ في صفحة Progress.",
+    "bn": "শুধু নিজে প্রকাশ করা বায়োমগুলো রিসেট হবে। সংরক্ষিত অগ্রগতি Progress পৃষ্ঠায় পরিচালনা করুন।",
+    "ru": "Сбрасываются только биомы, открытые вручную. Сохранённый прогресс можно изменить на странице Progress.",
+    "ja": "手動で公開したバイオームのみリセットします。記録した進行状況は Progress ページで管理してください。",
+    "id": "Hanya bioma yang dibuka secara manual yang direset. Kelola progres tersimpan di halaman Progress."
   }
 }
