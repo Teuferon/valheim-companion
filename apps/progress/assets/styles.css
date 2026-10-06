@@ -15,7 +15,7 @@ h3 { font-size: 1rem; }
 .page-wrapper { max-width: 1000px; padding: 24px 20px 60px; margin: auto; }
 .language-picker { display: flex; justify-content: flex-end; margin-bottom: .75rem; }
 .vc-language-picker { max-width: 100%; padding: .4rem; }
-.subtitle, .summon, .page-footer { color: var(--muted); }
+.subtitle, .page-footer { color: var(--muted); }
 .page-header { margin-bottom: 24px; }
 .actions { display: flex; flex-wrap: wrap; gap: 10px; }
 .danger { color: #e57373; }
