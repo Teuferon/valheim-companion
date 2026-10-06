@@ -45,6 +45,18 @@ progress::-moz-progress-bar { background: var(--stat-color); border-radius: 4px;
 .panel-heading { padding: 16px; border-bottom: 1px solid var(--line); }
 .panel-heading h2 { font: bold 1.5rem Georgia, serif; color: var(--gold); }
 #loadout-content { padding: 16px; display: grid; gap: 18px; }
+.slot, .mead-slot { background: var(--sub); border: 1px solid var(--line); border-radius: 6px; padding: 10px; margin-top: 8px; min-width: 0; }
+.slot, .slot-title { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.slot > div, .slot-title strong { min-width: 0; }
+.remove { flex: 0 1 38%; font-size: .75rem; padding: 5px 7px; color: #e57373; }
+.mead-controls { display: grid; grid-template-columns: minmax(0, 1fr) 64px; gap: 8px; margin: 10px 0 6px; }
+input[type="number"] { width: 100%; min-width: 0; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 5px; padding: 6px; }
+.hours-control { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; }
+.hours-control output { color: var(--gold); font-weight: bold; }
+.hours-control input { width: 100%; margin: 0; grid-column: 1 / -1; accent-color: var(--gold); }
+.stats { padding: 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); }
+.summary-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 6px; }
+.summary-row strong { color: var(--stat-color, var(--gold)); flex-shrink: 0; }
 .mobile-close, .mobile-bar { display: none; }
 .page-footer { text-align: center; color: var(--muted); font-size: .85rem; border-top: 1px solid var(--line); padding-top: 24px; margin-top: 36px; }
 .support { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 14px; margin-top: 16px; }

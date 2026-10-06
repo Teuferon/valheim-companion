@@ -8,6 +8,27 @@
   const number = value => new Intl.NumberFormat(VCI18n.locale(), { maximumFractionDigits: 2 }).format(value);
   const time = seconds => t('{minutes} min', { minutes: number(seconds / 60) });
   let focus = 'All';
+  let state = VPPlanner.sanitize(null, data);
+  const panel = document.getElementById('loadout-panel');
+  const opener = document.getElementById('open-loadout');
+  let noticeTimer;
+  function notify(key) {
+    const notice = document.getElementById('notice');
+    notice.textContent = t(key);
+    clearTimeout(noticeTimer);
+    noticeTimer = setTimeout(() => { notice.textContent = ''; }, 4000);
+  }
+  function update() { renderCatalog(); renderLoadout(); }
+  function addFood(food) {
+    if (state.foods.includes(food.id) || state.foods.length >= 3) return;
+    state.foods.push(food.id);
+    update();
+  }
+  function addMead(mead) {
+    if (state.meads.some(line => line.id === mead.id) || state.meads.length >= 4) return;
+    state.meads.push({ id: mead.id, mode: mead.duration < mead.cooldown || mead.duration <= 20 ? 'demand' : 'continuous', quantity: 3 });
+    update();
+  }
   function el(tag, className, text) {
     const node = document.createElement(tag);
     if (className) node.className = className;
@@ -51,6 +72,10 @@
     node.append(el('p', 'details', t('Healing: {amount} HP/tick', { amount: number(food.healing?.amount || 0) })),
       el('p', 'details', t('Duration: {time}', { time: time(food.duration) })),
       el('p', 'details', stationText(food.station, food.stationLevel)));
+    const selected = state.foods.includes(food.id);
+    const add = button(t(selected ? 'Selected' : 'Add food'), () => addFood(food), 'add-item');
+    add.disabled = selected || state.foods.length >= 3;
+    node.append(add);
     return node;
   }
   // Translate effects through templates rather than rendering scraped wiki prose.
@@ -84,7 +109,77 @@
       el('p', 'details', t('Cooldown: {time}', { time: time(mead.cooldown) })),
       el('p', 'details', name(byId(data.stations, 'fermenter')) + ' · ' + time(mead.fermenterTime)),
       el('p', 'details', name(mead.base) + ' · ' + stationText(mead.base.station, mead.base.stationLevel)));
+    const selected = state.meads.some(line => line.id === mead.id);
+    const add = button(t(selected ? 'Selected' : 'Add mead'), () => addMead(mead), 'add-item');
+    add.disabled = selected || state.meads.length >= 4;
+    node.append(add);
     return node;
+  }
+  function renderLoadout() {
+    const content = document.getElementById('loadout-content');
+    const activeId = content.contains(document.activeElement) ? document.activeElement.id : '';
+    const plan = VPPlanner.calculate(state, data);
+    content.replaceChildren();
+    const foods = el('section', 'slots');
+    foods.append(el('h3', 'section-title', t('Food')), el('p', 'hint', t('Choose up to three different foods.')));
+    for (let index = 0; index < 3; index++) {
+      const line = plan.foods[index];
+      const row = el('div', 'slot');
+      row.setAttribute('aria-label', t('Food slot {number}', { number: number(index + 1) }));
+      const info = el('div');
+      if (line) {
+        info.append(el('strong', '', name(line.definition)), el('p', 'hint', t('{count} servings', { count: number(line.quantity) })));
+        row.append(info, button(t('Remove {name}', { name: name(line.definition) }), () => { state.foods.splice(index, 1); update(); }, 'remove'));
+      } else row.append(el('span', 'hint', number(index + 1) + ' · ' + t('Empty')));
+      foods.append(row);
+    }
+    const meads = el('section', 'slots');
+    meads.append(el('h3', 'section-title', t('Meads') + ' · ' + number(state.meads.length) + ' / 4'));
+    for (const line of plan.meads) {
+      const row = el('div', 'mead-slot');
+      const title = el('div', 'slot-title');
+      title.append(el('strong', '', name(line.definition)), button(t('Remove {name}', { name: name(line.definition) }), () => {
+        state.meads = state.meads.filter(item => item.id !== line.id); update();
+      }, 'remove'));
+      const mode = el('select');
+      mode.id = 'mode-' + line.id;
+      mode.setAttribute('aria-label', t('Mead use') + ' · ' + name(line.definition));
+      for (const [value, key] of [['demand', 'On demand'], ['continuous', 'Continuous']]) {
+        const option = el('option', '', t(key)); option.value = value; mode.append(option);
+      }
+      mode.value = line.mode;
+      mode.addEventListener('change', () => { state.meads.find(item => item.id === line.id).mode = mode.value; renderLoadout(); });
+      const quantity = el('input');
+      quantity.type = 'number'; quantity.min = 0; quantity.max = 999; quantity.step = 1;
+      quantity.id = 'quantity-' + line.id;
+      quantity.value = line.quantity;
+      quantity.disabled = line.mode !== 'demand';
+      quantity.setAttribute('aria-label', t('Quantity') + ' · ' + name(line.definition));
+      quantity.addEventListener('change', () => {
+        state.meads.find(item => item.id === line.id).quantity = Number(quantity.value);
+        state = VPPlanner.sanitize(state, data); renderLoadout();
+      });
+      const controls = el('div', 'mead-controls'); controls.append(mode, quantity);
+      row.append(title, controls, el('p', 'hint', t('{count} servings', { count: number(line.quantity) })));
+      meads.append(row);
+    }
+    const hours = el('label', 'hours-control');
+    const hoursLabel = el('span', '', t('Hours of play'));
+    const output = el('output', '', number(state.hours)); output.htmlFor = 'hours';
+    const range = el('input'); range.type = 'range'; range.id = 'hours'; range.min = .5; range.max = 10; range.step = .5; range.value = state.hours;
+    range.setAttribute('aria-label', t('Hours of play'));
+    range.addEventListener('input', () => { state.hours = Number(range.value); renderLoadout(); });
+    hours.append(hoursLabel, output, range);
+    const stats = el('section', 'stats');
+    for (const [key, label] of [['health', 'Max health'], ['stamina', 'Max stamina'], ['eitr', 'Eitr'], ['healing', 'Healing per tick'], ['duration', 'Shortest duration']]) {
+      const row = el('div', 'summary-row ' + key);
+      row.append(el('span', '', t(label)), el('strong', '', key === 'duration' ? (plan.stats.duration ? time(plan.stats.duration) : '—') : number(plan.stats[key])));
+      stats.append(row);
+    }
+    stats.append(el('p', 'hint', t('Includes base player stats: 25 HP / 50 stamina.')));
+    content.append(foods, meads, hours, stats);
+    document.getElementById('mobile-summary').textContent = state.foods.length + ' / 3 · ' + plan.stats.health + ' HP';
+    if (activeId) document.getElementById(activeId)?.focus({ preventScroll: true });
   }
   function renderCatalog() {
     const catalog = document.getElementById('catalog');
@@ -130,10 +225,22 @@
     }));
     select.value = focus;
     renderCatalog();
+    renderLoadout();
   }
   VCI18n.mountPicker('#language-picker');
   document.getElementById('focus').addEventListener('change', event => { focus = event.target.value; renderCatalog(); });
   VCI18n.onChange(render);
   VCProgress.onChange(renderCatalog);
+  function setDrawer(open) {
+    panel.classList.toggle('open', open);
+    opener.setAttribute('aria-expanded', String(open));
+    if (open) document.getElementById('close-loadout').focus();
+    else opener.focus();
+  }
+  opener.addEventListener('click', () => setDrawer(!panel.classList.contains('open')));
+  document.getElementById('close-loadout').addEventListener('click', () => setDrawer(false));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && panel.classList.contains('open')) setDrawer(false);
+  });
   render();
 })();
