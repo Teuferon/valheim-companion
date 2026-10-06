@@ -94,7 +94,7 @@ test('search index builds valid bundle under 150 kB with required fields', () =>
   }
 });
 
-test('search finds creatures by English and localized names without diacritics', () => {
+test('search matches English game names only (no localized names)', () => {
   const sandbox = {};
   vm.runInNewContext(readFileSync('apps/hub/data/search.js', 'utf8'), sandbox);
   const index = sandbox.VC_SEARCH_INDEX;
@@ -103,10 +103,8 @@ test('search finds creatures by English and localized names without diacritics',
   assert.ok(enResult.groups.creature.some(c => c.name === 'Greydwarf'));
 
   const csResult = searchItems(index, 'sedy trpaslik', new Set(['meadows', 'black-forest']));
-  assert.ok(csResult.groups.creature.some(c => c.name === 'Greydwarf'));
-
-  const csDiacriticResult = searchItems(index, 'šedý trpaslík', new Set(['meadows', 'black-forest']));
-  assert.ok(csDiacriticResult.groups.creature.some(c => c.name === 'Greydwarf'));
+  assert.ok(!(csResult.groups.creature || []).some(c => c.name === 'Greydwarf'));
+  assert.ok(index.every(item => Object.keys(item.names || {}).length === 0));
 });
 
 test('search results are capped at max 8 items per type group', () => {

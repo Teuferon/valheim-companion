@@ -12,20 +12,12 @@ const HUB_DATA_DIR = path.join(REPO_ROOT, 'apps', 'hub', 'data');
 const SEARCH_JS_PATH = path.join(HUB_DATA_DIR, 'search.js');
 
 /**
- * Filter names object: drop empty strings or values matching English name to save index size.
- * @param {Record<string, string>|null|undefined} names
- * @param {string} englishName
+ * Game names stay English in every language (docs/ANALYZA.md, Pavel 6. 10. 2026),
+ * so the index carries no localized names and search matches English only.
  * @returns {Record<string, string>}
  */
-function cleanNames(names, englishName) {
-  if (!names || typeof names !== 'object') return {};
-  const out = {};
-  for (const [lang, val] of Object.entries(names)) {
-    if (val && typeof val === 'string' && val.trim() && val.trim() !== englishName) {
-      out[lang] = val.trim();
-    }
-  }
-  return out;
+function cleanNames() {
+  return {};
 }
 
 export function buildSearchIndex() {
