@@ -37,7 +37,9 @@
   function cost(piece, data) {
     if (!piece.materials?.length) return Infinity;
     if (!root.VCShopping) throw new Error('Comfort Planner requires VCShopping');
-    return root.VCShopping.breakdown(piece.materials, data.items ?? {}, 32).materials.reduce((sum, m) => sum + m.amount, 0);
+    // Trader-only materials (e.g. Iron Pit from Hildir) cost coins and a trip, so they lose ties to craftable pieces.
+    const traderOnly = m => data.items?.[m.item]?.sources?.length && data.items[m.item].sources.every(s => s.kind === 'npc');
+    return root.VCShopping.breakdown(piece.materials, data.items ?? {}, 32).materials.reduce((sum, m) => sum + m.amount * (traderOnly(m) ? 50 : 1), 0);
   }
   function available(data, revealedBiomes, seasonal) {
     const revealed = new Set(revealedBiomes ?? []);
