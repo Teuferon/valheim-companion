@@ -6,7 +6,7 @@ test('extras match creature link targets and retain raid requirements', () => {
   const creatures = [
     { id: 'troll', trophy: { image: 'troll.png' } },
     { id: 'wolf', tameable: true },
-    { id: 'hen', tameable: false },
+    { id: 'hen', tameable: false, trophy: { name: 'Unlisted', image: null } },
     { id: 'fuling' },
   ];
   const unmatched = enrichCreatures(creatures, {
@@ -17,6 +17,7 @@ test('extras match creature link targets and retain raid requirements', () => {
   assert.deepEqual(creatures[0].trophy, { name: 'Troll Trophy', image: 'troll.png', dropChance: 50, usage: ['Trollstav', 'Mossy Fishing Bait'] });
   assert.deepEqual(creatures[1].taming, { foods: ['Boar Meat', 'Deer Meat'], eatingRange: 1.4, tameTime: 30 });
   assert.deepEqual(creatures[2].taming, { foods: ['Barley'], eatingRange: null });
+  assert.deepEqual(creatures[2].trophy, { name: 'Unlisted', image: null, dropChance: null, usage: [] });
   assert.deepEqual(creatures[3].raids, [{ event: 'army_goblin', name: 'The horde is attacking!', enabledBy: ['Moder'], disabledBy: ['Yagluth'], biomes: ['Plains'] }]);
   assert.deepEqual(unmatched, ['Events/army_goblin: [[Missing]]']);
 });

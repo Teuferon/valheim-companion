@@ -2211,7 +2211,9 @@
     ],
     "trophy": {
       "name": "Crow trophy currently no trophy-->",
-      "image": null
+      "image": null,
+      "dropChance": null,
+      "usage": []
     },
     "summon": null,
     "location": "Black Forest",
@@ -5679,7 +5681,9 @@
     ],
     "trophy": {
       "name": "Greydwarf Shaman Trophy",
-      "image": "img/creatures/greydwarf-shaman-deep-north-trophy.png"
+      "image": "img/creatures/greydwarf-shaman-deep-north-trophy.png",
+      "dropChance": null,
+      "usage": []
     },
     "summon": null,
     "location": "Deep North",
@@ -5914,7 +5918,9 @@
     ],
     "trophy": {
       "name": "Gull trophy currently no trophy-->",
-      "image": null
+      "image": null,
+      "dropChance": null,
+      "usage": []
     },
     "summon": null,
     "location": "* Meadows\n* Black Forest\n* Plains\n* Ocean",
@@ -6325,7 +6331,9 @@
     ],
     "trophy": {
       "name": "Dvergr Trophy",
-      "image": "img/creatures/imprisoned-dvergr-trophy.png"
+      "image": "img/creatures/imprisoned-dvergr-trophy.png",
+      "dropChance": null,
+      "usage": []
     },
     "summon": null,
     "location": "Mörkhalla",
@@ -7502,7 +7510,9 @@
     "drops": [],
     "trophy": {
       "name": "Mistile trophy",
-      "image": null
+      "image": null,
+      "dropChance": null,
+      "usage": []
     },
     "summon": null,
     "location": "Mistlands",
@@ -11507,7 +11517,9 @@
     ],
     "trophy": {
       "name": "Zil\nThungr",
-      "image": null
+      "image": null,
+      "dropChance": null,
+      "usage": []
     },
     "summon": null,
     "location": "Sealed tower",

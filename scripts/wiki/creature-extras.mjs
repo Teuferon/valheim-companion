@@ -19,6 +19,8 @@ export function enrichCreatures(creatures, pages) {
     return creature;
   };
   for (const creature of creatures) {
+    // An infobox trophy without a matching table row keeps unknown metadata.
+    if (creature.trophy) creature.trophy = { ...creature.trophy, dropChance: null, usage: [] };
     creature.taming = null;
     creature.raids = [];
   }

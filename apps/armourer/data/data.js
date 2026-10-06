@@ -11272,8 +11272,12 @@ window.VA_DATA = {
         "Root"
       ],
       "trophy": {
-        "name": "Abomination trophy",
-        "image": "img/creatures/abomination-trophy.png"
+        "name": "Abomination Trophy",
+        "image": "img/creatures/abomination-trophy.png",
+        "dropChance": 50,
+        "usage": [
+          "Sticky Fishing Bait"
+        ]
       },
       "summon": null,
       "location": "Swamp",
@@ -11283,6 +11287,8 @@ window.VA_DATA = {
         "Spawn zones in Abomination Swamp (limit 3)"
       ],
       "description": "Abominations are aggressive creatures found in the Swamps. They are large tree-like entities comprised of multiple branches and four sturdy roots, which it uses as legs to move",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Ohavnost",
         "de": "Monstrosität",
@@ -11325,6 +11331,8 @@ window.VA_DATA = {
       "location": null,
       "spawns": [],
       "description": "}} Anglerfish are coastal fish found offshore the Mistlands. They can be caught with a Fishing Rod using Misty Fishing Bait which can be crafted at the Food Preparation Table by combining 20 Fishing Bait and a Lox",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Ďas",
         "de": "Seeteufel",
@@ -11371,6 +11379,8 @@ window.VA_DATA = {
       "location": "Ashlands",
       "spawns": [],
       "description": "Ash crows are passive creatures found in Ashlands around Charred",
+      "taming": null,
+      "raids": [],
       "names": {
         "ru": "Пепельный ворон"
       }
@@ -11477,13 +11487,17 @@ window.VA_DATA = {
         "Soft Tissue"
       ],
       "trophy": {
-        "name": "Dvergr trophy",
-        "image": "img/creatures/ashlands-dvergr-trophy.png"
+        "name": "Dvergr Trophy",
+        "image": "img/creatures/ashlands-dvergr-trophy.png",
+        "dropChance": 5,
+        "usage": []
       },
       "summon": null,
       "location": "Ashlands",
       "spawns": [],
       "description": "Ashlands Dvergr are much stronger than their cousins Dvergr Rogues, their status can be compared to two-star Dvergr rogues. These Dvergr are a separate clan from those found in the",
+      "taming": null,
+      "raids": [],
       "names": {
         "ru": "Дверг пепельных земель"
       }
@@ -11633,8 +11647,12 @@ window.VA_DATA = {
         "Asksvin Trophy"
       ],
       "trophy": {
-        "name": "Asksvin trophy",
-        "image": "img/creatures/asksvin-trophy.png"
+        "name": "Asksvin Trophy",
+        "image": "img/creatures/asksvin-trophy.png",
+        "dropChance": 10,
+        "usage": [
+          "Feathery wreath"
+        ]
       },
       "summon": null,
       "location": "Ashlands",
@@ -11643,6 +11661,16 @@ window.VA_DATA = {
         "Middle of the Ashlands during the nighttime, despawn at dawn (limit 2)"
       ],
       "description": "Asksvin are hostile, tameable, and fast rideable creatures found in the Ashlands. They look like huge, mutated",
+      "taming": {
+        "foods": [
+          "Smoke Puff",
+          "Vineberry Cluster",
+          "Fiddlehead"
+        ],
+        "eatingRange": 4,
+        "tameTime": 30
+      },
+      "raids": [],
       "names": {
         "ru": "Пеплозавр"
       }
@@ -11749,7 +11777,9 @@ window.VA_DATA = {
       ],
       "trophy": {
         "name": "Barka Trophy",
-        "image": "img/creatures/barka-trophy.png"
+        "image": "img/creatures/barka-trophy.png",
+        "dropChance": 10,
+        "usage": []
       },
       "summon": null,
       "location": "Deep North",
@@ -11757,6 +11787,8 @@ window.VA_DATA = {
         "Anywhere in Deep North, during the day and night, alone (limit 1)"
       ],
       "description": "The Barka is a hostile creature found in the Deep North. It resembles a frozen The",
+      "taming": null,
+      "raids": [],
       "names": {}
     },
     "bat": {
@@ -11835,6 +11867,19 @@ window.VA_DATA = {
         "Spawn zones in Bat Swamp (limit 10)"
       ],
       "description": "Bats are aggressive creatures found in Mountains inside Frost Caves. They have a small body size and glossy black coat and wings, capable of",
+      "taming": null,
+      "raids": [
+        {
+          "event": "bats",
+          "name": "You stirred the cauldron.",
+          "enabledBy": [
+            "Bat",
+            "Bonemass"
+          ],
+          "disabledBy": [],
+          "biomes": []
+        }
+      ],
       "names": {
         "cs": "Netopýr",
         "ru": "Летучая мышь"
@@ -12000,8 +12045,14 @@ window.VA_DATA = {
         "Bear Trophy"
       ],
       "trophy": {
-        "name": "Bear trophy",
-        "image": "img/creatures/bear-trophy.png"
+        "name": "Bear Trophy",
+        "image": "img/creatures/bear-trophy.png",
+        "dropChance": 10,
+        "usage": [
+          "Bearskin Rug",
+          "Headdress of the Bear",
+          "Bronze Pendant"
+        ]
       },
       "summon": null,
       "location": "Black Forest",
@@ -12010,6 +12061,8 @@ window.VA_DATA = {
         "Inside Bear Cave"
       ],
       "description": "Bears are aggressive creatures found in the Black Forest. They are bulky, furry beasts with large claws and",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Medvěd",
         "ru": "Медведь"
@@ -12069,8 +12122,13 @@ window.VA_DATA = {
         "Blob Trophy"
       ],
       "trophy": {
-        "name": "Blob trophy",
-        "image": "img/creatures/blob-trophy.png"
+        "name": "Blob Trophy",
+        "image": "img/creatures/blob-trophy.png",
+        "dropChance": 10,
+        "usage": [
+          "Blob bomb Poison",
+          "Blob bomb Elite poison"
+        ]
       },
       "summon": null,
       "location": "Swamp",
@@ -12083,6 +12141,23 @@ window.VA_DATA = {
         "When a Blob bomb Poison is used (limit -)"
       ],
       "description": "Blobs are aggressive creatures found in the Swamps. They are large, gelatinous piles of sentient ooze that emit poisonous green",
+      "taming": null,
+      "raids": [
+        {
+          "event": "blobs",
+          "name": "A foul smell from the swamp...",
+          "enabledBy": [
+            "Bonemass"
+          ],
+          "disabledBy": [],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Swamp",
+            "Plains"
+          ]
+        }
+      ],
       "names": {
         "cs": "Slizoun",
         "de": "Schleimling",
@@ -12167,8 +12242,10 @@ window.VA_DATA = {
         "Boar Trophy"
       ],
       "trophy": {
-        "name": "Boar trophy",
-        "image": "img/creatures/boar-trophy.png"
+        "name": "Boar Trophy",
+        "image": "img/creatures/boar-trophy.png",
+        "dropChance": 15,
+        "usage": []
       },
       "summon": null,
       "location": "Meadows",
@@ -12181,6 +12258,32 @@ window.VA_DATA = {
         "Spawn zones in Peaceful Meadows (limit 15)"
       ],
       "description": "Boars are wild creatures found throughout Valheim, known for their aggressive behavior when approached. They can be identified by their status tags indicating whether they are 'wild' or 'tame,' along with their emotional states, such as 'hungry,' 'happy,' 'frightened,' or 'acclimatizing.' Understanding these states can help players interact with them",
+      "taming": {
+        "foods": [
+          "Blueberries",
+          "Carrot",
+          "Onion",
+          "Raspberries",
+          "Mushroom",
+          "Turnip"
+        ],
+        "eatingRange": 1,
+        "tameTime": 30
+      },
+      "raids": [
+        {
+          "event": "army_eikthyr",
+          "name": "Eikthyr rallies the creatures of the forest.",
+          "enabledBy": [],
+          "disabledBy": [
+            "Eikthyr"
+          ],
+          "biomes": [
+            "Meadows",
+            "Black Forest"
+          ]
+        }
+      ],
       "names": {
         "cs": "Kanec",
         "de": "Wildschwein",
@@ -12255,13 +12358,19 @@ window.VA_DATA = {
         "Bonemass Power"
       ],
       "trophy": {
-        "name": "Bonemass trophy",
-        "image": "img/creatures/bonemass-trophy.png"
+        "name": "Bonemass Trophy",
+        "image": "img/creatures/bonemass-trophy.png",
+        "dropChance": 100,
+        "usage": [
+          "Bonemass Power"
+        ]
       },
       "summon": "Withered Bone x10",
       "location": "* Swamp",
       "spawns": [],
       "description": "Bonemass is the third boss. He appears as a gigantic humanoid mass comprised of toxic ooze, mud and skeletal remains, likely absorbed from nearby tombs situated close to his",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Bonemass",
         "de": "Knochenwanst",
@@ -12331,8 +12440,10 @@ window.VA_DATA = {
         "Bonemaw Tooth"
       ],
       "trophy": {
-        "name": "Bonemaw trophy",
-        "image": "img/creatures/bonemaw-trophy.png"
+        "name": "Bonemaw Trophy",
+        "image": "img/creatures/bonemaw-trophy.png",
+        "dropChance": 33,
+        "usage": []
       },
       "summon": null,
       "location": "Ashlands",
@@ -12340,6 +12451,8 @@ window.VA_DATA = {
         "Ashlands Ocean (limit 1)"
       ],
       "description": "Bonemaw are aggressive creatures found in the boiling waters surrounding the Ashlands landmass. They pose a significant danger when sailing to the",
+      "taming": null,
+      "raids": [],
       "names": {
         "ru": "Костепасть"
       }
@@ -12403,13 +12516,28 @@ window.VA_DATA = {
         "Brenna Trophy"
       ],
       "trophy": {
-        "name": "Brenna trophy",
-        "image": "img/creatures/brenna-trophy.png"
+        "name": "Brenna Trophy",
+        "image": "img/creatures/brenna-trophy.png",
+        "dropChance": 100,
+        "usage": []
       },
       "summon": null,
       "location": "Smouldering Tomb",
       "spawns": [],
       "description": "Brenna is an aggressive miniboss found in the Black Forest inside Smouldering Tomb as well as during the \"She's hot on your tail!\" event. She is a burning Skeleton with charcoal black bones and fire aspects wielding a fiery version of",
+      "taming": null,
+      "raids": [
+        {
+          "event": "hildirboss1",
+          "name": "She's hot on your tail!",
+          "enabledBy": [
+            "Hildir's Chests",
+            "Hildir"
+          ],
+          "disabledBy": [],
+          "biomes": []
+        }
+      ],
       "names": {
         "cs": "Brenna",
         "de": "Brenna",
@@ -12565,6 +12693,8 @@ window.VA_DATA = {
         "Spawn point in Mörkhalla"
       ],
       "description": "Captive Fuling are creatures found in Mörkhalla.",
+      "taming": null,
+      "raids": [],
       "names": {}
     },
     "charred-marksman": {
@@ -12665,8 +12795,10 @@ window.VA_DATA = {
       "otherImmunities": [],
       "drops": [],
       "trophy": {
-        "name": "Marksman trophy",
-        "image": "img/creatures/charred-marksman-trophy.png"
+        "name": "Marksman Trophy",
+        "image": "img/creatures/charred-marksman-trophy.png",
+        "dropChance": 5,
+        "usage": []
       },
       "summon": null,
       "location": "Ashlands",
@@ -12679,6 +12811,26 @@ window.VA_DATA = {
         "During \"The undead army marches.\" before defeating Fader (limit 3)"
       ],
       "description": "Charred Marksman are hostile ranged enemies found in the",
+      "taming": null,
+      "raids": [
+        {
+          "event": "army_charred",
+          "name": "The undead army marches.",
+          "enabledBy": [
+            "The Queen"
+          ],
+          "disabledBy": [
+            "Fader"
+          ],
+          "biomes": [
+            "Black Forest",
+            "Plains",
+            "Mistlands",
+            "Ashlands",
+            "Deep North"
+          ]
+        }
+      ],
       "names": {
         "cs": "Sežehnutý střelec",
         "de": "Verkohlter Scharfschütze",
@@ -12797,6 +12949,26 @@ window.VA_DATA = {
         "During \"The dead have been summoned.\" event (summoned by Monument of Torment) before defeating Fader (limit none)"
       ],
       "description": "Charred Twitchers are hostile enemies found in the Ashlands. These guys are always twitching, as their name",
+      "taming": null,
+      "raids": [
+        {
+          "event": "army_charred",
+          "name": "The undead army marches.",
+          "enabledBy": [
+            "The Queen"
+          ],
+          "disabledBy": [
+            "Fader"
+          ],
+          "biomes": [
+            "Black Forest",
+            "Plains",
+            "Mistlands",
+            "Ashlands",
+            "Deep North"
+          ]
+        }
+      ],
       "names": {
         "cs": "Sežehnutý trhavec",
         "de": "Verkohlter Zuckender",
@@ -12891,8 +13063,10 @@ window.VA_DATA = {
         "Warlock Trophy"
       ],
       "trophy": {
-        "name": "Warlock trophy",
-        "image": "img/creatures/charred-warlock-trophy.png"
+        "name": "Warlock Trophy",
+        "image": "img/creatures/charred-warlock-trophy.png",
+        "dropChance": 5,
+        "usage": []
       },
       "summon": null,
       "location": "Ashlands",
@@ -12902,6 +13076,8 @@ window.VA_DATA = {
         "Randomly from Monument of Torment (Elite) when a player is nearby (limit none)"
       ],
       "description": "Charred Warlocks are hostile enemies found in the",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Sežehnutý čaroděj",
         "de": "Verkohlter Hexer",
@@ -13054,8 +13230,13 @@ window.VA_DATA = {
         "Warrior Trophy"
       ],
       "trophy": {
-        "name": "Warrior trophy",
-        "image": "img/creatures/charred-warrior-trophy.png"
+        "name": "Warrior Trophy",
+        "image": "img/creatures/charred-warrior-trophy.png",
+        "dropChance": 5,
+        "usage": [
+          "Hot Fishing Bait",
+          "Grausten Chest"
+        ]
       },
       "summon": null,
       "location": "Ashlands",
@@ -13070,6 +13251,26 @@ window.VA_DATA = {
         "During \"The dead have been summoned.\" event (summoned by Monument of Torment) before defeating Fader (limit none)"
       ],
       "description": "Charred Warriors are hostile enemies found in the",
+      "taming": null,
+      "raids": [
+        {
+          "event": "army_charred",
+          "name": "The undead army marches.",
+          "enabledBy": [
+            "The Queen"
+          ],
+          "disabledBy": [
+            "Fader"
+          ],
+          "biomes": [
+            "Black Forest",
+            "Plains",
+            "Mistlands",
+            "Ashlands",
+            "Deep North"
+          ]
+        }
+      ],
       "names": {
         "cs": "Sežehnutý válečník",
         "de": "Verkohlter Krieger",
@@ -13119,6 +13320,8 @@ window.VA_DATA = {
       "location": null,
       "spawns": [],
       "description": "Chicken are passive creatures that can only appear when an Egg hatches. They are the infant stage of",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Kuře",
         "de": "Huhn",
@@ -13160,6 +13363,8 @@ window.VA_DATA = {
       "location": null,
       "spawns": [],
       "description": "Coral cod are passive creatures (fish) found in the waters of the Ocean biome. The schools can be in the middle of the Ocean or sometimes near other biomes'",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Korálová Treska",
         "de": "Korallenbarsch",
@@ -13203,12 +13408,16 @@ window.VA_DATA = {
       ],
       "trophy": {
         "name": "Crow trophy currently no trophy-->",
-        "image": null
+        "image": null,
+        "dropChance": null,
+        "usage": []
       },
       "summon": null,
       "location": "Black Forest",
       "spawns": [],
       "description": "Crows are passive creatures found in Black Forests. They are small birds with long legs and heavy, straight bills. These birds are entirely black, including their legs and",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Vrána",
         "de": "Krähe",
@@ -13280,8 +13489,12 @@ window.VA_DATA = {
         "Cultist Trophy"
       ],
       "trophy": {
-        "name": "Cultist trophy",
-        "image": "img/creatures/cultist-trophy.png"
+        "name": "Cultist Trophy",
+        "image": "img/creatures/cultist-trophy.png",
+        "dropChance": 10,
+        "usage": [
+          "Fenris Hood"
+        ]
       },
       "summon": null,
       "location": "Mountain",
@@ -13289,6 +13502,19 @@ window.VA_DATA = {
         "Rare spawn point in Frost Caves."
       ],
       "description": "Cultists are aggressive creatures found in Mountains inside Frost Caves. Their appearance is distinctly werewolf-like, however, unlike Fenrings and Ulvs, they wear tattered red hooded",
+      "taming": null,
+      "raids": [
+        {
+          "event": "hildirboss2",
+          "name": "You get the chills...",
+          "enabledBy": [
+            "Hildir's Chests",
+            "Hildir"
+          ],
+          "disabledBy": [],
+          "biomes": []
+        }
+      ],
       "names": {
         "cs": "Kultista",
         "de": "Kultist",
@@ -13341,8 +13567,10 @@ window.VA_DATA = {
         "Needle"
       ],
       "trophy": {
-        "name": "Deathsquito trophy",
-        "image": "img/creatures/deathsquito-trophy.png"
+        "name": "Deathsquito Trophy",
+        "image": "img/creatures/deathsquito-trophy.png",
+        "dropChance": 5,
+        "usage": []
       },
       "summon": null,
       "location": "Plains",
@@ -13351,6 +13579,8 @@ window.VA_DATA = {
         "Spawn zones in Death Plains (limit 5)"
       ],
       "description": "Deathsquitos are aggressive creatures found in Plains. They are, as their name suggests, enlarged mosquito-type bugs that give off a loud buzzing",
+      "taming": null,
+      "raids": [],
       "names": {
         "de": "Todeskito",
         "ru": "Смертожал"
@@ -13410,8 +13640,14 @@ window.VA_DATA = {
         "Deer Meat"
       ],
       "trophy": {
-        "name": "Deer trophy",
-        "image": "img/creatures/deer-trophy.png"
+        "name": "Deer Trophy",
+        "image": "img/creatures/deer-trophy.png",
+        "dropChance": 50,
+        "usage": [
+          "Mead Horn of Odin",
+          "Stagbreaker",
+          "Summoning Eikthyr"
+        ]
       },
       "summon": null,
       "location": "* Meadows\n* Black Forest",
@@ -13422,6 +13658,8 @@ window.VA_DATA = {
         "Spawn zones in Birch Meadows (limit 5)"
       ],
       "description": "Deer are passive creatures found in Meadows and Black Forests. They are four-legged, reddish-brown animals that are extremely timid and completely",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Jelen",
         "de": "Hirsch",
@@ -13480,8 +13718,14 @@ window.VA_DATA = {
         "Freeze Gland"
       ],
       "trophy": {
-        "name": "Drake trophy",
-        "image": "img/creatures/drake-trophy.png"
+        "name": "Drake Trophy",
+        "image": "img/creatures/drake-trophy.png",
+        "dropChance": 10,
+        "usage": [
+          "Drake Helmet",
+          "Frosty Fishing Bait",
+          "Blob Bombs"
+        ]
       },
       "summon": null,
       "location": "Mountain",
@@ -13492,6 +13736,26 @@ window.VA_DATA = {
         "Spawn zones in Drake Mountain (limit 4)"
       ],
       "description": "Drakes are aggressive creatures found in the Mountains. They are slender, legless frost dragons with ice-blue scales and four horns. Drakes are the male offspring of their mother,",
+      "taming": null,
+      "raids": [
+        {
+          "event": "army_moder",
+          "name": "A cold wind blows from the mountains.",
+          "enabledBy": [
+            "Bonemass"
+          ],
+          "disabledBy": [
+            "Moder"
+          ],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Swamp",
+            "Mountain",
+            "Plains"
+          ]
+        }
+      ],
       "names": {
         "cs": "Drak",
         "fr": "Drac",
@@ -13601,8 +13865,10 @@ window.VA_DATA = {
         "Entrails"
       ],
       "trophy": {
-        "name": "Draugr trophy",
-        "image": "img/creatures/draugr-trophy.png"
+        "name": "Draugr Trophy",
+        "image": "img/creatures/draugr-trophy.png",
+        "dropChance": 10,
+        "usage": []
       },
       "summon": null,
       "location": "Swamp",
@@ -13617,6 +13883,26 @@ window.VA_DATA = {
         "Spawn zones in Dark Meadows (limit 2)"
       ],
       "description": "Draugr are aggressive creatures found in Swamps and in Draugr villages, Sunken Crypts and sometimes Mountain towers. They are ancient undead Vikings that have since become bloated in",
+      "taming": null,
+      "raids": [
+        {
+          "event": "army_bonemass",
+          "name": "A foul smell from the swamp...",
+          "enabledBy": [
+            "The Elder"
+          ],
+          "disabledBy": [
+            "Bonemass"
+          ],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Swamp",
+            "Mountain",
+            "Plains"
+          ]
+        }
+      ],
       "names": {
         "cs": "Draugr",
         "de": "Draugr",
@@ -13701,8 +13987,12 @@ window.VA_DATA = {
         "Entrails"
       ],
       "trophy": {
-        "name": "Draugr Elite trophy",
-        "image": "img/creatures/draugr-elite-trophy.png"
+        "name": "Draugr Elite Trophy",
+        "image": "img/creatures/draugr-elite-trophy.png",
+        "dropChance": 10,
+        "usage": [
+          "Iron Sledge"
+        ]
       },
       "summon": null,
       "location": "Swamp",
@@ -13712,6 +14002,8 @@ window.VA_DATA = {
         "Rarely from Body Piles in Swamps, Sunken Crypts or Mountain towers (limit 2)"
       ],
       "description": "Draugr Elite are aggressive creatures found in the Swamps. They are ancient undead Vikings that have since become bloated in appearance. They are stronger than normal Draugr, but always appear equipped with a melee weapon. They have glowing purple eyes and are relatively rare compared to their weaker",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Elitní Draugr",
         "de": "Elite Draugr",
@@ -13918,8 +14210,10 @@ window.VA_DATA = {
         "Dvergr Trophy"
       ],
       "trophy": {
-        "name": "Dvergr trophy",
-        "image": "img/creatures/dvergr-mage-trophy.png"
+        "name": "Dvergr Trophy",
+        "image": "img/creatures/dvergr-mage-trophy.png",
+        "dropChance": 5,
+        "usage": []
       },
       "summon": null,
       "location": "Mistlands",
@@ -13927,6 +14221,8 @@ window.VA_DATA = {
         "Common spawn point in Dvergr forts and structures"
       ],
       "description": "Dvergr Mages are neutral creatures found in the Mistlands around Dvergr settlements. They resemble short, blue humanoids with light blue eyes and silver hair, and they carry Magic staves. There are three different types of Dvergr Mage, which can be differentiated by the color of their staff and robe. Unlike Dvergr Rogues, mages are exclusively found around Dvergr settlements and other structures",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Dvergský Mág",
         "ru": "Дверг-маг"
@@ -14032,8 +14328,10 @@ window.VA_DATA = {
         "Dvergr Trophy"
       ],
       "trophy": {
-        "name": "Dvergr trophy",
-        "image": "img/creatures/dvergr-rogue-trophy.png"
+        "name": "Dvergr Trophy",
+        "image": "img/creatures/dvergr-rogue-trophy.png",
+        "dropChance": 5,
+        "usage": []
       },
       "summon": null,
       "location": "Mistlands",
@@ -14042,6 +14340,8 @@ window.VA_DATA = {
         "Common spawn point in Dvergr forts and structures"
       ],
       "description": "Dvergr Rogues are neutral creatures found in the Mistlands, especially around Dvergr settlements. They resemble short, blue humanoids with light blue eyes and silver hair carrying an Arbalest. Rogues that spawn at Dvergr structures will often be accompanied by a mix of other rogues and/or Dvergr Mages; unlike mages, however, rogues may spawn (and respawn) anywhere in the",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Dvergský Tulák",
         "ru": "Дверг-разбойник"
@@ -14114,13 +14414,19 @@ window.VA_DATA = {
         "Eikthyr Power"
       ],
       "trophy": {
-        "name": "Eikthyr trophy",
-        "image": "img/creatures/eikthyr-trophy.png"
+        "name": "Eikthyr Trophy",
+        "image": "img/creatures/eikthyr-trophy.png",
+        "dropChance": 100,
+        "usage": [
+          "Eikthyr Power"
+        ]
       },
       "summon": "Deer Trophy x2",
       "location": "* Meadows",
       "spawns": [],
       "description": "Eikthyr is the first boss. He appears as an abnormally large stag with iron chains wrapped around his electrified red",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Eikthyr",
         "de": "Eikthyr",
@@ -14271,7 +14577,9 @@ window.VA_DATA = {
       ],
       "trophy": {
         "name": "Elaking Trophy",
-        "image": "img/creatures/elaking-trophy.png"
+        "image": "img/creatures/elaking-trophy.png",
+        "dropChance": 10,
+        "usage": []
       },
       "summon": null,
       "location": null,
@@ -14280,6 +14588,60 @@ window.VA_DATA = {
         "From Wardrobe Shaft spawner in Winding Tunnels (limit 5 near)"
       ],
       "description": "The Elaking is a hostile creature that roams around the Deep North at night, and is home to the Winding",
+      "taming": null,
+      "raids": [
+        {
+          "event": "army_jotuns",
+          "name": "The Jotun have found you.",
+          "enabledBy": [
+            "Krigen",
+            "Hexen"
+          ],
+          "disabledBy": [
+            "Kall Fimbulbringer"
+          ],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Swamp",
+            "Mountain",
+            "Plains",
+            "Mistlands",
+            "Deep North"
+          ]
+        },
+        {
+          "event": "army_elakingar",
+          "name": "They emerge from below...",
+          "enabledBy": [
+            "Eyeless One"
+          ],
+          "disabledBy": [
+            "Kall Fimbulbringer"
+          ],
+          "biomes": [
+            "Deep North"
+          ]
+        },
+        {
+          "event": "Jotun Invasion",
+          "name": "The Jotun advance",
+          "enabledBy": [
+            "Malicious Ice",
+            "Mörkhalla"
+          ],
+          "disabledBy": [
+            "Malicious Ice"
+          ],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Swamp",
+            "Mountain",
+            "Plains"
+          ]
+        }
+      ],
       "names": {}
     },
     "eyeless-one": {
@@ -14389,7 +14751,9 @@ window.VA_DATA = {
       ],
       "trophy": {
         "name": "Eyeless One Trophy",
-        "image": "img/creatures/eyeless-one-trophy.png"
+        "image": "img/creatures/eyeless-one-trophy.png",
+        "dropChance": 10,
+        "usage": []
       },
       "summon": null,
       "location": "Winding Tunnels",
@@ -14397,6 +14761,22 @@ window.VA_DATA = {
         "Spawn point in Winding Tunnels (limit 1)"
       ],
       "description": "Eyeless Ones are hostile creatures found in the Winding Tunnels below ground in the Deep",
+      "taming": null,
+      "raids": [
+        {
+          "event": "army_elakingar",
+          "name": "They emerge from below...",
+          "enabledBy": [
+            "Eyeless One"
+          ],
+          "disabledBy": [
+            "Kall Fimbulbringer"
+          ],
+          "biomes": [
+            "Deep North"
+          ]
+        }
+      ],
       "names": {}
     },
     "fader": {
@@ -14514,13 +14894,19 @@ window.VA_DATA = {
         "Fader Trophy"
       ],
       "trophy": {
-        "name": "Fader trophy",
-        "image": "img/creatures/fader-trophy.png"
+        "name": "Fader Trophy",
+        "image": "img/creatures/fader-trophy.png",
+        "dropChance": 100,
+        "usage": [
+          "Fader Power"
+        ]
       },
       "summon": "Bell x3",
       "location": "Ashlands",
       "spawns": [],
       "description": "Fader is the seventh boss. He appears as a charred, skeletal dragon which emanates a green glow from orifices and gaps in his",
+      "taming": null,
+      "raids": [],
       "names": {
         "ru": "Прародитель"
       }
@@ -14594,8 +14980,12 @@ window.VA_DATA = {
         "Fallen Valkyrie Trophy"
       ],
       "trophy": {
-        "name": "Fallen Valkyrie trophy",
-        "image": "img/creatures/fallen-valkyrie-trophy.png"
+        "name": "Fallen Valkyrie Trophy",
+        "image": "img/creatures/fallen-valkyrie-trophy.png",
+        "dropChance": 5,
+        "usage": [
+          "Jörmundling"
+        ]
       },
       "summon": null,
       "location": "Ashlands",
@@ -14603,6 +14993,8 @@ window.VA_DATA = {
         "Ashlands, both day and night (limit 1)"
       ],
       "description": "The Fallen Valkyrie is a hostile enemy found in the Ashlands. They often appear hovering some distance above ground, and periodically fly to nearby locations, as if scouting. They resemble Valkyries who brings the players to Valheim, but showing noticeable signs of",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Padlá valkýra",
         "de": "Gefallene Walküre",
@@ -14735,6 +15127,8 @@ window.VA_DATA = {
       "location": "Memorial Site",
       "spawns": [],
       "description": "Fallen Warriors are aggressive creatures found in the Deep",
+      "taming": null,
+      "raids": [],
       "names": {}
     },
     "fenring": {
@@ -14792,8 +15186,13 @@ window.VA_DATA = {
         "Fenring Trophy"
       ],
       "trophy": {
-        "name": "Fenring trophy",
-        "image": "img/creatures/fenring-trophy.png"
+        "name": "Fenring Trophy",
+        "image": "img/creatures/fenring-trophy.png",
+        "dropChance": 10,
+        "usage": [
+          "Cold Fishing Bait",
+          "Wolf Sight"
+        ]
       },
       "summon": null,
       "location": "Mountain",
@@ -14801,6 +15200,19 @@ window.VA_DATA = {
         "Middle of the Mountains during the nighttime, despawn at dawn (limit 2)"
       ],
       "description": "Fenrings are aggressive creatures found in the Mountains during the night. Their appearance is distinctly werewolf-like, standing on two legs with a black fur coat. Unlike their Frost cave counterparts, Fenrings only walk on their",
+      "taming": null,
+      "raids": [
+        {
+          "event": "hildirboss2",
+          "name": "You get the chills...",
+          "enabledBy": [
+            "Hildir's Chests",
+            "Hildir"
+          ],
+          "disabledBy": [],
+          "biomes": []
+        }
+      ],
       "names": {
         "fr": "Fenring",
         "ru": "Фенринг"
@@ -14861,6 +15273,8 @@ window.VA_DATA = {
       "location": null,
       "spawns": [],
       "description": "Fryslings are hostile Deep North creatures that attack from range by throwing snowballs. They drop Frostcores, but in the current game version no location or dungeon places Frysling spawners, so they do not appear in normal play; Frostcores are instead found hanging in the Winding",
+      "taming": null,
+      "raids": [],
       "names": {}
     },
     "fuling": {
@@ -15009,8 +15423,12 @@ window.VA_DATA = {
         "Fuling Trophy"
       ],
       "trophy": {
-        "name": "Fuling trophy",
-        "image": "img/creatures/fuling-trophy.png"
+        "name": "Fuling Trophy",
+        "image": "img/creatures/fuling-trophy.png",
+        "dropChance": 10,
+        "usage": [
+          "Stingy Fishing Bait"
+        ]
       },
       "summon": null,
       "location": "Plains",
@@ -15024,6 +15442,34 @@ window.VA_DATA = {
         "Spawn zones in Goblin Plains (limit 5)"
       ],
       "description": "Fulings are aggressive creatures found in Plains, especially within Fuling Villages. They resemble small, goblin-like beings that appear to possess their own tribalistic culture. It is implied through Runestones and totems that they worship Yagluth, a long dead",
+      "taming": null,
+      "raids": [
+        {
+          "event": "army_goblin",
+          "name": "The horde is attacking!",
+          "enabledBy": [
+            "Moder"
+          ],
+          "disabledBy": [
+            "Yagluth"
+          ],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Plains"
+          ]
+        },
+        {
+          "event": "hildirboss3",
+          "name": "They were bros, man.",
+          "enabledBy": [
+            "Hildir's Chests",
+            "Hildir"
+          ],
+          "disabledBy": [],
+          "biomes": []
+        }
+      ],
       "names": {
         "de": "Fuling",
         "fr": "Gobelin",
@@ -15142,8 +15588,12 @@ window.VA_DATA = {
         "Fuling Berserker Trophy"
       ],
       "trophy": {
-        "name": "Fuling berserker trophy",
-        "image": "img/creatures/fuling-berserker-trophy.png"
+        "name": "Fuling Berserker Trophy",
+        "image": "img/creatures/fuling-berserker-trophy.png",
+        "dropChance": 5,
+        "usage": [
+          "Evasion Mantle"
+        ]
       },
       "summon": null,
       "location": "Plains",
@@ -15154,6 +15604,34 @@ window.VA_DATA = {
         "During \"They were bros, man.\" event (limit 2)"
       ],
       "description": "Fuling Berserkers are aggressive creatures found in Plains guarding Fuling Villages and Stonehenges. They are large, strong goblin-like beings that appear to possess their own tribalistic culture. It is implied through runestones and totems that they worship Yagluth, a long dead",
+      "taming": null,
+      "raids": [
+        {
+          "event": "army_goblin",
+          "name": "The horde is attacking!",
+          "enabledBy": [
+            "Moder"
+          ],
+          "disabledBy": [
+            "Yagluth"
+          ],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Plains"
+          ]
+        },
+        {
+          "event": "hildirboss3",
+          "name": "They were bros, man.",
+          "enabledBy": [
+            "Hildir's Chests",
+            "Hildir"
+          ],
+          "disabledBy": [],
+          "biomes": []
+        }
+      ],
       "names": {
         "fr": "Berserker Gobelin",
         "ru": "Фулинг-берсерк"
@@ -15222,8 +15700,10 @@ window.VA_DATA = {
         "Fuling Shaman Trophy"
       ],
       "trophy": {
-        "name": "Fuling shaman trophy",
-        "image": "img/creatures/fuling-shaman-trophy.png"
+        "name": "Fuling Shaman Trophy",
+        "image": "img/creatures/fuling-shaman-trophy.png",
+        "dropChance": 10,
+        "usage": []
       },
       "summon": null,
       "location": "Plains",
@@ -15232,6 +15712,24 @@ window.VA_DATA = {
         "During \"The horde is attacking\" event (limit 1)"
       ],
       "description": "Fuling shamans are aggressive creatures found in Plains occupying Fuling Villages. They are ritualistic, goblin-like beings that appear to possess their own tribalistic culture. It is implied through runestones and totems that they worship Yagluth, a long dead",
+      "taming": null,
+      "raids": [
+        {
+          "event": "army_goblin",
+          "name": "The horde is attacking!",
+          "enabledBy": [
+            "Moder"
+          ],
+          "disabledBy": [
+            "Yagluth"
+          ],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Plains"
+          ]
+        }
+      ],
       "names": {
         "de": "Fuling Schamane",
         "fr": "Chaman Gobelin",
@@ -15334,6 +15832,8 @@ window.VA_DATA = {
         "Anywhere in Deep North above altitude 10, during the day and night, alone (limit 1)"
       ],
       "description": "Gammeltrolls are huge hostile creatures that roam around the Deep North. They are elder Trolls, the largest creatures in all of",
+      "taming": null,
+      "raids": [],
       "names": {}
     },
     "geirrhafa": {
@@ -15409,13 +15909,28 @@ window.VA_DATA = {
         "Geirrhafa Trophy"
       ],
       "trophy": {
-        "name": "Geirrhafa trophy",
-        "image": "img/creatures/geirrhafa-trophy.png"
+        "name": "Geirrhafa Trophy",
+        "image": "img/creatures/geirrhafa-trophy.png",
+        "dropChance": 100,
+        "usage": []
       },
       "summon": null,
       "location": "Howling Cavern",
       "spawns": [],
       "description": "Geirrhafa is an aggressive miniboss found in Mountains inside Howling Cavern. He looks exactly like a Cultist, but his fur is white and his cloak is black with red",
+      "taming": null,
+      "raids": [
+        {
+          "event": "hildirboss2",
+          "name": "You get the chills...",
+          "enabledBy": [
+            "Hildir's Chests",
+            "Hildir"
+          ],
+          "disabledBy": [],
+          "biomes": []
+        }
+      ],
       "names": {
         "de": "Geirrhafa",
         "ru": "Гейрафа"
@@ -15470,8 +15985,10 @@ window.VA_DATA = {
         "Ectoplasm, Ghost Trophy"
       ],
       "trophy": {
-        "name": "Ghost trophy",
-        "image": "img/creatures/ghost-trophy.png"
+        "name": "Ghost Trophy",
+        "image": "img/creatures/ghost-trophy.png",
+        "dropChance": 10,
+        "usage": []
       },
       "summon": null,
       "location": "Black Forest",
@@ -15481,6 +15998,24 @@ window.VA_DATA = {
         "Uncommon spawn point in Smouldering Tomb"
       ],
       "description": "Ghosts are aggressive creatures found in Black Forests within Burial Chambers, and as part of \"You feel a chill down your spine...\" raid",
+      "taming": null,
+      "raids": [
+        {
+          "event": "ghosts",
+          "name": "You feel a chill down your spine...",
+          "enabledBy": [
+            "Bonemass"
+          ],
+          "disabledBy": [],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Swamp",
+            "Mountain",
+            "Plains"
+          ]
+        }
+      ],
       "names": {
         "cs": "Duch",
         "de": "Geist",
@@ -15523,6 +16058,8 @@ window.VA_DATA = {
       "location": null,
       "spawns": [],
       "description": "Giant herring are passive creatures (fish) found in the waters just offshore of the Swamp",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Obří Sleď",
         "de": "Riesenhering",
@@ -15645,8 +16182,12 @@ window.VA_DATA = {
         "Gjall Trophy"
       ],
       "trophy": {
-        "name": "Gjall trophy",
-        "image": "img/creatures/gjall-trophy.png"
+        "name": "Gjall Trophy",
+        "image": "img/creatures/gjall-trophy.png",
+        "dropChance": 30,
+        "usage": [
+          "Pulsating Earrings"
+        ]
       },
       "summon": null,
       "location": "Mistlands",
@@ -15656,6 +16197,22 @@ window.VA_DATA = {
         "During \"What's up, Gjall!?\" event before defeating The Queen (limit 1)"
       ],
       "description": "Gjall are massive flying, aggressive creatures found in the Mistlands. If there is one nearby, you will be alerted by a unique sound: a cross between a plane and an airhorn. Additionally, the mist in the immediate area around a Gjall will have a fiery orange",
+      "taming": null,
+      "raids": [
+        {
+          "event": "army_gjall",
+          "name": "What's up, Gjall?!",
+          "enabledBy": [
+            "Yagluth"
+          ],
+          "disabledBy": [
+            "The Queen"
+          ],
+          "biomes": [
+            "Mistlands"
+          ]
+        }
+      ],
       "names": {
         "cs": "Gjall",
         "de": "Gjall",
@@ -15765,8 +16322,10 @@ window.VA_DATA = {
         "Wood"
       ],
       "trophy": {
-        "name": "Greydwarf trophy",
-        "image": "img/creatures/greydwarf-trophy.png"
+        "name": "Greydwarf Trophy",
+        "image": "img/creatures/greydwarf-trophy.png",
+        "dropChance": 5,
+        "usage": []
       },
       "summon": null,
       "location": "Black Forest",
@@ -15780,6 +16339,25 @@ window.VA_DATA = {
         "During \"The forest is moving...\" event before defeating The Elder (limit 6)"
       ],
       "description": "Greydwarfs are aggressive creatures found in Black Forests. They are mossy tree-like beings and are twice as strong as their Greyling",
+      "taming": null,
+      "raids": [
+        {
+          "event": "army_theelder",
+          "name": "The forest is moving...",
+          "enabledBy": [
+            "Eikthyr"
+          ],
+          "disabledBy": [
+            "The Elder"
+          ],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Swamp",
+            "Plains"
+          ]
+        }
+      ],
       "names": {
         "cs": "Šedý trpaslík",
         "de": "Grauzwerg",
@@ -15898,6 +16476,8 @@ window.VA_DATA = {
         "Anywhere in Deep North (limit 5)"
       ],
       "description": "Greydwarf (Deep North) is a stronger version of Greydwarf found in Deep",
+      "taming": null,
+      "raids": [],
       "names": {}
     },
     "greydwarf-brute": {
@@ -15982,8 +16562,10 @@ window.VA_DATA = {
         "Wood"
       ],
       "trophy": {
-        "name": "Greydwarf Brute trophy",
-        "image": "img/creatures/greydwarf-brute-trophy.png"
+        "name": "Greydwarf Brute Trophy",
+        "image": "img/creatures/greydwarf-brute-trophy.png",
+        "dropChance": 10,
+        "usage": []
       },
       "summon": null,
       "location": "Black Forest",
@@ -15996,6 +16578,25 @@ window.VA_DATA = {
         "Spawn zones in Root Black Forest at night (limit 3)"
       ],
       "description": "Greydwarf brutes are aggressive creatures found in Black Forests. They are large mossy tree-like beings and are substantially bigger and stronger than",
+      "taming": null,
+      "raids": [
+        {
+          "event": "army_theelder",
+          "name": "The forest is moving...",
+          "enabledBy": [
+            "Eikthyr"
+          ],
+          "disabledBy": [
+            "The Elder"
+          ],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Swamp",
+            "Plains"
+          ]
+        }
+      ],
       "names": {
         "cs": "Šedý trpaslík surovec",
         "de": "Grauzwergen Berserker",
@@ -16122,8 +16723,12 @@ window.VA_DATA = {
         "Bukeperries"
       ],
       "trophy": {
-        "name": "Greydwarf Shaman trophy",
-        "image": "img/creatures/greydwarf-shaman-trophy.png"
+        "name": "Greydwarf Shaman Trophy",
+        "image": "img/creatures/greydwarf-shaman-trophy.png",
+        "dropChance": 10,
+        "usage": [
+          "Heart of the Forest"
+        ]
       },
       "summon": null,
       "location": "Black Forest",
@@ -16135,6 +16740,25 @@ window.VA_DATA = {
         "During \"The forest is moving...\" event before defeating The Elder (limit 1)"
       ],
       "description": "Greydwarf shamans are aggressive creatures found in Black Forests. They are mossy tree-like beings that act primarily as healers in patrols while also possessing the ability to cast a ranged poison",
+      "taming": null,
+      "raids": [
+        {
+          "event": "army_theelder",
+          "name": "The forest is moving...",
+          "enabledBy": [
+            "Eikthyr"
+          ],
+          "disabledBy": [
+            "The Elder"
+          ],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Swamp",
+            "Plains"
+          ]
+        }
+      ],
       "names": {
         "cs": "Šaman šedý trpaslík",
         "de": "Grauzwergen Schamane",
@@ -16254,7 +16878,9 @@ window.VA_DATA = {
       ],
       "trophy": {
         "name": "Greydwarf Shaman Trophy",
-        "image": "img/creatures/greydwarf-shaman-deep-north-trophy.png"
+        "image": "img/creatures/greydwarf-shaman-deep-north-trophy.png",
+        "dropChance": null,
+        "usage": []
       },
       "summon": null,
       "location": "Deep North",
@@ -16262,6 +16888,8 @@ window.VA_DATA = {
         "Anywhere in Deep North above altitude 10, during the day and night, in groups of two to four (limit 1)"
       ],
       "description": "The Greydwarf Shaman of the Deep North is a hostile creature, a Deep North variant of the Greydwarf",
+      "taming": null,
+      "raids": [],
       "names": {}
     },
     "greyling": {
@@ -16318,6 +16946,8 @@ window.VA_DATA = {
         "During \"The forest is moving...\" event before defeating The Elder (limit 4)"
       ],
       "description": "Greylings are aggressive creatures found in Meadows. They are mossy tree-like beings and are substantially weaker than their Greydwarf",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Greyling",
         "de": "Gräuling",
@@ -16360,6 +16990,8 @@ window.VA_DATA = {
       "location": null,
       "spawns": [],
       "description": "Grouper are passive creatures (fish) found in the waters just offshore of the Plains",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Kanic",
         "de": "Zackenbarsch",
@@ -16421,8 +17053,12 @@ window.VA_DATA = {
         "Growth Trophy"
       ],
       "trophy": {
-        "name": "Growth trophy",
-        "image": "img/creatures/growth-trophy.png"
+        "name": "Growth Trophy",
+        "image": "img/creatures/growth-trophy.png",
+        "dropChance": 10,
+        "usage": [
+          "Blob Bombs"
+        ]
       },
       "summon": null,
       "location": "Plains",
@@ -16431,6 +17067,8 @@ window.VA_DATA = {
         "When a Blob bomb Tar is used (limit -)"
       ],
       "description": "Growths are aggressive creatures found in Plains, specifically in Tar pits. They, like Blobs and Oozers, are large, gelatinous piles of sentient tar that emit poisonous black",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Dehtová bublina",
         "de": "Düsterblob",
@@ -16477,12 +17115,16 @@ window.VA_DATA = {
       ],
       "trophy": {
         "name": "Gull trophy currently no trophy-->",
-        "image": null
+        "image": null,
+        "dropChance": null,
+        "usage": []
       },
       "summon": null,
       "location": "* Meadows\n* Black Forest\n* Plains\n* Ocean",
       "spawns": [],
       "description": "Gulls are passive creatures. They are small birds with long legs and heavy, straight bills. These birds are mainly white, with a yellow beak, gray wings and pinkish beige legs and",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Racek",
         "de": "Möwe",
@@ -16543,8 +17185,10 @@ window.VA_DATA = {
         "Hare Trophy"
       ],
       "trophy": {
-        "name": "Hare trophy",
-        "image": "img/creatures/hare-trophy.png"
+        "name": "Hare Trophy",
+        "image": "img/creatures/hare-trophy.png",
+        "dropChance": 5,
+        "usage": []
       },
       "summon": null,
       "location": "Mistlands",
@@ -16553,6 +17197,8 @@ window.VA_DATA = {
         "Spawn zones in Hare Mistlands (limit 20)"
       ],
       "description": "s are passive creatures found in the Mistlands. Mistlands Hares appear much like real life Hares, except for their valuable scaly",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Zajíc",
         "de": "Hase",
@@ -16610,6 +17256,20 @@ window.VA_DATA = {
       "location": null,
       "spawns": [],
       "description": "Hen are passive creatures that can only appear when an Egg hatches. They are the grown stage of",
+      "taming": {
+        "foods": [
+          "Carrot Seeds",
+          "Turnip Seeds",
+          "Onion Seeds",
+          "Beech Seeds",
+          "Birch Seeds",
+          "Barley",
+          "Dandelion"
+        ],
+        "eatingRange": 1,
+        "tameTime": 30
+      },
+      "raids": [],
       "names": {
         "cs": "Slepice",
         "de": "Henne",
@@ -16727,7 +17387,12 @@ window.VA_DATA = {
       ],
       "trophy": {
         "name": "Hexen Trophy",
-        "image": "img/creatures/hexen-trophy.png"
+        "image": "img/creatures/hexen-trophy.png",
+        "dropChance": 10,
+        "usage": [
+          "Northern Vengeance",
+          "Witch Crown"
+        ]
       },
       "summon": null,
       "location": "Mörkhalla, Jotun Invasions",
@@ -16737,6 +17402,27 @@ window.VA_DATA = {
         "Jotun Invasions (limit 2)"
       ],
       "description": "Hexen are aggressive creatures found in Mörkhalla and during Jotun Invasions. They fly around and cast damaging",
+      "taming": null,
+      "raids": [
+        {
+          "event": "Jotun Invasion",
+          "name": "The Jotun advance",
+          "enabledBy": [
+            "Malicious Ice",
+            "Mörkhalla"
+          ],
+          "disabledBy": [
+            "Malicious Ice"
+          ],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Swamp",
+            "Mountain",
+            "Plains"
+          ]
+        }
+      ],
       "names": {}
     },
     "imprisoned-dvergr": {
@@ -16842,7 +17528,9 @@ window.VA_DATA = {
       ],
       "trophy": {
         "name": "Dvergr Trophy",
-        "image": "img/creatures/imprisoned-dvergr-trophy.png"
+        "image": "img/creatures/imprisoned-dvergr-trophy.png",
+        "dropChance": null,
+        "usage": []
       },
       "summon": null,
       "location": "Mörkhalla",
@@ -16850,6 +17538,8 @@ window.VA_DATA = {
         "Spawn point in Mörkhalla"
       ],
       "description": "Imprisoned Dvergr are neutral Deep North creatures found in",
+      "taming": null,
+      "raids": [],
       "names": {}
     },
     "kall-fimbulbringer": {
@@ -17019,6 +17709,8 @@ window.VA_DATA = {
       "location": "Deep North",
       "spawns": [],
       "description": "Kall Fimbulbringer is the eighth and final",
+      "taming": null,
+      "raids": [],
       "names": {}
     },
     "krigen": {
@@ -17413,7 +18105,9 @@ window.VA_DATA = {
       ],
       "trophy": {
         "name": "Krigen Trophy",
-        "image": "img/creatures/krigen-trophy.png"
+        "image": "img/creatures/krigen-trophy.png",
+        "dropChance": 10,
+        "usage": []
       },
       "summon": null,
       "location": "Mörkhalla, Jotun Invasions",
@@ -17423,6 +18117,47 @@ window.VA_DATA = {
         "Jotun Invasions, in groups of one to two, sword or greataxe only (limit 4)"
       ],
       "description": "Krigen are aggressive creatures found in Mörkhalla and during Jotun Invasions. They have three variants, wielding either a two-handed sword, two axes, or a two-handed",
+      "taming": null,
+      "raids": [
+        {
+          "event": "army_jotuns",
+          "name": "The Jotun have found you.",
+          "enabledBy": [
+            "Krigen",
+            "Hexen"
+          ],
+          "disabledBy": [
+            "Kall Fimbulbringer"
+          ],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Swamp",
+            "Mountain",
+            "Plains",
+            "Mistlands",
+            "Deep North"
+          ]
+        },
+        {
+          "event": "Jotun Invasion",
+          "name": "The Jotun advance",
+          "enabledBy": [
+            "Malicious Ice",
+            "Mörkhalla"
+          ],
+          "disabledBy": [
+            "Malicious Ice"
+          ],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Swamp",
+            "Mountain",
+            "Plains"
+          ]
+        }
+      ],
       "names": {}
     },
     "kvastur": {
@@ -17476,13 +18211,17 @@ window.VA_DATA = {
         "Kvastur Trophy"
       ],
       "trophy": {
-        "name": "Kvastur trophy",
-        "image": "img/creatures/kvastur-trophy.png"
+        "name": "Kvastur Trophy",
+        "image": "img/creatures/kvastur-trophy.png",
+        "dropChance": 100,
+        "usage": []
       },
       "summon": null,
       "location": "Swamp",
       "spawns": [],
       "description": "Kvastur is a neutral creature found in The Bog Witch hut. It defends itself if",
+      "taming": null,
+      "raids": [],
       "names": {
         "ru": "Квастур"
       }
@@ -17540,7 +18279,9 @@ window.VA_DATA = {
       ],
       "trophy": {
         "name": "Lava Blob Trophy",
-        "image": "img/creatures/lava-blob-trophy.png"
+        "image": "img/creatures/lava-blob-trophy.png",
+        "dropChance": 10,
+        "usage": []
       },
       "summon": null,
       "location": "Ashlands",
@@ -17549,6 +18290,8 @@ window.VA_DATA = {
         "When a Blob bomb Lava is used (limit -)"
       ],
       "description": "Lava Blobs are aggressive creatures found in the Ashlands. They are the lava counterparts of Blobs that can spread",
+      "taming": null,
+      "raids": [],
       "names": {
         "ru": "Лавовый сгустень"
       }
@@ -17636,8 +18379,12 @@ window.VA_DATA = {
         "Leech Trophy"
       ],
       "trophy": {
-        "name": "Leech trophy",
-        "image": "img/creatures/leech-trophy.png"
+        "name": "Leech Trophy",
+        "image": "img/creatures/leech-trophy.png",
+        "dropChance": 10,
+        "usage": [
+          "Iron Brooch"
+        ]
       },
       "summon": null,
       "location": "Swamp",
@@ -17645,6 +18392,8 @@ window.VA_DATA = {
         "Anywhere in waters of Swamps (limit 10)"
       ],
       "description": "Leeches are aggressive creatures found in Swamps. They are enlarged, aquatic annelid worms that feed off their victims by sucking their",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Pijavice",
         "de": "Schlundegel",
@@ -17689,6 +18438,8 @@ window.VA_DATA = {
       "location": "Ocean",
       "spawns": [],
       "description": "Leviathans are passive creatures found in Oceans. They are massive rock-type beings that have a 10% chance of submerging each time their Abyssal Barnacles are",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Leviatan",
         "de": "Leviathan",
@@ -17770,6 +18521,8 @@ window.VA_DATA = {
       "location": "Ashlands",
       "spawns": [],
       "description": "Lord Reto is a miniboss found in the Ashlands. He is part of the sub-quest to craft the",
+      "taming": null,
+      "raids": [],
       "names": {
         "ru": "Владыка Рето"
       }
@@ -17835,8 +18588,13 @@ window.VA_DATA = {
         "Lox Trophy"
       ],
       "trophy": {
-        "name": "Lox trophy",
-        "image": "img/creatures/lox-trophy.png"
+        "name": "Lox Trophy",
+        "image": "img/creatures/lox-trophy.png",
+        "dropChance": 10,
+        "usage": [
+          "Misty Fishing Bait",
+          "Bracelets of the Brave"
+        ]
       },
       "summon": null,
       "location": "Plains",
@@ -17846,6 +18604,16 @@ window.VA_DATA = {
         "Spawn zones in Lox Plains (limit 15)"
       ],
       "description": "Lox are aggressive creatures found in Plains. They are an enlarged fusion of both a lizard and an ox, with shaggy brown hair and reptilian skin. Lox can be tamed which allows them to be bred and",
+      "taming": {
+        "foods": [
+          "Barley",
+          "Cloudberries",
+          "Flax"
+        ],
+        "eatingRange": 4,
+        "tameTime": 30
+      },
+      "raids": [],
       "names": {
         "cs": "Lox",
         "de": "Lox",
@@ -17888,6 +18656,8 @@ window.VA_DATA = {
       "location": null,
       "spawns": [],
       "description": "Magmafish are passive creatures (fish) found in the waters of the Ashlands",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Magmaplavka",
         "de": "Magmafisch",
@@ -17937,12 +18707,16 @@ window.VA_DATA = {
       "drops": [],
       "trophy": {
         "name": "Mistile trophy",
-        "image": null
+        "image": null,
+        "dropChance": null,
+        "usage": []
       },
       "summon": null,
       "location": "Mistlands",
       "spawns": [],
       "description": "Mistiles are homing balls of light spawned exclusively by Dvergr Mages. They deal blunt damage upon contact with the enemy. They can be targeted by the player's ranged and melee weapons, and disperse harmlessly if",
+      "taming": null,
+      "raids": [],
       "names": {}
     },
     "moder": {
@@ -18033,13 +18807,19 @@ window.VA_DATA = {
         "Moder Power"
       ],
       "trophy": {
-        "name": "Moder trophy",
-        "image": "img/creatures/moder-trophy.png"
+        "name": "Moder Trophy",
+        "image": "img/creatures/moder-trophy.png",
+        "dropChance": 100,
+        "usage": [
+          "Moder Power"
+        ]
       },
       "summon": "Dragon Egg x3",
       "location": "* Mountain",
       "spawns": [],
       "description": "Moder is the fourth boss. She appears as a massive frost dragon with black scales, a white fur mane and tattered wings. According to numerous Runestones, she is the mother of all",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Moder",
         "de": "Drachenmutter",
@@ -18115,7 +18895,14 @@ window.VA_DATA = {
       ],
       "trophy": {
         "name": "Moose Trophy",
-        "image": "img/creatures/moose-trophy.png"
+        "image": "img/creatures/moose-trophy.png",
+        "dropChance": 10,
+        "usage": [
+          "Headdress of the Caller",
+          "Neckstabber",
+          "Spirit Caller",
+          "Antler Throne"
+        ]
       },
       "summon": null,
       "location": "Deep North",
@@ -18123,6 +18910,14 @@ window.VA_DATA = {
         "Anywhere in Deep North (limit 3)"
       ],
       "description": "Moose are aggressive creatures found in the Deep North. They can be tamed which allows them to be ridden, akin to Lox and",
+      "taming": {
+        "foods": [
+          "Lingonberries"
+        ],
+        "eatingRange": null,
+        "tameTime": 30
+      },
+      "raids": [],
       "names": {}
     },
     "moose-calf": {
@@ -18186,6 +18981,8 @@ window.VA_DATA = {
       "location": "Deep North",
       "spawns": [],
       "description": "The Moose Calf is the young form of the Moose, found in the Deep North. It grows into an adult Moose after 3,000 seconds (50 minutes). A calf born to a tamed Moose stays tamed when it grows",
+      "taming": null,
+      "raids": [],
       "names": {}
     },
     "morgen": {
@@ -18381,8 +19178,12 @@ window.VA_DATA = {
         "Morgen Trophy"
       ],
       "trophy": {
-        "name": "Morgen trophy",
-        "image": "img/creatures/morgen-trophy.png"
+        "name": "Morgen Trophy",
+        "image": "img/creatures/morgen-trophy.png",
+        "dropChance": 5,
+        "usage": [
+          "Brimstone"
+        ]
       },
       "summon": null,
       "location": "Ashlands",
@@ -18392,6 +19193,8 @@ window.VA_DATA = {
         "Inside Putrid Holes (limit 1)"
       ],
       "description": "Morgens are agile, aggressive foes found in the Ashlands. They rise from the ground after breaking out of their disguise, similar to",
+      "taming": null,
+      "raids": [],
       "names": {
         "ru": "Морген"
       }
@@ -18474,8 +19277,10 @@ window.VA_DATA = {
         "Neck Trophy"
       ],
       "trophy": {
-        "name": "Neck trophy",
-        "image": "img/creatures/neck-trophy.png"
+        "name": "Neck Trophy",
+        "image": "img/creatures/neck-trophy.png",
+        "dropChance": 5,
+        "usage": []
       },
       "summon": null,
       "location": "Meadows",
@@ -18487,6 +19292,21 @@ window.VA_DATA = {
         "Spawn zones in Smalltree Meadows when raining (limit 8)"
       ],
       "description": "Necks are aggressive creatures found in Meadows near water. They are amphibious in nature with four eyes and lily pads protruding out of their",
+      "taming": null,
+      "raids": [
+        {
+          "event": "army_eikthyr",
+          "name": "Eikthyr rallies the creatures of the forest.",
+          "enabledBy": [],
+          "disabledBy": [
+            "Eikthyr"
+          ],
+          "biomes": [
+            "Meadows",
+            "Black Forest"
+          ]
+        }
+      ],
       "names": {
         "cs": "Neck",
         "de": "Nixe",
@@ -18530,6 +19350,8 @@ window.VA_DATA = {
       "location": null,
       "spawns": [],
       "description": "Northern salmon are passive creatures (fish) found in the waters of the Deep North",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Severní Losos",
         "de": "Nordlachs",
@@ -18600,6 +19422,23 @@ window.VA_DATA = {
         "When a Blob bomb Elite poison is used (limit -)"
       ],
       "description": "Oozers are aggressive creatures found in Swamps. They are large, gelatinous piles of sentient ooze that emit poisonous yellow gasses. Upon death, they split into two",
+      "taming": null,
+      "raids": [
+        {
+          "event": "blobs",
+          "name": "A foul smell from the swamp...",
+          "enabledBy": [
+            "Bonemass"
+          ],
+          "disabledBy": [],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Swamp",
+            "Plains"
+          ]
+        }
+      ],
       "names": {
         "cs": "Oozer",
         "de": "Schleimmasse",
@@ -18643,6 +19482,8 @@ window.VA_DATA = {
       "location": null,
       "spawns": [],
       "description": "Perch are coastal fish found offshore the Meadows and Black Forest. They can be caught with a Fishing Rod using the basic Fishing Bait sold by",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Okoun",
         "de": "Barsch",
@@ -18686,6 +19527,8 @@ window.VA_DATA = {
       "location": null,
       "spawns": [],
       "description": "}} Pike are coastal fish found offshore the Meadows and Black Forest. They can be caught with a Fishing Rod using Fishing Bait purchased from Haldor or Cold fishing bait which can be crafted at the Food Preparation Table by combining 20 Fishing Bait and a Fenring",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Štika",
         "de": "Hecht",
@@ -18729,6 +19572,8 @@ window.VA_DATA = {
       "location": null,
       "spawns": [],
       "description": "Pufferfish are passive creatures (fish) found in the waters just offshore of the Mistlands",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Čtverzubka",
         "de": "Kugelfisch",
@@ -18819,8 +19664,10 @@ window.VA_DATA = {
         "Rancid Remains Trophy"
       ],
       "trophy": {
-        "name": "Rancid Remains trophy",
-        "image": "img/creatures/rancid-remains-trophy.png"
+        "name": "Rancid Remains Trophy",
+        "image": "img/creatures/rancid-remains-trophy.png",
+        "dropChance": 10,
+        "usage": []
       },
       "summon": null,
       "location": "Black Forest",
@@ -18833,6 +19680,35 @@ window.VA_DATA = {
         "Spawn zones in Bones (Mistlands) (limit 3)"
       ],
       "description": "Rancid remains are aggressive creatures found in Burial Chambers. They are, as their name suggests, human skeletal remains which have since been resurrected from the dead. Rancid remains are also slightly larger and stronger than regular Skeletons. Their hits inflict",
+      "taming": null,
+      "raids": [
+        {
+          "event": "skeletons",
+          "name": "A skeleton surprise!",
+          "enabledBy": [
+            "Bonemass"
+          ],
+          "disabledBy": [],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Swamp",
+            "Mountain",
+            "Plains",
+            "Mistlands"
+          ]
+        },
+        {
+          "event": "hildirboss1",
+          "name": "She's hot on your tail!",
+          "enabledBy": [
+            "Hildir's Chests",
+            "Hildir"
+          ],
+          "disabledBy": [],
+          "biomes": []
+        }
+      ],
       "names": {
         "cs": "Zatuchlé zůstatky",
         "de": "Ranzige Überreste",
@@ -18895,7 +19771,9 @@ window.VA_DATA = {
       ],
       "trophy": {
         "name": "Seal Trophy",
-        "image": "img/creatures/seal-trophy.png"
+        "image": "img/creatures/seal-trophy.png",
+        "dropChance": 10,
+        "usage": []
       },
       "summon": null,
       "location": "Deep North",
@@ -18904,6 +19782,8 @@ window.VA_DATA = {
         "Anywhere in the Deep North at altitudes -2 to 5 (shorelines), in groups of one to three (limit 3)"
       ],
       "description": "}} }} Seals are passive creatures found on the shores and Abandoned Villages of the Deep North. They come in 0, 1 and 2-star",
+      "taming": null,
+      "raids": [],
       "names": {}
     },
     "seeker": {
@@ -19054,8 +19934,12 @@ window.VA_DATA = {
         "Seeker Trophy"
       ],
       "trophy": {
-        "name": "Seeker trophy",
-        "image": "img/creatures/seeker-trophy.png"
+        "name": "Seeker Trophy",
+        "image": "img/creatures/seeker-trophy.png",
+        "dropChance": 5,
+        "usage": [
+          "Resounding Shackle"
+        ]
       },
       "summon": null,
       "location": "Mistlands",
@@ -19069,6 +19953,26 @@ window.VA_DATA = {
         "During \"They sought you out\" event before defeating The Queen (limit 3)"
       ],
       "description": "Seekers are aggressive creatures found in the Mistlands and in Infested",
+      "taming": null,
+      "raids": [
+        {
+          "event": "army_seekers",
+          "name": "They sought you out.",
+          "enabledBy": [
+            "Yagluth"
+          ],
+          "disabledBy": [
+            "The Queen"
+          ],
+          "biomes": [
+            "Black Forest",
+            "Plains",
+            "Mistlands",
+            "Ashlands",
+            "Deep North"
+          ]
+        }
+      ],
       "names": {
         "cs": "Hledač",
         "fr": "Fouineur",
@@ -19132,6 +20036,26 @@ window.VA_DATA = {
         "Spawn zones in BroodSwarm Mistlands at night (limit 100)"
       ],
       "description": "s are aggressive creatures found within Infested Mines in the",
+      "taming": null,
+      "raids": [
+        {
+          "event": "army_seekers",
+          "name": "They sought you out.",
+          "enabledBy": [
+            "Yagluth"
+          ],
+          "disabledBy": [
+            "The Queen"
+          ],
+          "biomes": [
+            "Black Forest",
+            "Plains",
+            "Mistlands",
+            "Ashlands",
+            "Deep North"
+          ]
+        }
+      ],
       "names": {
         "cs": "Potomstvo Hledačů",
         "fr": "Fouineur",
@@ -19288,8 +20212,12 @@ window.VA_DATA = {
         "Seeker Soldier Trophy"
       ],
       "trophy": {
-        "name": "Seeker soldier trophy",
-        "image": "img/creatures/seeker-soldier-trophy.png"
+        "name": "Seeker Soldier Trophy",
+        "image": "img/creatures/seeker-soldier-trophy.png",
+        "dropChance": 5,
+        "usage": [
+          "Re-summoning The Queen"
+        ]
       },
       "summon": null,
       "location": "Mistlands",
@@ -19299,6 +20227,26 @@ window.VA_DATA = {
         "Spawn points in Infested Mines (limit -)"
       ],
       "description": "Seeker Soldiers are aggressive creatures found in the Mistlands and in Infested",
+      "taming": null,
+      "raids": [
+        {
+          "event": "army_seekers",
+          "name": "They sought you out.",
+          "enabledBy": [
+            "Yagluth"
+          ],
+          "disabledBy": [
+            "The Queen"
+          ],
+          "biomes": [
+            "Black Forest",
+            "Plains",
+            "Mistlands",
+            "Ashlands",
+            "Deep North"
+          ]
+        }
+      ],
       "names": {
         "cs": "Voják Hledačů",
         "ru": "Искатель-солдат"
@@ -19356,8 +20304,13 @@ window.VA_DATA = {
         "Serpent Trophy"
       ],
       "trophy": {
-        "name": "Serpent trophy",
-        "image": "img/creatures/serpent-trophy.png"
+        "name": "Serpent Trophy",
+        "image": "img/creatures/serpent-trophy.png",
+        "dropChance": 33,
+        "usage": [
+          "Fins of Destiny",
+          "Heavy Fishing Bait"
+        ]
       },
       "summon": null,
       "location": "Ocean",
@@ -19366,6 +20319,8 @@ window.VA_DATA = {
         "Middle of Ocean during rain or thunderstorm (limit 1)"
       ],
       "description": "Serpents are aggressive creatures found in Oceans, and currently the only hostile creature spawning in Oceans. They are large, aquatic snake-like reptilian creatures with six glowing eyes, spiked dorsal fins and a gaping mouth filled with razor-sharp",
+      "taming": null,
+      "raids": [],
       "names": {
         "fr": "Serpent",
         "ru": "Змей"
@@ -19417,6 +20372,8 @@ window.VA_DATA = {
       "location": null,
       "spawns": [],
       "description": "Shadow are the souls of fallen warriors, They are found in Abandoned Villages and sometime roaming in Deep North during the",
+      "taming": null,
+      "raids": [],
       "names": {}
     },
     "shapeless-pulp": {
@@ -19508,7 +20465,11 @@ window.VA_DATA = {
       ],
       "trophy": {
         "name": "Pulp Trophy",
-        "image": "img/creatures/shapeless-pulp-trophy.png"
+        "image": "img/creatures/shapeless-pulp-trophy.png",
+        "dropChance": 10,
+        "usage": [
+          "Blob Bomb: Pulp"
+        ]
       },
       "summon": null,
       "location": "Mörkhalla",
@@ -19517,6 +20478,8 @@ window.VA_DATA = {
         "When a Blob Bomb Pulp is used (limit -)"
       ],
       "description": "Shapeless Pulp is a hostile creature found in Mörkhalla in the Deep North. They are spawned by Hexahedric Pulp every six seconds while a player is within 20 meters, and themselves turn into Tiny",
+      "taming": null,
+      "raids": [],
       "names": {}
     },
     "skeleton": {
@@ -19805,8 +20768,14 @@ window.VA_DATA = {
         "Skeleton Trophy"
       ],
       "trophy": {
-        "name": "Skeleton trophy",
-        "image": "img/creatures/skeleton-trophy.png"
+        "name": "Skeleton Trophy",
+        "image": "img/creatures/skeleton-trophy.png",
+        "dropChance": 10,
+        "usage": [
+          "Unfading Candles",
+          "Bone Tower Shield",
+          "Dead Raiser"
+        ]
       },
       "summon": null,
       "location": "Meadows, Black Forest, Swamp, Mountain, Deep North",
@@ -19831,6 +20800,52 @@ window.VA_DATA = {
         "Spawn zones in Fortress Mountain (limit 10)"
       ],
       "description": "Skeletons are aggressive creatures found in Meadows, Black Forest, Swamp, Mountain, Deep",
+      "taming": null,
+      "raids": [
+        {
+          "event": "army_bonemass",
+          "name": "A foul smell from the swamp...",
+          "enabledBy": [
+            "The Elder"
+          ],
+          "disabledBy": [
+            "Bonemass"
+          ],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Swamp",
+            "Mountain",
+            "Plains"
+          ]
+        },
+        {
+          "event": "skeletons",
+          "name": "A skeleton surprise!",
+          "enabledBy": [
+            "Bonemass"
+          ],
+          "disabledBy": [],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Swamp",
+            "Mountain",
+            "Plains",
+            "Mistlands"
+          ]
+        },
+        {
+          "event": "hildirboss1",
+          "name": "She's hot on your tail!",
+          "enabledBy": [
+            "Hildir's Chests",
+            "Hildir"
+          ],
+          "disabledBy": [],
+          "biomes": []
+        }
+      ],
       "names": {
         "cs": "Kostlivec",
         "de": "Skelett",
@@ -19894,6 +20909,8 @@ window.VA_DATA = {
         "Corners of Charred Fortress (limit 4)"
       ],
       "description": "Skugg are ballistae made of bone and are found in",
+      "taming": null,
+      "raids": [],
       "names": {
         "ru": "Скугг"
       }
@@ -19985,8 +21002,12 @@ window.VA_DATA = {
         "Stone Golem Trophy"
       ],
       "trophy": {
-        "name": "Stone Golem trophy",
-        "image": "img/creatures/stone-golem-trophy.png"
+        "name": "Stone Golem Trophy",
+        "image": "img/creatures/stone-golem-trophy.png",
+        "dropChance": 5,
+        "usage": [
+          "Crystal Heart"
+        ]
       },
       "summon": null,
       "location": "Mountain",
@@ -19996,6 +21017,8 @@ window.VA_DATA = {
         "Spawn zones in Fortress Mountain (limit 1)"
       ],
       "description": "Stone Golems are aggressive creatures found in the Mountains. They are snow-covered stone humanoids with silver veins visible on their bodies. When disturbed, they awake from their slumber, attacking both the players and other",
+      "taming": null,
+      "raids": [],
       "names": {
         "fr": "Golem de pierre",
         "ru": "Каменный голем"
@@ -20086,8 +21109,12 @@ window.VA_DATA = {
         "Surtling Trophy"
       ],
       "trophy": {
-        "name": "Surtling trophy",
-        "image": "img/creatures/surtling-trophy.png"
+        "name": "Surtling Trophy",
+        "image": "img/creatures/surtling-trophy.png",
+        "dropChance": 5,
+        "usage": [
+          "Nimble Anklet"
+        ]
       },
       "summon": null,
       "location": "Swamp",
@@ -20096,6 +21123,24 @@ window.VA_DATA = {
         "During \"There's a smell of sulfur in the air...\" event after defeating Bonemass (limit 4)"
       ],
       "description": "Surtlings are aggressive creatures found near Fire geysers in Swamps. They are small flaming imps that are relatively weak, especially in Swamps where the constant raining significantly reduces the damage from their ranged fireball",
+      "taming": null,
+      "raids": [
+        {
+          "event": "surtlings",
+          "name": "There's a smell of sulfur in the air...",
+          "enabledBy": [
+            "Surtling",
+            "Bonemass"
+          ],
+          "disabledBy": [],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Swamp",
+            "Plains"
+          ]
+        }
+      ],
       "names": {
         "cs": "Surtling",
         "de": "Surtling",
@@ -20138,6 +21183,8 @@ window.VA_DATA = {
       "location": null,
       "spawns": [],
       "description": "Tetra are passive creatures (fish) found in the super-rare lakes at the bottom of Frost Caves of the Mountain",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Tetra",
         "de": "Salmler",
@@ -20209,13 +21256,19 @@ window.VA_DATA = {
         "The Elder Power"
       ],
       "trophy": {
-        "name": "The Elder trophy",
-        "image": "img/creatures/the-elder-trophy.png"
+        "name": "The Elder Trophy",
+        "image": "img/creatures/the-elder-trophy.png",
+        "dropChance": 100,
+        "usage": [
+          "The Elder Power"
+        ]
       },
       "summon": "Ancient Seed x3",
       "location": "* Black Forest",
       "spawns": [],
       "description": "The Elder is the second boss. He appears as a towering humanoid tree-like entity with multiple thin branches sprouting out of his slender, bark-covered",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Prastarý",
         "de": "Der Uralte",
@@ -20317,13 +21370,19 @@ window.VA_DATA = {
         "The Queen's Power"
       ],
       "trophy": {
-        "name": "The Queen trophy",
-        "image": "img/creatures/the-queen-trophy.png"
+        "name": "The Queen Trophy",
+        "image": "img/creatures/the-queen-trophy.png",
+        "dropChance": 100,
+        "usage": [
+          "The Queen's Power"
+        ]
       },
       "summon": null,
       "location": "Mistlands",
       "spawns": [],
       "description": "The Queen is the sixth boss. She is a monstrous Seeker Matriarch, and her appearance differs substantially from other Seekers. Her body is larva-like (similar to Seeker Broods), her four \"arms\" are all located nearer to the head, and she has a distinctive mouth lined with small, sharp teeth. Some features she shares with other Seekers are a set of large mandibles like the Seeker Soldier, antennae",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Královna",
         "ru": "Королева"
@@ -20406,8 +21465,10 @@ window.VA_DATA = {
         "Tick Trophy"
       ],
       "trophy": {
-        "name": "Tick trophy",
-        "image": "img/creatures/tick-trophy.png"
+        "name": "Tick Trophy",
+        "image": "img/creatures/tick-trophy.png",
+        "dropChance": 5,
+        "usage": []
       },
       "summon": null,
       "location": "Mistlands",
@@ -20420,6 +21481,22 @@ window.VA_DATA = {
         "During \"What's up, Gjall?!\" event before defeating The Queen (limit 4)"
       ],
       "description": "Ticks are aggressive creatures found in the Mistlands. Ticks look like giant versions of their [https://en.wikipedia.org/wiki/Tick namesakes]. Their only attack is to latch onto their target and deal constant",
+      "taming": null,
+      "raids": [
+        {
+          "event": "army_gjall",
+          "name": "What's up, Gjall?!",
+          "enabledBy": [
+            "Yagluth"
+          ],
+          "disabledBy": [
+            "The Queen"
+          ],
+          "biomes": [
+            "Mistlands"
+          ]
+        }
+      ],
       "names": {
         "cs": "Klíště",
         "ru": "Клещ"
@@ -20474,6 +21551,8 @@ window.VA_DATA = {
         "Spawned from Shapeless Pulp death (limit 1)"
       ],
       "description": "Tiny Pulp is a passive creature found in Mörkhalla in the Deep",
+      "taming": null,
+      "raids": [],
       "names": {}
     },
     "troll": {
@@ -20710,8 +21789,13 @@ window.VA_DATA = {
         "Troll Trophy"
       ],
       "trophy": {
-        "name": "Troll trophy",
-        "image": "img/creatures/troll-trophy.png"
+        "name": "Troll Trophy",
+        "image": "img/creatures/troll-trophy.png",
+        "dropChance": 50,
+        "usage": [
+          "Mossy Fishing Bait",
+          "Trollstav"
+        ]
       },
       "summon": null,
       "location": "Black Forest",
@@ -20723,6 +21807,24 @@ window.VA_DATA = {
         "Spawn zones in Troll Black Forest (limit 2)"
       ],
       "description": "Trolls are aggressive creatures found in Black Forests. They are massive, bumbling humanoids with brutish limbs and wiry blonde hair. They may spawn with a large tree trunk in their",
+      "taming": null,
+      "raids": [
+        {
+          "event": "foresttrolls",
+          "name": "The ground is shaking.",
+          "enabledBy": [
+            "Troll",
+            "The Elder"
+          ],
+          "disabledBy": [],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Swamp",
+            "Plains"
+          ]
+        }
+      ],
       "names": {
         "cs": "Troll",
         "de": "Troll",
@@ -20765,6 +21867,8 @@ window.VA_DATA = {
       "location": null,
       "spawns": [],
       "description": "Trollfish are passive creatures (fish) found in the waters just offshore of the Black Forest",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Trollyba",
         "de": "Trollfisch",
@@ -20807,6 +21911,8 @@ window.VA_DATA = {
       "location": null,
       "spawns": [],
       "description": "Tuna are passive creatures (fish) found in the Ocean",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Tuňák",
         "de": "Thunfisch",
@@ -20891,8 +21997,10 @@ window.VA_DATA = {
         "Wolf Fang"
       ],
       "trophy": {
-        "name": "Ulv trophy",
-        "image": "img/creatures/ulv-trophy.png"
+        "name": "Ulv Trophy",
+        "image": "img/creatures/ulv-trophy.png",
+        "dropChance": 10,
+        "usage": []
       },
       "summon": null,
       "location": "Mountain",
@@ -20901,6 +22009,8 @@ window.VA_DATA = {
         "Common spawn point in Howling Cavern."
       ],
       "description": "Ulve are aggressive creatures found in Mountains inside Frost Caves. Their appearance is distinctly werewolf-like, however unlike Fenrings, they trot on",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Ulv",
         "de": "Ulv",
@@ -21000,8 +22110,12 @@ window.VA_DATA = {
         "Vile Trophy"
       ],
       "trophy": {
-        "name": "Vile trophy",
-        "image": "img/creatures/vile-trophy.png"
+        "name": "Vile Trophy",
+        "image": "img/creatures/vile-trophy.png",
+        "dropChance": 10,
+        "usage": [
+          "Vilebone Visage"
+        ]
       },
       "summon": null,
       "location": "Plains",
@@ -21009,6 +22123,8 @@ window.VA_DATA = {
         "Anywhere in Plains during the nighttime (limit 1)"
       ],
       "description": "Viles are aggressive creatures found in Plains during the night. They are a stronger, undead variant of",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Děs",
         "ru": "Гнилолап"
@@ -21063,8 +22179,10 @@ window.VA_DATA = {
         "Volture Trophy"
       ],
       "trophy": {
-        "name": "Volture trophy",
-        "image": "img/creatures/volture-trophy.png"
+        "name": "Volture Trophy",
+        "image": "img/creatures/volture-trophy.png",
+        "dropChance": 10,
+        "usage": []
       },
       "summon": null,
       "location": "Ashlands",
@@ -21073,6 +22191,8 @@ window.VA_DATA = {
         "1-4 spawn points near Volture Nests"
       ],
       "description": "Voltures are aggressive enemies found in the Ashlands. Volture nests will spawn Voltures one time. Voltures can also be found flying above the water along the Ashlands",
+      "taming": null,
+      "raids": [],
       "names": {
         "ru": "Стервулканник"
       }
@@ -21155,8 +22275,12 @@ window.VA_DATA = {
         "Wolf Trophy"
       ],
       "trophy": {
-        "name": "Wolf trophy",
-        "image": "img/creatures/wolf-trophy.png"
+        "name": "Wolf Trophy",
+        "image": "img/creatures/wolf-trophy.png",
+        "dropChance": 10,
+        "usage": [
+          "Wolf Fur Cape"
+        ]
       },
       "summon": null,
       "location": "Mountain",
@@ -21168,6 +22292,33 @@ window.VA_DATA = {
         "Spawn zones in Wolf Mountain (limit 8)"
       ],
       "description": "Wolves are aggressive creatures found in the Mountains. They are large canines with long, bushy tails that can be bred and",
+      "taming": {
+        "foods": [
+          "Boar Meat",
+          "Deer Meat",
+          "Lox Meat",
+          "Neck Tail",
+          "Raw Fish",
+          "Chicken Meat",
+          "Sausages"
+        ],
+        "eatingRange": 1.4,
+        "tameTime": 30
+      },
+      "raids": [
+        {
+          "event": "wolves",
+          "name": "You are being hunted...",
+          "enabledBy": [
+            "Bonemass"
+          ],
+          "disabledBy": [],
+          "biomes": [
+            "Mountain",
+            "Plains"
+          ]
+        }
+      ],
       "names": {
         "cs": "Vlk",
         "de": "Wolf",
@@ -21227,8 +22378,10 @@ window.VA_DATA = {
         "Wraith Trophy"
       ],
       "trophy": {
-        "name": "Wraith trophy",
-        "image": "img/creatures/wraith-trophy.png"
+        "name": "Wraith Trophy",
+        "image": "img/creatures/wraith-trophy.png",
+        "dropChance": 5,
+        "usage": []
       },
       "summon": null,
       "location": "Swamp",
@@ -21239,6 +22392,24 @@ window.VA_DATA = {
         "Spawn zones in Hut Swamp at night (limit 3)"
       ],
       "description": "Wraiths are aggressive creatures found in Swamps. They are dark blueish spectral entities, cloaked with a hood covering their blank face. They emit a quiet snarling hiss sound when they are aggravated. Since they naturally spawn at night, glow and fly, spotting them from a distance is easy; their telltale glow reveals them even to inattentive players as they",
+      "taming": null,
+      "raids": [
+        {
+          "event": "ghosts",
+          "name": "You feel a chill down your spine...",
+          "enabledBy": [
+            "Bonemass"
+          ],
+          "disabledBy": [],
+          "biomes": [
+            "Meadows",
+            "Black Forest",
+            "Swamp",
+            "Mountain",
+            "Plains"
+          ]
+        }
+      ],
       "names": {
         "cs": "Přízrak",
         "de": "Zorngeist",
@@ -21360,7 +22531,9 @@ window.VA_DATA = {
       ],
       "trophy": {
         "name": "Writhan Trophy",
-        "image": "img/creatures/writhan-trophy.png"
+        "image": "img/creatures/writhan-trophy.png",
+        "dropChance": 10,
+        "usage": []
       },
       "summon": null,
       "location": "Swamp",
@@ -21368,6 +22541,8 @@ window.VA_DATA = {
         "Anywhere in Swamp (altitude -2 to 10), 2,000 to 8,000 meters from the world center, during the day and night, alone (limit 1)"
       ],
       "description": "Writhan is an aggressive creature found rarely in the",
+      "taming": null,
+      "raids": [],
       "names": {}
     },
     "yagluth": {
@@ -21445,13 +22620,19 @@ window.VA_DATA = {
         "Yagluth Power"
       ],
       "trophy": {
-        "name": "Yagluth trophy",
-        "image": "img/creatures/yagluth-trophy.png"
+        "name": "Yagluth Trophy",
+        "image": "img/creatures/yagluth-trophy.png",
+        "dropChance": 100,
+        "usage": [
+          "Yagluth Power"
+        ]
       },
       "summon": "Fuling Totem x5",
       "location": "Plains",
       "spawns": [],
       "description": "Yagluth is the fifth boss. He appears as an ancient Fuling spirit inhabiting a now decomposed skeletal body comprised of a head, two arms and a torso. The crown resting upon his skull implies he was once or still is a ruler of some",
+      "taming": null,
+      "raids": [],
       "names": {
         "cs": "Yagluth",
         "de": "Yagluth",
@@ -21533,12 +22714,27 @@ window.VA_DATA = {
       ],
       "trophy": {
         "name": "Zil\nThungr",
-        "image": null
+        "image": null,
+        "dropChance": null,
+        "usage": []
       },
       "summon": null,
       "location": "Sealed tower",
       "spawns": [],
       "description": "Zil & Thungr is an aggressive duo miniboss found in Plains inside Sealed",
+      "taming": null,
+      "raids": [
+        {
+          "event": "hildirboss3",
+          "name": "They were bros, man.",
+          "enabledBy": [
+            "Hildir's Chests",
+            "Hildir"
+          ],
+          "disabledBy": [],
+          "biomes": []
+        }
+      ],
       "names": {
         "de": "Zil & Thungr",
         "ru": "Зил и Тангр"

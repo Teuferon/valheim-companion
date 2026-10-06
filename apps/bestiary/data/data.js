@@ -1,5 +1,5 @@
 window.VC_DATA = {
-  "generatedAt": "2026-10-06T13:23:32.138Z",
+  "generatedAt": "2026-10-06T13:35:03.901Z",
   "source": {
     "name": "Valheim Wiki",
     "url": "https://valheim.weirdgloop.org",
@@ -2583,7 +2583,9 @@ window.VC_DATA = {
       ],
       "trophy": {
         "name": "Crow trophy currently no trophy-->",
-        "image": null
+        "image": null,
+        "dropChance": null,
+        "usage": []
       },
       "summon": null,
       "location": "Black Forest",
@@ -6051,7 +6053,9 @@ window.VC_DATA = {
       ],
       "trophy": {
         "name": "Greydwarf Shaman Trophy",
-        "image": "img/creatures/greydwarf-shaman-deep-north-trophy.png"
+        "image": "img/creatures/greydwarf-shaman-deep-north-trophy.png",
+        "dropChance": null,
+        "usage": []
       },
       "summon": null,
       "location": "Deep North",
@@ -6286,7 +6290,9 @@ window.VC_DATA = {
       ],
       "trophy": {
         "name": "Gull trophy currently no trophy-->",
-        "image": null
+        "image": null,
+        "dropChance": null,
+        "usage": []
       },
       "summon": null,
       "location": "* Meadows\n* Black Forest\n* Plains\n* Ocean",
@@ -6697,7 +6703,9 @@ window.VC_DATA = {
       ],
       "trophy": {
         "name": "Dvergr Trophy",
-        "image": "img/creatures/imprisoned-dvergr-trophy.png"
+        "image": "img/creatures/imprisoned-dvergr-trophy.png",
+        "dropChance": null,
+        "usage": []
       },
       "summon": null,
       "location": "Mörkhalla",
@@ -7874,7 +7882,9 @@ window.VC_DATA = {
       "drops": [],
       "trophy": {
         "name": "Mistile trophy",
-        "image": null
+        "image": null,
+        "dropChance": null,
+        "usage": []
       },
       "summon": null,
       "location": "Mistlands",
@@ -11879,7 +11889,9 @@ window.VC_DATA = {
       ],
       "trophy": {
         "name": "Zil\nThungr",
-        "image": null
+        "image": null,
+        "dropChance": null,
+        "usage": []
       },
       "summon": null,
       "location": "Sealed tower",
