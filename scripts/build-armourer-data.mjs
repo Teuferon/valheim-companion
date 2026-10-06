@@ -1,4 +1,4 @@
-// Builds apps/smithy/data/data.js from data/*.json for the Armourer frontend.
+// Builds apps/smithy/data/data.js from data/*.json for the Smithy frontend.
 // Follows docs/DATA-SCHEMA.md § apps/smithy/data/data.js.
 
 import { existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
@@ -8,6 +8,18 @@ import { fileURLToPath } from 'node:url';
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_DIR = path.join(REPO_ROOT, 'data');
 const ARMOURER_DATA_DIR = path.join(REPO_ROOT, 'apps', 'smithy', 'data');
+
+export function hasCraftingCost(item) {
+  return (item.levels ?? []).some(level => (level.materials ?? []).length > 0);
+}
+
+export function filterSmithyArmor(armor) {
+  return armor.map(entry => {
+    // These entries already live in Cosmetics or DLC & seasonal, not the crafting catalog.
+    if (entry.kind === 'cosmetic' || entry.kind === 'special' || !entry.biome) return entry;
+    return { ...entry, pieces: entry.pieces.filter(hasCraftingCost) };
+  }).filter(entry => entry.pieces.length > 0);
+}
 
 export function buildArmourerBundle() {
   const biomesPath = path.join(DATA_DIR, 'biomes.json');
@@ -23,7 +35,7 @@ export function buildArmourerBundle() {
     ...b,
     image: b.image ? `../bestiary/${b.image}` : null,
   }));
-  const armor = JSON.parse(readFileSync(armorPath, 'utf8'));
+  const armor = filterSmithyArmor(JSON.parse(readFileSync(armorPath, 'utf8')));
   const itemsList = JSON.parse(readFileSync(itemsPath, 'utf8'));
 
   const items = {};
@@ -36,7 +48,7 @@ export function buildArmourerBundle() {
 
   const weaponsPath = path.join(DATA_DIR, 'weapons.json');
   const weapons = existsSync(weaponsPath)
-    ? JSON.parse(readFileSync(weaponsPath, 'utf8')).map((w) => ({
+    ? JSON.parse(readFileSync(weaponsPath, 'utf8')).filter(hasCraftingCost).map((w) => ({
         ...w,
         image: w.image ? `../bestiary/${w.image}` : null,
       }))
@@ -107,8 +119,8 @@ export function main() {
     creatures: Object.values(bundle.creatures),
     weapons: JSON.parse(readFileSync(path.join(DATA_DIR, 'weapons.json'), 'utf8')),
     items: Object.values(bundle.items),
-    armor: bundle.armor.flatMap(entry => entry.pieces),
-    sets: bundle.armor,
+    armor: JSON.parse(readFileSync(path.join(DATA_DIR, 'armor.json'), 'utf8')).flatMap(entry => entry.pieces),
+    sets: JSON.parse(readFileSync(path.join(DATA_DIR, 'armor.json'), 'utf8')),
     biomes: bundle.biomes,
     stations: bundle.stations,
   };
