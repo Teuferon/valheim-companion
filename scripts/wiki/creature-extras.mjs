@@ -1,0 +1,85 @@
+// Pure enrichment from the Trophies, Taming and Events wiki tables.
+// dropChance is a percentage; eatingRange is meters; tameTime is minutes.
+import { cleanText, parseImage, parseLinks, parseList, parseWikiTables, slug } from './wikitext.mjs';
+
+const links = value => parseLinks(value).filter(link => !/^(File|Image|Category):/i.test(link));
+const withoutRefs = value => String(value ?? '').replace(/<ref\b[^>]*>[\s\S]*?<\/ref>/gi, '').replace(/<ref\b[^>]*\/>/gi, '');
+const number = value => {
+  const match = cleanText(withoutRefs(value)).match(/^(\d+(?:\.\d+)?)/);
+  return match ? Number(match[1]) : null;
+};
+const headers = table => table.headers.map(header => cleanText(header).toLowerCase());
+
+export function enrichCreatures(creatures, pages) {
+  const byId = new Map(creatures.map(creature => [creature.id, creature]));
+  const unmatched = [];
+  const match = (target, source) => {
+    const creature = byId.get(slug(target.split('#')[0]));
+    if (!creature) unmatched.push(`${source}: [[${target}]]`);
+    return creature;
+  };
+  for (const creature of creatures) {
+    creature.taming = null;
+    creature.raids = [];
+  }
+
+  for (const table of parseWikiTables(pages.Trophies ?? '')) {
+    const columns = headers(table);
+    if (!columns.includes('drop chance') || !columns.includes('usage')) continue;
+    for (const row of table.rows) {
+      const cell = row[columns.indexOf('trophy')] ?? '';
+      const file = parseImage(cell);
+      const primaryLinks = links(withoutRefs(cell));
+      // The Dvergr row explicitly links the individual creatures in its note.
+      const targets = links(cell).filter(target => byId.has(slug(target)));
+      for (const target of primaryLinks) {
+        if (!targets.includes(target)) match(target, 'Trophies');
+      }
+      for (const target of [...new Set(targets)]) {
+        const creature = match(target, 'Trophies');
+        creature.trophy = {
+          name: file ? file.replace(/\.[^.]+$/, '') : creature.trophy?.name ?? `${creature.name} Trophy`,
+          image: creature.trophy?.image ?? null,
+          dropChance: number(row[columns.indexOf('drop chance')]),
+          usage: parseList(withoutRefs(row[columns.indexOf('usage')])),
+        };
+      }
+    }
+  }
+
+  const tameMinutes = (pages.Taming ?? '').match(/Taming always requires[^\n]*\((\d+(?:\.\d+)?) minutes\)/i)?.[1];
+  for (const table of parseWikiTables(pages.Taming ?? '')) {
+    const columns = headers(table);
+    if (!columns.includes('required food') || !columns.includes('eating range')) continue;
+    for (const row of table.rows) {
+      for (const target of links(row[columns.indexOf('creature')])) {
+        const creature = match(target, 'Taming');
+        if (!creature) continue;
+        creature.taming = {
+          foods: [...new Set(links(row[columns.indexOf('required food')]))],
+          eatingRange: number(row[columns.indexOf('eating range')]),
+          ...(tameMinutes && creature.tameable ? { tameTime: Number(tameMinutes) } : {}),
+        };
+      }
+    }
+  }
+
+  for (const table of parseWikiTables(pages.Events ?? '')) {
+    const columns = headers(table);
+    if (!columns.includes('creatures') || !columns.includes('event name')) continue;
+    for (const row of table.rows) {
+      const raid = {
+        event: cleanText(row[columns.indexOf('event name')]),
+        name: cleanText(row[columns.indexOf('start message')]).replace(/^"|"$/g, ''),
+        enabledBy: links(row[columns.indexOf('enabled by')] ?? row[columns.indexOf('started by')]),
+        disabledBy: links(row[columns.indexOf('disabled by')] ?? row[columns.indexOf('ended by')]),
+        biomes: links(row[columns.indexOf('biome(s)')]),
+      };
+      for (const target of [...new Set(links(withoutRefs(row[columns.indexOf('creatures')])))] ) {
+        const creature = match(target, `Events/${raid.event}`);
+        if (creature) creature.raids.push({ ...raid });
+      }
+    }
+  }
+  return [...new Set(unmatched)].sort();
+}
