@@ -18,7 +18,11 @@ export function buildArmourerBundle() {
   if (!existsSync(armorPath)) throw new Error('Missing data/armor.json');
   if (!existsSync(itemsPath)) throw new Error('Missing data/items.json');
 
-  const biomes = JSON.parse(readFileSync(biomesPath, 'utf8'));
+  // Biome images live in the Bestiary; point to them from /armourer/.
+  const biomes = JSON.parse(readFileSync(biomesPath, 'utf8')).map((b) => ({
+    ...b,
+    image: b.image ? `../bestiary/${b.image}` : null,
+  }));
   const armor = JSON.parse(readFileSync(armorPath, 'utf8'));
   const itemsList = JSON.parse(readFileSync(itemsPath, 'utf8'));
 

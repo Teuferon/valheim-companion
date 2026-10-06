@@ -20,6 +20,10 @@ COPY apps/bestiary/index.html /usr/share/nginx/html/bestiary/
 COPY apps/bestiary/assets/ /usr/share/nginx/html/bestiary/assets/
 COPY apps/bestiary/data/data.js /usr/share/nginx/html/bestiary/data/data.js
 COPY apps/bestiary/img/ /usr/share/nginx/html/bestiary/img/
+COPY apps/armourer/index.html /usr/share/nginx/html/armourer/
+COPY apps/armourer/assets/ /usr/share/nginx/html/armourer/assets/
+COPY apps/armourer/data/data.js /usr/share/nginx/html/armourer/data/data.js
+COPY apps/armourer/img/ /usr/share/nginx/html/armourer/img/
 COPY --from=signs /app/dist-static/ /usr/share/nginx/html/signs/
 COPY --from=damage-calculator /app/dist-static/ /usr/share/nginx/html/damage-calculator/
 EXPOSE 80

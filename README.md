@@ -4,6 +4,7 @@
 
 Tools for your Valheim journey:
 - **Bestiary**: Every creature and boss, grouped by biome and spoiler-free: each biome stays collapsed until you open it. Stats, weaknesses and the best weapons for your progress.
+- **Armourer**: Every armor set by biome. Pick pieces and levels — get the full shopping list, crafting costs, and where to farm materials.
 - **Damage Calculator**: Pick a target and a weapon, set the upgrade level and see the damage that actually lands — resistances applied, with DPS, time-to-kill and a biome progression slider.
 - **Sign Editor (Runopis)**: Rich-text editor for Valheim signs with colors, formatting, live preview and copy to game in 13 languages.
 
@@ -11,6 +12,7 @@ Tools for your Valheim journey:
 
 - `apps/hub/`: Main landing / hub page (`/`)
 - `apps/bestiary/`: Bestiary static application (`/bestiary/`)
+- `apps/armourer/`: Armourer static application (`/armourer/`)
 - `apps/damage-calculator/`: Damage calculator SPA (`/damage-calculator/`)
 - `apps/signs/`: Runopis sign editor SPA (`/signs/`)
 - `data/`: Extracted wiki data (biomes, creatures, weapons, recommendations)

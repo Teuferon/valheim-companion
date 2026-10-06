@@ -13,6 +13,7 @@ const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..
 const DIST_DIR = path.join(REPO_ROOT, 'dist');
 const HUB_DIR = path.join(REPO_ROOT, 'apps', 'hub');
 const BESTIARY_DIR = path.join(REPO_ROOT, 'apps', 'bestiary');
+const ARMOURER_DIR = path.join(REPO_ROOT, 'apps', 'armourer');
 const SIGNS_DIST = path.join(REPO_ROOT, 'apps', 'signs', 'dist-static');
 const DAMAGE_DIST = path.join(REPO_ROOT, 'apps', 'damage-calculator', 'dist-static');
 
@@ -48,7 +49,17 @@ export function buildSite() {
   cpSync(path.join(BESTIARY_DIR, 'data', 'data.js'), path.join(bestiaryDist, 'data', 'data.js'));
   cpSync(path.join(BESTIARY_DIR, 'img'), path.join(bestiaryDist, 'img'), { recursive: true });
 
-  // 3. apps/signs/dist-static/* -> dist/signs/
+  // 3. apps/armourer/{index.html, assets, data/data.js, img} -> dist/armourer/
+  const armourerDist = path.join(DIST_DIR, 'armourer');
+  mkdirSync(armourerDist, { recursive: true });
+  mkdirSync(path.join(armourerDist, 'data'), { recursive: true });
+
+  cpSync(path.join(ARMOURER_DIR, 'index.html'), path.join(armourerDist, 'index.html'));
+  cpSync(path.join(ARMOURER_DIR, 'assets'), path.join(armourerDist, 'assets'), { recursive: true });
+  cpSync(path.join(ARMOURER_DIR, 'data', 'data.js'), path.join(armourerDist, 'data', 'data.js'));
+  cpSync(path.join(ARMOURER_DIR, 'img'), path.join(armourerDist, 'img'), { recursive: true });
+
+  // 4. apps/signs/dist-static/* -> dist/signs/
   const signsDistTarget = path.join(DIST_DIR, 'signs');
   mkdirSync(signsDistTarget, { recursive: true });
   cpSync(SIGNS_DIST, signsDistTarget, { recursive: true });

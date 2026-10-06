@@ -11,7 +11,7 @@ window.VA_DATA = {
       "name": "Meadows",
       "order": 1,
       "gearTier": 1,
-      "image": "img/biomes/meadows.png",
+      "image": "../bestiary/img/biomes/meadows.png",
       "wiki": "https://valheim.weirdgloop.org/w/Meadows",
       "creatures": {
         "boss": [
@@ -38,7 +38,7 @@ window.VA_DATA = {
       "name": "Black Forest",
       "order": 2,
       "gearTier": 2,
-      "image": "img/biomes/black-forest.png",
+      "image": "../bestiary/img/biomes/black-forest.png",
       "wiki": "https://valheim.weirdgloop.org/w/Black_Forest",
       "creatures": {
         "boss": [
@@ -74,7 +74,7 @@ window.VA_DATA = {
       "name": "Swamp",
       "order": 3,
       "gearTier": 3,
-      "image": "img/biomes/swamp.png",
+      "image": "../bestiary/img/biomes/swamp.png",
       "wiki": "https://valheim.weirdgloop.org/w/Swamp",
       "creatures": {
         "boss": [
@@ -105,7 +105,7 @@ window.VA_DATA = {
       "name": "Ocean",
       "order": 4,
       "gearTier": 3,
-      "image": "img/biomes/ocean.png",
+      "image": "../bestiary/img/biomes/ocean.png",
       "wiki": "https://valheim.weirdgloop.org/w/Ocean",
       "creatures": {
         "boss": [],
@@ -129,7 +129,7 @@ window.VA_DATA = {
       "name": "Mountain",
       "order": 5,
       "gearTier": 4,
-      "image": "img/biomes/mountain.png",
+      "image": "../bestiary/img/biomes/mountain.png",
       "wiki": "https://valheim.weirdgloop.org/w/Mountain",
       "creatures": {
         "boss": [
@@ -160,7 +160,7 @@ window.VA_DATA = {
       "name": "Plains",
       "order": 6,
       "gearTier": 5,
-      "image": "img/biomes/plains.png",
+      "image": "../bestiary/img/biomes/plains.png",
       "wiki": "https://valheim.weirdgloop.org/w/Plains",
       "creatures": {
         "boss": [
@@ -193,7 +193,7 @@ window.VA_DATA = {
       "name": "Mistlands",
       "order": 7,
       "gearTier": 6,
-      "image": "img/biomes/mistlands.png",
+      "image": "../bestiary/img/biomes/mistlands.png",
       "wiki": "https://valheim.weirdgloop.org/w/Mistlands",
       "creatures": {
         "boss": [
@@ -224,7 +224,7 @@ window.VA_DATA = {
       "name": "Ashlands",
       "order": 8,
       "gearTier": 7,
-      "image": "img/biomes/ashlands.png",
+      "image": "../bestiary/img/biomes/ashlands.png",
       "wiki": "https://valheim.weirdgloop.org/w/Ashlands",
       "creatures": {
         "boss": [
@@ -260,7 +260,7 @@ window.VA_DATA = {
       "name": "Deep North",
       "order": 9,
       "gearTier": 8,
-      "image": "img/biomes/deep-north.png",
+      "image": "../bestiary/img/biomes/deep-north.png",
       "wiki": "https://valheim.weirdgloop.org/w/Deep_North",
       "creatures": {
         "boss": [
