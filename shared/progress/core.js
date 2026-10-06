@@ -59,7 +59,7 @@
   function revealedBiomes(biomes) {
     const ordered = [...(biomes ?? globalThis.VP_DATA?.biomes ?? [])].sort((a, b) => a.order - b.order);
     // Read legacy reveals on each call so same-tab tools can still open biomes.
-    open = read(OPEN_KEY, open);
+    open = read(OPEN_KEY, []);
     const revealed = new Set([...state.visited, ...(Array.isArray(open) ? open.filter(validId) : [])]);
     if (ordered.length) revealed.add(ordered[0].id);
     let last = -1;

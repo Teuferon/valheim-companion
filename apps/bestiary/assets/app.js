@@ -130,6 +130,10 @@ import { PLAYER_STORAGE_KEY, defaultPlayer, sanitizePlayer, readPlayerState } fr
    * LocalStorage helpers with try/catch
    */
   function getStoredOpenBiomes() {
+    return VCProgress.revealedBiomes(window.VC_DATA.biomes);
+  }
+
+  function getManualOpenBiomes() {
     try {
       const raw = localStorage.getItem('vc.openBiomes');
       if (!raw) return [];
@@ -2065,6 +2069,9 @@ import { PLAYER_STORAGE_KEY, defaultPlayer, sanitizePlayer, readPlayerState } fr
     };
     updateSpoilerLabel();
     row1.appendChild(toggleLabel);
+    const progressLink = el('a', 'armory-toggle-label', 'Track your progress →');
+    progressLink.href = '../progress/';
+    row1.appendChild(progressLink);
 
     controls.appendChild(row1);
 
@@ -2793,11 +2800,10 @@ import { PLAYER_STORAGE_KEY, defaultPlayer, sanitizePlayer, readPlayerState } fr
           contentWrapper.classList.remove('open');
         }
 
-        // Save open biomes in localStorage
-        const currentlyOpen = Array.from(document.querySelectorAll('.biome-card'))
-          .filter(c => c.querySelector('.biome-header[aria-expanded="true"]'))
-          .map(c => c.dataset.biomeId);
-        setStoredOpenBiomes(currentlyOpen);
+        // Expanding reveals a biome; collapsing does not erase spoiler progress.
+        if (nextState && !getStoredOpenBiomes().includes(biome.id)) {
+          setStoredOpenBiomes([...new Set([...getManualOpenBiomes(), biome.id])]);
+        }
         document.querySelectorAll('.creature-card').forEach(card => card._refreshRaids?.());
         if (armoryController) armoryController.refresh();
       });
@@ -2856,6 +2862,31 @@ import { PLAYER_STORAGE_KEY, defaultPlayer, sanitizePlayer, readPlayerState } fr
       document.querySelector('.link-dialog')?._translate?.();
     }
     VCI18n.onChange(translatePage);
+    let revealed = new Set(getStoredOpenBiomes());
+    function refreshProgress() {
+      const next = new Set(getStoredOpenBiomes());
+      document.querySelectorAll('.biome-card').forEach(card => {
+        const id = card.dataset.biomeId;
+        const header = card.querySelector('.biome-header');
+        const wrapper = card.querySelector('.biome-content-wrapper');
+        if (!next.has(id)) {
+          header.setAttribute('aria-expanded', 'false');
+          wrapper.replaceChildren();
+          wrapper.classList.remove('open');
+          wrapper.setAttribute('inert', '');
+        } else if (!revealed.has(id)) {
+          header.setAttribute('aria-expanded', 'true');
+          renderBiomeContent(data.biomes.find(b => b.id === id), wrapper, data);
+          wrapper.classList.add('open');
+          wrapper.removeAttribute('inert');
+        }
+      });
+      revealed = next;
+      document.querySelectorAll('.creature-card').forEach(card => card._refreshRaids?.());
+      armoryController?.refresh();
+      applyFiltersToAllOpenBiomes();
+    }
+    VCProgress.onChange(refreshProgress);
     VCI18n.apply(document);
     picker.setAttribute('aria-label', t('Language'));
     picker.options[0].textContent = t('Auto (browser)');
@@ -2891,7 +2922,6 @@ import { PLAYER_STORAGE_KEY, defaultPlayer, sanitizePlayer, readPlayerState } fr
             contentWrapper.setAttribute('inert', '');
           }
         });
-        setStoredOpenBiomes([]);
         document.querySelectorAll('.creature-card').forEach(card => card._refreshRaids?.());
         if (armoryController) armoryController.refresh();
       });
@@ -2912,7 +2942,7 @@ import { PLAYER_STORAGE_KEY, defaultPlayer, sanitizePlayer, readPlayerState } fr
           }
         });
         clearStoredOpenBiomes();
-        if (armoryController) armoryController.refresh();
+        refreshProgress();
       });
     }
   }

@@ -70,6 +70,10 @@
   }
 
   function getStoredOpenBiomes() {
+    return VCProgress.revealedBiomes(window.VA_DATA.biomes);
+  }
+
+  function getManualOpenBiomes() {
     try {
       const raw = localStorage.getItem('vc.openBiomes');
       if (!raw) return [];
@@ -91,7 +95,6 @@
   function clearStoredOpenBiomes() {
     try {
       localStorage.removeItem('vc.openBiomes');
-      localStorage.removeItem('va.showAll');
     } catch {
       // LocalStorage unavailable, ignore
     }
@@ -622,8 +625,6 @@
     if (btnResetProgress) {
       btnResetProgress.addEventListener('click', function () {
         clearStoredOpenBiomes();
-        showAll = false;
-        if (toggleSpoilers) toggleSpoilers.checked = false;
         renderCatalog();
         renderCart();
       });
@@ -742,7 +743,7 @@
           revealBtn.type = 'button';
           revealBtn.addEventListener('click', function (e) {
             e.stopPropagation();
-            const current = new Set(getStoredOpenBiomes());
+            const current = new Set(getManualOpenBiomes());
             current.add(biome.id);
             setStoredOpenBiomes(Array.from(current));
             renderCatalog();
@@ -946,7 +947,7 @@
           revealBtn.type = 'button';
           revealBtn.addEventListener('click', function (e) {
             e.stopPropagation();
-            const current = new Set(getStoredOpenBiomes());
+            const current = new Set(getManualOpenBiomes());
             current.add(biome.id);
             setStoredOpenBiomes(Array.from(current));
             renderCatalog();
@@ -1948,7 +1949,7 @@
           if (src.locked && src.biomeId) {
             srcBadge.type = 'button';
             srcBadge.addEventListener('click', () => {
-              const open = new Set(getStoredOpenBiomes());
+              const open = new Set(getManualOpenBiomes());
               open.add(src.biomeId);
               setStoredOpenBiomes([...open]);
               renderCatalog();
@@ -2213,6 +2214,10 @@
       buildFooter(footer, data);
     }
     VCI18n.onChange(translatePage);
+    VCProgress.onChange(() => {
+      renderCatalog();
+      renderCart();
+    });
     VCI18n.apply(document);
     picker.setAttribute('aria-label', t('Language'));
     picker.options[0].textContent = t('Auto (browser)');
@@ -2235,8 +2240,8 @@
         switchCatalogTab('armor');
 
         if (armor.biome) {
-          const open = new Set(getStoredOpenBiomes());
-          if (!open.has(armor.biome)) {
+          const open = new Set(getManualOpenBiomes());
+          if (!getStoredOpenBiomes().includes(armor.biome)) {
             open.add(armor.biome);
             setStoredOpenBiomes([...open]);
             renderCatalog();
@@ -2278,8 +2283,8 @@
           switchCatalogTab('weapons');
 
           if (weapon.biome) {
-            const open = new Set(getStoredOpenBiomes());
-            if (!open.has(weapon.biome)) {
+            const open = new Set(getManualOpenBiomes());
+            if (!getStoredOpenBiomes().includes(weapon.biome)) {
               open.add(weapon.biome);
               setStoredOpenBiomes([...open]);
               renderCatalog();
@@ -2308,8 +2313,8 @@
           switchCatalogTab('armor');
 
           if (armorWithPiece.biome) {
-            const open = new Set(getStoredOpenBiomes());
-            if (!open.has(armorWithPiece.biome)) {
+            const open = new Set(getManualOpenBiomes());
+            if (!getStoredOpenBiomes().includes(armorWithPiece.biome)) {
               open.add(armorWithPiece.biome);
               setStoredOpenBiomes([...open]);
               renderCatalog();

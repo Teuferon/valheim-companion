@@ -102,6 +102,7 @@ function staticApp(app, locale) {
   context.addEventListener = () => {};
   context.location = { hash: '', href: 'https://example.test/' };
   vm.runInContext(read('shared/i18n/core.js'), context);
+  vm.runInContext(read('shared/progress/core.js'), context);
   vm.runInContext(read(`apps/${app}/assets/messages.js`), context);
   vm.runInContext(read(`apps/${app}/data/data.js`), context);
   const prohibitLocalizedNames = value => {

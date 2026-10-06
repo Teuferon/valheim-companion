@@ -69,6 +69,7 @@ test('rendered cards link to their displayed biome and target in the same window
   // Supply the module imports to the synchronous VM rendering harness.
   Object.assign(context, playerCore);
   vm.runInContext(read('shared/i18n/core.js'), context);
+  vm.runInContext(read('shared/progress/core.js'), context);
   vm.runInContext(read('apps/bestiary/assets/messages.js'), context);
   vm.runInContext(read('apps/bestiary/data/data.js'), context);
   vm.runInContext(read('apps/bestiary/assets/extras.js'), context);
