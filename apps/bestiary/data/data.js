@@ -1,5 +1,5 @@
 window.VC_DATA = {
-  "generatedAt": "2026-10-05T21:44:22.888Z",
+  "generatedAt": "2026-10-06T10:31:44.847Z",
   "source": {
     "name": "Valheim Wiki",
     "url": "https://valheim.weirdgloop.org",
@@ -23412,6 +23412,9 @@ window.VC_DATA = {
     "antler-pickaxe": {
       "pierce": [
         18
+      ],
+      "pickaxe": [
+        18
       ]
     },
     "arbalest": {
@@ -23447,6 +23450,12 @@ window.VC_DATA = {
         76,
         82,
         88
+      ],
+      "chop": [
+        40,
+        42.5,
+        45,
+        47.5
       ]
     },
     "berserkir-axes": {
@@ -23455,6 +23464,12 @@ window.VC_DATA = {
         145,
         150,
         155
+      ],
+      "chop": [
+        80,
+        83,
+        86,
+        89
       ]
     },
     "bile-bomb": {
@@ -23476,6 +23491,12 @@ window.VC_DATA = {
         105,
         110,
         115
+      ],
+      "chop": [
+        60,
+        63,
+        66,
+        69
       ]
     },
     "black-metal-battleaxe": {
@@ -23484,6 +23505,12 @@ window.VC_DATA = {
         116,
         122,
         128
+      ],
+      "chop": [
+        60,
+        62.5,
+        65,
+        67.5
       ]
     },
     "black-metal-knife": {
@@ -23511,6 +23538,12 @@ window.VC_DATA = {
         54,
         59,
         64
+      ],
+      "pickaxe": [
+        49,
+        54,
+        59,
+        64
       ]
     },
     "black-metal-sword": {
@@ -23527,6 +23560,12 @@ window.VC_DATA = {
         145,
         150,
         155
+      ],
+      "chop": [
+        80,
+        83,
+        86,
+        89
       ]
     },
     "blood-fang": {
@@ -23559,6 +23598,12 @@ window.VC_DATA = {
     "bloodgold-payload": {
       "blunt": [
         20
+      ],
+      "chop": [
+        200
+      ],
+      "pickaxe": [
+        600
       ]
     },
     "bronze-atgeir": {
@@ -23575,6 +23620,12 @@ window.VC_DATA = {
         45,
         50,
         55
+      ],
+      "chop": [
+        40,
+        43,
+        46,
+        49
       ]
     },
     "bronze-mace": {
@@ -23591,6 +23642,12 @@ window.VC_DATA = {
         30,
         35,
         40
+      ],
+      "pickaxe": [
+        25,
+        29,
+        33,
+        37
       ]
     },
     "bronze-spear": {
@@ -23667,6 +23724,12 @@ window.VC_DATA = {
         30,
         30,
         30
+      ],
+      "chop": [
+        50,
+        52.5,
+        55,
+        57.5
       ]
     },
     "demolisher": {
@@ -23719,6 +23782,12 @@ window.VC_DATA = {
         35,
         40,
         45
+      ],
+      "chop": [
+        35,
+        38,
+        41,
+        44
       ]
     },
     "echo-spike": {
@@ -23738,6 +23807,20 @@ window.VC_DATA = {
     "ember-charge": {
       "blunt": [
         140
+      ],
+      "chop": [
+        100
+      ],
+      "pickaxe": [
+        50
+      ]
+    },
+    "explosive-payload": {
+      "chop": [
+        100
+      ],
+      "pickaxe": [
+        400
       ]
     },
     "fang-spear": {
@@ -23783,6 +23866,12 @@ window.VC_DATA = {
         25,
         30,
         35
+      ],
+      "chop": [
+        30,
+        33,
+        36,
+        39
       ]
     },
     "flint-knife": {
@@ -23845,6 +23934,12 @@ window.VC_DATA = {
         91,
         94,
         97
+      ],
+      "chop": [
+        90,
+        93,
+        96,
+        99
       ]
     },
     "frostfire-bow": {
@@ -23891,6 +23986,12 @@ window.VC_DATA = {
         91,
         94,
         97
+      ],
+      "chop": [
+        180,
+        185,
+        190,
+        195
       ]
     },
     "frostfire-dagger": {
@@ -23937,6 +24038,12 @@ window.VC_DATA = {
         91,
         94,
         97
+      ],
+      "chop": [
+        40,
+        42.5,
+        45,
+        47.5
       ]
     },
     "frostfire-greatsword": {
@@ -24082,6 +24189,12 @@ window.VC_DATA = {
     "grausten-payload": {
       "blunt": [
         25
+      ],
+      "chop": [
+        5
+      ],
+      "pickaxe": [
+        5
       ]
     },
     "himminafl": {
@@ -24120,6 +24233,12 @@ window.VC_DATA = {
         65,
         70,
         75
+      ],
+      "chop": [
+        50,
+        53,
+        56,
+        59
       ]
     },
     "iron-mace": {
@@ -24136,6 +24255,12 @@ window.VC_DATA = {
         38,
         43,
         48
+      ],
+      "pickaxe": [
+        33,
+        33,
+        33,
+        33
       ]
     },
     "iron-sledge": {
@@ -24166,6 +24291,12 @@ window.VC_DATA = {
         40,
         40,
         40
+      ],
+      "chop": [
+        70,
+        73,
+        76,
+        79
       ]
     },
     "klossen": {
@@ -24276,6 +24407,12 @@ window.VC_DATA = {
         186,
         196,
         206
+      ],
+      "chop": [
+        90,
+        90,
+        90,
+        90
       ]
     },
     "nord-bow": {
@@ -24298,6 +24435,12 @@ window.VC_DATA = {
         272,
         280,
         288
+      ],
+      "chop": [
+        180,
+        185,
+        190,
+        195
       ]
     },
     "nord-dagger": {
@@ -24320,6 +24463,12 @@ window.VC_DATA = {
         198,
         208,
         218
+      ],
+      "chop": [
+        40,
+        42.5,
+        45,
+        47.5
       ]
     },
     "nord-greatsword": {
@@ -24423,6 +24572,12 @@ window.VC_DATA = {
         10,
         10,
         10
+      ],
+      "chop": [
+        80,
+        83,
+        86,
+        89
       ]
     },
     "primal-slayer": {
@@ -24445,6 +24600,12 @@ window.VC_DATA = {
         223,
         226,
         229
+      ],
+      "chop": [
+        160,
+        160,
+        160,
+        160
       ]
     },
     "root-fang": {
@@ -24549,6 +24710,12 @@ window.VC_DATA = {
         136,
         142,
         148
+      ],
+      "chop": [
+        70,
+        72.5,
+        75,
+        77.5
       ]
     },
     "slayer": {
@@ -24700,6 +24867,12 @@ window.VC_DATA = {
         20,
         25,
         30
+      ],
+      "chop": [
+        20,
+        23,
+        26,
+        29
       ]
     },
     "storm-fang": {
@@ -24776,6 +24949,12 @@ window.VC_DATA = {
         50,
         55,
         60
+      ],
+      "chop": [
+        90,
+        93,
+        96,
+        99
       ]
     },
     "thunderblood-bow": {
@@ -24810,6 +24989,12 @@ window.VC_DATA = {
         50,
         55,
         60
+      ],
+      "chop": [
+        180,
+        185,
+        190,
+        195
       ]
     },
     "thunderblood-dagger": {
@@ -24850,6 +25035,12 @@ window.VC_DATA = {
         50,
         55,
         60
+      ],
+      "chop": [
+        40,
+        42.5,
+        45,
+        47.5
       ]
     },
     "thunderblood-greatsword": {
@@ -24948,6 +25139,12 @@ window.VC_DATA = {
         10,
         10,
         10
+      ],
+      "chop": [
+        80,
+        83,
+        86,
+        89
       ]
     },
     "torch": {
@@ -25020,6 +25217,16 @@ window.VC_DATA = {
         72
       ]
     },
+    "charred-arrow": {
+      "pierce": [
+        82
+      ]
+    },
+    "charred-bolt": {
+      "pierce": [
+        82
+      ]
+    },
     "fire-arrow": {
       "pierce": [
         11
@@ -25039,16 +25246,6 @@ window.VC_DATA = {
       ],
       "frost": [
         52
-      ]
-    },
-    "charred-arrow": {
-      "pierce": [
-        82
-      ]
-    },
-    "charred-bolt": {
-      "pierce": [
-        82
       ]
     },
     "iron-bolt": {

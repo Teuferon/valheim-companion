@@ -4779,35 +4779,35 @@
     },
     "melee": [
       {
-        "weapon": "early-axes",
-        "score": 172,
-        "dps": 171.7127071823204,
-        "perHit": 77.69999999999999,
-        "cycleSeconds": 3.62,
+        "weapon": "iron-axe",
+        "score": 177,
+        "dps": 177.44186046511626,
+        "perHit": 114.44999999999999,
+        "cycleSeconds": 2.58,
         "isSecondary": false,
         "confidence": "wiki",
-        "timeToKill": 4.076576576576578,
-        "hits": 10,
-        "min": 61,
-        "max": 94,
-        "raw": 89,
+        "timeToKill": 3.9449541284403673,
+        "hits": 7,
+        "min": 90,
+        "max": 139,
+        "raw": 134,
         "notes": [
           "×1.5 Chop"
         ]
       },
       {
         "weapon": "battleaxe",
-        "score": 129,
-        "dps": 129.49999999999997,
-        "perHit": 103.6,
+        "score": 139,
+        "dps": 139.34374999999997,
+        "perHit": 111.475,
         "cycleSeconds": 3.2,
         "isSecondary": false,
         "confidence": "wiki",
-        "timeToKill": 5.405405405405406,
+        "timeToKill": 5.023547880690739,
         "hits": 7,
-        "min": 81,
-        "max": 126,
-        "raw": 128,
+        "min": 88,
+        "max": 135,
+        "raw": 136,
         "notes": [
           "×1.5 Chop"
         ]
