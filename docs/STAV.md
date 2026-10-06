@@ -50,8 +50,8 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | VC-29 | všechny názvy z hry vždy anglicky, překládá se jen UI | Sol | ✅ |
 | VC-24 | Bestiary: trofeje, ochočování, nájezdy, sdílení profilu, deep link | Sol | ✅ |
 | VC-30 | odkaz z karty Bestiary do kalkulačky (Teuferon) + názvy nástrojů anglicky | Sol | ✅ |
-| **VC-31** | Armourer → **Smithy** (`/smithy/`, 301 ze `/armourer/`), Bare Fists pryč, mobil 360 px ve 13 jazycích | Sol | 🔄 běží (`../valheim-units-CS`) |
-| **VC-25** | Damage Calculator: sdílený profil hráče (`shared/player`), odkaz z Bestiary | — | ⏳ fronta 6 |
+| VC-31 | Armourer → **Smithy** (`/smithy/`, 301 ze `/armourer/`), bez Bare Fists, mobil 360 px ve 13 jazycích (`scripts/check-mobile.mjs`) | Sol | ✅ |
+| **VC-25** | Damage Calculator: sdílený profil hráče (`shared/player`) | Sol | 🔄 běží (`../valheim-units-CS`) | ⏳ fronta 6 |
 | VC-26 | Sign Editor: 22 šablon, galerie, sdílení `#sign=` | Sol | ✅ |
 | VC-27 | rozcestník: hledání napříč sekcemi (jen anglické názvy, zamčené biomy skryté) + oprava deep linku | agy | ✅ |
 | **VC-19** | Progress Tracker: sdílený stav `vc.progress` + stránka `/progress/` | — | ⏳ fronta 9 |
@@ -66,7 +66,6 @@ Pracovníci od 6. 10.: agy je vyčerpaný (týden 4 %, obnova 8. 10.), práci d�
 
 ## Známé drobnosti (neřešené)
 
-- Index hledání (`scripts/build-search-index.mjs`) má po VC-31 vést na `/smithy/` místo `/armourer/` (zatím funguje přes 301). Opraví orchestrátor při merge VC-31.
 
 - Čeština: chybí množná čísla („1 hráčů“). Řešit plural pravidly v `shared/i18n` (`Intl.PluralRules`) při další i18n úloze.
 

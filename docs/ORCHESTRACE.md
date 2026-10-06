@@ -67,18 +67,19 @@ Kvóty: `node scripts/limit-agy.mjs --ted` a `node scripts/limit-zai.mjs --ted`.
    npm run build                    # postaví signs + kalkulačku a složí dist/
    node scripts/preview.mjs 8090 &  # servíruje dist/ se stejnou CSP jako nginx
    ```
-6. **Prohlížeč:** skill `browser-test` (čistý headless Chrome přes CDP). Harness `cdp.mjs` zkopíruj ze `~/.claude/skills/browser-test/` do scratchpadu. Kontroluj:
+6. **Mobil ve všech jazycích:** `node scripts/check-mobile.mjs <port>` nad běžícím preview (6 stránek × 13 jazyků, 360 px). Musí vyjít 0.
+7. **Prohlížeč:** skill `browser-test` (čistý headless Chrome přes CDP). Harness `cdp.mjs` zkopíruj ze `~/.claude/skills/browser-test/` do scratchpadu. Kontroluj:
    - konzoli (0 chyb, 0 failed requests)
    - `scrollWidth` na 360 px
    - klíčové interakce
    - screenshot
-7. Merge:
+8. Merge:
    ```sh
    git merge --no-ff prace/VC-<n> -m "Merge VC-<n>: … [agent]"
    git push
    ```
    Push spustí deploy. Ověř živý web přes `curl` (status, `<title>`, konkrétní řetězec).
-8. Ukliď worktree a větve (`git worktree remove`, `git branch -d prace/…`) a aktualizuj **`docs/STAV.md`**.
+9. Ukliď worktree a větve (`git worktree remove`, `git branch -d prace/…`) a aktualizuj **`docs/STAV.md`**.
 
 Konflikty mezi souběžnými větvemi (rozcestník, `build-site.mjs`, `Dockerfile`, `nginx.conf`, README) řeší orchestrátor tak, že zachová obě strany.
 
