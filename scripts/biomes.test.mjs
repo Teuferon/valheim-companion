@@ -5,6 +5,7 @@ import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 
 import { BIOMES, biomeById, tierOf } from './wiki/biomes.mjs';
+import { buildDataBundle } from './build-data.mjs';
 
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -28,6 +29,19 @@ test('tierOf ocean is 3 and swamp is 4', () => {
   assert.equal(tierOf('mistlands'), 7);
   assert.equal(tierOf('ashlands'), 8);
   assert.equal(tierOf('deep-north'), 9);
+});
+
+test('Bestiary bundle biome ids are accepted by the calculator', () => {
+  const tsContent = readFileSync(
+    path.join(REPO_ROOT, 'apps', 'damage-calculator', 'src', 'data', 'biomes.ts'), 'utf8'
+  );
+  const calculatorIds = new Set([...tsContent.matchAll(/id:\s*"([^"]+)"/g)].map(m => m[1]));
+  assert.equal(calculatorIds.size, 9);
+  const bundle = buildDataBundle();
+  for (const biome of bundle.biomes) assert.ok(calculatorIds.has(biome.id), biome.id);
+  for (const creature of Object.values(bundle.creatures)) {
+    for (const biomeId of creature.biomes) assert.ok(calculatorIds.has(biomeId), `${creature.id}: ${biomeId}`);
+  }
 });
 
 test('biomeById returns matching biome object', () => {

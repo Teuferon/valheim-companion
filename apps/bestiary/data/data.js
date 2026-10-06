@@ -469,7 +469,8 @@ window.VC_DATA = {
         "de": "Monstrosität",
         "fr": "Abomination",
         "ru": "Мерзость"
-      }
+      },
+      "calculatorSlug": "abomination"
     },
     "anglerfish": {
       "id": "anglerfish",
@@ -848,7 +849,8 @@ window.VC_DATA = {
       "raids": [],
       "names": {
         "ru": "Пеплозавр"
-      }
+      },
+      "calculatorSlug": "asksvin"
     },
     "barka": {
       "id": "barka",
@@ -964,7 +966,8 @@ window.VC_DATA = {
       "description": "The Barka is a hostile creature found in the Deep North. It resembles a frozen The",
       "taming": null,
       "raids": [],
-      "names": {}
+      "names": {},
+      "calculatorSlug": "barka"
     },
     "bat": {
       "id": "bat",
@@ -1058,7 +1061,8 @@ window.VC_DATA = {
       "names": {
         "cs": "Netopýr",
         "ru": "Летучая мышь"
-      }
+      },
+      "calculatorSlug": "bat"
     },
     "bear": {
       "id": "bear",
@@ -1241,7 +1245,8 @@ window.VC_DATA = {
       "names": {
         "cs": "Medvěd",
         "ru": "Медведь"
-      }
+      },
+      "calculatorSlug": "bear"
     },
     "blob": {
       "id": "blob",
@@ -1338,7 +1343,8 @@ window.VC_DATA = {
         "de": "Schleimling",
         "fr": "Blob",
         "ru": "Сгустень"
-      }
+      },
+      "calculatorSlug": "blob"
     },
     "boar": {
       "id": "boar",
@@ -1465,7 +1471,8 @@ window.VC_DATA = {
         "fr": "Sanglier",
         "pt": "Javali",
         "ru": "Кабан"
-      }
+      },
+      "calculatorSlug": "boar"
     },
     "bonemass": {
       "id": "bonemass",
@@ -1551,7 +1558,8 @@ window.VC_DATA = {
         "de": "Knochenwanst",
         "fr": "Masse d'Os",
         "ru": "Масса костей"
-      }
+      },
+      "calculatorSlug": "bonemass"
     },
     "bonemaw": {
       "id": "bonemaw",
@@ -1630,7 +1638,8 @@ window.VC_DATA = {
       "raids": [],
       "names": {
         "ru": "Костепасть"
-      }
+      },
+      "calculatorSlug": "bonemaw"
     },
     "brenna": {
       "id": "brenna",
@@ -1718,7 +1727,8 @@ window.VC_DATA = {
         "de": "Brenna",
         "fr": "Brenna",
         "ru": "Бренна"
-      }
+      },
+      "calculatorSlug": "brenna"
     },
     "captive-fuling": {
       "id": "captive-fuling",
@@ -2011,7 +2021,8 @@ window.VC_DATA = {
         "de": "Verkohlter Scharfschütze",
         "fr": "Archer calciné",
         "ru": "Обугленный лучник"
-      }
+      },
+      "calculatorSlug": "charred-marksman"
     },
     "charred-twitcher": {
       "id": "charred-twitcher",
@@ -2149,7 +2160,8 @@ window.VC_DATA = {
         "de": "Verkohlter Zuckender",
         "fr": "Forcené calciné",
         "ru": "Обугленный дергун"
-      }
+      },
+      "calculatorSlug": "charred-twitcher"
     },
     "charred-warlock": {
       "id": "charred-warlock",
@@ -2258,7 +2270,8 @@ window.VC_DATA = {
         "de": "Verkohlter Hexer",
         "fr": "Sorcier calciné",
         "ru": "Обугленный чернокнижник"
-      }
+      },
+      "calculatorSlug": "charred-warlock"
     },
     "charred-warrior": {
       "id": "charred-warrior",
@@ -2451,7 +2464,8 @@ window.VC_DATA = {
         "de": "Verkohlter Krieger",
         "fr": "Guerrier calciné",
         "ru": "Обугленный воин"
-      }
+      },
+      "calculatorSlug": "charred-warrior"
     },
     "chicken": {
       "id": "chicken",
@@ -2694,7 +2708,8 @@ window.VC_DATA = {
         "cs": "Kultista",
         "de": "Kultist",
         "ru": "Культист"
-      }
+      },
+      "calculatorSlug": "cultist"
     },
     "deathsquito": {
       "id": "deathsquito",
@@ -2759,7 +2774,8 @@ window.VC_DATA = {
       "names": {
         "de": "Todeskito",
         "ru": "Смертожал"
-      }
+      },
+      "calculatorSlug": "deathsquito"
     },
     "deer": {
       "id": "deer",
@@ -2935,7 +2951,8 @@ window.VC_DATA = {
         "cs": "Drak",
         "fr": "Drac",
         "ru": "Дракон"
-      }
+      },
+      "calculatorSlug": "drake"
     },
     "draugr": {
       "id": "draugr",
@@ -3083,7 +3100,8 @@ window.VC_DATA = {
         "de": "Draugr",
         "fr": "Draugr",
         "ru": "Драугр"
-      }
+      },
+      "calculatorSlug": "draugr"
     },
     "draugr-elite": {
       "id": "draugr-elite",
@@ -3184,7 +3202,8 @@ window.VC_DATA = {
         "de": "Elite Draugr",
         "fr": "Élite Draugr",
         "ru": "Элитный драугр"
-      }
+      },
+      "calculatorSlug": "draugr-elite"
     },
     "dvergr-mage": {
       "id": "dvergr-mage",
@@ -3401,7 +3420,8 @@ window.VC_DATA = {
       "names": {
         "cs": "Dvergský Mág",
         "ru": "Дверг-маг"
-      }
+      },
+      "calculatorSlug": "dvergr-mage"
     },
     "dvergr-rogue": {
       "id": "dvergr-rogue",
@@ -3520,7 +3540,8 @@ window.VC_DATA = {
       "names": {
         "cs": "Dvergský Tulák",
         "ru": "Дверг-разбойник"
-      }
+      },
+      "calculatorSlug": "dvergr-rogue"
     },
     "eikthyr": {
       "id": "eikthyr",
@@ -3607,7 +3628,8 @@ window.VC_DATA = {
         "de": "Eikthyr",
         "fr": "Eikthyr",
         "ru": "Эйктюр"
-      }
+      },
+      "calculatorSlug": "eikthyr"
     },
     "elaking": {
       "id": "elaking",
@@ -3817,7 +3839,8 @@ window.VC_DATA = {
           ]
         }
       ],
-      "names": {}
+      "names": {},
+      "calculatorSlug": "elaking"
     },
     "eyeless-one": {
       "id": "eyeless-one",
@@ -3952,7 +3975,8 @@ window.VC_DATA = {
           ]
         }
       ],
-      "names": {}
+      "names": {},
+      "calculatorSlug": "eyeless-one"
     },
     "fader": {
       "id": "fader",
@@ -4084,7 +4108,8 @@ window.VC_DATA = {
       "raids": [],
       "names": {
         "ru": "Прародитель"
-      }
+      },
+      "calculatorSlug": "fader"
     },
     "fallen-valkyrie": {
       "id": "fallen-valkyrie",
@@ -4175,7 +4200,8 @@ window.VC_DATA = {
         "de": "Gefallene Walküre",
         "fr": "Valkyrie déchue",
         "ru": "Падшая валькирия"
-      }
+      },
+      "calculatorSlug": "fallen-valkyrie"
     },
     "fallen-warrior": {
       "id": "fallen-warrior",
@@ -4304,7 +4330,8 @@ window.VC_DATA = {
       "description": "Fallen Warriors are aggressive creatures found in the Deep",
       "taming": null,
       "raids": [],
-      "names": {}
+      "names": {},
+      "calculatorSlug": "fallen-warrior"
     },
     "fenring": {
       "id": "fenring",
@@ -4391,7 +4418,8 @@ window.VC_DATA = {
       "names": {
         "fr": "Fenring",
         "ru": "Фенринг"
-      }
+      },
+      "calculatorSlug": "fenring"
     },
     "frysling": {
       "id": "frysling",
@@ -4649,7 +4677,8 @@ window.VC_DATA = {
         "de": "Fuling",
         "fr": "Gobelin",
         "ru": "Фулинг"
-      }
+      },
+      "calculatorSlug": "fuling"
     },
     "fuling-berserker": {
       "id": "fuling-berserker",
@@ -4810,7 +4839,8 @@ window.VC_DATA = {
       "names": {
         "fr": "Berserker Gobelin",
         "ru": "Фулинг-берсерк"
-      }
+      },
+      "calculatorSlug": "fuling-berserker"
     },
     "fuling-shaman": {
       "id": "fuling-shaman",
@@ -4909,7 +4939,8 @@ window.VC_DATA = {
         "de": "Fuling Schamane",
         "fr": "Chaman Gobelin",
         "ru": "Фулинг-шаман"
-      }
+      },
+      "calculatorSlug": "fuling-shaman"
     },
     "gammeltroll": {
       "id": "gammeltroll",
@@ -5009,7 +5040,8 @@ window.VC_DATA = {
       "description": "Gammeltrolls are huge hostile creatures that roam around the Deep North. They are elder Trolls, the largest creatures in all of",
       "taming": null,
       "raids": [],
-      "names": {}
+      "names": {},
+      "calculatorSlug": "gammeltroll"
     },
     "geirrhafa": {
       "id": "geirrhafa",
@@ -5109,7 +5141,8 @@ window.VC_DATA = {
       "names": {
         "de": "Geirrhafa",
         "ru": "Гейрафа"
-      }
+      },
+      "calculatorSlug": "geirrhafa"
     },
     "ghost": {
       "id": "ghost",
@@ -5196,7 +5229,8 @@ window.VC_DATA = {
         "de": "Geist",
         "fr": "Fantôme",
         "ru": "Дух"
-      }
+      },
+      "calculatorSlug": "ghost"
     },
     "giant-herring": {
       "id": "giant-herring",
@@ -5392,7 +5426,8 @@ window.VC_DATA = {
         "cs": "Gjall",
         "de": "Gjall",
         "ru": "Гьялль"
-      }
+      },
+      "calculatorSlug": "gjall"
     },
     "greydwarf": {
       "id": "greydwarf",
@@ -5538,7 +5573,8 @@ window.VC_DATA = {
         "de": "Grauzwerg",
         "fr": "Naingris",
         "ru": "Грейдворф"
-      }
+      },
+      "calculatorSlug": "greydwarf"
     },
     "greydwarf-deep-north": {
       "id": "greydwarf-deep-north",
@@ -5653,7 +5689,8 @@ window.VC_DATA = {
       "description": "Greydwarf (Deep North) is a stronger version of Greydwarf found in Deep",
       "taming": null,
       "raids": [],
-      "names": {}
+      "names": {},
+      "calculatorSlug": "greydwarf-deep-north"
     },
     "greydwarf-brute": {
       "id": "greydwarf-brute",
@@ -5777,7 +5814,8 @@ window.VC_DATA = {
         "de": "Grauzwergen Berserker",
         "fr": "Brute Naingris",
         "ru": "Грейдворф-дикарь"
-      }
+      },
+      "calculatorSlug": "greydwarf-brute"
     },
     "greydwarf-shaman": {
       "id": "greydwarf-shaman",
@@ -5939,7 +5977,8 @@ window.VC_DATA = {
         "de": "Grauzwergen Schamane",
         "fr": "Chaman Naingris",
         "ru": "Грейдворф-шаман"
-      }
+      },
+      "calculatorSlug": "greydwarf-shaman"
     },
     "greydwarf-shaman-deep-north": {
       "id": "greydwarf-shaman-deep-north",
@@ -6065,7 +6104,8 @@ window.VC_DATA = {
       "description": "The Greydwarf Shaman of the Deep North is a hostile creature, a Deep North variant of the Greydwarf",
       "taming": null,
       "raids": [],
-      "names": {}
+      "names": {},
+      "calculatorSlug": "greydwarf-shaman-deep-north"
     },
     "greyling": {
       "id": "greyling",
@@ -6128,7 +6168,8 @@ window.VC_DATA = {
         "de": "Gräuling",
         "fr": "Bourgeon Naingris",
         "ru": "Грейлинг"
-      }
+      },
+      "calculatorSlug": "greyling"
     },
     "grouper": {
       "id": "grouper",
@@ -6249,7 +6290,8 @@ window.VC_DATA = {
         "de": "Düsterblob",
         "fr": "Growth",
         "ru": "Поросль"
-      }
+      },
+      "calculatorSlug": "growth"
     },
     "gull": {
       "id": "gull",
@@ -6598,7 +6640,8 @@ window.VC_DATA = {
           ]
         }
       ],
-      "names": {}
+      "names": {},
+      "calculatorSlug": "hexen"
     },
     "imprisoned-dvergr": {
       "id": "imprisoned-dvergr",
@@ -6886,7 +6929,8 @@ window.VC_DATA = {
       "description": "Kall Fimbulbringer is the eighth and final",
       "taming": null,
       "raids": [],
-      "names": {}
+      "names": {},
+      "calculatorSlug": "kall-fimbulbringer"
     },
     "krigen": {
       "id": "krigen",
@@ -7333,7 +7377,8 @@ window.VC_DATA = {
           ]
         }
       ],
-      "names": {}
+      "names": {},
+      "calculatorSlug": "krigen"
     },
     "kvastur": {
       "id": "kvastur",
@@ -7399,7 +7444,8 @@ window.VC_DATA = {
       "raids": [],
       "names": {
         "ru": "Квастур"
-      }
+      },
+      "calculatorSlug": "kvastur"
     },
     "lava-blob": {
       "id": "lava-blob",
@@ -7469,7 +7515,8 @@ window.VC_DATA = {
       "raids": [],
       "names": {
         "ru": "Лавовый сгустень"
-      }
+      },
+      "calculatorSlug": "lava-blob"
     },
     "leech": {
       "id": "leech",
@@ -7574,7 +7621,8 @@ window.VC_DATA = {
         "de": "Schlundegel",
         "fr": "Sangsue",
         "ru": "Пиявка"
-      }
+      },
+      "calculatorSlug": "leech"
     },
     "leviathan": {
       "id": "leviathan",
@@ -7700,7 +7748,8 @@ window.VC_DATA = {
       "raids": [],
       "names": {
         "ru": "Владыка Рето"
-      }
+      },
+      "calculatorSlug": "lord-reto"
     },
     "lox": {
       "id": "lox",
@@ -7794,7 +7843,8 @@ window.VC_DATA = {
         "de": "Lox",
         "fr": "Lox",
         "ru": "Быкоящер"
-      }
+      },
+      "calculatorSlug": "lox"
     },
     "magmafish": {
       "id": "magmafish",
@@ -7999,7 +8049,8 @@ window.VC_DATA = {
         "cs": "Moder",
         "de": "Drachenmutter",
         "ru": "Матерь"
-      }
+      },
+      "calculatorSlug": "moder"
     },
     "moose": {
       "id": "moose",
@@ -8093,7 +8144,8 @@ window.VC_DATA = {
         "tameTime": 30
       },
       "raids": [],
-      "names": {}
+      "names": {},
+      "calculatorSlug": "moose"
     },
     "moose-calf": {
       "id": "moose-calf",
@@ -8372,7 +8424,8 @@ window.VC_DATA = {
       "raids": [],
       "names": {
         "ru": "Морген"
-      }
+      },
+      "calculatorSlug": "morgen"
     },
     "neck": {
       "id": "neck",
@@ -8488,7 +8541,8 @@ window.VC_DATA = {
         "fr": "Nixe",
         "pt": "Lagarto",
         "ru": "Никс"
-      }
+      },
+      "calculatorSlug": "neck"
     },
     "northern-salmon": {
       "id": "northern-salmon",
@@ -8619,7 +8673,8 @@ window.VC_DATA = {
         "de": "Schleimmasse",
         "fr": "Oozer",
         "ru": "Слизняк"
-      }
+      },
+      "calculatorSlug": "oozer"
     },
     "perch": {
       "id": "perch",
@@ -8889,7 +8944,8 @@ window.VC_DATA = {
         "de": "Ranzige Überreste",
         "fr": "Cadavre rance",
         "ru": "Сгнившие останки"
-      }
+      },
+      "calculatorSlug": "rancid-remains"
     },
     "seal": {
       "id": "seal",
@@ -9152,7 +9208,8 @@ window.VC_DATA = {
         "cs": "Hledač",
         "fr": "Fouineur",
         "ru": "Искатель"
-      }
+      },
+      "calculatorSlug": "seeker"
     },
     "seeker-brood": {
       "id": "seeker-brood",
@@ -9235,7 +9292,8 @@ window.VC_DATA = {
         "cs": "Potomstvo Hledačů",
         "fr": "Fouineur",
         "ru": "Выводок искателя"
-      }
+      },
+      "calculatorSlug": "seeker-brood"
     },
     "seeker-soldier": {
       "id": "seeker-soldier",
@@ -9425,7 +9483,8 @@ window.VC_DATA = {
       "names": {
         "cs": "Voják Hledačů",
         "ru": "Искатель-солдат"
-      }
+      },
+      "calculatorSlug": "seeker-soldier"
     },
     "serpent": {
       "id": "serpent",
@@ -9499,7 +9558,8 @@ window.VC_DATA = {
       "names": {
         "fr": "Serpent",
         "ru": "Змей"
-      }
+      },
+      "calculatorSlug": "serpent"
     },
     "shadow": {
       "id": "shadow",
@@ -9655,7 +9715,8 @@ window.VC_DATA = {
       "description": "Shapeless Pulp is a hostile creature found in Mörkhalla in the Deep North. They are spawned by Hexahedric Pulp every six seconds while a player is within 20 meters, and themselves turn into Tiny",
       "taming": null,
       "raids": [],
-      "names": {}
+      "names": {},
+      "calculatorSlug": "shapeless-pulp"
     },
     "skeleton": {
       "id": "skeleton",
@@ -10026,7 +10087,8 @@ window.VC_DATA = {
         "de": "Skelett",
         "fr": "Squelette",
         "ru": "Скелет"
-      }
+      },
+      "calculatorSlug": "skeleton"
     },
     "skugg": {
       "id": "skugg",
@@ -10088,7 +10150,8 @@ window.VC_DATA = {
       "raids": [],
       "names": {
         "ru": "Скугг"
-      }
+      },
+      "calculatorSlug": "skugg"
     },
     "stone-golem": {
       "id": "stone-golem",
@@ -10197,7 +10260,8 @@ window.VC_DATA = {
       "names": {
         "fr": "Golem de pierre",
         "ru": "Каменный голем"
-      }
+      },
+      "calculatorSlug": "stone-golem"
     },
     "surtling": {
       "id": "surtling",
@@ -10321,7 +10385,8 @@ window.VC_DATA = {
         "de": "Surtling",
         "fr": "Surtling",
         "ru": "Суртлинг"
-      }
+      },
+      "calculatorSlug": "surtling"
     },
     "tetra": {
       "id": "tetra",
@@ -10449,7 +10514,8 @@ window.VC_DATA = {
         "de": "Der Uralte",
         "fr": "L'Aîné",
         "ru": "Древний"
-      }
+      },
+      "calculatorSlug": "the-elder"
     },
     "the-queen": {
       "id": "the-queen",
@@ -10561,7 +10627,8 @@ window.VC_DATA = {
       "names": {
         "cs": "Královna",
         "ru": "Королева"
-      }
+      },
+      "calculatorSlug": "the-queen"
     },
     "tick": {
       "id": "tick",
@@ -10675,7 +10742,8 @@ window.VC_DATA = {
       "names": {
         "cs": "Klíště",
         "ru": "Клещ"
-      }
+      },
+      "calculatorSlug": "tick"
     },
     "tiny-pulp": {
       "id": "tiny-pulp",
@@ -10728,7 +10796,8 @@ window.VC_DATA = {
       "description": "Tiny Pulp is a passive creature found in Mörkhalla in the Deep",
       "taming": null,
       "raids": [],
-      "names": {}
+      "names": {},
+      "calculatorSlug": "tiny-pulp"
     },
     "troll": {
       "id": "troll",
@@ -11005,7 +11074,8 @@ window.VC_DATA = {
         "de": "Troll",
         "fr": "Troll",
         "ru": "Тролль"
-      }
+      },
+      "calculatorSlug": "troll"
     },
     "trollfish": {
       "id": "trollfish",
@@ -11190,7 +11260,8 @@ window.VC_DATA = {
         "cs": "Ulv",
         "de": "Ulv",
         "ru": "Ульв"
-      }
+      },
+      "calculatorSlug": "ulv"
     },
     "vile": {
       "id": "vile",
@@ -11303,7 +11374,8 @@ window.VC_DATA = {
       "names": {
         "cs": "Děs",
         "ru": "Гнилолап"
-      }
+      },
+      "calculatorSlug": "vile"
     },
     "volture": {
       "id": "volture",
@@ -11370,7 +11442,8 @@ window.VC_DATA = {
       "raids": [],
       "names": {
         "ru": "Стервулканник"
-      }
+      },
+      "calculatorSlug": "volture"
     },
     "wolf": {
       "id": "wolf",
@@ -11499,7 +11572,8 @@ window.VC_DATA = {
         "de": "Wolf",
         "fr": "Loup",
         "ru": "Волк"
-      }
+      },
+      "calculatorSlug": "wolf"
     },
     "wraith": {
       "id": "wraith",
@@ -11590,7 +11664,8 @@ window.VC_DATA = {
         "de": "Zorngeist",
         "fr": "Spectre",
         "ru": "Призрак"
-      }
+      },
+      "calculatorSlug": "wraith"
     },
     "writhan": {
       "id": "writhan",
@@ -11718,7 +11793,8 @@ window.VC_DATA = {
       "description": "Writhan is an aggressive creature found rarely in the",
       "taming": null,
       "raids": [],
-      "names": {}
+      "names": {},
+      "calculatorSlug": "writhan"
     },
     "yagluth": {
       "id": "yagluth",
@@ -11812,7 +11888,8 @@ window.VC_DATA = {
         "cs": "Yagluth",
         "de": "Yagluth",
         "ru": "Яглут"
-      }
+      },
+      "calculatorSlug": "yagluth"
     },
     "zil-thungr": {
       "id": "zil-thungr",
@@ -11913,7 +11990,8 @@ window.VC_DATA = {
       "names": {
         "de": "Zil & Thungr",
         "ru": "Зил и Тангр"
-      }
+      },
+      "calculatorSlug": "zil-thungr"
     }
   },
   "weapons": {
