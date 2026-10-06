@@ -499,6 +499,15 @@
       const values = { ...tip.values };
       for (const [key, value] of Object.entries(values)) if (typeof value === 'number') values[key] = number(value);
       if (tip.key === 'Shortest food duration: {time}.') values.time = time(tip.values.time * 60);
+      if (tip.key === '{name}: {count} servings for {hours} hours.') {
+        // Two counts in one sentence: pluralize each part separately.
+        list.append(tipRow(t('{name}: {servings} for {hours}.', {
+          name: values.name,
+          servings: tn('{count} servings', tip.values.count, { count: values.count }),
+          hours: tn('{count} hours', tip.values.hours, { count: values.hours }),
+        }), tip.source));
+        continue;
+      }
       list.append(tipRow(t(tip.key, values), tip.source));
     }
     const general = {

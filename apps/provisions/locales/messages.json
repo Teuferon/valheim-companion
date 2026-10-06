@@ -2122,21 +2122,6 @@
     "ja": "食べ物の最短持続時間：{time}。",
     "id": "Durasi makanan terpendek: {time}."
   },
-  "{name}: {count} servings for {hours} hours.": {
-    "en": "{name}: {count} servings for {hours} hours.",
-    "cs": "{name}: {count} porcí na {hours} hodin.",
-    "de": "{name}: {count} Portionen für {hours} Stunden.",
-    "es": "{name}: {count} raciones para {hours} horas.",
-    "fr": "{name} : {count} portions pour {hours} heures.",
-    "pt": "{name}: {count} porções para {hours} horas.",
-    "zh": "{name}：{hours} 小时需要 {count} 份。",
-    "hi": "{name}: {hours} घंटों के लिए {count} हिस्से।",
-    "ar": "{name}: {count} حصص لمدة {hours} ساعات.",
-    "bn": "{name}: {hours} ঘণ্টার জন্য {count} পরিবেশন।",
-    "ru": "{name}: {count} порций на {hours} часов.",
-    "ja": "{name}：{hours} 時間分で {count} 食。",
-    "id": "{name}: {count} porsi untuk {hours} jam."
-  },
   "Cauldron level {level} required. Missing: {upgrades}.": {
     "en": "Cauldron level {level} required. Missing: {upgrades}.",
     "cs": "Je potřeba Cauldron úrovně {level}. Chybí: {upgrades}.",
@@ -2166,5 +2151,82 @@
     "ru": "Эти ингредиенты нельзя телепортировать: {ingredients}.",
     "ja": "これらの材料は転送できません：{ingredients}。",
     "id": "Bahan ini tidak bisa diteleportasi: {ingredients}."
+  },
+  "{name}: {servings} for {hours}.": {
+    "en": "{name}: {servings} for {hours}.",
+    "cs": "{name}: {servings} na {hours}.",
+    "de": "{name}: {servings} für {hours}.",
+    "es": "{name}: {servings} para {hours}.",
+    "fr": "{name} : {servings} pour {hours}.",
+    "pt": "{name}: {servings} para {hours}.",
+    "zh": "{name}：{hours}需要{servings}。",
+    "hi": "{name}: {hours} के लिए {servings}।",
+    "ar": "{name}: {servings} لمدة {hours}.",
+    "bn": "{name}: {hours}-এর জন্য {servings}।",
+    "ru": "{name}: {servings} на {hours}.",
+    "ja": "{name}：{hours}で{servings}。",
+    "id": "{name}: {servings} untuk {hours}."
+  },
+  "{count} hours": {
+    "en": {
+      "one": "{count} hour",
+      "other": "{count} hours"
+    },
+    "cs": {
+      "one": "{count} hodinu",
+      "few": "{count} hodiny",
+      "many": "{count} hodiny",
+      "other": "{count} hodin"
+    },
+    "de": {
+      "one": "{count} Stunde",
+      "other": "{count} Stunden"
+    },
+    "es": {
+      "one": "{count} hora",
+      "other": "{count} horas",
+      "many": "{count} horas"
+    },
+    "fr": {
+      "one": "{count} heure",
+      "other": "{count} heures",
+      "many": "{count} heures"
+    },
+    "pt": {
+      "one": "{count} hora",
+      "other": "{count} horas",
+      "many": "{count} horas"
+    },
+    "zh": {
+      "other": "{count} 小时"
+    },
+    "hi": {
+      "one": "{count} घंटे",
+      "other": "{count} घंटे"
+    },
+    "ar": {
+      "zero": "{count} ساعة",
+      "one": "{count} ساعة",
+      "two": "{count} ساعتان",
+      "few": "{count} ساعات",
+      "many": "{count} ساعة",
+      "other": "{count} ساعة"
+    },
+    "bn": {
+      "one": "{count} ঘণ্টা",
+      "other": "{count} ঘণ্টা"
+    },
+    "ru": {
+      "one": "{count} час",
+      "few": "{count} часа",
+      "many": "{count} часов",
+      "other": "{count} часа"
+    },
+    "ja": {
+      "other": "{count}時間"
+    },
+    "id": {
+      "other": "{count} jam"
+    }
   }
 }

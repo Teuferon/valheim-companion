@@ -68,7 +68,7 @@ function provisions(locale) {
   });
   context.window = context;
   context.addEventListener = () => {};
-  for (const path of ['shared/i18n/core.js', 'shared/shopping/core.js', 'apps/provisions/data/data.js', 'apps/provisions/locales/messages.js', 'apps/provisions/assets/planner.js']) vm.runInContext(read(path), context);
+  for (const path of ['shared/i18n/core.js', 'shared/shopping/core.js', 'apps/provisions/data/data.js', 'apps/provisions/locales/messages.js', 'apps/provisions/assets/planner.js', 'apps/provisions/assets/advisor.js']) vm.runInContext(read(path), context);
   // Expose hoisted production renderers without mounting the complete application.
   const source = read('apps/provisions/assets/app.js').replace('  const panel =',
     '  globalThis.renderers = { foodCard, shoppingText, renderShopping }; return;\n  const panel =');
