@@ -15,35 +15,12 @@ h3 { font-size: 1rem; }
 .page-wrapper { max-width: 1000px; padding: 24px 20px 60px; margin: auto; }
 .language-picker { display: flex; justify-content: flex-end; margin-bottom: .75rem; }
 .vc-language-picker { max-width: 100%; padding: .4rem; }
-.subtitle, .summon, .page-footer { color: var(--muted); }
+.subtitle, .page-footer { color: var(--muted); }
 .page-header { margin-bottom: 24px; }
-.summary { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 24px; }
-#summary-text { font-size: 1.1rem; font-weight: 600; }
-progress { display: block; width: 100%; height: 10px; margin: 16px 0 20px; border: 0; border-radius: 10px; overflow: hidden; accent-color: var(--gold); background: #2e3742; }
-progress::-webkit-progress-bar { background: #2e3742; }
-progress::-webkit-progress-value { background: var(--gold); }
-progress::-moz-progress-bar { background: var(--gold); }
 .actions { display: flex; flex-wrap: wrap; gap: 10px; }
 .danger { color: #e57373; }
 #status:empty { display: none; }
 #status { margin-top: 12px; color: var(--gold); }
-.biomes { display: grid; gap: 16px; }
-.biome { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; min-width: 0; }
-.biome-header { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; }
-.biome-header h2 { color: var(--gold); }
-.biome.locked { background: transparent; border-style: dashed; }
-.locked h2 { font: 600 1rem/1.5 system-ui, sans-serif; color: var(--muted); }
-.check { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; min-height: 44px; overflow-wrap: anywhere; }
-input[type=checkbox] { width: 18px; height: 18px; accent-color: var(--gold); flex-shrink: 0; margin: 0; }
-.creature { display: grid; grid-template-columns: 76px minmax(0, 1fr) auto; gap: 16px; align-items: center; border-top: 1px solid var(--border); padding: 18px 0; margin-top: 16px; }
-.creature img { width: 76px; height: 76px; object-fit: contain; }
-.creature-content { min-width: 0; overflow-wrap: anywhere; }
-.tag { color: var(--muted); font-size: .8rem; margin-bottom: 2px; }
-.summon { margin-top: 6px; font-size: .9rem; }
-.links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 8px; font-size: .85rem; }
-.milestones { border-top: 1px solid var(--border); padding-top: 16px; }
-.milestone-list { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 8px; }
-.milestone img { width: 32px; height: 32px; object-fit: contain; }
 .page-footer { margin-top: 48px; border-top: 1px solid var(--border); padding-top: 24px; text-align: center; font-size: .85rem; }
 .page-footer p { margin-bottom: 6px; }
 .support { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px; margin-top: 16px; }
@@ -57,9 +34,5 @@ textarea { width: 100%; display: block; margin: 8px 0 20px; overflow-wrap: anywh
 [hidden] { display: none !important; }
 @media (max-width: 600px) {
   .page-wrapper { padding: 16px 12px 40px; }
-  .summary, .biome { padding: 16px; }
-  .creature { grid-template-columns: 56px minmax(0, 1fr); gap: 12px; }
-  .creature img { width: 56px; height: 56px; }
-  .creature > .check { grid-column: 2; }
   .support { flex-direction: column; }
 }

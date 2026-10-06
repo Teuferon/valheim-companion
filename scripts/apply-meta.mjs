@@ -114,7 +114,7 @@ export function readConfig() {
   }
 }
 
-export function generateMetaBlock(page, config, indent = '  ') {
+export function generateMetaBlock(page, config, indent = '  ', existingProgressScripts = []) {
   const siteUrl = (config.siteUrl || '').trim().replace(/\/+$/, '');
   const siteName = config.siteName || 'Valheim Companion';
   const locale = config.locale || 'en_US';
@@ -180,6 +180,9 @@ export function generateMetaBlock(page, config, indent = '  ') {
     lines.push(`<meta name="vc-site" content="${siteUrl}">`);
   }
   lines.push('<script src="/shared/analytics/consent.js" defer></script>');
+  for (const script of ['core', 'ui', 'drawer']) {
+    if (!existingProgressScripts.includes(script)) lines.push(`<script src="/shared/progress/${script}.js" defer></script>`);
+  }
 
   lines.push('<!-- meta:end -->');
 
@@ -190,7 +193,11 @@ export function applyMetaToHtml(html, page, config) {
   // Detect indentation from viewport line or head
   const viewportMatch = html.match(/^([ \t]*)<meta\s+name=["']viewport["'][^>]*>/m);
   const indent = viewportMatch ? viewportMatch[1] : '  ';
-  const newBlock = generateMetaBlock(page, config, indent);
+  // Existing classic sections load core before their app; keep that order.
+  // Ignore the previous generated block so repeated runs remain idempotent.
+  const outsideMeta = html.replace(/<!-- meta:start -->[\s\S]*?<!-- meta:end -->/, '');
+  const existingProgressScripts = [...outsideMeta.matchAll(/<script\b[^>]*\bsrc=["'][^"']*shared\/progress\/(core|ui|drawer)\.js["']/gi)].map(match => match[1]);
+  const newBlock = generateMetaBlock(page, config, indent, existingProgressScripts);
 
   const existingBlockRegex = /([ \t]*)<!-- meta:start -->[\s\S]*?<!-- meta:end -->/;
   if (existingBlockRegex.test(html)) {

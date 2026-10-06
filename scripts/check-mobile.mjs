@@ -50,7 +50,28 @@ try {
           await new Promise(resolve => setTimeout(resolve, 350));
           await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
         })();`);
-        const result = await evaluate(cdp, `
+        for (const drawerOpen of page === '/progress/' ? [false] : [false, true]) {
+          if (drawerOpen) {
+            await evaluate(cdp, `return (async () => {
+              const trigger = document.querySelector('.vc-progress-trigger');
+              if (!trigger) throw new Error('Progress trigger is missing');
+              const banner = document.querySelector('.vc-consent-banner');
+              if (banner && !banner.hidden && trigger.getBoundingClientRect().bottom > banner.getBoundingClientRect().top) {
+                throw new Error('Progress trigger overlaps the consent banner');
+              }
+              trigger.click();
+              for (let attempt = 0; !document.querySelector('.vc-progress-panel .biome'); attempt++) {
+                if (attempt === 100) throw new Error('Progress drawer did not load');
+                await new Promise(resolve => setTimeout(resolve, 50));
+              }
+              VCProgress.set({ visited: ${JSON.stringify(progressBiomes)} });
+              await new Promise(resolve => setTimeout(resolve, 350));
+              await document.fonts.ready;
+            })();`);
+          } else if (page === '/progress/' && await evaluate(cdp, `return !!document.querySelector('.vc-progress-trigger');`)) {
+            throw new Error('Full Progress page must not show a drawer trigger');
+          }
+          const result = await evaluate(cdp, `
           const width = document.documentElement.clientWidth;
           const scrollWidth = Math.max(document.documentElement.scrollWidth, document.body.scrollWidth);
           const isScrollableTableContent = element => {
@@ -69,19 +90,22 @@ try {
           const first = scrollWidth > width && overflowing ? overflowing.tagName.toLowerCase() +
             (overflowing.id ? '#' + overflowing.id : '') +
             [...overflowing.classList].slice(0, 3).map(name => '.' + name).join('') : null;
-          return { width, scrollWidth, first };
+          const panel = document.querySelector('.vc-progress-panel');
+          const panelOverflow = panel && !panel.closest('[hidden]') ? panel.scrollWidth > panel.clientWidth : false;
+          return { width, scrollWidth, first, panelOverflow };
         `);
-        if (result.width !== 360) throw new Error(`Unexpected viewport width: ${result.width}`);
-        checked++;
-        const failed = result.scrollWidth > 360;
-        if (failed) failures++;
-        console.log(`${failed ? 'FAIL' : 'OK  '} ${code.padEnd(2)} ${page.padEnd(20)} scrollWidth=${result.scrollWidth} first=${result.first ?? 'none'}`);
+          if (result.width !== 360) throw new Error(`Unexpected viewport width: ${result.width}`);
+          checked++;
+          const failed = result.scrollWidth > 360 || result.panelOverflow;
+          if (failed) failures++;
+          console.log(`${failed ? 'FAIL' : 'OK  '} ${code.padEnd(2)} ${(page + (drawerOpen ? " [drawer]" : "")).padEnd(29)} scrollWidth=${result.scrollWidth} first=${result.first ?? 'none'}`);
+        }
       }
     } finally {
       await cdp.send('Page.removeScriptToEvaluateOnNewDocument', { identifier });
     }
   }
-  console.log(`\n${checked} pages checked (${pages.length} routes × ${languages.length} languages), ${failures} pages with scrollWidth > 360.`);
+  console.log(`\n${checked} page states checked (${pages.length} routes × ${languages.length} languages, including open drawers), ${failures} pages with scrollWidth > 360.`);
   const errorCount = errors.consoleErrors.length + errors.exceptions.length + errors.failedRequests.length;
   console.log(`Browser errors: ${errorCount}`);
   if (errorCount) console.error(JSON.stringify(errors, null, 2));

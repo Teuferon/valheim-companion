@@ -12,7 +12,7 @@ import {
   DEFAULT_BIOME,
   biomeIndex,
 } from "@/lib/progression";
-import { readTrackedBiome } from "@/lib/tracked-progress";
+import { readTrackedBiome, subscribeTrackedProgress } from "@/lib/tracked-progress";
 import { cn } from "@/lib/utils";
 
 /**
@@ -25,11 +25,6 @@ import { cn } from "@/lib/utils";
  * render would render one thing on the server and another in the browser — the
  * mismatch class this app already had to fix once.
  */
-const subscribe = (onChange: () => void) => {
-  window.addEventListener("storage", onChange);
-  return () => window.removeEventListener("storage", onChange);
-};
-
 const readStoredBiome = (): BiomeId => {
   try { return readTrackedBiome(window.localStorage); } catch { return BIOMES[0].id; }
 };
@@ -37,9 +32,8 @@ const readStoredBiome = (): BiomeId => {
 const serverBiome = () => DEFAULT_BIOME;
 
 export function useBiomeProgression(): [BiomeId, (next: BiomeId) => void] {
-  const stored = useSyncExternalStore(subscribe, readStoredBiome, serverBiome);
-  /* setItem does not fire a `storage` event in the tab that wrote it, so the
-   * slider keeps its own copy of the current position. */
+  const stored = useSyncExternalStore(subscribeTrackedProgress, readStoredBiome, serverBiome);
+  // Once touched, the session selection takes precedence over tracked updates.
   const [current, setCurrent] = useState<BiomeId | null>(null);
   const biome = current ?? stored;
 

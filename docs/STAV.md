@@ -56,9 +56,9 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | VC-27 | rozcestník: hledání napříč sekcemi (jen anglické názvy, zamčené biomy skryté) + oprava deep linku | agy | ✅ |
 | VC-19 | Progress Tracker `/progress/`, sdílený stav `vc.progress`, 15 milníků, sdílení `#p=` | Sol | ✅ |
 | VC-20 | Bestiary, Smithy, kalkulačka a rozcestník se řídí sdíleným postupem | Sol | ✅ |
-| **VC-21** | Provisions data (jídla, medoviny, feasty, stanice) + sdílený košík `shared/shopping` | Sol | 🔄 běží (`../valheim-units-CS`) | ⏳ fronta 11 |
-| **VC-32** | Progress jako vysouvací panel na každé stránce, nástroje reagují hned | Sol | 🔄 běží souběžně (`../valheim-units-GL`) |
-| **VC-22** | stránka Provisions `/provisions/` | — | ⏳ fronta 12 |
+| **VC-21** | Provisions data + sdílený košík `shared/shopping` | Sol | ✅ hotové ve větvi `prace/VC-21`, do main půjde s VC-22 (hledání už odkazuje na `/provisions/`) |
+| VC-32 | Progress jako vysouvací panel na každé stránce („⛓ Progress N/9“), nástroje reagují hned | Sol | ✅ |
+| **VC-22** | stránka Provisions `/provisions/` (staví na `prace/VC-21`) | Sol | 🔄 běží (`../valheim-units-CS`) | ⏳ fronta 12 |
 
 ### Po frontě
 Pracovníci od 6. 10.: agy je vyčerpaný (týden 4 %, obnova 8. 10.), práci dělá **Codex Sol**. Pavel 6. 10. schválil pořadí: překlady (VC-16 až VC-18), **vylepšení stávajících nástrojů** (VC-23 až VC-27), potom **Progress Tracker** a **Provisions** (VC-19 až VC-22). Další kandidáti z [`NAVRHY-NASTROJU.md`](NAVRHY-NASTROJU.md): Comfort Planner, Expedition, Trader Ledger, Fishing, Taming. Zatím nejsou schválené.

@@ -104,7 +104,7 @@ export function buildSite() {
   }
   const progressCoreDist = path.join(DIST_DIR, 'shared', 'progress');
   mkdirSync(progressCoreDist, { recursive: true });
-  cpSync(path.join(REPO_ROOT, 'shared', 'progress', 'core.js'), path.join(progressCoreDist, 'core.js'));
+  cpSync(path.join(REPO_ROOT, 'shared', 'progress'), progressCoreDist, { recursive: true });
 
   // Provisions static page, planner, locale catalog, data and images.
   const provisionsDist = path.join(DIST_DIR, 'provisions');
