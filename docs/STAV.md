@@ -49,7 +49,8 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | VC-23 | Armourer: zbraně a štíty v košíku, „Can't be teleported“, kalkulačka tavení | agy | ✅ |
 | VC-29 | všechny názvy z hry vždy anglicky, překládá se jen UI | Sol | ✅ |
 | VC-24 | Bestiary: trofeje, ochočování, nájezdy, sdílení profilu, deep link | Sol | ✅ |
-| **VC-30** | odkaz z karty Bestiary do kalkulačky (`?biome&target`, zadání od Teuferona) + názvy nástrojů anglicky | Sol | 🔄 běží (`../valheim-units-CS`) |
+| VC-30 | odkaz z karty Bestiary do kalkulačky (Teuferon) + názvy nástrojů anglicky | Sol | ✅ |
+| **VC-31** | Armourer → **Smithy** (`/smithy/`, 301 ze `/armourer/`), Bare Fists pryč, mobil 360 px ve 13 jazycích | Sol | 🔄 běží (`../valheim-units-CS`) |
 | **VC-25** | Damage Calculator: sdílený profil hráče (`shared/player`), odkaz z Bestiary | — | ⏳ fronta 6 |
 | VC-26 | Sign Editor: 22 šablon, galerie, sdílení `#sign=` | Sol | ✅ |
 | **VC-27** | rozcestník: společné hledání napříč sekcemi + oprava deep linku v Bestiary | agy | 🔄 běží (`../valheim-units-GL`) | ⏳ fronta 8 |
