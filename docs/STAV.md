@@ -43,6 +43,7 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | VC-14 | úklid (bomby, Root, brnění po kvalitách, DLC/seasonal, MIME manifestu) | agy | ✅ |
 | **VC-15** | úklid (koruny bez vylepšení, `neutral` v kalkulačce, collation ve scraperu) | zai | 🔄 **běží** (worktree `../valheim-units-GL`, větev `prace/VC-15`) |
 | **VC-16** | sdílené jádro i18n (13 jazyků, `vc.language`), rozcestník přeložený, Runopis napojený | — | ⏳ fronta 1 |
+| **VC-28** | Google Analytics 4 (G-CXQVNCCJKE) s lištou souhlasu, CSP, stránka Privacy | — | ⏳ hned po VC-16 |
 | **VC-17** | Bestiary + Armourer v 13 jazycích, místní názvy z jazykových odkazů wiki | — | ⏳ fronta 2 |
 | **VC-18** | Damage Calculator v 13 jazycích + místní názvy | — | ⏳ fronta 3 |
 | **VC-23** | Armourer: zbraně, štíty a nástroje v košíku, „Can't be teleported“, kalkulačka tavení, deep link | — | ⏳ fronta 4 |
@@ -67,6 +68,10 @@ Pavel 6. 10. schválil pořadí: překlady (VC-16 až VC-18), **vylepšení stá
 - Damage Calculator: pořadí v JSON závisí na locale stroje; řeší VC-15.
 - Ember Charge je jediná doporučovaná bomba. Ostatní bomby mají `recommendable: false`, protože wiki neuvádí plošné poškození.
 - Popisy z wiki zůstanou po překladu anglicky (ANALYZA § 15).
+
+## Google Analytics
+
+Služba „Valheim Companion“ v účtu Pawlig, Measurement ID **G-CXQVNCCJKE**, stream „Valheim Companion web“ (16052418584). Měření se nasadí ve VC-28 (Consent Mode v2 + lišta, ANALYZA § 19). Data se v GA objeví do 48 h od nasazení.
 
 ## Na Pavlovi
 

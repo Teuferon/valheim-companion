@@ -373,3 +373,19 @@ Vychází z `docs/NAVRHY-NASTROJU.md` § „Menší vylepšení“. Platí zása
   - Galerie šablon: štítky truhel (suroviny podle biomů), portálové tagy, značky cest, uvítací cedule. Šablony jsou v datech, přeložené do 13 jazyků, kromě jmen z hry.
   - Sdílení cedule v URL (`#sign=…`).
 - **Rozcestník (VC-27):** společné hledání napříč sekcemi (jednotky, zbraně, brnění, suroviny) s místními názvy. Výsledek vede přes deep link do příslušné sekce. Index se generuje při buildu (`apps/hub/data/search.js`). Souhrn postupu v záhlaví řeší VC-20.
+
+## 19. Návštěvnost: Google Analytics 4 se souhlasem (VC-28, 6. 10. 2026)
+
+- **GA4:** služba „Valheim Companion“ v účtu Pawlig, webový stream „Valheim Companion web“ (stream ID 16052418584), **Measurement ID `G-CXQVNCCJKE`**, časové pásmo Česko.
+- **Souhlas (Pavel zvolil nenápadnou lištu, GDPR):**
+  - **Consent Mode v2:** výchozí stav `denied` pro `analytics_storage`, `ad_storage`, `ad_user_data` a `ad_personalization`. Bez souhlasu se nenastaví žádné cookies a Google dostává jen anonymní pingy.
+  - Po „Allow analytics“ se nastaví `analytics_storage: granted`. Reklamní signály zůstávají vždy `denied`.
+  - Lišta je malá, dole, ve 13 jazycích: „We use Google Analytics to see which tools help players. Allow analytics?“ s tlačítky [Allow] [Decline] a odkazem na Privacy.
+  - Volba platí pro celý Companion: `localStorage` `vc.consent` = `{ "analytics": "granted"|"denied", "at": ISO }`.
+  - V patičce každé sekce je odkaz „Cookie settings“, který lištu znovu otevře.
+- **Kód:** `shared/analytics/consent.js` je klasický skript, ⛔ inline. Nastaví `dataLayer`/`gtag`, výchozí souhlas a dynamicky načte `https://www.googletagmanager.com/gtag/js?id=…`. Spustí se jen na produkční doméně (`site.config.json` → `siteUrl` a `gaMeasurementId`), ne na localhostu ani v náhledu.
+- **CSP:** rozšíří se jen o to, co GA potřebuje:
+  - `script-src 'self' https://www.googletagmanager.com`
+  - `connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com`
+  - `img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com`
+- **Stránka Privacy** `/privacy/` (rozcestník, 13 jazyků): co se měří, proč, jak odvolat souhlas, žádné reklamy a žádný prodej dat, kontakt.
