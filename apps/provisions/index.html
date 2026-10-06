@@ -39,6 +39,7 @@
   <script src="/shared/progress/core.js" defer></script>
   <script src="/shared/shopping/core.js" defer></script>
   <script src="assets/planner.js" defer></script>
+  <script src="assets/advisor.js" defer></script>
   <script src="assets/app.js" defer></script>
 </head>
 <body>
@@ -56,7 +57,12 @@
       </div>
     </header>
     <div class="provisions-layout">
-      <main id="catalog" data-i18n-attr="aria-label:Catalog" aria-label="Catalog"></main>
+      <main class="provisions-main">
+        <section id="activity-planner" class="activity-planner" aria-labelledby="activity-title"></section>
+        <section id="advisor-results" class="advisor-results" aria-live="polite" aria-busy="true"></section>
+        <section id="advisor-tips" class="advisor-tips" aria-labelledby="tips-title"></section>
+        <div id="catalog" data-i18n-attr="aria-label:Catalog" aria-label="Catalog"></div>
+      </main>
       <aside id="loadout-panel" class="loadout-panel" aria-labelledby="loadout-title">
         <div class="panel-heading">
           <h2 id="loadout-title" data-i18n="Loadout">Loadout</h2>
