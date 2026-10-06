@@ -25,6 +25,7 @@ export function buildComfortData() {
     const image = item.image?.startsWith('../comfort/') ? item.image.slice('../comfort/'.length)
       : item.image?.startsWith('../provisions/') ? item.image : item.image ? `../smithy/${item.image}` : null;
     return [id, { ...item, ...(override ? { biome: override.biome, tier: override.tier } : {}),
+      ...(id === 'coal' ? { sources: [{ text: 'Overcook meat at a Cooking Station', kind: 'station' }, ...item.sources] } : {}),
       image: image && existsSync(path.resolve(ROOT, 'apps/comfort', image)) ? image : null,
       teleportable: item.teleportable ?? !['copper', 'tin', 'bronze', 'iron', 'silver', 'black-metal', 'flametal', 'copper-ore', 'tin-ore', 'scrap-iron', 'silver-ore', 'black-metal-scrap', 'flametal-ore', 'iron-pit'].includes(id) }];
   }));

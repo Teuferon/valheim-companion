@@ -222,7 +222,16 @@ function verifiedTips(pages) {
   ];
   return definitions.map(([id, title, evidence, text]) => {
     if (!evidence.test(pages[title]?.wikitext ?? '')) throw new Error(`Unverified tip: ${id}`);
-    return { id, text, source: wiki(title) };
+    const counted = {
+      range: ['Keep furniture within {count} meters of your character.', 10],
+      shelter: ['Without shelter, sitting near a fire caps comfort at {count}.', 1],
+      hearth: ['Hearth gives its extra comfort only within {count} meters.', 8],
+      dungeon: ['A Campfire in a dungeon entrance can restore a {count}-minute Rested effect.', 10],
+      rested: ['Rested lasts {count} minutes plus your comfort level.', 7],
+      wait: ['Rest for {count} uninterrupted seconds, away from hostile creatures, to gain Rested.', 20],
+    }[id];
+    const biome = { hearth: 'swamp', tub: 'plains', wet: 'plains' }[id] ?? 'meadows';
+    return { id, text: counted?.[0] ?? text, ...(counted ? { count: counted[1] } : {}), biome, source: wiki(title) };
   });
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) await fetchComfort();
