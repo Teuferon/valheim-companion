@@ -284,3 +284,29 @@ Ověřeno 6. 10. 2026. Infobox zbraně rychlost útoku nemá. Je ve **vykreslen�
 - Jediný zdroj pořadí v Bestiary a Armouru je `scripts/wiki/biomes.mjs`. Test hlídá, že pořadí sedí s `apps/damage-calculator/src/data/biomes.ts`.
 - Důsledek: v Oceánu (Serpent) se doporučuje jen výbava do Oceánu (Black Forest + Chitin), ne železo ze Swampu. Stejně to dělá kalkulačka.
 - § 2 výše (původní tabulka s Oceánem za Swampem) tímto neplatí.
+
+## 15. Jazyky v celém Companionu (VC-16 až VC-19, 6. 10. 2026)
+
+- **Princip převzatý z Runopisu** (`apps/signs/lib/i18n.ts`, `hooks/use-language.ts`):
+  - 13 jazyků: en, cs, de, es, fr, pt, zh, hi, ar, bn, ru, ja, id
+  - volba „auto“ podle `navigator.languages` (základ kódu, fallback en)
+  - katalog zpráv `messages.json` = `{ "<anglický text>": { "<locale>": "<překlad>" } }`, chybějící překlad → angličtina, placeholdery `{name}`
+  - arabština `dir="rtl"`
+- **Jedna volba pro všechny sekce:** sdílený klíč `localStorage` **`vc.language`** (hodnota kód jazyka nebo `auto`). Při prvním čtení se převezme stará hodnota `runopis.language`. Změna v jedné záložce se projeví v ostatních (událost `storage`).
+- **Sdílený kód:** `shared/i18n/`
+  - `languages.json`: seznam jazyků
+  - `core.js`: klasický skript bez importů pro statické sekce, `globalThis.VCI18n`
+  - `core.ts`: pro React sekce, čte stejný `languages.json`
+  - React sekce (signs, damage-calculator) ho importují relativně. Vite musí mít povolený přístup ke složce `shared` (`server.fs.allow`) a Docker stage musí kopírovat i `shared/`.
+- **Přepínač jazyka:** stejný `<select>` vpravo nahoře v každé sekci i v rozcestníku: „Auto (browser)“ + 13 jazyků v jejich vlastním názvu.
+- **Co se překládá:**
+  - celé UI (nadpisy, tlačítka, popisky, legenda, tooltipy, patička včetně Ko-fi textu), včetně názvů biomů a typů poškození jako termínů hry
+  - meta `description` a `og:` zůstávají anglicky (crawlery jazyk nevolí)
+- **Názvy z hry** (jednotky, zbraně, suroviny, brnění, biomy):
+  - z jazykových odkazů wiki (`action=parse&prop=langlinks`); ty dávají místní názvy z jazykových verzí wiki
+  - pokrytí je dobré pro cs, de, fr, ru, částečné pro pt (`pt-br`) a zh (`zh-tw`)
+  - pro ostatní jazyky zůstane anglický název
+  - ukládá se jako `names: { "<locale>": "…" }` u záznamu
+  - ⛔ názvy z hry se strojově nepřekládají
+- Popisy z wiki (odstavce o jednotkách a zbraních) zůstávají anglicky a UI to nikde neskrývá.
+- **Překlady UI** dělá agent. Termíny hry (Slash, Pierce, Blunt…, Meadows…) má překládat tak, jak je používá hra a jazykové wiki. Kde wiki má název, má přednost.
