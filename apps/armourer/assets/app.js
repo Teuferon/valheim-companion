@@ -408,9 +408,10 @@
       summary.appendChild(summaryLeft);
       summary.appendChild(summaryRight);
 
-      // Detail container (expanded in Step 2)
+      // Detail container
       const detailContainer = el('div', 'set-detail');
       detailContainer.setAttribute('inert', '');
+      let detailRendered = false;
 
       function toggleDetails() {
         const isOpen = !detailContainer.hasAttribute('inert');
@@ -418,11 +419,12 @@
           detailContainer.setAttribute('inert', '');
           toggleDetailsBtn.textContent = 'Details ▾';
         } else {
+          if (!detailRendered) {
+            renderSetDetail(armor, detailContainer, data);
+            detailRendered = true;
+          }
           detailContainer.removeAttribute('inert');
           toggleDetailsBtn.textContent = 'Details ▴';
-          // Dispatch event or call renderSetDetail in Step 2
-          const evt = new CustomEvent('va:open-detail', { detail: { armor, container: detailContainer } });
-          window.dispatchEvent(evt);
         }
       }
 
@@ -440,6 +442,283 @@
       card.appendChild(detailContainer);
 
       return card;
+    }
+
+    /**
+     * Render Set Detail (Pieces table, Upgrade costs, Set bonus)
+     */
+    function renderSetDetail(armor, container, data) {
+      container.textContent = '';
+
+      // --- 1. Pieces Table Section ---
+      const tableSection = el('div', 'detail-pieces-section');
+      const tableHeaderBar = el('div', 'table-header-bar');
+      const tableTitle = el('h4', 'detail-section-title', 'Pieces & Stats');
+
+      // Level switcher
+      const switcher = el('div', 'level-switcher');
+      const switcherLabel = el('span', 'level-switcher-label', 'Show level:');
+      switcher.appendChild(switcherLabel);
+
+      const levelPills = ['All', 'Q1', 'Q2', 'Q3', 'Q4'];
+      const pillBtns = [];
+
+      tableHeaderBar.appendChild(tableTitle);
+      tableHeaderBar.appendChild(switcher);
+      tableSection.appendChild(tableHeaderBar);
+
+      // Table scroll wrapper for mobile 360px
+      const tableWrapper = el('div', 'table-scroll-wrapper');
+      const table = el('table', 'pieces-table');
+      const thead = el('thead');
+      const headerTr = el('tr');
+
+      const thPiece = el('th', null, 'Piece');
+      const thSlot = el('th', null, 'Slot');
+      const thQ1 = el('th', 'th-quality', 'Q1');
+      thQ1.dataset.quality = '1';
+      const thQ2 = el('th', 'th-quality', 'Q2');
+      thQ2.dataset.quality = '2';
+      const thQ3 = el('th', 'th-quality', 'Q3');
+      thQ3.dataset.quality = '3';
+      const thQ4 = el('th', 'th-quality', 'Q4');
+      thQ4.dataset.quality = '4';
+      const thWeight = el('th', null, 'Weight');
+      const thSpeed = el('th', null, 'Speed');
+      const thResist = el('th', null, 'Resistances');
+      const thAction = el('th', null, 'Action');
+
+      headerTr.appendChild(thPiece);
+      headerTr.appendChild(thSlot);
+      headerTr.appendChild(thQ1);
+      headerTr.appendChild(thQ2);
+      headerTr.appendChild(thQ3);
+      headerTr.appendChild(thQ4);
+      headerTr.appendChild(thWeight);
+      headerTr.appendChild(thSpeed);
+      headerTr.appendChild(thResist);
+      headerTr.appendChild(thAction);
+      thead.appendChild(headerTr);
+      table.appendChild(thead);
+
+      const tbody = el('tbody');
+      const qualityTds = [];
+
+      armor.pieces.forEach(piece => {
+        const tr = el('tr');
+
+        // Piece cell (icon + name)
+        const tdPiece = el('td');
+        const pieceCell = el('div', 'piece-cell-name');
+        if (piece.image) {
+          const thumb = el('img', 'piece-thumb');
+          thumb.src = piece.image;
+          thumb.alt = piece.name;
+          thumb.loading = 'lazy';
+          pieceCell.appendChild(thumb);
+        }
+        const nameText = el('span', 'piece-name-text', piece.name);
+        pieceCell.appendChild(nameText);
+        tdPiece.appendChild(pieceCell);
+
+        // Slot cell
+        const tdSlot = el('td');
+        const slotBadge = el('span', 'badge badge-slot', piece.slot || 'gear');
+        tdSlot.appendChild(slotBadge);
+
+        // Quality 1-4 armor cells
+        const qLevels = new Map();
+        (piece.levels || []).forEach(l => qLevels.set(l.quality, l.armor));
+
+        const tdQ1 = el('td', 'td-quality', qLevels.has(1) ? String(qLevels.get(1)) : '—');
+        tdQ1.dataset.quality = '1';
+        qualityTds.push(tdQ1);
+
+        const tdQ2 = el('td', 'td-quality', qLevels.has(2) ? String(qLevels.get(2)) : '—');
+        tdQ2.dataset.quality = '2';
+        qualityTds.push(tdQ2);
+
+        const tdQ3 = el('td', 'td-quality', qLevels.has(3) ? String(qLevels.get(3)) : '—');
+        tdQ3.dataset.quality = '3';
+        qualityTds.push(tdQ3);
+
+        const tdQ4 = el('td', 'td-quality', qLevels.has(4) ? String(qLevels.get(4)) : '—');
+        tdQ4.dataset.quality = '4';
+        qualityTds.push(tdQ4);
+
+        // Weight
+        const tdWeight = el('td', null, piece.weight !== undefined && piece.weight !== null ? String(piece.weight) : '—');
+
+        // Movement Speed
+        const tdSpeed = el('td');
+        if (piece.movementSpeed) {
+          const prefix = piece.movementSpeed > 0 ? '+' : '';
+          tdSpeed.textContent = prefix + piece.movementSpeed + '%';
+        } else {
+          tdSpeed.textContent = '0%';
+        }
+
+        // Resistances
+        const tdResist = el('td');
+        if (piece.resistances && piece.resistances.length > 0) {
+          piece.resistances.forEach(res => {
+            const resBadge = el('span', 'badge badge-source', res);
+            tdResist.appendChild(resBadge);
+          });
+        } else {
+          tdResist.textContent = '—';
+        }
+
+        // Add Piece Action
+        const tdAction = el('td');
+        const addPieceBtn = el('button', 'action-btn action-btn-sm', '+ Add piece');
+        addPieceBtn.type = 'button';
+        addPieceBtn.addEventListener('click', function () {
+          const evt = new CustomEvent('va:add-piece', { detail: { piece, armor } });
+          window.dispatchEvent(evt);
+        });
+        tdAction.appendChild(addPieceBtn);
+
+        tr.appendChild(tdPiece);
+        tr.appendChild(tdSlot);
+        tr.appendChild(tdQ1);
+        tr.appendChild(tdQ2);
+        tr.appendChild(tdQ3);
+        tr.appendChild(tdQ4);
+        tr.appendChild(tdWeight);
+        tr.appendChild(tdSpeed);
+        tr.appendChild(tdResist);
+        tr.appendChild(tdAction);
+        tbody.appendChild(tr);
+      });
+
+      table.appendChild(tbody);
+      tableWrapper.appendChild(table);
+      tableSection.appendChild(tableWrapper);
+      container.appendChild(tableSection);
+
+      // Level pill click handlers
+      const qThs = [thQ1, thQ2, thQ3, thQ4];
+      function setHighlightedQuality(selectedQ) {
+        pillBtns.forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.level === selectedQ);
+        });
+
+        qThs.forEach(th => {
+          th.classList.toggle('col-highlight', selectedQ !== 'all' && th.dataset.quality === selectedQ);
+        });
+        qualityTds.forEach(td => {
+          td.classList.toggle('col-highlight', selectedQ !== 'all' && td.dataset.quality === selectedQ);
+        });
+      }
+
+      levelPills.forEach(lvl => {
+        const btn = el('button', 'level-pill-btn', lvl);
+        btn.type = 'button';
+        btn.dataset.level = lvl === 'All' ? 'all' : lvl.slice(1);
+        if (lvl === 'All') btn.classList.add('active');
+
+        btn.addEventListener('click', function () {
+          setHighlightedQuality(btn.dataset.level);
+        });
+
+        pillBtns.push(btn);
+        switcher.appendChild(btn);
+      });
+
+      // --- 2. Crafting & Upgrade Costs Section ---
+      const costsSection = el('div', 'detail-costs-section');
+      const costsTitle = el('h4', 'detail-section-title', 'Crafting & Upgrade Costs');
+      costsSection.appendChild(costsTitle);
+
+      const costsGrid = el('div', 'costs-grid');
+      let hasAnyCost = false;
+
+      armor.pieces.forEach(piece => {
+        (piece.levels || []).forEach(lvl => {
+          if (!lvl.materials || lvl.materials.length === 0) return;
+          hasAnyCost = true;
+
+          const costCard = el('div', 'cost-card');
+          const costHeader = el('div', 'cost-card-header');
+
+          const pieceName = el('span', 'cost-piece-name', piece.name + ' · Q' + lvl.quality + (lvl.quality === 1 ? ' (Craft)' : ' (Upgrade)'));
+          const stationName = piece.station || 'Station';
+          const stationText = lvl.stationLevel ? stationName + ' lvl ' + lvl.stationLevel : stationName;
+          const stationBadge = el('span', 'cost-station-badge', stationText);
+
+          costHeader.appendChild(pieceName);
+          costHeader.appendChild(stationBadge);
+          costCard.appendChild(costHeader);
+
+          const matsList = el('div', 'cost-materials-list');
+          lvl.materials.forEach(mat => {
+            const itemData = data.items && data.items[mat.item];
+            const matPill = el('div', 'cost-mat-pill');
+
+            if (itemData && itemData.image) {
+              const icon = el('img', 'cost-mat-icon');
+              icon.src = itemData.image;
+              icon.alt = itemData.name || mat.item;
+              icon.loading = 'lazy';
+              matPill.appendChild(icon);
+            }
+
+            const label = el('span', null, mat.amount + '× ' + (itemData ? itemData.name : mat.item));
+            matPill.appendChild(label);
+
+            if (mat.fuel) {
+              const fuelBadge = el('span', 'badge badge-fuel', 'fuel');
+              matPill.appendChild(fuelBadge);
+            }
+
+            matsList.appendChild(matPill);
+          });
+
+          costCard.appendChild(matsList);
+          costsGrid.appendChild(costCard);
+        });
+      });
+
+      if (hasAnyCost) {
+        costsSection.appendChild(costsGrid);
+        container.appendChild(costsSection);
+      } else {
+        const noCostNotice = el('p', 'cart-empty-msg', 'No crafting recipes (obtained via merchant, quests or events).');
+        costsSection.appendChild(noCostNotice);
+        container.appendChild(costsSection);
+      }
+
+      // --- 3. Set Bonus Section ---
+      if (armor.setBonus) {
+        const bonusBox = el('div', 'set-bonus-box');
+        const bonusHeader = el('div', 'set-bonus-title');
+        const pieceWord = armor.setBonus.pieces === 1 ? 'piece' : 'pieces';
+        bonusHeader.textContent = 'Set Bonus: ' + armor.setBonus.name + ' (' + armor.setBonus.pieces + ' ' + pieceWord + ')';
+        bonusBox.appendChild(bonusHeader);
+
+        if (armor.setBonus.effects && armor.setBonus.effects.length > 0) {
+          const effectsUl = el('ul', 'set-bonus-effects');
+          armor.setBonus.effects.forEach(eff => {
+            const li = el('li', null, eff);
+            effectsUl.appendChild(li);
+          });
+          bonusBox.appendChild(effectsUl);
+        }
+
+        container.appendChild(bonusBox);
+      }
+
+      // --- 4. Add Full Set Action ---
+      const detailActions = el('div', 'controls-actions');
+      const addFullSetBtn = el('button', 'action-btn action-btn-primary', 'Add full set to shopping list');
+      addFullSetBtn.type = 'button';
+      addFullSetBtn.addEventListener('click', function () {
+        const evt = new CustomEvent('va:add-set', { detail: { armor } });
+        window.dispatchEvent(evt);
+      });
+      detailActions.appendChild(addFullSetBtn);
+      container.appendChild(detailActions);
     }
 
     renderCatalog();
