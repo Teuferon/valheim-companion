@@ -1260,3 +1260,12 @@ body {
     padding-top: 10px;
   }
 }
+
+/* Shared language control and contextual material explanations. */
+.language-picker { display: flex; justify-content: flex-end; margin-bottom: .75rem; }
+.vc-language-picker { color: var(--text-primary, #eee); background: var(--bg-card, #20252b); border: 1px solid var(--border-color, #555); border-radius: 6px; padding: .4rem; max-width: 100%; }
+.spoilers-active { color: #f4b942; }
+.cart-content .controls-toggles { display: block; }
+.raw-materials-help { font-size: .8rem; line-height: 1.4; color: var(--text-muted, #a8adb5); margin: .4rem 0; }
+.toggle-control:has(input:disabled) { opacity: .6; cursor: default; }
+button.badge-source-locked { cursor: pointer; font: inherit; text-align: start; }

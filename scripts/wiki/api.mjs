@@ -177,6 +177,51 @@ export class MwApi {
     return out;
   }
 
+  // Requested English title -> supported local names. Continuations can split
+  // a page's links across responses; normalization and redirects are retained.
+  async getLangLinks(titles) {
+    const out = {};
+    const supported = new Set(['cs', 'de', 'fr', 'ru', 'es', 'ja', 'pt', 'zh', 'id', 'hi', 'bn', 'ar']);
+    const priority = { 'pt-br': 2, pt: 1, 'zh-cn': 3, zh: 2, 'zh-tw': 1 };
+    for (let i = 0; i < titles.length; i += BATCH_SIZE) {
+      const batch = titles.slice(i, i + BATCH_SIZE);
+      const pages = new Map();
+      const normalized = [];
+      const redirects = [];
+      let continuation;
+      do {
+        const body = await this.request({
+          action: 'query', prop: 'langlinks', lllimit: 'max',
+          titles: batch.join('|'), redirects: 1, format: 'json', formatversion: 2,
+          ...continuation,
+        });
+        normalized.push(...(body.query?.normalized ?? []));
+        redirects.push(...(body.query?.redirects ?? []));
+        for (const page of body.query?.pages ?? []) {
+          const links = pages.get(page.title) ?? [];
+          links.push(...(page.langlinks ?? []));
+          pages.set(page.title, links);
+        }
+        continuation = body.continue;
+      } while (continuation);
+      for (const requested of batch) {
+        const names = {};
+        const chosen = {};
+        for (const link of pages.get(resolveTitle(requested, normalized, redirects)) ?? []) {
+          const lang = link.lang === 'pt-br' ? 'pt' : /^zh-(cn|tw)$/.test(link.lang) ? 'zh' : link.lang;
+          if (!supported.has(lang)) continue;
+          const rank = priority[link.lang] ?? 1;
+          const text = link.title ?? link['*'];
+          if (!text || rank <= (chosen[lang] ?? 0)) continue;
+          names[lang] = cleanLocalizedName(text, requested);
+          chosen[lang] = rank;
+        }
+        out[requested] = names;
+      }
+    }
+    return out;
+  }
+
   // All member page titles of a category, following cmcontinue.
   async getCategory(name) {
     const titles = [];
@@ -257,3 +302,21 @@ export class MwApi {
 
 // Default client for the primary wiki (valheim.weirdgloop.org).
 export const api = new MwApi();
+
+// Keep game-name qualifiers only when the English name is also qualified.
+export function cleanLocalizedName(value, englishName) {
+  return String(value).replace(/\s*[（(][^()（）]*[)）]/g,
+    match => /[（(]/.test(englishName) ? match : '').replace(/_/g, ' ').trim();
+}
+
+export async function addLocalizedNames(entities, client = api) {
+  const titleOf = entity => entity.wiki
+    ? decodeURIComponent(entity.wiki.split('/w/')[1] ?? entity.name).replace(/_/g, ' ')
+    : entity.name;
+  const titles = [...new Set(entities.map(titleOf))].sort();
+  const links = await client.getLangLinks(titles);
+  for (const entity of entities) {
+    entity.names = Object.fromEntries(Object.entries(links[titleOf(entity)] ?? {})
+      .map(([lang, value]) => [lang, cleanLocalizedName(value, entity.name)]));
+  }
+}

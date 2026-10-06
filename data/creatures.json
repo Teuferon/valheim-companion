@@ -85,7 +85,13 @@
       "Spawn zones in Bog Swamp (limit 3)",
       "Spawn zones in Abomination Swamp (limit 3)"
     ],
-    "description": "Abominations are aggressive creatures found in the Swamps. They are large tree-like entities comprised of multiple branches and four sturdy roots, which it uses as legs to move"
+    "description": "Abominations are aggressive creatures found in the Swamps. They are large tree-like entities comprised of multiple branches and four sturdy roots, which it uses as legs to move",
+    "names": {
+      "cs": "Ohavnost",
+      "de": "Monstrosität",
+      "fr": "Abomination",
+      "ru": "Мерзость"
+    }
   },
   {
     "id": "anglerfish",
@@ -121,7 +127,13 @@
     "summon": null,
     "location": null,
     "spawns": [],
-    "description": "}} Anglerfish are coastal fish found offshore the Mistlands. They can be caught with a Fishing Rod using Misty Fishing Bait which can be crafted at the Food Preparation Table by combining 20 Fishing Bait and a Lox"
+    "description": "}} Anglerfish are coastal fish found offshore the Mistlands. They can be caught with a Fishing Rod using Misty Fishing Bait which can be crafted at the Food Preparation Table by combining 20 Fishing Bait and a Lox",
+    "names": {
+      "cs": "Ďas",
+      "de": "Seeteufel",
+      "fr": "Poisson-pêcheur",
+      "ru": "Удильщик"
+    }
   },
   {
     "id": "ash-crow",
@@ -161,7 +173,10 @@
     "summon": null,
     "location": "Ashlands",
     "spawns": [],
-    "description": "Ash crows are passive creatures found in Ashlands around Charred"
+    "description": "Ash crows are passive creatures found in Ashlands around Charred",
+    "names": {
+      "ru": "Пепельный ворон"
+    }
   },
   {
     "id": "ashlands-dvergr",
@@ -271,7 +286,10 @@
     "summon": null,
     "location": "Ashlands",
     "spawns": [],
-    "description": "Ashlands Dvergr are much stronger than their cousins Dvergr Rogues, their status can be compared to two-star Dvergr rogues. These Dvergr are a separate clan from those found in the"
+    "description": "Ashlands Dvergr are much stronger than their cousins Dvergr Rogues, their status can be compared to two-star Dvergr rogues. These Dvergr are a separate clan from those found in the",
+    "names": {
+      "ru": "Дверг пепельных земель"
+    }
   },
   {
     "id": "asksvin",
@@ -427,7 +445,10 @@
       "Middle of the Ashlands during the daytime (limit 2)",
       "Middle of the Ashlands during the nighttime, despawn at dawn (limit 2)"
     ],
-    "description": "Asksvin are hostile, tameable, and fast rideable creatures found in the Ashlands. They look like huge, mutated"
+    "description": "Asksvin are hostile, tameable, and fast rideable creatures found in the Ashlands. They look like huge, mutated",
+    "names": {
+      "ru": "Пеплозавр"
+    }
   },
   {
     "id": "barka",
@@ -538,7 +559,8 @@
     "spawns": [
       "Anywhere in Deep North, during the day and night, alone (limit 1)"
     ],
-    "description": "The Barka is a hostile creature found in the Deep North. It resembles a frozen The"
+    "description": "The Barka is a hostile creature found in the Deep North. It resembles a frozen The",
+    "names": {}
   },
   {
     "id": "bat",
@@ -615,7 +637,11 @@
       "During \"You stirred the cauldron,\" event after killing Bonemass. (limit 10)",
       "Spawn zones in Bat Swamp (limit 10)"
     ],
-    "description": "Bats are aggressive creatures found in Mountains inside Frost Caves. They have a small body size and glossy black coat and wings, capable of"
+    "description": "Bats are aggressive creatures found in Mountains inside Frost Caves. They have a small body size and glossy black coat and wings, capable of",
+    "names": {
+      "cs": "Netopýr",
+      "ru": "Летучая мышь"
+    }
   },
   {
     "id": "bear",
@@ -786,7 +812,11 @@
       "Anywhere in Black Forests (limit 1)",
       "Inside Bear Cave"
     ],
-    "description": "Bears are aggressive creatures found in the Black Forest. They are bulky, furry beasts with large claws and"
+    "description": "Bears are aggressive creatures found in the Black Forest. They are bulky, furry beasts with large claws and",
+    "names": {
+      "cs": "Medvěd",
+      "ru": "Медведь"
+    }
   },
   {
     "id": "blob",
@@ -855,7 +885,13 @@
       "During \"A foul smell from the swamp\" event after defeating Bonemass (limit 5)",
       "When a Blob bomb Poison is used (limit -)"
     ],
-    "description": "Blobs are aggressive creatures found in the Swamps. They are large, gelatinous piles of sentient ooze that emit poisonous green"
+    "description": "Blobs are aggressive creatures found in the Swamps. They are large, gelatinous piles of sentient ooze that emit poisonous green",
+    "names": {
+      "cs": "Slizoun",
+      "de": "Schleimling",
+      "fr": "Blob",
+      "ru": "Сгустень"
+    }
   },
   {
     "id": "boar",
@@ -947,7 +983,14 @@
       "During \"Eikthyr rallies the creatures of the forest,\" event before defeating Eikthyr (limit 2)",
       "Spawn zones in Peaceful Meadows (limit 15)"
     ],
-    "description": "Boars are wild creatures found throughout Valheim, known for their aggressive behavior when approached. They can be identified by their status tags indicating whether they are 'wild' or 'tame,' along with their emotional states, such as 'hungry,' 'happy,' 'frightened,' or 'acclimatizing.' Understanding these states can help players interact with them"
+    "description": "Boars are wild creatures found throughout Valheim, known for their aggressive behavior when approached. They can be identified by their status tags indicating whether they are 'wild' or 'tame,' along with their emotional states, such as 'hungry,' 'happy,' 'frightened,' or 'acclimatizing.' Understanding these states can help players interact with them",
+    "names": {
+      "cs": "Kanec",
+      "de": "Wildschwein",
+      "fr": "Sanglier",
+      "pt": "Javali",
+      "ru": "Кабан"
+    }
   },
   {
     "id": "bonemass",
@@ -1021,7 +1064,13 @@
     "summon": "Withered Bone x10",
     "location": "* Swamp",
     "spawns": [],
-    "description": "Bonemass is the third boss. He appears as a gigantic humanoid mass comprised of toxic ooze, mud and skeletal remains, likely absorbed from nearby tombs situated close to his"
+    "description": "Bonemass is the third boss. He appears as a gigantic humanoid mass comprised of toxic ooze, mud and skeletal remains, likely absorbed from nearby tombs situated close to his",
+    "names": {
+      "cs": "Bonemass",
+      "de": "Knochenwanst",
+      "fr": "Masse d'Os",
+      "ru": "Масса костей"
+    }
   },
   {
     "id": "bonemaw",
@@ -1093,7 +1142,10 @@
     "spawns": [
       "Ashlands Ocean (limit 1)"
     ],
-    "description": "Bonemaw are aggressive creatures found in the boiling waters surrounding the Ashlands landmass. They pose a significant danger when sailing to the"
+    "description": "Bonemaw are aggressive creatures found in the boiling waters surrounding the Ashlands landmass. They pose a significant danger when sailing to the",
+    "names": {
+      "ru": "Костепасть"
+    }
   },
   {
     "id": "brenna",
@@ -1160,7 +1212,13 @@
     "summon": null,
     "location": "Smouldering Tomb",
     "spawns": [],
-    "description": "Brenna is an aggressive miniboss found in the Black Forest inside Smouldering Tomb as well as during the \"She's hot on your tail!\" event. She is a burning Skeleton with charcoal black bones and fire aspects wielding a fiery version of"
+    "description": "Brenna is an aggressive miniboss found in the Black Forest inside Smouldering Tomb as well as during the \"She's hot on your tail!\" event. She is a burning Skeleton with charcoal black bones and fire aspects wielding a fiery version of",
+    "names": {
+      "cs": "Brenna",
+      "de": "Brenna",
+      "fr": "Brenna",
+      "ru": "Бренна"
+    }
   },
   {
     "id": "captive-fuling",
@@ -1309,7 +1367,8 @@
     "spawns": [
       "Spawn point in Mörkhalla"
     ],
-    "description": "Captive Fuling are creatures found in Mörkhalla."
+    "description": "Captive Fuling are creatures found in Mörkhalla.",
+    "names": {}
   },
   {
     "id": "charred-marksman",
@@ -1422,7 +1481,13 @@
       "Anywhere in the Meadows, Black Forests, Swamp, Mountains or Plains during the nighttime after defeating Fader, despawn at dawn (limit 3)",
       "During \"The undead army marches.\" before defeating Fader (limit 3)"
     ],
-    "description": "Charred Marksman are hostile ranged enemies found in the"
+    "description": "Charred Marksman are hostile ranged enemies found in the",
+    "names": {
+      "cs": "Sežehnutý střelec",
+      "de": "Verkohlter Scharfschütze",
+      "fr": "Archer calciné",
+      "ru": "Обугленный лучник"
+    }
   },
   {
     "id": "charred-twitcher",
@@ -1534,7 +1599,13 @@
       "During \"The undead army marches.\" event before defeating Fader (limit 3)",
       "During \"The dead have been summoned.\" event (summoned by Monument of Torment) before defeating Fader (limit none)"
     ],
-    "description": "Charred Twitchers are hostile enemies found in the Ashlands. These guys are always twitching, as their name"
+    "description": "Charred Twitchers are hostile enemies found in the Ashlands. These guys are always twitching, as their name",
+    "names": {
+      "cs": "Sežehnutý trhavec",
+      "de": "Verkohlter Zuckender",
+      "fr": "Forcené calciné",
+      "ru": "Обугленный дергун"
+    }
   },
   {
     "id": "charred-warlock",
@@ -1633,7 +1704,13 @@
       "Randomly from Effigy of Malice inside Charred Fortress when a player is nearby (limit none)",
       "Randomly from Monument of Torment (Elite) when a player is nearby (limit none)"
     ],
-    "description": "Charred Warlocks are hostile enemies found in the"
+    "description": "Charred Warlocks are hostile enemies found in the",
+    "names": {
+      "cs": "Sežehnutý čaroděj",
+      "de": "Verkohlter Hexer",
+      "fr": "Sorcier calciné",
+      "ru": "Обугленный чернокнижник"
+    }
   },
   {
     "id": "charred-warrior",
@@ -1795,7 +1872,13 @@
       "During \"The undead army marches.\" event before defeating Fader (limit 3)",
       "During \"The dead have been summoned.\" event (summoned by Monument of Torment) before defeating Fader (limit none)"
     ],
-    "description": "Charred Warriors are hostile enemies found in the"
+    "description": "Charred Warriors are hostile enemies found in the",
+    "names": {
+      "cs": "Sežehnutý válečník",
+      "de": "Verkohlter Krieger",
+      "fr": "Guerrier calciné",
+      "ru": "Обугленный воин"
+    }
   },
   {
     "id": "chicken",
@@ -1838,7 +1921,12 @@
     "summon": null,
     "location": null,
     "spawns": [],
-    "description": "Chicken are passive creatures that can only appear when an Egg hatches. They are the infant stage of"
+    "description": "Chicken are passive creatures that can only appear when an Egg hatches. They are the infant stage of",
+    "names": {
+      "cs": "Kuře",
+      "de": "Huhn",
+      "ru": "Цыпленок"
+    }
   },
   {
     "id": "coral-cod",
@@ -1874,7 +1962,13 @@
     "summon": null,
     "location": null,
     "spawns": [],
-    "description": "Coral cod are passive creatures (fish) found in the waters of the Ocean biome. The schools can be in the middle of the Ocean or sometimes near other biomes'"
+    "description": "Coral cod are passive creatures (fish) found in the waters of the Ocean biome. The schools can be in the middle of the Ocean or sometimes near other biomes'",
+    "names": {
+      "cs": "Korálová Treska",
+      "de": "Korallenbarsch",
+      "fr": "Vieille de corail",
+      "ru": "Коралловая треска"
+    }
   },
   {
     "id": "crow",
@@ -1917,7 +2011,12 @@
     "summon": null,
     "location": "Black Forest",
     "spawns": [],
-    "description": "Crows are passive creatures found in Black Forests. They are small birds with long legs and heavy, straight bills. These birds are entirely black, including their legs and"
+    "description": "Crows are passive creatures found in Black Forests. They are small birds with long legs and heavy, straight bills. These birds are entirely black, including their legs and",
+    "names": {
+      "cs": "Vrána",
+      "de": "Krähe",
+      "ru": "Ворон"
+    }
   },
   {
     "id": "cultist",
@@ -1992,7 +2091,12 @@
     "spawns": [
       "Rare spawn point in Frost Caves."
     ],
-    "description": "Cultists are aggressive creatures found in Mountains inside Frost Caves. Their appearance is distinctly werewolf-like, however, unlike Fenrings and Ulvs, they wear tattered red hooded"
+    "description": "Cultists are aggressive creatures found in Mountains inside Frost Caves. Their appearance is distinctly werewolf-like, however, unlike Fenrings and Ulvs, they wear tattered red hooded",
+    "names": {
+      "cs": "Kultista",
+      "de": "Kultist",
+      "ru": "Культист"
+    }
   },
   {
     "id": "deathsquito",
@@ -2049,7 +2153,11 @@
       "Anywhere in Plains (limit 3)",
       "Spawn zones in Death Plains (limit 5)"
     ],
-    "description": "Deathsquitos are aggressive creatures found in Plains. They are, as their name suggests, enlarged mosquito-type bugs that give off a loud buzzing"
+    "description": "Deathsquitos are aggressive creatures found in Plains. They are, as their name suggests, enlarged mosquito-type bugs that give off a loud buzzing",
+    "names": {
+      "de": "Todeskito",
+      "ru": "Смертожал"
+    }
   },
   {
     "id": "deer",
@@ -2116,7 +2224,14 @@
       "Spawn zones in Peaceful Meadows (limit 10)",
       "Spawn zones in Birch Meadows (limit 5)"
     ],
-    "description": "Deer are passive creatures found in Meadows and Black Forests. They are four-legged, reddish-brown animals that are extremely timid and completely"
+    "description": "Deer are passive creatures found in Meadows and Black Forests. They are four-legged, reddish-brown animals that are extremely timid and completely",
+    "names": {
+      "cs": "Jelen",
+      "de": "Hirsch",
+      "fr": "Cerf",
+      "pt": "Cervo",
+      "ru": "Олень"
+    }
   },
   {
     "id": "drake",
@@ -2179,7 +2294,12 @@
       "During \"A cold wind blows from the mountains\" event before defeating Moder (limit 3)",
       "Spawn zones in Drake Mountain (limit 4)"
     ],
-    "description": "Drakes are aggressive creatures found in the Mountains. They are slender, legless frost dragons with ice-blue scales and four horns. Drakes are the male offspring of their mother,"
+    "description": "Drakes are aggressive creatures found in the Mountains. They are slender, legless frost dragons with ice-blue scales and four horns. Drakes are the male offspring of their mother,",
+    "names": {
+      "cs": "Drak",
+      "fr": "Drac",
+      "ru": "Дракон"
+    }
   },
   {
     "id": "draugr",
@@ -2299,7 +2419,13 @@
       "During \"A foul smell from the swamp\" event before defeating Bonemass (limit 3)",
       "Spawn zones in Dark Meadows (limit 2)"
     ],
-    "description": "Draugr are aggressive creatures found in Swamps and in Draugr villages, Sunken Crypts and sometimes Mountain towers. They are ancient undead Vikings that have since become bloated in"
+    "description": "Draugr are aggressive creatures found in Swamps and in Draugr villages, Sunken Crypts and sometimes Mountain towers. They are ancient undead Vikings that have since become bloated in",
+    "names": {
+      "cs": "Draugr",
+      "de": "Draugr",
+      "fr": "Draugr",
+      "ru": "Драугр"
+    }
   },
   {
     "id": "draugr-elite",
@@ -2388,7 +2514,13 @@
       "Rare spawn point near Inverted Tower structures",
       "Rarely from Body Piles in Swamps, Sunken Crypts or Mountain towers (limit 2)"
     ],
-    "description": "Draugr Elite are aggressive creatures found in the Swamps. They are ancient undead Vikings that have since become bloated in appearance. They are stronger than normal Draugr, but always appear equipped with a melee weapon. They have glowing purple eyes and are relatively rare compared to their weaker"
+    "description": "Draugr Elite are aggressive creatures found in the Swamps. They are ancient undead Vikings that have since become bloated in appearance. They are stronger than normal Draugr, but always appear equipped with a melee weapon. They have glowing purple eyes and are relatively rare compared to their weaker",
+    "names": {
+      "cs": "Elitní Draugr",
+      "de": "Elite Draugr",
+      "fr": "Élite Draugr",
+      "ru": "Элитный драугр"
+    }
   },
   {
     "id": "dvergr-mage",
@@ -2597,7 +2729,11 @@
     "spawns": [
       "Common spawn point in Dvergr forts and structures"
     ],
-    "description": "Dvergr Mages are neutral creatures found in the Mistlands around Dvergr settlements. They resemble short, blue humanoids with light blue eyes and silver hair, and they carry Magic staves. There are three different types of Dvergr Mage, which can be differentiated by the color of their staff and robe. Unlike Dvergr Rogues, mages are exclusively found around Dvergr settlements and other structures"
+    "description": "Dvergr Mages are neutral creatures found in the Mistlands around Dvergr settlements. They resemble short, blue humanoids with light blue eyes and silver hair, and they carry Magic staves. There are three different types of Dvergr Mage, which can be differentiated by the color of their staff and robe. Unlike Dvergr Rogues, mages are exclusively found around Dvergr settlements and other structures",
+    "names": {
+      "cs": "Dvergský Mág",
+      "ru": "Дверг-маг"
+    }
   },
   {
     "id": "dvergr-rogue",
@@ -2708,7 +2844,11 @@
       "Middle of the Mistlands during the day time (limit 2)",
       "Common spawn point in Dvergr forts and structures"
     ],
-    "description": "Dvergr Rogues are neutral creatures found in the Mistlands, especially around Dvergr settlements. They resemble short, blue humanoids with light blue eyes and silver hair carrying an Arbalest. Rogues that spawn at Dvergr structures will often be accompanied by a mix of other rogues and/or Dvergr Mages; unlike mages, however, rogues may spawn (and respawn) anywhere in the"
+    "description": "Dvergr Rogues are neutral creatures found in the Mistlands, especially around Dvergr settlements. They resemble short, blue humanoids with light blue eyes and silver hair carrying an Arbalest. Rogues that spawn at Dvergr structures will often be accompanied by a mix of other rogues and/or Dvergr Mages; unlike mages, however, rogues may spawn (and respawn) anywhere in the",
+    "names": {
+      "cs": "Dvergský Tulák",
+      "ru": "Дверг-разбойник"
+    }
   },
   {
     "id": "eikthyr",
@@ -2783,7 +2923,13 @@
     "summon": "Deer Trophy x2",
     "location": "* Meadows",
     "spawns": [],
-    "description": "Eikthyr is the first boss. He appears as an abnormally large stag with iron chains wrapped around his electrified red"
+    "description": "Eikthyr is the first boss. He appears as an abnormally large stag with iron chains wrapped around his electrified red",
+    "names": {
+      "cs": "Eikthyr",
+      "de": "Eikthyr",
+      "fr": "Eikthyr",
+      "ru": "Эйктюр"
+    }
   },
   {
     "id": "elaking",
@@ -2936,7 +3082,8 @@
       "Anywhere in Deep North during the night (limit 2)",
       "From Wardrobe Shaft spawner in Winding Tunnels (limit 5 near)"
     ],
-    "description": "The Elaking is a hostile creature that roams around the Deep North at night, and is home to the Winding"
+    "description": "The Elaking is a hostile creature that roams around the Deep North at night, and is home to the Winding",
+    "names": {}
   },
   {
     "id": "eyeless-one",
@@ -3052,7 +3199,8 @@
     "spawns": [
       "Spawn point in Winding Tunnels (limit 1)"
     ],
-    "description": "Eyeless Ones are hostile creatures found in the Winding Tunnels below ground in the Deep"
+    "description": "Eyeless Ones are hostile creatures found in the Winding Tunnels below ground in the Deep",
+    "names": {}
   },
   {
     "id": "fader",
@@ -3175,7 +3323,10 @@
     "summon": "Bell x3",
     "location": "Ashlands",
     "spawns": [],
-    "description": "Fader is the seventh boss. He appears as a charred, skeletal dragon which emanates a green glow from orifices and gaps in his"
+    "description": "Fader is the seventh boss. He appears as a charred, skeletal dragon which emanates a green glow from orifices and gaps in his",
+    "names": {
+      "ru": "Прародитель"
+    }
   },
   {
     "id": "fallen-valkyrie",
@@ -3254,7 +3405,13 @@
     "spawns": [
       "Ashlands, both day and night (limit 1)"
     ],
-    "description": "The Fallen Valkyrie is a hostile enemy found in the Ashlands. They often appear hovering some distance above ground, and periodically fly to nearby locations, as if scouting. They resemble Valkyries who brings the players to Valheim, but showing noticeable signs of"
+    "description": "The Fallen Valkyrie is a hostile enemy found in the Ashlands. They often appear hovering some distance above ground, and periodically fly to nearby locations, as if scouting. They resemble Valkyries who brings the players to Valheim, but showing noticeable signs of",
+    "names": {
+      "cs": "Padlá valkýra",
+      "de": "Gefallene Walküre",
+      "fr": "Valkyrie déchue",
+      "ru": "Падшая валькирия"
+    }
   },
   {
     "id": "fallen-warrior",
@@ -3380,7 +3537,8 @@
     "summon": null,
     "location": "Memorial Site",
     "spawns": [],
-    "description": "Fallen Warriors are aggressive creatures found in the Deep"
+    "description": "Fallen Warriors are aggressive creatures found in the Deep",
+    "names": {}
   },
   {
     "id": "fenring",
@@ -3445,7 +3603,11 @@
     "spawns": [
       "Middle of the Mountains during the nighttime, despawn at dawn (limit 2)"
     ],
-    "description": "Fenrings are aggressive creatures found in the Mountains during the night. Their appearance is distinctly werewolf-like, standing on two legs with a black fur coat. Unlike their Frost cave counterparts, Fenrings only walk on their"
+    "description": "Fenrings are aggressive creatures found in the Mountains during the night. Their appearance is distinctly werewolf-like, standing on two legs with a black fur coat. Unlike their Frost cave counterparts, Fenrings only walk on their",
+    "names": {
+      "fr": "Fenring",
+      "ru": "Фенринг"
+    }
   },
   {
     "id": "frysling",
@@ -3501,7 +3663,8 @@
     "summon": null,
     "location": null,
     "spawns": [],
-    "description": "Fryslings are hostile Deep North creatures that attack from range by throwing snowballs. They drop Frostcores, but in the current game version no location or dungeon places Frysling spawners, so they do not appear in normal play; Frostcores are instead found hanging in the Winding"
+    "description": "Fryslings are hostile Deep North creatures that attack from range by throwing snowballs. They drop Frostcores, but in the current game version no location or dungeon places Frysling spawners, so they do not appear in normal play; Frostcores are instead found hanging in the Winding",
+    "names": {}
   },
   {
     "id": "fuling",
@@ -3663,7 +3826,12 @@
       "During \"They were bros, man.\" event (limit 8)",
       "Spawn zones in Goblin Plains (limit 5)"
     ],
-    "description": "Fulings are aggressive creatures found in Plains, especially within Fuling Villages. They resemble small, goblin-like beings that appear to possess their own tribalistic culture. It is implied through Runestones and totems that they worship Yagluth, a long dead"
+    "description": "Fulings are aggressive creatures found in Plains, especially within Fuling Villages. They resemble small, goblin-like beings that appear to possess their own tribalistic culture. It is implied through Runestones and totems that they worship Yagluth, a long dead",
+    "names": {
+      "de": "Fuling",
+      "fr": "Gobelin",
+      "ru": "Фулинг"
+    }
   },
   {
     "id": "fuling-berserker",
@@ -3788,7 +3956,11 @@
       "During \"The horde is attacking!\" event (limit 2)",
       "During \"They were bros, man.\" event (limit 2)"
     ],
-    "description": "Fuling Berserkers are aggressive creatures found in Plains guarding Fuling Villages and Stonehenges. They are large, strong goblin-like beings that appear to possess their own tribalistic culture. It is implied through runestones and totems that they worship Yagluth, a long dead"
+    "description": "Fuling Berserkers are aggressive creatures found in Plains guarding Fuling Villages and Stonehenges. They are large, strong goblin-like beings that appear to possess their own tribalistic culture. It is implied through runestones and totems that they worship Yagluth, a long dead",
+    "names": {
+      "fr": "Berserker Gobelin",
+      "ru": "Фулинг-берсерк"
+    }
   },
   {
     "id": "fuling-shaman",
@@ -3862,7 +4034,12 @@
       "Uncommon spawn point in Fuling Villages",
       "During \"The horde is attacking\" event (limit 1)"
     ],
-    "description": "Fuling shamans are aggressive creatures found in Plains occupying Fuling Villages. They are ritualistic, goblin-like beings that appear to possess their own tribalistic culture. It is implied through runestones and totems that they worship Yagluth, a long dead"
+    "description": "Fuling shamans are aggressive creatures found in Plains occupying Fuling Villages. They are ritualistic, goblin-like beings that appear to possess their own tribalistic culture. It is implied through runestones and totems that they worship Yagluth, a long dead",
+    "names": {
+      "de": "Fuling Schamane",
+      "fr": "Chaman Gobelin",
+      "ru": "Фулинг-шаман"
+    }
   },
   {
     "id": "gammeltroll",
@@ -3959,7 +4136,8 @@
     "spawns": [
       "Anywhere in Deep North above altitude 10, during the day and night, alone (limit 1)"
     ],
-    "description": "Gammeltrolls are huge hostile creatures that roam around the Deep North. They are elder Trolls, the largest creatures in all of"
+    "description": "Gammeltrolls are huge hostile creatures that roam around the Deep North. They are elder Trolls, the largest creatures in all of",
+    "names": {}
   },
   {
     "id": "geirrhafa",
@@ -4040,7 +4218,11 @@
     "summon": null,
     "location": "Howling Cavern",
     "spawns": [],
-    "description": "Geirrhafa is an aggressive miniboss found in Mountains inside Howling Cavern. He looks exactly like a Cultist, but his fur is white and his cloak is black with red"
+    "description": "Geirrhafa is an aggressive miniboss found in Mountains inside Howling Cavern. He looks exactly like a Cultist, but his fur is white and his cloak is black with red",
+    "names": {
+      "de": "Geirrhafa",
+      "ru": "Гейрафа"
+    }
   },
   {
     "id": "ghost",
@@ -4101,7 +4283,13 @@
       "During \"You feel a chill down your spine...\" event after defeating Bonemass (limit 3)",
       "Uncommon spawn point in Smouldering Tomb"
     ],
-    "description": "Ghosts are aggressive creatures found in Black Forests within Burial Chambers, and as part of \"You feel a chill down your spine...\" raid"
+    "description": "Ghosts are aggressive creatures found in Black Forests within Burial Chambers, and as part of \"You feel a chill down your spine...\" raid",
+    "names": {
+      "cs": "Duch",
+      "de": "Geist",
+      "fr": "Fantôme",
+      "ru": "Дух"
+    }
   },
   {
     "id": "giant-herring",
@@ -4137,7 +4325,13 @@
     "summon": null,
     "location": null,
     "spawns": [],
-    "description": "Giant herring are passive creatures (fish) found in the waters just offshore of the Swamp"
+    "description": "Giant herring are passive creatures (fish) found in the waters just offshore of the Swamp",
+    "names": {
+      "cs": "Obří Sleď",
+      "de": "Riesenhering",
+      "fr": "Guinée saumon",
+      "ru": "Гигантская сельдь"
+    }
   },
   {
     "id": "gjall",
@@ -4264,7 +4458,12 @@
       "Middle of the Mistlands during the nighttime, despawn at dawn (limit 1)",
       "During \"What's up, Gjall!?\" event before defeating The Queen (limit 1)"
     ],
-    "description": "Gjall are massive flying, aggressive creatures found in the Mistlands. If there is one nearby, you will be alerted by a unique sound: a cross between a plane and an airhorn. Additionally, the mist in the immediate area around a Gjall will have a fiery orange"
+    "description": "Gjall are massive flying, aggressive creatures found in the Mistlands. If there is one nearby, you will be alerted by a unique sound: a cross between a plane and an airhorn. Additionally, the mist in the immediate area around a Gjall will have a fiery orange",
+    "names": {
+      "cs": "Gjall",
+      "de": "Gjall",
+      "ru": "Гьялль"
+    }
   },
   {
     "id": "greydwarf",
@@ -4383,7 +4582,13 @@
       "From Greydwarf Nests in Black Forest (limit 3)",
       "During \"The forest is moving...\" event before defeating The Elder (limit 6)"
     ],
-    "description": "Greydwarfs are aggressive creatures found in Black Forests. They are mossy tree-like beings and are twice as strong as their Greyling"
+    "description": "Greydwarfs are aggressive creatures found in Black Forests. They are mossy tree-like beings and are twice as strong as their Greyling",
+    "names": {
+      "cs": "Šedý trpaslík",
+      "de": "Grauzwerg",
+      "fr": "Naingris",
+      "ru": "Грейдворф"
+    }
   },
   {
     "id": "greydwarf-deep-north",
@@ -4495,7 +4700,8 @@
     "spawns": [
       "Anywhere in Deep North (limit 5)"
     ],
-    "description": "Greydwarf (Deep North) is a stronger version of Greydwarf found in Deep"
+    "description": "Greydwarf (Deep North) is a stronger version of Greydwarf found in Deep",
+    "names": {}
   },
   {
     "id": "greydwarf-brute",
@@ -4592,7 +4798,13 @@
       "During \"The forest is moving...\" event before defeating The Elder (limit 1)",
       "Spawn zones in Root Black Forest at night (limit 3)"
     ],
-    "description": "Greydwarf brutes are aggressive creatures found in Black Forests. They are large mossy tree-like beings and are substantially bigger and stronger than"
+    "description": "Greydwarf brutes are aggressive creatures found in Black Forests. They are large mossy tree-like beings and are substantially bigger and stronger than",
+    "names": {
+      "cs": "Šedý trpaslík surovec",
+      "de": "Grauzwergen Berserker",
+      "fr": "Brute Naingris",
+      "ru": "Грейдворф-дикарь"
+    }
   },
   {
     "id": "greydwarf-shaman",
@@ -4725,7 +4937,13 @@
       "Rarely from Greydwarf Nests in Black Forest (limit 3)",
       "During \"The forest is moving...\" event before defeating The Elder (limit 1)"
     ],
-    "description": "Greydwarf shamans are aggressive creatures found in Black Forests. They are mossy tree-like beings that act primarily as healers in patrols while also possessing the ability to cast a ranged poison"
+    "description": "Greydwarf shamans are aggressive creatures found in Black Forests. They are mossy tree-like beings that act primarily as healers in patrols while also possessing the ability to cast a ranged poison",
+    "names": {
+      "cs": "Šaman šedý trpaslík",
+      "de": "Grauzwergen Schamane",
+      "fr": "Chaman Naingris",
+      "ru": "Грейдворф-шаман"
+    }
   },
   {
     "id": "greydwarf-shaman-deep-north",
@@ -4846,7 +5064,8 @@
     "spawns": [
       "Anywhere in Deep North above altitude 10, during the day and night, in groups of two to four (limit 1)"
     ],
-    "description": "The Greydwarf Shaman of the Deep North is a hostile creature, a Deep North variant of the Greydwarf"
+    "description": "The Greydwarf Shaman of the Deep North is a hostile creature, a Deep North variant of the Greydwarf",
+    "names": {}
   },
   {
     "id": "greyling",
@@ -4901,7 +5120,13 @@
       "Anywhere in forests of Meadows (limit 2)",
       "During \"The forest is moving...\" event before defeating The Elder (limit 4)"
     ],
-    "description": "Greylings are aggressive creatures found in Meadows. They are mossy tree-like beings and are substantially weaker than their Greydwarf"
+    "description": "Greylings are aggressive creatures found in Meadows. They are mossy tree-like beings and are substantially weaker than their Greydwarf",
+    "names": {
+      "cs": "Greyling",
+      "de": "Gräuling",
+      "fr": "Bourgeon Naingris",
+      "ru": "Грейлинг"
+    }
   },
   {
     "id": "grouper",
@@ -4937,7 +5162,13 @@
     "summon": null,
     "location": null,
     "spawns": [],
-    "description": "Grouper are passive creatures (fish) found in the waters just offshore of the Plains"
+    "description": "Grouper are passive creatures (fish) found in the waters just offshore of the Plains",
+    "names": {
+      "cs": "Kanic",
+      "de": "Zackenbarsch",
+      "fr": "Mérou",
+      "ru": "Групер"
+    }
   },
   {
     "id": "growth",
@@ -5002,7 +5233,13 @@
       "Up to 9 spawn points in Tar Pits",
       "When a Blob bomb Tar is used (limit -)"
     ],
-    "description": "Growths are aggressive creatures found in Plains, specifically in Tar pits. They, like Blobs and Oozers, are large, gelatinous piles of sentient tar that emit poisonous black"
+    "description": "Growths are aggressive creatures found in Plains, specifically in Tar pits. They, like Blobs and Oozers, are large, gelatinous piles of sentient tar that emit poisonous black",
+    "names": {
+      "cs": "Dehtová bublina",
+      "de": "Düsterblob",
+      "fr": "Growth",
+      "ru": "Поросль"
+    }
   },
   {
     "id": "gull",
@@ -5048,7 +5285,13 @@
     "summon": null,
     "location": "* Meadows\n* Black Forest\n* Plains\n* Ocean",
     "spawns": [],
-    "description": "Gulls are passive creatures. They are small birds with long legs and heavy, straight bills. These birds are mainly white, with a yellow beak, gray wings and pinkish beige legs and"
+    "description": "Gulls are passive creatures. They are small birds with long legs and heavy, straight bills. These birds are mainly white, with a yellow beak, gray wings and pinkish beige legs and",
+    "names": {
+      "cs": "Racek",
+      "de": "Möwe",
+      "fr": "Mouette",
+      "ru": "Чайка"
+    }
   },
   {
     "id": "hare",
@@ -5112,7 +5355,13 @@
       "Anywhere in the Mistlands (limit 10)",
       "Spawn zones in Hare Mistlands (limit 20)"
     ],
-    "description": "s are passive creatures found in the Mistlands. Mistlands Hares appear much like real life Hares, except for their valuable scaly"
+    "description": "s are passive creatures found in the Mistlands. Mistlands Hares appear much like real life Hares, except for their valuable scaly",
+    "names": {
+      "cs": "Zajíc",
+      "de": "Hase",
+      "fr": "Lièvre",
+      "ru": "Заяц"
+    }
   },
   {
     "id": "hen",
@@ -5163,7 +5412,12 @@
     "summon": null,
     "location": null,
     "spawns": [],
-    "description": "Hen are passive creatures that can only appear when an Egg hatches. They are the grown stage of"
+    "description": "Hen are passive creatures that can only appear when an Egg hatches. They are the grown stage of",
+    "names": {
+      "cs": "Slepice",
+      "de": "Henne",
+      "ru": "Курица"
+    }
   },
   {
     "id": "hexen",
@@ -5285,7 +5539,8 @@
       "Daytime patrol in the Deep North that hunts the player, alone; requires the world key jotun_killed (limit 2)",
       "Jotun Invasions (limit 2)"
     ],
-    "description": "Hexen are aggressive creatures found in Mörkhalla and during Jotun Invasions. They fly around and cast damaging"
+    "description": "Hexen are aggressive creatures found in Mörkhalla and during Jotun Invasions. They fly around and cast damaging",
+    "names": {}
   },
   {
     "id": "imprisoned-dvergr",
@@ -5397,7 +5652,8 @@
     "spawns": [
       "Spawn point in Mörkhalla"
     ],
-    "description": "Imprisoned Dvergr are neutral Deep North creatures found in"
+    "description": "Imprisoned Dvergr are neutral Deep North creatures found in",
+    "names": {}
   },
   {
     "id": "kall-fimbulbringer",
@@ -5565,7 +5821,8 @@
     "summon": "Malicious Blood x3",
     "location": "Deep North",
     "spawns": [],
-    "description": "Kall Fimbulbringer is the eighth and final"
+    "description": "Kall Fimbulbringer is the eighth and final",
+    "names": {}
   },
   {
     "id": "krigen",
@@ -5968,7 +6225,8 @@
       "Daytime patrol in the Deep North that hunts the player, in groups of one to two, sword or greataxe only; requires the world key jotun_killed (limit 2)",
       "Jotun Invasions, in groups of one to two, sword or greataxe only (limit 4)"
     ],
-    "description": "Krigen are aggressive creatures found in Mörkhalla and during Jotun Invasions. They have three variants, wielding either a two-handed sword, two axes, or a two-handed"
+    "description": "Krigen are aggressive creatures found in Mörkhalla and during Jotun Invasions. They have three variants, wielding either a two-handed sword, two axes, or a two-handed",
+    "names": {}
   },
   {
     "id": "kvastur",
@@ -6027,7 +6285,10 @@
     "summon": null,
     "location": "Swamp",
     "spawns": [],
-    "description": "Kvastur is a neutral creature found in The Bog Witch hut. It defends itself if"
+    "description": "Kvastur is a neutral creature found in The Bog Witch hut. It defends itself if",
+    "names": {
+      "ru": "Квастур"
+    }
   },
   {
     "id": "lava-blob",
@@ -6090,7 +6351,10 @@
       "Middle of the Ashlands (limit 2)",
       "When a Blob bomb Lava is used (limit -)"
     ],
-    "description": "Lava Blobs are aggressive creatures found in the Ashlands. They are the lava counterparts of Blobs that can spread"
+    "description": "Lava Blobs are aggressive creatures found in the Ashlands. They are the lava counterparts of Blobs that can spread",
+    "names": {
+      "ru": "Лавовый сгустень"
+    }
   },
   {
     "id": "leech",
@@ -6183,7 +6447,13 @@
     "spawns": [
       "Anywhere in waters of Swamps (limit 10)"
     ],
-    "description": "Leeches are aggressive creatures found in Swamps. They are enlarged, aquatic annelid worms that feed off their victims by sucking their"
+    "description": "Leeches are aggressive creatures found in Swamps. They are enlarged, aquatic annelid worms that feed off their victims by sucking their",
+    "names": {
+      "cs": "Pijavice",
+      "de": "Schlundegel",
+      "fr": "Sangsue",
+      "ru": "Пиявка"
+    }
   },
   {
     "id": "leviathan",
@@ -6221,7 +6491,12 @@
     "summon": null,
     "location": "Ocean",
     "spawns": [],
-    "description": "Leviathans are passive creatures found in Oceans. They are massive rock-type beings that have a 10% chance of submerging each time their Abyssal Barnacles are"
+    "description": "Leviathans are passive creatures found in Oceans. They are massive rock-type beings that have a 10% chance of submerging each time their Abyssal Barnacles are",
+    "names": {
+      "cs": "Leviatan",
+      "de": "Leviathan",
+      "ru": "Левиафан"
+    }
   },
   {
     "id": "lord-reto",
@@ -6297,7 +6572,10 @@
     "summon": null,
     "location": "Ashlands",
     "spawns": [],
-    "description": "Lord Reto is a miniboss found in the Ashlands. He is part of the sub-quest to craft the"
+    "description": "Lord Reto is a miniboss found in the Ashlands. He is part of the sub-quest to craft the",
+    "names": {
+      "ru": "Владыка Рето"
+    }
   },
   {
     "id": "lox",
@@ -6370,7 +6648,13 @@
       "From breeding (limit 4 within 20 meters)",
       "Spawn zones in Lox Plains (limit 15)"
     ],
-    "description": "Lox are aggressive creatures found in Plains. They are an enlarged fusion of both a lizard and an ox, with shaggy brown hair and reptilian skin. Lox can be tamed which allows them to be bred and"
+    "description": "Lox are aggressive creatures found in Plains. They are an enlarged fusion of both a lizard and an ox, with shaggy brown hair and reptilian skin. Lox can be tamed which allows them to be bred and",
+    "names": {
+      "cs": "Lox",
+      "de": "Lox",
+      "fr": "Lox",
+      "ru": "Быкоящер"
+    }
   },
   {
     "id": "magmafish",
@@ -6406,7 +6690,13 @@
     "summon": null,
     "location": null,
     "spawns": [],
-    "description": "Magmafish are passive creatures (fish) found in the waters of the Ashlands"
+    "description": "Magmafish are passive creatures (fish) found in the waters of the Ashlands",
+    "names": {
+      "cs": "Magmaplavka",
+      "de": "Magmafisch",
+      "fr": "Poisson-magma",
+      "ru": "Магмарыбка"
+    }
   },
   {
     "id": "mistile",
@@ -6455,7 +6745,8 @@
     "summon": null,
     "location": "Mistlands",
     "spawns": [],
-    "description": "Mistiles are homing balls of light spawned exclusively by Dvergr Mages. They deal blunt damage upon contact with the enemy. They can be targeted by the player's ranged and melee weapons, and disperse harmlessly if"
+    "description": "Mistiles are homing balls of light spawned exclusively by Dvergr Mages. They deal blunt damage upon contact with the enemy. They can be targeted by the player's ranged and melee weapons, and disperse harmlessly if",
+    "names": {}
   },
   {
     "id": "moder",
@@ -6551,7 +6842,12 @@
     "summon": "Dragon Egg x3",
     "location": "* Mountain",
     "spawns": [],
-    "description": "Moder is the fourth boss. She appears as a massive frost dragon with black scales, a white fur mane and tattered wings. According to numerous Runestones, she is the mother of all"
+    "description": "Moder is the fourth boss. She appears as a massive frost dragon with black scales, a white fur mane and tattered wings. According to numerous Runestones, she is the mother of all",
+    "names": {
+      "cs": "Moder",
+      "de": "Drachenmutter",
+      "ru": "Матерь"
+    }
   },
   {
     "id": "moose",
@@ -6629,7 +6925,8 @@
     "spawns": [
       "Anywhere in Deep North (limit 3)"
     ],
-    "description": "Moose are aggressive creatures found in the Deep North. They can be tamed which allows them to be ridden, akin to Lox and"
+    "description": "Moose are aggressive creatures found in the Deep North. They can be tamed which allows them to be ridden, akin to Lox and",
+    "names": {}
   },
   {
     "id": "moose-calf",
@@ -6691,7 +6988,8 @@
     "summon": null,
     "location": "Deep North",
     "spawns": [],
-    "description": "The Moose Calf is the young form of the Moose, found in the Deep North. It grows into an adult Moose after 3,000 seconds (50 minutes). A calf born to a tamed Moose stays tamed when it grows"
+    "description": "The Moose Calf is the young form of the Moose, found in the Deep North. It grows into an adult Moose after 3,000 seconds (50 minutes). A calf born to a tamed Moose stays tamed when it grows",
+    "names": {}
   },
   {
     "id": "morgen",
@@ -6896,7 +7194,10 @@
       "Burrowing in the middle of some Ashlands ruins (limit 1)",
       "Inside Putrid Holes (limit 1)"
     ],
-    "description": "Morgens are agile, aggressive foes found in the Ashlands. They rise from the ground after breaking out of their disguise, similar to"
+    "description": "Morgens are agile, aggressive foes found in the Ashlands. They rise from the ground after breaking out of their disguise, similar to",
+    "names": {
+      "ru": "Морген"
+    }
   },
   {
     "id": "neck",
@@ -6988,7 +7289,14 @@
       "Spawn zones in Smalltree Meadows near water (limit 6)",
       "Spawn zones in Smalltree Meadows when raining (limit 8)"
     ],
-    "description": "Necks are aggressive creatures found in Meadows near water. They are amphibious in nature with four eyes and lily pads protruding out of their"
+    "description": "Necks are aggressive creatures found in Meadows near water. They are amphibious in nature with four eyes and lily pads protruding out of their",
+    "names": {
+      "cs": "Neck",
+      "de": "Nixe",
+      "fr": "Nixe",
+      "pt": "Lagarto",
+      "ru": "Никс"
+    }
   },
   {
     "id": "northern-salmon",
@@ -7024,7 +7332,13 @@
     "summon": null,
     "location": null,
     "spawns": [],
-    "description": "Northern salmon are passive creatures (fish) found in the waters of the Deep North"
+    "description": "Northern salmon are passive creatures (fish) found in the waters of the Deep North",
+    "names": {
+      "cs": "Severní Losos",
+      "de": "Nordlachs",
+      "fr": "Saumon nordique",
+      "ru": "Северный лосось"
+    }
   },
   {
     "id": "oozer",
@@ -7088,7 +7402,13 @@
       "During \"A foul smell from the swamp\" event after defeating Bonemass (limit 2)",
       "When a Blob bomb Elite poison is used (limit -)"
     ],
-    "description": "Oozers are aggressive creatures found in Swamps. They are large, gelatinous piles of sentient ooze that emit poisonous yellow gasses. Upon death, they split into two"
+    "description": "Oozers are aggressive creatures found in Swamps. They are large, gelatinous piles of sentient ooze that emit poisonous yellow gasses. Upon death, they split into two",
+    "names": {
+      "cs": "Oozer",
+      "de": "Schleimmasse",
+      "fr": "Oozer",
+      "ru": "Слизняк"
+    }
   },
   {
     "id": "perch",
@@ -7125,7 +7445,13 @@
     "summon": null,
     "location": null,
     "spawns": [],
-    "description": "Perch are coastal fish found offshore the Meadows and Black Forest. They can be caught with a Fishing Rod using the basic Fishing Bait sold by"
+    "description": "Perch are coastal fish found offshore the Meadows and Black Forest. They can be caught with a Fishing Rod using the basic Fishing Bait sold by",
+    "names": {
+      "cs": "Okoun",
+      "de": "Barsch",
+      "fr": "Perche",
+      "ru": "Окунь"
+    }
   },
   {
     "id": "pike",
@@ -7162,7 +7488,13 @@
     "summon": null,
     "location": null,
     "spawns": [],
-    "description": "}} Pike are coastal fish found offshore the Meadows and Black Forest. They can be caught with a Fishing Rod using Fishing Bait purchased from Haldor or Cold fishing bait which can be crafted at the Food Preparation Table by combining 20 Fishing Bait and a Fenring"
+    "description": "}} Pike are coastal fish found offshore the Meadows and Black Forest. They can be caught with a Fishing Rod using Fishing Bait purchased from Haldor or Cold fishing bait which can be crafted at the Food Preparation Table by combining 20 Fishing Bait and a Fenring",
+    "names": {
+      "cs": "Štika",
+      "de": "Hecht",
+      "fr": "Brochet",
+      "ru": "Щука"
+    }
   },
   {
     "id": "pufferfish",
@@ -7199,7 +7531,13 @@
     "summon": null,
     "location": null,
     "spawns": [],
-    "description": "Pufferfish are passive creatures (fish) found in the waters just offshore of the Mistlands"
+    "description": "Pufferfish are passive creatures (fish) found in the waters just offshore of the Mistlands",
+    "names": {
+      "cs": "Čtverzubka",
+      "de": "Kugelfisch",
+      "fr": "Poisson-globe",
+      "ru": "Иглобрюх"
+    }
   },
   {
     "id": "rancid-remains",
@@ -7297,7 +7635,13 @@
       "Spawn zones in Bones (Plains) (limit 3)",
       "Spawn zones in Bones (Mistlands) (limit 3)"
     ],
-    "description": "Rancid remains are aggressive creatures found in Burial Chambers. They are, as their name suggests, human skeletal remains which have since been resurrected from the dead. Rancid remains are also slightly larger and stronger than regular Skeletons. Their hits inflict"
+    "description": "Rancid remains are aggressive creatures found in Burial Chambers. They are, as their name suggests, human skeletal remains which have since been resurrected from the dead. Rancid remains are also slightly larger and stronger than regular Skeletons. Their hits inflict",
+    "names": {
+      "cs": "Zatuchlé zůstatky",
+      "de": "Ranzige Überreste",
+      "fr": "Cadavre rance",
+      "ru": "Сгнившие останки"
+    }
   },
   {
     "id": "seal",
@@ -7362,7 +7706,8 @@
       "Anywhere in the Deep North at altitudes -2 to 5 (shorelines), in groups of one to two (limit 5)",
       "Anywhere in the Deep North at altitudes -2 to 5 (shorelines), in groups of one to three (limit 3)"
     ],
-    "description": "}} }} Seals are passive creatures found on the shores and Abandoned Villages of the Deep North. They come in 0, 1 and 2-star"
+    "description": "}} }} Seals are passive creatures found on the shores and Abandoned Villages of the Deep North. They come in 0, 1 and 2-star",
+    "names": {}
   },
   {
     "id": "seeker",
@@ -7526,7 +7871,12 @@
       "Spawned by The Queen (amount based on nearby players) (limit 2-5)",
       "During \"They sought you out\" event before defeating The Queen (limit 3)"
     ],
-    "description": "Seekers are aggressive creatures found in the Mistlands and in Infested"
+    "description": "Seekers are aggressive creatures found in the Mistlands and in Infested",
+    "names": {
+      "cs": "Hledač",
+      "fr": "Fouineur",
+      "ru": "Искатель"
+    }
   },
   {
     "id": "seeker-brood",
@@ -7584,7 +7934,12 @@
       "During \"They sought you out.\" event before defeating The Queen (limit 8)",
       "Spawn zones in BroodSwarm Mistlands at night (limit 100)"
     ],
-    "description": "s are aggressive creatures found within Infested Mines in the"
+    "description": "s are aggressive creatures found within Infested Mines in the",
+    "names": {
+      "cs": "Potomstvo Hledačů",
+      "fr": "Fouineur",
+      "ru": "Выводок искателя"
+    }
   },
   {
     "id": "seeker-soldier",
@@ -7746,7 +8101,11 @@
       "Spawn points near some Mistlands structures (limit -)",
       "Spawn points in Infested Mines (limit -)"
     ],
-    "description": "Seeker Soldiers are aggressive creatures found in the Mistlands and in Infested"
+    "description": "Seeker Soldiers are aggressive creatures found in the Mistlands and in Infested",
+    "names": {
+      "cs": "Voják Hledačů",
+      "ru": "Искатель-солдат"
+    }
   },
   {
     "id": "serpent",
@@ -7809,7 +8168,11 @@
       "Middle of Ocean during the night time, despawn at dawn (limit 1)",
       "Middle of Ocean during rain or thunderstorm (limit 1)"
     ],
-    "description": "Serpents are aggressive creatures found in Oceans, and currently the only hostile creature spawning in Oceans. They are large, aquatic snake-like reptilian creatures with six glowing eyes, spiked dorsal fins and a gaping mouth filled with razor-sharp"
+    "description": "Serpents are aggressive creatures found in Oceans, and currently the only hostile creature spawning in Oceans. They are large, aquatic snake-like reptilian creatures with six glowing eyes, spiked dorsal fins and a gaping mouth filled with razor-sharp",
+    "names": {
+      "fr": "Serpent",
+      "ru": "Змей"
+    }
   },
   {
     "id": "shadow",
@@ -7856,7 +8219,8 @@
     "summon": null,
     "location": null,
     "spawns": [],
-    "description": "Shadow are the souls of fallen warriors, They are found in Abandoned Villages and sometime roaming in Deep North during the"
+    "description": "Shadow are the souls of fallen warriors, They are found in Abandoned Villages and sometime roaming in Deep North during the",
+    "names": {}
   },
   {
     "id": "shapeless-pulp",
@@ -7955,7 +8319,8 @@
       "Spawned from Hexahedric Pulp, only while no other Shapeless Pulp is within 20 meters of it (limit 1)",
       "When a Blob Bomb Pulp is used (limit -)"
     ],
-    "description": "Shapeless Pulp is a hostile creature found in Mörkhalla in the Deep North. They are spawned by Hexahedric Pulp every six seconds while a player is within 20 meters, and themselves turn into Tiny"
+    "description": "Shapeless Pulp is a hostile creature found in Mörkhalla in the Deep North. They are spawned by Hexahedric Pulp every six seconds while a player is within 20 meters, and themselves turn into Tiny",
+    "names": {}
   },
   {
     "id": "skeleton",
@@ -8268,7 +8633,13 @@
       "Spawn zones in Menhir (Plains) at night, after defeating Bonemass (limit 3)",
       "Spawn zones in Fortress Mountain (limit 10)"
     ],
-    "description": "Skeletons are aggressive creatures found in Meadows, Black Forest, Swamp, Mountain, Deep"
+    "description": "Skeletons are aggressive creatures found in Meadows, Black Forest, Swamp, Mountain, Deep",
+    "names": {
+      "cs": "Kostlivec",
+      "de": "Skelett",
+      "fr": "Squelette",
+      "ru": "Скелет"
+    }
   },
   {
     "id": "skugg",
@@ -8325,7 +8696,10 @@
     "spawns": [
       "Corners of Charred Fortress (limit 4)"
     ],
-    "description": "Skugg are ballistae made of bone and are found in"
+    "description": "Skugg are ballistae made of bone and are found in",
+    "names": {
+      "ru": "Скугг"
+    }
   },
   {
     "id": "stone-golem",
@@ -8424,7 +8798,11 @@
       "Middle of the tall Mountains (120 meter altitude) (limit 1)",
       "Spawn zones in Fortress Mountain (limit 1)"
     ],
-    "description": "Stone Golems are aggressive creatures found in the Mountains. They are snow-covered stone humanoids with silver veins visible on their bodies. When disturbed, they awake from their slumber, attacking both the players and other"
+    "description": "Stone Golems are aggressive creatures found in the Mountains. They are snow-covered stone humanoids with silver veins visible on their bodies. When disturbed, they awake from their slumber, attacking both the players and other",
+    "names": {
+      "fr": "Golem de pierre",
+      "ru": "Каменный голем"
+    }
   },
   {
     "id": "surtling",
@@ -8520,7 +8898,13 @@
       "3 spawn points near Fire geysers",
       "During \"There's a smell of sulfur in the air...\" event after defeating Bonemass (limit 4)"
     ],
-    "description": "Surtlings are aggressive creatures found near Fire geysers in Swamps. They are small flaming imps that are relatively weak, especially in Swamps where the constant raining significantly reduces the damage from their ranged fireball"
+    "description": "Surtlings are aggressive creatures found near Fire geysers in Swamps. They are small flaming imps that are relatively weak, especially in Swamps where the constant raining significantly reduces the damage from their ranged fireball",
+    "names": {
+      "cs": "Surtling",
+      "de": "Surtling",
+      "fr": "Surtling",
+      "ru": "Суртлинг"
+    }
   },
   {
     "id": "tetra",
@@ -8556,7 +8940,13 @@
     "summon": null,
     "location": null,
     "spawns": [],
-    "description": "Tetra are passive creatures (fish) found in the super-rare lakes at the bottom of Frost Caves of the Mountain"
+    "description": "Tetra are passive creatures (fish) found in the super-rare lakes at the bottom of Frost Caves of the Mountain",
+    "names": {
+      "cs": "Tetra",
+      "de": "Salmler",
+      "fr": "Tétra",
+      "ru": "Тетра"
+    }
   },
   {
     "id": "the-elder",
@@ -8628,7 +9018,13 @@
     "summon": "Ancient Seed x3",
     "location": "* Black Forest",
     "spawns": [],
-    "description": "The Elder is the second boss. He appears as a towering humanoid tree-like entity with multiple thin branches sprouting out of his slender, bark-covered"
+    "description": "The Elder is the second boss. He appears as a towering humanoid tree-like entity with multiple thin branches sprouting out of his slender, bark-covered",
+    "names": {
+      "cs": "Prastarý",
+      "de": "Der Uralte",
+      "fr": "L'Aîné",
+      "ru": "Древний"
+    }
   },
   {
     "id": "the-queen",
@@ -8730,7 +9126,11 @@
     "summon": null,
     "location": "Mistlands",
     "spawns": [],
-    "description": "The Queen is the sixth boss. She is a monstrous Seeker Matriarch, and her appearance differs substantially from other Seekers. Her body is larva-like (similar to Seeker Broods), her four \"arms\" are all located nearer to the head, and she has a distinctive mouth lined with small, sharp teeth. Some features she shares with other Seekers are a set of large mandibles like the Seeker Soldier, antennae"
+    "description": "The Queen is the sixth boss. She is a monstrous Seeker Matriarch, and her appearance differs substantially from other Seekers. Her body is larva-like (similar to Seeker Broods), her four \"arms\" are all located nearer to the head, and she has a distinctive mouth lined with small, sharp teeth. Some features she shares with other Seekers are a set of large mandibles like the Seeker Soldier, antennae",
+    "names": {
+      "cs": "Královna",
+      "ru": "Королева"
+    }
   },
   {
     "id": "tick",
@@ -8822,7 +9222,11 @@
       "Spawned by Gjalls (3 per ability) (limit 8)",
       "During \"What's up, Gjall?!\" event before defeating The Queen (limit 4)"
     ],
-    "description": "Ticks are aggressive creatures found in the Mistlands. Ticks look like giant versions of their [https://en.wikipedia.org/wiki/Tick namesakes]. Their only attack is to latch onto their target and deal constant"
+    "description": "Ticks are aggressive creatures found in the Mistlands. Ticks look like giant versions of their [https://en.wikipedia.org/wiki/Tick namesakes]. Their only attack is to latch onto their target and deal constant",
+    "names": {
+      "cs": "Klíště",
+      "ru": "Клещ"
+    }
   },
   {
     "id": "tiny-pulp",
@@ -8872,7 +9276,8 @@
     "spawns": [
       "Spawned from Shapeless Pulp death (limit 1)"
     ],
-    "description": "Tiny Pulp is a passive creature found in Mörkhalla in the Deep"
+    "description": "Tiny Pulp is a passive creature found in Mörkhalla in the Deep",
+    "names": {}
   },
   {
     "id": "troll",
@@ -9120,7 +9525,13 @@
       "During \"The ground is shaking\" event after defeating The Elder (limit 2)",
       "Spawn zones in Troll Black Forest (limit 2)"
     ],
-    "description": "Trolls are aggressive creatures found in Black Forests. They are massive, bumbling humanoids with brutish limbs and wiry blonde hair. They may spawn with a large tree trunk in their"
+    "description": "Trolls are aggressive creatures found in Black Forests. They are massive, bumbling humanoids with brutish limbs and wiry blonde hair. They may spawn with a large tree trunk in their",
+    "names": {
+      "cs": "Troll",
+      "de": "Troll",
+      "fr": "Troll",
+      "ru": "Тролль"
+    }
   },
   {
     "id": "trollfish",
@@ -9156,7 +9567,13 @@
     "summon": null,
     "location": null,
     "spawns": [],
-    "description": "Trollfish are passive creatures (fish) found in the waters just offshore of the Black Forest"
+    "description": "Trollfish are passive creatures (fish) found in the waters just offshore of the Black Forest",
+    "names": {
+      "cs": "Trollyba",
+      "de": "Trollfisch",
+      "fr": "Poisson-troll",
+      "ru": "Тролль-рыба"
+    }
   },
   {
     "id": "tuna",
@@ -9192,7 +9609,13 @@
     "summon": null,
     "location": null,
     "spawns": [],
-    "description": "Tuna are passive creatures (fish) found in the Ocean"
+    "description": "Tuna are passive creatures (fish) found in the Ocean",
+    "names": {
+      "cs": "Tuňák",
+      "de": "Thunfisch",
+      "fr": "Thon",
+      "ru": "Тунец"
+    }
   },
   {
     "id": "ulv",
@@ -9280,7 +9703,12 @@
       "Common spawn point in Frost Caves.",
       "Common spawn point in Howling Cavern."
     ],
-    "description": "Ulve are aggressive creatures found in Mountains inside Frost Caves. Their appearance is distinctly werewolf-like, however unlike Fenrings, they trot on"
+    "description": "Ulve are aggressive creatures found in Mountains inside Frost Caves. Their appearance is distinctly werewolf-like, however unlike Fenrings, they trot on",
+    "names": {
+      "cs": "Ulv",
+      "de": "Ulv",
+      "ru": "Ульв"
+    }
   },
   {
     "id": "vile",
@@ -9383,7 +9811,11 @@
     "spawns": [
       "Anywhere in Plains during the nighttime (limit 1)"
     ],
-    "description": "Viles are aggressive creatures found in Plains during the night. They are a stronger, undead variant of"
+    "description": "Viles are aggressive creatures found in Plains during the night. They are a stronger, undead variant of",
+    "names": {
+      "cs": "Děs",
+      "ru": "Гнилолап"
+    }
   },
   {
     "id": "volture",
@@ -9443,7 +9875,10 @@
       "Anywhere in the Ashlands at very low altitudes (e.g. at sea) (limit 3)",
       "1-4 spawn points near Volture Nests"
     ],
-    "description": "Voltures are aggressive enemies found in the Ashlands. Volture nests will spawn Voltures one time. Voltures can also be found flying above the water along the Ashlands"
+    "description": "Voltures are aggressive enemies found in the Ashlands. Volture nests will spawn Voltures one time. Voltures can also be found flying above the water along the Ashlands",
+    "names": {
+      "ru": "Стервулканник"
+    }
   },
   {
     "id": "wolf",
@@ -9535,7 +9970,13 @@
       "During \"You are being hunted\" event after defeating Bonemass (limit 6)",
       "Spawn zones in Wolf Mountain (limit 8)"
     ],
-    "description": "Wolves are aggressive creatures found in the Mountains. They are large canines with long, bushy tails that can be bred and"
+    "description": "Wolves are aggressive creatures found in the Mountains. They are large canines with long, bushy tails that can be bred and",
+    "names": {
+      "cs": "Vlk",
+      "de": "Wolf",
+      "fr": "Loup",
+      "ru": "Волк"
+    }
   },
   {
     "id": "wraith",
@@ -9600,7 +10041,13 @@
       "During \"You feel a chill down your spine...\" event after defeating Bonemass (limit 2)",
       "Spawn zones in Hut Swamp at night (limit 3)"
     ],
-    "description": "Wraiths are aggressive creatures found in Swamps. They are dark blueish spectral entities, cloaked with a hood covering their blank face. They emit a quiet snarling hiss sound when they are aggravated. Since they naturally spawn at night, glow and fly, spotting them from a distance is easy; their telltale glow reveals them even to inattentive players as they"
+    "description": "Wraiths are aggressive creatures found in Swamps. They are dark blueish spectral entities, cloaked with a hood covering their blank face. They emit a quiet snarling hiss sound when they are aggravated. Since they naturally spawn at night, glow and fly, spotting them from a distance is easy; their telltale glow reveals them even to inattentive players as they",
+    "names": {
+      "cs": "Přízrak",
+      "de": "Zorngeist",
+      "fr": "Spectre",
+      "ru": "Призрак"
+    }
   },
   {
     "id": "writhan",
@@ -9723,7 +10170,8 @@
     "spawns": [
       "Anywhere in Swamp (altitude -2 to 10), 2,000 to 8,000 meters from the world center, during the day and night, alone (limit 1)"
     ],
-    "description": "Writhan is an aggressive creature found rarely in the"
+    "description": "Writhan is an aggressive creature found rarely in the",
+    "names": {}
   },
   {
     "id": "yagluth",
@@ -9806,7 +10254,12 @@
     "summon": "Fuling Totem x5",
     "location": "Plains",
     "spawns": [],
-    "description": "Yagluth is the fifth boss. He appears as an ancient Fuling spirit inhabiting a now decomposed skeletal body comprised of a head, two arms and a torso. The crown resting upon his skull implies he was once or still is a ruler of some"
+    "description": "Yagluth is the fifth boss. He appears as an ancient Fuling spirit inhabiting a now decomposed skeletal body comprised of a head, two arms and a torso. The crown resting upon his skull implies he was once or still is a ruler of some",
+    "names": {
+      "cs": "Yagluth",
+      "de": "Yagluth",
+      "ru": "Яглут"
+    }
   },
   {
     "id": "zil-thungr",
@@ -9888,6 +10341,10 @@
     "summon": null,
     "location": "Sealed tower",
     "spawns": [],
-    "description": "Zil & Thungr is an aggressive duo miniboss found in Plains inside Sealed"
+    "description": "Zil & Thungr is an aggressive duo miniboss found in Plains inside Sealed",
+    "names": {
+      "de": "Zil & Thungr",
+      "ru": "Зил и Тангр"
+    }
   }
 ]

@@ -68,6 +68,7 @@ export function buildArmourerBundle() {
     biomes,
     armor,
     items,
+    creatures: Object.fromEntries(JSON.parse(readFileSync(path.join(DATA_DIR, 'creatures.json'), 'utf8')).map(creature => [creature.id, creature])),
   };
 }
 
@@ -80,6 +81,25 @@ export function main() {
   if (!existsSync(outputPath) || readFileSync(outputPath, 'utf8') !== content) {
     writeFileSync(outputPath, content, 'utf8');
   }
+  const groups = {
+    creatures: Object.values(bundle.creatures),
+    weapons: JSON.parse(readFileSync(path.join(DATA_DIR, 'weapons.json'), 'utf8')),
+    items: Object.values(bundle.items),
+    armor: bundle.armor.flatMap(entry => entry.pieces),
+    sets: bundle.armor,
+    biomes: bundle.biomes,
+  };
+  const coverage = {};
+  for (const lang of ['cs', 'de', 'es', 'fr', 'pt', 'zh', 'hi', 'ar', 'bn', 'ru', 'ja', 'id']) {
+    coverage[lang] = {};
+    for (const [group, entities] of Object.entries(groups)) {
+      const count = entities.filter(entity => entity.names?.[lang]).length;
+      coverage[lang][group] = { count, total: entities.length, percent: +(100 * count / entities.length).toFixed(1) };
+    }
+  }
+  const reportPath = path.join(DATA_DIR, 'report-names.json');
+  const report = JSON.stringify(coverage, null, 2) + '\n';
+  if (!existsSync(reportPath) || readFileSync(reportPath, 'utf8') !== report) writeFileSync(reportPath, report);
   console.log(`done: built apps/armourer/data/data.js (${(content.length / 1024).toFixed(1)} kB)`);
 }
 

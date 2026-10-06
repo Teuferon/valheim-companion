@@ -1,3 +1,4 @@
+import { addLocalizedNames } from './api.mjs';
 // Fetches weapons and materials from valheim.weirdgloop.org (MediaWiki API) and
 // builds data/weapons.json, data/materials.json, data/report-weapons.md plus images
 // in img/weapons/.
@@ -587,6 +588,8 @@ async function main() {
   // Sort deterministically
   parsedWeapons.sort((a, b) => byCodepoint(a.name, b.name));
   allResolvedMaterials.sort((a, b) => byCodepoint(a.name, b.name));
+
+  await addLocalizedNames([...parsedWeapons, ...allResolvedMaterials]);
 
   // 9. Write outputs
   mkdirSync(DATA_DIR, { recursive: true });

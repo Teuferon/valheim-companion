@@ -1,5 +1,5 @@
 window.VC_DATA = {
-  "generatedAt": "2026-10-06T10:31:44.847Z",
+  "generatedAt": "2026-10-06T12:01:49.000Z",
   "source": {
     "name": "Valheim Wiki",
     "url": "https://valheim.weirdgloop.org",
@@ -53,6 +53,14 @@ window.VC_DATA = {
           "perch",
           "pike"
         ]
+      },
+      "names": {
+        "cs": "Louky",
+        "de": "Grasland",
+        "fr": "Prairies",
+        "pt": "Prados",
+        "ru": "Луга",
+        "zh": "草原"
       }
     },
     {
@@ -89,6 +97,12 @@ window.VC_DATA = {
           "pike",
           "trollfish"
         ]
+      },
+      "names": {
+        "cs": "Černý Les",
+        "de": "Düsterwald",
+        "fr": "Forêt noire",
+        "ru": "Черный лес"
       }
     },
     {
@@ -113,6 +127,13 @@ window.VC_DATA = {
           "pufferfish",
           "tuna"
         ]
+      },
+      "names": {
+        "cs": "Oceán",
+        "de": "Ozean",
+        "fr": "Océan",
+        "ru": "Океан",
+        "zh": "海洋"
       }
     },
     {
@@ -144,6 +165,13 @@ window.VC_DATA = {
         "fish": [
           "giant-herring"
         ]
+      },
+      "names": {
+        "cs": "Bažiny",
+        "de": "Sumpf",
+        "fr": "Marécages",
+        "ru": "Болото",
+        "zh": "沼澤"
       }
     },
     {
@@ -175,6 +203,12 @@ window.VC_DATA = {
         "fish": [
           "tetra"
         ]
+      },
+      "names": {
+        "cs": "Hory",
+        "fr": "Montagne",
+        "ru": "Гора",
+        "zh": "雪山"
       }
     },
     {
@@ -208,6 +242,12 @@ window.VC_DATA = {
         "fish": [
           "grouper"
         ]
+      },
+      "names": {
+        "cs": "Planiny",
+        "fr": "Plaines",
+        "ru": "Равнины",
+        "zh": "平原"
       }
     },
     {
@@ -239,6 +279,10 @@ window.VC_DATA = {
           "anglerfish",
           "pufferfish"
         ]
+      },
+      "names": {
+        "cs": "Mlžné krajiny",
+        "ru": "Туманные земли"
       }
     },
     {
@@ -275,6 +319,10 @@ window.VC_DATA = {
         "fish": [
           "magmafish"
         ]
+      },
+      "names": {
+        "cs": "Prašné končiny",
+        "ru": "Пепельные земли"
       }
     },
     {
@@ -315,6 +363,10 @@ window.VC_DATA = {
         "fish": [
           "northern-salmon"
         ]
+      },
+      "names": {
+        "cs": "Daleký sever",
+        "ru": "Дальний север"
       }
     }
   ],
@@ -405,7 +457,13 @@ window.VC_DATA = {
         "Spawn zones in Bog Swamp (limit 3)",
         "Spawn zones in Abomination Swamp (limit 3)"
       ],
-      "description": "Abominations are aggressive creatures found in the Swamps. They are large tree-like entities comprised of multiple branches and four sturdy roots, which it uses as legs to move"
+      "description": "Abominations are aggressive creatures found in the Swamps. They are large tree-like entities comprised of multiple branches and four sturdy roots, which it uses as legs to move",
+      "names": {
+        "cs": "Ohavnost",
+        "de": "Monstrosität",
+        "fr": "Abomination",
+        "ru": "Мерзость"
+      }
     },
     "anglerfish": {
       "id": "anglerfish",
@@ -441,7 +499,13 @@ window.VC_DATA = {
       "summon": null,
       "location": null,
       "spawns": [],
-      "description": "}} Anglerfish are coastal fish found offshore the Mistlands. They can be caught with a Fishing Rod using Misty Fishing Bait which can be crafted at the Food Preparation Table by combining 20 Fishing Bait and a Lox"
+      "description": "}} Anglerfish are coastal fish found offshore the Mistlands. They can be caught with a Fishing Rod using Misty Fishing Bait which can be crafted at the Food Preparation Table by combining 20 Fishing Bait and a Lox",
+      "names": {
+        "cs": "Ďas",
+        "de": "Seeteufel",
+        "fr": "Poisson-pêcheur",
+        "ru": "Удильщик"
+      }
     },
     "ash-crow": {
       "id": "ash-crow",
@@ -481,7 +545,10 @@ window.VC_DATA = {
       "summon": null,
       "location": "Ashlands",
       "spawns": [],
-      "description": "Ash crows are passive creatures found in Ashlands around Charred"
+      "description": "Ash crows are passive creatures found in Ashlands around Charred",
+      "names": {
+        "ru": "Пепельный ворон"
+      }
     },
     "ashlands-dvergr": {
       "id": "ashlands-dvergr",
@@ -591,7 +658,10 @@ window.VC_DATA = {
       "summon": null,
       "location": "Ashlands",
       "spawns": [],
-      "description": "Ashlands Dvergr are much stronger than their cousins Dvergr Rogues, their status can be compared to two-star Dvergr rogues. These Dvergr are a separate clan from those found in the"
+      "description": "Ashlands Dvergr are much stronger than their cousins Dvergr Rogues, their status can be compared to two-star Dvergr rogues. These Dvergr are a separate clan from those found in the",
+      "names": {
+        "ru": "Дверг пепельных земель"
+      }
     },
     "asksvin": {
       "id": "asksvin",
@@ -747,7 +817,10 @@ window.VC_DATA = {
         "Middle of the Ashlands during the daytime (limit 2)",
         "Middle of the Ashlands during the nighttime, despawn at dawn (limit 2)"
       ],
-      "description": "Asksvin are hostile, tameable, and fast rideable creatures found in the Ashlands. They look like huge, mutated"
+      "description": "Asksvin are hostile, tameable, and fast rideable creatures found in the Ashlands. They look like huge, mutated",
+      "names": {
+        "ru": "Пеплозавр"
+      }
     },
     "barka": {
       "id": "barka",
@@ -858,7 +931,8 @@ window.VC_DATA = {
       "spawns": [
         "Anywhere in Deep North, during the day and night, alone (limit 1)"
       ],
-      "description": "The Barka is a hostile creature found in the Deep North. It resembles a frozen The"
+      "description": "The Barka is a hostile creature found in the Deep North. It resembles a frozen The",
+      "names": {}
     },
     "bat": {
       "id": "bat",
@@ -935,7 +1009,11 @@ window.VC_DATA = {
         "During \"You stirred the cauldron,\" event after killing Bonemass. (limit 10)",
         "Spawn zones in Bat Swamp (limit 10)"
       ],
-      "description": "Bats are aggressive creatures found in Mountains inside Frost Caves. They have a small body size and glossy black coat and wings, capable of"
+      "description": "Bats are aggressive creatures found in Mountains inside Frost Caves. They have a small body size and glossy black coat and wings, capable of",
+      "names": {
+        "cs": "Netopýr",
+        "ru": "Летучая мышь"
+      }
     },
     "bear": {
       "id": "bear",
@@ -1106,7 +1184,11 @@ window.VC_DATA = {
         "Anywhere in Black Forests (limit 1)",
         "Inside Bear Cave"
       ],
-      "description": "Bears are aggressive creatures found in the Black Forest. They are bulky, furry beasts with large claws and"
+      "description": "Bears are aggressive creatures found in the Black Forest. They are bulky, furry beasts with large claws and",
+      "names": {
+        "cs": "Medvěd",
+        "ru": "Медведь"
+      }
     },
     "blob": {
       "id": "blob",
@@ -1175,7 +1257,13 @@ window.VC_DATA = {
         "During \"A foul smell from the swamp\" event after defeating Bonemass (limit 5)",
         "When a Blob bomb Poison is used (limit -)"
       ],
-      "description": "Blobs are aggressive creatures found in the Swamps. They are large, gelatinous piles of sentient ooze that emit poisonous green"
+      "description": "Blobs are aggressive creatures found in the Swamps. They are large, gelatinous piles of sentient ooze that emit poisonous green",
+      "names": {
+        "cs": "Slizoun",
+        "de": "Schleimling",
+        "fr": "Blob",
+        "ru": "Сгустень"
+      }
     },
     "boar": {
       "id": "boar",
@@ -1267,7 +1355,14 @@ window.VC_DATA = {
         "During \"Eikthyr rallies the creatures of the forest,\" event before defeating Eikthyr (limit 2)",
         "Spawn zones in Peaceful Meadows (limit 15)"
       ],
-      "description": "Boars are wild creatures found throughout Valheim, known for their aggressive behavior when approached. They can be identified by their status tags indicating whether they are 'wild' or 'tame,' along with their emotional states, such as 'hungry,' 'happy,' 'frightened,' or 'acclimatizing.' Understanding these states can help players interact with them"
+      "description": "Boars are wild creatures found throughout Valheim, known for their aggressive behavior when approached. They can be identified by their status tags indicating whether they are 'wild' or 'tame,' along with their emotional states, such as 'hungry,' 'happy,' 'frightened,' or 'acclimatizing.' Understanding these states can help players interact with them",
+      "names": {
+        "cs": "Kanec",
+        "de": "Wildschwein",
+        "fr": "Sanglier",
+        "pt": "Javali",
+        "ru": "Кабан"
+      }
     },
     "bonemass": {
       "id": "bonemass",
@@ -1341,7 +1436,13 @@ window.VC_DATA = {
       "summon": "Withered Bone x10",
       "location": "* Swamp",
       "spawns": [],
-      "description": "Bonemass is the third boss. He appears as a gigantic humanoid mass comprised of toxic ooze, mud and skeletal remains, likely absorbed from nearby tombs situated close to his"
+      "description": "Bonemass is the third boss. He appears as a gigantic humanoid mass comprised of toxic ooze, mud and skeletal remains, likely absorbed from nearby tombs situated close to his",
+      "names": {
+        "cs": "Bonemass",
+        "de": "Knochenwanst",
+        "fr": "Masse d'Os",
+        "ru": "Масса костей"
+      }
     },
     "bonemaw": {
       "id": "bonemaw",
@@ -1413,7 +1514,10 @@ window.VC_DATA = {
       "spawns": [
         "Ashlands Ocean (limit 1)"
       ],
-      "description": "Bonemaw are aggressive creatures found in the boiling waters surrounding the Ashlands landmass. They pose a significant danger when sailing to the"
+      "description": "Bonemaw are aggressive creatures found in the boiling waters surrounding the Ashlands landmass. They pose a significant danger when sailing to the",
+      "names": {
+        "ru": "Костепасть"
+      }
     },
     "brenna": {
       "id": "brenna",
@@ -1480,7 +1584,13 @@ window.VC_DATA = {
       "summon": null,
       "location": "Smouldering Tomb",
       "spawns": [],
-      "description": "Brenna is an aggressive miniboss found in the Black Forest inside Smouldering Tomb as well as during the \"She's hot on your tail!\" event. She is a burning Skeleton with charcoal black bones and fire aspects wielding a fiery version of"
+      "description": "Brenna is an aggressive miniboss found in the Black Forest inside Smouldering Tomb as well as during the \"She's hot on your tail!\" event. She is a burning Skeleton with charcoal black bones and fire aspects wielding a fiery version of",
+      "names": {
+        "cs": "Brenna",
+        "de": "Brenna",
+        "fr": "Brenna",
+        "ru": "Бренна"
+      }
     },
     "captive-fuling": {
       "id": "captive-fuling",
@@ -1629,7 +1739,8 @@ window.VC_DATA = {
       "spawns": [
         "Spawn point in Mörkhalla"
       ],
-      "description": "Captive Fuling are creatures found in Mörkhalla."
+      "description": "Captive Fuling are creatures found in Mörkhalla.",
+      "names": {}
     },
     "charred-marksman": {
       "id": "charred-marksman",
@@ -1742,7 +1853,13 @@ window.VC_DATA = {
         "Anywhere in the Meadows, Black Forests, Swamp, Mountains or Plains during the nighttime after defeating Fader, despawn at dawn (limit 3)",
         "During \"The undead army marches.\" before defeating Fader (limit 3)"
       ],
-      "description": "Charred Marksman are hostile ranged enemies found in the"
+      "description": "Charred Marksman are hostile ranged enemies found in the",
+      "names": {
+        "cs": "Sežehnutý střelec",
+        "de": "Verkohlter Scharfschütze",
+        "fr": "Archer calciné",
+        "ru": "Обугленный лучник"
+      }
     },
     "charred-twitcher": {
       "id": "charred-twitcher",
@@ -1854,7 +1971,13 @@ window.VC_DATA = {
         "During \"The undead army marches.\" event before defeating Fader (limit 3)",
         "During \"The dead have been summoned.\" event (summoned by Monument of Torment) before defeating Fader (limit none)"
       ],
-      "description": "Charred Twitchers are hostile enemies found in the Ashlands. These guys are always twitching, as their name"
+      "description": "Charred Twitchers are hostile enemies found in the Ashlands. These guys are always twitching, as their name",
+      "names": {
+        "cs": "Sežehnutý trhavec",
+        "de": "Verkohlter Zuckender",
+        "fr": "Forcené calciné",
+        "ru": "Обугленный дергун"
+      }
     },
     "charred-warlock": {
       "id": "charred-warlock",
@@ -1953,7 +2076,13 @@ window.VC_DATA = {
         "Randomly from Effigy of Malice inside Charred Fortress when a player is nearby (limit none)",
         "Randomly from Monument of Torment (Elite) when a player is nearby (limit none)"
       ],
-      "description": "Charred Warlocks are hostile enemies found in the"
+      "description": "Charred Warlocks are hostile enemies found in the",
+      "names": {
+        "cs": "Sežehnutý čaroděj",
+        "de": "Verkohlter Hexer",
+        "fr": "Sorcier calciné",
+        "ru": "Обугленный чернокнижник"
+      }
     },
     "charred-warrior": {
       "id": "charred-warrior",
@@ -2115,7 +2244,13 @@ window.VC_DATA = {
         "During \"The undead army marches.\" event before defeating Fader (limit 3)",
         "During \"The dead have been summoned.\" event (summoned by Monument of Torment) before defeating Fader (limit none)"
       ],
-      "description": "Charred Warriors are hostile enemies found in the"
+      "description": "Charred Warriors are hostile enemies found in the",
+      "names": {
+        "cs": "Sežehnutý válečník",
+        "de": "Verkohlter Krieger",
+        "fr": "Guerrier calciné",
+        "ru": "Обугленный воин"
+      }
     },
     "chicken": {
       "id": "chicken",
@@ -2158,7 +2293,12 @@ window.VC_DATA = {
       "summon": null,
       "location": null,
       "spawns": [],
-      "description": "Chicken are passive creatures that can only appear when an Egg hatches. They are the infant stage of"
+      "description": "Chicken are passive creatures that can only appear when an Egg hatches. They are the infant stage of",
+      "names": {
+        "cs": "Kuře",
+        "de": "Huhn",
+        "ru": "Цыпленок"
+      }
     },
     "coral-cod": {
       "id": "coral-cod",
@@ -2194,7 +2334,13 @@ window.VC_DATA = {
       "summon": null,
       "location": null,
       "spawns": [],
-      "description": "Coral cod are passive creatures (fish) found in the waters of the Ocean biome. The schools can be in the middle of the Ocean or sometimes near other biomes'"
+      "description": "Coral cod are passive creatures (fish) found in the waters of the Ocean biome. The schools can be in the middle of the Ocean or sometimes near other biomes'",
+      "names": {
+        "cs": "Korálová Treska",
+        "de": "Korallenbarsch",
+        "fr": "Vieille de corail",
+        "ru": "Коралловая треска"
+      }
     },
     "crow": {
       "id": "crow",
@@ -2237,7 +2383,12 @@ window.VC_DATA = {
       "summon": null,
       "location": "Black Forest",
       "spawns": [],
-      "description": "Crows are passive creatures found in Black Forests. They are small birds with long legs and heavy, straight bills. These birds are entirely black, including their legs and"
+      "description": "Crows are passive creatures found in Black Forests. They are small birds with long legs and heavy, straight bills. These birds are entirely black, including their legs and",
+      "names": {
+        "cs": "Vrána",
+        "de": "Krähe",
+        "ru": "Ворон"
+      }
     },
     "cultist": {
       "id": "cultist",
@@ -2312,7 +2463,12 @@ window.VC_DATA = {
       "spawns": [
         "Rare spawn point in Frost Caves."
       ],
-      "description": "Cultists are aggressive creatures found in Mountains inside Frost Caves. Their appearance is distinctly werewolf-like, however, unlike Fenrings and Ulvs, they wear tattered red hooded"
+      "description": "Cultists are aggressive creatures found in Mountains inside Frost Caves. Their appearance is distinctly werewolf-like, however, unlike Fenrings and Ulvs, they wear tattered red hooded",
+      "names": {
+        "cs": "Kultista",
+        "de": "Kultist",
+        "ru": "Культист"
+      }
     },
     "deathsquito": {
       "id": "deathsquito",
@@ -2369,7 +2525,11 @@ window.VC_DATA = {
         "Anywhere in Plains (limit 3)",
         "Spawn zones in Death Plains (limit 5)"
       ],
-      "description": "Deathsquitos are aggressive creatures found in Plains. They are, as their name suggests, enlarged mosquito-type bugs that give off a loud buzzing"
+      "description": "Deathsquitos are aggressive creatures found in Plains. They are, as their name suggests, enlarged mosquito-type bugs that give off a loud buzzing",
+      "names": {
+        "de": "Todeskito",
+        "ru": "Смертожал"
+      }
     },
     "deer": {
       "id": "deer",
@@ -2436,7 +2596,14 @@ window.VC_DATA = {
         "Spawn zones in Peaceful Meadows (limit 10)",
         "Spawn zones in Birch Meadows (limit 5)"
       ],
-      "description": "Deer are passive creatures found in Meadows and Black Forests. They are four-legged, reddish-brown animals that are extremely timid and completely"
+      "description": "Deer are passive creatures found in Meadows and Black Forests. They are four-legged, reddish-brown animals that are extremely timid and completely",
+      "names": {
+        "cs": "Jelen",
+        "de": "Hirsch",
+        "fr": "Cerf",
+        "pt": "Cervo",
+        "ru": "Олень"
+      }
     },
     "drake": {
       "id": "drake",
@@ -2499,7 +2666,12 @@ window.VC_DATA = {
         "During \"A cold wind blows from the mountains\" event before defeating Moder (limit 3)",
         "Spawn zones in Drake Mountain (limit 4)"
       ],
-      "description": "Drakes are aggressive creatures found in the Mountains. They are slender, legless frost dragons with ice-blue scales and four horns. Drakes are the male offspring of their mother,"
+      "description": "Drakes are aggressive creatures found in the Mountains. They are slender, legless frost dragons with ice-blue scales and four horns. Drakes are the male offspring of their mother,",
+      "names": {
+        "cs": "Drak",
+        "fr": "Drac",
+        "ru": "Дракон"
+      }
     },
     "draugr": {
       "id": "draugr",
@@ -2619,7 +2791,13 @@ window.VC_DATA = {
         "During \"A foul smell from the swamp\" event before defeating Bonemass (limit 3)",
         "Spawn zones in Dark Meadows (limit 2)"
       ],
-      "description": "Draugr are aggressive creatures found in Swamps and in Draugr villages, Sunken Crypts and sometimes Mountain towers. They are ancient undead Vikings that have since become bloated in"
+      "description": "Draugr are aggressive creatures found in Swamps and in Draugr villages, Sunken Crypts and sometimes Mountain towers. They are ancient undead Vikings that have since become bloated in",
+      "names": {
+        "cs": "Draugr",
+        "de": "Draugr",
+        "fr": "Draugr",
+        "ru": "Драугр"
+      }
     },
     "draugr-elite": {
       "id": "draugr-elite",
@@ -2708,7 +2886,13 @@ window.VC_DATA = {
         "Rare spawn point near Inverted Tower structures",
         "Rarely from Body Piles in Swamps, Sunken Crypts or Mountain towers (limit 2)"
       ],
-      "description": "Draugr Elite are aggressive creatures found in the Swamps. They are ancient undead Vikings that have since become bloated in appearance. They are stronger than normal Draugr, but always appear equipped with a melee weapon. They have glowing purple eyes and are relatively rare compared to their weaker"
+      "description": "Draugr Elite are aggressive creatures found in the Swamps. They are ancient undead Vikings that have since become bloated in appearance. They are stronger than normal Draugr, but always appear equipped with a melee weapon. They have glowing purple eyes and are relatively rare compared to their weaker",
+      "names": {
+        "cs": "Elitní Draugr",
+        "de": "Elite Draugr",
+        "fr": "Élite Draugr",
+        "ru": "Элитный драугр"
+      }
     },
     "dvergr-mage": {
       "id": "dvergr-mage",
@@ -2917,7 +3101,11 @@ window.VC_DATA = {
       "spawns": [
         "Common spawn point in Dvergr forts and structures"
       ],
-      "description": "Dvergr Mages are neutral creatures found in the Mistlands around Dvergr settlements. They resemble short, blue humanoids with light blue eyes and silver hair, and they carry Magic staves. There are three different types of Dvergr Mage, which can be differentiated by the color of their staff and robe. Unlike Dvergr Rogues, mages are exclusively found around Dvergr settlements and other structures"
+      "description": "Dvergr Mages are neutral creatures found in the Mistlands around Dvergr settlements. They resemble short, blue humanoids with light blue eyes and silver hair, and they carry Magic staves. There are three different types of Dvergr Mage, which can be differentiated by the color of their staff and robe. Unlike Dvergr Rogues, mages are exclusively found around Dvergr settlements and other structures",
+      "names": {
+        "cs": "Dvergský Mág",
+        "ru": "Дверг-маг"
+      }
     },
     "dvergr-rogue": {
       "id": "dvergr-rogue",
@@ -3028,7 +3216,11 @@ window.VC_DATA = {
         "Middle of the Mistlands during the day time (limit 2)",
         "Common spawn point in Dvergr forts and structures"
       ],
-      "description": "Dvergr Rogues are neutral creatures found in the Mistlands, especially around Dvergr settlements. They resemble short, blue humanoids with light blue eyes and silver hair carrying an Arbalest. Rogues that spawn at Dvergr structures will often be accompanied by a mix of other rogues and/or Dvergr Mages; unlike mages, however, rogues may spawn (and respawn) anywhere in the"
+      "description": "Dvergr Rogues are neutral creatures found in the Mistlands, especially around Dvergr settlements. They resemble short, blue humanoids with light blue eyes and silver hair carrying an Arbalest. Rogues that spawn at Dvergr structures will often be accompanied by a mix of other rogues and/or Dvergr Mages; unlike mages, however, rogues may spawn (and respawn) anywhere in the",
+      "names": {
+        "cs": "Dvergský Tulák",
+        "ru": "Дверг-разбойник"
+      }
     },
     "eikthyr": {
       "id": "eikthyr",
@@ -3103,7 +3295,13 @@ window.VC_DATA = {
       "summon": "Deer Trophy x2",
       "location": "* Meadows",
       "spawns": [],
-      "description": "Eikthyr is the first boss. He appears as an abnormally large stag with iron chains wrapped around his electrified red"
+      "description": "Eikthyr is the first boss. He appears as an abnormally large stag with iron chains wrapped around his electrified red",
+      "names": {
+        "cs": "Eikthyr",
+        "de": "Eikthyr",
+        "fr": "Eikthyr",
+        "ru": "Эйктюр"
+      }
     },
     "elaking": {
       "id": "elaking",
@@ -3256,7 +3454,8 @@ window.VC_DATA = {
         "Anywhere in Deep North during the night (limit 2)",
         "From Wardrobe Shaft spawner in Winding Tunnels (limit 5 near)"
       ],
-      "description": "The Elaking is a hostile creature that roams around the Deep North at night, and is home to the Winding"
+      "description": "The Elaking is a hostile creature that roams around the Deep North at night, and is home to the Winding",
+      "names": {}
     },
     "eyeless-one": {
       "id": "eyeless-one",
@@ -3372,7 +3571,8 @@ window.VC_DATA = {
       "spawns": [
         "Spawn point in Winding Tunnels (limit 1)"
       ],
-      "description": "Eyeless Ones are hostile creatures found in the Winding Tunnels below ground in the Deep"
+      "description": "Eyeless Ones are hostile creatures found in the Winding Tunnels below ground in the Deep",
+      "names": {}
     },
     "fader": {
       "id": "fader",
@@ -3495,7 +3695,10 @@ window.VC_DATA = {
       "summon": "Bell x3",
       "location": "Ashlands",
       "spawns": [],
-      "description": "Fader is the seventh boss. He appears as a charred, skeletal dragon which emanates a green glow from orifices and gaps in his"
+      "description": "Fader is the seventh boss. He appears as a charred, skeletal dragon which emanates a green glow from orifices and gaps in his",
+      "names": {
+        "ru": "Прародитель"
+      }
     },
     "fallen-valkyrie": {
       "id": "fallen-valkyrie",
@@ -3574,7 +3777,13 @@ window.VC_DATA = {
       "spawns": [
         "Ashlands, both day and night (limit 1)"
       ],
-      "description": "The Fallen Valkyrie is a hostile enemy found in the Ashlands. They often appear hovering some distance above ground, and periodically fly to nearby locations, as if scouting. They resemble Valkyries who brings the players to Valheim, but showing noticeable signs of"
+      "description": "The Fallen Valkyrie is a hostile enemy found in the Ashlands. They often appear hovering some distance above ground, and periodically fly to nearby locations, as if scouting. They resemble Valkyries who brings the players to Valheim, but showing noticeable signs of",
+      "names": {
+        "cs": "Padlá valkýra",
+        "de": "Gefallene Walküre",
+        "fr": "Valkyrie déchue",
+        "ru": "Падшая валькирия"
+      }
     },
     "fallen-warrior": {
       "id": "fallen-warrior",
@@ -3700,7 +3909,8 @@ window.VC_DATA = {
       "summon": null,
       "location": "Memorial Site",
       "spawns": [],
-      "description": "Fallen Warriors are aggressive creatures found in the Deep"
+      "description": "Fallen Warriors are aggressive creatures found in the Deep",
+      "names": {}
     },
     "fenring": {
       "id": "fenring",
@@ -3765,7 +3975,11 @@ window.VC_DATA = {
       "spawns": [
         "Middle of the Mountains during the nighttime, despawn at dawn (limit 2)"
       ],
-      "description": "Fenrings are aggressive creatures found in the Mountains during the night. Their appearance is distinctly werewolf-like, standing on two legs with a black fur coat. Unlike their Frost cave counterparts, Fenrings only walk on their"
+      "description": "Fenrings are aggressive creatures found in the Mountains during the night. Their appearance is distinctly werewolf-like, standing on two legs with a black fur coat. Unlike their Frost cave counterparts, Fenrings only walk on their",
+      "names": {
+        "fr": "Fenring",
+        "ru": "Фенринг"
+      }
     },
     "frysling": {
       "id": "frysling",
@@ -3821,7 +4035,8 @@ window.VC_DATA = {
       "summon": null,
       "location": null,
       "spawns": [],
-      "description": "Fryslings are hostile Deep North creatures that attack from range by throwing snowballs. They drop Frostcores, but in the current game version no location or dungeon places Frysling spawners, so they do not appear in normal play; Frostcores are instead found hanging in the Winding"
+      "description": "Fryslings are hostile Deep North creatures that attack from range by throwing snowballs. They drop Frostcores, but in the current game version no location or dungeon places Frysling spawners, so they do not appear in normal play; Frostcores are instead found hanging in the Winding",
+      "names": {}
     },
     "fuling": {
       "id": "fuling",
@@ -3983,7 +4198,12 @@ window.VC_DATA = {
         "During \"They were bros, man.\" event (limit 8)",
         "Spawn zones in Goblin Plains (limit 5)"
       ],
-      "description": "Fulings are aggressive creatures found in Plains, especially within Fuling Villages. They resemble small, goblin-like beings that appear to possess their own tribalistic culture. It is implied through Runestones and totems that they worship Yagluth, a long dead"
+      "description": "Fulings are aggressive creatures found in Plains, especially within Fuling Villages. They resemble small, goblin-like beings that appear to possess their own tribalistic culture. It is implied through Runestones and totems that they worship Yagluth, a long dead",
+      "names": {
+        "de": "Fuling",
+        "fr": "Gobelin",
+        "ru": "Фулинг"
+      }
     },
     "fuling-berserker": {
       "id": "fuling-berserker",
@@ -4108,7 +4328,11 @@ window.VC_DATA = {
         "During \"The horde is attacking!\" event (limit 2)",
         "During \"They were bros, man.\" event (limit 2)"
       ],
-      "description": "Fuling Berserkers are aggressive creatures found in Plains guarding Fuling Villages and Stonehenges. They are large, strong goblin-like beings that appear to possess their own tribalistic culture. It is implied through runestones and totems that they worship Yagluth, a long dead"
+      "description": "Fuling Berserkers are aggressive creatures found in Plains guarding Fuling Villages and Stonehenges. They are large, strong goblin-like beings that appear to possess their own tribalistic culture. It is implied through runestones and totems that they worship Yagluth, a long dead",
+      "names": {
+        "fr": "Berserker Gobelin",
+        "ru": "Фулинг-берсерк"
+      }
     },
     "fuling-shaman": {
       "id": "fuling-shaman",
@@ -4182,7 +4406,12 @@ window.VC_DATA = {
         "Uncommon spawn point in Fuling Villages",
         "During \"The horde is attacking\" event (limit 1)"
       ],
-      "description": "Fuling shamans are aggressive creatures found in Plains occupying Fuling Villages. They are ritualistic, goblin-like beings that appear to possess their own tribalistic culture. It is implied through runestones and totems that they worship Yagluth, a long dead"
+      "description": "Fuling shamans are aggressive creatures found in Plains occupying Fuling Villages. They are ritualistic, goblin-like beings that appear to possess their own tribalistic culture. It is implied through runestones and totems that they worship Yagluth, a long dead",
+      "names": {
+        "de": "Fuling Schamane",
+        "fr": "Chaman Gobelin",
+        "ru": "Фулинг-шаман"
+      }
     },
     "gammeltroll": {
       "id": "gammeltroll",
@@ -4279,7 +4508,8 @@ window.VC_DATA = {
       "spawns": [
         "Anywhere in Deep North above altitude 10, during the day and night, alone (limit 1)"
       ],
-      "description": "Gammeltrolls are huge hostile creatures that roam around the Deep North. They are elder Trolls, the largest creatures in all of"
+      "description": "Gammeltrolls are huge hostile creatures that roam around the Deep North. They are elder Trolls, the largest creatures in all of",
+      "names": {}
     },
     "geirrhafa": {
       "id": "geirrhafa",
@@ -4360,7 +4590,11 @@ window.VC_DATA = {
       "summon": null,
       "location": "Howling Cavern",
       "spawns": [],
-      "description": "Geirrhafa is an aggressive miniboss found in Mountains inside Howling Cavern. He looks exactly like a Cultist, but his fur is white and his cloak is black with red"
+      "description": "Geirrhafa is an aggressive miniboss found in Mountains inside Howling Cavern. He looks exactly like a Cultist, but his fur is white and his cloak is black with red",
+      "names": {
+        "de": "Geirrhafa",
+        "ru": "Гейрафа"
+      }
     },
     "ghost": {
       "id": "ghost",
@@ -4421,7 +4655,13 @@ window.VC_DATA = {
         "During \"You feel a chill down your spine...\" event after defeating Bonemass (limit 3)",
         "Uncommon spawn point in Smouldering Tomb"
       ],
-      "description": "Ghosts are aggressive creatures found in Black Forests within Burial Chambers, and as part of \"You feel a chill down your spine...\" raid"
+      "description": "Ghosts are aggressive creatures found in Black Forests within Burial Chambers, and as part of \"You feel a chill down your spine...\" raid",
+      "names": {
+        "cs": "Duch",
+        "de": "Geist",
+        "fr": "Fantôme",
+        "ru": "Дух"
+      }
     },
     "giant-herring": {
       "id": "giant-herring",
@@ -4457,7 +4697,13 @@ window.VC_DATA = {
       "summon": null,
       "location": null,
       "spawns": [],
-      "description": "Giant herring are passive creatures (fish) found in the waters just offshore of the Swamp"
+      "description": "Giant herring are passive creatures (fish) found in the waters just offshore of the Swamp",
+      "names": {
+        "cs": "Obří Sleď",
+        "de": "Riesenhering",
+        "fr": "Guinée saumon",
+        "ru": "Гигантская сельдь"
+      }
     },
     "gjall": {
       "id": "gjall",
@@ -4584,7 +4830,12 @@ window.VC_DATA = {
         "Middle of the Mistlands during the nighttime, despawn at dawn (limit 1)",
         "During \"What's up, Gjall!?\" event before defeating The Queen (limit 1)"
       ],
-      "description": "Gjall are massive flying, aggressive creatures found in the Mistlands. If there is one nearby, you will be alerted by a unique sound: a cross between a plane and an airhorn. Additionally, the mist in the immediate area around a Gjall will have a fiery orange"
+      "description": "Gjall are massive flying, aggressive creatures found in the Mistlands. If there is one nearby, you will be alerted by a unique sound: a cross between a plane and an airhorn. Additionally, the mist in the immediate area around a Gjall will have a fiery orange",
+      "names": {
+        "cs": "Gjall",
+        "de": "Gjall",
+        "ru": "Гьялль"
+      }
     },
     "greydwarf": {
       "id": "greydwarf",
@@ -4703,7 +4954,13 @@ window.VC_DATA = {
         "From Greydwarf Nests in Black Forest (limit 3)",
         "During \"The forest is moving...\" event before defeating The Elder (limit 6)"
       ],
-      "description": "Greydwarfs are aggressive creatures found in Black Forests. They are mossy tree-like beings and are twice as strong as their Greyling"
+      "description": "Greydwarfs are aggressive creatures found in Black Forests. They are mossy tree-like beings and are twice as strong as their Greyling",
+      "names": {
+        "cs": "Šedý trpaslík",
+        "de": "Grauzwerg",
+        "fr": "Naingris",
+        "ru": "Грейдворф"
+      }
     },
     "greydwarf-deep-north": {
       "id": "greydwarf-deep-north",
@@ -4815,7 +5072,8 @@ window.VC_DATA = {
       "spawns": [
         "Anywhere in Deep North (limit 5)"
       ],
-      "description": "Greydwarf (Deep North) is a stronger version of Greydwarf found in Deep"
+      "description": "Greydwarf (Deep North) is a stronger version of Greydwarf found in Deep",
+      "names": {}
     },
     "greydwarf-brute": {
       "id": "greydwarf-brute",
@@ -4912,7 +5170,13 @@ window.VC_DATA = {
         "During \"The forest is moving...\" event before defeating The Elder (limit 1)",
         "Spawn zones in Root Black Forest at night (limit 3)"
       ],
-      "description": "Greydwarf brutes are aggressive creatures found in Black Forests. They are large mossy tree-like beings and are substantially bigger and stronger than"
+      "description": "Greydwarf brutes are aggressive creatures found in Black Forests. They are large mossy tree-like beings and are substantially bigger and stronger than",
+      "names": {
+        "cs": "Šedý trpaslík surovec",
+        "de": "Grauzwergen Berserker",
+        "fr": "Brute Naingris",
+        "ru": "Грейдворф-дикарь"
+      }
     },
     "greydwarf-shaman": {
       "id": "greydwarf-shaman",
@@ -5045,7 +5309,13 @@ window.VC_DATA = {
         "Rarely from Greydwarf Nests in Black Forest (limit 3)",
         "During \"The forest is moving...\" event before defeating The Elder (limit 1)"
       ],
-      "description": "Greydwarf shamans are aggressive creatures found in Black Forests. They are mossy tree-like beings that act primarily as healers in patrols while also possessing the ability to cast a ranged poison"
+      "description": "Greydwarf shamans are aggressive creatures found in Black Forests. They are mossy tree-like beings that act primarily as healers in patrols while also possessing the ability to cast a ranged poison",
+      "names": {
+        "cs": "Šaman šedý trpaslík",
+        "de": "Grauzwergen Schamane",
+        "fr": "Chaman Naingris",
+        "ru": "Грейдворф-шаман"
+      }
     },
     "greydwarf-shaman-deep-north": {
       "id": "greydwarf-shaman-deep-north",
@@ -5166,7 +5436,8 @@ window.VC_DATA = {
       "spawns": [
         "Anywhere in Deep North above altitude 10, during the day and night, in groups of two to four (limit 1)"
       ],
-      "description": "The Greydwarf Shaman of the Deep North is a hostile creature, a Deep North variant of the Greydwarf"
+      "description": "The Greydwarf Shaman of the Deep North is a hostile creature, a Deep North variant of the Greydwarf",
+      "names": {}
     },
     "greyling": {
       "id": "greyling",
@@ -5221,7 +5492,13 @@ window.VC_DATA = {
         "Anywhere in forests of Meadows (limit 2)",
         "During \"The forest is moving...\" event before defeating The Elder (limit 4)"
       ],
-      "description": "Greylings are aggressive creatures found in Meadows. They are mossy tree-like beings and are substantially weaker than their Greydwarf"
+      "description": "Greylings are aggressive creatures found in Meadows. They are mossy tree-like beings and are substantially weaker than their Greydwarf",
+      "names": {
+        "cs": "Greyling",
+        "de": "Gräuling",
+        "fr": "Bourgeon Naingris",
+        "ru": "Грейлинг"
+      }
     },
     "grouper": {
       "id": "grouper",
@@ -5257,7 +5534,13 @@ window.VC_DATA = {
       "summon": null,
       "location": null,
       "spawns": [],
-      "description": "Grouper are passive creatures (fish) found in the waters just offshore of the Plains"
+      "description": "Grouper are passive creatures (fish) found in the waters just offshore of the Plains",
+      "names": {
+        "cs": "Kanic",
+        "de": "Zackenbarsch",
+        "fr": "Mérou",
+        "ru": "Групер"
+      }
     },
     "growth": {
       "id": "growth",
@@ -5322,7 +5605,13 @@ window.VC_DATA = {
         "Up to 9 spawn points in Tar Pits",
         "When a Blob bomb Tar is used (limit -)"
       ],
-      "description": "Growths are aggressive creatures found in Plains, specifically in Tar pits. They, like Blobs and Oozers, are large, gelatinous piles of sentient tar that emit poisonous black"
+      "description": "Growths are aggressive creatures found in Plains, specifically in Tar pits. They, like Blobs and Oozers, are large, gelatinous piles of sentient tar that emit poisonous black",
+      "names": {
+        "cs": "Dehtová bublina",
+        "de": "Düsterblob",
+        "fr": "Growth",
+        "ru": "Поросль"
+      }
     },
     "gull": {
       "id": "gull",
@@ -5368,7 +5657,13 @@ window.VC_DATA = {
       "summon": null,
       "location": "* Meadows\n* Black Forest\n* Plains\n* Ocean",
       "spawns": [],
-      "description": "Gulls are passive creatures. They are small birds with long legs and heavy, straight bills. These birds are mainly white, with a yellow beak, gray wings and pinkish beige legs and"
+      "description": "Gulls are passive creatures. They are small birds with long legs and heavy, straight bills. These birds are mainly white, with a yellow beak, gray wings and pinkish beige legs and",
+      "names": {
+        "cs": "Racek",
+        "de": "Möwe",
+        "fr": "Mouette",
+        "ru": "Чайка"
+      }
     },
     "hare": {
       "id": "hare",
@@ -5432,7 +5727,13 @@ window.VC_DATA = {
         "Anywhere in the Mistlands (limit 10)",
         "Spawn zones in Hare Mistlands (limit 20)"
       ],
-      "description": "s are passive creatures found in the Mistlands. Mistlands Hares appear much like real life Hares, except for their valuable scaly"
+      "description": "s are passive creatures found in the Mistlands. Mistlands Hares appear much like real life Hares, except for their valuable scaly",
+      "names": {
+        "cs": "Zajíc",
+        "de": "Hase",
+        "fr": "Lièvre",
+        "ru": "Заяц"
+      }
     },
     "hen": {
       "id": "hen",
@@ -5483,7 +5784,12 @@ window.VC_DATA = {
       "summon": null,
       "location": null,
       "spawns": [],
-      "description": "Hen are passive creatures that can only appear when an Egg hatches. They are the grown stage of"
+      "description": "Hen are passive creatures that can only appear when an Egg hatches. They are the grown stage of",
+      "names": {
+        "cs": "Slepice",
+        "de": "Henne",
+        "ru": "Курица"
+      }
     },
     "hexen": {
       "id": "hexen",
@@ -5605,7 +5911,8 @@ window.VC_DATA = {
         "Daytime patrol in the Deep North that hunts the player, alone; requires the world key jotun_killed (limit 2)",
         "Jotun Invasions (limit 2)"
       ],
-      "description": "Hexen are aggressive creatures found in Mörkhalla and during Jotun Invasions. They fly around and cast damaging"
+      "description": "Hexen are aggressive creatures found in Mörkhalla and during Jotun Invasions. They fly around and cast damaging",
+      "names": {}
     },
     "imprisoned-dvergr": {
       "id": "imprisoned-dvergr",
@@ -5717,7 +6024,8 @@ window.VC_DATA = {
       "spawns": [
         "Spawn point in Mörkhalla"
       ],
-      "description": "Imprisoned Dvergr are neutral Deep North creatures found in"
+      "description": "Imprisoned Dvergr are neutral Deep North creatures found in",
+      "names": {}
     },
     "kall-fimbulbringer": {
       "id": "kall-fimbulbringer",
@@ -5885,7 +6193,8 @@ window.VC_DATA = {
       "summon": "Malicious Blood x3",
       "location": "Deep North",
       "spawns": [],
-      "description": "Kall Fimbulbringer is the eighth and final"
+      "description": "Kall Fimbulbringer is the eighth and final",
+      "names": {}
     },
     "krigen": {
       "id": "krigen",
@@ -6288,7 +6597,8 @@ window.VC_DATA = {
         "Daytime patrol in the Deep North that hunts the player, in groups of one to two, sword or greataxe only; requires the world key jotun_killed (limit 2)",
         "Jotun Invasions, in groups of one to two, sword or greataxe only (limit 4)"
       ],
-      "description": "Krigen are aggressive creatures found in Mörkhalla and during Jotun Invasions. They have three variants, wielding either a two-handed sword, two axes, or a two-handed"
+      "description": "Krigen are aggressive creatures found in Mörkhalla and during Jotun Invasions. They have three variants, wielding either a two-handed sword, two axes, or a two-handed",
+      "names": {}
     },
     "kvastur": {
       "id": "kvastur",
@@ -6347,7 +6657,10 @@ window.VC_DATA = {
       "summon": null,
       "location": "Swamp",
       "spawns": [],
-      "description": "Kvastur is a neutral creature found in The Bog Witch hut. It defends itself if"
+      "description": "Kvastur is a neutral creature found in The Bog Witch hut. It defends itself if",
+      "names": {
+        "ru": "Квастур"
+      }
     },
     "lava-blob": {
       "id": "lava-blob",
@@ -6410,7 +6723,10 @@ window.VC_DATA = {
         "Middle of the Ashlands (limit 2)",
         "When a Blob bomb Lava is used (limit -)"
       ],
-      "description": "Lava Blobs are aggressive creatures found in the Ashlands. They are the lava counterparts of Blobs that can spread"
+      "description": "Lava Blobs are aggressive creatures found in the Ashlands. They are the lava counterparts of Blobs that can spread",
+      "names": {
+        "ru": "Лавовый сгустень"
+      }
     },
     "leech": {
       "id": "leech",
@@ -6503,7 +6819,13 @@ window.VC_DATA = {
       "spawns": [
         "Anywhere in waters of Swamps (limit 10)"
       ],
-      "description": "Leeches are aggressive creatures found in Swamps. They are enlarged, aquatic annelid worms that feed off their victims by sucking their"
+      "description": "Leeches are aggressive creatures found in Swamps. They are enlarged, aquatic annelid worms that feed off their victims by sucking their",
+      "names": {
+        "cs": "Pijavice",
+        "de": "Schlundegel",
+        "fr": "Sangsue",
+        "ru": "Пиявка"
+      }
     },
     "leviathan": {
       "id": "leviathan",
@@ -6541,7 +6863,12 @@ window.VC_DATA = {
       "summon": null,
       "location": "Ocean",
       "spawns": [],
-      "description": "Leviathans are passive creatures found in Oceans. They are massive rock-type beings that have a 10% chance of submerging each time their Abyssal Barnacles are"
+      "description": "Leviathans are passive creatures found in Oceans. They are massive rock-type beings that have a 10% chance of submerging each time their Abyssal Barnacles are",
+      "names": {
+        "cs": "Leviatan",
+        "de": "Leviathan",
+        "ru": "Левиафан"
+      }
     },
     "lord-reto": {
       "id": "lord-reto",
@@ -6617,7 +6944,10 @@ window.VC_DATA = {
       "summon": null,
       "location": "Ashlands",
       "spawns": [],
-      "description": "Lord Reto is a miniboss found in the Ashlands. He is part of the sub-quest to craft the"
+      "description": "Lord Reto is a miniboss found in the Ashlands. He is part of the sub-quest to craft the",
+      "names": {
+        "ru": "Владыка Рето"
+      }
     },
     "lox": {
       "id": "lox",
@@ -6690,7 +7020,13 @@ window.VC_DATA = {
         "From breeding (limit 4 within 20 meters)",
         "Spawn zones in Lox Plains (limit 15)"
       ],
-      "description": "Lox are aggressive creatures found in Plains. They are an enlarged fusion of both a lizard and an ox, with shaggy brown hair and reptilian skin. Lox can be tamed which allows them to be bred and"
+      "description": "Lox are aggressive creatures found in Plains. They are an enlarged fusion of both a lizard and an ox, with shaggy brown hair and reptilian skin. Lox can be tamed which allows them to be bred and",
+      "names": {
+        "cs": "Lox",
+        "de": "Lox",
+        "fr": "Lox",
+        "ru": "Быкоящер"
+      }
     },
     "magmafish": {
       "id": "magmafish",
@@ -6726,7 +7062,13 @@ window.VC_DATA = {
       "summon": null,
       "location": null,
       "spawns": [],
-      "description": "Magmafish are passive creatures (fish) found in the waters of the Ashlands"
+      "description": "Magmafish are passive creatures (fish) found in the waters of the Ashlands",
+      "names": {
+        "cs": "Magmaplavka",
+        "de": "Magmafisch",
+        "fr": "Poisson-magma",
+        "ru": "Магмарыбка"
+      }
     },
     "mistile": {
       "id": "mistile",
@@ -6775,7 +7117,8 @@ window.VC_DATA = {
       "summon": null,
       "location": "Mistlands",
       "spawns": [],
-      "description": "Mistiles are homing balls of light spawned exclusively by Dvergr Mages. They deal blunt damage upon contact with the enemy. They can be targeted by the player's ranged and melee weapons, and disperse harmlessly if"
+      "description": "Mistiles are homing balls of light spawned exclusively by Dvergr Mages. They deal blunt damage upon contact with the enemy. They can be targeted by the player's ranged and melee weapons, and disperse harmlessly if",
+      "names": {}
     },
     "moder": {
       "id": "moder",
@@ -6871,7 +7214,12 @@ window.VC_DATA = {
       "summon": "Dragon Egg x3",
       "location": "* Mountain",
       "spawns": [],
-      "description": "Moder is the fourth boss. She appears as a massive frost dragon with black scales, a white fur mane and tattered wings. According to numerous Runestones, she is the mother of all"
+      "description": "Moder is the fourth boss. She appears as a massive frost dragon with black scales, a white fur mane and tattered wings. According to numerous Runestones, she is the mother of all",
+      "names": {
+        "cs": "Moder",
+        "de": "Drachenmutter",
+        "ru": "Матерь"
+      }
     },
     "moose": {
       "id": "moose",
@@ -6949,7 +7297,8 @@ window.VC_DATA = {
       "spawns": [
         "Anywhere in Deep North (limit 3)"
       ],
-      "description": "Moose are aggressive creatures found in the Deep North. They can be tamed which allows them to be ridden, akin to Lox and"
+      "description": "Moose are aggressive creatures found in the Deep North. They can be tamed which allows them to be ridden, akin to Lox and",
+      "names": {}
     },
     "moose-calf": {
       "id": "moose-calf",
@@ -7011,7 +7360,8 @@ window.VC_DATA = {
       "summon": null,
       "location": "Deep North",
       "spawns": [],
-      "description": "The Moose Calf is the young form of the Moose, found in the Deep North. It grows into an adult Moose after 3,000 seconds (50 minutes). A calf born to a tamed Moose stays tamed when it grows"
+      "description": "The Moose Calf is the young form of the Moose, found in the Deep North. It grows into an adult Moose after 3,000 seconds (50 minutes). A calf born to a tamed Moose stays tamed when it grows",
+      "names": {}
     },
     "morgen": {
       "id": "morgen",
@@ -7216,7 +7566,10 @@ window.VC_DATA = {
         "Burrowing in the middle of some Ashlands ruins (limit 1)",
         "Inside Putrid Holes (limit 1)"
       ],
-      "description": "Morgens are agile, aggressive foes found in the Ashlands. They rise from the ground after breaking out of their disguise, similar to"
+      "description": "Morgens are agile, aggressive foes found in the Ashlands. They rise from the ground after breaking out of their disguise, similar to",
+      "names": {
+        "ru": "Морген"
+      }
     },
     "neck": {
       "id": "neck",
@@ -7308,7 +7661,14 @@ window.VC_DATA = {
         "Spawn zones in Smalltree Meadows near water (limit 6)",
         "Spawn zones in Smalltree Meadows when raining (limit 8)"
       ],
-      "description": "Necks are aggressive creatures found in Meadows near water. They are amphibious in nature with four eyes and lily pads protruding out of their"
+      "description": "Necks are aggressive creatures found in Meadows near water. They are amphibious in nature with four eyes and lily pads protruding out of their",
+      "names": {
+        "cs": "Neck",
+        "de": "Nixe",
+        "fr": "Nixe",
+        "pt": "Lagarto",
+        "ru": "Никс"
+      }
     },
     "northern-salmon": {
       "id": "northern-salmon",
@@ -7344,7 +7704,13 @@ window.VC_DATA = {
       "summon": null,
       "location": null,
       "spawns": [],
-      "description": "Northern salmon are passive creatures (fish) found in the waters of the Deep North"
+      "description": "Northern salmon are passive creatures (fish) found in the waters of the Deep North",
+      "names": {
+        "cs": "Severní Losos",
+        "de": "Nordlachs",
+        "fr": "Saumon nordique",
+        "ru": "Северный лосось"
+      }
     },
     "oozer": {
       "id": "oozer",
@@ -7408,7 +7774,13 @@ window.VC_DATA = {
         "During \"A foul smell from the swamp\" event after defeating Bonemass (limit 2)",
         "When a Blob bomb Elite poison is used (limit -)"
       ],
-      "description": "Oozers are aggressive creatures found in Swamps. They are large, gelatinous piles of sentient ooze that emit poisonous yellow gasses. Upon death, they split into two"
+      "description": "Oozers are aggressive creatures found in Swamps. They are large, gelatinous piles of sentient ooze that emit poisonous yellow gasses. Upon death, they split into two",
+      "names": {
+        "cs": "Oozer",
+        "de": "Schleimmasse",
+        "fr": "Oozer",
+        "ru": "Слизняк"
+      }
     },
     "perch": {
       "id": "perch",
@@ -7445,7 +7817,13 @@ window.VC_DATA = {
       "summon": null,
       "location": null,
       "spawns": [],
-      "description": "Perch are coastal fish found offshore the Meadows and Black Forest. They can be caught with a Fishing Rod using the basic Fishing Bait sold by"
+      "description": "Perch are coastal fish found offshore the Meadows and Black Forest. They can be caught with a Fishing Rod using the basic Fishing Bait sold by",
+      "names": {
+        "cs": "Okoun",
+        "de": "Barsch",
+        "fr": "Perche",
+        "ru": "Окунь"
+      }
     },
     "pike": {
       "id": "pike",
@@ -7482,7 +7860,13 @@ window.VC_DATA = {
       "summon": null,
       "location": null,
       "spawns": [],
-      "description": "}} Pike are coastal fish found offshore the Meadows and Black Forest. They can be caught with a Fishing Rod using Fishing Bait purchased from Haldor or Cold fishing bait which can be crafted at the Food Preparation Table by combining 20 Fishing Bait and a Fenring"
+      "description": "}} Pike are coastal fish found offshore the Meadows and Black Forest. They can be caught with a Fishing Rod using Fishing Bait purchased from Haldor or Cold fishing bait which can be crafted at the Food Preparation Table by combining 20 Fishing Bait and a Fenring",
+      "names": {
+        "cs": "Štika",
+        "de": "Hecht",
+        "fr": "Brochet",
+        "ru": "Щука"
+      }
     },
     "pufferfish": {
       "id": "pufferfish",
@@ -7519,7 +7903,13 @@ window.VC_DATA = {
       "summon": null,
       "location": null,
       "spawns": [],
-      "description": "Pufferfish are passive creatures (fish) found in the waters just offshore of the Mistlands"
+      "description": "Pufferfish are passive creatures (fish) found in the waters just offshore of the Mistlands",
+      "names": {
+        "cs": "Čtverzubka",
+        "de": "Kugelfisch",
+        "fr": "Poisson-globe",
+        "ru": "Иглобрюх"
+      }
     },
     "rancid-remains": {
       "id": "rancid-remains",
@@ -7617,7 +8007,13 @@ window.VC_DATA = {
         "Spawn zones in Bones (Plains) (limit 3)",
         "Spawn zones in Bones (Mistlands) (limit 3)"
       ],
-      "description": "Rancid remains are aggressive creatures found in Burial Chambers. They are, as their name suggests, human skeletal remains which have since been resurrected from the dead. Rancid remains are also slightly larger and stronger than regular Skeletons. Their hits inflict"
+      "description": "Rancid remains are aggressive creatures found in Burial Chambers. They are, as their name suggests, human skeletal remains which have since been resurrected from the dead. Rancid remains are also slightly larger and stronger than regular Skeletons. Their hits inflict",
+      "names": {
+        "cs": "Zatuchlé zůstatky",
+        "de": "Ranzige Überreste",
+        "fr": "Cadavre rance",
+        "ru": "Сгнившие останки"
+      }
     },
     "seal": {
       "id": "seal",
@@ -7682,7 +8078,8 @@ window.VC_DATA = {
         "Anywhere in the Deep North at altitudes -2 to 5 (shorelines), in groups of one to two (limit 5)",
         "Anywhere in the Deep North at altitudes -2 to 5 (shorelines), in groups of one to three (limit 3)"
       ],
-      "description": "}} }} Seals are passive creatures found on the shores and Abandoned Villages of the Deep North. They come in 0, 1 and 2-star"
+      "description": "}} }} Seals are passive creatures found on the shores and Abandoned Villages of the Deep North. They come in 0, 1 and 2-star",
+      "names": {}
     },
     "seeker": {
       "id": "seeker",
@@ -7846,7 +8243,12 @@ window.VC_DATA = {
         "Spawned by The Queen (amount based on nearby players) (limit 2-5)",
         "During \"They sought you out\" event before defeating The Queen (limit 3)"
       ],
-      "description": "Seekers are aggressive creatures found in the Mistlands and in Infested"
+      "description": "Seekers are aggressive creatures found in the Mistlands and in Infested",
+      "names": {
+        "cs": "Hledač",
+        "fr": "Fouineur",
+        "ru": "Искатель"
+      }
     },
     "seeker-brood": {
       "id": "seeker-brood",
@@ -7904,7 +8306,12 @@ window.VC_DATA = {
         "During \"They sought you out.\" event before defeating The Queen (limit 8)",
         "Spawn zones in BroodSwarm Mistlands at night (limit 100)"
       ],
-      "description": "s are aggressive creatures found within Infested Mines in the"
+      "description": "s are aggressive creatures found within Infested Mines in the",
+      "names": {
+        "cs": "Potomstvo Hledačů",
+        "fr": "Fouineur",
+        "ru": "Выводок искателя"
+      }
     },
     "seeker-soldier": {
       "id": "seeker-soldier",
@@ -8066,7 +8473,11 @@ window.VC_DATA = {
         "Spawn points near some Mistlands structures (limit -)",
         "Spawn points in Infested Mines (limit -)"
       ],
-      "description": "Seeker Soldiers are aggressive creatures found in the Mistlands and in Infested"
+      "description": "Seeker Soldiers are aggressive creatures found in the Mistlands and in Infested",
+      "names": {
+        "cs": "Voják Hledačů",
+        "ru": "Искатель-солдат"
+      }
     },
     "serpent": {
       "id": "serpent",
@@ -8129,7 +8540,11 @@ window.VC_DATA = {
         "Middle of Ocean during the night time, despawn at dawn (limit 1)",
         "Middle of Ocean during rain or thunderstorm (limit 1)"
       ],
-      "description": "Serpents are aggressive creatures found in Oceans, and currently the only hostile creature spawning in Oceans. They are large, aquatic snake-like reptilian creatures with six glowing eyes, spiked dorsal fins and a gaping mouth filled with razor-sharp"
+      "description": "Serpents are aggressive creatures found in Oceans, and currently the only hostile creature spawning in Oceans. They are large, aquatic snake-like reptilian creatures with six glowing eyes, spiked dorsal fins and a gaping mouth filled with razor-sharp",
+      "names": {
+        "fr": "Serpent",
+        "ru": "Змей"
+      }
     },
     "shadow": {
       "id": "shadow",
@@ -8176,7 +8591,8 @@ window.VC_DATA = {
       "summon": null,
       "location": null,
       "spawns": [],
-      "description": "Shadow are the souls of fallen warriors, They are found in Abandoned Villages and sometime roaming in Deep North during the"
+      "description": "Shadow are the souls of fallen warriors, They are found in Abandoned Villages and sometime roaming in Deep North during the",
+      "names": {}
     },
     "shapeless-pulp": {
       "id": "shapeless-pulp",
@@ -8275,7 +8691,8 @@ window.VC_DATA = {
         "Spawned from Hexahedric Pulp, only while no other Shapeless Pulp is within 20 meters of it (limit 1)",
         "When a Blob Bomb Pulp is used (limit -)"
       ],
-      "description": "Shapeless Pulp is a hostile creature found in Mörkhalla in the Deep North. They are spawned by Hexahedric Pulp every six seconds while a player is within 20 meters, and themselves turn into Tiny"
+      "description": "Shapeless Pulp is a hostile creature found in Mörkhalla in the Deep North. They are spawned by Hexahedric Pulp every six seconds while a player is within 20 meters, and themselves turn into Tiny",
+      "names": {}
     },
     "skeleton": {
       "id": "skeleton",
@@ -8588,7 +9005,13 @@ window.VC_DATA = {
         "Spawn zones in Menhir (Plains) at night, after defeating Bonemass (limit 3)",
         "Spawn zones in Fortress Mountain (limit 10)"
       ],
-      "description": "Skeletons are aggressive creatures found in Meadows, Black Forest, Swamp, Mountain, Deep"
+      "description": "Skeletons are aggressive creatures found in Meadows, Black Forest, Swamp, Mountain, Deep",
+      "names": {
+        "cs": "Kostlivec",
+        "de": "Skelett",
+        "fr": "Squelette",
+        "ru": "Скелет"
+      }
     },
     "skugg": {
       "id": "skugg",
@@ -8645,7 +9068,10 @@ window.VC_DATA = {
       "spawns": [
         "Corners of Charred Fortress (limit 4)"
       ],
-      "description": "Skugg are ballistae made of bone and are found in"
+      "description": "Skugg are ballistae made of bone and are found in",
+      "names": {
+        "ru": "Скугг"
+      }
     },
     "stone-golem": {
       "id": "stone-golem",
@@ -8744,7 +9170,11 @@ window.VC_DATA = {
         "Middle of the tall Mountains (120 meter altitude) (limit 1)",
         "Spawn zones in Fortress Mountain (limit 1)"
       ],
-      "description": "Stone Golems are aggressive creatures found in the Mountains. They are snow-covered stone humanoids with silver veins visible on their bodies. When disturbed, they awake from their slumber, attacking both the players and other"
+      "description": "Stone Golems are aggressive creatures found in the Mountains. They are snow-covered stone humanoids with silver veins visible on their bodies. When disturbed, they awake from their slumber, attacking both the players and other",
+      "names": {
+        "fr": "Golem de pierre",
+        "ru": "Каменный голем"
+      }
     },
     "surtling": {
       "id": "surtling",
@@ -8840,7 +9270,13 @@ window.VC_DATA = {
         "3 spawn points near Fire geysers",
         "During \"There's a smell of sulfur in the air...\" event after defeating Bonemass (limit 4)"
       ],
-      "description": "Surtlings are aggressive creatures found near Fire geysers in Swamps. They are small flaming imps that are relatively weak, especially in Swamps where the constant raining significantly reduces the damage from their ranged fireball"
+      "description": "Surtlings are aggressive creatures found near Fire geysers in Swamps. They are small flaming imps that are relatively weak, especially in Swamps where the constant raining significantly reduces the damage from their ranged fireball",
+      "names": {
+        "cs": "Surtling",
+        "de": "Surtling",
+        "fr": "Surtling",
+        "ru": "Суртлинг"
+      }
     },
     "tetra": {
       "id": "tetra",
@@ -8876,7 +9312,13 @@ window.VC_DATA = {
       "summon": null,
       "location": null,
       "spawns": [],
-      "description": "Tetra are passive creatures (fish) found in the super-rare lakes at the bottom of Frost Caves of the Mountain"
+      "description": "Tetra are passive creatures (fish) found in the super-rare lakes at the bottom of Frost Caves of the Mountain",
+      "names": {
+        "cs": "Tetra",
+        "de": "Salmler",
+        "fr": "Tétra",
+        "ru": "Тетра"
+      }
     },
     "the-elder": {
       "id": "the-elder",
@@ -8948,7 +9390,13 @@ window.VC_DATA = {
       "summon": "Ancient Seed x3",
       "location": "* Black Forest",
       "spawns": [],
-      "description": "The Elder is the second boss. He appears as a towering humanoid tree-like entity with multiple thin branches sprouting out of his slender, bark-covered"
+      "description": "The Elder is the second boss. He appears as a towering humanoid tree-like entity with multiple thin branches sprouting out of his slender, bark-covered",
+      "names": {
+        "cs": "Prastarý",
+        "de": "Der Uralte",
+        "fr": "L'Aîné",
+        "ru": "Древний"
+      }
     },
     "the-queen": {
       "id": "the-queen",
@@ -9050,7 +9498,11 @@ window.VC_DATA = {
       "summon": null,
       "location": "Mistlands",
       "spawns": [],
-      "description": "The Queen is the sixth boss. She is a monstrous Seeker Matriarch, and her appearance differs substantially from other Seekers. Her body is larva-like (similar to Seeker Broods), her four \"arms\" are all located nearer to the head, and she has a distinctive mouth lined with small, sharp teeth. Some features she shares with other Seekers are a set of large mandibles like the Seeker Soldier, antennae"
+      "description": "The Queen is the sixth boss. She is a monstrous Seeker Matriarch, and her appearance differs substantially from other Seekers. Her body is larva-like (similar to Seeker Broods), her four \"arms\" are all located nearer to the head, and she has a distinctive mouth lined with small, sharp teeth. Some features she shares with other Seekers are a set of large mandibles like the Seeker Soldier, antennae",
+      "names": {
+        "cs": "Královna",
+        "ru": "Королева"
+      }
     },
     "tick": {
       "id": "tick",
@@ -9142,7 +9594,11 @@ window.VC_DATA = {
         "Spawned by Gjalls (3 per ability) (limit 8)",
         "During \"What's up, Gjall?!\" event before defeating The Queen (limit 4)"
       ],
-      "description": "Ticks are aggressive creatures found in the Mistlands. Ticks look like giant versions of their [https://en.wikipedia.org/wiki/Tick namesakes]. Their only attack is to latch onto their target and deal constant"
+      "description": "Ticks are aggressive creatures found in the Mistlands. Ticks look like giant versions of their [https://en.wikipedia.org/wiki/Tick namesakes]. Their only attack is to latch onto their target and deal constant",
+      "names": {
+        "cs": "Klíště",
+        "ru": "Клещ"
+      }
     },
     "tiny-pulp": {
       "id": "tiny-pulp",
@@ -9192,7 +9648,8 @@ window.VC_DATA = {
       "spawns": [
         "Spawned from Shapeless Pulp death (limit 1)"
       ],
-      "description": "Tiny Pulp is a passive creature found in Mörkhalla in the Deep"
+      "description": "Tiny Pulp is a passive creature found in Mörkhalla in the Deep",
+      "names": {}
     },
     "troll": {
       "id": "troll",
@@ -9440,7 +9897,13 @@ window.VC_DATA = {
         "During \"The ground is shaking\" event after defeating The Elder (limit 2)",
         "Spawn zones in Troll Black Forest (limit 2)"
       ],
-      "description": "Trolls are aggressive creatures found in Black Forests. They are massive, bumbling humanoids with brutish limbs and wiry blonde hair. They may spawn with a large tree trunk in their"
+      "description": "Trolls are aggressive creatures found in Black Forests. They are massive, bumbling humanoids with brutish limbs and wiry blonde hair. They may spawn with a large tree trunk in their",
+      "names": {
+        "cs": "Troll",
+        "de": "Troll",
+        "fr": "Troll",
+        "ru": "Тролль"
+      }
     },
     "trollfish": {
       "id": "trollfish",
@@ -9476,7 +9939,13 @@ window.VC_DATA = {
       "summon": null,
       "location": null,
       "spawns": [],
-      "description": "Trollfish are passive creatures (fish) found in the waters just offshore of the Black Forest"
+      "description": "Trollfish are passive creatures (fish) found in the waters just offshore of the Black Forest",
+      "names": {
+        "cs": "Trollyba",
+        "de": "Trollfisch",
+        "fr": "Poisson-troll",
+        "ru": "Тролль-рыба"
+      }
     },
     "tuna": {
       "id": "tuna",
@@ -9512,7 +9981,13 @@ window.VC_DATA = {
       "summon": null,
       "location": null,
       "spawns": [],
-      "description": "Tuna are passive creatures (fish) found in the Ocean"
+      "description": "Tuna are passive creatures (fish) found in the Ocean",
+      "names": {
+        "cs": "Tuňák",
+        "de": "Thunfisch",
+        "fr": "Thon",
+        "ru": "Тунец"
+      }
     },
     "ulv": {
       "id": "ulv",
@@ -9600,7 +10075,12 @@ window.VC_DATA = {
         "Common spawn point in Frost Caves.",
         "Common spawn point in Howling Cavern."
       ],
-      "description": "Ulve are aggressive creatures found in Mountains inside Frost Caves. Their appearance is distinctly werewolf-like, however unlike Fenrings, they trot on"
+      "description": "Ulve are aggressive creatures found in Mountains inside Frost Caves. Their appearance is distinctly werewolf-like, however unlike Fenrings, they trot on",
+      "names": {
+        "cs": "Ulv",
+        "de": "Ulv",
+        "ru": "Ульв"
+      }
     },
     "vile": {
       "id": "vile",
@@ -9703,7 +10183,11 @@ window.VC_DATA = {
       "spawns": [
         "Anywhere in Plains during the nighttime (limit 1)"
       ],
-      "description": "Viles are aggressive creatures found in Plains during the night. They are a stronger, undead variant of"
+      "description": "Viles are aggressive creatures found in Plains during the night. They are a stronger, undead variant of",
+      "names": {
+        "cs": "Děs",
+        "ru": "Гнилолап"
+      }
     },
     "volture": {
       "id": "volture",
@@ -9763,7 +10247,10 @@ window.VC_DATA = {
         "Anywhere in the Ashlands at very low altitudes (e.g. at sea) (limit 3)",
         "1-4 spawn points near Volture Nests"
       ],
-      "description": "Voltures are aggressive enemies found in the Ashlands. Volture nests will spawn Voltures one time. Voltures can also be found flying above the water along the Ashlands"
+      "description": "Voltures are aggressive enemies found in the Ashlands. Volture nests will spawn Voltures one time. Voltures can also be found flying above the water along the Ashlands",
+      "names": {
+        "ru": "Стервулканник"
+      }
     },
     "wolf": {
       "id": "wolf",
@@ -9855,7 +10342,13 @@ window.VC_DATA = {
         "During \"You are being hunted\" event after defeating Bonemass (limit 6)",
         "Spawn zones in Wolf Mountain (limit 8)"
       ],
-      "description": "Wolves are aggressive creatures found in the Mountains. They are large canines with long, bushy tails that can be bred and"
+      "description": "Wolves are aggressive creatures found in the Mountains. They are large canines with long, bushy tails that can be bred and",
+      "names": {
+        "cs": "Vlk",
+        "de": "Wolf",
+        "fr": "Loup",
+        "ru": "Волк"
+      }
     },
     "wraith": {
       "id": "wraith",
@@ -9920,7 +10413,13 @@ window.VC_DATA = {
         "During \"You feel a chill down your spine...\" event after defeating Bonemass (limit 2)",
         "Spawn zones in Hut Swamp at night (limit 3)"
       ],
-      "description": "Wraiths are aggressive creatures found in Swamps. They are dark blueish spectral entities, cloaked with a hood covering their blank face. They emit a quiet snarling hiss sound when they are aggravated. Since they naturally spawn at night, glow and fly, spotting them from a distance is easy; their telltale glow reveals them even to inattentive players as they"
+      "description": "Wraiths are aggressive creatures found in Swamps. They are dark blueish spectral entities, cloaked with a hood covering their blank face. They emit a quiet snarling hiss sound when they are aggravated. Since they naturally spawn at night, glow and fly, spotting them from a distance is easy; their telltale glow reveals them even to inattentive players as they",
+      "names": {
+        "cs": "Přízrak",
+        "de": "Zorngeist",
+        "fr": "Spectre",
+        "ru": "Призрак"
+      }
     },
     "writhan": {
       "id": "writhan",
@@ -10043,7 +10542,8 @@ window.VC_DATA = {
       "spawns": [
         "Anywhere in Swamp (altitude -2 to 10), 2,000 to 8,000 meters from the world center, during the day and night, alone (limit 1)"
       ],
-      "description": "Writhan is an aggressive creature found rarely in the"
+      "description": "Writhan is an aggressive creature found rarely in the",
+      "names": {}
     },
     "yagluth": {
       "id": "yagluth",
@@ -10126,7 +10626,12 @@ window.VC_DATA = {
       "summon": "Fuling Totem x5",
       "location": "Plains",
       "spawns": [],
-      "description": "Yagluth is the fifth boss. He appears as an ancient Fuling spirit inhabiting a now decomposed skeletal body comprised of a head, two arms and a torso. The crown resting upon his skull implies he was once or still is a ruler of some"
+      "description": "Yagluth is the fifth boss. He appears as an ancient Fuling spirit inhabiting a now decomposed skeletal body comprised of a head, two arms and a torso. The crown resting upon his skull implies he was once or still is a ruler of some",
+      "names": {
+        "cs": "Yagluth",
+        "de": "Yagluth",
+        "ru": "Яглут"
+      }
     },
     "zil-thungr": {
       "id": "zil-thungr",
@@ -10208,7 +10713,11 @@ window.VC_DATA = {
       "summon": null,
       "location": "Sealed tower",
       "spawns": [],
-      "description": "Zil & Thungr is an aggressive duo miniboss found in Plains inside Sealed"
+      "description": "Zil & Thungr is an aggressive duo miniboss found in Plains inside Sealed",
+      "names": {
+        "de": "Zil & Thungr",
+        "ru": "Зил и Тангр"
+      }
     }
   },
   "weapons": {
@@ -10252,7 +10761,12 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 3,
       "biome": "ocean",
-      "description": "The ocean's wrath."
+      "description": "The ocean's wrath.",
+      "names": {
+        "cs": "Harpuna z hlubin",
+        "fr": "Harpon abyssal",
+        "ru": "Глубинный гарпун"
+      }
     },
     "abyssal-razor": {
       "id": "abyssal-razor",
@@ -10296,7 +10810,12 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 3,
       "biome": "ocean",
-      "description": "A knife from the deep."
+      "description": "A knife from the deep.",
+      "names": {
+        "cs": "Břitva z hlubin",
+        "fr": "Rasoir abyssal",
+        "ru": "Глубинное лезвие"
+      }
     },
     "ancient-bark-spear": {
       "id": "ancient-bark-spear",
@@ -10338,7 +10857,12 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 4,
       "biome": "swamp",
-      "description": "Despite its gnarled look, this spear is strong and perfectly balanced."
+      "description": "Despite its gnarled look, this spear is strong and perfectly balanced.",
+      "names": {
+        "cs": "Kopí ze starověkého dřeva",
+        "fr": "Lance en écorce ancienne",
+        "ru": "Копье из древней коры"
+      }
     },
     "antler-pickaxe": {
       "id": "antler-pickaxe",
@@ -10378,7 +10902,11 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 1,
       "biome": "meadows",
-      "description": "This tool is hard enough to crack even the most stubborn rocks."
+      "description": "This tool is hard enough to crack even the most stubborn rocks.",
+      "names": {
+        "cs": "Krumpáč z parohu",
+        "ru": "Кирка из оленьего рога"
+      }
     },
     "arbalest": {
       "id": "arbalest",
@@ -10420,7 +10948,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 4,
       "biome": "swamp",
-      "description": "A slow but powerful weapon."
+      "description": "A slow but powerful weapon.",
+      "names": {
+        "ru": "Арбалет"
+      }
     },
     "ash-fang": {
       "id": "ash-fang",
@@ -10469,7 +11000,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "Risen again from the ashes, this bow holds unyielding strength."
+      "description": "Risen again from the ashes, this bow holds unyielding strength.",
+      "names": {
+        "ru": "Пепельный клык"
+      }
     },
     "bare-fists": {
       "id": "bare-fists",
@@ -10498,7 +11032,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 1,
       "biome": "meadows",
-      "description": ""
+      "description": "",
+      "names": {}
     },
     "battleaxe": {
       "id": "battleaxe",
@@ -10542,7 +11077,13 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 4,
       "biome": "swamp",
-      "description": "Skull-splitter, a warrior's joy."
+      "description": "Skull-splitter, a warrior's joy.",
+      "names": {
+        "cs": "Bojová sekera",
+        "de": "Streitaxt",
+        "fr": "Hache de combat",
+        "ru": "Боевой топор"
+      }
     },
     "berserkir-axes": {
       "id": "berserkir-axes",
@@ -10589,7 +11130,11 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "Let your rage take over and face the slaughter."
+      "description": "Let your rage take over and face the slaughter.",
+      "names": {
+        "de": "Berserkir-Äxte",
+        "ru": "Топоры берсеркира"
+      }
     },
     "bile-bomb": {
       "id": "bile-bomb",
@@ -10633,7 +11178,10 @@ window.VC_DATA = {
       "biome": "mistlands",
       "description": "Handle with care.",
       "recommendable": false,
-      "note": "Area/DoT damage not listed on the wiki"
+      "note": "Area/DoT damage not listed on the wiki",
+      "names": {
+        "ru": "Желчная бомба"
+      }
     },
     "black-metal-atgeir": {
       "id": "black-metal-atgeir",
@@ -10675,7 +11223,12 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 6,
       "biome": "plains",
-      "description": "A vicious hewing-axe of almost unbreakable black metal."
+      "description": "A vicious hewing-axe of almost unbreakable black metal.",
+      "names": {
+        "cs": "Atgeir z černého kovu",
+        "fr": "Atgeir en sombracier",
+        "ru": "Алебарда из черного металла"
+      }
     },
     "black-metal-axe": {
       "id": "black-metal-axe",
@@ -10719,7 +11272,13 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 6,
       "biome": "plains",
-      "description": "A perfectly-balanced axe forged from dark metal with an emerald sheen."
+      "description": "A perfectly-balanced axe forged from dark metal with an emerald sheen.",
+      "names": {
+        "cs": "Sekera z černého kovu",
+        "de": "Schwarzmetall-Axt",
+        "fr": "Hache en sombracier",
+        "ru": "Топор из черного металла"
+      }
     },
     "black-metal-battleaxe": {
       "id": "black-metal-battleaxe",
@@ -10763,7 +11322,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 6,
       "biome": "plains",
-      "description": "Green shall be the last thing your foes see before you cleave them in half."
+      "description": "Green shall be the last thing your foes see before you cleave them in half.",
+      "names": {
+        "ru": "Боевой топор из черного металла"
+      }
     },
     "black-metal-bolt": {
       "id": "black-metal-bolt",
@@ -10805,7 +11367,11 @@ window.VC_DATA = {
       "quantity": 20,
       "tier": 6,
       "biome": "plains",
-      "description": "A sleek bolt of dark metal."
+      "description": "A sleek bolt of dark metal.",
+      "names": {
+        "cs": "Šipka z černokovu",
+        "ru": "Болт из черного металла"
+      }
     },
     "black-metal-knife": {
       "id": "black-metal-knife",
@@ -10849,7 +11415,12 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 6,
       "biome": "plains",
-      "description": "A darkling blade. Strong and sharp."
+      "description": "A darkling blade. Strong and sharp.",
+      "names": {
+        "cs": "Nůž z černého kovu",
+        "fr": "Couteau en sombracier",
+        "ru": "Нож из черного металла"
+      }
     },
     "black-metal-pickaxe": {
       "id": "black-metal-pickaxe",
@@ -10892,7 +11463,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 7,
       "biome": "mistlands",
-      "description": "A good strong pick of glistening dark metal."
+      "description": "A good strong pick of glistening dark metal.",
+      "names": {
+        "ru": "Кирка из черного металла"
+      }
     },
     "black-metal-sword": {
       "id": "black-metal-sword",
@@ -10934,7 +11508,13 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 6,
       "biome": "plains",
-      "description": "A thing of death and beauty. It catches the light with a greenish glow."
+      "description": "A thing of death and beauty. It catches the light with a greenish glow.",
+      "names": {
+        "cs": "Meč z černokovu",
+        "de": "Schwarzmetall-Schwert",
+        "fr": "Épée en sombracier",
+        "ru": "Меч из черного металла"
+      }
     },
     "bleeding-berserkir-axes": {
       "id": "bleeding-berserkir-axes",
@@ -10981,7 +11561,13 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "The closer you are to death, the harder you are sure to hit."
+      "description": "The closer you are to death, the harder you are sure to hit.",
+      "names": {
+        "cs": "Krvavé berserkské sekery",
+        "de": "Blutende Berserkir-Äxte",
+        "fr": "Haches des berserkir d'hémorragie",
+        "ru": "Кровоточащие топоры берсеркира"
+      }
     },
     "blood-fang": {
       "id": "blood-fang",
@@ -11026,7 +11612,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "Arrows loosed from this bow will tear into flesh with unmatched ferocity."
+      "description": "Arrows loosed from this bow will tear into flesh with unmatched ferocity.",
+      "names": {
+        "ru": "Кровавый клык"
+      }
     },
     "bloodgeon": {
       "id": "bloodgeon",
@@ -11070,7 +11659,12 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "The blood all but soaks into this mace, and it always yearns for more."
+      "description": "The blood all but soaks into this mace, and it always yearns for more.",
+      "names": {
+        "de": "Blutprügel",
+        "fr": "Masse-sang",
+        "ru": "Кровавая булава"
+      }
     },
     "bloodgold-arrow": {
       "id": "bloodgold-arrow",
@@ -11112,7 +11706,8 @@ window.VC_DATA = {
       "quantity": 20,
       "tier": 9,
       "biome": "deep-north",
-      "description": "An arrow forged of perhaps the hardest materials in this world..."
+      "description": "An arrow forged of perhaps the hardest materials in this world...",
+      "names": {}
     },
     "bloodgold-bolt": {
       "id": "bloodgold-bolt",
@@ -11154,7 +11749,8 @@ window.VC_DATA = {
       "quantity": 20,
       "tier": 9,
       "biome": "deep-north",
-      "description": "A bolt forged of perhaps the hardest materials in this world..."
+      "description": "A bolt forged of perhaps the hardest materials in this world...",
+      "names": {}
     },
     "bone-bolt": {
       "id": "bone-bolt",
@@ -11192,7 +11788,11 @@ window.VC_DATA = {
       "quantity": 20,
       "tier": 2,
       "biome": "black-forest",
-      "description": "A crude bolt of yellowed bone."
+      "description": "A crude bolt of yellowed bone.",
+      "names": {
+        "cs": "Kostěnná šipka",
+        "ru": "Костяной болт"
+      }
     },
     "bronze-atgeir": {
       "id": "bronze-atgeir",
@@ -11234,7 +11834,12 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 2,
       "biome": "black-forest",
-      "description": "A true warrior's tool."
+      "description": "A true warrior's tool.",
+      "names": {
+        "cs": "Bronzový Atgeir",
+        "fr": "Atgeir en bronze",
+        "ru": "Бронзовая алебарда"
+      }
     },
     "bronze-axe": {
       "id": "bronze-axe",
@@ -11278,7 +11883,13 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 2,
       "biome": "black-forest",
-      "description": "A bright and burnished blade, curved like a smile."
+      "description": "A bright and burnished blade, curved like a smile.",
+      "names": {
+        "cs": "Bronzová sekera",
+        "de": "Bronzeaxt",
+        "fr": "Hache en bronze",
+        "ru": "Бронзовый топор"
+      }
     },
     "bronze-mace": {
       "id": "bronze-mace",
@@ -11320,7 +11931,13 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 2,
       "biome": "black-forest",
-      "description": "A headache on a stick."
+      "description": "A headache on a stick.",
+      "names": {
+        "cs": "Bronzový palcát",
+        "de": "Bronzener Streitkolben",
+        "fr": "Massue en bronze",
+        "ru": "Бронзовая булава"
+      }
     },
     "bronze-pickaxe": {
       "id": "bronze-pickaxe",
@@ -11362,7 +11979,11 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 2,
       "biome": "black-forest",
-      "description": "A good bronze pick. Can break very hard rocks."
+      "description": "A good bronze pick. Can break very hard rocks.",
+      "names": {
+        "cs": "Bronzový krumpáč",
+        "ru": "Бронзовая кирка"
+      }
     },
     "bronze-spear": {
       "id": "bronze-spear",
@@ -11404,7 +12025,12 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 2,
       "biome": "black-forest",
-      "description": "A sturdy spear with a head of burnished bronze."
+      "description": "A sturdy spear with a head of burnished bronze.",
+      "names": {
+        "cs": "Bronzové kopí",
+        "fr": "Lance en bronze",
+        "ru": "Бронзовое копье"
+      }
     },
     "bronze-sword": {
       "id": "bronze-sword",
@@ -11446,7 +12072,12 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 2,
       "biome": "black-forest",
-      "description": "Blood-drinker. A thirsty friend."
+      "description": "Blood-drinker. A thirsty friend.",
+      "names": {
+        "cs": "Bronzový meč",
+        "fr": "Épée en bronze",
+        "ru": "Бронзовый меч"
+      }
     },
     "bronzehead-arrow": {
       "id": "bronzehead-arrow",
@@ -11488,7 +12119,12 @@ window.VC_DATA = {
       "quantity": 20,
       "tier": 2,
       "biome": "black-forest",
-      "description": "Sharper than flint. A sleek messenger of death."
+      "description": "Sharper than flint. A sleek messenger of death.",
+      "names": {
+        "cs": "Bronzový šíp",
+        "fr": "Flèche en bronze",
+        "ru": "Стрела с бронзовым наконечником"
+      }
     },
     "brutal-slayer": {
       "id": "brutal-slayer",
@@ -11532,7 +12168,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "If it bleeds, you can kill it."
+      "description": "If it bleeds, you can kill it.",
+      "names": {
+        "ru": "Жестокий убийца"
+      }
     },
     "carapace-arrow": {
       "id": "carapace-arrow",
@@ -11574,7 +12213,10 @@ window.VC_DATA = {
       "quantity": 20,
       "tier": 7,
       "biome": "mistlands",
-      "description": "Heavy and pointy, this one's gonna hurt."
+      "description": "Heavy and pointy, this one's gonna hurt.",
+      "names": {
+        "ru": "Панцирная стрела"
+      }
     },
     "carapace-bolt": {
       "id": "carapace-bolt",
@@ -11616,7 +12258,11 @@ window.VC_DATA = {
       "quantity": 20,
       "tier": 7,
       "biome": "mistlands",
-      "description": "A heavy and solid bolt."
+      "description": "A heavy and solid bolt.",
+      "names": {
+        "cs": "Šipka z krunýře",
+        "ru": "Панцирный болт"
+      }
     },
     "carapace-spear": {
       "id": "carapace-spear",
@@ -11658,7 +12304,13 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 7,
       "biome": "mistlands",
-      "description": "Sharpened to jagged perfection, this spear is sure to be deadly."
+      "description": "Sharpened to jagged perfection, this spear is sure to be deadly.",
+      "names": {
+        "cs": "Kopí z krunýře",
+        "de": "Chitin-Speer",
+        "fr": "Lance en carapace",
+        "ru": "Панцирное копье"
+      }
     },
     "charred-arrow": {
       "id": "charred-arrow",
@@ -11700,7 +12352,10 @@ window.VC_DATA = {
       "quantity": 20,
       "tier": 8,
       "biome": "ashlands",
-      "description": "This arrow has been whittled into shape from a charred femur, and it's as hard as any metal."
+      "description": "This arrow has been whittled into shape from a charred femur, and it's as hard as any metal.",
+      "names": {
+        "ru": "Обугленная стрела"
+      }
     },
     "charred-bolt": {
       "id": "charred-bolt",
@@ -11742,7 +12397,11 @@ window.VC_DATA = {
       "quantity": 20,
       "tier": 8,
       "biome": "ashlands",
-      "description": "A sturdy bone from a forearm, shaped into a deadly bolt."
+      "description": "A sturdy bone from a forearm, shaped into a deadly bolt.",
+      "names": {
+        "cs": "Sežehnutá šipka",
+        "ru": "Обугленный болт"
+      }
     },
     "club": {
       "id": "club",
@@ -11776,7 +12435,13 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 1,
       "biome": "meadows",
-      "description": "A crude but useful weapon."
+      "description": "A crude but useful weapon.",
+      "names": {
+        "cs": "Palice",
+        "de": "Keule",
+        "fr": "Bâton",
+        "ru": "Дубина"
+      }
     },
     "copper-knife": {
       "id": "copper-knife",
@@ -11816,7 +12481,12 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 2,
       "biome": "black-forest",
-      "description": "A glittering copper knife."
+      "description": "A glittering copper knife.",
+      "names": {
+        "cs": "Měděný nůž",
+        "fr": "Couteau en cuivre",
+        "ru": "Медный нож"
+      }
     },
     "crude-bow": {
       "id": "crude-bow",
@@ -11854,7 +12524,12 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 1,
       "biome": "meadows",
-      "description": "A crude but functional bow."
+      "description": "A crude but functional bow.",
+      "names": {
+        "cs": "Hrubý luk",
+        "fr": "Arc",
+        "ru": "Грубый лук"
+      }
     },
     "crystal-battleaxe": {
       "id": "crystal-battleaxe",
@@ -11900,7 +12575,13 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 5,
       "biome": "mountain",
-      "description": "It's see-through and tears through."
+      "description": "It's see-through and tears through.",
+      "names": {
+        "cs": "Křišťálová bitevní sekera",
+        "de": "Kristallkampfaxt",
+        "fr": "Hache de combat en cristal",
+        "ru": "Кристальный боевой топор"
+      }
     },
     "demolisher": {
       "id": "demolisher",
@@ -11942,7 +12623,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 7,
       "biome": "mistlands",
-      "description": "This mighty sledge yearns to wreak havoc."
+      "description": "This mighty sledge yearns to wreak havoc.",
+      "names": {
+        "ru": "Разрушитель"
+      }
     },
     "draugr-fang": {
       "id": "draugr-fang",
@@ -11992,7 +12676,12 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 5,
       "biome": "mountain",
-      "description": "Dark wood strung with glistening sinew. A vicious thing."
+      "description": "Dark wood strung with glistening sinew. A vicious thing.",
+      "names": {
+        "cs": "Draugrův Tesák",
+        "fr": "Croc de Draugr",
+        "ru": "Клык Драугра"
+      }
     },
     "dundr": {
       "id": "dundr",
@@ -12040,7 +12729,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "What happens next may shock you."
+      "description": "What happens next may shock you.",
+      "names": {
+        "ru": "Дундр"
+      }
     },
     "dyrnwyn": {
       "id": "dyrnwyn",
@@ -12094,7 +12786,11 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "The sword that was broken is whole once more. Its flames burn hot, fuelled by the memories of ancient warriors."
+      "description": "The sword that was broken is whole once more. Its flames burn hot, fuelled by the memories of ancient warriors.",
+      "names": {
+        "cs": "Dyrnwyn",
+        "ru": "Дирнвин"
+      }
     },
     "early-axes": {
       "id": "early-axes",
@@ -12141,7 +12837,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 1,
       "biome": "meadows",
-      "description": "Mighty weapons from long ago, from a time when the world was still young and incomplete..."
+      "description": "Mighty weapons from long ago, from a time when the world was still young and incomplete...",
+      "names": {
+        "ru": "Древние топоры"
+      }
     },
     "echo-spike": {
       "id": "echo-spike",
@@ -12181,7 +12880,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "A chill that goes right through to the bone."
+      "description": "A chill that goes right through to the bone.",
+      "names": {}
     },
     "ember-charge": {
       "id": "ember-charge",
@@ -12223,7 +12923,8 @@ window.VC_DATA = {
       "quantity": 10,
       "tier": 9,
       "biome": "deep-north",
-      "description": "Trapped embers, ready to burst. Caution is advised."
+      "description": "Trapped embers, ready to burst. Caution is advised.",
+      "names": {}
     },
     "fang-spear": {
       "id": "fang-spear",
@@ -12269,7 +12970,12 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 5,
       "biome": "mountain",
-      "description": "Even in death, the wolf's tooth aches for flesh."
+      "description": "Even in death, the wolf's tooth aches for flesh.",
+      "names": {
+        "cs": "Kopí z tesáku",
+        "fr": "Lance en crocs",
+        "ru": "Копье с волчьим клыком"
+      }
     },
     "finewood-bow": {
       "id": "finewood-bow",
@@ -12311,7 +13017,12 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 2,
       "biome": "black-forest",
-      "description": "A simple bow of strong and supple wood."
+      "description": "A simple bow of strong and supple wood.",
+      "names": {
+        "cs": "Luk z jemného dřeva",
+        "fr": "Arc de Bois Noble",
+        "ru": "Хороший лук"
+      }
     },
     "fire-arrow": {
       "id": "fire-arrow",
@@ -12355,7 +13066,12 @@ window.VC_DATA = {
       "quantity": 20,
       "tier": 1,
       "biome": "meadows",
-      "description": "This arrow burns whatever it pierces."
+      "description": "This arrow burns whatever it pierces.",
+      "names": {
+        "cs": "Ohnivý šíp",
+        "fr": "Flèche enflammée",
+        "ru": "Огненная стрела"
+      }
     },
     "flametal-mace": {
       "id": "flametal-mace",
@@ -12403,7 +13119,11 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "Dense yet spiked flametal, perfect for bashing enemy faces in."
+      "description": "Dense yet spiked flametal, perfect for bashing enemy faces in.",
+      "names": {
+        "de": "Flammenkern-Streitkolben",
+        "ru": "Огнеметаллическая булава"
+      }
     },
     "flesh-rippers": {
       "id": "flesh-rippers",
@@ -12445,7 +13165,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 5,
       "biome": "mountain",
-      "description": "If claws work for wolves, why not for a viking?"
+      "description": "If claws work for wolves, why not for a viking?",
+      "names": {
+        "ru": "Потрошители плоти"
+      }
     },
     "flint-axe": {
       "id": "flint-axe",
@@ -12485,7 +13208,12 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 1,
       "biome": "meadows",
-      "description": "Sharper than stone."
+      "description": "Sharper than stone.",
+      "names": {
+        "cs": "Sekera z pazourku",
+        "de": "Feuersteinaxt",
+        "ru": "Кремневый топор"
+      }
     },
     "flint-knife": {
       "id": "flint-knife",
@@ -12529,7 +13257,11 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 1,
       "biome": "meadows",
-      "description": "Sharpened flint. A reliable tool."
+      "description": "Sharpened flint. A reliable tool.",
+      "names": {
+        "cs": "Nůž z pazourku",
+        "ru": "Кремневый нож"
+      }
     },
     "flint-spear": {
       "id": "flint-spear",
@@ -12571,7 +13303,12 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 1,
       "biome": "meadows",
-      "description": "If your eye marks a thing for death, let your arm send the messenger."
+      "description": "If your eye marks a thing for death, let your arm send the messenger.",
+      "names": {
+        "cs": "Kopí z pazourku",
+        "fr": "Lance en silex",
+        "ru": "Кремневое копье"
+      }
     },
     "flinthead-arrow": {
       "id": "flinthead-arrow",
@@ -12613,7 +13350,12 @@ window.VC_DATA = {
       "quantity": 20,
       "tier": 1,
       "biome": "meadows",
-      "description": "A hide-breaker with a head of flint."
+      "description": "A hide-breaker with a head of flint.",
+      "names": {
+        "cs": "Šíp z pazourku",
+        "fr": "Flèche en silex",
+        "ru": "Стрела с кремниевым наконечником"
+      }
     },
     "frost-arrow": {
       "id": "frost-arrow",
@@ -12661,7 +13403,12 @@ window.VC_DATA = {
       "quantity": 20,
       "tier": 5,
       "biome": "mountain",
-      "description": "A shard of piercing ice."
+      "description": "A shard of piercing ice.",
+      "names": {
+        "cs": "Mrazivý šíp",
+        "fr": "Flèche de givre",
+        "ru": "Ледяная стрела"
+      }
     },
     "frostfire-atgeir": {
       "id": "frostfire-atgeir",
@@ -12711,7 +13458,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "Let the flames begin to devour, while the ice claims whatever remains."
+      "description": "Let the flames begin to devour, while the ice claims whatever remains.",
+      "names": {}
     },
     "frostfire-axe": {
       "id": "frostfire-axe",
@@ -12764,7 +13512,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "Burn it all to the ground, or freeze it in an eternal moment of destruction..."
+      "description": "Burn it all to the ground, or freeze it in an eternal moment of destruction...",
+      "names": {}
     },
     "frostfire-bow": {
       "id": "frostfire-bow",
@@ -12817,7 +13566,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "Keep your head cool as you draw, and then let your fury loose with your arrows."
+      "description": "Keep your head cool as you draw, and then let your fury loose with your arrows.",
+      "names": {}
     },
     "frostfire-crossbow": {
       "id": "frostfire-crossbow",
@@ -12870,7 +13620,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "If your enemies don't freeze as you take aim, they are sure to do so once they are hit."
+      "description": "If your enemies don't freeze as you take aim, they are sure to do so once they are hit.",
+      "names": {}
     },
     "frostfire-dagger": {
       "id": "frostfire-dagger",
@@ -12923,7 +13674,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "A cut from this blade stings like ice, then burns like the flame."
+      "description": "A cut from this blade stings like ice, then burns like the flame.",
+      "names": {}
     },
     "frostfire-greataxe": {
       "id": "frostfire-greataxe",
@@ -12976,7 +13728,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "Strike your foes with a frozen inferno!"
+      "description": "Strike your foes with a frozen inferno!",
+      "names": {}
     },
     "frostfire-greatsword": {
       "id": "frostfire-greatsword",
@@ -13026,7 +13779,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "The choice between a fiery end and a frozen one is simple: Both at the same time."
+      "description": "The choice between a fiery end and a frozen one is simple: Both at the same time.",
+      "names": {}
     },
     "frostfire-knucklechains": {
       "id": "frostfire-knucklechains",
@@ -13076,7 +13830,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "A slight risk of frostbite is inevitable."
+      "description": "A slight risk of frostbite is inevitable.",
+      "names": {}
     },
     "frostfire-mace": {
       "id": "frostfire-mace",
@@ -13126,7 +13881,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "Are those sparks that fly as this weapon finds its impact, or are they shards of ice?"
+      "description": "Are those sparks that fly as this weapon finds its impact, or are they shards of ice?",
+      "names": {}
     },
     "frostfire-sledge": {
       "id": "frostfire-sledge",
@@ -13176,7 +13932,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "Is it so cold that it's burning, or so hot that it's freezing?"
+      "description": "Is it so cold that it's burning, or so hot that it's freezing?",
+      "names": {}
     },
     "frostfire-spear": {
       "id": "frostfire-spear",
@@ -13226,7 +13983,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "Dipped in frozen flames, this spear spells certain doom."
+      "description": "Dipped in frozen flames, this spear spells certain doom.",
+      "names": {}
     },
     "frostfire-sword": {
       "id": "frostfire-sword",
@@ -13276,7 +14034,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "Flames dance along this blade, but are they hot or cold?"
+      "description": "Flames dance along this blade, but are they hot or cold?",
+      "names": {}
     },
     "frostner": {
       "id": "frostner",
@@ -13329,7 +14088,13 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 5,
       "biome": "mountain",
-      "description": "The dead fear silver. Remind them why."
+      "description": "The dead fear silver. Remind them why.",
+      "names": {
+        "cs": "Frostner",
+        "de": "Frostner",
+        "fr": "Argivre",
+        "ru": "Ледомор"
+      }
     },
     "himminafl": {
       "id": "himminafl",
@@ -13380,7 +14145,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 7,
       "biome": "mistlands",
-      "description": "It might not be a hammer, but Thor himself would still approve of this weapon."
+      "description": "It might not be a hammer, but Thor himself would still approve of this weapon.",
+      "names": {
+        "ru": "Химминафль"
+      }
     },
     "huntsman-bow": {
       "id": "huntsman-bow",
@@ -13426,7 +14194,12 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 4,
       "biome": "swamp",
-      "description": "Finely worked and strung. A huntsman's joy."
+      "description": "Finely worked and strung. A huntsman's joy.",
+      "names": {
+        "cs": "Lovecký luk",
+        "fr": "Arc de chasse",
+        "ru": "Охотничий лук"
+      }
     },
     "iron-atgeir": {
       "id": "iron-atgeir",
@@ -13468,7 +14241,12 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 4,
       "biome": "swamp",
-      "description": "Blood-drinker, skull-cracker, death-bringer."
+      "description": "Blood-drinker, skull-cracker, death-bringer.",
+      "names": {
+        "cs": "Železný Atgeir",
+        "fr": "Atgeir en fer",
+        "ru": "Железная алебарда"
+      }
     },
     "iron-axe": {
       "id": "iron-axe",
@@ -13512,7 +14290,13 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 4,
       "biome": "swamp",
-      "description": "Sharp and strong, a woodcutter's friend."
+      "description": "Sharp and strong, a woodcutter's friend.",
+      "names": {
+        "cs": "Železná sekera",
+        "de": "Eisenaxt",
+        "fr": "Hache en fer",
+        "ru": "Железный топор"
+      }
     },
     "iron-bolt": {
       "id": "iron-bolt",
@@ -13554,7 +14338,11 @@ window.VC_DATA = {
       "quantity": 20,
       "tier": 4,
       "biome": "swamp",
-      "description": "A sturdy iron missile."
+      "description": "A sturdy iron missile.",
+      "names": {
+        "cs": "Železná Šipka",
+        "ru": "Железный болт"
+      }
     },
     "iron-mace": {
       "id": "iron-mace",
@@ -13596,7 +14384,13 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 4,
       "biome": "swamp",
-      "description": "A fist-sized lump of iron on a wooden shaft."
+      "description": "A fist-sized lump of iron on a wooden shaft.",
+      "names": {
+        "cs": "Železný palcát",
+        "de": "Eiserner Streitkolben",
+        "fr": "Massue de fer",
+        "ru": "Железная булава"
+      }
     },
     "iron-pickaxe": {
       "id": "iron-pickaxe",
@@ -13636,7 +14430,11 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 4,
       "biome": "swamp",
-      "description": "A sturdy tool of hardened iron."
+      "description": "A sturdy tool of hardened iron.",
+      "names": {
+        "cs": "Železný krumpáč",
+        "ru": "Железная кирка"
+      }
     },
     "iron-sledge": {
       "id": "iron-sledge",
@@ -13682,7 +14480,12 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 4,
       "biome": "swamp",
-      "description": "A mighty hammer, worthy of a champion."
+      "description": "A mighty hammer, worthy of a champion.",
+      "names": {
+        "cs": "Železné velké kladivo",
+        "fr": "Masse de fer",
+        "ru": "Железная кувалда"
+      }
     },
     "iron-sword": {
       "id": "iron-sword",
@@ -13724,7 +14527,13 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 4,
       "biome": "swamp",
-      "description": "The straight line between life and death runs along the edge of this blade."
+      "description": "The straight line between life and death runs along the edge of this blade.",
+      "names": {
+        "cs": "Železný meč",
+        "de": "Eisenschwert",
+        "fr": "Épée en fer",
+        "ru": "Железный меч"
+      }
     },
     "ironhead-arrow": {
       "id": "ironhead-arrow",
@@ -13766,7 +14575,12 @@ window.VC_DATA = {
       "quantity": 20,
       "tier": 4,
       "biome": "swamp",
-      "description": "Capped with iron and flighted with dark feathers."
+      "description": "Capped with iron and flighted with dark feathers.",
+      "names": {
+        "cs": "Železný šíp",
+        "fr": "Flèche en fer",
+        "ru": "Стрела с железным наконечником"
+      }
     },
     "jotun-bane": {
       "id": "jotun-bane",
@@ -13819,7 +14633,13 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 7,
       "biome": "mistlands",
-      "description": "Not even the giants of old could weather the poisonous bite of this weapon."
+      "description": "Not even the giants of old could weather the poisonous bite of this weapon.",
+      "names": {
+        "cs": "Zhouba Jótunů",
+        "de": "Jotun-Fluch",
+        "fr": "Fléau des jötnars",
+        "ru": "Погибель йотунов"
+      }
     },
     "klossen": {
       "id": "klossen",
@@ -13865,7 +14685,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "If the force of your blow isn't enough to knock your enemies to the ground, perhaps the primal roots will hold them down for you."
+      "description": "If the force of your blow isn't enough to knock your enemies to the ground, perhaps the primal roots will hold them down for you.",
+      "names": {
+        "ru": "Клоссен"
+      }
     },
     "krom": {
       "id": "krom",
@@ -13907,7 +14730,11 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 7,
       "biome": "mistlands",
-      "description": "As deadly as it is shiny, and it's very shiny."
+      "description": "As deadly as it is shiny, and it's very shiny.",
+      "names": {
+        "cs": "Krom",
+        "ru": "Кром"
+      }
     },
     "lightning-strike": {
       "id": "lightning-strike",
@@ -13945,7 +14772,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "Simply point, and you shall summon the wrath of the sky."
+      "description": "Simply point, and you shall summon the wrath of the sky.",
+      "names": {}
     },
     "mistwalker": {
       "id": "mistwalker",
@@ -13997,7 +14825,13 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 7,
       "biome": "mistlands",
-      "description": "The faint glow seems to slice through the mist."
+      "description": "The faint glow seems to slice through the mist.",
+      "names": {
+        "cs": "Mlhošlap",
+        "de": "Nebelbrecher",
+        "fr": "Marchebrume",
+        "ru": "Странник туманов"
+      }
     },
     "needle-arrow": {
       "id": "needle-arrow",
@@ -14035,7 +14869,12 @@ window.VC_DATA = {
       "quantity": 20,
       "tier": 6,
       "biome": "plains",
-      "description": "The final stitch."
+      "description": "The final stitch.",
+      "names": {
+        "cs": "Šíp z jehly",
+        "fr": "Flèche aiguille",
+        "ru": "Игольная стрела"
+      }
     },
     "nidhogg": {
       "id": "nidhogg",
@@ -14077,7 +14916,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "Named after the evil dragon that dwells by the roots of the world tree, this sword heralds doom for those who cross its path."
+      "description": "Named after the evil dragon that dwells by the roots of the world tree, this sword heralds doom for those who cross its path.",
+      "names": {
+        "ru": "Нидхёгг"
+      }
     },
     "nidhogg-the-bleeding": {
       "id": "nidhogg-the-bleeding",
@@ -14119,7 +14961,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "If you bleed, your foes are sure to do so as well."
+      "description": "If you bleed, your foes are sure to do so as well.",
+      "names": {
+        "ru": "Кровоточащий нидхёгг"
+      }
     },
     "nidhogg-the-primal": {
       "id": "nidhogg-the-primal",
@@ -14163,7 +15008,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "Tangle your foes in roots, like the namesake of this blade."
+      "description": "Tangle your foes in roots, like the namesake of this blade.",
+      "names": {
+        "ru": "Первобытный нидхёгг"
+      }
     },
     "nidhogg-the-thundering": {
       "id": "nidhogg-the-thundering",
@@ -14207,7 +15055,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "The power of lightning dances along the blade of this sword, a promise of the pain to come."
+      "description": "The power of lightning dances along the blade of this sword, a promise of the pain to come.",
+      "names": {
+        "ru": "Громовой нидхёгг"
+      }
     },
     "nord-atgeir": {
       "id": "nord-atgeir",
@@ -14247,7 +15098,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "The edge of this weapon is as deadly as it is shiny."
+      "description": "The edge of this weapon is as deadly as it is shiny.",
+      "names": {}
     },
     "nord-axe": {
       "id": "nord-axe",
@@ -14289,7 +15141,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "A finely detailed axe, for finely cutting down your enemies."
+      "description": "A finely detailed axe, for finely cutting down your enemies.",
+      "names": {}
     },
     "nord-bow": {
       "id": "nord-bow",
@@ -14332,7 +15185,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "This bow shall find its target with a golden precision."
+      "description": "This bow shall find its target with a golden precision.",
+      "names": {}
     },
     "nord-crossbow": {
       "id": "nord-crossbow",
@@ -14375,7 +15229,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "An incredible force is bound to this weapon, waiting to be unleashed."
+      "description": "An incredible force is bound to this weapon, waiting to be unleashed.",
+      "names": {}
     },
     "nord-dagger": {
       "id": "nord-dagger",
@@ -14418,7 +15273,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "A flash of gold is the last thing your foes will ever see."
+      "description": "A flash of gold is the last thing your foes will ever see.",
+      "names": {}
     },
     "nord-greataxe": {
       "id": "nord-greataxe",
@@ -14461,7 +15317,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "A mighty axe fit for a mighty warrior."
+      "description": "A mighty axe fit for a mighty warrior.",
+      "names": {}
     },
     "nord-greatsword": {
       "id": "nord-greatsword",
@@ -14501,7 +15358,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "A striking weapon, both visually and lethally."
+      "description": "A striking weapon, both visually and lethally.",
+      "names": {}
     },
     "nord-knucklechains": {
       "id": "nord-knucklechains",
@@ -14541,7 +15399,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "Wrap your fists in the hardest of metals, to ensure your foes feel the strength behind your blows."
+      "description": "Wrap your fists in the hardest of metals, to ensure your foes feel the strength behind your blows.",
+      "names": {}
     },
     "nord-mace": {
       "id": "nord-mace",
@@ -14581,7 +15440,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "Hit hard and fast, and leave your foe no time to recover."
+      "description": "Hit hard and fast, and leave your foe no time to recover.",
+      "names": {}
     },
     "nord-sledge": {
       "id": "nord-sledge",
@@ -14621,7 +15481,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "With this weapon, your blows will be heavy as that of a troll."
+      "description": "With this weapon, your blows will be heavy as that of a troll.",
+      "names": {}
     },
     "nord-spear": {
       "id": "nord-spear",
@@ -14661,7 +15522,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "A golden opportunity to strike."
+      "description": "A golden opportunity to strike.",
+      "names": {}
     },
     "nord-sword": {
       "id": "nord-sword",
@@ -14701,7 +15563,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "Even in the faintest sunlight, this weapon glimmers."
+      "description": "Even in the faintest sunlight, this weapon glimmers.",
+      "names": {}
     },
     "northern-vengeance": {
       "id": "northern-vengeance",
@@ -14741,7 +15604,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "A caged snowflake, endless patterns emerging from within..."
+      "description": "A caged snowflake, endless patterns emerging from within...",
+      "names": {}
     },
     "obsidian-arrow": {
       "id": "obsidian-arrow",
@@ -14783,7 +15647,12 @@ window.VC_DATA = {
       "quantity": 20,
       "tier": 5,
       "biome": "mountain",
-      "description": "A sliver of darkness."
+      "description": "A sliver of darkness.",
+      "names": {
+        "cs": "Obsidiánový šíp",
+        "fr": "Flèche d'obsidienne",
+        "ru": "Обсидиановая стрела"
+      }
     },
     "ooze-bomb": {
       "id": "ooze-bomb",
@@ -14827,7 +15696,12 @@ window.VC_DATA = {
       "biome": "swamp",
       "description": "The stench is unbearable...",
       "recommendable": false,
-      "note": "Area/DoT damage not listed on the wiki"
+      "note": "Area/DoT damage not listed on the wiki",
+      "names": {
+        "cs": "Bomba ze slizu",
+        "fr": "Bombe puante",
+        "ru": "Гнилостная бомба"
+      }
     },
     "paws-of-the-bear": {
       "id": "paws-of-the-bear",
@@ -14869,7 +15743,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 2,
       "biome": "black-forest",
-      "description": "Made for tearing and rending."
+      "description": "Made for tearing and rending.",
+      "names": {
+        "ru": "Медвежьи лапы"
+      }
     },
     "poison-arrow": {
       "id": "poison-arrow",
@@ -14917,7 +15794,12 @@ window.VC_DATA = {
       "quantity": 20,
       "tier": 5,
       "biome": "mountain",
-      "description": "A bitter sting from afar."
+      "description": "A bitter sting from afar.",
+      "names": {
+        "cs": "Otrávený šíp",
+        "fr": "Flèche empoisonnée",
+        "ru": "Отравленная стрела"
+      }
     },
     "porcupine": {
       "id": "porcupine",
@@ -14968,7 +15850,13 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 6,
       "biome": "plains",
-      "description": "A deadly weapon, bristling with fiendish spikes."
+      "description": "A deadly weapon, bristling with fiendish spikes.",
+      "names": {
+        "cs": "Pichlavý palcát",
+        "de": "Stachelschwein",
+        "fr": "Porc-épic",
+        "ru": "Дикобраз"
+      }
     },
     "primal-berserkir-axes": {
       "id": "primal-berserkir-axes",
@@ -15017,7 +15905,13 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "Your most primal instincts take over, and the nature around you reaches out to aid you."
+      "description": "Your most primal instincts take over, and the nature around you reaches out to aid you.",
+      "names": {
+        "cs": "Prvotní berserkské sekery",
+        "de": "Urweltliche Berserkir-Äxte",
+        "fr": "Haches des berserkir primitives",
+        "ru": "Первобытные топоры берсеркира"
+      }
     },
     "primal-slayer": {
       "id": "primal-slayer",
@@ -15063,7 +15957,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "The blade works in tandem with the primal forces of the world, seeking death and slaughter."
+      "description": "The blade works in tandem with the primal forces of the world, seeking death and slaughter.",
+      "names": {
+        "ru": "Первобытный убийца"
+      }
     },
     "ripper": {
       "id": "ripper",
@@ -15111,7 +16008,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "Rips your foes apart, simple as that."
+      "description": "Rips your foes apart, simple as that.",
+      "names": {
+        "ru": "Разрыватель"
+      }
     },
     "root-fang": {
       "id": "root-fang",
@@ -15158,7 +16058,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "Like the twisting branch was made to seek the sun, this bow was made to seek the slaughter."
+      "description": "Like the twisting branch was made to seek the sun, this bow was made to seek the slaughter.",
+      "names": {
+        "ru": "Корневой клык"
+      }
     },
     "root-ripper": {
       "id": "root-ripper",
@@ -15202,7 +16105,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "If the bolt doesn't pin your foe in place, the roots surging up from the ground surely will."
+      "description": "If the bolt doesn't pin your foe in place, the roots surging up from the ground surely will.",
+      "names": {
+        "ru": "Корневой разрыватель"
+      }
     },
     "scourging-slayer": {
       "id": "scourging-slayer",
@@ -15248,7 +16154,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "The lightning bound into this blade is erratic, ever searching for something to strike."
+      "description": "The lightning bound into this blade is erratic, ever searching for something to strike.",
+      "names": {
+        "ru": "Грозный убийца"
+      }
     },
     "silver-arrow": {
       "id": "silver-arrow",
@@ -15292,7 +16201,12 @@ window.VC_DATA = {
       "quantity": 20,
       "tier": 5,
       "biome": "mountain",
-      "description": "A needle to calm restless spirits."
+      "description": "A needle to calm restless spirits.",
+      "names": {
+        "cs": "Stříbrný šíp",
+        "fr": "Flèche en argent",
+        "ru": "Серебряная стрела"
+      }
     },
     "silver-knife": {
       "id": "silver-knife",
@@ -15342,7 +16256,11 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 5,
       "biome": "mountain",
-      "description": "A savage piece of pain."
+      "description": "A savage piece of pain.",
+      "names": {
+        "fr": "Couteau en argent",
+        "ru": "Серебряный нож"
+      }
     },
     "silver-sword": {
       "id": "silver-sword",
@@ -15392,7 +16310,13 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 5,
       "biome": "mountain",
-      "description": "Purest of metals, nothing unclean can abide its touch."
+      "description": "Purest of metals, nothing unclean can abide its touch.",
+      "names": {
+        "cs": "Stříbrný meč",
+        "de": "Silberschwert",
+        "fr": "Épée en argent",
+        "ru": "Серебряный меч"
+      }
     },
     "skoll-and-hati": {
       "id": "skoll-and-hati",
@@ -15436,7 +16360,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 6,
       "biome": "plains",
-      "description": "Stab once for those who've betrayed you, and twice for those you hate."
+      "description": "Stab once for those who've betrayed you, and twice for those you hate.",
+      "names": {
+        "ru": "Сколль и Хати"
+      }
     },
     "skull-splittur": {
       "id": "skull-splittur",
@@ -15480,7 +16407,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 7,
       "biome": "mistlands",
-      "description": "Will find skulls to split even in the thickest of mists."
+      "description": "Will find skulls to split even in the thickest of mists.",
+      "names": {
+        "ru": "Крушитель черепов"
+      }
     },
     "slayer": {
       "id": "slayer",
@@ -15524,7 +16454,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "This mighty blade thirsts for the blood of foes."
+      "description": "This mighty blade thirsts for the blood of foes.",
+      "names": {
+        "ru": "Убийца"
+      }
     },
     "smoke-bomb": {
       "id": "smoke-bomb",
@@ -15564,7 +16497,10 @@ window.VC_DATA = {
       "biome": "ashlands",
       "description": "Everyone knows you can't breathe in the smoke.",
       "recommendable": false,
-      "note": "Area/DoT damage not listed on the wiki"
+      "note": "Area/DoT damage not listed on the wiki",
+      "names": {
+        "ru": "Дымовая шашка"
+      }
     },
     "spinesnap": {
       "id": "spinesnap",
@@ -15611,7 +16547,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 7,
       "biome": "mistlands",
-      "description": "Using this bow is backbreaking work but so worth it."
+      "description": "Using this bow is backbreaking work but so worth it.",
+      "names": {
+        "ru": "Хребтолом"
+      }
     },
     "splitnir": {
       "id": "splitnir",
@@ -15657,7 +16596,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "Split your enemies' hearts in two."
+      "description": "Split your enemies' hearts in two.",
+      "names": {
+        "ru": "Расколнир"
+      }
     },
     "splitnir-the-bleeding": {
       "id": "splitnir-the-bleeding",
@@ -15699,7 +16641,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "A small sacrifice must be made for every battle..."
+      "description": "A small sacrifice must be made for every battle...",
+      "names": {
+        "ru": "Кровоточащий расколнир"
+      }
     },
     "splitnir-the-primal": {
       "id": "splitnir-the-primal",
@@ -15743,7 +16688,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "Nature's forces burst through the ground wherever this spear strikes."
+      "description": "Nature's forces burst through the ground wherever this spear strikes.",
+      "names": {
+        "ru": "Первобытный расколнир"
+      }
     },
     "splitnir-the-storming": {
       "id": "splitnir-the-storming",
@@ -15785,7 +16733,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "Let the crack of thunder split the air."
+      "description": "Let the crack of thunder split the air.",
+      "names": {
+        "ru": "Штормовой расколнир"
+      }
     },
     "staff-of-embers": {
       "id": "staff-of-embers",
@@ -15831,7 +16782,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 7,
       "biome": "mistlands",
-      "description": "The sweltering heat of Muspelheim seems almost pathetic when compared to what this staff can do..."
+      "description": "The sweltering heat of Muspelheim seems almost pathetic when compared to what this staff can do...",
+      "names": {
+        "ru": "Посох огня"
+      }
     },
     "staff-of-fracturing": {
       "id": "staff-of-fracturing",
@@ -15877,7 +16831,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "Only those with patience and focus will be able to harness the true power of this staff."
+      "description": "Only those with patience and focus will be able to harness the true power of this staff.",
+      "names": {
+        "ru": "Посох раскалывания"
+      }
     },
     "staff-of-frost": {
       "id": "staff-of-frost",
@@ -15921,7 +16878,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 7,
       "biome": "mistlands",
-      "description": "A staff as cold as the three-year winter that will herald the end of times."
+      "description": "A staff as cold as the three-year winter that will herald the end of times.",
+      "names": {
+        "ru": "Посох льда"
+      }
     },
     "staff-of-the-wild": {
       "id": "staff-of-the-wild",
@@ -15972,7 +16932,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "Ancient natural forces lie curled and dormant within this staff, ready to be unleashed."
+      "description": "Ancient natural forces lie curled and dormant within this staff, ready to be unleashed.",
+      "names": {
+        "ru": "Посох дикой природы"
+      }
     },
     "stagbreaker": {
       "id": "stagbreaker",
@@ -16016,7 +16979,12 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 2,
       "biome": "black-forest",
-      "description": "A weapon worthy of the Gods! If you get hit with this, you'll know it…"
+      "description": "A weapon worthy of the Gods! If you get hit with this, you'll know it…",
+      "names": {
+        "cs": "Jelení palice",
+        "fr": "Brise-cerf",
+        "ru": "Оленья Скорбь"
+      }
     },
     "stone-axe": {
       "id": "stone-axe",
@@ -16056,7 +17024,12 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 1,
       "biome": "meadows",
-      "description": "A crude axe for tree-felling."
+      "description": "A crude axe for tree-felling.",
+      "names": {
+        "cs": "Kamenná sekera",
+        "de": "Steinaxt",
+        "ru": "Каменный топор"
+      }
     },
     "storm-fang": {
       "id": "storm-fang",
@@ -16103,7 +17076,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "Let your arrows fly as swift as the lightning strikes."
+      "description": "Let your arrows fly as swift as the lightning strikes.",
+      "names": {
+        "ru": "Штормовой клык"
+      }
     },
     "storm-ripper": {
       "id": "storm-ripper",
@@ -16147,7 +17123,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "The bolts will tear through your enemies like a particularly nasty gale."
+      "description": "The bolts will tear through your enemies like a particularly nasty gale.",
+      "names": {
+        "ru": "Штормовой разрыватель"
+      }
     },
     "storm-star": {
       "id": "storm-star",
@@ -16193,7 +17172,13 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "Particularly effective on cloudy mornings."
+      "description": "Particularly effective on cloudy mornings.",
+      "names": {
+        "cs": "Bouřlivá hvězda",
+        "de": "Sturmstern",
+        "fr": "Étoile des tempêtes",
+        "ru": "Штормовая звезда"
+      }
     },
     "thunderblood-atgeir": {
       "id": "thunderblood-atgeir",
@@ -16240,7 +17225,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "The heavens shall sound their praise as you make your enemies bleed."
+      "description": "The heavens shall sound their praise as you make your enemies bleed.",
+      "names": {}
     },
     "thunderblood-axe": {
       "id": "thunderblood-axe",
@@ -16290,7 +17276,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "As this axe cuts through wood and blood alike, a resounding thunderous crack shall be heard throughout the land."
+      "description": "As this axe cuts through wood and blood alike, a resounding thunderous crack shall be heard throughout the land.",
+      "names": {}
     },
     "thunderblood-bow": {
       "id": "thunderblood-bow",
@@ -16340,7 +17327,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "Lightning dances along the string, waiting to be unleashed."
+      "description": "Lightning dances along the string, waiting to be unleashed.",
+      "names": {}
     },
     "thunderblood-crossbow": {
       "id": "thunderblood-crossbow",
@@ -16390,7 +17378,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "The bow is pulled taut with unreleased power, like the air before a lightning strike."
+      "description": "The bow is pulled taut with unreleased power, like the air before a lightning strike.",
+      "names": {}
     },
     "thunderblood-dagger": {
       "id": "thunderblood-dagger",
@@ -16439,7 +17428,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "The blade is already bloodied, yet it sparks in want of more."
+      "description": "The blade is already bloodied, yet it sparks in want of more.",
+      "names": {}
     },
     "thunderblood-greataxe": {
       "id": "thunderblood-greataxe",
@@ -16489,7 +17479,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "As you cleave your foes in two, their blood shall sing like a thunderstorm."
+      "description": "As you cleave your foes in two, their blood shall sing like a thunderstorm.",
+      "names": {}
     },
     "thunderblood-greatsword": {
       "id": "thunderblood-greatsword",
@@ -16536,7 +17527,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "Anyone wielding this weapon is sure to be very frightening indeed."
+      "description": "Anyone wielding this weapon is sure to be very frightening indeed.",
+      "names": {}
     },
     "thunderblood-knucklechains": {
       "id": "thunderblood-knucklechains",
@@ -16583,7 +17575,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "A fury comes over you as you fight with these weapons, your blood roaring like thunder in your ears... It seems appropriate."
+      "description": "A fury comes over you as you fight with these weapons, your blood roaring like thunder in your ears... It seems appropriate.",
+      "names": {}
     },
     "thunderblood-mace": {
       "id": "thunderblood-mace",
@@ -16630,7 +17623,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "A weapon to rival perhaps even that of the thunder god himself..."
+      "description": "A weapon to rival perhaps even that of the thunder god himself...",
+      "names": {}
     },
     "thunderblood-sledge": {
       "id": "thunderblood-sledge",
@@ -16677,7 +17671,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "As this weapon strikes true, the blow shall echo throughout the world..."
+      "description": "As this weapon strikes true, the blow shall echo throughout the world...",
+      "names": {}
     },
     "thunderblood-spear": {
       "id": "thunderblood-spear",
@@ -16724,7 +17719,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "May it strike like lightning, quick and fierce."
+      "description": "May it strike like lightning, quick and fierce.",
+      "names": {}
     },
     "thunderblood-sword": {
       "id": "thunderblood-sword",
@@ -16771,7 +17767,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 9,
       "biome": "deep-north",
-      "description": "As the blood runs along the blade, it awakens the storm within."
+      "description": "As the blood runs along the blade, it awakens the storm within.",
+      "names": {}
     },
     "thundering-berserkir-axes": {
       "id": "thundering-berserkir-axes",
@@ -16820,7 +17817,13 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "Carnage spreads around you when you wield these axes, such that Thor himself would be proud."
+      "description": "Carnage spreads around you when you wield these axes, such that Thor himself would be proud.",
+      "names": {
+        "cs": "Hromové berserkské sekery",
+        "de": "Donnernde Berserkir-Äxte",
+        "fr": "Haches des berserkir du tonnerre",
+        "ru": "Громовые топоры берсеркира"
+      }
     },
     "trollstav": {
       "id": "trollstav",
@@ -16870,7 +17873,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "Summons a raging beast to cause death and destruction."
+      "description": "Summons a raging beast to cause death and destruction.",
+      "names": {
+        "ru": "Тролль-посох"
+      }
     },
     "vilebone-maulclaws": {
       "id": "vilebone-maulclaws",
@@ -16918,7 +17924,10 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 6,
       "biome": "plains",
-      "description": "These claws will rend flesh and bone alike."
+      "description": "These claws will rend flesh and bone alike.",
+      "names": {
+        "ru": "Гнилокостные когти"
+      }
     },
     "voidcaller": {
       "id": "voidcaller",
@@ -16949,7 +17958,8 @@ window.VC_DATA = {
       "quantity": null,
       "tier": null,
       "biome": null,
-      "description": "Who shall answer the call of the Void?"
+      "description": "Who shall answer the call of the Void?",
+      "names": {}
     },
     "wood-arrow": {
       "id": "wood-arrow",
@@ -16983,7 +17993,12 @@ window.VC_DATA = {
       "quantity": 20,
       "tier": 1,
       "biome": "meadows",
-      "description": "An arrow of sharpened wood."
+      "description": "An arrow of sharpened wood.",
+      "names": {
+        "cs": "Dřevěný šíp",
+        "fr": "Flèche en bois",
+        "ru": "Деревянная стрела"
+      }
     },
     "wound-ripper": {
       "id": "wound-ripper",
@@ -17025,9 +18040,10859 @@ window.VC_DATA = {
       "quantity": null,
       "tier": 8,
       "biome": "ashlands",
-      "description": "Ready to rend your enemies to pieces."
+      "description": "Ready to rend your enemies to pieces.",
+      "names": {
+        "ru": "Ранящий разрыватель"
+      }
     }
   },
+  "items": {
+    "amber-pearl": {
+      "id": "amber-pearl",
+      "name": "Amber Pearl",
+      "image": "img/items/amber-pearl.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "* Burial Chambers",
+          "kind": "location"
+        },
+        {
+          "text": "* Troll Cave",
+          "kind": "location"
+        },
+        {
+          "text": "* Sunken Crypts",
+          "kind": "location"
+        },
+        {
+          "text": "* Stone Grave",
+          "kind": "other"
+        },
+        {
+          "text": "* Viking Graveyard",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Amber_Pearl",
+      "names": {
+        "cs": "Jantarová Perla",
+        "ru": "Янтарная жемчужина"
+      }
+    },
+    "ancient-bark": {
+      "id": "ancient-bark",
+      "name": "Ancient Bark",
+      "image": "img/items/ancient-bark.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Ancient Tree in Swamp biomes",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Ancient_Bark",
+      "names": {
+        "cs": "Starověká kůra",
+        "de": "Alte Rinde",
+        "fr": "Écorce ancienne",
+        "ru": "Древняя кора"
+      }
+    },
+    "anglerfish": {
+      "id": "anglerfish",
+      "name": "Anglerfish",
+      "image": "img/items/anglerfish.png",
+      "biome": "ashlands",
+      "tier": 8,
+      "sources": [
+        {
+          "text": "Fishing",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Anglerfish",
+      "names": {
+        "cs": "Ďas",
+        "de": "Seeteufel",
+        "fr": "Poisson-pêcheur",
+        "ru": "Удильщик"
+      }
+    },
+    "asksvin-hide": {
+      "id": "asksvin-hide",
+      "name": "Asksvin Hide",
+      "image": "img/items/asksvin-hide.png",
+      "biome": "ashlands",
+      "tier": 8,
+      "sources": [
+        {
+          "text": "Asksvin",
+          "kind": "creature",
+          "creatureId": "asksvin",
+          "biomes": [
+            "ashlands"
+          ]
+        },
+        {
+          "text": "Asksvin Hatchling",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Asksvin_Hide",
+      "names": {
+        "ru": "Шкура пеплозавра"
+      }
+    },
+    "bear-hide": {
+      "id": "bear-hide",
+      "name": "Bear Hide",
+      "image": "img/items/bear-hide.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Bear",
+          "kind": "creature",
+          "creatureId": "bear",
+          "biomes": [
+            "black-forest"
+          ]
+        },
+        {
+          "text": "Vile",
+          "kind": "creature",
+          "creatureId": "vile",
+          "biomes": [
+            "plains"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Bear_Hide",
+      "names": {
+        "ru": "Медвежья шкура"
+      }
+    },
+    "bear-paw": {
+      "id": "bear-paw",
+      "name": "Bear Paw",
+      "image": "img/items/bear-paw.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Bear",
+          "kind": "creature",
+          "creatureId": "bear",
+          "biomes": [
+            "black-forest"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Bear_Paw",
+      "names": {
+        "ru": "Медвежья лапа"
+      }
+    },
+    "bear-trophy": {
+      "id": "bear-trophy",
+      "name": "Bear Trophy",
+      "image": "img/items/bear-trophy.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Bear",
+          "kind": "creature",
+          "creatureId": "bear",
+          "biomes": [
+            "black-forest"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Bear_Trophy",
+      "names": {
+        "cs": "Trofeje",
+        "ru": "Категория:Трофеи"
+      }
+    },
+    "bloodgold": {
+      "id": "bloodgold",
+      "name": "Bloodgold",
+      "image": "img/items/bloodgold.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Blast Furnace",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Blast Furnace",
+        "materials": [
+          {
+            "item": "petrified-tissue",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Bloodgold",
+      "names": {}
+    },
+    "blueberries": {
+      "id": "blueberries",
+      "name": "Blueberries",
+      "image": "img/items/blueberries.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Blueberry bushes in the Black Forest biome",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Blueberries",
+      "names": {
+        "cs": "Borůvky",
+        "de": "Blaubeeren",
+        "fr": "Myrtilles",
+        "ru": "Черника"
+      }
+    },
+    "bone-fragments": {
+      "id": "bone-fragments",
+      "name": "Bone Fragments",
+      "image": "img/items/bone-fragments.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Skeleton",
+          "kind": "creature",
+          "creatureId": "skeleton",
+          "biomes": [
+            "black-forest",
+            "swamp",
+            "mountain",
+            "deep-north"
+          ]
+        },
+        {
+          "text": "Rancid Remains",
+          "kind": "creature",
+          "creatureId": "rancid-remains",
+          "biomes": [
+            "black-forest"
+          ]
+        },
+        {
+          "text": "Skugg",
+          "kind": "creature",
+          "creatureId": "skugg",
+          "biomes": [
+            "ashlands"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Bone_Fragments",
+      "names": {
+        "cs": "Fragmenty kostí",
+        "de": "Knochenfragmente",
+        "fr": "Fragments d'os",
+        "ru": "Обломки костей"
+      }
+    },
+    "bronze": {
+      "id": "bronze",
+      "name": "Bronze",
+      "image": "img/items/bronze.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Forge",
+          "kind": "station"
+        },
+        {
+          "text": "Smelter",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Forge",
+        "materials": [
+          {
+            "item": "copper",
+            "amount": 2
+          },
+          {
+            "item": "tin",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Bronze",
+      "names": {
+        "cs": "Bronz",
+        "de": "Bronze",
+        "fr": "Bronze",
+        "ru": "Бронза"
+      }
+    },
+    "carapace": {
+      "id": "carapace",
+      "name": "Carapace",
+      "image": "img/items/carapace.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Seeker",
+          "kind": "creature",
+          "creatureId": "seeker",
+          "biomes": [
+            "mistlands"
+          ]
+        },
+        {
+          "text": "Seeker Soldier",
+          "kind": "creature",
+          "creatureId": "seeker-soldier",
+          "biomes": [
+            "mistlands"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Carapace",
+      "names": {
+        "cs": "Krunýř",
+        "de": "Chitinpanzer",
+        "fr": "Carapace",
+        "ru": "Панцирь"
+      }
+    },
+    "cast-breastplate-of-the-protector": {
+      "id": "cast-breastplate-of-the-protector",
+      "name": "Cast Breastplate of the Protector",
+      "image": "img/items/cast-breastplate-of-the-protector.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Black Forge level 4",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Black Forge level 4",
+        "materials": [
+          {
+            "item": "bloodgold",
+            "amount": 20
+          },
+          {
+            "item": "mould-helmet-of-the-protector",
+            "amount": 1
+          },
+          {
+            "item": "moose-hide",
+            "amount": 4
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Cast_Breastplate_of_the_Protector",
+      "names": {}
+    },
+    "cast-chestpiece-of-the-vanguard": {
+      "id": "cast-chestpiece-of-the-vanguard",
+      "name": "Cast Chestpiece of the Vanguard",
+      "image": "img/items/cast-chestpiece-of-the-vanguard.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Black Forge level 4",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Black Forge level 4",
+        "materials": [
+          {
+            "item": "seal-pelt",
+            "amount": 5
+          },
+          {
+            "item": "mould-hood-of-the-vanguard",
+            "amount": 1
+          },
+          {
+            "item": "moose-hide",
+            "amount": 5
+          },
+          {
+            "item": "moose-sinew",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Cast_Chestpiece_of_the_Vanguard",
+      "names": {}
+    },
+    "cast-headdress-of-the-caller": {
+      "id": "cast-headdress-of-the-caller",
+      "name": "Cast Headdress of the Caller",
+      "image": "img/items/cast-headdress-of-the-caller.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Galdr Table level 3",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Galdr Table level 3",
+        "materials": [
+          {
+            "item": "moose-sinew",
+            "amount": 2
+          },
+          {
+            "item": "mould-headdress-of-the-caller",
+            "amount": 1
+          },
+          {
+            "item": "moose-trophy",
+            "amount": 1
+          },
+          {
+            "item": "nornathread",
+            "amount": 3
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Cast_Headdress_of_the_Caller",
+      "names": {}
+    },
+    "cast-helmet-of-the-protector": {
+      "id": "cast-helmet-of-the-protector",
+      "name": "Cast Helmet of the Protector",
+      "image": "img/items/cast-helmet-of-the-protector.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Black Forge level 4",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Black Forge level 4",
+        "materials": [
+          {
+            "item": "bloodgold",
+            "amount": 20
+          },
+          {
+            "item": "mould-helmet-of-the-protector",
+            "amount": 1
+          },
+          {
+            "item": "moose-hide",
+            "amount": 4
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Cast_Helmet_of_the_Protector",
+      "names": {}
+    },
+    "cast-hood-of-the-vanguard": {
+      "id": "cast-hood-of-the-vanguard",
+      "name": "Cast Hood of the Vanguard",
+      "image": "img/items/cast-hood-of-the-vanguard.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Black Forge level 4",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Black Forge level 4",
+        "materials": [
+          {
+            "item": "seal-pelt",
+            "amount": 5
+          },
+          {
+            "item": "mould-hood-of-the-vanguard",
+            "amount": 1
+          },
+          {
+            "item": "moose-hide",
+            "amount": 5
+          },
+          {
+            "item": "moose-sinew",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Cast_Hood_of_the_Vanguard",
+      "names": {}
+    },
+    "cast-robes-of-the-caller": {
+      "id": "cast-robes-of-the-caller",
+      "name": "Cast Robes of the Caller",
+      "image": "img/items/cast-robes-of-the-caller.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Galdr Table level 3",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Galdr Table level 3",
+        "materials": [
+          {
+            "item": "moose-sinew",
+            "amount": 2
+          },
+          {
+            "item": "mould-headdress-of-the-caller",
+            "amount": 1
+          },
+          {
+            "item": "moose-trophy",
+            "amount": 1
+          },
+          {
+            "item": "nornathread",
+            "amount": 3
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Cast_Robes_of_the_Caller",
+      "names": {}
+    },
+    "cast-trousers-of-the-caller": {
+      "id": "cast-trousers-of-the-caller",
+      "name": "Cast Trousers of the Caller",
+      "image": "img/items/cast-trousers-of-the-caller.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Galdr Table level 3",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Galdr Table level 3",
+        "materials": [
+          {
+            "item": "moose-sinew",
+            "amount": 2
+          },
+          {
+            "item": "mould-headdress-of-the-caller",
+            "amount": 1
+          },
+          {
+            "item": "moose-trophy",
+            "amount": 1
+          },
+          {
+            "item": "nornathread",
+            "amount": 3
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Cast_Trousers_of_the_Caller",
+      "names": {}
+    },
+    "cast-trousers-of-the-protector": {
+      "id": "cast-trousers-of-the-protector",
+      "name": "Cast Trousers of the Protector",
+      "image": "img/items/cast-trousers-of-the-protector.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Black Forge level 4",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Black Forge level 4",
+        "materials": [
+          {
+            "item": "bloodgold",
+            "amount": 20
+          },
+          {
+            "item": "mould-helmet-of-the-protector",
+            "amount": 1
+          },
+          {
+            "item": "moose-hide",
+            "amount": 4
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Cast_Trousers_of_the_Protector",
+      "names": {}
+    },
+    "cast-trousers-of-the-vanguard": {
+      "id": "cast-trousers-of-the-vanguard",
+      "name": "Cast Trousers of the Vanguard",
+      "image": "img/items/cast-trousers-of-the-vanguard.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Black Forge level 4",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Black Forge level 4",
+        "materials": [
+          {
+            "item": "seal-pelt",
+            "amount": 5
+          },
+          {
+            "item": "mould-hood-of-the-vanguard",
+            "amount": 1
+          },
+          {
+            "item": "moose-hide",
+            "amount": 5
+          },
+          {
+            "item": "moose-sinew",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Cast_Trousers_of_the_Vanguard",
+      "names": {}
+    },
+    "chain": {
+      "id": "chain",
+      "name": "Chain",
+      "image": "img/items/chain.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Wraith",
+          "kind": "creature",
+          "creatureId": "wraith",
+          "biomes": [
+            "swamp"
+          ]
+        },
+        {
+          "text": "Sunken Crypts",
+          "kind": "location"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Chain",
+      "names": {
+        "cs": "Řetěz",
+        "fr": "Chaîne",
+        "ru": "Цепь"
+      }
+    },
+    "charred-bone": {
+      "id": "charred-bone",
+      "name": "Charred Bone",
+      "image": "img/items/charred-bone.png",
+      "biome": "ashlands",
+      "tier": 8,
+      "sources": [
+        {
+          "text": "Charred Warrior",
+          "kind": "creature",
+          "creatureId": "charred-warrior",
+          "biomes": [
+            "ashlands"
+          ]
+        },
+        {
+          "text": "Charred Marksman",
+          "kind": "creature",
+          "creatureId": "charred-marksman",
+          "biomes": [
+            "ashlands"
+          ]
+        },
+        {
+          "text": "Charred Warlock",
+          "kind": "creature",
+          "creatureId": "charred-warlock",
+          "biomes": [
+            "ashlands"
+          ]
+        },
+        {
+          "text": "Charred Twitcher",
+          "kind": "creature",
+          "creatureId": "charred-twitcher",
+          "biomes": [
+            "ashlands"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Charred_Bone",
+      "names": {
+        "ru": "Обугленная кость"
+      }
+    },
+    "coal": {
+      "id": "coal",
+      "name": "Coal",
+      "image": "img/items/coal.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Surtling",
+          "kind": "creature",
+          "creatureId": "surtling",
+          "biomes": [
+            "swamp"
+          ]
+        },
+        {
+          "text": "Burning Meat",
+          "kind": "other"
+        },
+        {
+          "text": "Charcoal Kiln",
+          "kind": "station"
+        },
+        {
+          "text": "Obliterator",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Coal",
+      "names": {
+        "cs": "Uhlí",
+        "de": "Kohle",
+        "fr": "Charbon",
+        "ru": "Уголь"
+      }
+    },
+    "copper": {
+      "id": "copper",
+      "name": "Copper",
+      "image": "img/items/copper.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Smelter",
+          "kind": "station"
+        },
+        {
+          "text": "Dvergr metal wall",
+          "kind": "other"
+        }
+      ],
+      "recipe": {
+        "station": "Smelter",
+        "materials": [
+          {
+            "item": "copper-ore",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Copper",
+      "names": {
+        "cs": "Měď",
+        "de": "Kupfer",
+        "fr": "Cuivre",
+        "ru": "Медь"
+      }
+    },
+    "copper-ore": {
+      "id": "copper-ore",
+      "name": "Copper Ore",
+      "image": "img/items/copper-ore.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Copper Deposit",
+          "kind": "location"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Copper_Ore",
+      "names": {
+        "cs": "Měděná ruda",
+        "de": "Kupfererz",
+        "fr": "Minerai de cuivre",
+        "ru": "Медная руда"
+      }
+    },
+    "coral-cod": {
+      "id": "coral-cod",
+      "name": "Coral Cod",
+      "image": "img/items/coral-cod.png",
+      "biome": "ocean",
+      "tier": 3,
+      "sources": [
+        {
+          "text": "Fishing",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Coral_Cod",
+      "names": {
+        "cs": "Korálová Treska",
+        "de": "Korallenbarsch",
+        "fr": "Vieille de corail",
+        "ru": "Коралловая треска"
+      }
+    },
+    "crown-jewel": {
+      "id": "crown-jewel",
+      "name": "Crown Jewel",
+      "image": "img/items/crown-jewel.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Kall Fimbulbringer",
+          "kind": "creature",
+          "creatureId": "kall-fimbulbringer",
+          "biomes": [
+            "deep-north"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Crown_Jewel",
+      "names": {}
+    },
+    "cultist-trophy": {
+      "id": "cultist-trophy",
+      "name": "Cultist Trophy",
+      "image": "img/items/cultist-trophy.png",
+      "biome": "mountain",
+      "tier": 5,
+      "sources": [
+        {
+          "text": "Cultist",
+          "kind": "creature",
+          "creatureId": "cultist",
+          "biomes": [
+            "mountain"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Cultist_Trophy",
+      "names": {
+        "cs": "Trofeje",
+        "ru": "Категория:Трофеи"
+      }
+    },
+    "dandelion": {
+      "id": "dandelion",
+      "name": "Dandelion",
+      "image": "img/items/dandelion.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Meadows biome",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Dandelion",
+      "names": {
+        "cs": "Pampeliška",
+        "de": "Löwenzahn",
+        "fr": "Pissenlit",
+        "ru": "Одуванчик"
+      }
+    },
+    "deer-hide": {
+      "id": "deer-hide",
+      "name": "Deer Hide",
+      "image": "img/items/deer-hide.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Deer",
+          "kind": "creature",
+          "creatureId": "deer",
+          "biomes": [
+            "meadows",
+            "black-forest"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Deer_Hide",
+      "names": {
+        "cs": "Jelení kůže",
+        "de": "Hirschfell",
+        "fr": "Peau de cerf",
+        "ru": "Шкура оленя"
+      }
+    },
+    "drake-trophy": {
+      "id": "drake-trophy",
+      "name": "Drake Trophy",
+      "image": "img/items/drake-trophy.png",
+      "biome": "mountain",
+      "tier": 5,
+      "sources": [
+        {
+          "text": "Drake",
+          "kind": "creature",
+          "creatureId": "drake",
+          "biomes": [
+            "mountain"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Drake_Trophy",
+      "names": {
+        "cs": "Trofeje",
+        "ru": "Категория:Трофеи"
+      }
+    },
+    "elaking-hair-bundle": {
+      "id": "elaking-hair-bundle",
+      "name": "Elaking Hair Bundle",
+      "image": "img/items/elaking-hair-bundle.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Elaking",
+          "kind": "creature",
+          "creatureId": "elaking",
+          "biomes": [
+            "deep-north"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Elaking_Hair_Bundle",
+      "names": {}
+    },
+    "feathers": {
+      "id": "feathers",
+      "name": "Feathers",
+      "image": "img/items/feathers.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Birds",
+          "kind": "other"
+        },
+        {
+          "text": "Chests",
+          "kind": "location"
+        },
+        {
+          "text": "Felled trees",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Feathers",
+      "names": {
+        "cs": "Peří",
+        "ru": "Перья"
+      }
+    },
+    "fenris-hair": {
+      "id": "fenris-hair",
+      "name": "Fenris Hair",
+      "image": "img/items/fenris-hair.png",
+      "biome": "mountain",
+      "tier": 5,
+      "sources": [
+        {
+          "text": "Frost Caves",
+          "kind": "location"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Fenris_Hair",
+      "names": {
+        "cs": "Fenridovy chlupy",
+        "ru": "Шерсть Фенриса"
+      }
+    },
+    "flametal": {
+      "id": "flametal",
+      "name": "Flametal",
+      "image": "img/items/flametal.png",
+      "biome": "ashlands",
+      "tier": 8,
+      "sources": [
+        {
+          "text": "Blast Furnace",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Blast Furnace",
+        "materials": [
+          {
+            "item": "flametal-ore",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Flametal",
+      "names": {
+        "cs": "Plamenný kov",
+        "de": "Flammenkern",
+        "fr": "Flametal",
+        "ru": "Огнеметалл"
+      }
+    },
+    "flametal-ore": {
+      "id": "flametal-ore",
+      "name": "Flametal Ore",
+      "image": "img/items/flametal-ore.png",
+      "biome": "ashlands",
+      "tier": 8,
+      "sources": [
+        {
+          "text": "Flametal Ore Vein in the Ashlands biome",
+          "kind": "location"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Flametal_Ore",
+      "names": {
+        "cs": "Plamenná kovová ruda",
+        "de": "Flammenkernerz",
+        "fr": "Minerai de flametal",
+        "ru": "Огнеметаллическая руда"
+      }
+    },
+    "flax": {
+      "id": "flax",
+      "name": "Flax",
+      "image": "img/items/flax.png",
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "Fuling Village in the Plains biome.",
+          "kind": "location"
+        },
+        {
+          "text": "Abandoned Village Barrels.",
+          "kind": "location"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Flax",
+      "names": {
+        "cs": "Len",
+        "de": "Flachs",
+        "fr": "Lin",
+        "ru": "Лен"
+      }
+    },
+    "giant-herring": {
+      "id": "giant-herring",
+      "name": "Giant Herring",
+      "image": "img/items/giant-herring.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Fishing",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Giant_Herring",
+      "names": {
+        "cs": "Obří Sleď",
+        "de": "Riesenhering",
+        "fr": "Guinée saumon",
+        "ru": "Гигантская сельдь"
+      }
+    },
+    "grouper": {
+      "id": "grouper",
+      "name": "Grouper",
+      "image": "img/items/grouper.png",
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "Fishing",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Grouper",
+      "names": {
+        "cs": "Kanic",
+        "de": "Zackenbarsch",
+        "fr": "Mérou",
+        "ru": "Групер"
+      }
+    },
+    "ice": {
+      "id": "ice",
+      "name": "Ice",
+      "image": "img/items/ice.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Ice Sheet",
+          "kind": "other"
+        },
+        {
+          "text": "Ice Pond",
+          "kind": "other"
+        },
+        {
+          "text": "Greydwarf",
+          "kind": "creature",
+          "creatureId": "greydwarf-deep-north",
+          "biomes": [
+            "deep-north"
+          ]
+        },
+        {
+          "text": "Greydwarf Shaman",
+          "kind": "creature",
+          "creatureId": "greydwarf-shaman-deep-north",
+          "biomes": [
+            "deep-north"
+          ]
+        },
+        {
+          "text": "Skeleton",
+          "kind": "creature",
+          "creatureId": "skeleton",
+          "biomes": [
+            "black-forest",
+            "swamp",
+            "mountain",
+            "deep-north"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Ice",
+      "names": {}
+    },
+    "iron": {
+      "id": "iron",
+      "name": "Iron",
+      "image": "img/items/iron.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Smelter",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Smelter",
+        "materials": [
+          {
+            "item": "scrap-iron",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Iron",
+      "names": {
+        "cs": "Železo",
+        "de": "Eisen",
+        "fr": "Fer",
+        "ru": "Железо"
+      }
+    },
+    "leather-scraps": {
+      "id": "leather-scraps",
+      "name": "Leather Scraps",
+      "image": "img/items/leather-scraps.png",
+      "biome": "meadows",
+      "tier": 1,
+      "sources": [
+        {
+          "text": "Boar",
+          "kind": "creature",
+          "creatureId": "boar",
+          "biomes": [
+            "meadows"
+          ]
+        },
+        {
+          "text": "Bat",
+          "kind": "creature",
+          "creatureId": "bat",
+          "biomes": [
+            "mountain"
+          ]
+        },
+        {
+          "text": "Muddy Scrap Piles",
+          "kind": "location"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Leather_Scraps",
+      "names": {
+        "cs": "Zbytky z kůže",
+        "de": "Lederreste",
+        "fr": "Bouts de cuir",
+        "ru": "Кожаные обрывки"
+      }
+    },
+    "leather-straps": {
+      "id": "leather-straps",
+      "name": "Leather Straps",
+      "image": "img/items/leather-straps.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Krigen",
+          "kind": "creature",
+          "creatureId": "krigen",
+          "biomes": [
+            "deep-north"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Leather_Straps",
+      "names": {}
+    },
+    "linen-thread": {
+      "id": "linen-thread",
+      "name": "Linen Thread",
+      "image": "img/items/linen-thread.png",
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "Spinning Wheel",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Spinning Wheel",
+        "materials": [
+          {
+            "item": "flax",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Linen_Thread",
+      "names": {
+        "cs": "Lněné vlákno",
+        "fr": "Toile de lin",
+        "ru": "Льняная нить"
+      }
+    },
+    "liquid-frost": {
+      "id": "liquid-frost",
+      "name": "Liquid Frost",
+      "image": "img/items/liquid-frost.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Frigid Kiln",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Frigid Kiln",
+        "materials": [
+          {
+            "item": "ice",
+            "amount": 5
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Liquid_Frost",
+      "names": {}
+    },
+    "lox-pelt": {
+      "id": "lox-pelt",
+      "name": "Lox Pelt",
+      "image": "img/items/lox-pelt.png",
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "Lox",
+          "kind": "creature",
+          "creatureId": "lox",
+          "biomes": [
+            "plains"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Lox_Pelt",
+      "names": {
+        "cs": "Kůže z Loxe",
+        "de": "Lox-Pelz",
+        "fr": "Peau de Lox",
+        "ru": "Шкура быкоящера"
+      }
+    },
+    "magmafish": {
+      "id": "magmafish",
+      "name": "Magmafish",
+      "image": "img/items/magmafish.png",
+      "biome": "ashlands",
+      "tier": 8,
+      "sources": [
+        {
+          "text": "Fishing",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Magmafish",
+      "names": {
+        "cs": "Magmaplavka",
+        "de": "Magmafisch",
+        "fr": "Poisson-magma",
+        "ru": "Магмарыбка"
+      }
+    },
+    "mandible": {
+      "id": "mandible",
+      "name": "Mandible",
+      "image": "img/items/mandible.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Seeker Soldier",
+          "kind": "creature",
+          "creatureId": "seeker-soldier",
+          "biomes": [
+            "mistlands"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Mandible",
+      "names": {
+        "cs": "Kusadlo",
+        "ru": "Мандибула"
+      }
+    },
+    "moose-hide": {
+      "id": "moose-hide",
+      "name": "Moose Hide",
+      "image": "img/items/moose-hide.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Moose",
+          "kind": "creature",
+          "creatureId": "moose",
+          "biomes": [
+            "deep-north"
+          ]
+        },
+        {
+          "text": "Bedrolls in Mörkhalla.",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Moose_Hide",
+      "names": {}
+    },
+    "moose-sinew": {
+      "id": "moose-sinew",
+      "name": "Moose Sinew",
+      "image": "img/items/moose-sinew.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Moose",
+          "kind": "creature",
+          "creatureId": "moose",
+          "biomes": [
+            "deep-north"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Moose_Sinew",
+      "names": {}
+    },
+    "moose-trophy": {
+      "id": "moose-trophy",
+      "name": "Moose Trophy",
+      "image": "img/items/moose-trophy.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Moose",
+          "kind": "creature",
+          "creatureId": "moose",
+          "biomes": [
+            "deep-north"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Moose_Trophy",
+      "names": {
+        "cs": "Trofeje",
+        "ru": "Категория:Трофеи"
+      }
+    },
+    "morgen-heart": {
+      "id": "morgen-heart",
+      "name": "Morgen Heart",
+      "image": "img/items/morgen-heart.png",
+      "biome": "ashlands",
+      "tier": 8,
+      "sources": [
+        {
+          "text": "Morgen",
+          "kind": "creature",
+          "creatureId": "morgen",
+          "biomes": [
+            "ashlands"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Morgen_Heart",
+      "names": {
+        "ru": "Сердце моргена"
+      }
+    },
+    "morgen-sinew": {
+      "id": "morgen-sinew",
+      "name": "Morgen Sinew",
+      "image": "img/items/morgen-sinew.png",
+      "biome": "ashlands",
+      "tier": 8,
+      "sources": [
+        {
+          "text": "Morgen",
+          "kind": "creature",
+          "creatureId": "morgen",
+          "biomes": [
+            "ashlands"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Morgen_Sinew",
+      "names": {
+        "ru": "Сухожилие моргена"
+      }
+    },
+    "mould-headdress-of-the-caller": {
+      "id": "mould-headdress-of-the-caller",
+      "name": "Mould Headdress of the Caller",
+      "image": "img/items/mould-headdress-of-the-caller.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Galdr Table level 3",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Galdr Table level 3",
+        "materials": [
+          {
+            "item": "moose-sinew",
+            "amount": 2
+          },
+          {
+            "item": "mould-headdress-of-the-caller",
+            "amount": 1
+          },
+          {
+            "item": "moose-trophy",
+            "amount": 1
+          },
+          {
+            "item": "nornathread",
+            "amount": 3
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mould_Headdress_of_the_Caller",
+      "names": {}
+    },
+    "mould-helmet-of-the-protector": {
+      "id": "mould-helmet-of-the-protector",
+      "name": "Mould Helmet of the Protector",
+      "image": "img/items/mould-helmet-of-the-protector.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Black Forge level 4",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Black Forge level 4",
+        "materials": [
+          {
+            "item": "bloodgold",
+            "amount": 20
+          },
+          {
+            "item": "mould-helmet-of-the-protector",
+            "amount": 1
+          },
+          {
+            "item": "moose-hide",
+            "amount": 4
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mould_Helmet_of_the_Protector",
+      "names": {}
+    },
+    "mould-hood-of-the-vanguard": {
+      "id": "mould-hood-of-the-vanguard",
+      "name": "Mould Hood of the Vanguard",
+      "image": "img/items/mould-hood-of-the-vanguard.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Black Forge level 4",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Black Forge level 4",
+        "materials": [
+          {
+            "item": "seal-pelt",
+            "amount": 5
+          },
+          {
+            "item": "mould-hood-of-the-vanguard",
+            "amount": 1
+          },
+          {
+            "item": "moose-hide",
+            "amount": 5
+          },
+          {
+            "item": "moose-sinew",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Mould_Hood_of_the_Vanguard",
+      "names": {}
+    },
+    "nornathread": {
+      "id": "nornathread",
+      "name": "Nornathread",
+      "image": "img/items/nornathread.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Hexen",
+          "kind": "creature",
+          "creatureId": "hexen",
+          "biomes": [
+            "deep-north"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Nornathread",
+      "names": {}
+    },
+    "northern-salmon": {
+      "id": "northern-salmon",
+      "name": "Northern Salmon",
+      "image": "img/items/northern-salmon.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Fishing",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Northern_Salmon",
+      "names": {
+        "cs": "Severní Losos",
+        "de": "Nordlachs",
+        "fr": "Saumon nordique",
+        "ru": "Северный лосось"
+      }
+    },
+    "perch": {
+      "id": "perch",
+      "name": "Perch",
+      "image": "img/items/perch.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Fishing",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Perch",
+      "names": {
+        "cs": "Okoun",
+        "de": "Barsch",
+        "fr": "Perche",
+        "ru": "Окунь"
+      }
+    },
+    "petrified-tissue": {
+      "id": "petrified-tissue",
+      "name": "Petrified Tissue",
+      "image": "img/items/petrified-tissue.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Petrified Gammeltroll",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Petrified_Tissue",
+      "names": {}
+    },
+    "pike": {
+      "id": "pike",
+      "name": "Pike",
+      "image": "img/items/pike.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Fishing",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Pike",
+      "names": {
+        "cs": "Štika",
+        "de": "Hecht",
+        "fr": "Brochet",
+        "ru": "Щука"
+      }
+    },
+    "pufferfish": {
+      "id": "pufferfish",
+      "name": "Pufferfish",
+      "image": "img/items/pufferfish.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Fishing",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Pufferfish",
+      "names": {
+        "cs": "Čtverzubka",
+        "de": "Kugelfisch",
+        "fr": "Poisson-globe",
+        "ru": "Иглобрюх"
+      }
+    },
+    "refined-eitr": {
+      "id": "refined-eitr",
+      "name": "Refined Eitr",
+      "image": "img/items/refined-eitr.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Eitr Refinery",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Eitr Refinery",
+        "materials": [
+          {
+            "item": "sap",
+            "amount": 1
+          },
+          {
+            "item": "soft-tissue",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Refined_Eitr",
+      "names": {
+        "cs": "Zpracovaný Éitr",
+        "ru": "Переработанный эйтр"
+      }
+    },
+    "root": {
+      "id": "root",
+      "name": "Root",
+      "image": "img/items/root.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Abomination",
+          "kind": "creature",
+          "creatureId": "abomination",
+          "biomes": [
+            "swamp"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Root_(item)",
+      "names": {
+        "cs": "Kořen",
+        "de": "Wurzel",
+        "fr": "Racine",
+        "ru": "Корень"
+      }
+    },
+    "roots": {
+      "id": "roots",
+      "name": "Roots",
+      "image": "img/items/roots.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Abomination",
+          "kind": "creature",
+          "creatureId": "abomination",
+          "biomes": [
+            "swamp"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Root_(item)",
+      "names": {
+        "cs": "Kořen",
+        "de": "Wurzel",
+        "fr": "Racine",
+        "ru": "Корень"
+      }
+    },
+    "sap": {
+      "id": "sap",
+      "name": "Sap",
+      "image": "img/items/sap.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Mistlands biome",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Sap",
+      "names": {
+        "cs": "Míza",
+        "ru": "Живица"
+      }
+    },
+    "scale-hide": {
+      "id": "scale-hide",
+      "name": "Scale Hide",
+      "image": "img/items/scale-hide.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Hare",
+          "kind": "creature",
+          "creatureId": "hare",
+          "biomes": [
+            "mistlands"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Scale_Hide",
+      "names": {
+        "cs": "Šupinatá kožešina",
+        "de": "Schuppenhaut",
+        "fr": "Peau écailleuse",
+        "ru": "Чешуйчатая шкура"
+      }
+    },
+    "scrap-iron": {
+      "id": "scrap-iron",
+      "name": "Scrap Iron",
+      "image": "img/items/scrap-iron.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Muddy Scrap Pile",
+          "kind": "location"
+        },
+        {
+          "text": "Sunken Crypts Chests",
+          "kind": "location"
+        },
+        {
+          "text": "Oozers",
+          "kind": "creature",
+          "creatureId": "oozer",
+          "biomes": [
+            "swamp"
+          ]
+        },
+        {
+          "text": "Ancient Sword",
+          "kind": "other"
+        },
+        {
+          "text": "Ancient Armor",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Scrap_Iron",
+      "names": {
+        "cs": "Železný šrot",
+        "de": "Eisenschrott",
+        "fr": "Ferraille",
+        "ru": "Металлолом"
+      }
+    },
+    "seal-pelt": {
+      "id": "seal-pelt",
+      "name": "Seal Pelt",
+      "image": "img/items/seal-pelt.png",
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Seal",
+          "kind": "creature",
+          "creatureId": "seal",
+          "biomes": [
+            "deep-north"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Seal_Pelt",
+      "names": {}
+    },
+    "silver": {
+      "id": "silver",
+      "name": "Silver",
+      "image": "img/items/silver.png",
+      "biome": "mountain",
+      "tier": 5,
+      "sources": [
+        {
+          "text": "Smelting",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Smelting",
+        "materials": [
+          {
+            "item": "silver-ore",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Silver",
+      "names": {
+        "cs": "Stříbro",
+        "de": "Silber",
+        "fr": "Argent",
+        "ru": "Серебро"
+      }
+    },
+    "silver-ore": {
+      "id": "silver-ore",
+      "name": "Silver Ore",
+      "image": "img/items/silver-ore.png",
+      "biome": "mountain",
+      "tier": 5,
+      "sources": [
+        {
+          "text": "Silver Veins in Mountain biome",
+          "kind": "location"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Silver_Ore",
+      "names": {
+        "cs": "Stříbrná ruda",
+        "de": "Silbererz",
+        "fr": "Minerai d'argent",
+        "ru": "Серебряная руда"
+      }
+    },
+    "soft-tissue": {
+      "id": "soft-tissue",
+      "name": "Soft Tissue",
+      "image": "img/items/soft-tissue.png",
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "* Mined from Ancient skulls",
+          "kind": "location"
+        },
+        {
+          "text": "* Dropped from Dvergr Crates",
+          "kind": "other"
+        },
+        {
+          "text": "* Dropped from Dvergr",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Soft_Tissue",
+      "names": {
+        "cs": "Měkká Tkáň",
+        "de": "Weichgewebe",
+        "fr": "Tissu délicat",
+        "ru": "Мягкая ткань"
+      }
+    },
+    "tetra": {
+      "id": "tetra",
+      "name": "Tetra",
+      "image": "img/items/tetra.png",
+      "biome": "mountain",
+      "tier": 5,
+      "sources": [
+        {
+          "text": "Fishing",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Tetra",
+      "names": {
+        "cs": "Tetra",
+        "de": "Salmler",
+        "fr": "Tétra",
+        "ru": "Тетра"
+      }
+    },
+    "tin": {
+      "id": "tin",
+      "name": "Tin",
+      "image": "img/items/tin.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Smelter",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Smelter",
+        "materials": [
+          {
+            "item": "tin-ore",
+            "amount": 1
+          }
+        ],
+        "yields": 1
+      },
+      "wiki": "https://valheim.weirdgloop.org/w/Tin",
+      "names": {
+        "cs": "Cín",
+        "de": "Zinn",
+        "fr": "Étain",
+        "ru": "Олово"
+      }
+    },
+    "tin-ore": {
+      "id": "tin-ore",
+      "name": "Tin Ore",
+      "image": "img/items/tin-ore.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Tin Deposit",
+          "kind": "location"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Tin_Ore",
+      "names": {
+        "cs": "Cínová ruda",
+        "de": "Zinnerz",
+        "fr": "Minerai d'étain",
+        "ru": "Оловянная руда"
+      }
+    },
+    "troll-hide": {
+      "id": "troll-hide",
+      "name": "Troll Hide",
+      "image": "img/items/troll-hide.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Troll",
+          "kind": "creature",
+          "creatureId": "troll",
+          "biomes": [
+            "black-forest"
+          ]
+        },
+        {
+          "text": "Trollfish bonus drop",
+          "kind": "creature",
+          "creatureId": "trollfish",
+          "biomes": [
+            "black-forest"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Troll_Hide",
+      "names": {
+        "cs": "Trollí kůže",
+        "de": "Trollleder",
+        "fr": "Peau de troll",
+        "ru": "Шкура тролля"
+      }
+    },
+    "trollfish": {
+      "id": "trollfish",
+      "name": "Trollfish",
+      "image": "img/items/trollfish.png",
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Fishing",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Trollfish",
+      "names": {
+        "cs": "Trollyba",
+        "de": "Trollfisch",
+        "fr": "Poisson-troll",
+        "ru": "Тролль-рыба"
+      }
+    },
+    "tuna": {
+      "id": "tuna",
+      "name": "Tuna",
+      "image": "img/items/tuna.png",
+      "biome": "ocean",
+      "tier": 3,
+      "sources": [
+        {
+          "text": "Fishing",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Tuna",
+      "names": {
+        "cs": "Tuňák",
+        "de": "Thunfisch",
+        "fr": "Thon",
+        "ru": "Тунец"
+      }
+    },
+    "vile-ribcage": {
+      "id": "vile-ribcage",
+      "name": "Vile Ribcage",
+      "image": "img/items/vile-ribcage.png",
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "Vile",
+          "kind": "creature",
+          "creatureId": "vile",
+          "biomes": [
+            "plains"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Vile_Ribcage",
+      "names": {
+        "ru": "Гнилостные ребра"
+      }
+    },
+    "vile-trophy": {
+      "id": "vile-trophy",
+      "name": "Vile Trophy",
+      "image": "img/items/vile-trophy.png",
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "Vile",
+          "kind": "creature",
+          "creatureId": "vile",
+          "biomes": [
+            "plains"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Vile_Trophy",
+      "names": {
+        "cs": "Trofeje",
+        "ru": "Категория:Трофеи"
+      }
+    },
+    "wolf-fang": {
+      "id": "wolf-fang",
+      "name": "Wolf Fang",
+      "image": "img/items/wolf-fang.png",
+      "biome": "mountain",
+      "tier": 5,
+      "sources": [
+        {
+          "text": "Wolf",
+          "kind": "creature",
+          "creatureId": "wolf",
+          "biomes": [
+            "mountain"
+          ]
+        },
+        {
+          "text": "Fenring",
+          "kind": "creature",
+          "creatureId": "fenring",
+          "biomes": [
+            "mountain"
+          ]
+        },
+        {
+          "text": "Ulv",
+          "kind": "creature",
+          "creatureId": "ulv",
+          "biomes": [
+            "mountain"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Wolf_Fang",
+      "names": {
+        "cs": "Vlčí tesák",
+        "ru": "Волчий клык"
+      }
+    },
+    "wolf-pelt": {
+      "id": "wolf-pelt",
+      "name": "Wolf Pelt",
+      "image": "img/items/wolf-pelt.png",
+      "biome": "mountain",
+      "tier": 5,
+      "sources": [
+        {
+          "text": "Wolf",
+          "kind": "creature",
+          "creatureId": "wolf",
+          "biomes": [
+            "mountain"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Wolf_Pelt",
+      "names": {
+        "cs": "Vlčí kůže",
+        "de": "Wolfspelz",
+        "fr": "Peau de loup",
+        "ru": "Шкура волка"
+      }
+    },
+    "wolf-trophy": {
+      "id": "wolf-trophy",
+      "name": "Wolf Trophy",
+      "image": "img/items/wolf-trophy.png",
+      "biome": "mountain",
+      "tier": 5,
+      "sources": [
+        {
+          "text": "Wolf",
+          "kind": "creature",
+          "creatureId": "wolf",
+          "biomes": [
+            "mountain"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Wolf_Trophy",
+      "names": {
+        "cs": "Trofeje",
+        "ru": "Категория:Трофеи"
+      }
+    },
+    "writhan-roots": {
+      "id": "writhan-roots",
+      "name": "Writhan Roots",
+      "image": "img/items/writhan-roots.png",
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Writhan",
+          "kind": "creature",
+          "creatureId": "writhan",
+          "biomes": [
+            "swamp"
+          ]
+        }
+      ],
+      "recipe": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Writhan_Roots",
+      "names": {}
+    }
+  },
+  "armor": [
+    {
+      "id": "ashen-cape",
+      "name": "Ashen Cape",
+      "wiki": "https://valheim.weirdgloop.org/w/Ashen_Cape",
+      "kind": "single",
+      "biome": "ashlands",
+      "tier": 8,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "ashen-cape",
+          "name": "Ashen cape",
+          "slot": "head",
+          "gameId": "CapeAsh",
+          "image": "img/armor/ashen-cape.png",
+          "station": "Black Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 12,
+              "durability": 1200,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "asksvin-hide",
+                  "amount": 6
+                },
+                {
+                  "item": "morgen-sinew",
+                  "amount": 2
+                },
+                {
+                  "item": "flametal",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 14,
+              "durability": 1250,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "asksvin-hide",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 16,
+              "durability": 1300,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "asksvin-hide",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 18,
+              "durability": 1350,
+              "stationLevel": 6,
+              "materials": [
+                {
+                  "item": "asksvin-hide",
+                  "amount": 8
+                }
+              ]
+            }
+          ],
+          "armorSource": "rendered",
+          "weight": 4,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Ashen cape is the combat focused Ashlands-tier Cape.",
+          "names": {
+            "ru": "Пепельный плащ"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Пепельный плащ"
+      }
+    },
+    {
+      "id": "ask-set",
+      "name": "Ask Set",
+      "wiki": "https://valheim.weirdgloop.org/w/Ask_Set",
+      "kind": "set",
+      "biome": "ashlands",
+      "tier": 8,
+      "setBonus": {
+        "name": "Ask's endurance",
+        "pieces": 3,
+        "effects": [
+          "-10% run stamina usage",
+          "-10% jump stamina usage",
+          "-20% attack stamina usage",
+          "+10% pierce damage"
+        ]
+      },
+      "pieces": [
+        {
+          "id": "hood-of-ask",
+          "name": "Hood of Ask",
+          "slot": "head",
+          "gameId": "HelmetAshlandsMediumHood",
+          "image": "img/armor/hood-of-ask.png",
+          "station": "Black Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 28,
+              "durability": 1000,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 15
+                },
+                {
+                  "item": "lox-pelt",
+                  "amount": 4
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 30,
+              "durability": 1200,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 10
+                },
+                {
+                  "item": "lox-pelt",
+                  "amount": 2
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 32,
+              "durability": 1400,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 20
+                },
+                {
+                  "item": "lox-pelt",
+                  "amount": 4
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 34,
+              "durability": 1600,
+              "stationLevel": 6,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 40
+                },
+                {
+                  "item": "lox-pelt",
+                  "amount": 8
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 1,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Ask Set is an Ashlands-tier armor. This set is one tier above Carapace Armor and the Eitr-weave Set, and should be considered a \"medium armor,\" as it has a lower armor value than Flametal Armor, but a higher armor value than the Embla Set. Wearing all three pieces provides the Ask's Endurance set bonus, reducing stamina usage from running, jumping, and attacking, and providing +10% Pierce dama",
+          "names": {
+            "ru": "Набор Аска"
+          }
+        },
+        {
+          "id": "breastplate-of-ask",
+          "name": "Breastplate of Ask",
+          "slot": "chest",
+          "gameId": "ArmorAshlandsMediumChest",
+          "image": "img/armor/breastplate-of-ask.png",
+          "station": "Black Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 28,
+              "durability": 1000,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 15
+                },
+                {
+                  "item": "lox-pelt",
+                  "amount": 4
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 30,
+              "durability": 1200,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 10
+                },
+                {
+                  "item": "lox-pelt",
+                  "amount": 2
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 32,
+              "durability": 1400,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 20
+                },
+                {
+                  "item": "lox-pelt",
+                  "amount": 4
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 34,
+              "durability": 1600,
+              "stationLevel": 6,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 40
+                },
+                {
+                  "item": "lox-pelt",
+                  "amount": 8
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 5,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Ask Set is an Ashlands-tier armor. This set is one tier above Carapace Armor and the Eitr-weave Set, and should be considered a \"medium armor,\" as it has a lower armor value than Flametal Armor, but a higher armor value than the Embla Set. Wearing all three pieces provides the Ask's Endurance set bonus, reducing stamina usage from running, jumping, and attacking, and providing +10% Pierce dama",
+          "names": {
+            "ru": "Набор Аска"
+          }
+        },
+        {
+          "id": "trousers-of-ask",
+          "name": "Trousers of Ask",
+          "slot": "legs",
+          "gameId": "ArmorAshlandsMediumlegs",
+          "image": "img/armor/trousers-of-ask.png",
+          "station": "Black Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 28,
+              "durability": 1000,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 15
+                },
+                {
+                  "item": "lox-pelt",
+                  "amount": 4
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 30,
+              "durability": 1200,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 10
+                },
+                {
+                  "item": "lox-pelt",
+                  "amount": 2
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 32,
+              "durability": 1400,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 20
+                },
+                {
+                  "item": "lox-pelt",
+                  "amount": 4
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 34,
+              "durability": 1600,
+              "stationLevel": 6,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 40
+                },
+                {
+                  "item": "lox-pelt",
+                  "amount": 8
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 5,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Ask Set is an Ashlands-tier armor. This set is one tier above Carapace Armor and the Eitr-weave Set, and should be considered a \"medium armor,\" as it has a lower armor value than Flametal Armor, but a higher armor value than the Embla Set. Wearing all three pieces provides the Ask's Endurance set bonus, reducing stamina usage from running, jumping, and attacking, and providing +10% Pierce dama",
+          "names": {
+            "ru": "Набор Аска"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Набор Аска"
+      }
+    },
+    {
+      "id": "asksvin-cloak",
+      "name": "Asksvin Cloak",
+      "wiki": "https://valheim.weirdgloop.org/w/Asksvin_Cloak",
+      "kind": "single",
+      "biome": "ashlands",
+      "tier": 8,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "asksvin-cloak",
+          "name": "Asksvin cloak",
+          "slot": "head",
+          "gameId": "CapeAsksvin",
+          "image": "img/armor/asksvin-cloak.png",
+          "station": "Galdr Table",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1500,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "asksvin-hide",
+                  "amount": 6
+                },
+                {
+                  "item": "morgen-sinew",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 2,
+              "durability": 1550,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "asksvin-hide",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 3,
+              "durability": 1600,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "asksvin-hide",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 4,
+              "durability": 1650,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "asksvin-hide",
+                  "amount": 8
+                }
+              ]
+            }
+          ],
+          "armorSource": "rendered",
+          "weight": 4,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Asksvin cloak is a craftable Cape piece available in Ashlands. It offers a -15% dodge stamina usage and the Wind run effect. Wind run increases running speed up to +25% and decreases running stamina usage down to -100% based on wind direction and wind strength.",
+          "names": {
+            "ru": "Плащ из шкуры пеплозавра"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Плащ из шкуры пеплозавра"
+      }
+    },
+    {
+      "id": "beaded-dress-blue",
+      "name": "Beaded dress blue",
+      "wiki": "https://valheim.weirdgloop.org/w/Beaded_dress_blue",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "beaded-dress-blue",
+          "name": "Beaded dress blue",
+          "slot": "chest",
+          "gameId": "ArmorDress6",
+          "image": "img/armor/beaded-dress-blue.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Beaded dress blue is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's bronze chest.",
+          "names": {
+            "ru": "Синее платье в бусинах"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Синее платье в бусинах"
+      }
+    },
+    {
+      "id": "beaded-dress-brown",
+      "name": "Beaded dress brown",
+      "wiki": "https://valheim.weirdgloop.org/w/Beaded_dress_brown",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "beaded-dress-brown",
+          "name": "Beaded dress brown",
+          "slot": "chest",
+          "gameId": "ArmorDress3",
+          "image": "img/armor/beaded-dress-brown.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Beaded dress brown is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's bronze chest.",
+          "names": {
+            "ru": "Коричневое платье в бусинах"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Коричневое платье в бусинах"
+      }
+    },
+    {
+      "id": "beaded-dress-yellow",
+      "name": "Beaded dress yellow",
+      "wiki": "https://valheim.weirdgloop.org/w/Beaded_dress_yellow",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "beaded-dress-yellow",
+          "name": "Beaded dress yellow",
+          "slot": "chest",
+          "gameId": "ArmorDress9",
+          "image": "img/armor/beaded-dress-yellow.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Beaded dress yellow is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's bronze chest.",
+          "names": {
+            "ru": "Желтое платье в бусинах"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Желтое платье в бусинах"
+      }
+    },
+    {
+      "id": "beaded-tunic-blue",
+      "name": "Beaded tunic blue",
+      "wiki": "https://valheim.weirdgloop.org/w/Beaded_tunic_blue",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "beaded-tunic-blue",
+          "name": "Beaded tunic blue",
+          "slot": "chest",
+          "gameId": "ArmorTunic3",
+          "image": "img/armor/beaded-tunic-blue.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Beaded tunic blue is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's bronze chest.",
+          "names": {
+            "ru": "Синяя туника в бусинах"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Синяя туника в бусинах"
+      }
+    },
+    {
+      "id": "beaded-tunic-red",
+      "name": "Beaded tunic red",
+      "wiki": "https://valheim.weirdgloop.org/w/Beaded_tunic_red",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "beaded-tunic-red",
+          "name": "Beaded tunic red",
+          "slot": "chest",
+          "gameId": "ArmorTunic6",
+          "image": "img/armor/beaded-tunic-red.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Beaded tunic red is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's bronze chest.",
+          "names": {
+            "ru": "Красная туника в бусинах"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Красная туника в бусинах"
+      }
+    },
+    {
+      "id": "beaded-tunic-yellow",
+      "name": "Beaded tunic yellow",
+      "wiki": "https://valheim.weirdgloop.org/w/Beaded_tunic_yellow",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "beaded-tunic-yellow",
+          "name": "Beaded tunic yellow",
+          "slot": "chest",
+          "gameId": "ArmorTunic9",
+          "image": "img/armor/beaded-tunic-yellow.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Beaded tunic yellow is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's bronze chest.",
+          "names": {
+            "ru": "Желтая туника в бусинах"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Желтая туника в бусинах"
+      }
+    },
+    {
+      "id": "bear-set",
+      "name": "Bear Set",
+      "wiki": "https://valheim.weirdgloop.org/w/Bear_Set",
+      "kind": "set",
+      "biome": "black-forest",
+      "tier": 2,
+      "setBonus": {
+        "name": "Berserk",
+        "pieces": 3,
+        "effects": [
+          "Health regen: +30%",
+          "Stamina regen: +15%",
+          "Slightly weak (1.25x) VS Blunt, Slash and Pierce",
+          "Slash: +10%",
+          "Chop: +10%"
+        ]
+      },
+      "pieces": [
+        {
+          "id": "headdress-of-the-bear",
+          "name": "Headdress of the Bear",
+          "slot": "head",
+          "gameId": "HelmetBerserkerHood",
+          "image": "img/armor/headdress-of-the-bear.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 7,
+              "durability": 1000,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 5
+                },
+                {
+                  "item": "bear-trophy",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 9,
+              "durability": 1200,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 11,
+              "durability": 1400,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 13,
+              "durability": 1600,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 8
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 1,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Bear Set is a Black Forest-tier armor set. It has a lower armor value than the Bronze Armor, but a higher armor value than the Troll Set. However, wearing all 3 pieces provides the Berserk set bonus, increasing damage, stamina and health regeneration, but making the wearer slightly more vulnerable to physical damage.",
+          "names": {
+            "ru": "Медвежья броня"
+          }
+        },
+        {
+          "id": "patterns-of-the-bear",
+          "name": "Patterns of the Bear",
+          "slot": "chest",
+          "gameId": "ArmorBerserkerChest",
+          "image": "img/armor/patterns-of-the-bear.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 7,
+              "durability": 1000,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 5
+                },
+                {
+                  "item": "bear-paw",
+                  "amount": 2
+                },
+                {
+                  "item": "blueberries",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 9,
+              "durability": 1200,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 2
+                },
+                {
+                  "item": "blueberries",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 11,
+              "durability": 1400,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 4
+                },
+                {
+                  "item": "blueberries",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 13,
+              "durability": 1600,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 8
+                },
+                {
+                  "item": "blueberries",
+                  "amount": 4
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 5,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Bear Set is a Black Forest-tier armor set. It has a lower armor value than the Bronze Armor, but a higher armor value than the Troll Set. However, wearing all 3 pieces provides the Berserk set bonus, increasing damage, stamina and health regeneration, but making the wearer slightly more vulnerable to physical damage.",
+          "names": {
+            "ru": "Медвежья броня"
+          }
+        },
+        {
+          "id": "loincloth-of-the-bear",
+          "name": "Loincloth of the Bear",
+          "slot": "legs",
+          "gameId": "ArmorBerserkerLegs",
+          "image": "img/armor/loincloth-of-the-bear.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 7,
+              "durability": 1000,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 5
+                },
+                {
+                  "item": "blueberries",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 9,
+              "durability": 1200,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 2
+                },
+                {
+                  "item": "blueberries",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 11,
+              "durability": 1400,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 4
+                },
+                {
+                  "item": "blueberries",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 13,
+              "durability": 1600,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 8
+                },
+                {
+                  "item": "blueberries",
+                  "amount": 4
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 5,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Bear Set is a Black Forest-tier armor set. It has a lower armor value than the Bronze Armor, but a higher armor value than the Troll Set. However, wearing all 3 pieces provides the Berserk set bonus, increasing damage, stamina and health regeneration, but making the wearer slightly more vulnerable to physical damage.",
+          "names": {
+            "ru": "Медвежья броня"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Медвежья броня"
+      }
+    },
+    {
+      "id": "bronze-armor",
+      "name": "Bronze Armor",
+      "wiki": "https://valheim.weirdgloop.org/w/Bronze_Armor",
+      "kind": "set",
+      "biome": "black-forest",
+      "tier": 2,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "bronze-helmet",
+          "name": "Bronze Helmet",
+          "slot": "head",
+          "gameId": "HelmetBronze",
+          "image": "img/armor/bronze-helmet.png",
+          "station": "Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 8,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "bronze",
+                  "amount": 5
+                },
+                {
+                  "item": "deer-hide",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 10,
+              "durability": 1200,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "bronze",
+                  "amount": 3
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 12,
+              "durability": 1400,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "bronze",
+                  "amount": 6
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 14,
+              "durability": 1600,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "bronze",
+                  "amount": 12
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Bronze Armor is a Black Forest-tier armor. Compared with the other armor set available in the Bronze Age, the Troll Set, it provides higher armor values but reduces the player's movement speed. There is no set bonus for bronze armor.",
+          "names": {
+            "cs": "Bronzová zbroj",
+            "ru": "Бронзовая броня"
+          }
+        },
+        {
+          "id": "bronze-plate-tunic",
+          "name": "Bronze Plate Tunic",
+          "slot": "chest",
+          "gameId": "ArmorBronzeChest",
+          "image": "img/armor/bronze-plate-tunic.png",
+          "station": "Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 8,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "bronze",
+                  "amount": 5
+                },
+                {
+                  "item": "deer-hide",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 10,
+              "durability": 1200,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "bronze",
+                  "amount": 3
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 12,
+              "durability": 1400,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "bronze",
+                  "amount": 6
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 14,
+              "durability": 1600,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "bronze",
+                  "amount": 12
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 10,
+          "movementSpeed": -5,
+          "resistances": [],
+          "description": "Bronze Armor is a Black Forest-tier armor. Compared with the other armor set available in the Bronze Age, the Troll Set, it provides higher armor values but reduces the player's movement speed. There is no set bonus for bronze armor.",
+          "names": {
+            "cs": "Bronzová zbroj",
+            "ru": "Бронзовая броня"
+          }
+        },
+        {
+          "id": "bronze-plate-leggings",
+          "name": "Bronze Plate Leggings",
+          "slot": "legs",
+          "gameId": "ArmorBronzeLegs",
+          "image": "img/armor/bronze-plate-leggings.png",
+          "station": "Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 8,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "bronze",
+                  "amount": 5
+                },
+                {
+                  "item": "deer-hide",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 10,
+              "durability": 1200,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "bronze",
+                  "amount": 3
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 12,
+              "durability": 1400,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "bronze",
+                  "amount": 6
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 14,
+              "durability": 1600,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "bronze",
+                  "amount": 12
+                }
+              ]
+            }
+          ],
+          "armorSource": "rendered",
+          "weight": 10,
+          "movementSpeed": -5,
+          "resistances": [],
+          "description": "Bronze Armor is a Black Forest-tier armor. Compared with the other armor set available in the Bronze Age, the Troll Set, it provides higher armor values but reduces the player's movement speed. There is no set bonus for bronze armor.",
+          "names": {
+            "cs": "Bronzová zbroj",
+            "ru": "Бронзовая броня"
+          }
+        }
+      ],
+      "names": {
+        "cs": "Bronzová zbroj",
+        "ru": "Бронзовая броня"
+      }
+    },
+    {
+      "id": "caller-set",
+      "name": "Caller Set",
+      "wiki": "https://valheim.weirdgloop.org/w/Caller_Set",
+      "kind": "set",
+      "biome": "deep-north",
+      "tier": 9,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "headdress-of-the-caller",
+          "name": "Headdress of the Caller",
+          "slot": "head",
+          "gameId": "HelmetDNMage",
+          "image": "img/armor/headdress-of-the-caller.png",
+          "station": "Frost Foundry",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 22,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "cast-headdress-of-the-caller",
+                  "amount": 1
+                },
+                {
+                  "item": "liquid-frost",
+                  "amount": 5,
+                  "fuel": true
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 24,
+              "durability": 1200,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "moose-sinew",
+                  "amount": 1
+                },
+                {
+                  "item": "moose-trophy",
+                  "amount": 1
+                },
+                {
+                  "item": "nornathread",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 26,
+              "durability": 1400,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "moose-sinew",
+                  "amount": 2
+                },
+                {
+                  "item": "moose-trophy",
+                  "amount": 2
+                },
+                {
+                  "item": "nornathread",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 28,
+              "durability": 1600,
+              "stationLevel": 6,
+              "materials": [
+                {
+                  "item": "moose-sinew",
+                  "amount": 4
+                },
+                {
+                  "item": "moose-trophy",
+                  "amount": 4
+                },
+                {
+                  "item": "nornathread",
+                  "amount": 8
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 1,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Caller Set is a Deep North-tier mage armor.",
+          "names": {}
+        },
+        {
+          "id": "robes-of-the-caller",
+          "name": "Robes of the Caller",
+          "slot": "chest",
+          "gameId": "ArmorDeepNorthMageChest",
+          "image": "img/armor/robes-of-the-caller.png",
+          "station": "Frost Foundry",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 22,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "cast-robes-of-the-caller",
+                  "amount": 1
+                },
+                {
+                  "item": "liquid-frost",
+                  "amount": 5,
+                  "fuel": true
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 24,
+              "durability": 1200,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 3
+                },
+                {
+                  "item": "moose-hide",
+                  "amount": 3
+                },
+                {
+                  "item": "nornathread",
+                  "amount": 3
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 26,
+              "durability": 1400,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 6
+                },
+                {
+                  "item": "moose-hide",
+                  "amount": 6
+                },
+                {
+                  "item": "nornathread",
+                  "amount": 6
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 28,
+              "durability": 1600,
+              "stationLevel": 6,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 12
+                },
+                {
+                  "item": "moose-hide",
+                  "amount": 12
+                },
+                {
+                  "item": "nornathread",
+                  "amount": 12
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 5,
+          "movementSpeed": -2,
+          "resistances": [
+            "Resistant vs Frost"
+          ],
+          "description": "The Caller Set is a Deep North-tier mage armor.",
+          "names": {}
+        },
+        {
+          "id": "trousers-of-the-caller",
+          "name": "Trousers of the Caller",
+          "slot": "legs",
+          "gameId": "ArmorDeepNorthMagelegs",
+          "image": "img/armor/trousers-of-the-caller.png",
+          "station": "Frost Foundry",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 22,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "cast-trousers-of-the-caller",
+                  "amount": 1
+                },
+                {
+                  "item": "liquid-frost",
+                  "amount": 5,
+                  "fuel": true
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 24,
+              "durability": 1200,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 3
+                },
+                {
+                  "item": "moose-hide",
+                  "amount": 3
+                },
+                {
+                  "item": "nornathread",
+                  "amount": 3
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 26,
+              "durability": 1400,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 6
+                },
+                {
+                  "item": "moose-hide",
+                  "amount": 6
+                },
+                {
+                  "item": "nornathread",
+                  "amount": 6
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 28,
+              "durability": 1600,
+              "stationLevel": 6,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 12
+                },
+                {
+                  "item": "moose-hide",
+                  "amount": 12
+                },
+                {
+                  "item": "nornathread",
+                  "amount": 12
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 5,
+          "movementSpeed": -2,
+          "resistances": [],
+          "description": "The Caller Set is a Deep North-tier mage armor.",
+          "names": {}
+        }
+      ],
+      "names": {}
+    },
+    {
+      "id": "cape-of-oden",
+      "name": "Cape of Oden",
+      "wiki": "https://valheim.weirdgloop.org/w/Cape_of_Oden",
+      "kind": "special",
+      "tag": "DLC",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "cape-of-oden",
+          "name": "Cape of Oden",
+          "slot": "head",
+          "gameId": "CapeOdin",
+          "image": "img/armor/cape-of-oden.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1500,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "leather-scraps",
+                  "amount": 10
+                },
+                {
+                  "item": "coal",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 2,
+              "durability": 1550,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "leather-scraps",
+                  "amount": 5
+                },
+                {
+                  "item": "coal",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 3,
+              "durability": 1600,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "leather-scraps",
+                  "amount": 10
+                },
+                {
+                  "item": "coal",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 4,
+              "durability": 1650,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "leather-scraps",
+                  "amount": 15
+                },
+                {
+                  "item": "coal",
+                  "amount": 6
+                }
+              ]
+            }
+          ],
+          "armorSource": "rendered",
+          "weight": 4,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Cape of Oden is a DLC armor piece. It is only available for the early supporters of Valheim via a Steam code sent out in an email from Iron Gate Studios to those who signed up for the Valheim Beta. Check your email if you signed up!",
+          "kind": "special",
+          "tag": "DLC",
+          "names": {
+            "cs": "Kápě Ódina",
+            "ru": "Плащ Одина"
+          }
+        }
+      ],
+      "names": {
+        "cs": "Kápě Ódina",
+        "ru": "Плащ Одина"
+      }
+    },
+    {
+      "id": "cape-of-the-caller",
+      "name": "Cape of the Caller",
+      "wiki": "https://valheim.weirdgloop.org/w/Cape_of_the_Caller",
+      "kind": "single",
+      "biome": "deep-north",
+      "tier": 9,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "cape-of-the-caller",
+          "name": "Cape of the Caller",
+          "slot": "head",
+          "gameId": "CapeDeepNorthMage",
+          "image": "img/armor/cape-of-the-caller.png",
+          "station": "Galdr Table",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 12,
+              "durability": 1200,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "seal-pelt",
+                  "amount": 6
+                },
+                {
+                  "item": "nornathread",
+                  "amount": 2
+                },
+                {
+                  "item": "bloodgold",
+                  "amount": 5
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 15
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 14,
+              "durability": 1250,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "seal-pelt",
+                  "amount": 3
+                },
+                {
+                  "item": "nornathread",
+                  "amount": 1
+                },
+                {
+                  "item": "bloodgold",
+                  "amount": 2
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 16,
+              "durability": 1300,
+              "stationLevel": 6,
+              "materials": [
+                {
+                  "item": "seal-pelt",
+                  "amount": 6
+                },
+                {
+                  "item": "nornathread",
+                  "amount": 2
+                },
+                {
+                  "item": "bloodgold",
+                  "amount": 4
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 18,
+              "durability": 1350,
+              "stationLevel": 7,
+              "materials": [
+                {
+                  "item": "seal-pelt",
+                  "amount": 12
+                },
+                {
+                  "item": "nornathread",
+                  "amount": 4
+                },
+                {
+                  "item": "bloodgold",
+                  "amount": 8
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "rendered",
+          "weight": 4,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Cape of the Caller is a Deep North-tier Cape crafted at the Galdr Table.",
+          "names": {}
+        }
+      ],
+      "names": {}
+    },
+    {
+      "id": "cape-tunic-blue",
+      "name": "Cape tunic blue",
+      "wiki": "https://valheim.weirdgloop.org/w/Cape_tunic_blue",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "cape-tunic-blue",
+          "name": "Cape tunic blue",
+          "slot": "chest",
+          "gameId": "ArmorTunic2",
+          "image": "img/armor/cape-tunic-blue.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Cape tunic blue is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's silver chest.",
+          "names": {
+            "ru": "Синяя туника с капюшоном"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Синяя туника с капюшоном"
+      }
+    },
+    {
+      "id": "cape-tunic-red",
+      "name": "Cape tunic red",
+      "wiki": "https://valheim.weirdgloop.org/w/Cape_tunic_red",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "cape-tunic-red",
+          "name": "Cape tunic red",
+          "slot": "chest",
+          "gameId": "ArmorTunic5",
+          "image": "img/armor/cape-tunic-red.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Cape tunic red is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's silver chest.",
+          "names": {
+            "ru": "Красная туника с капюшоном"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Красная туника с капюшоном"
+      }
+    },
+    {
+      "id": "cape-tunic-yellow",
+      "name": "Cape tunic yellow",
+      "wiki": "https://valheim.weirdgloop.org/w/Cape_tunic_yellow",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "cape-tunic-yellow",
+          "name": "Cape tunic yellow",
+          "slot": "chest",
+          "gameId": "ArmorTunic8",
+          "image": "img/armor/cape-tunic-yellow.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Cape tunic yellow is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's silver chest.",
+          "names": {
+            "ru": "Желтая туника с капюшоном"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Желтая туника с капюшоном"
+      }
+    },
+    {
+      "id": "carapace-armor",
+      "name": "Carapace Armor",
+      "wiki": "https://valheim.weirdgloop.org/w/Carapace_Armor",
+      "kind": "set",
+      "biome": "mistlands",
+      "tier": 7,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "carapace-helmet",
+          "name": "Carapace helmet",
+          "slot": "head",
+          "gameId": "HelmetCarapace",
+          "image": "img/armor/carapace-helmet.png",
+          "station": "Black Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 32,
+              "durability": 1200,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "carapace",
+                  "amount": 16
+                },
+                {
+                  "item": "scale-hide",
+                  "amount": 3
+                },
+                {
+                  "item": "mandible",
+                  "amount": 2
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 34,
+              "durability": 1400,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "carapace",
+                  "amount": 8
+                },
+                {
+                  "item": "scale-hide",
+                  "amount": 1
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 36,
+              "durability": 1600,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "carapace",
+                  "amount": 16
+                },
+                {
+                  "item": "scale-hide",
+                  "amount": 2
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 38,
+              "durability": 1800,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "carapace",
+                  "amount": 32
+                },
+                {
+                  "item": "scale-hide",
+                  "amount": 4
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 8
+                }
+              ]
+            }
+          ],
+          "armorSource": "rendered",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Carapace Armor is a Mistlands-tier armor. This set is the tier above Padded Armor and is replaced by Flametal Armor, the Ask Set, and the Embla Set.",
+          "names": {
+            "ru": "Панцирная броня"
+          }
+        },
+        {
+          "id": "carapace-breastplate",
+          "name": "Carapace breastplate",
+          "slot": "chest",
+          "gameId": "ArmorCarapaceChest",
+          "image": "img/armor/carapace-breastplate.png",
+          "station": "Black Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 32,
+              "durability": 1200,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "carapace",
+                  "amount": 20
+                },
+                {
+                  "item": "scale-hide",
+                  "amount": 3
+                },
+                {
+                  "item": "iron",
+                  "amount": 5
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 34,
+              "durability": 1400,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "carapace",
+                  "amount": 10
+                },
+                {
+                  "item": "scale-hide",
+                  "amount": 1
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 36,
+              "durability": 1600,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "carapace",
+                  "amount": 20
+                },
+                {
+                  "item": "scale-hide",
+                  "amount": 2
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 38,
+              "durability": 1800,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "carapace",
+                  "amount": 40
+                },
+                {
+                  "item": "scale-hide",
+                  "amount": 4
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 8
+                }
+              ]
+            }
+          ],
+          "armorSource": "rendered",
+          "weight": 10,
+          "movementSpeed": -5,
+          "resistances": [],
+          "description": "Carapace Armor is a Mistlands-tier armor. This set is the tier above Padded Armor and is replaced by Flametal Armor, the Ask Set, and the Embla Set.",
+          "names": {
+            "ru": "Панцирная броня"
+          }
+        },
+        {
+          "id": "carapace-greaves",
+          "name": "Carapace greaves",
+          "slot": "legs",
+          "gameId": "ArmorCarapaceLegs",
+          "image": "img/armor/carapace-greaves.png",
+          "station": "Black Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 32,
+              "durability": 1200,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "carapace",
+                  "amount": 20
+                },
+                {
+                  "item": "scale-hide",
+                  "amount": 3
+                },
+                {
+                  "item": "iron",
+                  "amount": 5
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 34,
+              "durability": 1400,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "carapace",
+                  "amount": 10
+                },
+                {
+                  "item": "scale-hide",
+                  "amount": 1
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 36,
+              "durability": 1600,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "carapace",
+                  "amount": 20
+                },
+                {
+                  "item": "scale-hide",
+                  "amount": 2
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 38,
+              "durability": 1800,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "carapace",
+                  "amount": 40
+                },
+                {
+                  "item": "scale-hide",
+                  "amount": 4
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 8
+                }
+              ]
+            }
+          ],
+          "armorSource": "rendered",
+          "weight": 10,
+          "movementSpeed": -5,
+          "resistances": [],
+          "description": "Carapace Armor is a Mistlands-tier armor. This set is the tier above Padded Armor and is replaced by Flametal Armor, the Ask Set, and the Embla Set.",
+          "names": {
+            "ru": "Панцирная броня"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Панцирная броня"
+      }
+    },
+    {
+      "id": "celebratory-cap",
+      "name": "Celebratory Cap",
+      "wiki": "https://valheim.weirdgloop.org/w/Celebratory_Cap",
+      "kind": "single",
+      "biome": "black-forest",
+      "tier": 2,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "celebratory-cap",
+          "name": "Celebratory Cap",
+          "slot": "head",
+          "gameId": "HelmetCelebration",
+          "image": "img/armor/celebratory-cap.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 800,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 2
+                },
+                {
+                  "item": "bronze",
+                  "amount": 1
+                },
+                {
+                  "item": "bear-hide",
+                  "amount": 1
+                },
+                {
+                  "item": "amber-pearl",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 3,
+              "durability": 1000,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 1
+                },
+                {
+                  "item": "bronze",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 5,
+              "durability": 1200,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 2
+                },
+                {
+                  "item": "bronze",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 7,
+              "durability": 1400,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 4
+                },
+                {
+                  "item": "bronze",
+                  "amount": 4
+                }
+              ]
+            }
+          ],
+          "armorSource": "rendered",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Celebratory Cap is an armor piece marking the fifth anniversary of the release of Valheim that can be crafted at a Workbench.",
+          "names": {
+            "ru": "Праздничная шапка"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Праздничная шапка"
+      }
+    },
+    {
+      "id": "crown-of-roots",
+      "name": "Crown of Roots",
+      "wiki": "https://valheim.weirdgloop.org/w/Crown_of_Roots",
+      "kind": "special",
+      "tag": "Not craftable",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "crown-of-roots",
+          "name": "Crown of Roots",
+          "slot": "head",
+          "gameId": "HelmetRootCrown",
+          "image": "img/armor/crown-of-roots.png",
+          "station": "The Bog Witch",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 800,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Crown of Roots is an armor piece.",
+          "kind": "special",
+          "tag": "Not craftable",
+          "names": {}
+        }
+      ],
+      "names": {}
+    },
+    {
+      "id": "crown-of-valheim",
+      "name": "Crown of Valheim",
+      "wiki": "https://valheim.weirdgloop.org/w/Crown_of_Valheim",
+      "kind": "single",
+      "biome": "deep-north",
+      "tier": 9,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "crown-of-valheim",
+          "name": "Crown of Valheim",
+          "slot": "head",
+          "gameId": "HelmetCrownofValheim",
+          "image": "img/armor/crown-of-valheim.png",
+          "station": "Black Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 50,
+              "durability": 1000,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 5
+                },
+                {
+                  "item": "crown-jewel",
+                  "amount": 1
+                }
+              ]
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 1,
+          "movementSpeed": 5,
+          "resistances": [],
+          "description": "Crown of Valheim is a post-Deep North helmet.",
+          "names": {}
+        }
+      ],
+      "names": {}
+    },
+    {
+      "id": "dverger-circlet",
+      "name": "Dverger Circlet",
+      "wiki": "https://valheim.weirdgloop.org/w/Dverger_Circlet",
+      "kind": "single",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "dverger-circlet",
+          "name": "Dverger Circlet",
+          "slot": "head",
+          "gameId": "HelmetDverger",
+          "image": "img/armor/dverger-circlet.png",
+          "station": "Haldor",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 2,
+              "durability": 0,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 1,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Dverger circlet is an armor piece. It grants the player a never-ending light source when equipped in the form of a cone wherever the player is looking.",
+          "names": {
+            "cs": "Trpasličí kroužek",
+            "fr": "Diadème de Dverger",
+            "ru": "Венец Двергов"
+          }
+        }
+      ],
+      "names": {
+        "cs": "Trpasličí kroužek",
+        "fr": "Diadème de Dverger",
+        "ru": "Венец Двергов"
+      }
+    },
+    {
+      "id": "eitr-weave-set",
+      "name": "Eitr-weave Set",
+      "wiki": "https://valheim.weirdgloop.org/w/Eitr-weave_Set",
+      "kind": "set",
+      "biome": "mistlands",
+      "tier": 7,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "eitr-weave-hood",
+          "name": "Eitr-weave hood",
+          "slot": "head",
+          "gameId": "HelmetMage",
+          "image": "img/armor/eitr-weave-hood.png",
+          "station": "Galdr Table",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 16,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 16
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 15
+                },
+                {
+                  "item": "iron",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 18,
+              "durability": 1200,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 8
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 20,
+              "durability": 1400,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 16
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 22,
+              "durability": 1600,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 32
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "rendered",
+          "weight": 1,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Eitr-weave Set is a Mistlands-tier armor. This set is the tier above Padded Armor and should be",
+          "names": {
+            "ru": "Сшитый из Эйтра набор"
+          }
+        },
+        {
+          "id": "eitr-weave-robe",
+          "name": "Eitr-weave robe",
+          "slot": "chest",
+          "gameId": "ArmorMageChest",
+          "image": "img/armor/eitr-weave-robe.png",
+          "station": "Galdr Table",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 16,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 20
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 20
+                },
+                {
+                  "item": "feathers",
+                  "amount": 10
+                },
+                {
+                  "item": "scale-hide",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 18,
+              "durability": 1200,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 10
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 20,
+              "durability": 1400,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 20
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 22,
+              "durability": 1600,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 40
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "rendered",
+          "weight": 5,
+          "movementSpeed": -2,
+          "resistances": [],
+          "description": "The Eitr-weave Set is a Mistlands-tier armor. This set is the tier above Padded Armor and should be",
+          "names": {
+            "ru": "Сшитый из Эйтра набор"
+          }
+        },
+        {
+          "id": "eitr-weave-trousers",
+          "name": "Eitr-weave trousers",
+          "slot": "legs",
+          "gameId": "ArmorMageLegs",
+          "image": "img/armor/eitr-weave-trousers.png",
+          "station": "Galdr Table",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 16,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 20
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 20
+                },
+                {
+                  "item": "scale-hide",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 18,
+              "durability": 1200,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 10
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 20,
+              "durability": 1400,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 20
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 22,
+              "durability": 1600,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 40
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "rendered",
+          "weight": 5,
+          "movementSpeed": -2,
+          "resistances": [],
+          "description": "The Eitr-weave Set is a Mistlands-tier armor. This set is the tier above Padded Armor and should be",
+          "names": {
+            "ru": "Сшитый из Эйтра набор"
+          }
+        },
+        {
+          "id": "feather-cape",
+          "name": "Feather cape",
+          "slot": "head",
+          "gameId": "CapeFeather",
+          "image": "img/armor/feather-cape.png",
+          "station": "Galdr Table",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1200,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "feathers",
+                  "amount": 10
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 20
+                },
+                {
+                  "item": "scale-hide",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 2,
+              "durability": 1250,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "feathers",
+                  "amount": 2
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 3
+                },
+                {
+                  "item": "scale-hide",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 3,
+              "durability": 1300,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "feathers",
+                  "amount": 4
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 6
+                },
+                {
+                  "item": "scale-hide",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 4,
+              "durability": 1350,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "feathers",
+                  "amount": 8
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 12
+                },
+                {
+                  "item": "scale-hide",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "rendered",
+          "weight": 4,
+          "movementSpeed": 0,
+          "resistances": [
+            "Resistant vs. Frost",
+            "Very Weak (2x) vs. Fire"
+          ],
+          "description": "The Eitr-weave Set is a Mistlands-tier armor. This set is the tier above Padded Armor and should be",
+          "names": {
+            "ru": "Накидка из перьев"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Сшитый из Эйтра набор"
+      }
+    },
+    {
+      "id": "embla-set",
+      "name": "Embla Set",
+      "wiki": "https://valheim.weirdgloop.org/w/Embla_Set",
+      "kind": "set",
+      "biome": "ashlands",
+      "tier": 8,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "hood-of-embla",
+          "name": "Hood of Embla",
+          "slot": "head",
+          "gameId": "HelmetMage_Ashlands",
+          "image": "img/armor/hood-of-embla.png",
+          "station": "Galdr Table",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 19,
+              "durability": 1000,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 16
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 15
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 21,
+              "durability": 1200,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 8
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 23,
+              "durability": 1400,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 16
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 25,
+              "durability": 1600,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 32
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 1,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Embla Set is an Ashlands-tier armor. This set is the tier above Carapace Armor and the Eitr-weave Set, and should be considered a \"light armor,\" having a lower armor value than Flametal Armor and the Ask Set. The armor grants even higher Eitr regeneration than the Eitr-weave Set, which makes it the preferred armor when using magic weapons.",
+          "names": {
+            "ru": "Набор Эмблы"
+          }
+        },
+        {
+          "id": "robes-of-embla",
+          "name": "Robes of Embla",
+          "slot": "chest",
+          "gameId": "ArmorMageChest_Ashlands",
+          "image": "img/armor/robes-of-embla.png",
+          "station": "Galdr Table",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 19,
+              "durability": 1000,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 20
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 20
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 10
+                },
+                {
+                  "item": "flametal",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 21,
+              "durability": 1200,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 10
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 5
+                },
+                {
+                  "item": "flametal",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 23,
+              "durability": 1400,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 20
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 10
+                },
+                {
+                  "item": "flametal",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 25,
+              "durability": 1600,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 40
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 20
+                },
+                {
+                  "item": "flametal",
+                  "amount": 1
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 5,
+          "movementSpeed": -2,
+          "resistances": [],
+          "description": "The Embla Set is an Ashlands-tier armor. This set is the tier above Carapace Armor and the Eitr-weave Set, and should be considered a \"light armor,\" having a lower armor value than Flametal Armor and the Ask Set. The armor grants even higher Eitr regeneration than the Eitr-weave Set, which makes it the preferred armor when using magic weapons.",
+          "names": {
+            "ru": "Набор Эмблы"
+          }
+        },
+        {
+          "id": "trousers-of-embla",
+          "name": "Trousers of Embla",
+          "slot": "legs",
+          "gameId": "ArmorMageLegs_Ashlands",
+          "image": "img/armor/trousers-of-embla.png",
+          "station": "Galdr Table",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 19,
+              "durability": 1000,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 20
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 20
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 21,
+              "durability": 1200,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 10
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 23,
+              "durability": 1400,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 20
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 25,
+              "durability": 1600,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 40
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 5,
+          "movementSpeed": -2,
+          "resistances": [],
+          "description": "The Embla Set is an Ashlands-tier armor. This set is the tier above Carapace Armor and the Eitr-weave Set, and should be considered a \"light armor,\" having a lower armor value than Flametal Armor and the Ask Set. The armor grants even higher Eitr regeneration than the Eitr-weave Set, which makes it the preferred armor when using magic weapons.",
+          "names": {
+            "ru": "Набор Эмблы"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Набор Эмблы"
+      }
+    },
+    {
+      "id": "extravagant-cap-green",
+      "name": "Extravagant cap green",
+      "wiki": "https://valheim.weirdgloop.org/w/Extravagant_cap_green",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "extravagant-cap-green",
+          "name": "Extravagant cap green",
+          "slot": "head",
+          "gameId": "HelmetHat4",
+          "image": "img/armor/extravagant-cap-green.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 800,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Extravagant cap green is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's silver chest.",
+          "names": {
+            "ru": "Причудливая зеленая шапка"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Причудливая зеленая шапка"
+      }
+    },
+    {
+      "id": "extravagant-cap-orange",
+      "name": "Extravagant cap orange",
+      "wiki": "https://valheim.weirdgloop.org/w/Extravagant_cap_orange",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "extravagant-cap-orange",
+          "name": "Extravagant cap orange",
+          "slot": "head",
+          "gameId": "HelmetHat9",
+          "image": "img/armor/extravagant-cap-orange.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 800,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Extravagant cap orange is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's bronze chest.",
+          "names": {
+            "ru": "Причудливая оранжевая шапка"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Причудливая оранжевая шапка"
+      }
+    },
+    {
+      "id": "fenris-set",
+      "name": "Fenris Set",
+      "wiki": "https://valheim.weirdgloop.org/w/Fenris_Set",
+      "kind": "set",
+      "biome": "mountain",
+      "tier": 5,
+      "setBonus": {
+        "name": "Fenris blessing",
+        "pieces": 3,
+        "effects": [
+          "Fists +15",
+          "Resistant (0.5x) VS Fire"
+        ]
+      },
+      "pieces": [
+        {
+          "id": "fenris-hood",
+          "name": "Fenris Hood",
+          "slot": "head",
+          "gameId": "HelmetFenring",
+          "image": "img/armor/fenris-hood.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 10,
+              "durability": 1000,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "fenris-hair",
+                  "amount": 20
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 2
+                },
+                {
+                  "item": "cultist-trophy",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 12,
+              "durability": 1200,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "fenris-hair",
+                  "amount": 5
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 14,
+              "durability": 1400,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "fenris-hair",
+                  "amount": 10
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 8
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 16,
+              "durability": 1600,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "fenris-hair",
+                  "amount": 20
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 16
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 1,
+          "movementSpeed": 3,
+          "resistances": [],
+          "description": "Fenris Set is a Mountain-tier armor. This set is the tier above Root Set and Iron Armor",
+          "names": {
+            "cs": "Fenrisova zbroj",
+            "ru": "Броня Фенриса"
+          }
+        },
+        {
+          "id": "fenris-coat",
+          "name": "Fenris Coat",
+          "slot": "chest",
+          "gameId": "ArmorFenringChest",
+          "image": "img/armor/fenris-coat.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 10,
+              "durability": 1000,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "fenris-hair",
+                  "amount": 20
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 5
+                },
+                {
+                  "item": "leather-scraps",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 12,
+              "durability": 1200,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "fenris-hair",
+                  "amount": 5
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 3
+                },
+                {
+                  "item": "leather-scraps",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 14,
+              "durability": 1400,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "fenris-hair",
+                  "amount": 10
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 6
+                },
+                {
+                  "item": "leather-scraps",
+                  "amount": 8
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 16,
+              "durability": 1600,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "fenris-hair",
+                  "amount": 20
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 12
+                },
+                {
+                  "item": "leather-scraps",
+                  "amount": 16
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 10,
+          "movementSpeed": 3,
+          "resistances": [
+            "Resistant (0.5x) VS Frost"
+          ],
+          "description": "Fenris Set is a Mountain-tier armor. This set is the tier above Root Set and Iron Armor",
+          "names": {
+            "cs": "Fenrisova zbroj",
+            "ru": "Броня Фенриса"
+          }
+        },
+        {
+          "id": "fenris-leggings",
+          "name": "Fenris Leggings",
+          "slot": "legs",
+          "gameId": "ArmorFenringLegs",
+          "image": "img/armor/fenris-leggings.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 10,
+              "durability": 1000,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "fenris-hair",
+                  "amount": 20
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 5
+                },
+                {
+                  "item": "leather-scraps",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 12,
+              "durability": 1200,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "fenris-hair",
+                  "amount": 5
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 3
+                },
+                {
+                  "item": "leather-scraps",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 14,
+              "durability": 1400,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "fenris-hair",
+                  "amount": 10
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 6
+                },
+                {
+                  "item": "leather-scraps",
+                  "amount": 8
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 16,
+              "durability": 1600,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "fenris-hair",
+                  "amount": 20
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 12
+                },
+                {
+                  "item": "leather-scraps",
+                  "amount": 16
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 10,
+          "movementSpeed": 3,
+          "resistances": [],
+          "description": "Fenris Set is a Mountain-tier armor. This set is the tier above Root Set and Iron Armor",
+          "names": {
+            "cs": "Fenrisova zbroj",
+            "ru": "Броня Фенриса"
+          }
+        }
+      ],
+      "names": {
+        "cs": "Fenrisova zbroj",
+        "ru": "Броня Фенриса"
+      }
+    },
+    {
+      "id": "fishing-hat",
+      "name": "Fishing Hat",
+      "wiki": "https://valheim.weirdgloop.org/w/Fishing_Hat",
+      "kind": "single",
+      "biome": "deep-north",
+      "tier": 9,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "fishing-hat",
+          "name": "Fishing Hat",
+          "slot": "head",
+          "gameId": "HelmetFishingHat",
+          "image": "img/armor/fishing-hat.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 8,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "perch",
+                  "amount": 1
+                },
+                {
+                  "item": "pike",
+                  "amount": 1
+                },
+                {
+                  "item": "tuna",
+                  "amount": 1
+                },
+                {
+                  "item": "tetra",
+                  "amount": 1
+                },
+                {
+                  "item": "trollfish",
+                  "amount": 1
+                },
+                {
+                  "item": "giant-herring",
+                  "amount": 1
+                },
+                {
+                  "item": "grouper",
+                  "amount": 1
+                },
+                {
+                  "item": "coral-cod",
+                  "amount": 1
+                },
+                {
+                  "item": "anglerfish",
+                  "amount": 1
+                },
+                {
+                  "item": "northern-salmon",
+                  "amount": 1
+                },
+                {
+                  "item": "magmafish",
+                  "amount": 1
+                },
+                {
+                  "item": "pufferfish",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 12,
+              "durability": 1200,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "perch",
+                  "amount": 1
+                },
+                {
+                  "item": "pike",
+                  "amount": 1
+                },
+                {
+                  "item": "tuna",
+                  "amount": 1
+                },
+                {
+                  "item": "tetra",
+                  "amount": 1
+                },
+                {
+                  "item": "trollfish",
+                  "amount": 1
+                },
+                {
+                  "item": "giant-herring",
+                  "amount": 1
+                },
+                {
+                  "item": "grouper",
+                  "amount": 1
+                },
+                {
+                  "item": "coral-cod",
+                  "amount": 1
+                },
+                {
+                  "item": "anglerfish",
+                  "amount": 1
+                },
+                {
+                  "item": "northern-salmon",
+                  "amount": 1
+                },
+                {
+                  "item": "magmafish",
+                  "amount": 1
+                },
+                {
+                  "item": "pufferfish",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 16,
+              "durability": 1400,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "perch",
+                  "amount": 2
+                },
+                {
+                  "item": "pike",
+                  "amount": 2
+                },
+                {
+                  "item": "tuna",
+                  "amount": 2
+                },
+                {
+                  "item": "tetra",
+                  "amount": 2
+                },
+                {
+                  "item": "trollfish",
+                  "amount": 2
+                },
+                {
+                  "item": "giant-herring",
+                  "amount": 2
+                },
+                {
+                  "item": "grouper",
+                  "amount": 2
+                },
+                {
+                  "item": "coral-cod",
+                  "amount": 2
+                },
+                {
+                  "item": "anglerfish",
+                  "amount": 2
+                },
+                {
+                  "item": "northern-salmon",
+                  "amount": 2
+                },
+                {
+                  "item": "magmafish",
+                  "amount": 2
+                },
+                {
+                  "item": "pufferfish",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 20,
+              "durability": 1600,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "perch",
+                  "amount": 4
+                },
+                {
+                  "item": "pike",
+                  "amount": 4
+                },
+                {
+                  "item": "tuna",
+                  "amount": 4
+                },
+                {
+                  "item": "tetra",
+                  "amount": 4
+                },
+                {
+                  "item": "trollfish",
+                  "amount": 4
+                },
+                {
+                  "item": "giant-herring",
+                  "amount": 4
+                },
+                {
+                  "item": "grouper",
+                  "amount": 4
+                },
+                {
+                  "item": "coral-cod",
+                  "amount": 4
+                },
+                {
+                  "item": "anglerfish",
+                  "amount": 4
+                },
+                {
+                  "item": "northern-salmon",
+                  "amount": 4
+                },
+                {
+                  "item": "magmafish",
+                  "amount": 4
+                },
+                {
+                  "item": "pufferfish",
+                  "amount": 4
+                }
+              ]
+            }
+          ],
+          "armorSource": "rendered",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Fishing Hat is an armor piece which can be crafted and upgraded at the Workbench. It provides a +20 skill bonus to Fishing and Swimming.",
+          "names": {
+            "ru": "Рыбацкая шляпа"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Рыбацкая шляпа"
+      }
+    },
+    {
+      "id": "flametal-armor",
+      "name": "Flametal Armor",
+      "wiki": "https://valheim.weirdgloop.org/w/Flametal_Armor",
+      "kind": "set",
+      "biome": "ashlands",
+      "tier": 8,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "flametal-helmet",
+          "name": "Flametal Helmet",
+          "slot": "head",
+          "gameId": "HelmetFlametal",
+          "image": "img/armor/flametal-helmet.png",
+          "station": "Black Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 38,
+              "durability": 800,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "flametal",
+                  "amount": 16
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 3
+                },
+                {
+                  "item": "charred-bone",
+                  "amount": 2
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 40,
+              "durability": 1000,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "flametal",
+                  "amount": 8
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 1
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 42,
+              "durability": 1200,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "flametal",
+                  "amount": 16
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 2
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 44,
+              "durability": 1400,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "flametal",
+                  "amount": 32
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 4
+                },
+                {
+                  "item": "refined-eitr",
+                  "amount": 8
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Flametal Armor is an Ashlands-tier armor. This set is the tier above Carapace Armor and Eitr-weave Set and currently has the highest armor value in the game. Equal level sets include Embla Set and Ask Set.",
+          "names": {
+            "ru": "Огнеметаллическая броня"
+          }
+        },
+        {
+          "id": "flametal-breastplate",
+          "name": "Flametal Breastplate",
+          "slot": "chest",
+          "gameId": "ArmorFlametalChest",
+          "image": "img/armor/flametal-breastplate.png",
+          "station": "Black Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 38,
+              "durability": 1000,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "flametal",
+                  "amount": 20
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 3
+                },
+                {
+                  "item": "charred-bone",
+                  "amount": 5
+                },
+                {
+                  "item": "morgen-heart",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 40,
+              "durability": 1200,
+              "stationLevel": 10,
+              "materials": [
+                {
+                  "item": "flametal",
+                  "amount": 10
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 42,
+              "durability": 1400,
+              "stationLevel": 10,
+              "materials": [
+                {
+                  "item": "flametal",
+                  "amount": 20
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 44,
+              "durability": 1600,
+              "stationLevel": 10,
+              "materials": [
+                {
+                  "item": "flametal",
+                  "amount": 40
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 4
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 10,
+          "movementSpeed": -5,
+          "resistances": [
+            "Heat Resistance +20%"
+          ],
+          "description": "Flametal Armor is an Ashlands-tier armor. This set is the tier above Carapace Armor and Eitr-weave Set and currently has the highest armor value in the game. Equal level sets include Embla Set and Ask Set.",
+          "names": {
+            "ru": "Огнеметаллическая броня"
+          }
+        },
+        {
+          "id": "flametal-greaves",
+          "name": "Flametal Greaves",
+          "slot": "legs",
+          "gameId": "ArmorFlametalLegs",
+          "image": "img/armor/flametal-greaves.png",
+          "station": "Black Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 38,
+              "durability": 1000,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "flametal",
+                  "amount": 20
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 3
+                },
+                {
+                  "item": "charred-bone",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 40,
+              "durability": 1200,
+              "stationLevel": 10,
+              "materials": [
+                {
+                  "item": "flametal",
+                  "amount": 10
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 42,
+              "durability": 1400,
+              "stationLevel": 10,
+              "materials": [
+                {
+                  "item": "flametal",
+                  "amount": 20
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 44,
+              "durability": 1600,
+              "stationLevel": 10,
+              "materials": [
+                {
+                  "item": "flametal",
+                  "amount": 40
+                },
+                {
+                  "item": "asksvin-hide",
+                  "amount": 4
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 10,
+          "movementSpeed": -5,
+          "resistances": [
+            "Heat Resistance +20%"
+          ],
+          "description": "Flametal Armor is an Ashlands-tier armor. This set is the tier above Carapace Armor and Eitr-weave Set and currently has the highest armor value in the game. Equal level sets include Embla Set and Ask Set.",
+          "names": {
+            "ru": "Огнеметаллическая броня"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Огнеметаллическая броня"
+      }
+    },
+    {
+      "id": "fur-cap-brown",
+      "name": "Fur cap brown",
+      "wiki": "https://valheim.weirdgloop.org/w/Fur_cap_brown",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "fur-cap-brown",
+          "name": "Fur cap brown",
+          "slot": "head",
+          "gameId": "HelmetHat3",
+          "image": "img/armor/fur-cap-brown.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 800,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Fur cap brown is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's brass chest.",
+          "names": {
+            "ru": "Коричневая меховая шапка"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Коричневая меховая шапка"
+      }
+    },
+    {
+      "id": "fur-cap-grey",
+      "name": "Fur cap grey",
+      "wiki": "https://valheim.weirdgloop.org/w/Fur_cap_grey",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "fur-cap-grey",
+          "name": "Fur cap grey",
+          "slot": "head",
+          "gameId": "HelmetHat8",
+          "image": "img/armor/fur-cap-grey.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 800,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Fur cap grey is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's bronze chest.",
+          "names": {
+            "ru": "Серая меховая шапка"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Серая меховая шапка"
+      }
+    },
+    {
+      "id": "harvest-dress",
+      "name": "Harvest dress",
+      "wiki": "https://valheim.weirdgloop.org/w/Harvest_dress",
+      "kind": "set",
+      "biome": null,
+      "tier": null,
+      "setBonus": {
+        "name": "Harvester Wearing the right clothes makes the chores easier. Farming +25",
+        "pieces": 1,
+        "effects": []
+      },
+      "pieces": [
+        {
+          "id": "harvest-dress",
+          "name": "Harvest dress",
+          "slot": "chest",
+          "gameId": "ArmorHarvester2",
+          "image": "img/armor/harvest-dress.png",
+          "station": "Sold by Hildir after returning her Brass chest",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Harvest dress is a part of a set together with Straw hat that increases the player's Farming skill by +25 so long as both pieces are worn. The Harvest tunic can be used in place of the dress for the same effect. It is sold by Hildir after retrieving and bringing her the Brass chest.",
+          "names": {
+            "cs": "Sklizňové šaty",
+            "de": "Erntekleid",
+            "ru": "Одежда урожая"
+          }
+        }
+      ],
+      "names": {
+        "cs": "Sklizňové šaty",
+        "de": "Erntekleid",
+        "ru": "Одежда урожая"
+      }
+    },
+    {
+      "id": "harvest-tunic",
+      "name": "Harvest tunic",
+      "wiki": "https://valheim.weirdgloop.org/w/Harvest_tunic",
+      "kind": "set",
+      "biome": null,
+      "tier": null,
+      "setBonus": {
+        "name": "Harvester Wearing the right clothes makes the chores easier. Farming +25",
+        "pieces": 1,
+        "effects": []
+      },
+      "pieces": [
+        {
+          "id": "harvest-tunic",
+          "name": "Harvest tunic",
+          "slot": "chest",
+          "gameId": "ArmorHarvester1",
+          "image": "img/armor/harvest-tunic.png",
+          "station": "Sold by Hildir after returning her Brass chest",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Harvest tunic is a part of a set together with Straw hat that increases the player's Farming skill by +25 so long as both pieces are worn. The Harvest dress can be used in place of the tunic for the same effect. It is sold by Hildir after retrieving and bringing her the Brass chest.",
+          "names": {
+            "cs": "Sklizňová tunika",
+            "de": "Erntetunika",
+            "ru": "Туника урожая"
+          }
+        }
+      ],
+      "names": {
+        "cs": "Sklizňová tunika",
+        "de": "Erntetunika",
+        "ru": "Туника урожая"
+      }
+    },
+    {
+      "id": "headband",
+      "name": "Headband",
+      "wiki": "https://valheim.weirdgloop.org/w/Headband",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "headband",
+          "name": "Headband",
+          "slot": "head",
+          "gameId": "HelmetSweatBand",
+          "image": "img/armor/headband.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 1,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Headband is an armor piece which can be purchased from Hildir for .",
+          "names": {
+            "ru": "Повязка на голову"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Повязка на голову"
+      }
+    },
+    {
+      "id": "hood-of-oden",
+      "name": "Hood of Oden",
+      "wiki": "https://valheim.weirdgloop.org/w/Hood_of_Oden",
+      "kind": "special",
+      "tag": "DLC",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "hood-of-oden",
+          "name": "Hood of Oden",
+          "slot": "head",
+          "gameId": "HelmetOdin",
+          "image": "img/armor/hood-of-oden.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 300,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "leather-scraps",
+                  "amount": 10
+                },
+                {
+                  "item": "coal",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 2,
+              "durability": 500,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "leather-scraps",
+                  "amount": 5
+                },
+                {
+                  "item": "coal",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 3,
+              "durability": 700,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "leather-scraps",
+                  "amount": 10
+                },
+                {
+                  "item": "coal",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 4,
+              "durability": 900,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "leather-scraps",
+                  "amount": 15
+                },
+                {
+                  "item": "coal",
+                  "amount": 6
+                }
+              ]
+            }
+          ],
+          "armorSource": "rendered",
+          "weight": 1,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Hood of Oden is a DLC armor piece. It is only available for the early supporters of Valheim via a Steam code sent out in an email from Iron Gate Studios to those who signed up for the Valheim Beta. Check your email if you signed up!",
+          "kind": "special",
+          "tag": "DLC",
+          "names": {
+            "cs": "Kapuce Ódina",
+            "ru": "Шлем Одина"
+          }
+        }
+      ],
+      "names": {
+        "cs": "Kapuce Ódina",
+        "ru": "Шлем Одина"
+      }
+    },
+    {
+      "id": "iron-armor",
+      "name": "Iron Armor",
+      "wiki": "https://valheim.weirdgloop.org/w/Iron_Armor",
+      "kind": "set",
+      "biome": "swamp",
+      "tier": 4,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "iron-helmet",
+          "name": "Iron Helmet",
+          "slot": "head",
+          "gameId": "HelmetIron",
+          "image": "img/armor/iron-helmet.png",
+          "station": "Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 14,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 20
+                },
+                {
+                  "item": "deer-hide",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 16,
+              "durability": 1200,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 18,
+              "durability": 1400,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 20,
+              "durability": 1600,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Iron Armor is a Swamp-tier armor. This set is the tier above the Troll Set,",
+          "names": {
+            "cs": "Železná zbroj",
+            "ru": "Железная броня"
+          }
+        },
+        {
+          "id": "iron-scale-mail",
+          "name": "Iron Scale Mail",
+          "slot": "chest",
+          "gameId": "ArmorIronChest",
+          "image": "img/armor/iron-scale-mail.png",
+          "station": "Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 14,
+              "durability": 1000,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 20
+                },
+                {
+                  "item": "deer-hide",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 16,
+              "durability": 1200,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 18,
+              "durability": 1400,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 20,
+              "durability": 1600,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 15,
+          "movementSpeed": -5,
+          "resistances": [],
+          "description": "Iron Armor is a Swamp-tier armor. This set is the tier above the Troll Set,",
+          "names": {
+            "cs": "Železná zbroj",
+            "ru": "Железная броня"
+          }
+        },
+        {
+          "id": "iron-greaves",
+          "name": "Iron Greaves",
+          "slot": "legs",
+          "gameId": "ArmorIronLegs",
+          "image": "img/armor/iron-greaves.png",
+          "station": "Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 14,
+              "durability": 1000,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 20
+                },
+                {
+                  "item": "deer-hide",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 16,
+              "durability": 1200,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 18,
+              "durability": 1400,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 20,
+              "durability": 1600,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 15,
+          "movementSpeed": -5,
+          "resistances": [],
+          "description": "Iron Armor is a Swamp-tier armor. This set is the tier above the Troll Set,",
+          "names": {
+            "cs": "Železná zbroj",
+            "ru": "Железная броня"
+          }
+        }
+      ],
+      "names": {
+        "cs": "Železná zbroj",
+        "ru": "Железная броня"
+      }
+    },
+    {
+      "id": "leather-armor",
+      "name": "Leather Armor",
+      "wiki": "https://valheim.weirdgloop.org/w/Leather_Armor",
+      "kind": "set",
+      "biome": "black-forest",
+      "tier": 2,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "leather-helmet",
+          "name": "Leather Helmet",
+          "slot": "head",
+          "gameId": "HelmetLeather",
+          "image": "img/armor/leather-helmet.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 2,
+              "durability": 400,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 6
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 4,
+              "durability": 500,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 6
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 6,
+              "durability": 600,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 12
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 8,
+              "durability": 700,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 24
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 1,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Leather Armor is a Meadows-tier armor. It is superior to Rag Armor and is replaced by the Troll Set or Bronze Armor. There are no set bonus effects for leather armor.",
+          "names": {
+            "cs": "Kožená zbroj",
+            "ru": "Кожаная броня"
+          }
+        },
+        {
+          "id": "leather-tunic",
+          "name": "Leather Tunic",
+          "slot": "chest",
+          "gameId": "ArmorLeatherChest",
+          "image": "img/armor/leather-tunic.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 2,
+              "durability": 400,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 6
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 4,
+              "durability": 500,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 6
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 6,
+              "durability": 600,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 12
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 8,
+              "durability": 700,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 24
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 5,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Leather Armor is a Meadows-tier armor. It is superior to Rag Armor and is replaced by the Troll Set or Bronze Armor. There are no set bonus effects for leather armor.",
+          "names": {
+            "cs": "Kožená zbroj",
+            "ru": "Кожаная броня"
+          }
+        },
+        {
+          "id": "leather-trousers",
+          "name": "Leather Trousers",
+          "slot": "legs",
+          "gameId": "ArmorLeatherLegs",
+          "image": "img/armor/leather-trousers.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 2,
+              "durability": 400,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 6
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 4,
+              "durability": 500,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 6
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 6,
+              "durability": 600,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 12
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 8,
+              "durability": 700,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 24
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 5,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Leather Armor is a Meadows-tier armor. It is superior to Rag Armor and is replaced by the Troll Set or Bronze Armor. There are no set bonus effects for leather armor.",
+          "names": {
+            "cs": "Kožená zbroj",
+            "ru": "Кожаная броня"
+          }
+        },
+        {
+          "id": "deer-hide-cape",
+          "name": "Deer Hide Cape",
+          "slot": "head",
+          "gameId": "CapeDeerHide",
+          "image": "img/armor/deer-hide-cape.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 400,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 4
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 2,
+              "durability": 500,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 4
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 3,
+              "durability": 600,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 8
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 4,
+              "durability": 700,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 16
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 4,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Leather Armor is a Meadows-tier armor. It is superior to Rag Armor and is replaced by the Troll Set or Bronze Armor. There are no set bonus effects for leather armor.",
+          "names": {}
+        }
+      ],
+      "names": {
+        "cs": "Kožená zbroj",
+        "ru": "Кожаная броня"
+      }
+    },
+    {
+      "id": "lox-fur-set",
+      "name": "Lox Fur Set",
+      "wiki": "https://valheim.weirdgloop.org/w/Lox_Fur_Set",
+      "kind": "set",
+      "biome": "plains",
+      "tier": 6,
+      "setBonus": {
+        "name": "Boon of the Lox",
+        "pieces": 3,
+        "effects": [
+          "Sneak +30",
+          "Bows +15"
+        ]
+      },
+      "pieces": [
+        {
+          "id": "lox-fur-hood",
+          "name": "Lox Fur Hood",
+          "slot": "head",
+          "gameId": "HelmetLox",
+          "image": "img/armor/lox-fur-hood.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 16,
+              "durability": 500,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "lox-pelt",
+                  "amount": 4
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 4
+                },
+                {
+                  "item": "writhan-roots",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 18,
+              "durability": 700,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "lox-pelt",
+                  "amount": 2
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 2
+                },
+                {
+                  "item": "writhan-roots",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 20,
+              "durability": 900,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "lox-pelt",
+                  "amount": 4
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 4
+                },
+                {
+                  "item": "writhan-roots",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 22,
+              "durability": 1100,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "lox-pelt",
+                  "amount": 8
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 8
+                },
+                {
+                  "item": "writhan-roots",
+                  "amount": 4
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 1,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Lox Fur Set is a Plains-tier armor. This set is the tier above Wolf Armor and Fenris Set, and is replaced by Carapace Armor and Eitr-weave Set, respectively.",
+          "names": {}
+        },
+        {
+          "id": "lox-fur-jacket",
+          "name": "Lox Fur Jacket",
+          "slot": "chest",
+          "gameId": "ArmorLoxChest",
+          "image": "img/armor/lox-fur-jacket.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 16,
+              "durability": 500,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "lox-pelt",
+                  "amount": 5
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 8
+                },
+                {
+                  "item": "roots",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 18,
+              "durability": 700,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "lox-pelt",
+                  "amount": 6
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 4
+                },
+                {
+                  "item": "roots",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 20,
+              "durability": 900,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "lox-pelt",
+                  "amount": 12
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 8
+                },
+                {
+                  "item": "roots",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 22,
+              "durability": 1100,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "lox-pelt",
+                  "amount": 24
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 16
+                },
+                {
+                  "item": "roots",
+                  "amount": 4
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 5,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Lox Fur Set is a Plains-tier armor. This set is the tier above Wolf Armor and Fenris Set, and is replaced by Carapace Armor and Eitr-weave Set, respectively.",
+          "names": {}
+        },
+        {
+          "id": "lox-fur-trousers",
+          "name": "Lox Fur Trousers",
+          "slot": "legs",
+          "gameId": "ArmorLoxLegs",
+          "image": "img/armor/lox-fur-trousers.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 16,
+              "durability": 500,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "lox-pelt",
+                  "amount": 5
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 8
+                },
+                {
+                  "item": "roots",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 18,
+              "durability": 700,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "lox-pelt",
+                  "amount": 3
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 4
+                },
+                {
+                  "item": "roots",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 20,
+              "durability": 900,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "lox-pelt",
+                  "amount": 6
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 8
+                },
+                {
+                  "item": "roots",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 22,
+              "durability": 1100,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "lox-pelt",
+                  "amount": 12
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 16
+                },
+                {
+                  "item": "roots",
+                  "amount": 4
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 5,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Lox Fur Set is a Plains-tier armor. This set is the tier above Wolf Armor and Fenris Set, and is replaced by Carapace Armor and Eitr-weave Set, respectively.",
+          "names": {}
+        },
+        {
+          "id": "lox-cape",
+          "name": "Lox Cape",
+          "slot": "head",
+          "gameId": "CapeLox",
+          "image": "img/armor/lox-cape.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1200,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "lox-pelt",
+                  "amount": 6
+                },
+                {
+                  "item": "silver",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 2,
+              "durability": 700,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "lox-pelt",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 3,
+              "durability": 900,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "lox-pelt",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 4,
+              "durability": 1100,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "lox-pelt",
+                  "amount": 8
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 4,
+          "movementSpeed": 0,
+          "resistances": [
+            "Resistant (0.5x) VS Frost"
+          ],
+          "description": "The Lox Fur Set is a Plains-tier armor. This set is the tier above Wolf Armor and Fenris Set, and is replaced by Carapace Armor and Eitr-weave Set, respectively.",
+          "names": {
+            "cs": "Plášť z Loxe",
+            "fr": "Cape de Lox",
+            "ru": "Плащ из шкуры быкоящера"
+          }
+        }
+      ],
+      "names": {}
+    },
+    {
+      "id": "midsummer-crown",
+      "name": "Midsummer Crown",
+      "wiki": "https://valheim.weirdgloop.org/w/Midsummer_Crown",
+      "kind": "special",
+      "tag": "Midsummer",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "midsummer-crown",
+          "name": "Midsummer Crown",
+          "slot": "head",
+          "gameId": "HelmetMidsummerCrown",
+          "image": "img/armor/midsummer-crown.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 0,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "dandelion",
+                  "amount": 10
+                }
+              ]
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 1,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Midsummer crown is a seasonal armor piece available during midsummer.",
+          "kind": "special",
+          "tag": "Midsummer",
+          "names": {
+            "ru": "Корона летнего солнцестояния"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Корона летнего солнцестояния"
+      }
+    },
+    {
+      "id": "moose-hide-cape",
+      "name": "Moose Hide Cape",
+      "wiki": "https://valheim.weirdgloop.org/w/Moose_Hide_Cape",
+      "kind": "single",
+      "biome": "deep-north",
+      "tier": 9,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "moose-hide-cape",
+          "name": "Moose Hide Cape",
+          "slot": "head",
+          "gameId": "CapeDeepNorth",
+          "image": "img/armor/moose-hide-cape.png",
+          "station": "Black Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 12,
+              "durability": 1200,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "moose-hide",
+                  "amount": 6
+                },
+                {
+                  "item": "moose-sinew",
+                  "amount": 2
+                },
+                {
+                  "item": "bloodgold",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 14,
+              "durability": 1250,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "moose-hide",
+                  "amount": 3
+                },
+                {
+                  "item": "moose-sinew",
+                  "amount": 1
+                },
+                {
+                  "item": "bloodgold",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 16,
+              "durability": 1300,
+              "stationLevel": 6,
+              "materials": [
+                {
+                  "item": "moose-hide",
+                  "amount": 6
+                },
+                {
+                  "item": "moose-sinew",
+                  "amount": 2
+                },
+                {
+                  "item": "bloodgold",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 18,
+              "durability": 1350,
+              "stationLevel": 7,
+              "materials": [
+                {
+                  "item": "moose-hide",
+                  "amount": 12
+                },
+                {
+                  "item": "moose-sinew",
+                  "amount": 4
+                },
+                {
+                  "item": "bloodgold",
+                  "amount": 8
+                }
+              ]
+            }
+          ],
+          "armorSource": "rendered",
+          "weight": 4,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Moose Hide Cape is the combat focused Deep North-tier Cape.",
+          "names": {}
+        }
+      ],
+      "names": {}
+    },
+    {
+      "id": "padded-armor",
+      "name": "Padded Armor",
+      "wiki": "https://valheim.weirdgloop.org/w/Padded_Armor",
+      "kind": "set",
+      "biome": "plains",
+      "tier": 6,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "padded-helmet",
+          "name": "Padded Helmet",
+          "slot": "head",
+          "gameId": "HelmetPadded",
+          "image": "img/armor/padded-helmet.png",
+          "station": "Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 26,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 10
+                },
+                {
+                  "item": "linen-thread",
+                  "amount": 15
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 28,
+              "durability": 1200,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 5
+                },
+                {
+                  "item": "linen-thread",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 30,
+              "durability": 1400,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 10
+                },
+                {
+                  "item": "linen-thread",
+                  "amount": 20
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 32,
+              "durability": 1600,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 20
+                },
+                {
+                  "item": "linen-thread",
+                  "amount": 40
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Padded Armor is a Plains-tier armor. This set is the tier above Fenris Set and Wolf Armor and is replaced by Carapace Armor or Eitr-weave Set.",
+          "names": {
+            "cs": "Prošívaná zbroj",
+            "ru": "Обитая броня"
+          }
+        },
+        {
+          "id": "padded-cuirass",
+          "name": "Padded Cuirass",
+          "slot": "chest",
+          "gameId": "ArmorPaddedCuirass",
+          "image": "img/armor/padded-cuirass.png",
+          "station": "Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 26,
+              "durability": 1000,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 10
+                },
+                {
+                  "item": "linen-thread",
+                  "amount": 20
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 28,
+              "durability": 1200,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 3
+                },
+                {
+                  "item": "linen-thread",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 30,
+              "durability": 1400,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 6
+                },
+                {
+                  "item": "linen-thread",
+                  "amount": 20
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 32,
+              "durability": 1600,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 12
+                },
+                {
+                  "item": "linen-thread",
+                  "amount": 40
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 10,
+          "movementSpeed": -5,
+          "resistances": [],
+          "description": "Padded Armor is a Plains-tier armor. This set is the tier above Fenris Set and Wolf Armor and is replaced by Carapace Armor or Eitr-weave Set.",
+          "names": {
+            "cs": "Prošívaná zbroj",
+            "ru": "Обитая броня"
+          }
+        },
+        {
+          "id": "padded-greaves",
+          "name": "Padded Greaves",
+          "slot": "legs",
+          "gameId": "ArmorPaddedGreaves",
+          "image": "img/armor/padded-greaves.png",
+          "station": "Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 26,
+              "durability": 1000,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 10
+                },
+                {
+                  "item": "linen-thread",
+                  "amount": 20
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 28,
+              "durability": 1200,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 3
+                },
+                {
+                  "item": "linen-thread",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 30,
+              "durability": 1400,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 6
+                },
+                {
+                  "item": "linen-thread",
+                  "amount": 20
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 32,
+              "durability": 1600,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "iron",
+                  "amount": 12
+                },
+                {
+                  "item": "linen-thread",
+                  "amount": 40
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 10,
+          "movementSpeed": -5,
+          "resistances": [],
+          "description": "Padded Armor is a Plains-tier armor. This set is the tier above Fenris Set and Wolf Armor and is replaced by Carapace Armor or Eitr-weave Set.",
+          "names": {
+            "cs": "Prošívaná zbroj",
+            "ru": "Обитая броня"
+          }
+        },
+        {
+          "id": "linen-cape",
+          "name": "Linen Cape",
+          "slot": "head",
+          "gameId": "CapeLinen",
+          "image": "img/armor/linen-cape.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1500,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 20
+                },
+                {
+                  "item": "silver",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 2,
+              "durability": 1200,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 3,
+              "durability": 1400,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 8
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 4,
+              "durability": 1600,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "linen-thread",
+                  "amount": 16
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 4,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Padded Armor is a Plains-tier armor. This set is the tier above Fenris Set and Wolf Armor and is replaced by Carapace Armor or Eitr-weave Set.",
+          "names": {
+            "cs": "Lněný plášť",
+            "fr": "Cape en tissu",
+            "ru": "Льняной плащ"
+          }
+        }
+      ],
+      "names": {
+        "cs": "Prošívaná zbroj",
+        "ru": "Обитая броня"
+      }
+    },
+    {
+      "id": "pointy-hat",
+      "name": "Pointy Hat",
+      "wiki": "https://valheim.weirdgloop.org/w/Pointy_Hat",
+      "kind": "special",
+      "tag": "Halloween",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "pointy-hat",
+          "name": "Pointy Hat",
+          "slot": "head",
+          "gameId": "HelmetPointyHat",
+          "image": "img/armor/pointy-hat.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 800,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "coal",
+                  "amount": 5
+                },
+                {
+                  "item": "bronze",
+                  "amount": 1
+                },
+                {
+                  "item": "deer-hide",
+                  "amount": 3
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 3,
+              "durability": 1000,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 5,
+              "durability": 1200,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 7,
+              "durability": 1400,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "deer-hide",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "rendered",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Pointy hat is an armor piece which can be crafted and upgraded at the Workbench. It is only available during the Halloween seasonal event, – .",
+          "kind": "special",
+          "tag": "Halloween",
+          "names": {
+            "ru": "Ведьмовская шляпа"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Ведьмовская шляпа"
+      }
+    },
+    {
+      "id": "protector-armor",
+      "name": "Protector Armor",
+      "wiki": "https://valheim.weirdgloop.org/w/Protector_Armor",
+      "kind": "set",
+      "biome": "deep-north",
+      "tier": 9,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "helmet-of-the-protector",
+          "name": "Helmet of the Protector",
+          "slot": "head",
+          "gameId": "HelmetDNHeavy",
+          "image": "img/armor/helmet-of-the-protector.png",
+          "station": "Frost Foundry",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 44,
+              "durability": 1000,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "cast-helmet-of-the-protector",
+                  "amount": 1
+                },
+                {
+                  "item": "liquid-frost",
+                  "amount": 5,
+                  "fuel": true
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 46,
+              "durability": 1200,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 15
+                },
+                {
+                  "item": "moose-hide",
+                  "amount": 3
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 48,
+              "durability": 1400,
+              "stationLevel": 6,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 30
+                },
+                {
+                  "item": "moose-hide",
+                  "amount": 6
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 50,
+              "durability": 1600,
+              "stationLevel": 7,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 60
+                },
+                {
+                  "item": "moose-hide",
+                  "amount": 12
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 1,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Protector Armor is a Deep North-tier armor.",
+          "names": {}
+        },
+        {
+          "id": "breastplate-of-the-protector",
+          "name": "Breastplate of the Protector",
+          "slot": "chest",
+          "gameId": "ArmorDeepNorthHeavyChest",
+          "image": "img/armor/breastplate-of-the-protector.png",
+          "station": "Frost Foundry",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 44,
+              "durability": 1000,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "cast-breastplate-of-the-protector",
+                  "amount": 1
+                },
+                {
+                  "item": "liquid-frost",
+                  "amount": 5,
+                  "fuel": true
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 46,
+              "durability": 1200,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 15
+                },
+                {
+                  "item": "moose-hide",
+                  "amount": 3
+                },
+                {
+                  "item": "leather-straps",
+                  "amount": 3
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 48,
+              "durability": 1400,
+              "stationLevel": 6,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 30
+                },
+                {
+                  "item": "moose-hide",
+                  "amount": 6
+                },
+                {
+                  "item": "leather-straps",
+                  "amount": 6
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 50,
+              "durability": 1600,
+              "stationLevel": 7,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 60
+                },
+                {
+                  "item": "moose-hide",
+                  "amount": 12
+                },
+                {
+                  "item": "leather-straps",
+                  "amount": 12
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 5,
+          "movementSpeed": 0,
+          "resistances": [
+            "Resistant vs. Frost"
+          ],
+          "description": "The Protector Armor is a Deep North-tier armor.",
+          "names": {}
+        },
+        {
+          "id": "trousers-of-the-protector",
+          "name": "Trousers of the Protector",
+          "slot": "legs",
+          "gameId": "ArmorDeepNorthHeavylegs",
+          "image": "img/armor/trousers-of-the-protector.png",
+          "station": "Frost Foundry",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 44,
+              "durability": 1000,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "cast-trousers-of-the-protector",
+                  "amount": 1
+                },
+                {
+                  "item": "liquid-frost",
+                  "amount": 5,
+                  "fuel": true
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 46,
+              "durability": 1200,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 15
+                },
+                {
+                  "item": "moose-hide",
+                  "amount": 3
+                },
+                {
+                  "item": "leather-straps",
+                  "amount": 3
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 48,
+              "durability": 1400,
+              "stationLevel": 6,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 30
+                },
+                {
+                  "item": "moose-hide",
+                  "amount": 6
+                },
+                {
+                  "item": "leather-straps",
+                  "amount": 6
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 50,
+              "durability": 1600,
+              "stationLevel": 7,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 60
+                },
+                {
+                  "item": "moose-hide",
+                  "amount": 12
+                },
+                {
+                  "item": "leather-straps",
+                  "amount": 12
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 5,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Protector Armor is a Deep North-tier armor.",
+          "names": {}
+        }
+      ],
+      "names": {}
+    },
+    {
+      "id": "rag-armor",
+      "name": "Rag Armor",
+      "wiki": "https://valheim.weirdgloop.org/w/Rag_Armor",
+      "kind": "set",
+      "biome": "meadows",
+      "tier": 1,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "rag-tunic",
+          "name": "Rag tunic",
+          "slot": "chest",
+          "gameId": "ArmorRagsChest",
+          "image": "img/armor/rag-tunic.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 200,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "leather-scraps",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 2,
+              "durability": 400,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "leather-scraps",
+                  "amount": 5
+                }
+              ]
+            }
+          ],
+          "armorSource": "rendered",
+          "weight": 2,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Rag Armor is a Meadows-tier armor and the most basic armor that can be acquired. It is statistically inferior to Leather Armor, and provides minimal protection. There are no set bonuses for rag armor. Every player starts with a Rag Tunic equipped.",
+          "names": {
+            "cs": "Hadrová zbroj",
+            "ru": "Холщовая броня"
+          }
+        },
+        {
+          "id": "rag-trousers",
+          "name": "Rag Trousers",
+          "slot": "legs",
+          "gameId": "ArmorRagsLegs",
+          "image": "img/armor/rag-trousers.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 200,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "leather-scraps",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 2,
+              "durability": 250,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "leather-scraps",
+                  "amount": 5
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 2,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Rag Armor is a Meadows-tier armor and the most basic armor that can be acquired. It is statistically inferior to Leather Armor, and provides minimal protection. There are no set bonuses for rag armor. Every player starts with a Rag Tunic equipped.",
+          "names": {
+            "cs": "Hadrová zbroj",
+            "ru": "Холщовая броня"
+          }
+        }
+      ],
+      "names": {
+        "cs": "Hadrová zbroj",
+        "ru": "Холщовая броня"
+      }
+    },
+    {
+      "id": "root-set",
+      "name": "Root Set",
+      "wiki": "https://valheim.weirdgloop.org/w/Root_Set",
+      "kind": "set",
+      "biome": "swamp",
+      "tier": 4,
+      "setBonus": {
+        "name": "Improved archery",
+        "pieces": 3,
+        "effects": [
+          "Bows +15"
+        ]
+      },
+      "pieces": [
+        {
+          "id": "root-mask",
+          "name": "Root Mask",
+          "slot": "head",
+          "gameId": "HelmetRoot",
+          "image": "img/armor/root-mask.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 8,
+              "durability": 800,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "root",
+                  "amount": 10
+                },
+                {
+                  "item": "ancient-bark",
+                  "amount": 10
+                },
+                {
+                  "item": "leather-scraps",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 10,
+              "durability": 900,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "root",
+                  "amount": 2
+                },
+                {
+                  "item": "ancient-bark",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 12,
+              "durability": 1000,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "root",
+                  "amount": 4
+                },
+                {
+                  "item": "ancient-bark",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 14,
+              "durability": 1100,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "root",
+                  "amount": 8
+                },
+                {
+                  "item": "ancient-bark",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [
+            "Resistant (0.5x) VS Poison",
+            "Weak (1.5x) VS Fire"
+          ],
+          "description": "The Root Set is a Swamp-tier armor. This set is in the tier above Bronze Armor and the Troll Set. It provides less armor points, but also a lower movement speed penalty compared to the other swamp-tier armor, Iron Armor. Each piece provides weakness to fire, but individual parts give resistance to pierce (in the harnesk) and poison (in the mask). Its unique set bonus increases the wearer's Bow ski",
+          "names": {
+            "cs": "Zbroj z kořenů",
+            "ru": "Корневая броня"
+          }
+        },
+        {
+          "id": "root-harnesk",
+          "name": "Root Harnesk",
+          "slot": "chest",
+          "gameId": "ArmorRootChest",
+          "image": "img/armor/root-harnesk.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 8,
+              "durability": 800,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "root",
+                  "amount": 10
+                },
+                {
+                  "item": "ancient-bark",
+                  "amount": 10
+                },
+                {
+                  "item": "deer-hide",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 10,
+              "durability": 900,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "root",
+                  "amount": 2
+                },
+                {
+                  "item": "ancient-bark",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 12,
+              "durability": 1000,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "root",
+                  "amount": 4
+                },
+                {
+                  "item": "ancient-bark",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 14,
+              "durability": 1100,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "root",
+                  "amount": 8
+                },
+                {
+                  "item": "ancient-bark",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 10,
+          "movementSpeed": -2,
+          "resistances": [
+            "Resistant (0.5x) VS Pierce",
+            "Weak (1.5x) VS Fire"
+          ],
+          "description": "The Root Set is a Swamp-tier armor. This set is in the tier above Bronze Armor and the Troll Set. It provides less armor points, but also a lower movement speed penalty compared to the other swamp-tier armor, Iron Armor. Each piece provides weakness to fire, but individual parts give resistance to pierce (in the harnesk) and poison (in the mask). Its unique set bonus increases the wearer's Bow ski",
+          "names": {
+            "cs": "Zbroj z kořenů",
+            "ru": "Корневая броня"
+          }
+        },
+        {
+          "id": "root-leggings",
+          "name": "Root Leggings",
+          "slot": "legs",
+          "gameId": "ArmorRootLegs",
+          "image": "img/armor/root-leggings.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 8,
+              "durability": 800,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "root",
+                  "amount": 10
+                },
+                {
+                  "item": "ancient-bark",
+                  "amount": 10
+                },
+                {
+                  "item": "deer-hide",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 10,
+              "durability": 900,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "root",
+                  "amount": 2
+                },
+                {
+                  "item": "ancient-bark",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 12,
+              "durability": 1000,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "root",
+                  "amount": 4
+                },
+                {
+                  "item": "ancient-bark",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 14,
+              "durability": 1100,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "root",
+                  "amount": 8
+                },
+                {
+                  "item": "ancient-bark",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 10,
+          "movementSpeed": -2,
+          "resistances": [
+            "Weak (1.5x) vs Fire"
+          ],
+          "description": "The Root Set is a Swamp-tier armor. This set is in the tier above Bronze Armor and the Troll Set. It provides less armor points, but also a lower movement speed penalty compared to the other swamp-tier armor, Iron Armor. Each piece provides weakness to fire, but individual parts give resistance to pierce (in the harnesk) and poison (in the mask). Its unique set bonus increases the wearer's Bow ski",
+          "names": {
+            "cs": "Zbroj z kořenů",
+            "ru": "Корневая броня"
+          }
+        }
+      ],
+      "names": {
+        "cs": "Zbroj z kořenů",
+        "ru": "Корневая броня"
+      }
+    },
+    {
+      "id": "shawl-dress-blue",
+      "name": "Shawl dress blue",
+      "wiki": "https://valheim.weirdgloop.org/w/Shawl_dress_blue",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "shawl-dress-blue",
+          "name": "Shawl dress blue",
+          "slot": "chest",
+          "gameId": "ArmorDress5",
+          "image": "img/armor/shawl-dress-blue.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Shawl dress blue is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's silver chest.",
+          "names": {
+            "ru": "Синее платье с шалью"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Синее платье с шалью"
+      }
+    },
+    {
+      "id": "shawl-dress-brown",
+      "name": "Shawl dress brown",
+      "wiki": "https://valheim.weirdgloop.org/w/Shawl_dress_brown",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "shawl-dress-brown",
+          "name": "Shawl dress brown",
+          "slot": "chest",
+          "gameId": "ArmorDress2",
+          "image": "img/armor/shawl-dress-brown.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Shawl dress brown is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's silver chest.",
+          "names": {
+            "ru": "Коричневое платье с шалью"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Коричневое платье с шалью"
+      }
+    },
+    {
+      "id": "shawl-dress-yellow",
+      "name": "Shawl dress yellow",
+      "wiki": "https://valheim.weirdgloop.org/w/Shawl_dress_yellow",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "shawl-dress-yellow",
+          "name": "Shawl dress yellow",
+          "slot": "chest",
+          "gameId": "ArmorDress8",
+          "image": "img/armor/shawl-dress-yellow.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Shawl dress yellow is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's silver chest.",
+          "names": {
+            "ru": "Желтое платье с шалью"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Желтое платье с шалью"
+      }
+    },
+    {
+      "id": "simple-cap-purple",
+      "name": "Simple cap purple",
+      "wiki": "https://valheim.weirdgloop.org/w/Simple_cap_purple",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "simple-cap-purple",
+          "name": "Simple cap purple",
+          "slot": "head",
+          "gameId": "HelmetHat10",
+          "image": "img/armor/simple-cap-purple.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 800,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "is an armor piece which can be purchased from Hildir for .",
+          "names": {
+            "ru": "Простая фиолетовая шапка"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Простая фиолетовая шапка"
+      }
+    },
+    {
+      "id": "simple-cap-red",
+      "name": "Simple cap red",
+      "wiki": "https://valheim.weirdgloop.org/w/Simple_cap_red",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "simple-cap-red",
+          "name": "Simple cap red",
+          "slot": "head",
+          "gameId": "HelmetHat5",
+          "image": "img/armor/simple-cap-red.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 800,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Simple cap red is an armor piece which can be purchased from Hildir for .",
+          "names": {
+            "ru": "Простая красная шапка"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Простая красная шапка"
+      }
+    },
+    {
+      "id": "simple-dress-blue",
+      "name": "Simple dress blue",
+      "wiki": "https://valheim.weirdgloop.org/w/Simple_dress_blue",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "simple-dress-blue",
+          "name": "Simple dress blue",
+          "slot": "chest",
+          "gameId": "ArmorDress4",
+          "image": "img/armor/simple-dress-blue.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Simple dress blue is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's brass chest.",
+          "names": {
+            "ru": "Простое синее платье"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Простое синее платье"
+      }
+    },
+    {
+      "id": "simple-dress-brown",
+      "name": "Simple dress brown",
+      "wiki": "https://valheim.weirdgloop.org/w/Simple_dress_brown",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "simple-dress-brown",
+          "name": "Simple dress brown",
+          "slot": "chest",
+          "gameId": "ArmorDress1",
+          "image": "img/armor/simple-dress-brown.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Simple dress brown is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's brass chest.",
+          "names": {
+            "ru": "Простое коричневое платье"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Простое коричневое платье"
+      }
+    },
+    {
+      "id": "simple-dress-natural",
+      "name": "Simple dress natural",
+      "wiki": "https://valheim.weirdgloop.org/w/Simple_dress_natural",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "simple-dress-natural",
+          "name": "Simple dress natural",
+          "slot": "chest",
+          "gameId": "ArmorDress10",
+          "image": "img/armor/simple-dress-natural.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Shawl dress brown is an armor piece which can be purchased from Hildir for .",
+          "names": {
+            "ru": "Простое платье"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Простое платье"
+      }
+    },
+    {
+      "id": "simple-dress-yellow",
+      "name": "Simple dress yellow",
+      "wiki": "https://valheim.weirdgloop.org/w/Simple_dress_yellow",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "simple-dress-yellow",
+          "name": "Simple dress yellow",
+          "slot": "chest",
+          "gameId": "ArmorDress7",
+          "image": "img/armor/simple-dress-yellow.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Simple dress yellow is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's brass chest.",
+          "names": {
+            "ru": "Простое желтое платье"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Простое желтое платье"
+      }
+    },
+    {
+      "id": "simple-tunic-blue",
+      "name": "Simple tunic blue",
+      "wiki": "https://valheim.weirdgloop.org/w/Simple_tunic_blue",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "simple-tunic-blue",
+          "name": "Simple tunic blue",
+          "slot": "chest",
+          "gameId": "ArmorTunic1",
+          "image": "img/armor/simple-tunic-blue.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Simple tunic blue is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's brass chest.",
+          "names": {
+            "ru": "Простая синяя туника"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Простая синяя туника"
+      }
+    },
+    {
+      "id": "simple-tunic-natural",
+      "name": "Simple tunic natural",
+      "wiki": "https://valheim.weirdgloop.org/w/Simple_tunic_natural",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "simple-tunic-natural",
+          "name": "Simple tunic natural",
+          "slot": "chest",
+          "gameId": "ArmorTunic10",
+          "image": "img/armor/simple-tunic-natural.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Shawl dress brown is an armor piece which can be purchased from Hildir for .",
+          "names": {
+            "ru": "Простая туника"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Простая туника"
+      }
+    },
+    {
+      "id": "simple-tunic-red",
+      "name": "Simple tunic red",
+      "wiki": "https://valheim.weirdgloop.org/w/Simple_tunic_red",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "simple-tunic-red",
+          "name": "Simple tunic red",
+          "slot": "chest",
+          "gameId": "ArmorTunic4",
+          "image": "img/armor/simple-tunic-red.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Simple tunic red is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's brass chest.",
+          "names": {
+            "ru": "Простая красная туника"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Простая красная туника"
+      }
+    },
+    {
+      "id": "simple-tunic-yellow",
+      "name": "Simple tunic yellow",
+      "wiki": "https://valheim.weirdgloop.org/w/Simple_tunic_yellow",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "simple-tunic-yellow",
+          "name": "Simple tunic yellow",
+          "slot": "chest",
+          "gameId": "ArmorTunic7",
+          "image": "img/armor/simple-tunic-yellow.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 10,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Simple tunic yellow is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's brass chest.",
+          "names": {
+            "ru": "Простая желтая туника"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Простая желтая туника"
+      }
+    },
+    {
+      "id": "straw-hat",
+      "name": "Straw hat",
+      "wiki": "https://valheim.weirdgloop.org/w/Straw_hat",
+      "kind": "set",
+      "biome": null,
+      "tier": null,
+      "setBonus": {
+        "name": "Harvester Wearing the right clothes makes the chores easier. Farming +25",
+        "pieces": 1,
+        "effects": []
+      },
+      "pieces": [
+        {
+          "id": "straw-hat",
+          "name": "Straw hat",
+          "slot": "head",
+          "gameId": "HelmetStrawHat",
+          "image": "img/armor/straw-hat.png",
+          "station": "Sold by Hildir after returning her Brass chest",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 800,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Straw hat is a part of a set together with either the Harvest tunic or Harvest dress that increases the player's Farming skill by +25 so long as both pieces are worn. Both the dress and tunic can be used interchangeably for the same effect. It is sold by Hildir after retrieving and bringing her the Brass chest.",
+          "names": {
+            "ru": "Соломенная шляпа"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Соломенная шляпа"
+      }
+    },
+    {
+      "id": "tied-headscarf-blue",
+      "name": "Tied headscarf blue",
+      "wiki": "https://valheim.weirdgloop.org/w/Tied_headscarf_blue",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "tied-headscarf-blue",
+          "name": "Tied headscarf blue",
+          "slot": "head",
+          "gameId": "HelmetHat1",
+          "image": "img/armor/tied-headscarf-blue.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 800,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Tied headscarf blue is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's brass chest.",
+          "names": {
+            "ru": "Синий платок"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Синий платок"
+      }
+    },
+    {
+      "id": "tied-headscarf-yellow",
+      "name": "Tied headscarf yellow",
+      "wiki": "https://valheim.weirdgloop.org/w/Tied_headscarf_yellow",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "tied-headscarf-yellow",
+          "name": "Tied headscarf yellow",
+          "slot": "head",
+          "gameId": "HelmetHat6",
+          "image": "img/armor/tied-headscarf-yellow.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 800,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Tied headscarf yellow is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's silver chest.",
+          "names": {
+            "ru": "Желтый платок"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Желтый платок"
+      }
+    },
+    {
+      "id": "troll-set",
+      "name": "Troll Set",
+      "wiki": "https://valheim.weirdgloop.org/w/Troll_Set",
+      "kind": "set",
+      "biome": "black-forest",
+      "tier": 2,
+      "setBonus": {
+        "name": "Sneaky",
+        "pieces": 4,
+        "effects": [
+          "Sneak skill +15"
+        ]
+      },
+      "pieces": [
+        {
+          "id": "troll-leather-hood",
+          "name": "Troll Leather Hood",
+          "slot": "head",
+          "gameId": "HelmetTrollLeather",
+          "image": "img/armor/troll-leather-hood.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 6,
+              "durability": 500,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "troll-hide",
+                  "amount": 5
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 3
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 8,
+              "durability": 700,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "troll-hide",
+                  "amount": 2
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 10,
+              "durability": 900,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "troll-hide",
+                  "amount": 4
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 12,
+              "durability": 1100,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "troll-hide",
+                  "amount": 8
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 4
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 1,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Troll Set is a Black Forest-tier armor. Compared to the other armors available in the Bronze Age, Bronze Armor and Bear Set, the Troll Set has lower armor values but does not reduce movement speed. Simultaneously wearing all four pieces provides the Sneaky Effect.",
+          "names": {
+            "cs": "Trollí zbroj",
+            "ru": "Броня из кожи тролля"
+          }
+        },
+        {
+          "id": "troll-leather-tunic",
+          "name": "Troll Leather Tunic",
+          "slot": "chest",
+          "gameId": "ArmorTrollLeatherChest",
+          "image": "img/armor/troll-leather-tunic.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 6,
+              "durability": 500,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "troll-hide",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 8,
+              "durability": 700,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "troll-hide",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 10,
+              "durability": 900,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "troll-hide",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 12,
+              "durability": 1100,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "troll-hide",
+                  "amount": 8
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 5,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Troll Set is a Black Forest-tier armor. Compared to the other armors available in the Bronze Age, Bronze Armor and Bear Set, the Troll Set has lower armor values but does not reduce movement speed. Simultaneously wearing all four pieces provides the Sneaky Effect.",
+          "names": {
+            "cs": "Trollí zbroj",
+            "ru": "Броня из кожи тролля"
+          }
+        },
+        {
+          "id": "troll-leather-trousers",
+          "name": "Troll Leather Trousers",
+          "slot": "legs",
+          "gameId": "ArmorTrollLeatherLegs",
+          "image": "img/armor/troll-leather-trousers.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 6,
+              "durability": 500,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "troll-hide",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 8,
+              "durability": 700,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "troll-hide",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 10,
+              "durability": 900,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "troll-hide",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 12,
+              "durability": 1100,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "troll-hide",
+                  "amount": 8
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 5,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Troll Set is a Black Forest-tier armor. Compared to the other armors available in the Bronze Age, Bronze Armor and Bear Set, the Troll Set has lower armor values but does not reduce movement speed. Simultaneously wearing all four pieces provides the Sneaky Effect.",
+          "names": {
+            "cs": "Trollí zbroj",
+            "ru": "Броня из кожи тролля"
+          }
+        },
+        {
+          "id": "troll-hide-cape",
+          "name": "Troll Hide Cape",
+          "slot": "head",
+          "gameId": "CapeTrollHide",
+          "image": "img/armor/troll-hide-cape.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 500,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "troll-hide",
+                  "amount": 10
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 2,
+              "durability": 550,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "troll-hide",
+                  "amount": 5
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 3,
+              "durability": 600,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "troll-hide",
+                  "amount": 10
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 4,
+              "durability": 650,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "troll-hide",
+                  "amount": 20
+                },
+                {
+                  "item": "bone-fragments",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 4,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Troll Set is a Black Forest-tier armor. Compared to the other armors available in the Bronze Age, Bronze Armor and Bear Set, the Troll Set has lower armor values but does not reduce movement speed. Simultaneously wearing all four pieces provides the Sneaky Effect.",
+          "names": {
+            "cs": "Plášť z trollí kůže",
+            "ru": "Плащ из шкуры тролля"
+          }
+        }
+      ],
+      "names": {
+        "cs": "Trollí zbroj",
+        "ru": "Броня из кожи тролля"
+      }
+    },
+    {
+      "id": "twisted-headscarf-green",
+      "name": "Twisted headscarf green",
+      "wiki": "https://valheim.weirdgloop.org/w/Twisted_headscarf_green",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "twisted-headscarf-green",
+          "name": "Twisted headscarf green",
+          "slot": "head",
+          "gameId": "HelmetHat2",
+          "image": "img/armor/twisted-headscarf-green.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 800,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Twisted headscarf green is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's silver chest.",
+          "names": {
+            "ru": "Зеленый скрученный платок"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Зеленый скрученный платок"
+      }
+    },
+    {
+      "id": "twisted-headscarf-red",
+      "name": "Twisted headscarf red",
+      "wiki": "https://valheim.weirdgloop.org/w/Twisted_headscarf_red",
+      "kind": "cosmetic",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "twisted-headscarf-red",
+          "name": "Twisted headscarf red",
+          "slot": "head",
+          "gameId": "HelmetHat7",
+          "image": "img/armor/twisted-headscarf-red.png",
+          "station": "Hildir",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 800,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Twisted headscarf red is an armor piece which can be purchased from Hildir for . This item will be in the merchant's assortment only after returning Hildir's bronze chest.",
+          "names": {
+            "ru": "Красный скрученный платок"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Красный скрученный платок"
+      }
+    },
+    {
+      "id": "vanguard-set",
+      "name": "Vanguard Set",
+      "wiki": "https://valheim.weirdgloop.org/w/Vanguard_Set",
+      "kind": "set",
+      "biome": "deep-north",
+      "tier": 9,
+      "setBonus": {
+        "name": "Vanguard",
+        "pieces": 3,
+        "effects": [
+          "-10% Run stamina usage",
+          "-20% Dodge stamina usage",
+          "+10% Health regen",
+          "+10% Stamina regen",
+          "+10% Pierce damage"
+        ]
+      },
+      "pieces": [
+        {
+          "id": "hood-of-the-vanguard",
+          "name": "Hood of the Vanguard",
+          "slot": "head",
+          "gameId": "HelmetDNMediumHood",
+          "image": "img/armor/hood-of-the-vanguard.png",
+          "station": "Frost Foundry",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 34,
+              "durability": 1000,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "cast-hood-of-the-vanguard",
+                  "amount": 1
+                },
+                {
+                  "item": "liquid-frost",
+                  "amount": 5,
+                  "fuel": true
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 36,
+              "durability": 1200,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "seal-pelt",
+                  "amount": 3
+                },
+                {
+                  "item": "moose-hide",
+                  "amount": 3
+                },
+                {
+                  "item": "moose-sinew",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 38,
+              "durability": 1400,
+              "stationLevel": 6,
+              "materials": [
+                {
+                  "item": "seal-pelt",
+                  "amount": 6
+                },
+                {
+                  "item": "moose-hide",
+                  "amount": 6
+                },
+                {
+                  "item": "moose-sinew",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 40,
+              "durability": 1600,
+              "stationLevel": 7,
+              "materials": [
+                {
+                  "item": "seal-pelt",
+                  "amount": 12
+                },
+                {
+                  "item": "moose-hide",
+                  "amount": 12
+                },
+                {
+                  "item": "moose-sinew",
+                  "amount": 4
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 1,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Vanguard Set is a Deep North-tier armor.",
+          "names": {}
+        },
+        {
+          "id": "chestpiece-of-the-vanguard",
+          "name": "Chestpiece of the Vanguard",
+          "slot": "chest",
+          "gameId": "ArmorDeepNorthMediumChest",
+          "image": "img/armor/chestpiece-of-the-vanguard.png",
+          "station": "Frost Foundry",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 34,
+              "durability": 1000,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "cast-chestpiece-of-the-vanguard",
+                  "amount": 1
+                },
+                {
+                  "item": "liquid-frost",
+                  "amount": 5,
+                  "fuel": true
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 36,
+              "durability": 1200,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 6
+                },
+                {
+                  "item": "elaking-hair-bundle",
+                  "amount": 4
+                },
+                {
+                  "item": "leather-straps",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 38,
+              "durability": 1400,
+              "stationLevel": 6,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 12
+                },
+                {
+                  "item": "elaking-hair-bundle",
+                  "amount": 8
+                },
+                {
+                  "item": "leather-straps",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 40,
+              "durability": 1600,
+              "stationLevel": 7,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 24
+                },
+                {
+                  "item": "elaking-hair-bundle",
+                  "amount": 16
+                },
+                {
+                  "item": "leather-straps",
+                  "amount": 8
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 5,
+          "movementSpeed": 0,
+          "resistances": [
+            "Resistant vs Frost"
+          ],
+          "description": "The Vanguard Set is a Deep North-tier armor.",
+          "names": {}
+        },
+        {
+          "id": "trousers-of-the-vanguard",
+          "name": "Trousers of the Vanguard",
+          "slot": "legs",
+          "gameId": "ArmorDeepNorthMediumlegs",
+          "image": "img/armor/trousers-of-the-vanguard.png",
+          "station": "Frost Foundry",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 34,
+              "durability": 1000,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "cast-trousers-of-the-vanguard",
+                  "amount": 1
+                },
+                {
+                  "item": "liquid-frost",
+                  "amount": 5,
+                  "fuel": true
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 36,
+              "durability": 1200,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 6
+                },
+                {
+                  "item": "elaking-hair-bundle",
+                  "amount": 4
+                },
+                {
+                  "item": "seal-pelt",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 38,
+              "durability": 1400,
+              "stationLevel": 6,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 12
+                },
+                {
+                  "item": "elaking-hair-bundle",
+                  "amount": 8
+                },
+                {
+                  "item": "seal-pelt",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 40,
+              "durability": 1600,
+              "stationLevel": 7,
+              "materials": [
+                {
+                  "item": "bloodgold",
+                  "amount": 24
+                },
+                {
+                  "item": "elaking-hair-bundle",
+                  "amount": 16
+                },
+                {
+                  "item": "seal-pelt",
+                  "amount": 8
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 5,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Vanguard Set is a Deep North-tier armor.",
+          "names": {}
+        }
+      ],
+      "names": {}
+    },
+    {
+      "id": "vilebone-set",
+      "name": "Vilebone Set",
+      "wiki": "https://valheim.weirdgloop.org/w/Vilebone_Set",
+      "kind": "set",
+      "biome": "plains",
+      "tier": 6,
+      "setBonus": {
+        "name": "Vilebone Wrath",
+        "pieces": 3,
+        "effects": [
+          "Health regen: +20%",
+          "Stamina regen: +20%",
+          "Slightly weak (1.25x) VS Blunt, Slash and Pierce",
+          "Blunt: +20%",
+          "Pierce: +20%"
+        ]
+      },
+      "pieces": [
+        {
+          "id": "vilebone-visage",
+          "name": "Vilebone Visage",
+          "slot": "head",
+          "gameId": "HelmetBerserkerUndead",
+          "image": "img/armor/vilebone-visage.png",
+          "station": "Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 12,
+              "durability": 1000,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 5
+                },
+                {
+                  "item": "vile-trophy",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 14,
+              "durability": 1200,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 16,
+              "durability": 1400,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 18,
+              "durability": 1600,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 8
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 1,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Vilebone Set is a Plains-tier armor set. It has a lower armor value than Padded Armor, but wearing all 3 pieces provides the Vilebone Wrath set bonus, increasing damage and regeneration, but making the wearer slightly more vulnerable to physical damage.",
+          "names": {
+            "ru": "Гнилокостная броня"
+          }
+        },
+        {
+          "id": "vilebone-cage",
+          "name": "Vilebone Cage",
+          "slot": "chest",
+          "gameId": "ArmorBerserkerUndeadChest",
+          "image": "img/armor/vilebone-cage.png",
+          "station": "Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 18,
+              "durability": 1000,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 4
+                },
+                {
+                  "item": "vile-ribcage",
+                  "amount": 3
+                },
+                {
+                  "item": "linen-thread",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 20,
+              "durability": 1200,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 2
+                },
+                {
+                  "item": "vile-ribcage",
+                  "amount": 1
+                },
+                {
+                  "item": "linen-thread",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 22,
+              "durability": 1400,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 4
+                },
+                {
+                  "item": "vile-ribcage",
+                  "amount": 2
+                },
+                {
+                  "item": "linen-thread",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 24,
+              "durability": 1600,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 8
+                },
+                {
+                  "item": "vile-ribcage",
+                  "amount": 4
+                },
+                {
+                  "item": "linen-thread",
+                  "amount": 4
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 5,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Vilebone Set is a Plains-tier armor set. It has a lower armor value than Padded Armor, but wearing all 3 pieces provides the Vilebone Wrath set bonus, increasing damage and regeneration, but making the wearer slightly more vulnerable to physical damage.",
+          "names": {
+            "ru": "Гнилокостная броня"
+          }
+        },
+        {
+          "id": "vilebone-drapes",
+          "name": "Vilebone Drapes",
+          "slot": "legs",
+          "gameId": "ArmorBerserkerUndeadLegs",
+          "image": "img/armor/vilebone-drapes.png",
+          "station": "Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 18,
+              "durability": 1000,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 10
+                },
+                {
+                  "item": "vile-ribcage",
+                  "amount": 1
+                },
+                {
+                  "item": "linen-thread",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 20,
+              "durability": 1200,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 5
+                },
+                {
+                  "item": "vile-ribcage",
+                  "amount": 1
+                },
+                {
+                  "item": "linen-thread",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 22,
+              "durability": 1400,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 10
+                },
+                {
+                  "item": "vile-ribcage",
+                  "amount": 2
+                },
+                {
+                  "item": "linen-thread",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 24,
+              "durability": 1600,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "bear-hide",
+                  "amount": 20
+                },
+                {
+                  "item": "vile-ribcage",
+                  "amount": 4
+                },
+                {
+                  "item": "linen-thread",
+                  "amount": 4
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 5,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "The Vilebone Set is a Plains-tier armor set. It has a lower armor value than Padded Armor, but wearing all 3 pieces provides the Vilebone Wrath set bonus, increasing damage and regeneration, but making the wearer slightly more vulnerable to physical damage.",
+          "names": {
+            "ru": "Гнилокостная броня"
+          }
+        }
+      ],
+      "names": {
+        "ru": "Гнилокостная броня"
+      }
+    },
+    {
+      "id": "wolf-armor",
+      "name": "Wolf Armor",
+      "wiki": "https://valheim.weirdgloop.org/w/Wolf_Armor",
+      "kind": "set",
+      "biome": "mountain",
+      "tier": 5,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "drake-helmet",
+          "name": "Drake Helmet",
+          "slot": "head",
+          "gameId": "HelmetDrake",
+          "image": "img/armor/drake-helmet.png",
+          "station": "Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 20,
+              "durability": 1000,
+              "stationLevel": 1,
+              "materials": [
+                {
+                  "item": "silver",
+                  "amount": 20
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 2
+                },
+                {
+                  "item": "drake-trophy",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 22,
+              "durability": 1200,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "silver",
+                  "amount": 5
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 24,
+              "durability": 1400,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "silver",
+                  "amount": 10
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 26,
+              "durability": 1600,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "silver",
+                  "amount": 20
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 3,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Wolf Armor is a Mountain-tier armor. This set is the tier above Iron Armor and Root Set, and is replaced by Padded Armor and Vilebone Set, respectively.",
+          "names": {
+            "cs": "Vlčí zbroj",
+            "ru": "Волчья броня"
+          }
+        },
+        {
+          "id": "wolf-hide-chestpiece",
+          "name": "Wolf Hide Chestpiece",
+          "slot": "chest",
+          "gameId": "ArmorWolfChest",
+          "image": "img/armor/wolf-hide-chestpiece.png",
+          "station": "Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 20,
+              "durability": 1000,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "silver",
+                  "amount": 20
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 5
+                },
+                {
+                  "item": "chain",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 22,
+              "durability": 1200,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "silver",
+                  "amount": 5
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 24,
+              "durability": 1400,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "silver",
+                  "amount": 10
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 26,
+              "durability": 1600,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "silver",
+                  "amount": 20
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 8
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 15,
+          "movementSpeed": -5,
+          "resistances": [
+            "Resistant (0.5x) VS Frost"
+          ],
+          "description": "Wolf Armor is a Mountain-tier armor. This set is the tier above Iron Armor and Root Set, and is replaced by Padded Armor and Vilebone Set, respectively.",
+          "names": {
+            "cs": "Vlčí zbroj",
+            "ru": "Волчья броня"
+          }
+        },
+        {
+          "id": "wolf-hide-trousers",
+          "name": "Wolf Hide Trousers",
+          "slot": "legs",
+          "gameId": "ArmorWolfLegs",
+          "image": "img/armor/wolf-hide-trousers.png",
+          "station": "Forge",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 20,
+              "durability": 1000,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "silver",
+                  "amount": 20
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 5
+                },
+                {
+                  "item": "wolf-fang",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 22,
+              "durability": 1200,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "silver",
+                  "amount": 5
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 2
+                },
+                {
+                  "item": "wolf-fang",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 24,
+              "durability": 1400,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "silver",
+                  "amount": 10
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 4
+                },
+                {
+                  "item": "wolf-fang",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 26,
+              "durability": 1600,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "silver",
+                  "amount": 20
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 8
+                },
+                {
+                  "item": "wolf-fang",
+                  "amount": 4
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 15,
+          "movementSpeed": -5,
+          "resistances": [],
+          "description": "Wolf Armor is a Mountain-tier armor. This set is the tier above Iron Armor and Root Set, and is replaced by Padded Armor and Vilebone Set, respectively.",
+          "names": {
+            "cs": "Vlčí zbroj",
+            "ru": "Волчья броня"
+          }
+        },
+        {
+          "id": "wolf-fur-cape",
+          "name": "Wolf Fur Cape",
+          "slot": "head",
+          "gameId": "CapeWolf",
+          "image": "img/armor/wolf-fur-cape.png",
+          "station": "Workbench",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 1000,
+              "stationLevel": 2,
+              "materials": [
+                {
+                  "item": "silver",
+                  "amount": 4
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 6
+                },
+                {
+                  "item": "wolf-trophy",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "quality": 2,
+              "armor": 2,
+              "durability": 1200,
+              "stationLevel": 3,
+              "materials": [
+                {
+                  "item": "silver",
+                  "amount": 2
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "quality": 3,
+              "armor": 3,
+              "durability": 1400,
+              "stationLevel": 4,
+              "materials": [
+                {
+                  "item": "silver",
+                  "amount": 4
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 8
+                }
+              ]
+            },
+            {
+              "quality": 4,
+              "armor": 4,
+              "durability": 1600,
+              "stationLevel": 5,
+              "materials": [
+                {
+                  "item": "silver",
+                  "amount": 8
+                },
+                {
+                  "item": "wolf-pelt",
+                  "amount": 16
+                }
+              ]
+            }
+          ],
+          "armorSource": "table",
+          "weight": 4,
+          "movementSpeed": 0,
+          "resistances": [
+            "Resistant (0.5x) VS Frost"
+          ],
+          "description": "Wolf Armor is a Mountain-tier armor. This set is the tier above Iron Armor and Root Set, and is replaced by Padded Armor and Vilebone Set, respectively.",
+          "names": {
+            "fr": "Cape en fourrure de loup",
+            "ru": "Плащ из шкуры волка"
+          }
+        }
+      ],
+      "names": {
+        "cs": "Vlčí zbroj",
+        "ru": "Волчья броня"
+      }
+    },
+    {
+      "id": "yule-hat",
+      "name": "Yule Hat",
+      "wiki": "https://valheim.weirdgloop.org/w/Yule_Hat",
+      "kind": "single",
+      "biome": null,
+      "tier": null,
+      "setBonus": null,
+      "pieces": [
+        {
+          "id": "yule-hat",
+          "name": "Yule Hat",
+          "slot": "head",
+          "gameId": "HelmetYule",
+          "image": "img/armor/yule-hat.png",
+          "station": "Haldor",
+          "levels": [
+            {
+              "quality": 1,
+              "armor": 1,
+              "durability": 0,
+              "stationLevel": 1,
+              "materials": []
+            }
+          ],
+          "armorSource": "infobox",
+          "weight": 1,
+          "movementSpeed": 0,
+          "resistances": [],
+          "description": "Yule hat is an armor piece which can be purchased from Haldor for .",
+          "names": {
+            "cs": "Vánoční čepice",
+            "fr": "Chapeau de Noël",
+            "ru": "Праздничный колпак"
+          }
+        }
+      ],
+      "names": {
+        "cs": "Vánoční čepice",
+        "fr": "Chapeau de Noël",
+        "ru": "Праздничный колпак"
+      }
+    }
+  ],
   "attackProfiles": {
     "weapons": {
       "abyssal-harpoon": {
