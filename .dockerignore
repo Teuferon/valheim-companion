@@ -6,6 +6,8 @@
 !shared/**
 !shared/analytics/
 !shared/analytics/**
+!shared/progress/
+!shared/progress/**
 !apps/hub/
 !apps/bestiary/index.html
 !apps/bestiary/assets/

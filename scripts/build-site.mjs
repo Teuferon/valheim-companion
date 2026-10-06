@@ -102,7 +102,7 @@ export function buildSite() {
   }
   const progressCoreDist = path.join(DIST_DIR, 'shared', 'progress');
   mkdirSync(progressCoreDist, { recursive: true });
-  cpSync(path.join(REPO_ROOT, 'shared', 'progress', 'core.js'), path.join(progressCoreDist, 'core.js'));
+  cpSync(path.join(REPO_ROOT, 'shared', 'progress'), progressCoreDist, { recursive: true });
 
   // 4. apps/signs/dist-static/* -> dist/signs/
   const signsDistTarget = path.join(DIST_DIR, 'signs');
