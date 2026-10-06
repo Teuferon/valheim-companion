@@ -34,8 +34,9 @@
     const meadLines = state.meads.map(line => {
       const mead = data.meads.find(item => item.id === line.id);
       const quantity = line.mode === 'continuous' ? Math.ceil(seconds / Math.max(mead.cooldown || 0, mead.duration || 0, 1)) : line.quantity;
-      const batches = Math.ceil(quantity / (mead.yields || 1));
-      return { ...line, item: line.id, quantity, batches, produced: batches * (mead.yields || 1), definition: mead };
+      const yields = mead.base ? mead.yields || 1 : 1;
+      const batches = Math.ceil(quantity / yields);
+      return { ...line, item: line.id, quantity, batches, produced: batches * yields, definition: mead };
     });
     const stats = foods.reduce((result, food) => ({ health: result.health + (food.health || 0),
       stamina: result.stamina + (food.stamina || 0), eitr: result.eitr + (food.eitr || 0),
@@ -43,5 +44,59 @@
     stats.duration = foods.length ? Math.min(...foods.map(food => food.duration)) : 0;
     return { state, foods: foodLines, meads: meadLines, stats };
   }
-  globalThis.VPPlanner = { score, sanitize, calculate };
+  function definitions(data) {
+    const items = { ...data.items };
+    const stationName = id => data.stations.find(station => station.id === id)?.name || id;
+    for (const food of data.food) {
+      items[food.id] = { ...items[food.id], ...food, recipe: food.materials.length ? {
+        materials: food.materials, yields: food.yields || 1, station: stationName(food.station), stationLevel: food.stationLevel || 1,
+      } : null };
+    }
+    for (const mead of data.meads) {
+      if (!mead.base) { items[mead.id] = { ...mead, recipe: null }; continue; }
+      items[mead.id] = { ...mead, recipe: { station: stationName('fermenter'), stationLevel: 1,
+        yields: mead.yields || 1, materials: [{ item: mead.base.item, amount: 1 }] } };
+      items[mead.base.item] = { ...items[mead.base.item], id: mead.base.item, name: mead.base.name,
+        recipe: { station: stationName(mead.base.station), stationLevel: mead.base.stationLevel || 1, yields: 1, materials: mead.base.materials } };
+    }
+    return items;
+  }
+  function shopping(value, data) {
+    const plan = calculate(value, data);
+    const items = definitions(data);
+    const products = [...plan.foods, ...plan.meads].filter(line => line.produced > 0)
+      .map(line => ({ item: line.id, quantity: line.produced }));
+    const direct = VCShopping.sumMaterials(products, items);
+    const expanded = VCShopping.breakdown(direct, items, 20);
+    const all = VCShopping.breakdown(products.map(line => ({ item: line.item, amount: line.quantity })), items, 21);
+    const stations = new Map();
+    for (const step of all.steps) {
+      const station = data.stations.find(item => item.name === step.station || item.id === step.station);
+      const key = station?.id || step.station;
+      const level = items[step.product]?.recipe?.stationLevel || 1;
+      const current = stations.get(key);
+      stations.set(key, { id: key, name: station?.name || step.station, level: Math.max(current?.level || 0, level), definition: station });
+    }
+    const needed = stations.get('cauldron')?.level || 0;
+    const missing = data.stations.filter(station => station.upgrades === 'cauldron' && station.progressionLevel > plan.state.cauldronLevel && station.progressionLevel <= needed);
+    if (needed && plan.state.cauldronLevel === 0) missing.unshift(data.stations.find(station => station.id === 'cauldron'));
+    return { ...plan, items, materials: plan.state.breakdown ? expanded.materials : direct,
+      steps: [...all.steps].reverse(), stations: [...stations.values()], missing,
+      upgradeMaterials: VCShopping.sumMaterials(missing.map(station => ({ materials: station.materials, quantity: 1 })), items) };
+  }
+  function encode(value, data) {
+    const bytes = new TextEncoder().encode(JSON.stringify(sanitize(value, data)));
+    return btoa(String.fromCharCode(...bytes)).replaceAll('+', '-').replaceAll('/', '_').replace(/=+$/, '');
+  }
+  function decode(hash, data) {
+    try {
+      const encoded = new URLSearchParams(String(hash).replace(/^#/, '')).get('l');
+      if (!encoded || encoded.length > 10000 || !/^[A-Za-z0-9_-]+$/.test(encoded)) return null;
+      const raw = atob(encoded.replaceAll('-', '+').replaceAll('_', '/'));
+      const value = JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(Uint8Array.from(raw, char => char.charCodeAt(0))));
+      if (!value || value.version !== 1 || !Array.isArray(value.foods) || !Array.isArray(value.meads)) return null;
+      return sanitize(value, data);
+    } catch { return null; }
+  }
+  globalThis.VPPlanner = { score, sanitize, calculate, definitions, shopping, encode, decode };
 })();

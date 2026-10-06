@@ -8,7 +8,13 @@
   const number = value => new Intl.NumberFormat(VCI18n.locale(), { maximumFractionDigits: 2 }).format(value);
   const time = seconds => t('{minutes} min', { minutes: number(seconds / 60) });
   let focus = 'All';
-  let state = VPPlanner.sanitize(null, data);
+  function readStored() {
+    try { return JSON.parse(localStorage.getItem('vp.loadout')); } catch { return null; }
+  }
+  let state = VPPlanner.decode(location.hash, data) || VPPlanner.sanitize(readStored(), data);
+  function save() {
+    try { localStorage.setItem('vp.loadout', JSON.stringify(state)); } catch { /* Keep working when storage is unavailable. */ }
+  }
   const panel = document.getElementById('loadout-panel');
   const opener = document.getElementById('open-loadout');
   let noticeTimer;
@@ -106,9 +112,11 @@
     node.dataset.item = mead.id;
     node.append(heading(mead), el('p', 'effect', meadEffect(mead)),
       el('p', 'details', t('Duration: {time}', { time: time(mead.duration) })),
-      el('p', 'details', t('Cooldown: {time}', { time: time(mead.cooldown) })),
+      el('p', 'details', t('Cooldown: {time}', { time: time(mead.cooldown) })));
+    if (mead.base) node.append(
       el('p', 'details', name(byId(data.stations, 'fermenter')) + ' · ' + time(mead.fermenterTime)),
       el('p', 'details', name(mead.base) + ' · ' + stationText(mead.base.station, mead.base.stationLevel)));
+    else node.append(el('p', 'hint', t('No crafting recipe in the data.')));
     const selected = state.meads.some(line => line.id === mead.id);
     const add = button(t(selected ? 'Selected' : 'Add mead'), () => addMead(mead), 'add-item');
     add.disabled = selected || state.meads.length >= 4;
@@ -118,7 +126,8 @@
   function renderLoadout() {
     const content = document.getElementById('loadout-content');
     const activeId = content.contains(document.activeElement) ? document.activeElement.id : '';
-    const plan = VPPlanner.calculate(state, data);
+    save();
+    const plan = VPPlanner.shopping(state, data);
     content.replaceChildren();
     const foods = el('section', 'slots');
     foods.append(el('h3', 'section-title', t('Food')), el('p', 'hint', t('Choose up to three different foods.')));
@@ -178,8 +187,123 @@
     }
     stats.append(el('p', 'hint', t('Includes base player stats: 25 HP / 50 stamina.')));
     content.append(foods, meads, hours, stats);
+    renderShopping(content, plan);
     document.getElementById('mobile-summary').textContent = state.foods.length + ' / 3 · ' + plan.stats.health + ' HP';
     if (activeId) document.getElementById(activeId)?.focus({ preventScroll: true });
+  }
+  function materialName(plan, id) { return name(plan.items[id]) || id; }
+  function materialList(materials, plan) {
+    return VCShopping.formatList(materials.map(line => ({ ...line, name: materialName(plan, line.item) })), VCI18n.locale());
+  }
+  function sources(item) {
+    const container = el('div', 'sources');
+    const revealed = new Set(VCProgress.revealedBiomes(data.biomes));
+    for (const source of item?.sources || []) {
+      if (source.kind === 'creature' && source.creatureId) {
+        const visible = !(source.biomes?.length) || source.biomes.some(id => revealed.has(id));
+        if (!visible) {
+          const row = el('div', 'source-locked');
+          row.append(el('span', 'hint', t('Locked until you reach this biome.')), button(t('Reveal'), () => {
+            for (const id of source.biomes) VCProgress.visit(id, true);
+          }));
+          container.append(row);
+          continue;
+        }
+        const link = el('a', '', name({ name: source.text }) + (source.biomes?.length ? ' · ' + source.biomes.map(id => name(byId(data.biomes, id))).join(', ') : ''));
+        link.href = '/bestiary/#c=' + encodeURIComponent(source.creatureId);
+        container.append(link);
+      } else container.append(el('span', 'hint', source.text.replace(/^\*\s*/, '')));
+    }
+    if (!item?.sources?.length && item?.wiki) {
+      const link = el('a', '', 'Valheim Wiki'); link.href = item.wiki; container.append(link);
+    }
+    return container;
+  }
+  function shoppingText(plan) {
+    const lines = [t('Loadout'), ...[...plan.foods, ...plan.meads].map(line => t('{count} servings', { count: number(line.quantity) }) + ' · ' + name(line.definition)),
+      '', t('Hours of play') + ': ' + number(state.hours), '', t('Shopping list'), materialList(plan.materials, plan), '', t('Station steps')];
+    lines.push(...plan.steps.map(step => t('{amount}× {product} at {station}', { amount: number(step.amount), product: materialName(plan, step.product), station: step.station })));
+    lines.push('', t('Required stations'), ...plan.stations.map(station => t('{station} · level {level}', { station: name(station), level: number(station.level) })));
+    if (plan.missing.length) lines.push('', t('Missing upgrades'), ...plan.missing.map(name), materialList(plan.upgradeMaterials, plan));
+    return lines.join('\n');
+  }
+  async function copy(text, successKey, parent) {
+    parent.querySelector('.copy-fallback')?.remove();
+    try {
+      await navigator.clipboard.writeText(text);
+      notify(successKey);
+    } catch {
+      const fallback = el('div', 'copy-fallback');
+      const field = el('textarea'); field.value = text; field.readOnly = true;
+      field.setAttribute('aria-label', t('Copy list'));
+      fallback.append(el('p', 'hint', t('Copy failed. Select and copy the text below.')), field);
+      parent.append(fallback); field.focus(); field.select();
+    }
+  }
+  function renderShopping(content, plan) {
+    const shopping = el('section', 'shopping');
+    shopping.append(el('h3', 'section-title', t('Shopping list')));
+    const breakdownLabel = el('label', 'check-control');
+    const breakdown = el('input'); breakdown.type = 'checkbox'; breakdown.checked = state.breakdown;
+    breakdown.addEventListener('change', () => { state.breakdown = breakdown.checked; renderLoadout(); });
+    breakdownLabel.append(breakdown, el('span', '', t('Break down crafted materials')));
+    shopping.append(breakdownLabel);
+    if (!plan.materials.length) shopping.append(el('p', 'hint', t('Choose food or mead to build a shopping list.')));
+    for (const material of plan.materials) {
+      const row = el('div', 'material');
+      const item = plan.items[material.item];
+      row.append(el('strong', '', number(material.amount) + '× ' + materialName(plan, material.item)));
+      const sourceDetails = el('details');
+      sourceDetails.append(el('summary', '', t('Sources')), sources(item));
+      row.append(sourceDetails); shopping.append(row);
+    }
+    shopping.append(el('p', 'hint', t('Full crafting batches; feast servings are included.')));
+    if (plan.foods.length || plan.meads.length) {
+      const batches = el('ul', 'batch-list');
+      for (const line of [...plan.foods, ...plan.meads]) batches.append(el('li', '', name(line.definition) + ' · ' + t('{count} batches', { count: number(line.batches) })));
+      shopping.append(batches);
+    }
+    if (plan.steps.length) {
+      const steps = el('details', 'station-steps');
+      steps.append(el('summary', '', t('Station steps')));
+      const list = el('ol');
+      for (const step of plan.steps) list.append(el('li', '', t('{amount}× {product} at {station}', { amount: number(step.amount), product: materialName(plan, step.product), station: step.station })));
+      steps.append(list); shopping.append(steps);
+    }
+    if (plan.stations.length) {
+      const required = el('section', 'required-stations');
+      required.append(el('h3', 'section-title', t('Required stations')));
+      for (const station of plan.stations) {
+        const row = el('details', 'station');
+        row.append(el('summary', '', t('{station} · level {level}', { station: name(station), level: number(station.level) })));
+        if (station.definition?.materials) row.append(el('p', 'hint', materialList(station.definition.materials, plan)));
+        required.append(row);
+      }
+      if (plan.stations.some(station => station.id === 'cauldron')) {
+        const label = el('label', 'cauldron-control'); label.append(el('span', '', t('My Cauldron level')));
+        const level = el('select'); level.id = 'cauldron-level';
+        for (let value = 0; value <= 7; value++) { const option = el('option', '', number(value)); option.value = value; level.append(option); }
+        level.value = state.cauldronLevel;
+        level.addEventListener('change', () => { state.cauldronLevel = Number(level.value); renderLoadout(); });
+        label.append(level); required.append(label);
+        if (plan.missing.length) {
+          required.append(el('h4', '', t('Missing upgrades')));
+          const upgrades = el('ul');
+          for (const upgrade of plan.missing) upgrades.append(el('li', '', name(upgrade)));
+          required.append(upgrades, el('p', 'upgrade-materials', materialList(plan.upgradeMaterials, plan)), el('p', 'hint', t('Upgrade materials are separate from food ingredients.')));
+        } else required.append(el('p', 'hint', t('Recipe ready')));
+      }
+      shopping.append(required);
+    }
+    const actions = el('div', 'panel-actions');
+    const copyList = button(t('Copy list'), () => copy(shoppingText(plan), 'Copied!', shopping));
+    copyList.disabled = !plan.materials.length;
+    actions.append(copyList, button(t('Share loadout'), () => {
+      const url = new URL(location.href); url.hash = 'l=' + VPPlanner.encode(state, data);
+      history.replaceState(null, '', url);
+      copy(url.href, 'Link copied!', shopping);
+    }));
+    shopping.append(actions); content.append(shopping);
   }
   function renderCatalog() {
     const catalog = document.getElementById('catalog');
@@ -230,7 +354,16 @@
   VCI18n.mountPicker('#language-picker');
   document.getElementById('focus').addEventListener('change', event => { focus = event.target.value; renderCatalog(); });
   VCI18n.onChange(render);
-  VCProgress.onChange(renderCatalog);
+  VCProgress.onChange(update);
+  window.addEventListener('hashchange', () => {
+    const imported = VPPlanner.decode(location.hash, data);
+    if (imported) { state = imported; update(); }
+  });
+  window.addEventListener('storage', event => {
+    if (event.key === 'vp.loadout' || event.key === null) {
+      state = VPPlanner.sanitize(readStored(), data); update();
+    }
+  });
   function setDrawer(open) {
     panel.classList.toggle('open', open);
     opener.setAttribute('aria-expanded', String(open));

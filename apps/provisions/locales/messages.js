@@ -1259,5 +1259,20 @@ globalThis.VC_MESSAGES = {
     "ru": "Provisions — Valheim Companion",
     "ja": "Provisions — Valheim Companion",
     "id": "Provisions — Valheim Companion"
+  },
+  "No crafting recipe in the data.": {
+    "en": "No crafting recipe in the data.",
+    "cs": "V datech není výrobní recept.",
+    "de": "Kein Herstellungsrezept in den Daten.",
+    "es": "No hay receta de fabricación en los datos.",
+    "fr": "Aucune recette de fabrication dans les données.",
+    "pt": "Sem receita de fabricação nos dados.",
+    "zh": "数据中没有制作配方。",
+    "hi": "डेटा में कोई निर्माण नुस्खा नहीं है।",
+    "ar": "لا توجد وصفة تصنيع في البيانات.",
+    "bn": "তথ্যে তৈরির রেসিপি নেই।",
+    "ru": "В данных нет рецепта изготовления.",
+    "ja": "データに製作レシピがありません。",
+    "id": "Tidak ada resep pembuatan dalam data."
   }
 };
