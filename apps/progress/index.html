@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- meta:start -->
+  <title>Progress Tracker — Valheim Companion</title>
+  <!-- meta:end -->
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="../../shared/i18n/languages.js"></script>
+  <script src="../../shared/i18n/core.js"></script>
+  <script src="locales/messages.js"></script>
+  <script src="../../shared/progress/core.js"></script>
+  <script src="data/data.js"></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="page-header">
+      <div id="language-picker" class="language-picker"></div>
+      <nav class="hub-nav" aria-label="Navigation" data-i18n-attr="aria-label:Navigation">
+        <a href="../" data-i18n="← Valheim Companion">← Valheim Companion</a>
+      </nav>
+      <h1>Progress</h1>
+      <p class="subtitle" data-i18n="Your journey through Valheim, one discovery at a time.">Your journey through Valheim, one discovery at a time.</p>
+    </header>
+    <main>
+      <section class="summary" aria-label="Progress summary" data-i18n-attr="aria-label:Progress summary">
+        <p id="summary-text" aria-live="polite"></p>
+        <progress id="progress-meter" max="9" value="1" aria-label="Biomes revealed" data-i18n-attr="aria-label:Biomes revealed"></progress>
+        <div class="actions">
+          <button id="share" type="button" data-i18n="Share / transfer progress">Share / transfer progress</button>
+          <button id="reset" class="danger" type="button" data-i18n="Reset progress">Reset progress</button>
+        </div>
+        <p id="status" role="status"></p>
+      </section>
+      <div id="biomes" class="biomes"></div>
+    </main>
+    <footer class="page-footer">
+      <p><span data-i18n="Data:">Data:</span> <a href="https://valheim.weirdgloop.org" target="_blank" rel="noopener noreferrer">Valheim Wiki</a> · CC BY-SA 4.0</p>
+      <p data-i18n="Fan project, not affiliated with Iron Gate.">Fan project, not affiliated with Iron Gate.</p>
+      <div class="support">
+        <p><strong data-i18n="Free, ad-free and made in my spare time.">Free, ad-free and made in my spare time.</strong> <span data-i18n="If it helped your run, you can buy me a coffee.">If it helped your run, you can buy me a coffee.</span></p>
+        <a href="https://ko-fi.com/N2A528ACE3" target="_blank" rel="noopener noreferrer"><img src="/support/kofi.png" width="143" height="36" alt="Buy Me a Coffee at ko-fi.com" data-i18n-attr="alt:Buy Me a Coffee at ko-fi.com" loading="lazy"></a>
+      </div>
+    </footer>
+  </div>
+  <dialog id="action-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+    <form method="dialog">
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-description"></p>
+      <label id="share-url-label" hidden><span data-i18n="Progress URL">Progress URL</span><textarea id="share-url" readonly rows="4"></textarea></label>
+      <div class="actions">
+        <button value="cancel" data-i18n="Cancel">Cancel</button>
+        <button id="dialog-accept" value="accept"></button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>

@@ -96,3 +96,37 @@ test('Progress works when localStorage throws', () => {
   core.reset();
   assert.deepEqual(plain(core.get().defeated), {});
 });
+test('Generated checklist preserves bosses, minibosses and every non-trophy drop', () => {
+  const context = vm.createContext({ window: {} });
+  vm.runInContext(readFileSync(new URL('../apps/progress/data/data.js', import.meta.url), 'utf8'), context);
+  const data = plain(context.window.VP_DATA);
+  const creatures = JSON.parse(readFileSync(new URL('../data/creatures.json', import.meta.url), 'utf8'));
+  assert.equal(data.biomes.length, 9);
+  assert.deepEqual(data.biomes.map(value => value.id), biomes.map(value => value.id));
+  for (const biome of data.biomes) {
+    const original = biomes.find(value => value.id === biome.id);
+    assert.deepEqual(biome.bosses.map(value => value.id).sort(), [...original.creatures.boss].sort());
+    assert.deepEqual(biome.minibosses.map(value => value.id).sort(), [...original.creatures.miniboss].sort());
+    const expected = creatures.filter(value => original.creatures.boss.includes(value.id)).flatMap(value => value.drops.filter(drop => !/trophy/i.test(drop)));
+    assert.deepEqual(biome.milestones.map(value => value.drop).sort(), expected.sort());
+    for (const value of [...biome.bosses, ...biome.minibosses, ...biome.milestones]) {
+      if (value.image) assert.ok(readFileSync(new URL('../apps/progress/' + value.image, import.meta.url)).length);
+    }
+  }
+});
+test('All progress messages cover 13 locales and preserve placeholders', () => {
+  const catalog = JSON.parse(readFileSync(new URL('../apps/progress/locales/messages.json', import.meta.url), 'utf8'));
+  const languages = JSON.parse(readFileSync(new URL('../shared/i18n/languages.json', import.meta.url), 'utf8'));
+  const tokens = value => [...value.matchAll(/\{\w+\}/g)].map(match => match[0]).sort();
+  for (const [key, translations] of Object.entries(catalog)) {
+    for (const { code } of languages) {
+      assert.ok(translations[code]?.trim(), `${key}: missing ${code}`);
+      assert.deepEqual(tokens(translations[code]), tokens(key), `${key}: placeholders in ${code}`);
+    }
+  }
+  const html = readFileSync(new URL('../apps/progress/index.html', import.meta.url), 'utf8');
+  const app = readFileSync(new URL('../apps/progress/assets/app.js', import.meta.url), 'utf8');
+  const keys = [...html.matchAll(/data-i18n="([^"]+)"/g)].map(match => match[1]);
+  keys.push(...[...app.matchAll(/\bt\('([^']+)'/g)].map(match => match[1]));
+  for (const key of keys) assert.ok(catalog[key], `Missing message: ${key}`);
+});
