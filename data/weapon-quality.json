@@ -1637,6 +1637,16 @@
       72
     ]
   },
+  "charred-arrow": {
+    "pierce": [
+      82
+    ]
+  },
+  "charred-bolt": {
+    "pierce": [
+      82
+    ]
+  },
   "fire-arrow": {
     "pierce": [
       11
@@ -1656,16 +1666,6 @@
     ],
     "frost": [
       52
-    ]
-  },
-  "charred-arrow": {
-    "pierce": [
-      82
-    ]
-  },
-  "charred-bolt": {
-    "pierce": [
-      82
     ]
   },
   "iron-bolt": {
