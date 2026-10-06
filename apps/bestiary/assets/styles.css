@@ -1975,3 +1975,21 @@ body {
 .language-picker { display: flex; justify-content: flex-end; margin-bottom: .75rem; }
 .vc-language-picker { color: var(--text-primary, #eee); background: var(--bg-card, #20252b); border: 1px solid var(--border-color, #555); border-radius: 6px; padding: .4rem; max-width: 100%; }
 .spoilers-active { color: #f4b942; }
+
+/* Wiki extras keep food names and raid messages readable on narrow cards. */
+.trophy-val { align-items: flex-start; }
+.extra-note { margin-top: 4px; color: var(--text-secondary); }
+.taming-foods { display: flex; flex-wrap: wrap; gap: 6px 12px; }
+.taming-food { display: inline-flex; align-items: center; gap: 5px; }
+.raid-row { display: block; line-height: 1.5; }
+
+.creature-link { margin-inline-start: auto; color: var(--accent-gold); text-decoration: none; padding: 4px 8px; }
+.creature-link:hover { background: var(--bg-card); }
+.creature-linked { outline: 2px solid var(--accent-gold); outline-offset: 4px; scroll-margin-block: 24px; }
+.profile-share-result { margin-top: 12px; }
+.profile-link-input { display: block; width: 100%; min-width: 0; margin-top: 6px; padding: 8px; box-sizing: border-box; color: inherit; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 4px; }
+.link-dialog { width: min(520px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); overflow: auto; }
+.link-dialog-message { margin-block: 16px; line-height: 1.5; }
+.profile-preview { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 6px 16px; margin-block: 16px; }
+.profile-preview dt, .profile-preview dd { margin: 0; overflow-wrap: anywhere; }
+.profile-preview dd { text-align: end; }

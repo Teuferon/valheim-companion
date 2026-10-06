@@ -12,6 +12,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { MwApi, api } from './api.mjs';
+import { enrichCreatures } from './creature-extras.mjs';
 import {
   cleanText,
   findTemplateRange,
@@ -449,6 +450,10 @@ async function mainInner() {
 
   // 8. Output files ----------------------------------------------------------
   let creatures = built.map((item) => item.record).sort((a, b) => byCodepoint(a.name, b.name));
+  const extraPages = await api.getWikitext(['Trophies', 'Taming', 'Events']);
+  const unmatchedExtras = enrichCreatures(creatures, Object.fromEntries(
+    Object.entries(extraPages).map(([title, page]) => [title, page.wikitext]),
+  ));
 
   // Images no final record references (excluded creatures; stale files from
   // earlier runs, e.g. dropped star levels) are deleted from img/creatures/.
@@ -505,6 +510,13 @@ async function mainInner() {
   writeIfChanged(path.join(DATA_DIR, 'biomes.json'), `${JSON.stringify(biomeRecords, null, 2)}\n`);
   writeIfChanged(path.join(DATA_DIR, 'creatures.json'), `${JSON.stringify(creatures, null, 2)}\n`);
   writeIfChanged(path.join(DATA_DIR, 'report.md'), renderReport(report, biomeRecords, creatures));
+  writeIfChanged(path.join(DATA_DIR, 'report-creature-extras.md'), [
+    '# VC-24 creature extras report', '',
+    'Source: Valheim Wiki tables on Trophies, Taming and Events. Percentages, meters and minutes are kept as numbers; unknown values are null.', '',
+    'Trophy usage lists the specific uses in each table row; the shared decoration, Ballista and Obliterator uses are described on the source page.', '',
+    '## Unmatched creature links', '',
+    ...(unmatchedExtras.length ? unmatchedExtras.map(entry => `- ${entry}`) : ['(none)']), '',
+  ].join('\n'));
   console.log(`done: ${creatures.length} creatures, ${biomeRecords.length} biomes`);
 }
 

@@ -379,3 +379,42 @@ test('clean output has no wiki markup (end-to-end over samples)', () => {
     assert.ok(!/[[{']{2}/.test(attack.raw), `raw not clean: ${attack.raw}`);
   }
 });
+
+test('wiki tables preserve cells, headers, attributes, links and multiline content', async () => {
+  const { parseWikiTables } = await import('./wikitext.mjs');
+  const tables = parseWikiTables(`Outside
+{| class="wikitable"
+|+ Feeding
+! colspan="3" | Title
+|-
+! Creature !! Required Food !! Eating Range
+|-
+| style="text-align:center" | [[Wolf|Wolves]] || {{Item link|Boar Meat}}<br>[[Deer Meat]] || 1.4 meters
+|-
+| [[Lox]]
+| [[Barley]]
+continued text
+| data-sort-value="4" | 4 meters
+|-
+| [[Moose]] || || ? meters
+|}
+{| class="wikitable"
+! Key
+! Value
+|-
+| A || [[Target|Label]] and {{Template|x=a||b}}
+|}`);
+  assert.equal(tables.length, 2);
+  assert.equal(tables[0].caption, 'Feeding');
+  assert.deepEqual(tables[0].headers, ['Creature', 'Required Food', 'Eating Range']);
+  assert.equal(tables[0].rows.length, 3);
+  assert.equal(tables[0].rows[0][0], '[[Wolf|Wolves]]');
+  assert.equal(tables[0].rows[0][1], '{{Item link|Boar Meat}}<br>[[Deer Meat]]');
+  assert.equal(tables[0].rows[1][1], '[[Barley]]\ncontinued text');
+  assert.equal(tables[0].rows[1][2], '4 meters');
+  assert.equal(tables[0].rows[2][1], '');
+  assert.deepEqual(tables[1].headers, ['Key', 'Value']);
+  assert.equal(tables[1].rows[0][1], '[[Target|Label]] and {{Template|x=a||b}}');
+  assert.deepEqual(parseWikiTables(null), []);
+  assert.deepEqual(parseWikiTables('{|\n| unfinished'), []);
+});

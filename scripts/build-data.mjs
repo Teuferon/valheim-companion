@@ -141,6 +141,8 @@ export function buildDataBundle() {
     creatures,
     weapons,
     items: Object.fromEntries(JSON.parse(readFileSync(path.join(DATA_DIR, 'items.json'), 'utf8')).map(item => [item.id, item])),
+    // Material images come from Armourer's item records; the biome-only
+    // materials.json index has no stable ids or image paths.
     armor: JSON.parse(readFileSync(path.join(DATA_DIR, 'armor.json'), 'utf8')),
     attackProfiles,
     weaponQuality,

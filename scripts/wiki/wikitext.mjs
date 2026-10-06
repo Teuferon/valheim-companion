@@ -77,15 +77,62 @@ function splitTopLevel(text, separator = '|') {
       i += 1;
       continue;
     }
-    if (text[i] === separator && templateDepth === 0 && linkDepth === 0) {
+    if (text.startsWith(separator, i) && templateDepth === 0 && linkDepth === 0) {
       parts.push(current);
       current = '';
+      i += separator.length - 1;
       continue;
     }
     current += text[i];
   }
   parts.push(current);
   return parts;
+}
+
+// Wiki tables -> raw cells, with attributes removed and links/templates intact.
+// Header-only rows replace the column headers (including after a title row).
+export function parseWikiTables(wikitext) {
+  const tables = [];
+  const stack = [];
+  const finishRow = (table) => {
+    if (!table.cells.length) return;
+    const cells = table.cells.map(cell => {
+      const pipe = topLevelIndexOf(cell, '|');
+      return (pipe >= 0 && /^\s*[\w-]+\s*=/.test(cell)
+        ? cell.slice(pipe + 1) : cell).trim();
+    });
+    if (table.header) table.headers = cells;
+    else table.rows.push(cells);
+    table.cells = [];
+    table.header = false;
+  };
+  for (const line of String(wikitext ?? '').replace(/<!--[\s\S]*?-->/g, '').split(/\r?\n/)) {
+    const trimmed = line.trimStart();
+    if (trimmed.startsWith('{|')) {
+      const table = { headers: [], rows: [], caption: '', cells: [], header: false };
+      stack.push(table);
+      continue;
+    }
+    const table = stack.at(-1);
+    if (!table) continue;
+    if (trimmed.startsWith('|}')) {
+      finishRow(table);
+      stack.pop();
+      tables.push({ headers: table.headers, rows: table.rows, caption: table.caption });
+    } else if (trimmed.startsWith('|-')) {
+      finishRow(table);
+    } else if (trimmed.startsWith('|+')) {
+      table.caption = trimmed.slice(2).trim();
+    } else if (/^[!|]/.test(trimmed)) {
+      const header = trimmed[0] === '!';
+      if (table.cells.length && table.header !== header) finishRow(table);
+      table.header = header;
+      table.cells.push(...splitTopLevel(trimmed.slice(1), header ? '!!' : '||'));
+    } else if (table.cells.length) {
+      table.cells[table.cells.length - 1] += '\n' + line;
+    }
+  }
+  return tables;
 }
 
 // Index just past the closing '}}' of the template that opens at `start`
@@ -798,4 +845,3 @@ function splitRowIntoCells(rowText) {
   }
   return cells;
 }
-
