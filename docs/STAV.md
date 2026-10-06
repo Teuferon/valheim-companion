@@ -53,18 +53,20 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | **VC-31** | Armourer → **Smithy** (`/smithy/`, 301 ze `/armourer/`), Bare Fists pryč, mobil 360 px ve 13 jazycích | Sol | 🔄 běží (`../valheim-units-CS`) |
 | **VC-25** | Damage Calculator: sdílený profil hráče (`shared/player`), odkaz z Bestiary | — | ⏳ fronta 6 |
 | VC-26 | Sign Editor: 22 šablon, galerie, sdílení `#sign=` | Sol | ✅ |
-| **VC-27** | rozcestník: společné hledání napříč sekcemi + oprava deep linku v Bestiary | agy | 🔄 běží (`../valheim-units-GL`) | ⏳ fronta 8 |
+| VC-27 | rozcestník: hledání napříč sekcemi (jen anglické názvy, zamčené biomy skryté) + oprava deep linku | agy | ✅ |
 | **VC-19** | Progress Tracker: sdílený stav `vc.progress` + stránka `/progress/` | — | ⏳ fronta 9 |
 | **VC-20** | napojení Progress na Bestiary, Armourer, kalkulačku a rozcestník | — | ⏳ fronta 10 |
 | **VC-21** | Provisions data (jídla, medoviny, feasty, stanice) + sdílený košík `shared/shopping` | — | ⏳ fronta 11 |
 | **VC-22** | stránka Provisions `/provisions/` | — | ⏳ fronta 12 |
 
 ### Po frontě
-Pracovníci od 6. 10.: agy do vyčerpání, pak **Codex Sol**. Pavel 6. 10. schválil pořadí: překlady (VC-16 až VC-18), **vylepšení stávajících nástrojů** (VC-23 až VC-27), potom **Progress Tracker** a **Provisions** (VC-19 až VC-22). Další kandidáti z [`NAVRHY-NASTROJU.md`](NAVRHY-NASTROJU.md): Comfort Planner, Expedition, Trader Ledger, Fishing, Taming. Zatím nejsou schválené.
+Pracovníci od 6. 10.: agy je vyčerpaný (týden 4 %, obnova 8. 10.), práci dělá **Codex Sol**. Pavel 6. 10. schválil pořadí: překlady (VC-16 až VC-18), **vylepšení stávajících nástrojů** (VC-23 až VC-27), potom **Progress Tracker** a **Provisions** (VC-19 až VC-22). Další kandidáti z [`NAVRHY-NASTROJU.md`](NAVRHY-NASTROJU.md): Comfort Planner, Expedition, Trader Ledger, Fishing, Taming. Zatím nejsou schválené.
 
 **Zásada:** každý nový nástroj a funkce je od začátku ve 13 jazycích (ANALYZA § 15 a zásada před § 16).
 
 ## Známé drobnosti (neřešené)
+
+- Index hledání (`scripts/build-search-index.mjs`) má po VC-31 vést na `/smithy/` místo `/armourer/` (zatím funguje přes 301). Opraví orchestrátor při merge VC-31.
 
 - Čeština: chybí množná čísla („1 hráčů“). Řešit plural pravidly v `shared/i18n` (`Intl.PluralRules`) při další i18n úloze.
 
