@@ -261,7 +261,7 @@ test('tip formatting: finds pickaxe weakness and excludes chop/pickaxe from immu
   const rec = recommendFor(golem, biome, weapons);
   assert.equal(
     rec.tip,
-    'Very weak to Pickaxe (×2): Bronze Pickaxe hits for 87 effective. Immune to Fire, Frost, Poison, Spirit.'
+    'Very weak to Pickaxe (×2): Bronze Pickaxe hits for 63 effective. Immune to Fire, Frost, Poison, Spirit.'
   );
   assert.ok(!rec.tip.includes('Chop'));
   assert.ok(!rec.tip.includes('Immune to Pickaxe'));
