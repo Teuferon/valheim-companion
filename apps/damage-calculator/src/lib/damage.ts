@@ -110,10 +110,17 @@ export function damageAtQuality(
 export function damageTypesFor(weapon: Weapon, ammo?: Ammo | null): DamageType[] {
   const present = new Set<DamageType>();
   for (const type of COMBAT_DAMAGE_TYPES) {
-    const total =
-      damageAtQuality(weapon.damage, type, 1) +
-      (ammo ? damageAtQuality(ammo.damage, type, 1) : 0);
-    if (total > 0) present.add(type);
+    let hasDamage = false;
+    for (let q = 1; q <= MAX_QUALITY; q++) {
+      if (
+        damageAtQuality(weapon.damage, type, q) > 0 ||
+        (ammo && damageAtQuality(ammo.damage, type, q) > 0)
+      ) {
+        hasDamage = true;
+        break;
+      }
+    }
+    if (hasDamage) present.add(type);
   }
   return COMBAT_DAMAGE_TYPES.filter((t) => present.has(t));
 }

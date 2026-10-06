@@ -192,7 +192,7 @@ test('tie-breaking: prefers lower tier, then alphabetical name on score tie', ()
     { id: 'spear-t1-a', name: 'Spear A', category: 'spear', tier: 1, damageMax: { pierce: 30 } },
   ];
 
-  const rec = recommendFor(creature, biome, weapons);
+  const rec = recommendFor(creature, biome, weapons, { ...DEFAULT_PLAYER, rankBy: 'hit' });
   // Tier 1 weapons win over Tier 4 on equal score 30
   assert.equal(rec.melee[0].weapon, 'club-t1');
   assert.equal(rec.melee[1].weapon, 'spear-t1-a');

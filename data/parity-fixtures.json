@@ -3342,11 +3342,11 @@
       "attack": "primary",
       "backstab": false
     },
-    "perHit": 53.2,
-    "openingPerHit": 53.2,
+    "perHit": 59.2,
+    "openingPerHit": 59.2,
     "cycleSeconds": 2.46,
-    "dps": 86.50406504065042,
-    "timeToKill": 1.1560150375939848
+    "dps": 96.26016260162602,
+    "timeToKill": 1.0388513513513513
   },
   {
     "inputs": {
@@ -3359,11 +3359,11 @@
       "attack": "primary",
       "backstab": true
     },
-    "perHit": 53.20000000000001,
-    "openingPerHit": 159.60000000000002,
+    "perHit": 59.20000000000001,
+    "openingPerHit": 177.60000000000002,
     "cycleSeconds": 2.46,
-    "dps": 129.75609756097563,
-    "timeToKill": 0.7706766917293232
+    "dps": 144.39024390243904,
+    "timeToKill": 0.6925675675675675
   },
   {
     "inputs": {
@@ -3376,11 +3376,11 @@
       "attack": "secondary",
       "backstab": false
     },
-    "perHit": 159.60000000000002,
-    "openingPerHit": 159.60000000000002,
+    "perHit": 177.60000000000002,
+    "openingPerHit": 177.60000000000002,
     "cycleSeconds": 1.84,
-    "dps": 86.73913043478262,
-    "timeToKill": 1.1528822055137842
+    "dps": 96.5217391304348,
+    "timeToKill": 1.036036036036036
   },
   {
     "inputs": {
@@ -3393,11 +3393,11 @@
       "attack": "secondary",
       "backstab": true
     },
-    "perHit": 159.6,
-    "openingPerHit": 478.8,
+    "perHit": 177.6,
+    "openingPerHit": 532.8,
     "cycleSeconds": 1.84,
-    "dps": 260.2173913043478,
-    "timeToKill": 0.38429406850459485
+    "dps": 289.5652173913043,
+    "timeToKill": 0.3453453453453454
   },
   {
     "inputs": {
@@ -3478,11 +3478,11 @@
       "attack": "primary",
       "backstab": false
     },
-    "perHit": 93.10000000000001,
-    "openingPerHit": 93.10000000000001,
+    "perHit": 103.60000000000001,
+    "openingPerHit": 103.60000000000001,
     "cycleSeconds": 2.46,
-    "dps": 151.38211382113823,
-    "timeToKill": 0.660580021482277
+    "dps": 168.45528455284554,
+    "timeToKill": 0.5936293436293436
   },
   {
     "inputs": {
@@ -3495,11 +3495,11 @@
       "attack": "primary",
       "backstab": true
     },
-    "perHit": 93.10000000000002,
-    "openingPerHit": 279.30000000000007,
+    "perHit": 103.60000000000002,
+    "openingPerHit": 310.80000000000007,
     "cycleSeconds": 2.46,
-    "dps": 227.07317073170736,
-    "timeToKill": 0.4403866809881847
+    "dps": 252.68292682926835,
+    "timeToKill": 0.3957528957528957
   },
   {
     "inputs": {
@@ -3512,11 +3512,11 @@
       "attack": "secondary",
       "backstab": false
     },
-    "perHit": 279.30000000000007,
-    "openingPerHit": 279.30000000000007,
+    "perHit": 310.80000000000007,
+    "openingPerHit": 310.80000000000007,
     "cycleSeconds": 1.84,
-    "dps": 151.7934782608696,
-    "timeToKill": 0.6587898317221624
+    "dps": 168.9130434782609,
+    "timeToKill": 0.5920205920205919
   },
   {
     "inputs": {
@@ -3529,11 +3529,11 @@
       "attack": "secondary",
       "backstab": true
     },
-    "perHit": 279.3,
-    "openingPerHit": 837.9000000000001,
+    "perHit": 310.8,
+    "openingPerHit": 932.4000000000001,
     "cycleSeconds": 1.84,
-    "dps": 455.38043478260875,
-    "timeToKill": 0.21959661057405416
+    "dps": 506.7391304347826,
+    "timeToKill": 0.19734019734019734
   },
   {
     "inputs": {
@@ -3614,11 +3614,11 @@
       "attack": "primary",
       "backstab": false
     },
-    "perHit": 123.025,
-    "openingPerHit": 123.025,
+    "perHit": 136.9,
+    "openingPerHit": 136.9,
     "cycleSeconds": 2.46,
-    "dps": 200.04065040650408,
-    "timeToKill": 0.49989839463523666
+    "dps": 222.60162601626018,
+    "timeToKill": 0.4492330168005843
   },
   {
     "inputs": {
@@ -3631,11 +3631,11 @@
       "attack": "primary",
       "backstab": true
     },
-    "perHit": 123.02500000000002,
-    "openingPerHit": 369.07500000000005,
+    "perHit": 136.9,
+    "openingPerHit": 410.70000000000005,
     "cycleSeconds": 2.46,
-    "dps": 300.06097560975616,
-    "timeToKill": 0.3332655964234911
+    "dps": 333.9024390243903,
+    "timeToKill": 0.29948867786705624
   },
   {
     "inputs": {
@@ -3648,11 +3648,11 @@
       "attack": "secondary",
       "backstab": false
     },
-    "perHit": 369.07500000000005,
-    "openingPerHit": 369.07500000000005,
+    "perHit": 410.70000000000005,
+    "openingPerHit": 410.70000000000005,
     "cycleSeconds": 1.84,
-    "dps": 200.5842391304348,
-    "timeToKill": 0.4985436564383932
+    "dps": 223.20652173913044,
+    "timeToKill": 0.44801558315071827
   },
   {
     "inputs": {
@@ -3665,11 +3665,11 @@
       "attack": "secondary",
       "backstab": true
     },
-    "perHit": 369.075,
-    "openingPerHit": 1107.225,
+    "perHit": 410.7,
+    "openingPerHit": 1232.1,
     "cycleSeconds": 1.84,
-    "dps": 601.7527173913043,
-    "timeToKill": 0.1661812188127978
+    "dps": 669.6195652173913,
+    "timeToKill": 0.14933852771690612
   },
   {
     "inputs": {
