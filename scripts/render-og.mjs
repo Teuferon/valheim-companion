@@ -96,27 +96,32 @@ export function renderOgImages() {
   }
 
   // 2. Render icons
+  // Headless Chrome cannot shrink its window below ~500 px, so only the 512 px
+  // icon is rendered; smaller sizes are downscaled from it with macOS `sips`.
   const iconTargets = [
+    { name: 'icon-512.png', size: 512 },
     { name: 'apple-touch-icon.png', size: 180 },
     { name: 'icon-192.png', size: 192 },
-    { name: 'icon-512.png', size: 512 },
   ];
+  const largestIcon = path.join(ICONS_DIR, 'icon-512.png');
 
   for (const target of iconTargets) {
     const outPath = path.join(ICONS_DIR, target.name);
     const targetUrl = pathToFileURL(ICON_HTML).href;
-    const args = [
-      '--headless=new',
-      '--disable-gpu',
-      '--hide-scrollbars',
-      '--allow-file-access-from-files',
-      `--window-size=${target.size},${target.size}`,
-      `--screenshot=${outPath}`,
-      targetUrl,
-    ];
+    const [command, args] = target.size < 512
+      ? ['sips', ['-z', String(target.size), String(target.size), largestIcon, '--out', outPath]]
+      : [CHROME_PATH, [
+        '--headless=new',
+        '--disable-gpu',
+        '--hide-scrollbars',
+        '--allow-file-access-from-files',
+        `--window-size=${target.size},${target.size}`,
+        `--screenshot=${outPath}`,
+        targetUrl,
+      ]];
 
     try {
-      execFileSync(CHROME_PATH, args, { stdio: 'pipe' });
+      execFileSync(command, args, { stdio: 'pipe' });
     } catch (err) {
       console.error(`Failed to render icon ${target.name}:`, err);
       process.exit(1);
