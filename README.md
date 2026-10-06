@@ -69,6 +69,17 @@ npm run data              # weapons, recommendations, apps/bestiary/data/data.js
 
 Manual fixes go in `data/overrides.json`.
 
+## Sharing Metadata
+
+Open Graph preview cards, Twitter cards, PWA icons and web manifests are configured across all sections.
+
+- **Change domain or site URL**:
+  1. Update `siteUrl` in `site.config.json` (without a trailing slash).
+  2. Run `node scripts/apply-meta.mjs` to update all `index.html` meta tags.
+  3. Commit the changes.
+- **Regenerate preview cards and icons**:
+  Run `node scripts/render-og.mjs` (renders 1200×630 cards and icons with headless Chrome).
+
 ## Docs
 
 - `docs/ANALYZA.md`: analysis, sources, recommendation algorithm
