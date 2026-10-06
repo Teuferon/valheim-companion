@@ -62,7 +62,7 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | VC-32 | Progress jako vysouvací panel na každé stránce („⛓ Progress N/9“), nástroje reagují hned | Sol | ✅ |
 | VC-22 | stránka Provisions `/provisions/`: loadout, porce na hodiny hraní, nákupní seznam | Sol | ✅ |
 | **VC-33** | množná čísla ve všech jazycích (`tn` + `Intl.PluralRules`) | Sol | 🔄 běží (`../valheim-units-CS`) |
-| **VC-34** | Provisions: nejlepší kombinace podle činnosti, medoviny podle biomu/bosse, tipy | Sol | 🔄 běží (`../valheim-units-GL`) |
+| VC-34 | Provisions: plánovač podle činnosti (top 3 kombinace, medoviny podle biomu/bosse, 13 ověřených tipů) | Sol | ✅ |
 
 ### Po frontě
 Pracovníci od 6. 10.: agy je vyčerpaný (týden 4 %, obnova 8. 10.), práci dělá **Codex Sol**. Pavel 6. 10. schválil pořadí: překlady (VC-16 až VC-18), **vylepšení stávajících nástrojů** (VC-23 až VC-27), potom **Progress Tracker** a **Provisions** (VC-19 až VC-22). Další kandidáti z [`NAVRHY-NASTROJU.md`](NAVRHY-NASTROJU.md): Comfort Planner, Expedition, Trader Ledger, Fishing, Taming. Zatím nejsou schválené.
