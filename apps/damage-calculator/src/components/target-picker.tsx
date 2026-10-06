@@ -177,7 +177,7 @@ export function TargetPicker({
             </span>
                     <span className="inline-flex items-center gap-0.5">
                       <MapPin className="size-3" />
-                      {t(BIOME_NAME[target.biome])}
+                      {BIOME_NAME[target.biome]}
                     </span>
                     <span>{t(KIND_LABEL[target.kind])}
             </span>

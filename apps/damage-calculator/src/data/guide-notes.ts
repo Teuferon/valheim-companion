@@ -9,51 +9,63 @@
  */
 
 import type { BiomeId } from "./biomes";
+import { gameText, type GameText } from "../lib/game-text";
 
-export const GUIDE_NOTES: Record<BiomeId, string[]> = {
+export const GUIDE_NOTES: Record<BiomeId, GameText[]> = {
   meadows: [
-    "Build the Workbench, then craft flint weapons: flint is free along the shoreline and repairs without metal.",
-    "Hunt deer for hides, and keep two deer trophies for the Eikthyr offering.",
-    "Fire arrows are the earliest fire damage you can craft — a stack makes any early fight shorter.",
+    gameText("Build {stations}.", { stations: "Workbench" }),
+    gameText("Find {items} along the shoreline; repairs need no metal.", { items: "Flint" }),
+    gameText("Hunt {creature} for {items}.", { creature: "Deer", items: "Deer Hide" }),
+    gameText("Keep {items} to summon {boss}.", { items: "2× Deer Trophy", boss: "Eikthyr" }),
+    gameText("Craft {item} for early {type} damage.", { item: "Fire Arrow", type: "Fire" }),
   ],
   "black-forest": [
-    "Build the Forge, a Smelter and a Charcoal Kiln; bronze takes 2 copper + 1 tin per bar.",
-    "Finewood comes from birch and oak — it unlocks the first bow and the first boats.",
-    "Clear Burial Chambers for Surtling Cores; the Smelter and portals both need them.",
+    gameText("Build {stations}.", { stations: "Forge, Smelter, Charcoal Kiln" }),
+    gameText("Craft {item} with {materials}.", { item: "Bronze", materials: "2× Copper + 1× Tin" }),
+    gameText("Find {items} in {sources}.", { items: "Finewood", sources: "Birch, Oak" }),
+    gameText("{material} unlocks the first bows and boats.", { material: "Finewood" }),
+    gameText("Find {items} in {sources}.", { items: "Surtling Core", sources: "Burial Chambers" }),
+    gameText("{items} are needed for {structures}.", { items: "Surtling Core", structures: "Smelter, Portal" }),
   ],
   ocean: [
-    "No Forsaken here — the barrier is a seaworthy boat: a Karve needs Finewood and Bronze Nails.",
-    "Leviathans surface as floating islands; chitin from their backs makes the abyssal knife.",
-    "There is nothing to conquer offshore, only gear worth having before the next shore.",
+    gameText("Craft {item} with {materials}.", { item: "Karve", materials: "Finewood, Bronze Nails" }),
+    gameText("Find {items} in {sources}.", { items: "Chitin", sources: "Leviathan" }),
+    gameText("Craft {item} with {materials}.", { item: "Abyssal Razor", materials: "Chitin" }),
   ],
   swamp: [
-    "Iron comes from Sunken Crypts — bring the Swamp Key from The Elder to open them.",
-    "Bonemass is weak to blunt and frost: an upgraded iron mace is the classic answer.",
-    "Blobs, oozers and leeches all poison; keep poison resistance to hand.",
+    gameText("Find {items} in {sources}.", { items: "Iron", sources: "Sunken Crypts" }),
+    gameText("Open {location} with {item} from {boss}.", { location: "Sunken Crypts", item: "Swamp Key", boss: "The Elder" }),
+    gameText("{target} is weak to {types}. Use {weapons}.", { target: "Bonemass", types: "Blunt, Frost", weapons: "Iron Mace" }),
+    gameText("{creatures} deal {type} damage; keep resistance ready.", { creatures: "Blob, Oozer, Leech", type: "Poison" }),
   ],
   mountain: [
-    "Silver hides under the ground and only the Wishbone pings it — sweep the slopes with it equipped.",
-    "Moder is immune to frost, so frost arrows and Frostner lose their bite for that fight.",
-    "Wolf pelts and fangs are the local bottleneck; freeze glands make frost resistance mead for the nights.",
+    gameText("Find underground {item} with {tool}.", { item: "Silver", tool: "Wishbone" }),
+    gameText("{target} is immune to {types}. Avoid {weapons}.", { target: "Moder", types: "Frost", weapons: "Frost Arrow, Frostner" }),
+    gameText("Stockpile {items}.", { items: "Wolf Pelt, Wolf Fang" }),
+    gameText("Craft {item} with {materials}.", { item: "Frost Resistance Mead", materials: "Freeze Gland" }),
   ],
   plains: [
-    "Yagluth resists pierce and fire: black metal swords and blunt weapons are the safe picks.",
-    "Flax and barley only grow here — plant flax for the linen thread every black metal recipe wants.",
-    "Fuling camps supply black metal scrap and the deathsquito needles Porcupine needs.",
+    gameText("{target} resists {types}. Use {weapons}.", { target: "Yagluth", types: "Pierce, Fire", weapons: "Black Metal Sword, Blunt" }),
+    gameText("Resources: {items}.", { items: "Flax, Barley" }),
+    gameText("{items} only grow here; plant them for {material}.", { items: "Flax", material: "Linen Thread" }),
+    gameText("Find {items} in {sources}.", { items: "Black Metal Scrap", sources: "Fuling" }),
+    gameText("Craft {item} with {materials}.", { item: "Porcupine", materials: "Needle (Deathsquito)" }),
   ],
   mistlands: [
-    "Carapace weapons need the Black Forge; staves need the Galdr Table and refined eitr.",
-    "The Queen resists pierce and is immune to spirit — slash and blunt carry the fight.",
-    "Keep wisps coming: they light the mist and feed every eitr recipe.",
+    gameText("Craft weapons at {station} using {materials}.", { materials: "Carapace", station: "Black Forge" }),
+    gameText("Craft weapons at {station} using {materials}.", { materials: "Refined Eitr", station: "Galdr Table" }),
+    gameText("Stockpile {items}.", { items: "Refined Eitr, Wisp" }),
+    gameText("{target} is immune to {immune} and resists {resistant}. Use {weapons}.", { target: "The Queen", immune: "Spirit", resistant: "Pierce", weapons: "Slash, Blunt" }),
   ],
   ashlands: [
-    "Fader is immune to fire and resists pierce; flametal blades and blunt weapons do the work.",
-    "Flametal ore falls as meteors and needs the Black Forge to work.",
-    "Charred bone, asksvin hide and bloodstone are the local bottlenecks — stockpile them.",
+    gameText("{target} is immune to {immune} and resists {resistant}. Use {weapons}.", { target: "Fader", immune: "Fire", resistant: "Pierce", weapons: "Flametal, Blunt" }),
+    gameText("Find {items} in falling meteors; process them at {station}.", { items: "Flametal Ore", station: "Black Forge" }),
+    gameText("Stockpile {items}.", { items: "Charred Bone, Asksvin Hide, Bloodstone" }),
   ],
   "deep-north": [
-    "Build the Frost Foundry: bloodgold and frostcore are the gate to every weapon here.",
-    "The final boss resists pierce, fire, frost and lightning — slash, blunt and the bloodgold blades are the safe picks.",
-    "Bloodgold and frostfire weapons are re-forged from Nord weapons; keep one of each type you use.",
+    gameText("Build {stations}.", { stations: "Frost Foundry" }),
+    gameText("Stockpile {items}.", { items: "Bloodgold, Frostcore" }),
+    gameText("{target} resists {types}. Use {weapons}.", { target: "Kall Fimbulbringer", types: "Pierce, Fire, Frost, Lightning", weapons: "Slash, Blunt, Bloodgold" }),
+    gameText("Re-forge {items} from {weapons}; keep one of each type you use.", { items: "Bloodgold, Frostfire", weapons: "Nord" }),
   ],
 };

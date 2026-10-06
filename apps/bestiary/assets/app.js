@@ -3,7 +3,8 @@
 (function () {
   const t = (source, values) => VCI18n.t(VC_MESSAGES, source, values);
   const entityName = entity => VCI18n.name(entity);
-  const biomeName = biome => biome.names?.[VCI18n.locale()] ? entityName(biome) : t(biome.name);
+  const biomeName = biome => entityName(biome);
+  const normalizeSearch = value => value.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
   const gameName = name => {
     const data = window.VC_DATA;
     const entity = [...Object.values(data?.items || {}), ...Object.values(data?.weapons || {}),
@@ -20,7 +21,7 @@
       : ['+' + Math.round(bonuses.amount * 100) + ' % ' + bonuses.types.map(capitalize).join('/')];
     return (armor ? entityName(armor) : SET_LABELS[id].split(' (')[0]) + ' (' + terms.join(', ') + ')';
   }
-  const noteText = note => String(note).replace(/Blunt|Slash|Pierce|Chop|Pickaxe|Fire|Frost|Lightning|Poison|Spirit|Sneak|Stagger/g, word => t(word));
+  const noteText = note => String(note).replace(/Sneak|Stagger/g, word => t(word));
   let modalWeapon = null;
 
   /**
@@ -970,7 +971,7 @@
   function createCreatureCard(creature, biome, data) {
     const card = el('article', 'creature-card');
     card.dataset.creatureId = creature.id;
-    card.dataset.creatureName = (creature.name + ' ' + entityName(creature)).toLowerCase();
+    card.dataset.creatureName = normalizeSearch(creature.name);
     card.dataset.creatureKind = creature.kind;
 
     const starsList = (creature.stars && creature.stars.length > 0)
@@ -1535,7 +1536,7 @@
   function createFishTile(creature, biome, data) {
     const wrapper = el('div', 'fish-wrapper');
     wrapper.dataset.creatureId = creature.id;
-    wrapper.dataset.creatureName = (creature.name + ' ' + entityName(creature)).toLowerCase();
+    wrapper.dataset.creatureName = normalizeSearch(creature.name);
     wrapper.dataset.creatureKind = 'fish';
 
     const tile = el('div', 'fish-tile');
@@ -1955,7 +1956,7 @@
    */
   function applyFiltersToAllOpenBiomes() {
     const searchInput = document.getElementById('creature-search');
-    const searchQuery = searchInput ? searchInput.value.trim().toLowerCase() : '';
+    const searchQuery = searchInput ? normalizeSearch(searchInput.value.trim()) : '';
 
     const activeFilterBtn = document.querySelector('.filter-btn.active');
     const kindFilter = activeFilterBtn ? activeFilterBtn.dataset.kind : 'all';
@@ -2399,7 +2400,7 @@
         // Filters
         if (!matchesCategory(w, selectedCategory)) continue;
         if (selectedDamageType && !matchesDamageType(w, selectedDamageType)) continue;
-        if (searchQuery && !(w.name + ' ' + entityName(w)).toLowerCase().includes(searchQuery)) continue;
+        if (searchQuery && !normalizeSearch(w.name).includes(searchQuery)) continue;
 
         const weaponStats = computeWeaponStats(w, data, playerState);
         visible.push({
@@ -2514,7 +2515,7 @@
 
     // Input listeners
     searchInput.addEventListener('input', () => {
-      searchQuery = searchInput.value.trim().toLowerCase();
+      searchQuery = normalizeSearch(searchInput.value.trim());
       renderTableBody();
     });
 
@@ -2820,7 +2821,7 @@
           contentWrapper.classList.add('open');
           // Apply current search / kind filter to newly opened biome
           const searchInput = document.getElementById('creature-search');
-          const searchQuery = searchInput ? searchInput.value.trim().toLowerCase() : '';
+          const searchQuery = searchInput ? normalizeSearch(searchInput.value.trim()) : '';
           const activeFilterBtn = document.querySelector('.filter-btn.active');
           const kindFilter = activeFilterBtn ? activeFilterBtn.dataset.kind : 'all';
           applyFiltersToBiome(card, searchQuery, kindFilter);
