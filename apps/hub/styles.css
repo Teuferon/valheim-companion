@@ -62,6 +62,43 @@ body {
   margin-bottom: 48px;
 }
 
+.hub-top-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+
+[dir="rtl"] .hub-top-bar {
+  justify-content: flex-start;
+}
+
+.vc-language-picker {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vc-language-picker:hover {
+  border-color: var(--border-focus);
+}
+
+.vc-language-picker:focus-visible {
+  border-color: var(--border-focus);
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+[dir="rtl"] .card-cta {
+  flex-direction: row-reverse;
+}
+
 .hub-title {
   font-family: var(--font-serif);
   font-size: 3rem;
