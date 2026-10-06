@@ -7,6 +7,7 @@ import {
   useSyncExternalStore,
 } from "react";
 import { Hammer, SlidersHorizontal } from "lucide-react";
+import { languages, useLanguage } from '@/hooks/use-language';
 import { MethodologyDialog, MethodologyLink } from "@/components/assumptions";
 import { BiomeSlider, useBiomeProgression } from "@/components/biome-slider";
 import { ProgressionGuide } from "@/components/progression-guide";
@@ -31,7 +32,7 @@ import { hasSecondaryAttack, type AttackKind } from "@/data/attack-profiles";
 import type { WeaponClass } from "@/data/weapon-class";
 import { arrows, bolts, CLASS_LABELS, recipes, targets, weapons } from "@/lib/data";
 import { BIOMES, BIOME_NAME, type BiomeId } from "@/data/biomes";
-import { calculate, formatCount, type SkillMode } from "@/lib/damage";
+import { calculate, type SkillMode } from "@/lib/damage";
 import {
   itemBiomeLookup,
   maxQualityAt,
@@ -65,6 +66,7 @@ const DEFAULT_TARGET_SLUG =
   targets.find((t) => t.slug === "bonemass")?.slug ?? targets[0].slug;
 
 export default function Home() {
+  const { preference, setPreference, t, formatCount, nameOf } = useLanguage();
   const [storedBiome, persistBiome] = useBiomeProgression();
 
   /* The view carried by the query string, read as an external store so the
@@ -254,7 +256,7 @@ export default function Home() {
   const selectedQuality = qualityFor(selectedWeapon);
   const qualityNote =
     selectedQuality < quality
-      ? `Upgrade level ${quality} needs materials from a later biome, so ${BIOME_NAME[biome]}-reachable level ${selectedQuality} is shown instead.`
+      ? t("Upgrade level {requested} needs later materials; showing level {shown}, reachable in {biome}.", { requested: formatCount(quality), shown: formatCount(selectedQuality), biome: t(BIOME_NAME[biome]) })
       : undefined;
 
   /* --- shareable URL --------------------------------------------------- *
@@ -332,6 +334,8 @@ export default function Home() {
     [topRow, maxPerHit],
   );
 
+  const biomeBoss = targets.find(target => target.slug === BIOMES.find(entry => entry.id === biome)?.boss);
+
   return (
     <main className="mx-auto w-full max-w-[1550px] space-y-6 px-4 py-8 sm:px-6">
       <header className="space-y-3">
@@ -348,37 +352,43 @@ export default function Home() {
           </div>
           <div>
             <h1 className="font-heading text-3xl font-bold tracking-wide sm:text-4xl">
-              Valheim Damage Calculator
+              {t("Valheim Damage Calculator")}
             </h1>
             <p className="text-sm text-muted-foreground">
-              Pick a target, pick a weapon, set the upgrade level and see the
-              damage that actually lands — resistances applied.
+              {t("Pick a target, pick a weapon, set the upgrade level and see the damage that actually lands — resistances applied.")}
             </p>
           </div>
         </div>
         <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
           <Badge variant="secondary" className="font-normal">
-            {weapons.length} weapons
-          </Badge>
+            {t("{count} weapons", { count: formatCount(weapons.length) })}
+            </Badge>
           <Badge variant="secondary" className="font-normal">
-            {targets.length} targets
-          </Badge>
+            {t("{count} targets", { count: formatCount(targets.length) })}
+            </Badge>
           <Badge variant="outline" className="font-normal">
-            Data from the Valheim wiki
-          </Badge>
+            {t("Data from the Valheim wiki")}
+            </Badge>
           <MethodologyDialog className="ml-auto" />
           <ShareViewButton view={view} />
+          <select
+            aria-label={t('Language')}
+            value={preference}
+            onChange={(event) => setPreference(event.target.value)}
+            className="max-w-full rounded-md border bg-background px-2 py-1.5 text-xs text-foreground"
+          >
+            <option value="auto">{t('Auto (browser)')}</option>
+            {languages.map((language) => (
+              <option key={language.code} value={language.code}>{language.name}</option>
+            ))}
+          </select>
         </div>
       </header>
 
       <BiomeSlider
         value={biome}
         onChange={applyBiome}
-        bossName={
-          targets.find(
-            (t) => t.slug === BIOMES.find((entry) => entry.id === biome)?.boss,
-          )?.name
-        }
+        bossName={biomeBoss ? nameOf(biomeBoss) : undefined}
         visibleWeapons={reachableWeapons.length}
         totalWeapons={weapons.length}
         visibleTargets={reachableTargets.length}
@@ -405,10 +415,10 @@ export default function Home() {
             <div className="flex items-center justify-between">
               <Label className="flex items-center gap-1.5 text-[11px] tracking-wide text-muted-foreground uppercase">
                 <SlidersHorizontal className="size-3" />
-                Weapon skill level
-              </Label>
+                {t("Weapon skill level")}
+            </Label>
               <span className="text-sm font-semibold tabular-nums">
-                {skillLevel}
+                {formatCount(skillLevel)}
               </span>
             </div>
             <Slider
@@ -420,93 +430,85 @@ export default function Home() {
                 const next = Array.isArray(value) ? value[0] : value;
                 if (typeof next === "number") setPickedSkillLevel(next);
               }}
-              aria-label="Weapon skill level"
+              aria-label={t("Weapon skill level")}
             />
             <Segmented
               value={skillMode}
               onChange={setPickedSkillMode}
-              ariaLabel="Skill factor roll"
+              ariaLabel={t("Skill factor roll")}
               className="w-full"
               itemClassName="flex-1 text-xs"
               options={[
-                { value: "min", label: "Min roll" },
-                { value: "avg", label: "Average" },
-                { value: "max", label: "Max roll" },
+                { value: "min", label: t("Min roll") },
+                { value: "avg", label: t("Average") },
+                { value: "max", label: t("Max roll") },
               ]}
             />
             <p className="text-[11px] leading-snug text-muted-foreground">
-              Damage scales with skill: 40% of listed damage at level 0, up to
-              92.5% on average at level 100.
+              {t("Damage scales with skill: 40% of listed damage at level 0, up to 92.5% on average at level 100.")}
             </p>
           </div>
 
           <div className="space-y-2">
             <Label className="text-[11px] tracking-wide text-muted-foreground uppercase">
-              Attack used
+              {t("Attack used")}
             </Label>
             <Segmented
               value={attack}
               onChange={setPickedAttack}
-              ariaLabel="Attack type"
+              ariaLabel={t("Attack type")}
               className="w-full"
               itemClassName="flex-1"
               options={[
-                { value: "primary", label: "Primary" },
-                { value: "secondary", label: "Secondary" },
+                { value: "primary", label: t("Primary") },
+                { value: "secondary", label: t("Secondary") },
               ]}
             />
             <p className="text-[11px] leading-snug text-muted-foreground">
-              Primary follows the weapon&apos;s real combo — 3 hits with a
-              double-damage finisher for most, 2 for fists, 6 for the dual axes,
-              and a single hit for spears, sledges, pickaxes and ranged weapons.
-              Secondary applies the class&apos;s heavier attack, where it has one.
+              {t("Primary follows the weapon's real combo — 3 hits with a double-damage finisher for most, 2 for fists, 6 for the dual axes, and a single hit for spears, sledges, pickaxes and ranged weapons. Secondary applies the class's heavier attack, where it has one.")}
             </p>
           </div>
 
           <div className="space-y-2">
             <Label className="text-[11px] tracking-wide text-muted-foreground uppercase">
-              Enemy state
+              {t("Enemy state")}
             </Label>
             <Segmented
               value={backstab ? "unalerted" : "alerted"}
               onChange={(value) => setPickedBackstab(value === "unalerted")}
-              ariaLabel="Enemy state"
+              ariaLabel={t("Enemy state")}
               className="w-full"
               itemClassName="flex-1"
               options={[
-                { value: "alerted", label: "Alerted" },
-                { value: "unalerted", label: "Unalerted" },
+                { value: "alerted", label: t("Alerted") },
+                { value: "unalerted", label: t("Unalerted") },
               ]}
             />
             <p className="text-[11px] leading-snug text-muted-foreground">
-              An unaware enemy takes the weapon&apos;s backstab bonus on the
-              first hit &mdash; 1× to 6×, shown per weapon below. The hit then
-              gives it five minutes of backstab immunity, so later hits are
-              normal.
+              {t("An unaware enemy takes the weapon's backstab bonus on the first hit — 1× to 6×, shown per weapon below. The hit then gives it five minutes of backstab immunity, so later hits are normal.")}
             </p>
           </div>
 
           <div className="space-y-2">
             <Label className="text-[11px] tracking-wide text-muted-foreground uppercase">
-              Ranged ammunition
+              {t("Ranged ammunition")}
             </Label>
             <div className="grid grid-cols-2 gap-2">
               <AmmoSelect
-                label="Arrow"
+                label={t("Arrow")}
                 items={reachableArrows}
                 value={arrow?.slug ?? ""}
                 onChange={setPickedArrow}
               />
               <AmmoSelect
-                label="Bolt"
+                label={t("Bolt")}
                 items={reachableBolts}
                 value={bolt?.slug ?? ""}
                 onChange={setPickedBolt}
               />
             </div>
             <p className="text-[11px] leading-snug text-muted-foreground">
-              Bow and crossbow damage is listed weapon + listed ammo, added
-              together per damage type.
+              {t("Bow and crossbow damage is listed weapon + listed ammo, added together per damage type.")}
             </p>
           </div>
         </CardContent>
@@ -517,12 +519,12 @@ export default function Home() {
           width, so the inner tables scroll instead of stretching the page. */}
       <div className="grid gap-6 xl:grid-cols-[minmax(360px,1fr)_minmax(0,1.35fr)]">
         <section
-          aria-label="Selected weapon"
+          aria-label={t("Selected weapon")}
           className="animate-rise-in min-w-0"
         >
           <div className="mb-3 flex items-baseline justify-between gap-3">
             <h2 className="font-heading text-base font-semibold tracking-wide text-muted-foreground uppercase">
-              2 · Inspect a weapon
+              {t("2 · Inspect a weapon")}
             </h2>
             {selectedWeapon ? (
               <span className="flex items-center gap-1 text-xs text-muted-foreground">
@@ -533,21 +535,21 @@ export default function Home() {
                   onClick={() => toggleClass(selectedWeapon.cls)}
                   title={
                     classFilter === selectedWeapon.cls
-                      ? `Clear the ${CLASS_LABELS[selectedWeapon.cls]} filter`
-                      : `Filter the ranking to ${CLASS_LABELS[selectedWeapon.cls]}`
+                      ? t("Clear the {type} filter", { type: t(CLASS_LABELS[selectedWeapon.cls]) })
+                      : t("Filter the ranking to {type}", { type: t(CLASS_LABELS[selectedWeapon.cls]) })
                   }
                   aria-label={
                     classFilter === selectedWeapon.cls
-                      ? `Clear the ${CLASS_LABELS[selectedWeapon.cls]} filter`
-                      : `Filter the ranking to ${CLASS_LABELS[selectedWeapon.cls]}`
+                      ? t("Clear the {type} filter", { type: t(CLASS_LABELS[selectedWeapon.cls]) })
+                      : t("Filter the ranking to {type}", { type: t(CLASS_LABELS[selectedWeapon.cls]) })
                   }
                   className="cursor-pointer rounded-sm underline-offset-2 transition-colors hover:text-foreground hover:underline focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                 >
-                  {CLASS_LABELS[selectedWeapon.cls]}
+                  {t(CLASS_LABELS[selectedWeapon.cls])}
                 </button>
                 <WikiLink
                   href={selectedWeapon.wikiUrl}
-                  name={selectedWeapon.name}
+                  name={nameOf(selectedWeapon)}
                 />
               </span>
             ) : null}
@@ -570,16 +572,16 @@ export default function Home() {
           />
         </section>
 
-        <section aria-label="Weapon ranking" className="animate-rise-in min-w-0">
+        <section aria-label={t("Weapon ranking")} className="animate-rise-in min-w-0">
           <div className="mb-3 flex items-baseline justify-between gap-3">
             <h2 className="font-heading text-base font-semibold tracking-wide text-muted-foreground uppercase">
-              3 · Find the best weapon for {target.name}
+              {t("3 · Find the best weapon for {target}", { target: nameOf(target) })}
             </h2>
             <span className="flex items-center gap-2 text-xs text-muted-foreground">
               <span className="flex items-center gap-1">
-                <ItemImage src={target.image} alt={target.name} size={18} />
-                {formatCount(target.health)} HP
-              </span>
+                <ItemImage src={target.image} alt={nameOf(target)} size={18} />
+                {formatCount(target.health)} {t("HP")}
+            </span>
               <ShareViewButton view={view} />
             </span>
           </div>
@@ -599,17 +601,16 @@ export default function Home() {
 
       <footer className="space-y-1 pb-6 text-center text-xs text-muted-foreground">
         <p>
-          Fan-made tool. Item art and stats belong to Iron Gate Studio and the
-          Valheim wiki community. Numbers are only as current as the last
-          scrape.
-        </p>
+          {t("Fan-made tool. Item art and stats belong to Iron Gate Studio and the Valheim wiki community. Numbers are only as current as the last scrape.")}
+            </p>
         <p>
           <MethodologyLink />
         </p>
         <p className="support">
-          <span><strong>Free, ad-free and made in my spare time.</strong> If it helped your run, you can buy me a coffee.</span>
+          <span><strong>{t("Free, ad-free and made in my spare time.")}</strong> {t("If it helped your run, you can buy me a coffee.")}
+            </span>
           <a href="https://ko-fi.com/N2A528ACE3" target="_blank" rel="noopener noreferrer">
-            <img src="/support/kofi.png" alt="Buy Me a Coffee at ko-fi.com" width={143} height={36} loading="lazy" />
+            <img src="/support/kofi.png" alt={t("Buy Me a Coffee at ko-fi.com")} width={143} height={36} loading="lazy" />
           </a>
         </p>
       </footer>
@@ -628,6 +629,7 @@ function AmmoSelect({
   value: string;
   onChange: (v: string) => void;
 }) {
+  const { t, nameOf } = useLanguage();
   const sorted = [...items].sort((a, b) => totalDamage(b) - totalDamage(a));
   const empty = sorted.length === 0;
 
@@ -636,22 +638,22 @@ function AmmoSelect({
       value={value}
       disabled={empty}
       // Gives the trigger the item's name instead of its slug.
-      items={sorted.map((item) => ({ value: item.slug, label: item.name }))}
+      items={sorted.map((item) => ({ value: item.slug, label: nameOf(item) }))}
       onValueChange={(next) => {
         if (typeof next === "string") onChange(next);
       }}
     >
       <SelectTrigger size="sm" className="w-full" aria-label={label}>
         <SelectValue
-          placeholder={empty ? `No ${label.toLowerCase()}s yet` : label}
+          placeholder={empty ? t("No ammunition yet") : label}
         />
       </SelectTrigger>
       <SelectContent>
         {sorted.map((item) => (
           <SelectItem key={item.slug} value={item.slug}>
             <span className="flex items-center gap-2">
-              <ItemImage src={item.image} alt={item.name} size={18} />
-              {item.name}
+              <ItemImage src={item.image} alt={nameOf(item)} size={18} />
+              {nameOf(item)}
             </span>
           </SelectItem>
         ))}

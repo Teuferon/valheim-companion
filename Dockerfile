@@ -8,10 +8,12 @@ WORKDIR /repo/apps/signs
 RUN npm run build
 
 FROM node:24-alpine AS damage-calculator
-WORKDIR /app
-COPY apps/damage-calculator/package.json apps/damage-calculator/package-lock.json ./
-RUN npm ci
-COPY apps/damage-calculator/ ./
+WORKDIR /repo
+COPY apps/damage-calculator/package.json apps/damage-calculator/package-lock.json ./apps/damage-calculator/
+RUN npm --prefix apps/damage-calculator ci
+COPY shared/ ./shared/
+COPY apps/damage-calculator/ ./apps/damage-calculator/
+WORKDIR /repo/apps/damage-calculator
 RUN npm run build
 
 FROM nginx:stable-alpine
@@ -29,7 +31,7 @@ COPY apps/armourer/assets/ /usr/share/nginx/html/armourer/assets/
 COPY apps/armourer/data/data.js /usr/share/nginx/html/armourer/data/data.js
 COPY apps/armourer/img/ /usr/share/nginx/html/armourer/img/
 COPY --from=signs /repo/apps/signs/dist-static/ /usr/share/nginx/html/signs/
-COPY --from=damage-calculator /app/dist-static/ /usr/share/nginx/html/damage-calculator/
+COPY --from=damage-calculator /repo/apps/damage-calculator/dist-static/ /usr/share/nginx/html/damage-calculator/
 EXPOSE 80
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 CMD wget -q -O /dev/null http://127.0.0.1/healthz || exit 1
 CMD ["nginx", "-g", "daemon off;"]

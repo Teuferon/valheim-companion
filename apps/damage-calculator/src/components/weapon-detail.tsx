@@ -1,10 +1,10 @@
+import { useLanguage } from '@/hooks/use-language';
 
 import type { ReactNode } from "react";
 import { ArrowRight, Info, Swords, TriangleAlert } from "lucide-react";
 import { ItemImage, WikiLink } from "@/components/item-image";
 import {
   ResistanceBadge,
-  TIER_SHORT,
   type Tier,
 } from "@/components/resistance-badge";
 import { Badge } from "@/components/ui/badge";
@@ -14,8 +14,8 @@ import { Separator } from "@/components/ui/separator";
 import type { AttackKind } from "@/data/attack-profiles";
 import { CONFIDENCE_LABEL } from "@/data/attack-profiles";
 import type { WeaponClass } from "@/data/weapon-class";
-import { formatCount, formatDamage, formatSeconds, MAX_QUALITY, type CalculationResult } from "@/lib/damage";
-import { DAMAGE_COLOR, DAMAGE_LABEL, type Ammo, type Weapon } from "@/lib/types";
+import { MAX_QUALITY, type CalculationResult } from "@/lib/damage";
+import { DAMAGE_COLOR, DAMAGE_LABEL, RESISTANCE_MULTIPLIER, type Ammo, type Weapon } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
 export function WeaponDetail({
@@ -49,6 +49,7 @@ export function WeaponDetail({
   result: CalculationResult;
   bestResult: { weapon: Weapon; perHit: number; dps: number } | null;
 }) {
+  const { t, formatCount, formatDamage, formatSeconds, number, nameOf } = useLanguage();
   const isBest = bestResult?.weapon.slug === weapon.slug;
 
   return (
@@ -56,12 +57,12 @@ export function WeaponDetail({
       <CardHeader className="gap-3 border-b bg-muted/25 px-4 py-4">
         <div className="flex items-start gap-3">
           <div className="rounded-lg bg-background/60 p-2 ring-1 ring-border">
-            <ItemImage src={weapon.image} alt={weapon.name} size={44} />
+            <ItemImage src={weapon.image} alt={nameOf(weapon)} size={44} />
           </div>
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-1.5">
-              <CardTitle className="truncate text-lg">{weapon.name}</CardTitle>
-              <WikiLink href={weapon.wikiUrl} name={weapon.name} />
+              <CardTitle className="truncate text-lg">{nameOf(weapon)}</CardTitle>
+              <WikiLink href={weapon.wikiUrl} name={nameOf(weapon)} />
             </div>
             <div className="mt-1 flex flex-wrap items-center gap-1.5">
               {/* Same one-click class filter as the ranking rows. */}
@@ -73,23 +74,23 @@ export function WeaponDetail({
                 onClick={() => onToggleClass(weapon.cls)}
                 title={
                   classActive
-                    ? `Clear the ${weapon.clsLabel} filter`
-                    : `Filter the ranking to ${weapon.clsLabel}`
+                    ? t("Clear the {type} filter", { type: t(weapon.clsLabel) })
+                    : t("Filter the ranking to {type}", { type: t(weapon.clsLabel) })
                 }
               >
-                {weapon.clsLabel}
+                {t(weapon.clsLabel)}
               </Badge>
               {weapon.ammo && ammo ? (
                 <Badge variant="outline" className="gap-1 font-normal">
                   <ArrowRight className="size-3" />
-                  {ammo.name}
+                  {nameOf(ammo)}
                 </Badge>
               ) : null}
               {isBest ? (
                 <Badge className="gap-1">
                   <Swords className="size-3" />
-                  Top pick
-                </Badge>
+                  {t("Top pick")}
+            </Badge>
               ) : null}
             </div>
           </div>
@@ -98,21 +99,20 @@ export function WeaponDetail({
         <div className="grid gap-3 sm:grid-cols-2">
           <div className="space-y-1.5">
             <div className="text-[11px] font-medium tracking-wide text-muted-foreground uppercase">
-              Upgrade level
+              {t("Upgrade level")}
             </div>
             {weapon.consumable ? (
               /* Bombs, ballista missiles and catapult ammo are consumables:
                * one damage value, crafted in batches, no upgrade levels. */
               <p className="text-xs text-muted-foreground">
-                Not upgradable — this is a consumable with a single damage
-                value.
-              </p>
+                {t("Not upgradable — this is a consumable with a single damage value.")}
+            </p>
             ) : (
               <div className="space-y-1.5">
                 <Segmented
                   value={String(quality)}
                   onChange={(v) => onQualityChange(Number(v))}
-                  ariaLabel="Upgrade level"
+                  ariaLabel={t("Upgrade level")}
                   className="w-full"
                   itemClassName="flex-1"
                   options={Array.from({ length: MAX_QUALITY }, (_, i) => i + 1).map(
@@ -130,19 +130,19 @@ export function WeaponDetail({
 
           <div className="space-y-1.5">
             <div className="text-[11px] font-medium tracking-wide text-muted-foreground uppercase">
-              Attack
+              {t("Attack")}
             </div>
             <Segmented
               value={attack}
               onChange={onAttackChange}
-              ariaLabel="Attack type"
+              ariaLabel={t("Attack type")}
               className="w-full"
               itemClassName="flex-1"
               options={[
-                { value: "primary", label: "Primary" },
+                { value: "primary", label: t("Primary") },
                 {
                   value: "secondary",
-                  label: "Secondary",
+                  label: t("Secondary"),
                   disabled: !canUseSecondary,
                 },
               ]}
@@ -154,12 +154,12 @@ export function WeaponDetail({
       <CardContent className="space-y-4 px-4 py-4">
         <div className="grid grid-cols-3 gap-2">
           <Stat
-            label={result.backstabApplied ? "Backstab hit" : "Per hit"}
+            label={t(result.backstabApplied ? "Backstab hit" : "Per hit")}
             value={formatDamage(result.perHit)}
             accent
           />
-          <Stat label="Cycle DPS" value={formatDamage(result.dps)} />
-          <Stat label="Time to kill" value={formatSeconds(result.ttk)} />
+          <Stat label={t("Cycle DPS")} value={formatDamage(result.dps)} />
+          <Stat label={t("Time to kill")} value={formatSeconds(result.ttk)} />
         </div>
 
         {/* Scrolls horizontally on narrow screens instead of stretching the
@@ -168,14 +168,16 @@ export function WeaponDetail({
           <table className="w-full min-w-[22rem] text-sm">
             <thead className="bg-muted/40 text-[11px] tracking-wide text-muted-foreground uppercase">
               <tr>
-                <th className="px-2.5 py-1.5 text-left font-medium">Type</th>
-                <th className="px-2.5 py-1.5 text-right font-medium">Base</th>
+                <th className="px-2.5 py-1.5 text-left font-medium">{t("Type")}
+            </th>
+                <th className="px-2.5 py-1.5 text-right font-medium">{t("Base")}
+            </th>
                 <th className="px-2.5 py-1.5 text-left font-medium">
-                  After resistance
-                </th>
+                  {t("After resistance")}
+            </th>
                 <th className="px-2.5 py-1.5 text-right font-medium">
-                  Effective
-                </th>
+                  {t("Effective")}
+            </th>
               </tr>
             </thead>
             <tbody>
@@ -187,7 +189,7 @@ export function WeaponDetail({
                       DAMAGE_COLOR[line.type],
                     )}
                   >
-                    {DAMAGE_LABEL[line.type]}
+                    {t(DAMAGE_LABEL[line.type])}
                   </td>
                   <td className="px-2.5 py-1.5 text-right tabular-nums">
                     {formatDamage(line.base)}
@@ -200,7 +202,7 @@ export function WeaponDetail({
                         className="px-1 py-0"
                       />
                       <span className="text-xs text-muted-foreground tabular-nums">
-                        {TIER_SHORT[line.tier as Tier]} → {formatDamage(line.base * line.multiplier)}
+                        ×{number(RESISTANCE_MULTIPLIER[line.tier as Tier])} → {formatDamage(line.base * line.multiplier)}
                       </span>
                     </span>
                   </td>
@@ -215,15 +217,15 @@ export function WeaponDetail({
                     colSpan={4}
                     className="px-2.5 py-3 text-center text-muted-foreground"
                   >
-                    This item deals no damage to creatures.
-                  </td>
+                    {t("This item deals no damage to creatures.")}
+            </td>
                 </tr>
               ) : null}
             </tbody>
             <tfoot>
               <tr className="border-t bg-muted/40">
                 <td className="px-2.5 py-2 font-semibold" colSpan={3}>
-                  {result.backstabApplied ? "Backstab first hit" : "Total per hit"}
+                  {t(result.backstabApplied ? "Backstab first hit" : "Total per hit")}
                 </td>
                 <td className="px-2.5 py-2 text-right font-bold text-primary tabular-nums">
                   {formatDamage(result.perHit)}
@@ -236,21 +238,21 @@ export function WeaponDetail({
         <Separator />
 
         <dl className="grid grid-cols-1 gap-x-4 gap-y-1.5 text-xs sm:grid-cols-2">
-          <Row label="Listed damage" value={formatDamage(result.perHitRaw)} />
-          <Row label="Skill factor" value={`×${result.skillFactor.toFixed(3)}`} />
+          <Row label={t("Listed damage")} value={formatDamage(result.perHitRaw)} />
+          <Row label={t("Skill factor")} value={`×${number(result.skillFactor, 3)}`} />
           <Row
-            label="Backstab bonus"
-            value={`×${result.backstabMultiplier}${
-              result.backstabApplied ? " · first hit" : ""
+            label={t("Backstab bonus")}
+            value={`×${number(result.backstabMultiplier)}${
+              result.backstabApplied ? t(" · first hit") : ""
             }`}
           />
-          <Row label="Cycle time" value={`${result.cycleSeconds.toFixed(2)} s`} />
+          <Row label={t("Cycle time")} value={formatSeconds(result.cycleSeconds)} />
           <Row
-            label="Damage events per cycle"
+            label={t("Damage events per cycle")}
             value={formatCount(result.eventCount)}
           />
           <Row
-            label="Cycles to kill"
+            label={t("Cycles to kill")}
             value={
               result.perHit > 0
                 ? formatCount(Math.ceil(result.ttk / result.cycleSeconds))
@@ -258,7 +260,7 @@ export function WeaponDetail({
             }
           />
           <Row
-            label="Timing source"
+            label={t("Timing source")}
             value={
               <a
                 href={result.timingSource.url}
@@ -267,48 +269,40 @@ export function WeaponDetail({
                 title={result.timingSource.label}
                 className="text-primary underline decoration-dotted underline-offset-2"
               >
-                {CONFIDENCE_LABEL[result.timingConfidence]}
+                {t(CONFIDENCE_LABEL[result.timingConfidence])}
               </a>
             }
           />
           {bestResult ? (
             <Row
-              label="Vs best pick"
-              value={`${((result.perHit / bestResult.perHit) * 100).toFixed(0)}% of ${bestResult.weapon.name}`}
+              label={t("Vs best pick")}
+              value={t("{percent}% of {weapon}", { percent: number((result.perHit / bestResult.perHit) * 100, 0), weapon: nameOf(bestResult.weapon) })}
             />
           ) : null}
         </dl>
 
         <p className="flex gap-1.5 text-[11px] leading-snug text-muted-foreground">
           <Info className="mt-0.5 size-3 shrink-0" />
-          Per-hit damage is exact wiki data. Cycle DPS is one full combo over its
-          timing cycle, and time-to-kill uses a published hit schedule where one
-          exists — otherwise it averages the cycle. Both depend on the attack
-          timing documented under Methodology above.
-        </p>
+          {t("Per-hit damage is exact wiki data. Cycle DPS is one full combo over its timing cycle, and time-to-kill uses a published hit schedule where one exists — otherwise it averages the cycle. Both depend on the attack timing documented under Methodology above.")}
+            </p>
 
         {result.backstabApplied ? (
           <p className="text-[11px] leading-snug text-muted-foreground">
-            The target is unaware, so the first hit takes the ×
-            {result.backstabMultiplier} backstab bonus. A backstab leaves the
-            target immune for five minutes afterwards, so the rest of the combo
-            is normal damage.
-          </p>
+            {t("The first hit takes a ×{bonus} backstab bonus. The target is then immune to backstab for five minutes; later hits are normal.", { bonus: number(result.backstabMultiplier) })}
+            </p>
         ) : null}
 
         {result.timingNote ? (
           <p className="text-[11px] leading-snug text-muted-foreground">
-            {result.timingNote}
+            {t(result.timingNote)}
           </p>
         ) : null}
 
         {result.lines.length === 0 ? (
           <p className="flex gap-1.5 rounded-md border border-amber-500/40 bg-amber-500/10 px-2.5 py-2 text-[11px] leading-snug">
             <TriangleAlert className="mt-0.5 size-3 shrink-0 text-amber-400" />
-            This item deals only terrain damage (chop, pickaxe or pure), which
-            the wiki lists as woodcutting, mining and structure damage. It does
-            nothing to creatures, so it never shows up in the ranking.
-          </p>
+            {t("This item deals only terrain damage (chop, pickaxe or pure), which the wiki lists as woodcutting, mining and structure damage. It does nothing to creatures, so it never shows up in the ranking.")}
+            </p>
         ) : null}
       </CardContent>
     </Card>

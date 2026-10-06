@@ -1,3 +1,5 @@
+import { matchesName } from '@/lib/entity-names';
+import { useLanguage } from '@/hooks/use-language';
 
 import { useMemo, useState } from "react";
 import { Crown, Search, X } from "lucide-react";
@@ -14,7 +16,7 @@ import {
 } from "@/components/ui/select";
 import { Segmented } from "@/components/ui/segmented";
 import type { WeaponClass } from "@/data/weapon-class";
-import { formatDamage, formatSeconds, type CalculationResult } from "@/lib/damage";
+import { type CalculationResult } from "@/lib/damage";
 import { CLASS_LABELS, CLASS_ORDER, GROUP_LABELS } from "@/lib/data";
 import {
   DAMAGE_COLOR,
@@ -70,6 +72,7 @@ export function WeaponsTable({
   cls: "all" | WeaponClass;
   onClsChange: (next: "all" | WeaponClass) => void;
 }) {
+  const { t, formatCount, formatDamage, formatSeconds, number, nameOf, locale } = useLanguage();
   const [query, setQuery] = useState("");
   const [group, setGroup] = useState<"all" | WeaponGroup>("all");
   /* Damage type is its own axis: a sword that deals fire should survive both the
@@ -83,9 +86,9 @@ export function WeaponsTable({
     const present = new Set(rows.map((r) => r.weapon.cls));
     return CLASS_ORDER.filter((c) => present.has(c)).map((c) => ({
       value: c,
-      label: CLASS_LABELS[c],
+      label: t(CLASS_LABELS[c]),
     }));
-  }, [rows]);
+  }, [rows, t]);
 
   /* The group pills and the class picker slice the same column at two
    * granularities, so choosing one clears the other: "Melee" plus "Bow" would
@@ -121,8 +124,9 @@ export function WeaponsTable({
       if (!query.trim()) return true;
       const q = query.trim().toLowerCase();
       return (
-        r.weapon.name.toLowerCase().includes(q) ||
-        r.weapon.clsLabel.toLowerCase().includes(q)
+        matchesName(r.weapon, q, locale) ||
+        r.weapon.clsLabel.toLowerCase().includes(q) ||
+        t(r.weapon.clsLabel).toLocaleLowerCase(locale).includes(q)
       );
     });
     return [...filtered].sort((a, b) => {
@@ -131,26 +135,25 @@ export function WeaponsTable({
       }
       return b.result[sortKey] - a.result[sortKey];
     });
-  }, [rows, cls, group, damage, query, sortKey]);
+  }, [rows, cls, group, damage, query, sortKey, t, locale]);
 
   return (
     <Card className="gap-0 overflow-hidden py-0">
       <CardHeader className="gap-3 border-b bg-muted/25 px-4 py-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <CardTitle className="text-base">
-            Weapon ranking
-            {/* Numbers stay in the body face so counts are unambiguous. */}
+            {t("Weapon ranking")}{/* Numbers stay in the body face so counts are unambiguous. */}
             <span className="ml-2 font-sans text-xs font-normal text-muted-foreground">
-              {sorted.length} of {rows.length}
+              {t("{shown} of {total}", { shown: formatCount(sorted.length), total: formatCount(rows.length) })}
             </span>
           </CardTitle>
           <Segmented
             value={sortKey}
             onChange={onSortChange}
-            ariaLabel="Sort ranking by"
+            ariaLabel={t("Sort ranking by")}
             options={(Object.keys(SORT_LABELS) as SortKey[]).map((key) => ({
               value: key,
-              label: SORT_LABELS[key],
+              label: t(SORT_LABELS[key]),
             }))}
           />
         </div>
@@ -161,14 +164,14 @@ export function WeaponsTable({
             <Input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search weapons…"
+              placeholder={t("Search weapons…")}
               className="h-8 pl-8"
-              aria-label="Search weapons"
+              aria-label={t("Search weapons")}
             />
           </div>
           <Select
             value={cls}
-            items={[{ value: "all", label: "All classes" }, ...classOptions]}
+            items={[{ value: "all", label: t("All classes") }, ...classOptions]}
             onValueChange={(next) => {
               if (typeof next === "string") pickClass(next as "all" | WeaponClass);
             }}
@@ -176,12 +179,12 @@ export function WeaponsTable({
             <SelectTrigger
               size="sm"
               className="w-40 shrink-0"
-              aria-label="Filter by weapon class"
+              aria-label={t("Filter by weapon class")}
             >
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">All classes</SelectItem>
+              <SelectItem value="all">{t("All classes")}</SelectItem>
               {classOptions.map((option) => (
                 <SelectItem key={option.value} value={option.value}>
                   {option.label}
@@ -192,10 +195,10 @@ export function WeaponsTable({
           <Segmented
             value={group}
             onChange={pickGroup}
-            ariaLabel="Filter by weapon group"
+            ariaLabel={t("Filter by weapon group")}
             options={GROUP_FILTERS.map((g) => ({
               value: g.value,
-              label: g.label,
+              label: t(g.label),
             }))}
           />
           {/* The damage filter has no picker of its own, so when it is on it
@@ -204,11 +207,10 @@ export function WeaponsTable({
             <button
               type="button"
               onClick={() => setDamage("all")}
-              title={`Clear the ${DAMAGE_LABEL[damage]} filter`}
+              title={t("Clear the {type} filter", { type: t(DAMAGE_LABEL[damage]) })}
               className="flex h-8 shrink-0 cursor-pointer items-center gap-1.5 rounded-lg border border-input px-2.5 text-xs font-medium transition-colors outline-none hover:bg-accent hover:text-accent-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50"
             >
-              {DAMAGE_LABEL[damage]} only
-              <X className="size-3.5" />
+              {t("{type} only", { type: t(DAMAGE_LABEL[damage]) })}<X className="size-3.5" />
             </button>
           ) : null}
         </div>
@@ -220,20 +222,24 @@ export function WeaponsTable({
             <thead className="sticky top-0 z-10 bg-card/95 text-[11px] tracking-wide text-muted-foreground uppercase backdrop-blur">
               <tr className="border-b">
                 <th className="w-10 px-3 py-2 text-left font-medium">#</th>
-                <th className="px-2 py-2 text-left font-medium">Weapon</th>
-                <th className="px-2 py-2 text-left font-medium">Damage vs target</th>
+                <th className="px-2 py-2 text-left font-medium">{t("Weapon")}
+            </th>
+                <th className="px-2 py-2 text-left font-medium">{t("Damage vs target")}
+            </th>
                 <th
                   className="px-2 py-2 text-right font-medium"
                   title={
                     backstab
-                      ? "First hit on an unaware enemy, with the weapon's backstab bonus applied"
+                      ? t("First hit on an unaware enemy, with the weapon's backstab bonus applied")
                       : undefined
                   }
                 >
-                  {backstab ? "Backstab" : "Per hit"}
+                  {t(backstab ? "Backstab" : "Per hit")}
                 </th>
-                <th className="px-2 py-2 text-right font-medium">DPS</th>
-                <th className="px-2 py-2 text-right font-medium">Kill</th>
+                <th className="px-2 py-2 text-right font-medium">{t("DPS")}
+            </th>
+                <th className="px-2 py-2 text-right font-medium">{t("Kill")}
+            </th>
               </tr>
             </thead>
             <tbody>
@@ -267,24 +273,24 @@ export function WeaponsTable({
                         {isTop ? (
                           <Crown className="size-3.5 text-primary" />
                         ) : null}
-                        {index + 1}
+                        {formatCount(index + 1)}
                       </span>
                     </td>
                     <td className="px-2 py-2">
                       <div className="flex items-center gap-2">
                         <ItemImage
                           src={row.weapon.image}
-                          alt={row.weapon.name}
+                          alt={nameOf(row.weapon)}
                           size={28}
                         />
                         <div className="min-w-0">
                           <div className="flex items-center gap-1">
                             <span className="truncate font-medium">
-                              {row.weapon.name}
+                              {nameOf(row.weapon)}
                             </span>
                             <WikiLink
                               href={row.weapon.wikiUrl}
-                              name={row.weapon.name}
+                              name={nameOf(row.weapon)}
                               className="size-5"
                             />
                           </div>
@@ -302,24 +308,24 @@ export function WeaponsTable({
                               }}
                               title={
                                 classActive
-                                  ? `Clear the ${row.weapon.clsLabel} filter`
-                                  : `Filter the ranking to ${row.weapon.clsLabel}`
+                                  ? t("Clear the {type} filter", { type: t(row.weapon.clsLabel) })
+                                  : t("Filter the ranking to {type}", { type: t(row.weapon.clsLabel) })
                               }
                               aria-label={
                                 classActive
-                                  ? `Clear the ${row.weapon.clsLabel} filter`
-                                  : `Filter the ranking to ${row.weapon.clsLabel}`
+                                  ? t("Clear the {type} filter", { type: t(row.weapon.clsLabel) })
+                                  : t("Filter the ranking to {type}", { type: t(row.weapon.clsLabel) })
                               }
                               className="cursor-pointer rounded-sm text-[11px] text-muted-foreground underline-offset-2 transition-colors hover:text-foreground hover:underline focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                             >
-                              {row.weapon.clsLabel}
+                              {t(row.weapon.clsLabel)}
                             </button>
                             {row.weapon.group !== "melee" ? (
                               <Badge
                                 variant="outline"
                                 className="h-4 px-1 text-[10px] font-normal"
                               >
-                                {GROUP_LABELS[row.weapon.group]}
+                                {t(GROUP_LABELS[row.weapon.group])}
                               </Badge>
                             ) : null}
                           </div>
@@ -331,8 +337,8 @@ export function WeaponsTable({
                         {row.result.lines.map((line) => {
                           const typeActive = damage === line.type;
                           const typeAction = typeActive
-                            ? `Clear the ${DAMAGE_LABEL[line.type]} filter`
-                            : `Show only weapons that deal ${DAMAGE_LABEL[line.type]} damage`;
+                            ? t("Clear the {type} filter", { type: t(DAMAGE_LABEL[line.type]) })
+                            : t("Show only weapons that deal {type} damage", { type: t(DAMAGE_LABEL[line.type]) });
                           return (
                             <span
                               key={line.type}
@@ -340,7 +346,7 @@ export function WeaponsTable({
                                 "whitespace-nowrap",
                                 DAMAGE_COLOR[line.type],
                               )}
-                              title={`${DAMAGE_LABEL[line.type]}: ${formatDamage(line.base)} base × ${line.multiplier} resistance × skill`}
+                              title={t("{type}: {base} base × {resistance} resistance × skill", { type: t(DAMAGE_LABEL[line.type]), base: formatDamage(line.base), resistance: number(line.multiplier) })}
                             >
                               {formatDamage(line.effective)}
                               <button
@@ -361,7 +367,7 @@ export function WeaponsTable({
                                     : "opacity-60",
                                 )}
                               >
-                                {DAMAGE_LABEL[line.type]}
+                                {t(DAMAGE_LABEL[line.type])}
                               </button>
                             </span>
                           );
@@ -399,8 +405,8 @@ export function WeaponsTable({
                     className="px-4 py-8 text-center text-muted-foreground"
                   >
                     {query.trim()
-                      ? `No weapons match “${query}”.`
-                      : "No weapons in this filter."}
+                      ? t("No weapons match “{query}”.", { query })
+                      : t("No weapons in this filter.")}
                   </td>
                 </tr>
               ) : null}
@@ -408,8 +414,10 @@ export function WeaponsTable({
           </table>
         </div>
         <div className="flex items-center justify-between border-t px-4 py-2 text-[11px] text-muted-foreground">
-          <span>Click a row to inspect it. Bars are relative to the best per-hit.</span>
-          <span>Max per hit: {formatDamage(maxPerHit)}</span>
+          <span>{t("Click a row to inspect it. Bars are relative to the best per-hit.")}
+            </span>
+          <span>{t("Max per hit:")}{formatDamage(maxPerHit)}
+            </span>
         </div>
       </CardContent>
     </Card>

@@ -1,3 +1,4 @@
+import { useLanguage } from '@/hooks/use-language';
 import { DAMAGE_LABEL, RESISTANCE_LABEL, type DamageType } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -23,6 +24,7 @@ export function ResistanceBadge({
   tier: Tier;
   className?: string;
 }) {
+  const { t } = useLanguage();
   return (
     <span
       className={cn(
@@ -31,8 +33,10 @@ export function ResistanceBadge({
         className,
       )}
     >
-      <span>{DAMAGE_LABEL[type]}</span>
-      <span className="opacity-70">{RESISTANCE_LABEL[tier]}</span>
+      <span>{t(DAMAGE_LABEL[type])}
+            </span>
+      <span className="opacity-70">{t(RESISTANCE_LABEL[tier])}
+            </span>
     </span>
   );
 }
