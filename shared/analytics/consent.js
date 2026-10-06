@@ -91,8 +91,24 @@
     if (typeof globalThis !== 'undefined' && globalThis.VCI18n && typeof globalThis.VCI18n.t === 'function') {
       return globalThis.VCI18n.t(MESSAGES, key);
     }
+    // React sections do not load VCI18n; resolve the shared preference the same way it does.
     const entry = MESSAGES[key];
-    return entry?.en ?? key;
+    return entry?.[fallbackLocale()] ?? entry?.en ?? key;
+  }
+
+  function fallbackLocale() {
+    const supported = Object.keys(MESSAGES[Object.keys(MESSAGES)[0]] || { en: '' });
+    const base = (value) => String(value || '').toLowerCase().replace('_', '-').split('-')[0];
+    let preference = 'auto';
+    try {
+      preference = localStorage.getItem('vc.language') || localStorage.getItem('runopis.language') || 'auto';
+    } catch {
+      /* Storage blocked: use the browser language. */
+    }
+    if (preference !== 'auto' && supported.includes(preference)) return preference;
+    const nav = typeof navigator !== 'undefined' ? navigator : {};
+    const candidates = nav.languages?.length ? nav.languages : [nav.language];
+    return candidates.map(base).find((code) => supported.includes(code)) || 'en';
   }
 
   function get() {
