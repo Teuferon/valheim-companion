@@ -1011,6 +1011,7 @@
     }
 
     let tipPrefix = '';
+    let tipData = { kind: 'none' };
     if (bestWeakType) {
       let bestWeaponName = null;
       let bestWeaponScore = -1;
@@ -1036,6 +1037,7 @@
       }
 
       if (bestWeaponName) {
+        tipData = { kind: 'weakness', type: bestWeakType, multiplier: maxWeakMult, weaponName: bestWeaponName, score: bestWeaponScore };
         const weaknessLabel = maxWeakMult === 2 ? 'Very weak' : 'Weak';
         tipPrefix = `${weaknessLabel} to ${capitalize(bestWeakType)} (\u00d7${maxWeakMult}): ${bestWeaponName} hits for ${bestWeaponScore} effective.`;
       }
@@ -1045,6 +1047,7 @@
       const topMelee = scoredMelee[0];
       if (topMelee) {
         const displayVal = rankBy === 'dps' ? (topMelee.raw || Math.round(topMelee.perHit)) : topMelee.score;
+        tipData = { kind: 'raw', weaponName: topMelee.name, score: displayVal };
         tipPrefix = `No elemental weakness \u2014 best raw option: ${topMelee.name} (${displayVal}).`;
       } else {
         tipPrefix = 'No recommended weapons found for this biome.';
@@ -1071,6 +1074,7 @@
       bomb: bombObj,
       avoid,
       tip,
+      tipData: { ...tipData, immuneTypes },
     };
   }
 

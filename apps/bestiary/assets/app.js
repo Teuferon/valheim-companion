@@ -3,7 +3,7 @@
 (function () {
   const t = (source, values) => VCI18n.t(VC_MESSAGES, source, values);
   const entityName = entity => VCI18n.name(entity);
-  const biomeName = biome => biome.names?.[VCI18n.locale()] || t(biome.name);
+  const biomeName = biome => biome.names?.[VCI18n.locale()] ? entityName(biome) : t(biome.name);
   const gameName = name => {
     const data = window.VC_DATA;
     const entity = [...Object.values(data?.items || {}), ...Object.values(data?.weapons || {}),
@@ -704,7 +704,7 @@
     const titleBox = el('div', 'modal-title-box');
     titleBox.appendChild(el('h3', 'modal-title', entityName(weapon)));
 
-    const typeStr = [t(weapon.type || capitalize(weapon.category)), t(weapon.hands || '')].filter(Boolean).join(' · ');
+    const typeStr = [capitalize((weapon.type || weapon.category || '').toLowerCase().replace(/\s+(1h|2h|dw)$/, '')), t(weapon.hands || '')].filter(Boolean).join(' · ');
     titleBox.appendChild(el('div', 'modal-subtitle', typeStr));
     header.appendChild(titleBox);
 
@@ -1077,7 +1077,15 @@
 
       // Tip row
       if (rec.tip) {
-        recBox.appendChild(el('div', 'rec-tip', rec.tip));
+        const tip = rec.tipData;
+        let text = t('No recommended weapons found for this biome.');
+        if (tip?.kind === 'weakness') text = t('{weakness} to {type} (×{multiplier}): {weapon} hits for {damage} effective.', {
+          weakness: t(tip.multiplier === 2 ? 'Very Weak' : 'Weak'), type: capitalize(tip.type),
+          multiplier: tip.multiplier, weapon: gameName(tip.weaponName), damage: tip.score,
+        });
+        if (tip?.kind === 'raw') text = t('No elemental weakness — best raw option: {weapon} ({damage}).', { weapon: gameName(tip.weaponName), damage: tip.score });
+        if (tip?.immuneTypes?.length) text += ' ' + t('Immune to {types}.', { types: tip.immuneTypes.map(capitalize).join(', ') });
+        recBox.appendChild(el('div', 'rec-tip', text));
       }
 
       const recGroups = el('div', 'rec-groups');
