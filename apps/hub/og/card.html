@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Valheim Companion — Social Card</title>
+  <style>
+    @font-face {
+      font-family: 'Norse';
+      src: url('../fonts/Norse.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'NorseBold';
+      src: url('../fonts/Norsebold.otf') format('opentype');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background-color: #0f1216;
+      color: #e5e9f0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      position: relative;
+    }
+
+    .bg-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center right;
+      z-index: 1;
+    }
+
+    .bg-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        #0f1216 0%,
+        rgba(15, 18, 22, 0.98) 42%,
+        rgba(15, 18, 22, 0.88) 60%,
+        rgba(15, 18, 22, 0.45) 82%,
+        rgba(15, 18, 22, 0.15) 100%
+      );
+      z-index: 2;
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 3;
+      width: 1200px;
+      height: 630px;
+      padding: 56px 72px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 860px;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-shield {
+      width: 68px;
+      height: 68px;
+      flex-shrink: 0;
+      filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.6));
+    }
+
+    .main-body {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .card-title {
+      font-family: 'Norse', sans-serif;
+      font-size: 78px;
+      line-height: 0.95;
+      letter-spacing: 2.5px;
+      color: #f5f0e6;
+      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.85);
+      text-transform: uppercase;
+    }
+
+    .section-subtitle {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #d9a441;
+      text-transform: uppercase;
+      margin-top: -2px;
+    }
+
+    .card-description {
+      font-size: 25px;
+      line-height: 1.42;
+      color: #c4cdd8;
+      max-width: 740px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+      margin-top: 8px;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .site-url {
+      font-size: 19px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      color: #d9a441;
+      opacity: 0.95;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body>
+  <img id="bg-img" class="bg-image" src="" alt="Biome background">
+  <div class="bg-gradient"></div>
+
+  <div class="card-content">
+    <div class="header-top">
+      <svg class="logo-shield" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+        <defs>
+          <radialGradient id="shieldGrad" cx="35%" cy="30%" r="70%">
+            <stop offset="0%" stop-color="#343d48"/>
+            <stop offset="70%" stop-color="#181d23"/>
+            <stop offset="100%" stop-color="#0f1216"/>
+          </radialGradient>
+          <linearGradient id="rimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ecc068"/>
+            <stop offset="50%" stop-color="#d9a441"/>
+            <stop offset="100%" stop-color="#8a5a1e"/>
+          </linearGradient>
+        </defs>
+        <!-- Shield Outer Rim -->
+        <circle cx="32" cy="32" r="30" fill="url(#shieldGrad)" stroke="url(#rimGrad)" stroke-width="3.5"/>
+        <!-- Inner Rim Inset -->
+        <circle cx="32" cy="32" r="24" fill="none" stroke="#2b333c" stroke-width="1.2" stroke-dasharray="4 2"/>
+        <!-- Central Boss Rim -->
+        <circle cx="32" cy="32" r="10" fill="#181d23" stroke="url(#rimGrad)" stroke-width="2.5"/>
+        <!-- Central Boss Rivet -->
+        <circle cx="32" cy="32" r="4" fill="#d9a441"/>
+        <!-- Norse Algiz Rune (Protection) in amber -->
+        <path d="M32 24 L32 8 M32 16 L22 8 M32 16 L42 8" stroke="#d9a441" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Bottom Cross Rune -->
+        <path d="M32 40 L32 56 M26 48 L38 48" stroke="#d9a441" stroke-width="2" stroke-linecap="round"/>
+        <!-- Left & Right Iron Rivets -->
+        <circle cx="10" cy="32" r="1.5" fill="#d9a441"/>
+        <circle cx="54" cy="32" r="1.5" fill="#d9a441"/>
+      </svg>
+    </div>
+
+    <div class="main-body">
+      <h1 id="title" class="card-title">VALHEIM COMPANION</h1>
+      <div id="section-sub" class="section-subtitle"></div>
+      <p id="desc" class="card-description"></p>
+    </div>
+
+    <div class="card-footer">
+      <span id="site-url" class="site-url"></span>
+    </div>
+  </div>
+
+  <script src="card.js"></script>
+</body>
+</html>
