@@ -45,9 +45,15 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | **VC-16** | sdílené jádro i18n (13 jazyků, `vc.language`), rozcestník přeložený, Runopis napojený | — | ⏳ fronta 1 |
 | **VC-17** | Bestiary + Armourer v 13 jazycích, místní názvy z jazykových odkazů wiki | — | ⏳ fronta 2 |
 | **VC-18** | Damage Calculator v 13 jazycích + místní názvy | — | ⏳ fronta 3 |
+| **VC-19** | Progress Tracker: sdílený stav `vc.progress` + stránka `/progress/` | — | ⏳ fronta 4 |
+| **VC-20** | napojení Progress na Bestiary, Armourer, kalkulačku a rozcestník | — | ⏳ fronta 5 |
+| **VC-21** | Provisions data (jídla, medoviny, feasty, stanice) + sdílený košík `shared/shopping` | — | ⏳ fronta 6 |
+| **VC-22** | stránka Provisions `/provisions/` | — | ⏳ fronta 7 |
 
-### Po frontě (rozhodne Pavel)
-Návrhy z [`NAVRHY-NASTROJU.md`](NAVRHY-NASTROJU.md). Doporučené pořadí orchestrátora: **Progress Tracker** (S, infrastruktura pro spoilery) → **Provisions** (Food & Mead, M) → Comfort Planner → Expedition. Zatím nejsou zadané.
+### Po frontě
+Pavel 6. 10. schválil **Progress Tracker** a **Provisions** (VC-19 až VC-22, po dokončení VC-15 až VC-18). Další kandidáti z [`NAVRHY-NASTROJU.md`](NAVRHY-NASTROJU.md): Comfort Planner, Expedition, Trader Ledger, Fishing, Taming. Zatím nejsou schválené.
+
+**Zásada:** každý nový nástroj a funkce je od začátku ve 13 jazycích (ANALYZA § 15 a zásada před § 16).
 
 ## Známé drobnosti (neřešené)
 
@@ -60,7 +66,6 @@ Návrhy z [`NAVRHY-NASTROJU.md`](NAVRHY-NASTROJU.md). Doporučené pořadí orch
 ## Na Pavlovi
 
 - Vypnout starou appku **valheim-signs.teuferon.click** v EasyPanelu. Repo `pawlig/valheim-signs` je smazané, lokální složka taky.
-- Rozhodnout, které nové nástroje dělat a v jakém pořadí.
 - Případně povolit Codex (CX/CS z marchboundu), pokud kvóty agy/zai nestačí.
 
 ## Kvóty (6. 10. 2026, 12:30)

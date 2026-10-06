@@ -310,3 +310,44 @@ Ověřeno 6. 10. 2026. Infobox zbraně rychlost útoku nemá. Je ve **vykreslen�
   - ⛔ názvy z hry se strojově nepřekládají
 - Popisy z wiki (odstavce o jednotkách a zbraních) zůstávají anglicky a UI to nikde neskrývá.
 - **Překlady UI** dělá agent. Termíny hry (Slash, Pierce, Blunt…, Meadows…) má překládat tak, jak je používá hra a jazykové wiki. Kde wiki má název, má přednost.
+
+> **Zásada (Pavel, 6. 10. 2026): každý nový nástroj a každá nová funkce je od začátku ve 13 jazycích** přes sdílené jádro `shared/i18n/` (§ 15). Platí to i pro názvy z hry (`names` z jazykových odkazů wiki). Žádné zadání bez katalogu `locales/messages.json` a přepínače jazyka.
+
+## 16. Progress Tracker (VC-19, VC-20)
+
+- Nová sekce `/progress/` (`apps/progress/`, statická jako Bestiary). Hráč si odškrtává, kam se ve hře dostal. Ostatní nástroje se podle toho samy odemknou, takže nebude potřeba odemykat biomy v každém zvlášť.
+- **Sdílený stav** `vc.progress` (localStorage, JSON) obsluhuje klasický skript `shared/progress/core.js` (`globalThis.VCProgress`):
+  ```json
+  { "version": 1,
+    "defeated": { "eikthyr": true, "the-elder": true },
+    "visited": ["meadows", "black-forest", "ocean"],
+    "milestones": { "forge": true } }
+  ```
+  - `revealedBiomes()` = sjednocení `visited`, ručně otevřených biomů (`vc.openBiomes`) a **biomu následujícího po posledním poraženém bossovi** (porazím Eikthyra → odemkne se Black Forest).
+  - `onChange(cb)` reaguje i na událost `storage` z jiné záložky.
+  - `exportToUrl()` / `importFromUrl()`: stav jako base64url v `#p=…`, pro přenos mezi zařízeními.
+- **Checklist po biomech** (data z `data/biomes.json` a `data/creatures.json`):
+  - boss a jeho vyvolání (`summon` z infoboxu, např. „Malicious Blood x3“)
+  - minibossové
+  - „byl jsem tam“
+  - klíčové milníky: suroviny nebo předměty z dropu bosse, které otevírají další biom (Hard Antler → měď a cín, Swamp Key, Wishbone, Dragon Tear, Torn Spirit, Queen Drop, Fader Drop…). Bere se `drops` bosse z dat, ⛔ nevymýšlí se.
+- Spoilery: checklist neukazuje jména bossů ani předmětů z biomů, které nejsou odemčené. Místo nich je „🔒 Biome N“ a tlačítko „Reveal“.
+- **Integrace (VC-20):** Bestiary, Armourer a Damage Calculator berou odemčené biomy z `VCProgress.revealedBiomes()`. Damage Calculator nastaví výchozí pozici posuvníku progrese podle posledního odemčeného biomu, pokud uživatel nemá vlastní volbu v URL. Rozcestník ukáže v záhlaví souhrn postupu („5 / 9 biomes · 4 bosses defeated“) a kartu Progress.
+
+## 17. Provisions: jídlo a medovina (VC-21, VC-22)
+
+- Nová sekce `/provisions/` (`apps/provisions/`, statická). Hráč skládá 3 jídla a medoviny na výpravu a dostane součet statů a nákupní seznam surovin.
+- **Data** (ověřeno 6. 10. 2026):
+  - `Category:Food` (~102), `{{infobox item}}` s `type = Food`: `health`, `stamina`, `eitr`, `duration` (s), `healing` („4 hp/tick“), `materials`, `source` („[[Cauldron]] (level 2)“, Cooking Station, Oven…), `quantity`
+  - Medovina: stránky `type = Mead` (~21): `effect`, `duration`, `cooldown` a recept na mead base (tabber), fermentace ve Fermenteru
+  - Feasty: tabulka na stránce *Feast*
+  - Úrovně kotle a jejich vylepšení: stránka *Cauldron*
+- **Funkce:**
+  - jídla a medoviny seskupené po biomech (tier podle surovin), zamčené podle `VCProgress`
+  - filtr podle zaměření (HP / Stamina / Eitr / vyvážené)
+  - 3 sloty na jídlo + sloty na medovinu
+  - souhrn: HP, stamina, eitr, léčení a nejkratší doba trvání
+  - „na kolik hodin hraní“ → počet porcí
+  - nákupní seznam s rozpadem na základní suroviny, stanicemi a jejich potřebnou úrovní a zdroji (jednotky v Bestiary, místa)
+  - uložení `vp.loadout`, sdílení v URL
+- **Sdílený košík:** výpočet nákupního seznamu a rozpadu z Armouru se vytáhne do `shared/shopping/core.js` a používá ho Armourer i Provisions. Bez kopie logiky.
