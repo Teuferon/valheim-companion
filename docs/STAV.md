@@ -20,6 +20,7 @@
 | `/progress/` | Progress Tracker | `apps/progress/` + `shared/progress/` (panel na každé stránce) | ✅ sdílený stav `vc.progress`, odemyká spoilery ve všech nástrojích |
 | `/provisions/` | Provisions | `apps/provisions/` | ✅ jídla, medoviny, feasty, loadout, nákupní seznam |
 | `/comfort/` | Comfort Planner | `apps/comfort/` | ✅ comfort a Rested, Best I can build, Next upgrades, nákupní seznam, maxima po biomech sedí s wiki |
+| `/expedition/` | Expedition | `apps/expedition/` | ✅ Boss prep (zbraně z Bestiary, obrana, jídlo z Provisions, balicí a nákupní seznam) a Raids (teď / skončené / po dalším bossovi) |
 | `/signs/` | Sign Editor (Runopis) | `apps/signs/` (React + Vite, převzato subtree z `valheim-signs`) | ✅ 13 jazyků |
 
 Pořadí biomů ve všech nástrojích je jedno (ANALYZA § 14): Meadows, Black Forest, **Ocean**, Swamp, Mountain, Plains, Mistlands, Ashlands, Deep North. Platí `tier = order`.
@@ -65,7 +66,7 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | VC-33 | množná čísla ve všech 13 jazycích (`tn` + `Intl.PluralRules`, test `plural-rendering`), tip porcí v Provisions skloňuje porce i hodiny | Sol | ✅ |
 | VC-34 | Provisions: plánovač podle činnosti (top 3 kombinace, medoviny podle biomu/bosse, 13 ověřených tipů) | Sol | ✅ |
 | VC-35 | **Comfort Planner** `/comfort/` (ANALYZA § 24): comfort, Rested, Best I can build, Next upgrades, nákupní seznam | Sol | ✅ (+ oprava: celé dávky výroby ve sdíleném košíku, záložka Progress nepřekrývá obsah) |
-| VC-36 | **Expedition** `/expedition/` (ANALYZA § 25): příprava na bosse (zbraně, obrana, jídlo, balicí a nákupní seznam) a nájezdy podle postupu | Sol | 🔄 běží |
+| VC-36 | **Expedition** `/expedition/` (ANALYZA § 25): příprava na bosse (zbraně, obrana, jídlo, balicí a nákupní seznam) a nájezdy podle postupu | Sol | ✅ (po vrácení: auto výběr bosse, počet medovin podle cooldownu, bundly, formát) |
 
 ### Po frontě
 Pracovníci od 6. 10.: agy je vyčerpaný (týden 4 %, obnova 8. 10.), práci dělá **Codex Sol**. Pavel 6. 10. schválil pořadí: překlady (VC-16 až VC-18), **vylepšení stávajících nástrojů** (VC-23 až VC-27), potom **Progress Tracker** a **Provisions** (VC-19 až VC-22). Další kandidáti z [`NAVRHY-NASTROJU.md`](NAVRHY-NASTROJU.md): **Comfort Planner schválen 6. 10. (VC-35)**, **Expedition schválen 7. 10. (VC-36)**. Trader Ledger, Fishing a Taming zatím schválené nejsou.
@@ -76,6 +77,7 @@ Pracovníci od 6. 10.: agy je vyčerpaný (týden 4 %, obnova 8. 10.), práci d�
 
 
 
+- Expedition: zabití nebossů (Troll, Brenna…) a vrácení Hildir truhel se odhaduje podle odemčeného biomu; player-based raids se nepočítají; Malicious Blood nemá na wiki údaj o teleportu.
 - Comfort Planner: wiki nemá recept na Carved Chair a Moose Hide Carpet, nedoporučují se (maxima tím nejsou dotčená).
 - Ember Charge je jediná doporučovaná bomba. Ostatní bomby mají `recommendable: false`, protože wiki neuvádí plošné poškození.
 - Popisy z wiki zůstanou po překladu anglicky (ANALYZA § 15).
