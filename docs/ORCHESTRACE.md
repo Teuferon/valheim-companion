@@ -32,7 +32,7 @@ node scripts/pust-gl.mjs --zadani $SCRATCH/VC-<n>.zadani.md --strom /Users/pavel
 node scripts/pust-cs.mjs --zadani $SCRATCH/VC-<n>.zadani.md --strom /Users/paveldvorak/gameroot/valheim-units-CS --vystup $SCRATCH/cs-VC-<n>.json --minut 90
 ```
 
-Kvóty: `node scripts/limit-agy.mjs --ted` a `node scripts/limit-zai.mjs --ted`. Codex podle `docs/prace/45` v marchboundu: pouští se, dokud limit nedojde (návratový kód 10).
+Kvóty: `node ~/webroot/dashboard/bin/prace.mjs usage` **jednou za kolo** (Pavel 8. 10. 2026: limity jen odtud). `limit-agy.mjs`/`limit-zai.mjs --ted` jen když hlásí „pult nedostupný". Launchery samy skončí kódem 10/11, když limit nestačí.
 
 - **Sol** běží s `--dangerously-bypass-approvals-and-sandbox` a smí npm, testy i git. Pravidla zadání jsou stejná jako u agy: hotové zadání, kroky s commitem a výčet souborů v ROZSAHU. Worktree `../valheim-units-CS`. Commity značkuj `[CS/sol]`.
 - Sol může běžet souběžně s agy nebo zai, protože je to jiný slot. Musí ale mít vlastní worktree a úlohy se nesmějí překrývat v souborech.
@@ -40,7 +40,7 @@ Kvóty: `node scripts/limit-agy.mjs --ted` a `node scripts/limit-zai.mjs --ted`.
 ### Pravidla a pasti (všechny se už staly)
 
 - **Jen jeden agy/zai agent na Macu najednou, napříč všemi projekty** (hriva a marchbound je používají taky). Před spuštěním: `pgrep -lf "^agy |pust-gl.mjs"`.
-- ⛔ **Nikdy nečekej ve smyčce přes `pgrep -f "agy -p"`**: vzor najde i samotnou smyčku a ta pak čeká navždy (stalo se 6. 10., ztráta celé noci). Na konec agenta čekej přes `run_in_background` přímo na launcheru. Pro čekání na čas používej `until [ "$(date +%H)" -ge 12 ]; do sleep 60; done`.
+- ⛔ **Nikdy nečekej ve smyčce přes `pgrep -f "agy -p"`**: vzor najde i samotnou smyčku a ta pak čeká navždy (stalo se 6. 10., ztráta celé noci). Na konec agenta čekej přes `run_in_background` přímo na launcheru a **nic mezitím nekontroluj** — žádný `tail` výstupu, `sleep`/`until` ani `git log` worktree (každá kontrola znovu přečte celý kontext orchestrátora; Pavel 8. 10. 2026). Průběh, když je opravdu potřeba: `Monitor` filtrovaný na změnu stavu. Na čas čekej `ScheduleWakeup`, ⛔ ne `sleep` smyčkou.
 - **agy** má pevný `--print-timeout 45m`. Když narazí, commitnuté kroky zůstanou a necommitnutá práce je ve worktree a v `refs/zachrana/VC-<n>`. Rozpracované věci commitni jako WIP (`… (zai/agy, interrupted)`) a pusť navazující zadání s hlavičkou „🔁 NAVAZUJEŠ…“. `pust-gm` vyžaduje čistý strom.
 - **zai** smí jen `git`, `node`, `npm run build`, `npx tsc`, `ls/cat/grep/sed -n/find/mkdir/echo`. ⛔ Nesmí `npm test`, `npm ci`, `npm run <jiné>` ani WebFetch.
   - Nástroje se proto volají přes node, např. `node apps/damage-calculator/node_modules/tsx/dist/cli.mjs …`, `node apps/damage-calculator/node_modules/typescript/bin/tsc --noEmit -p apps/damage-calculator`.
@@ -49,6 +49,8 @@ Kvóty: `node scripts/limit-agy.mjs --ted` a `node scripts/limit-zai.mjs --ted`.
 - Síť: agenti stahují z wiki jen přes `scripts/wiki/api.mjs` (cache `data/raw/`, 300 ms mezi požadavky, User-Agent). Druhý běh pipeline musí jet z cache a nic nezměnit.
 
 ## 3. Přejímka (po každé úloze)
+
+Body 1–6 dělá **v čerstvém kontextu** `Agent` se `subagent_type: "prejimka"` (zadání, worktree, větev) — do kontextu orchestrátora jde jen verdikt. Orchestrátor sám: prohlížeč (bod 7), merge a deploy (8–9). Výstupy testů a buildu vždy s ořezem (`| tail -30`).
 
 1. `git log --oneline main..HEAD`, `git status --short`, `git diff --name-only main...HEAD`: rozsah sedí se zadáním?
 2. Testy:
@@ -80,6 +82,10 @@ Kvóty: `node scripts/limit-agy.mjs --ted` a `node scripts/limit-zai.mjs --ted`.
    ```
    Push spustí deploy. Ověř živý web přes `curl` (status, `<title>`, konkrétní řetězec).
 9. Ukliď worktree a větve (`git worktree remove`, `git branch -d prace/…`) a aktualizuj **`docs/STAV.md`**.
+
+## 3a. Předávka sezení (Pavel 8. 10. 2026)
+
+Po 5 převzatých úlohách nebo když `node ~/.claude/skills/pracovnici/kontext.mjs` hlásí `PŘEDÁVKA` (> 250k), na hranici kola: předávací zápis (≤ 15 řádků: co běží kde, worktree, co čeká na přejímku, další krok) nahoru do `docs/STAV.md`, commit + push, Pavlovi `🔄 Předávka zapsána — /clear a „pokračuj"`. Nové sezení čte tento dokument + zápis, ne historii. Pravidla: globální skill `pracovnici` § 6.
 
 Konflikty mezi souběžnými větvemi (rozcestník, `build-site.mjs`, `Dockerfile`, `nginx.conf`, README) řeší orchestrátor tak, že zachová obě strany.
 
