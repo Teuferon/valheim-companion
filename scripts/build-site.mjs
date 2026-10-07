@@ -59,12 +59,7 @@ export function buildSite() {
   buildI18n();
   buildSearchIndex();
   buildProgressData();
-  const provisions = buildProvisionsData();
-  // Expedition supplements its host bundles without changing their output.
-  provisions.stations = provisions.stations.filter(s => s.type !== 'expedition');
-  provisions.items = Object.fromEntries(Object.entries(provisions.items).filter(([,item]) => !item.expedition));
-  writeFileSync(path.join(REPO_ROOT, 'apps/provisions/data/data.js'),
-    `window.VPR_DATA = ${JSON.stringify(provisions, null, 2)};\n`);
+  buildProvisionsData();
   buildComfortData();
   buildExpeditionData();
 

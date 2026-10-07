@@ -321,7 +321,8 @@
     "id": "galdr-table",
     "name": "Galdr Table",
     "names": {},
-    "type": "expedition",
+    "type": "crafting",
+    "addedBy": "expedition",
     "materials": [
       {
         "item": "black-metal",

@@ -3,9 +3,9 @@ const load = name => JSON.parse(readFileSync(new URL('../data/' + name + '.json'
 export function buildExpeditionData() {
   const data = { events: load('events'), expedition: {
     bosses: load('expedition'),
-    // Only Expedition's additions supplement the immutable host bundles.
-    items: Object.fromEntries(load('items').filter(i => i.expedition).map(i => [i.id,i])),
-    stations: load('stations').filter(s => s.type === 'expedition'),
+    // Track only Expedition's additions; reuse the host recommendation bundles.
+    items: Object.fromEntries(load('items').filter(i => i.addedBy === 'expedition').map(i => [i.id,i])),
+    stations: load('stations').filter(s => s.addedBy === 'expedition'),
   }, tips: load('expedition-tips') };
   const dest = new URL('../apps/expedition/data/data.js', import.meta.url);
   mkdirSync(new URL('../apps/expedition/data/', import.meta.url), { recursive: true });

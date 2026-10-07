@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { parseEvents, parseBoss } from './fetch-expedition.mjs';
+import { parseEvents, parseBoss, parseItemSources } from './fetch-expedition.mjs';
 import { eventRows, enrichCreatures } from './creature-extras.mjs';
 const load = name => JSON.parse(readFileSync(new URL('../../data/' + name + '.json', import.meta.url)));
 const creatures = load('creatures');
@@ -104,4 +104,14 @@ test('missing wiki fields stay null; Queen needs the verified key', () => {
   assert.equal(parseBoss(creatures.find(c=>c.id==='eikthyr'),'','').forsakenPower,null);
   assert.deepEqual(load('expedition').find(b=>b.id==='the-queen').summonItems,[{id:'sealbreaker',count:1}]);
   assert.equal(load('expedition').find(b=>b.id==='kall-fimbulbringer').forsakenPower,null);
+});
+
+test('item source parsing removes wiki bullets before classifying sources',()=>{
+  const creatures=new Map([['greydwarf-brute',{id:'greydwarf-brute',name:'Greydwarf Brute',biomes:['black-forest']}]]);
+  const sources=parseItemSources('*[[Greydwarf Brute]]<br/>* [[Greydwarf Nest]]',creatures);
+  assert.equal(sources[0].text,'Greydwarf Brute');
+  assert.equal(sources[0].kind,'creature');
+  assert.equal(sources[0].creatureId,'greydwarf-brute');
+  assert.equal(sources[1].text,'Greydwarf Nest');
+  assert.ok(sources.every(s=>!s.text.startsWith('*')));
 });

@@ -1586,13 +1586,14 @@ window.VCX_DATA = {
       "ancient-seed": {
         "id": "ancient-seed",
         "name": "Ancient Seed",
+        "addedBy": "expedition",
         "names": {},
         "image": null,
         "biome": "black-forest",
         "tier": 2,
         "sources": [
           {
-            "text": "*Greydwarf Brute",
+            "text": "Greydwarf Brute",
             "kind": "creature",
             "creatureId": "greydwarf-brute",
             "biomes": [
@@ -1600,18 +1601,18 @@ window.VCX_DATA = {
             ]
           },
           {
-            "text": "*Greydwarf Nest",
+            "text": "Greydwarf Nest",
             "kind": "other"
           }
         ],
         "recipe": null,
         "teleportable": true,
-        "wiki": "https://valheim.weirdgloop.org/w/Ancient_Seed",
-        "expedition": true
+        "wiki": "https://valheim.weirdgloop.org/w/Ancient_Seed"
       },
       "bell": {
         "id": "bell",
         "name": "Bell",
+        "addedBy": "expedition",
         "names": {},
         "image": null,
         "biome": "ashlands",
@@ -1634,12 +1635,12 @@ window.VCX_DATA = {
           "yields": 1
         },
         "teleportable": true,
-        "wiki": "https://valheim.weirdgloop.org/w/Bell",
-        "expedition": true
+        "wiki": "https://valheim.weirdgloop.org/w/Bell"
       },
       "bell-fragment": {
         "id": "bell-fragment",
         "name": "Bell Fragment",
+        "addedBy": "expedition",
         "names": {},
         "image": null,
         "biome": "ashlands",
@@ -1652,12 +1653,12 @@ window.VCX_DATA = {
         ],
         "recipe": null,
         "teleportable": true,
-        "wiki": "https://valheim.weirdgloop.org/w/Bell_Fragment",
-        "expedition": true
+        "wiki": "https://valheim.weirdgloop.org/w/Bell_Fragment"
       },
       "dragon-egg": {
         "id": "dragon-egg",
         "name": "Dragon Egg",
+        "addedBy": "expedition",
         "names": {},
         "image": null,
         "biome": "mountain",
@@ -1670,12 +1671,12 @@ window.VCX_DATA = {
         ],
         "recipe": null,
         "teleportable": false,
-        "wiki": "https://valheim.weirdgloop.org/w/Dragon_Egg",
-        "expedition": true
+        "wiki": "https://valheim.weirdgloop.org/w/Dragon_Egg"
       },
       "fuling-totem": {
         "id": "fuling-totem",
         "name": "Fuling Totem",
+        "addedBy": "expedition",
         "names": {},
         "image": null,
         "biome": "plains",
@@ -1696,12 +1697,12 @@ window.VCX_DATA = {
         ],
         "recipe": null,
         "teleportable": true,
-        "wiki": "https://valheim.weirdgloop.org/w/Fuling_Totem",
-        "expedition": true
+        "wiki": "https://valheim.weirdgloop.org/w/Fuling_Totem"
       },
       "malicious-blood": {
         "id": "malicious-blood",
         "name": "Malicious Blood",
+        "addedBy": "expedition",
         "names": {},
         "image": null,
         "biome": "deep-north",
@@ -1714,12 +1715,12 @@ window.VCX_DATA = {
         ],
         "recipe": null,
         "teleportable": null,
-        "wiki": "https://valheim.weirdgloop.org/w/Malicious_Blood",
-        "expedition": true
+        "wiki": "https://valheim.weirdgloop.org/w/Malicious_Blood"
       },
       "portal": {
         "id": "portal",
         "name": "Portal",
+        "addedBy": "expedition",
         "names": {},
         "image": null,
         "biome": "black-forest",
@@ -1750,12 +1751,12 @@ window.VCX_DATA = {
           "yields": 1
         },
         "teleportable": null,
-        "wiki": "https://valheim.weirdgloop.org/w/Portal",
-        "expedition": true
+        "wiki": "https://valheim.weirdgloop.org/w/Portal"
       },
       "sealbreaker": {
         "id": "sealbreaker",
         "name": "Sealbreaker",
+        "addedBy": "expedition",
         "names": {},
         "image": null,
         "biome": "mistlands",
@@ -1778,12 +1779,12 @@ window.VCX_DATA = {
           "yields": 1
         },
         "teleportable": true,
-        "wiki": "https://valheim.weirdgloop.org/w/Sealbreaker",
-        "expedition": true
+        "wiki": "https://valheim.weirdgloop.org/w/Sealbreaker"
       },
       "sealbreaker-fragment": {
         "id": "sealbreaker-fragment",
         "name": "Sealbreaker Fragment",
+        "addedBy": "expedition",
         "names": {},
         "image": null,
         "biome": "mistlands",
@@ -1796,12 +1797,12 @@ window.VCX_DATA = {
         ],
         "recipe": null,
         "teleportable": true,
-        "wiki": "https://valheim.weirdgloop.org/w/Sealbreaker_Fragment",
-        "expedition": true
+        "wiki": "https://valheim.weirdgloop.org/w/Sealbreaker_Fragment"
       },
       "withered-bone": {
         "id": "withered-bone",
         "name": "Withered Bone",
+        "addedBy": "expedition",
         "names": {},
         "image": null,
         "biome": "swamp",
@@ -1818,8 +1819,7 @@ window.VCX_DATA = {
         ],
         "recipe": null,
         "teleportable": true,
-        "wiki": "https://valheim.weirdgloop.org/w/Withered_Bone",
-        "expedition": true
+        "wiki": "https://valheim.weirdgloop.org/w/Withered_Bone"
       }
     },
     "stations": [
@@ -1827,7 +1827,8 @@ window.VCX_DATA = {
         "id": "galdr-table",
         "name": "Galdr Table",
         "names": {},
-        "type": "expedition",
+        "type": "crafting",
+        "addedBy": "expedition",
         "materials": [
           {
             "item": "black-metal",

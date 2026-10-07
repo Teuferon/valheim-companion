@@ -58,13 +58,14 @@
   {
     "id": "ancient-seed",
     "name": "Ancient Seed",
+    "addedBy": "expedition",
     "names": {},
     "image": null,
     "biome": "black-forest",
     "tier": 2,
     "sources": [
       {
-        "text": "*Greydwarf Brute",
+        "text": "Greydwarf Brute",
         "kind": "creature",
         "creatureId": "greydwarf-brute",
         "biomes": [
@@ -72,14 +73,13 @@
         ]
       },
       {
-        "text": "*Greydwarf Nest",
+        "text": "Greydwarf Nest",
         "kind": "other"
       }
     ],
     "recipe": null,
     "teleportable": true,
-    "wiki": "https://valheim.weirdgloop.org/w/Ancient_Seed",
-    "expedition": true
+    "wiki": "https://valheim.weirdgloop.org/w/Ancient_Seed"
   },
   {
     "id": "anglerfish",
@@ -536,6 +536,7 @@
   {
     "id": "bell",
     "name": "Bell",
+    "addedBy": "expedition",
     "names": {},
     "image": null,
     "biome": "ashlands",
@@ -558,12 +559,12 @@
       "yields": 1
     },
     "teleportable": true,
-    "wiki": "https://valheim.weirdgloop.org/w/Bell",
-    "expedition": true
+    "wiki": "https://valheim.weirdgloop.org/w/Bell"
   },
   {
     "id": "bell-fragment",
     "name": "Bell Fragment",
+    "addedBy": "expedition",
     "names": {},
     "image": null,
     "biome": "ashlands",
@@ -576,8 +577,7 @@
     ],
     "recipe": null,
     "teleportable": true,
-    "wiki": "https://valheim.weirdgloop.org/w/Bell_Fragment",
-    "expedition": true
+    "wiki": "https://valheim.weirdgloop.org/w/Bell_Fragment"
   },
   {
     "id": "berserkir-axes",
@@ -2962,6 +2962,7 @@
   {
     "id": "dragon-egg",
     "name": "Dragon Egg",
+    "addedBy": "expedition",
     "names": {},
     "image": null,
     "biome": "mountain",
@@ -2974,8 +2975,7 @@
     ],
     "recipe": null,
     "teleportable": false,
-    "wiki": "https://valheim.weirdgloop.org/w/Dragon_Egg",
-    "expedition": true
+    "wiki": "https://valheim.weirdgloop.org/w/Dragon_Egg"
   },
   {
     "id": "dragon-tear",
@@ -3725,6 +3725,7 @@
   {
     "id": "fuling-totem",
     "name": "Fuling Totem",
+    "addedBy": "expedition",
     "names": {},
     "image": null,
     "biome": "plains",
@@ -3745,8 +3746,7 @@
     ],
     "recipe": null,
     "teleportable": true,
-    "wiki": "https://valheim.weirdgloop.org/w/Fuling_Totem",
-    "expedition": true
+    "wiki": "https://valheim.weirdgloop.org/w/Fuling_Totem"
   },
   {
     "id": "giant-herring",
@@ -4531,6 +4531,7 @@
   {
     "id": "malicious-blood",
     "name": "Malicious Blood",
+    "addedBy": "expedition",
     "names": {},
     "image": null,
     "biome": "deep-north",
@@ -4543,8 +4544,7 @@
     ],
     "recipe": null,
     "teleportable": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Malicious_Blood",
-    "expedition": true
+    "wiki": "https://valheim.weirdgloop.org/w/Malicious_Blood"
   },
   {
     "id": "mandible",
@@ -7086,6 +7086,7 @@
   {
     "id": "portal",
     "name": "Portal",
+    "addedBy": "expedition",
     "names": {},
     "image": null,
     "biome": "black-forest",
@@ -7116,8 +7117,7 @@
       "yields": 1
     },
     "teleportable": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Portal",
-    "expedition": true
+    "wiki": "https://valheim.weirdgloop.org/w/Portal"
   },
   {
     "id": "pot-shard",
@@ -7854,6 +7854,7 @@
   {
     "id": "sealbreaker",
     "name": "Sealbreaker",
+    "addedBy": "expedition",
     "names": {},
     "image": null,
     "biome": "mistlands",
@@ -7876,12 +7877,12 @@
       "yields": 1
     },
     "teleportable": true,
-    "wiki": "https://valheim.weirdgloop.org/w/Sealbreaker",
-    "expedition": true
+    "wiki": "https://valheim.weirdgloop.org/w/Sealbreaker"
   },
   {
     "id": "sealbreaker-fragment",
     "name": "Sealbreaker Fragment",
+    "addedBy": "expedition",
     "names": {},
     "image": null,
     "biome": "mistlands",
@@ -7894,8 +7895,7 @@
     ],
     "recipe": null,
     "teleportable": true,
-    "wiki": "https://valheim.weirdgloop.org/w/Sealbreaker_Fragment",
-    "expedition": true
+    "wiki": "https://valheim.weirdgloop.org/w/Sealbreaker_Fragment"
   },
   {
     "id": "seasoning-of-the-gourd",
@@ -9175,6 +9175,7 @@
   {
     "id": "withered-bone",
     "name": "Withered Bone",
+    "addedBy": "expedition",
     "names": {},
     "image": null,
     "biome": "swamp",
@@ -9191,8 +9192,7 @@
     ],
     "recipe": null,
     "teleportable": true,
-    "wiki": "https://valheim.weirdgloop.org/w/Withered_Bone",
-    "expedition": true
+    "wiki": "https://valheim.weirdgloop.org/w/Withered_Bone"
   },
   {
     "id": "wolf-fang",

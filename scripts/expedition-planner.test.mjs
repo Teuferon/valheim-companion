@@ -49,10 +49,11 @@ test('browser bundle supplements only new materials and preserves the three data
   assert.deepEqual(Object.keys(bundle).sort(),['events','expedition','tips']);
   assert.equal(bundle.expedition.bosses.length,8);
   assert.equal(Object.keys(bundle.expedition.items).length,10);
-  assert.ok(Object.values(bundle.expedition.items).every(i=>i.expedition===true));
+  assert.ok(Object.values(bundle.expedition.items).every(i=>i.addedBy==='expedition'));
   assert.ok(!bundle.expedition.items.wood);
   assert.ok(bundle.expedition.items.portal.recipe.materials.length);
-  assert.ok(bundle.expedition.stations.some(s=>s.id==='galdr-table'));
+  assert.ok(bundle.expedition.stations.some(s=>s.id==='galdr-table'&&s.type==='crafting'&&s.addedBy==='expedition'));
+  assert.ok(Object.values(bundle.expedition.items).every(i=>!('expedition' in i)));
   assert.equal(core.nextBoss({},bundle).id,'eikthyr');
 });
 test('Expedition search keeps dedicated destinations and prerequisite biome metadata',()=>{

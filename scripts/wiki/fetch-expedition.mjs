@@ -17,6 +17,13 @@ const save = (name, value) => {
 const plain = value => cleanText(value ?? '').replace(/^"|"$/g, '').trim();
 const section = (wt, heading) => String(wt ?? '').match(new RegExp('^={2,3}\\s*' + heading + '\\s*={2,3}\\s*$([\\s\\S]*?)(?=^={2,3}[^=]|$(?![\\s\\S]))', 'mi'))?.[1]?.trim() ?? null;
 
+export function parseItemSources(source, creatures) {
+  const normalized = String(source ?? '')
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/^\s*\*+\s*/gm, '');
+  return parseSources(normalized, creatures);
+}
+
 export function parseEvents(wt, creatures) {
   const byId = new Map(creatures.map(c => [c.id, c])), unmatched = [];
   const match = (name, event) => {
@@ -69,19 +76,19 @@ export function parseBoss(boss, wt, powers) {
 }
 
 export async function fetchExpedition() {
-  const creatures = load('creatures'), items = load('items'), stations = load('stations');
+  const creatures = load('creatures'), items = load('items').filter(i => !i.expedition && i.addedBy !== 'expedition'), stations = load('stations');
   const bosses = creatures.filter(c => c.kind === 'boss').sort((a,b) => BIOMES.find(x => x.id === a.biomes[0]).order - BIOMES.find(x => x.id === b.biomes[0]).order);
   const titles = ['Events', ...bosses.map(b => b.name), 'Forsaken power', 'Ancient Seed', 'Withered Bone', 'Dragon Egg', 'Fuling Totem', 'Bell', 'Malicious Blood', 'Sealbreaker', 'Portal'];
   const pages = await api.getWikitext(titles);
   const { events, unmatched } = parseEvents(pages.Events.wikitext, creatures);
   const expedition = bosses.map(b => parseBoss(b, pages[b.name].wikitext, pages['Forsaken power'].wikitext));
   const stationAdditions = [];
-  for (const title of ['Galdr Table']) if (!stations.some(s => s.id === slug(title))) {
+  for (const title of ['Galdr Table']) if (!stations.some(s => s.id === slug(title) && s.type !== 'expedition' && s.addedBy !== 'expedition')) {
     const page = (await api.getWikitext([title]))[title];
     const box = parseTemplates(page.wikitext ?? '', 'infobox structure')[0];
     if (!box) throw new Error('Missing station: ' + title);
     const materials = parseMaterialList(box.materials).map(m => ({ item: slug(m.name), amount: m.amount }));
-    stationAdditions.push({ id: slug(title), name: title, names: {}, type: 'expedition', materials,
+    stationAdditions.push({ id: slug(title), name: title, names: {}, type: 'crafting', addedBy: 'expedition', materials,
       biome: 'mistlands', tier: 7, wiki: wiki(title) });
   }
   const pending = [...new Set([...expedition.flatMap(b => b.summonItems.map(m => m.id.replaceAll('-', ' '))), 'Portal',
@@ -102,8 +109,8 @@ export async function fetchExpedition() {
     const boss = expedition.find(b => b.summonItems.some(m => m.id === id));
     const override = load('overrides').expedition?.materials?.[id];
     const biome = override?.biome ?? boss?.biome ?? (id === 'portal' ? 'black-forest' : null);
-    additions.push({ id, name, expedition: true, names: {}, image: null, biome, tier: BIOMES.find(b => b.id === biome)?.order ?? null,
-      sources: parseSources(box.source, new Map(creatures.map(c => [c.id,c]))),
+    additions.push({ id, name, addedBy: 'expedition', names: {}, image: null, biome, tier: BIOMES.find(b => b.id === biome)?.order ?? null,
+      sources: parseItemSources(box.source, new Map(creatures.map(c => [c.id,c]))),
       recipe: materials.length ? { station: plain(box.source) || null, stationLevel: Number(box['crafting level']) || 1, materials, yields: Number(box.quantity) || 1 } : null,
       teleportable: /^no$/i.test(plain(box.teleport)) ? false : box.teleport ? true : null, wiki: wiki(name) });
   }
@@ -158,7 +165,7 @@ export async function fetchExpedition() {
     '- Incoming damage uses existing Bestiary attack maps; compound attack strings may not preserve every repeated component. Bestiary data is not changed.', '');
   save('events.json',events); save('expedition.json',expedition); save('expedition-tips.json',tips);
   save('items.json',[...items,...additions].sort((a,b)=>a.name<b.name?-1:a.name>b.name?1:0));
-  save('stations.json', [...stations, ...stationAdditions]);
+  save('stations.json', [...stations.map(s => stationAdditions.find(added => added.id === s.id) ?? s), ...stationAdditions.filter(s => !stations.some(old => old.id === s.id))]);
   save('report-expedition.md',lines.join('\n'));
   console.log(`Expedition: ${events.length} events, ${expedition.length} bosses, ${additions.length} new items; ${stations.length} existing stations.`);
 }
