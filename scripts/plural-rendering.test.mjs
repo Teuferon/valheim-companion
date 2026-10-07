@@ -112,7 +112,7 @@ function expedition(locale) {
   for (const path of ['shared/i18n/core.js', 'shared/shopping/core.js', 'shared/progress/core.js',
     'apps/expedition/data/data.js', 'apps/expedition/locales/messages.js', 'apps/expedition/assets/planner.js']) vm.runInContext(read(path), context);
   const source = read('apps/expedition/assets/app.js').replace(/^import[^\n]+\n/, '')
-    .split("for(const id of ['boss','raids'])document.getElementById")[0];
+    .split(/^for\s*\(const id of \['boss',\s*'raids'\]\)/m)[0];
   vm.runInContext(source + '\nglobalThis.renderers = { renderPacking, raidCard };', context);
   return context;
 }
