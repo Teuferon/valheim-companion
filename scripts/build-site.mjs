@@ -15,6 +15,7 @@ import { buildSearchIndex } from './build-search-index.mjs';
 import { buildProgressData } from './build-progress-data.mjs';
 import { buildProvisionsData } from './build-provisions-data.mjs';
 import { buildComfortData } from './build-comfort-data.mjs';
+import { buildExpeditionData } from './build-expedition-data.mjs';
 
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST_DIR = path.join(REPO_ROOT, 'dist');
@@ -60,6 +61,7 @@ export function buildSite() {
   buildProgressData();
   buildProvisionsData();
   buildComfortData();
+  buildExpeditionData();
 
   console.log('assembling dist/…');
   rmSync(DIST_DIR, { recursive: true, force: true });
@@ -120,6 +122,12 @@ export function buildSite() {
   mkdirSync(comfortDist, { recursive: true });
   for (const file of ['index.html', 'assets', 'locales', 'data', 'img']) {
     cpSync(path.join(REPO_ROOT, 'apps', 'comfort', file), path.join(comfortDist, file), { recursive: true });
+  }
+
+  const expeditionDist = path.join(DIST_DIR, 'expedition');
+  mkdirSync(expeditionDist, { recursive: true });
+  for (const file of ['index.html', 'assets', 'locales', 'data']) {
+    cpSync(path.join(REPO_ROOT, 'apps', 'expedition', file), path.join(expeditionDist, file), { recursive: true });
   }
 
   // 4. apps/signs/dist-static/* -> dist/signs/

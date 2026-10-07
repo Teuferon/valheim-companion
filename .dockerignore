@@ -31,6 +31,10 @@
 !apps/comfort/locales/messages.js
 !apps/comfort/data/data.js
 !apps/comfort/img/
+!apps/expedition/index.html
+!apps/expedition/assets/
+!apps/expedition/locales/messages.js
+!apps/expedition/data/data.js
 !apps/signs/
 !apps/damage-calculator/
 apps/signs/node_modules/

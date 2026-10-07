@@ -631,3 +631,5 @@ body {
   color: var(--text-muted);
   font-size: 0.88rem;
 }
+
+.card-expedition { background:linear-gradient(135deg,#223b2c,#161f1b); border-color:#52715b; }

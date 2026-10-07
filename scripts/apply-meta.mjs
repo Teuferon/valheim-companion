@@ -10,6 +10,11 @@ const CONFIG_FILE = path.join(REPO_ROOT, 'site.config.json');
 
 export const PAGES = [
   {
+    filePath: path.join(REPO_ROOT, 'apps', 'expedition', 'index.html'),
+    section: 'expedition', path: '/expedition/', title: 'Expedition — Valheim Companion',
+    description: 'Prepare for the next boss and the raids that come after it — weapons, defenses, food, meads and the full packing list.',
+  },
+  {
     filePath: path.join(REPO_ROOT, 'apps', 'comfort', 'index.html'),
     section: 'comfort', path: '/comfort/', title: 'Comfort Planner — Valheim Companion',
     description: 'Build the coziest Valheim base you can right now — comfort, Rested time and the full shopping list.',

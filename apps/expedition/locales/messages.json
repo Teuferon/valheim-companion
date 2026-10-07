@@ -1,0 +1,2400 @@
+{
+  "Reveal": {
+    "en": "Reveal",
+    "cs": "Odhalit",
+    "de": "Enthüllen",
+    "es": "Revelar",
+    "fr": "Révéler",
+    "pt": "Revelar",
+    "zh": "揭示",
+    "hi": "दिखाएँ",
+    "ar": "كشف",
+    "bn": "প্রকাশ করুন",
+    "ru": "Показать",
+    "ja": "表示",
+    "id": "Ungkap"
+  },
+  "Players nearby": {
+    "en": "Players nearby",
+    "cs": "Hráči poblíž",
+    "de": "Spieler in der Nähe",
+    "es": "Jugadores cercanos",
+    "fr": "Joueurs à proximité",
+    "pt": "Jogadores próximos",
+    "zh": "附近玩家",
+    "hi": "आसपास के खिलाड़ी",
+    "ar": "اللاعبون القريبون",
+    "bn": "কাছের খেলোয়াড়",
+    "ru": "Игроки поблизости",
+    "ja": "近くのプレイヤー",
+    "id": "Pemain di dekat"
+  },
+  "Copy list": {
+    "en": "Copy list",
+    "cs": "Kopírovat seznam",
+    "de": "Liste kopieren",
+    "es": "Copiar lista",
+    "fr": "Copier la liste",
+    "pt": "Copiar lista",
+    "zh": "复制清单",
+    "hi": "सूची कॉपी करें",
+    "ar": "نسخ القائمة",
+    "bn": "তালিকা কপি করুন",
+    "ru": "Скопировать список",
+    "ja": "リストをコピー",
+    "id": "Salin daftar"
+  },
+  "Copy failed. Select and copy the text below.": {
+    "en": "Copy failed. Select and copy the text below.",
+    "cs": "Kopírování selhalo. Označte a zkopírujte text níže.",
+    "de": "Kopieren fehlgeschlagen. Text unten auswählen und kopieren.",
+    "es": "Error al copiar. Selecciona y copia el texto de abajo.",
+    "fr": "Échec de copie. Sélectionnez et copiez le texte ci-dessous.",
+    "pt": "Falha ao copiar. Selecione e copie o texto abaixo.",
+    "zh": "复制失败。请选择并复制下面的文本。",
+    "hi": "कॉपी विफल। नीचे का पाठ चुनकर कॉपी करें।",
+    "ar": "فشل النسخ. حدد النص أدناه وانسخه.",
+    "bn": "কপি ব্যর্থ। নিচের লেখা বেছে কপি করুন।",
+    "ru": "Не удалось скопировать. Выделите и скопируйте текст ниже.",
+    "ja": "コピー失敗。下のテキストを選択してコピーしてください。",
+    "id": "Gagal menyalin. Pilih dan salin teks di bawah."
+  },
+  "Locked until you reach this biome.": {
+    "en": "Locked until you reach this biome.",
+    "cs": "Zamčeno, dokud se nedostanete do tohoto biomu.",
+    "de": "Gesperrt, bis du dieses Biom erreichst.",
+    "es": "Bloqueado hasta llegar a este bioma.",
+    "fr": "Verrouillé jusqu'à votre arrivée dans ce biome.",
+    "pt": "Bloqueado até alcançar este bioma.",
+    "zh": "到达此生物群系后解锁。",
+    "hi": "इस बायोम तक पहुँचने पर खुलेगा।",
+    "ar": "مقفل حتى تصل إلى هذه المنطقة.",
+    "bn": "এই বায়োমে পৌঁছালে খুলবে।",
+    "ru": "Закрыто, пока вы не достигнете этого биома.",
+    "ja": "このバイオームに到達すると解除されます。",
+    "id": "Terkunci sampai Anda mencapai bioma ini."
+  },
+  "{count}× {name}": {
+    "en": {
+      "one": "{count}× {name}",
+      "other": "{count}× {name}"
+    },
+    "cs": {
+      "one": "{count}× {name}",
+      "few": "{count}× {name}",
+      "many": "{count}× {name}",
+      "other": "{count}× {name}"
+    },
+    "de": {
+      "one": "{count}× {name}",
+      "other": "{count}× {name}"
+    },
+    "es": {
+      "one": "{count}× {name}",
+      "many": "{count}× {name}",
+      "other": "{count}× {name}"
+    },
+    "fr": {
+      "one": "{count}× {name}",
+      "many": "{count}× {name}",
+      "other": "{count}× {name}"
+    },
+    "pt": {
+      "one": "{count}× {name}",
+      "many": "{count}× {name}",
+      "other": "{count}× {name}"
+    },
+    "zh": {
+      "other": "{count}× {name}"
+    },
+    "hi": {
+      "one": "{count}× {name}",
+      "other": "{count}× {name}"
+    },
+    "ar": {
+      "zero": "{count}× {name}",
+      "one": "{count}× {name}",
+      "two": "{count}× {name}",
+      "few": "{count}× {name}",
+      "many": "{count}× {name}",
+      "other": "{count}× {name}"
+    },
+    "bn": {
+      "one": "{count}× {name}",
+      "other": "{count}× {name}"
+    },
+    "ru": {
+      "one": "{count}× {name}",
+      "few": "{count}× {name}",
+      "many": "{count}× {name}",
+      "other": "{count}× {name}"
+    },
+    "ja": {
+      "other": "{count}× {name}"
+    },
+    "id": {
+      "other": "{count}× {name}"
+    }
+  },
+  "Source": {
+    "en": "Source",
+    "cs": "Zdroj",
+    "de": "Quelle",
+    "es": "Fuente",
+    "fr": "Source",
+    "pt": "Fonte",
+    "zh": "来源",
+    "hi": "स्रोत",
+    "ar": "المصدر",
+    "bn": "উৎস",
+    "ru": "Источник",
+    "ja": "出典",
+    "id": "Sumber"
+  },
+  "Weapons": {
+    "en": "Weapons",
+    "cs": "Zbraně",
+    "de": "Waffen",
+    "es": "Armas",
+    "fr": "Armes",
+    "pt": "Armas",
+    "zh": "武器",
+    "hi": "हथियार",
+    "ar": "الأسلحة",
+    "bn": "অস্ত্র",
+    "ru": "Оружие",
+    "ja": "武器",
+    "id": "Senjata"
+  },
+  "Shopping list": {
+    "en": "Shopping list",
+    "cs": "Nákupní seznam",
+    "de": "Einkaufsliste",
+    "es": "Lista de compras",
+    "fr": "Liste d'achats",
+    "pt": "Lista de compras",
+    "zh": "购物清单",
+    "hi": "खरीदारी सूची",
+    "ar": "قائمة التسوق",
+    "bn": "কেনাকাটার তালিকা",
+    "ru": "Список покупок",
+    "ja": "買い物リスト",
+    "id": "Daftar belanja"
+  },
+  "Show raw materials": {
+    "en": "Show raw materials",
+    "cs": "Ukázat základní suroviny",
+    "de": "Rohmaterialien anzeigen",
+    "es": "Mostrar materias primas",
+    "fr": "Afficher les matières premières",
+    "pt": "Mostrar matérias-primas",
+    "zh": "显示原材料",
+    "hi": "कच्ची सामग्री दिखाएँ",
+    "ar": "إظهار المواد الخام",
+    "bn": "কাঁচামাল দেখান",
+    "ru": "Показать сырьё",
+    "ja": "原材料を表示",
+    "id": "Tampilkan bahan mentah"
+  },
+  "Sources": {
+    "en": "Sources",
+    "cs": "Zdroje",
+    "de": "Quellen",
+    "es": "Fuentes",
+    "fr": "Sources",
+    "pt": "Fontes",
+    "zh": "来源",
+    "hi": "स्रोत",
+    "ar": "المصادر",
+    "bn": "উৎস",
+    "ru": "Источники",
+    "ja": "入手先",
+    "id": "Sumber"
+  },
+  "Required stations": {
+    "en": "Required stations",
+    "cs": "Potřebné stanice",
+    "de": "Benötigte Stationen",
+    "es": "Estaciones necesarias",
+    "fr": "Stations requises",
+    "pt": "Estações necessárias",
+    "zh": "所需工作台",
+    "hi": "आवश्यक स्टेशन",
+    "ar": "المحطات المطلوبة",
+    "bn": "প্রয়োজনীয় স্টেশন",
+    "ru": "Нужные станции",
+    "ja": "必要な設備",
+    "id": "Stasiun yang dibutuhkan"
+  },
+  "Station building materials are shown separately.": {
+    "en": "Station building materials are shown separately.",
+    "cs": "Materiál na stavbu stanic je uveden zvlášť.",
+    "de": "Baumaterialien für Stationen werden separat angezeigt.",
+    "es": "Los materiales para construir estaciones se muestran aparte.",
+    "fr": "Les matériaux de construction des ateliers sont affichés séparément.",
+    "pt": "Os materiais para construir estações são mostrados separadamente.",
+    "zh": "工作台建造材料单独列出。",
+    "hi": "स्टेशन बनाने की सामग्री अलग दिखाई जाती है।",
+    "ar": "تُعرض مواد بناء المحطات بشكل منفصل.",
+    "bn": "স্টেশন তৈরির উপকরণ আলাদাভাবে দেখানো হয়।",
+    "ru": "Материалы для станций показаны отдельно.",
+    "ja": "作業設備の建築材料は別に表示されます。",
+    "id": "Bahan untuk membangun stasiun ditampilkan terpisah."
+  },
+  "Station steps": {
+    "en": "Station steps",
+    "cs": "Kroky na stanicích",
+    "de": "Stationsschritte",
+    "es": "Pasos en estaciones",
+    "fr": "Étapes aux stations",
+    "pt": "Etapas nas estações",
+    "zh": "工作台步骤",
+    "hi": "स्टेशन के चरण",
+    "ar": "خطوات المحطات",
+    "bn": "স্টেশনের ধাপ",
+    "ru": "Этапы на станциях",
+    "ja": "設備での工程",
+    "id": "Langkah stasiun"
+  },
+  "{count}× {name} at {station}": {
+    "en": {
+      "one": "{count}× {name} at {station}",
+      "other": "{count}× {name} at {station}"
+    },
+    "cs": {
+      "one": "{count}× {name} ve stanici {station}",
+      "few": "{count}× {name} ve stanici {station}",
+      "many": "{count}× {name} ve stanici {station}",
+      "other": "{count}× {name} ve stanici {station}"
+    },
+    "de": {
+      "one": "{count}× {name} bei {station}",
+      "other": "{count}× {name} bei {station}"
+    },
+    "es": {
+      "one": "{count}× {name} en {station}",
+      "many": "{count}× {name} en {station}",
+      "other": "{count}× {name} en {station}"
+    },
+    "fr": {
+      "one": "{count}× {name} à {station}",
+      "many": "{count}× {name} à {station}",
+      "other": "{count}× {name} à {station}"
+    },
+    "pt": {
+      "one": "{count}× {name} em {station}",
+      "many": "{count}× {name} em {station}",
+      "other": "{count}× {name} em {station}"
+    },
+    "zh": {
+      "other": "在 {station} 制作 {count}× {name}"
+    },
+    "hi": {
+      "one": "{station} पर {count}× {name}",
+      "other": "{station} पर {count}× {name}"
+    },
+    "ar": {
+      "zero": "{count}× {name} في {station}",
+      "one": "{count}× {name} في {station}",
+      "two": "{count}× {name} في {station}",
+      "few": "{count}× {name} في {station}",
+      "many": "{count}× {name} في {station}",
+      "other": "{count}× {name} في {station}"
+    },
+    "bn": {
+      "one": "{station}-এ {count}× {name}",
+      "other": "{station}-এ {count}× {name}"
+    },
+    "ru": {
+      "one": "{count}× {name} на {station}",
+      "few": "{count}× {name} на {station}",
+      "many": "{count}× {name} на {station}",
+      "other": "{count}× {name} на {station}"
+    },
+    "ja": {
+      "other": "{station} で {count}× {name}"
+    },
+    "id": {
+      "other": "{count}× {name} di {station}"
+    }
+  },
+  "None": {
+    "en": "None",
+    "cs": "Nic",
+    "de": "Keine",
+    "es": "Ninguno",
+    "fr": "Aucun",
+    "pt": "Nenhum",
+    "zh": "无",
+    "hi": "कोई नहीं",
+    "ar": "لا شيء",
+    "bn": "নেই",
+    "ru": "Нет",
+    "ja": "なし",
+    "id": "Tidak ada"
+  },
+  "Tips": {
+    "en": "Tips",
+    "cs": "Tipy",
+    "de": "Tipps",
+    "es": "Consejos",
+    "fr": "Conseils",
+    "pt": "Dicas",
+    "zh": "提示",
+    "hi": "सुझाव",
+    "ar": "نصائح",
+    "bn": "পরামর্শ",
+    "ru": "Советы",
+    "ja": "ヒント",
+    "id": "Tips"
+  },
+  "Language": {
+    "en": "Language",
+    "cs": "Jazyk",
+    "de": "Sprache",
+    "es": "Idioma",
+    "fr": "Langue",
+    "pt": "Idioma",
+    "zh": "语言",
+    "hi": "भाषा",
+    "ar": "اللغة",
+    "bn": "ভাষা",
+    "ru": "Язык",
+    "ja": "言語",
+    "id": "Bahasa"
+  },
+  "Auto (browser)": {
+    "en": "Auto (browser)",
+    "cs": "Automaticky (prohlížeč)",
+    "de": "Automatisch (Browser)",
+    "es": "Automático (navegador)",
+    "fr": "Auto (navigateur)",
+    "pt": "Automático (navegador)",
+    "zh": "自动（浏览器）",
+    "hi": "स्वचालित (ब्राउज़र)",
+    "ar": "تلقائي (المتصفح)",
+    "bn": "স্বয়ংক্রিয় (ব্রাউজার)",
+    "ru": "Авто (браузер)",
+    "ja": "自動（ブラウザー）",
+    "id": "Otomatis (browser)"
+  },
+  "← Valheim Companion": {
+    "en": "← Valheim Companion",
+    "cs": "← Valheim Companion",
+    "de": "← Valheim Companion",
+    "es": "← Valheim Companion",
+    "fr": "← Valheim Companion",
+    "pt": "← Valheim Companion",
+    "zh": "← Valheim Companion",
+    "hi": "← Valheim Companion",
+    "ar": "← Valheim Companion",
+    "bn": "← Valheim Companion",
+    "ru": "← Valheim Companion",
+    "ja": "← Valheim Companion",
+    "id": "← Valheim Companion"
+  },
+  "Fan project, not affiliated with Iron Gate. Data: Valheim Wiki (CC BY-SA 4.0).": {
+    "en": "Fan project, not affiliated with Iron Gate. Data: Valheim Wiki (CC BY-SA 4.0).",
+    "cs": "Fanouškovský projekt, není spojen s Iron Gate. Data: Valheim Wiki (CC BY-SA 4.0).",
+    "de": "Fanprojekt, nicht mit Iron Gate verbunden. Daten: Valheim Wiki (CC BY-SA 4.0).",
+    "es": "Proyecto de fans, no afiliado a Iron Gate. Datos: Valheim Wiki (CC BY-SA 4.0).",
+    "fr": "Projet de fans, non affilié à Iron Gate. Données : Valheim Wiki (CC BY-SA 4.0).",
+    "pt": "Projeto de fãs, não afiliado à Iron Gate. Dados: Valheim Wiki (CC BY-SA 4.0).",
+    "zh": "粉丝自制项目，与 Iron Gate 无关。数据来源：Valheim Wiki (CC BY-SA 4.0)。",
+    "hi": "प्रशंसक परियोजना, Iron Gate से संबद्ध नहीं। डेटा: Valheim Wiki (CC BY-SA 4.0)।",
+    "ar": "مشروع من المعجبين، غير تابع لـ Iron Gate. البيانات: Valheim Wiki (CC BY-SA 4.0).",
+    "bn": "ভক্তদের তৈরি প্রকল্প, Iron Gate এর সাথে অনুমোদিত নয়। তথ্য: Valheim Wiki (CC BY-SA 4.0)।",
+    "ru": "Фанатский проект, не связанный с Iron Gate. Данные: Valheim Wiki (CC BY-SA 4.0).",
+    "ja": "ファンプロジェクトであり、Iron Gate社とは提携していません。データ提供: Valheim Wiki (CC BY-SA 4.0)。",
+    "id": "Proyek penggemar, tidak berafiliasi dengan Iron Gate. Data: Valheim Wiki (CC BY-SA 4.0)."
+  },
+  "Free, ad-free and made in my spare time.": {
+    "en": "Free, ad-free and made in my spare time.",
+    "cs": "Zdarma, bez reklam a vytvořeno ve volném čase.",
+    "de": "Kostenlos, werbefrei und in meiner Freizeit erstellt.",
+    "es": "Gratis, sin publicidad y hecho en mi tiempo libre.",
+    "fr": "Gratuit, sans publicité et créé sur mon temps libre.",
+    "pt": "Gratuito, sem anúncios e feito no meu tempo livre.",
+    "zh": "免费无广告，利用业余时间开发。",
+    "hi": "निःशुल्क, विज्ञापन-मुक्त और मेरे खाली समय में निर्मित।",
+    "ar": "مجاني وبدون إعلانات ومصنوع في وقت فراغي.",
+    "bn": "সম্পূর্ণ বিনামূল্যে, বিজ্ঞাপনহীন এবং অবসরে তৈরি।",
+    "ru": "Бесплатно, без рекламы и создано в свободное время.",
+    "ja": "完全無料・広告なし・個人の趣味で制作。",
+    "id": "Gratis, bebas iklan, dan dibuat di waktu luang saya."
+  },
+  "If it helped your run, you can buy me a coffee.": {
+    "en": "If it helped your run, you can buy me a coffee.",
+    "cs": "Pokud ti pomohl při hraní, můžeš mi koupit kávu.",
+    "de": "Wenn es dir beim Spielen geholfen hat, kannst du mir einen Kaffee spendieren.",
+    "es": "Si te ayudó en tu partida, puedes invitarme a un café.",
+    "fr": "Si ce projet vous a aidé, vous pouvez m'offrir un café.",
+    "pt": "Se ajudou na sua aventura, você pode me pagar um café.",
+    "zh": "如果对你的冒险有帮助，可以请我喝杯咖啡。",
+    "hi": "अगर इससे आपके खेल में मदद मिली, तो आप मुझे कॉफ़ी दे सकते हैं।",
+    "ar": "إذا ساعدك في مغامرتك، يمكنك أن تدعوني إلى قهوة.",
+    "bn": "খেলায় কাজে লাগলে আমাকে এক কাপ কফি কিনে দিতে পারেন।",
+    "ru": "Если проект помог вам в игре, можете угостить меня кофе.",
+    "ja": "冒険に役立ったら、コーヒーをご馳走していただけます。",
+    "id": "Jika membantu petualanganmu, kamu bisa mentraktirku kopi."
+  },
+  "Copied!": {
+    "en": "Copied!",
+    "cs": "Zkopírováno!",
+    "de": "Kopiert!",
+    "es": "¡Copiado!",
+    "fr": "Copié !",
+    "pt": "Copiado!",
+    "zh": "已复制！",
+    "hi": "कॉपी हो गया!",
+    "ar": "تم النسخ!",
+    "bn": "কপি হয়েছে!",
+    "ru": "Скопировано!",
+    "ja": "コピーしました！",
+    "id": "Disalin!"
+  },
+  "Link copied!": {
+    "en": "Link copied!",
+    "cs": "Odkaz zkopírován!",
+    "de": "Link kopiert!",
+    "es": "¡Enlace copiado!",
+    "fr": "Lien copié !",
+    "pt": "Link copiado!",
+    "zh": "链接已复制！",
+    "hi": "लिंक कॉपी हुआ!",
+    "ar": "تم نسخ الرابط!",
+    "bn": "লিঙ্ক কপি হয়েছে!",
+    "ru": "Ссылка скопирована!",
+    "ja": "リンクをコピーしました！",
+    "id": "Tautan disalin!"
+  },
+  "Can't be teleported": {
+    "en": "Can't be teleported",
+    "cs": "Nelze teleportovat",
+    "de": "Kann nicht teleportiert werden",
+    "es": "No se puede teletransportar",
+    "fr": "Ne peut pas être téléporté",
+    "pt": "Não pode ser teleportado",
+    "zh": "无法传送",
+    "hi": "टेलीपोर्ट नहीं किया जा सकता",
+    "ar": "لا يمكن الانتقال به آنياً",
+    "bn": "টেলিপোর্ট করা যাবে না",
+    "ru": "Нельзя телепортировать",
+    "ja": "テレポート不可",
+    "id": "Tidak dapat diteleportasikan"
+  },
+  "🔒 Boss {count}": {
+    "en": {
+      "one": "🔒 Boss {count}",
+      "other": "🔒 Boss {count}"
+    },
+    "cs": {
+      "one": "🔒 Boss {count}",
+      "few": "🔒 Boss {count}",
+      "many": "🔒 Boss {count}",
+      "other": "🔒 Boss {count}"
+    },
+    "de": {
+      "one": "🔒 Boss {count}",
+      "other": "🔒 Boss {count}"
+    },
+    "es": {
+      "one": "🔒 Jefe {count}",
+      "many": "🔒 Jefe {count}",
+      "other": "🔒 Jefe {count}"
+    },
+    "fr": {
+      "one": "🔒 Boss {count}",
+      "many": "🔒 Boss {count}",
+      "other": "🔒 Boss {count}"
+    },
+    "pt": {
+      "one": "🔒 Chefe {count}",
+      "many": "🔒 Chefe {count}",
+      "other": "🔒 Chefe {count}"
+    },
+    "zh": {
+      "other": "🔒 首领 {count}"
+    },
+    "hi": {
+      "one": "🔒 बॉस {count}",
+      "other": "🔒 बॉस {count}"
+    },
+    "ar": {
+      "zero": "🔒 الزعيم {count}",
+      "one": "🔒 الزعيم {count}",
+      "two": "🔒 الزعيم {count}",
+      "few": "🔒 الزعيم {count}",
+      "many": "🔒 الزعيم {count}",
+      "other": "🔒 الزعيم {count}"
+    },
+    "bn": {
+      "one": "🔒 বস {count}",
+      "other": "🔒 বস {count}"
+    },
+    "ru": {
+      "one": "🔒 Босс {count}",
+      "few": "🔒 Босс {count}",
+      "many": "🔒 Босс {count}",
+      "other": "🔒 Босс {count}"
+    },
+    "ja": {
+      "other": "🔒 ボス {count}"
+    },
+    "id": {
+      "other": "🔒 Bos {count}"
+    }
+  },
+  "Target": {
+    "en": "Target",
+    "cs": "Cíl",
+    "de": "Ziel",
+    "es": "Objetivo",
+    "fr": "Cible",
+    "pt": "Alvo",
+    "zh": "目标",
+    "hi": "लक्ष्य",
+    "ar": "الهدف",
+    "bn": "লক্ষ্য",
+    "ru": "Цель",
+    "ja": "対象",
+    "id": "Target"
+  },
+  "{count} min": {
+    "en": {
+      "one": "{count} min",
+      "other": "{count} min"
+    },
+    "cs": {
+      "one": "{count} min",
+      "few": "{count} min",
+      "many": "{count} min",
+      "other": "{count} min"
+    },
+    "de": {
+      "one": "{count} Min.",
+      "other": "{count} Min."
+    },
+    "es": {
+      "one": "{count} min",
+      "many": "{count} min",
+      "other": "{count} min"
+    },
+    "fr": {
+      "one": "{count} min",
+      "many": "{count} min",
+      "other": "{count} min"
+    },
+    "pt": {
+      "one": "{count} min",
+      "many": "{count} min",
+      "other": "{count} min"
+    },
+    "zh": {
+      "other": "{count} 分钟"
+    },
+    "hi": {
+      "one": "{count} मिनट",
+      "other": "{count} मिनट"
+    },
+    "ar": {
+      "zero": "{count} د",
+      "one": "{count} د",
+      "two": "{count} د",
+      "few": "{count} د",
+      "many": "{count} د",
+      "other": "{count} د"
+    },
+    "bn": {
+      "one": "{count} মিনিট",
+      "other": "{count} মিনিট"
+    },
+    "ru": {
+      "one": "{count} мин",
+      "few": "{count} мин",
+      "many": "{count} мин",
+      "other": "{count} мин"
+    },
+    "ja": {
+      "other": "{count} 分"
+    },
+    "id": {
+      "other": "{count} mnt"
+    }
+  },
+  "Fight duration": {
+    "en": "Fight duration",
+    "cs": "Délka boje",
+    "de": "Kampfdauer",
+    "es": "Duración del combate",
+    "fr": "Durée du combat",
+    "pt": "Duração da luta",
+    "zh": "战斗时长",
+    "hi": "लड़ाई की अवधि",
+    "ar": "مدة القتال",
+    "bn": "লড়াইয়ের সময়",
+    "ru": "Длительность боя",
+    "ja": "戦闘時間",
+    "id": "Durasi pertarungan"
+  },
+  "Share prep": {
+    "en": "Share prep",
+    "cs": "Sdílet přípravu",
+    "de": "Vorbereitung teilen",
+    "es": "Compartir preparación",
+    "fr": "Partager la préparation",
+    "pt": "Compartilhar preparação",
+    "zh": "分享准备",
+    "hi": "तैयारी साझा करें",
+    "ar": "مشاركة التجهيز",
+    "bn": "প্রস্তুতি শেয়ার করুন",
+    "ru": "Поделиться подготовкой",
+    "ja": "準備を共有",
+    "id": "Bagikan persiapan"
+  },
+  "{type}: {resistance}": {
+    "en": "{type}: {resistance}",
+    "cs": "{type}: {resistance}",
+    "de": "{type}: {resistance}",
+    "es": "{type}: {resistance}",
+    "fr": "{type} : {resistance}",
+    "pt": "{type}: {resistance}",
+    "zh": "{type}：{resistance}",
+    "hi": "{type}: {resistance}",
+    "ar": "{type}: {resistance}",
+    "bn": "{type}: {resistance}",
+    "ru": "{type}: {resistance}",
+    "ja": "{type}：{resistance}",
+    "id": "{type}: {resistance}"
+  },
+  "Boss prep": {
+    "en": "Boss prep",
+    "cs": "Příprava na bosse",
+    "de": "Boss-Vorbereitung",
+    "es": "Preparación para jefes",
+    "fr": "Préparation au boss",
+    "pt": "Preparação para chefes",
+    "zh": "首领准备",
+    "hi": "बॉस की तैयारी",
+    "ar": "تجهيز الزعيم",
+    "bn": "বসের প্রস্তুতি",
+    "ru": "Подготовка к боссу",
+    "ja": "ボス戦の準備",
+    "id": "Persiapan bos"
+  },
+  "HP {count}": {
+    "en": {
+      "one": "HP {count}",
+      "other": "HP {count}"
+    },
+    "cs": {
+      "one": "HP {count}",
+      "few": "HP {count}",
+      "many": "HP {count}",
+      "other": "HP {count}"
+    },
+    "de": {
+      "one": "HP {count}",
+      "other": "HP {count}"
+    },
+    "es": {
+      "one": "HP {count}",
+      "many": "HP {count}",
+      "other": "HP {count}"
+    },
+    "fr": {
+      "one": "PV {count}",
+      "many": "PV {count}",
+      "other": "PV {count}"
+    },
+    "pt": {
+      "one": "HP {count}",
+      "many": "HP {count}",
+      "other": "HP {count}"
+    },
+    "zh": {
+      "other": "生命值 {count}"
+    },
+    "hi": {
+      "one": "HP {count}",
+      "other": "HP {count}"
+    },
+    "ar": {
+      "zero": "HP {count}",
+      "one": "HP {count}",
+      "two": "HP {count}",
+      "few": "HP {count}",
+      "many": "HP {count}",
+      "other": "HP {count}"
+    },
+    "bn": {
+      "one": "HP {count}",
+      "other": "HP {count}"
+    },
+    "ru": {
+      "one": "ОЗ {count}",
+      "few": "ОЗ {count}",
+      "many": "ОЗ {count}",
+      "other": "ОЗ {count}"
+    },
+    "ja": {
+      "other": "HP {count}"
+    },
+    "id": {
+      "other": "HP {count}"
+    }
+  },
+  "Altar and summoning": {
+    "en": "Altar and summoning",
+    "cs": "Oltář a vyvolání",
+    "de": "Altar und Beschwörung",
+    "es": "Altar e invocación",
+    "fr": "Autel et invocation",
+    "pt": "Altar e invocação",
+    "zh": "祭坛与召唤",
+    "hi": "वेदी और आह्वान",
+    "ar": "المذبح والاستدعاء",
+    "bn": "বেদি ও আহ্বান",
+    "ru": "Алтарь и призыв",
+    "ja": "祭壇と召喚",
+    "id": "Altar dan pemanggilan"
+  },
+  "Not documented on the wiki.": {
+    "en": "Not documented on the wiki.",
+    "cs": "Wiki údaj neuvádí.",
+    "de": "Im Wiki nicht dokumentiert.",
+    "es": "No está documentado en la wiki.",
+    "fr": "Non documenté sur le wiki.",
+    "pt": "Não documentado na wiki.",
+    "zh": "维基未记载。",
+    "hi": "विकी पर दर्ज नहीं है।",
+    "ar": "غير موثق في الويكي.",
+    "bn": "উইকিতে নথিভুক্ত নয়।",
+    "ru": "В вики не указано.",
+    "ja": "Wikiに記載がありません。",
+    "id": "Tidak tercatat di wiki."
+  },
+  "Attacks and resistances": {
+    "en": "Attacks and resistances",
+    "cs": "Útoky a odolnosti",
+    "de": "Angriffe und Resistenzen",
+    "es": "Ataques y resistencias",
+    "fr": "Attaques et résistances",
+    "pt": "Ataques e resistências",
+    "zh": "攻击与抗性",
+    "hi": "हमले और प्रतिरोध",
+    "ar": "الهجمات والمقاومات",
+    "bn": "আক্রমণ ও প্রতিরোধ",
+    "ru": "Атаки и сопротивления",
+    "ja": "攻撃と耐性",
+    "id": "Serangan dan resistansi"
+  },
+  "{count} {type} damage": {
+    "en": {
+      "one": "{count} {type} damage",
+      "other": "{count} {type} damage"
+    },
+    "cs": {
+      "one": "{count} poškození · {type}",
+      "few": "{count} poškození · {type}",
+      "many": "{count} poškození · {type}",
+      "other": "{count} poškození · {type}"
+    },
+    "de": {
+      "one": "{count} Schaden · {type}",
+      "other": "{count} Schaden · {type}"
+    },
+    "es": {
+      "one": "{count} de daño · {type}",
+      "many": "{count} de daño · {type}",
+      "other": "{count} de daño · {type}"
+    },
+    "fr": {
+      "one": "{count} dégâts · {type}",
+      "many": "{count} dégâts · {type}",
+      "other": "{count} dégâts · {type}"
+    },
+    "pt": {
+      "one": "{count} de dano · {type}",
+      "many": "{count} de dano · {type}",
+      "other": "{count} de dano · {type}"
+    },
+    "zh": {
+      "other": "{count} {type}伤害"
+    },
+    "hi": {
+      "one": "{count} {type} क्षति",
+      "other": "{count} {type} क्षति"
+    },
+    "ar": {
+      "zero": "{count} ضرر · {type}",
+      "one": "{count} ضرر · {type}",
+      "two": "{count} ضرر · {type}",
+      "few": "{count} ضرر · {type}",
+      "many": "{count} ضرر · {type}",
+      "other": "{count} ضرر · {type}"
+    },
+    "bn": {
+      "one": "{count} {type} ক্ষতি",
+      "other": "{count} {type} ক্ষতি"
+    },
+    "ru": {
+      "one": "{count} урона · {type}",
+      "few": "{count} урона · {type}",
+      "many": "{count} урона · {type}",
+      "other": "{count} урона · {type}"
+    },
+    "ja": {
+      "other": "{count} {type}ダメージ"
+    },
+    "id": {
+      "other": "{count} kerusakan · {type}"
+    }
+  },
+  "Immune to stagger": {
+    "en": "Immune to stagger",
+    "cs": "Imunní vůči stagger",
+    "de": "Immun gegen Taumeln",
+    "es": "Inmune al tambaleo",
+    "fr": "Immunisé contre le déséquilibre",
+    "pt": "Imune a cambalear",
+    "zh": "免疫失衡",
+    "hi": "डगमगाने से प्रतिरक्षित",
+    "ar": "محصن ضد الترنح",
+    "bn": "টলানোয় অনাক্রম্য",
+    "ru": "Невосприимчив к ошеломлению",
+    "ja": "よろめき無効",
+    "id": "Kebal terhadap stagger"
+  },
+  "Forsaken Power": {
+    "en": "Forsaken Power",
+    "cs": "Forsaken Power",
+    "de": "Forsaken Power",
+    "es": "Forsaken Power",
+    "fr": "Forsaken Power",
+    "pt": "Forsaken Power",
+    "zh": "Forsaken Power",
+    "hi": "Forsaken Power",
+    "ar": "Forsaken Power",
+    "bn": "Forsaken Power",
+    "ru": "Forsaken Power",
+    "ja": "Forsaken Power",
+    "id": "Forsaken Power"
+  },
+  "Cooldown: {count} min": {
+    "en": {
+      "one": "Cooldown: {count} min",
+      "other": "Cooldown: {count} min"
+    },
+    "cs": {
+      "one": "Obnova: {count} min",
+      "few": "Obnova: {count} min",
+      "many": "Obnova: {count} min",
+      "other": "Obnova: {count} min"
+    },
+    "de": {
+      "one": "Abklingzeit: {count} Min.",
+      "other": "Abklingzeit: {count} Min."
+    },
+    "es": {
+      "one": "Recarga: {count} min",
+      "many": "Recarga: {count} min",
+      "other": "Recarga: {count} min"
+    },
+    "fr": {
+      "one": "Recharge : {count} min",
+      "many": "Recharge : {count} min",
+      "other": "Recharge : {count} min"
+    },
+    "pt": {
+      "one": "Recarga: {count} min",
+      "many": "Recarga: {count} min",
+      "other": "Recarga: {count} min"
+    },
+    "zh": {
+      "other": "冷却：{count} 分钟"
+    },
+    "hi": {
+      "one": "कूलडाउन: {count} मिनट",
+      "other": "कूलडाउन: {count} मिनट"
+    },
+    "ar": {
+      "zero": "الانتظار: {count} د",
+      "one": "الانتظار: {count} د",
+      "two": "الانتظار: {count} د",
+      "few": "الانتظار: {count} د",
+      "many": "الانتظار: {count} د",
+      "other": "الانتظار: {count} د"
+    },
+    "bn": {
+      "one": "কুলডাউন: {count} মিনিট",
+      "other": "কুলডাউন: {count} মিনিট"
+    },
+    "ru": {
+      "one": "Перезарядка: {count} мин",
+      "few": "Перезарядка: {count} мин",
+      "many": "Перезарядка: {count} мин",
+      "other": "Перезарядка: {count} мин"
+    },
+    "ja": {
+      "other": "クールダウン：{count} 分"
+    },
+    "id": {
+      "other": "Cooldown: {count} mnt"
+    }
+  },
+  "{count} DPS": {
+    "en": {
+      "one": "{count} DPS",
+      "other": "{count} DPS"
+    },
+    "cs": {
+      "one": "{count} DPS",
+      "few": "{count} DPS",
+      "many": "{count} DPS",
+      "other": "{count} DPS"
+    },
+    "de": {
+      "one": "{count} DPS",
+      "other": "{count} DPS"
+    },
+    "es": {
+      "one": "{count} DPS",
+      "many": "{count} DPS",
+      "other": "{count} DPS"
+    },
+    "fr": {
+      "one": "{count} DPS",
+      "many": "{count} DPS",
+      "other": "{count} DPS"
+    },
+    "pt": {
+      "one": "{count} DPS",
+      "many": "{count} DPS",
+      "other": "{count} DPS"
+    },
+    "zh": {
+      "other": "{count} DPS"
+    },
+    "hi": {
+      "one": "{count} DPS",
+      "other": "{count} DPS"
+    },
+    "ar": {
+      "zero": "{count} DPS",
+      "one": "{count} DPS",
+      "two": "{count} DPS",
+      "few": "{count} DPS",
+      "many": "{count} DPS",
+      "other": "{count} DPS"
+    },
+    "bn": {
+      "one": "{count} DPS",
+      "other": "{count} DPS"
+    },
+    "ru": {
+      "one": "{count} DPS",
+      "few": "{count} DPS",
+      "many": "{count} DPS",
+      "other": "{count} DPS"
+    },
+    "ja": {
+      "other": "{count} DPS"
+    },
+    "id": {
+      "other": "{count} DPS"
+    }
+  },
+  "{count} seconds to defeat": {
+    "en": {
+      "one": "Time to defeat: {count} s",
+      "other": "Time to defeat: {count} s"
+    },
+    "cs": {
+      "one": "Čas do porážky: {count} s",
+      "few": "Čas do porážky: {count} s",
+      "many": "Čas do porážky: {count} s",
+      "other": "Čas do porážky: {count} s"
+    },
+    "de": {
+      "one": "Zeit bis zum Sieg: {count} s",
+      "other": "Zeit bis zum Sieg: {count} s"
+    },
+    "es": {
+      "one": "Tiempo para derrotar: {count} s",
+      "many": "Tiempo para derrotar: {count} s",
+      "other": "Tiempo para derrotar: {count} s"
+    },
+    "fr": {
+      "one": "Temps pour vaincre : {count} s",
+      "many": "Temps pour vaincre : {count} s",
+      "other": "Temps pour vaincre : {count} s"
+    },
+    "pt": {
+      "one": "Tempo para derrotar: {count} s",
+      "many": "Tempo para derrotar: {count} s",
+      "other": "Tempo para derrotar: {count} s"
+    },
+    "zh": {
+      "other": "击败时间：{count} 秒"
+    },
+    "hi": {
+      "one": "हराने का समय: {count} सेकंड",
+      "other": "हराने का समय: {count} सेकंड"
+    },
+    "ar": {
+      "zero": "زمن الهزيمة: {count} ث",
+      "one": "زمن الهزيمة: {count} ث",
+      "two": "زمن الهزيمة: {count} ث",
+      "few": "زمن الهزيمة: {count} ث",
+      "many": "زمن الهزيمة: {count} ث",
+      "other": "زمن الهزيمة: {count} ث"
+    },
+    "bn": {
+      "one": "পরাজিত করতে: {count} সেকেন্ড",
+      "other": "পরাজিত করতে: {count} সেকেন্ড"
+    },
+    "ru": {
+      "one": "Время до победы: {count} с",
+      "few": "Время до победы: {count} с",
+      "many": "Время до победы: {count} с",
+      "other": "Время до победы: {count} с"
+    },
+    "ja": {
+      "other": "撃破時間：{count} 秒"
+    },
+    "id": {
+      "other": "Waktu mengalahkan: {count} dtk"
+    }
+  },
+  "Your character profile": {
+    "en": "Your character profile",
+    "cs": "Profil tvé postavy",
+    "de": "Dein Charakterprofil",
+    "es": "Tu perfil de personaje",
+    "fr": "Votre profil de personnage",
+    "pt": "Seu perfil de personagem",
+    "zh": "你的角色档案",
+    "hi": "आपकी पात्र प्रोफ़ाइल",
+    "ar": "ملف شخصيتك",
+    "bn": "আপনার চরিত্রের প্রোফাইল",
+    "ru": "Профиль персонажа",
+    "ja": "キャラクタープロフィール",
+    "id": "Profil karaktermu"
+  },
+  "No recommendations available at your current progress.": {
+    "en": "No recommendations available at your current progress.",
+    "cs": "Pro tento postup nejsou dostupná doporučení.",
+    "de": "Für deinen Fortschritt gibt es keine Empfehlungen.",
+    "es": "No hay recomendaciones para tu progreso actual.",
+    "fr": "Aucune recommandation pour votre progression actuelle.",
+    "pt": "Sem recomendações para seu progresso atual.",
+    "zh": "当前进度没有可用推荐。",
+    "hi": "वर्तमान प्रगति के लिए सुझाव उपलब्ध नहीं हैं।",
+    "ar": "لا توصيات متاحة لتقدمك الحالي.",
+    "bn": "বর্তমান অগ্রগতিতে সুপারিশ নেই।",
+    "ru": "Для текущего прогресса нет рекомендаций.",
+    "ja": "現在の進行度ではおすすめがありません。",
+    "id": "Belum ada rekomendasi untuk progresmu."
+  },
+  "Defenses": {
+    "en": "Defenses",
+    "cs": "Obrana",
+    "de": "Verteidigung",
+    "es": "Defensas",
+    "fr": "Défense",
+    "pt": "Defesas",
+    "zh": "防御",
+    "hi": "रक्षा",
+    "ar": "الدفاع",
+    "bn": "প্রতিরক্ষা",
+    "ru": "Защита",
+    "ja": "防御",
+    "id": "Pertahanan"
+  },
+  "Damage totals add attack types; they are not damage per second.": {
+    "en": "Damage totals add attack types; they are not damage per second.",
+    "cs": "Součty sčítají typy útoků; nejde o poškození za sekundu.",
+    "de": "Summen addieren Angriffsarten; sie sind kein Schaden pro Sekunde.",
+    "es": "Los totales suman tipos de ataques; no son daño por segundo.",
+    "fr": "Les totaux additionnent les attaques ; ils ne sont pas des dégâts par seconde.",
+    "pt": "Os totais somam tipos de ataques; não são dano por segundo.",
+    "zh": "总值为各攻击类型之和，并非每秒伤害。",
+    "hi": "कुल में हमलों के प्रकार जुड़ते हैं; यह प्रति सेकंड क्षति नहीं है।",
+    "ar": "الإجمالي يجمع أنواع الهجمات ولا يمثل الضرر في الثانية.",
+    "bn": "মোটে আক্রমণের ধরন যোগ হয়; এটি প্রতি সেকেন্ড ক্ষতি নয়।",
+    "ru": "Суммы складывают типы атак; это не урон в секунду.",
+    "ja": "合計は攻撃タイプの総和で、毎秒ダメージではありません。",
+    "id": "Total menjumlahkan jenis serangan; bukan kerusakan per detik."
+  },
+  "Open in Smithy": {
+    "en": "Open in Smithy",
+    "cs": "Otevřít v Smithy",
+    "de": "In Smithy öffnen",
+    "es": "Abrir en Smithy",
+    "fr": "Ouvrir dans Smithy",
+    "pt": "Abrir no Smithy",
+    "zh": "在 Smithy 中打开",
+    "hi": "Smithy में खोलें",
+    "ar": "فتح في Smithy",
+    "bn": "Smithy-তে খুলুন",
+    "ru": "Открыть в Smithy",
+    "ja": "Smithyで開く",
+    "id": "Buka di Smithy"
+  },
+  "Food and meads": {
+    "en": "Food and meads",
+    "cs": "Jídlo a medoviny",
+    "de": "Nahrung und Met",
+    "es": "Comida e hidromiel",
+    "fr": "Nourriture et hydromels",
+    "pt": "Comida e hidroméis",
+    "zh": "食物与蜜酒",
+    "hi": "भोजन और मीड",
+    "ar": "الطعام والميد",
+    "bn": "খাবার ও মীড",
+    "ru": "Еда и медовуха",
+    "ja": "食事とはちみつ酒",
+    "id": "Makanan dan mead"
+  },
+  "Stamina {count}": {
+    "en": {
+      "one": "Stamina {count}",
+      "other": "Stamina {count}"
+    },
+    "cs": {
+      "one": "Stamina {count}",
+      "few": "Stamina {count}",
+      "many": "Stamina {count}",
+      "other": "Stamina {count}"
+    },
+    "de": {
+      "one": "Ausdauer {count}",
+      "other": "Ausdauer {count}"
+    },
+    "es": {
+      "one": "Resistencia {count}",
+      "many": "Resistencia {count}",
+      "other": "Resistencia {count}"
+    },
+    "fr": {
+      "one": "Endurance {count}",
+      "many": "Endurance {count}",
+      "other": "Endurance {count}"
+    },
+    "pt": {
+      "one": "Vigor {count}",
+      "many": "Vigor {count}",
+      "other": "Vigor {count}"
+    },
+    "zh": {
+      "other": "耐力 {count}"
+    },
+    "hi": {
+      "one": "सहनशक्ति {count}",
+      "other": "सहनशक्ति {count}"
+    },
+    "ar": {
+      "zero": "التحمل {count}",
+      "one": "التحمل {count}",
+      "two": "التحمل {count}",
+      "few": "التحمل {count}",
+      "many": "التحمل {count}",
+      "other": "التحمل {count}"
+    },
+    "bn": {
+      "one": "স্ট্যামিনা {count}",
+      "other": "স্ট্যামিনা {count}"
+    },
+    "ru": {
+      "one": "Выносливость {count}",
+      "few": "Выносливость {count}",
+      "many": "Выносливость {count}",
+      "other": "Выносливость {count}"
+    },
+    "ja": {
+      "other": "スタミナ {count}"
+    },
+    "id": {
+      "other": "Stamina {count}"
+    }
+  },
+  "Open in Provisions": {
+    "en": "Open in Provisions",
+    "cs": "Otevřít v Provisions",
+    "de": "In Provisions öffnen",
+    "es": "Abrir en Provisions",
+    "fr": "Ouvrir dans Provisions",
+    "pt": "Abrir no Provisions",
+    "zh": "在 Provisions 中打开",
+    "hi": "Provisions में खोलें",
+    "ar": "فتح في Provisions",
+    "bn": "Provisions-এ খুলুন",
+    "ru": "Открыть в Provisions",
+    "ja": "Provisionsで開く",
+    "id": "Buka di Provisions"
+  },
+  "Packing list": {
+    "en": "Packing list",
+    "cs": "Balicí seznam",
+    "de": "Packliste",
+    "es": "Lista de equipaje",
+    "fr": "Liste de bagages",
+    "pt": "Lista de bagagem",
+    "zh": "打包清单",
+    "hi": "सामान सूची",
+    "ar": "قائمة التجهيز",
+    "bn": "প্যাকিং তালিকা",
+    "ru": "Список снаряжения",
+    "ja": "持ち物リスト",
+    "id": "Daftar bawaan"
+  },
+  "Include a Portal": {
+    "en": "Include a Portal",
+    "cs": "Přibalit Portal",
+    "de": "Portal einpacken",
+    "es": "Incluir Portal",
+    "fr": "Inclure un Portal",
+    "pt": "Incluir Portal",
+    "zh": "包含 Portal",
+    "hi": "Portal शामिल करें",
+    "ar": "تضمين Portal",
+    "bn": "Portal সঙ্গে নিন",
+    "ru": "Взять Portal",
+    "ja": "Portalを含める",
+    "id": "Sertakan Portal"
+  },
+  "{count} seconds": {
+    "en": {
+      "one": "{count} s",
+      "other": "{count} s"
+    },
+    "cs": {
+      "one": "{count} s",
+      "few": "{count} s",
+      "many": "{count} s",
+      "other": "{count} s"
+    },
+    "de": {
+      "one": "{count} s",
+      "other": "{count} s"
+    },
+    "es": {
+      "one": "{count} s",
+      "many": "{count} s",
+      "other": "{count} s"
+    },
+    "fr": {
+      "one": "{count} s",
+      "many": "{count} s",
+      "other": "{count} s"
+    },
+    "pt": {
+      "one": "{count} s",
+      "many": "{count} s",
+      "other": "{count} s"
+    },
+    "zh": {
+      "other": "{count} 秒"
+    },
+    "hi": {
+      "one": "{count} सेकंड",
+      "other": "{count} सेकंड"
+    },
+    "ar": {
+      "zero": "{count} ث",
+      "one": "{count} ث",
+      "two": "{count} ث",
+      "few": "{count} ث",
+      "many": "{count} ث",
+      "other": "{count} ث"
+    },
+    "bn": {
+      "one": "{count} সেকেন্ড",
+      "other": "{count} সেকেন্ড"
+    },
+    "ru": {
+      "one": "{count} с",
+      "few": "{count} с",
+      "many": "{count} с",
+      "other": "{count} с"
+    },
+    "ja": {
+      "other": "{count} 秒"
+    },
+    "id": {
+      "other": "{count} dtk"
+    }
+  },
+  "A later creature": {
+    "en": "A later creature",
+    "cs": "Pozdější jednotka",
+    "de": "Eine spätere Kreatur",
+    "es": "Una criatura posterior",
+    "fr": "Une créature ultérieure",
+    "pt": "Uma criatura futura",
+    "zh": "后期生物",
+    "hi": "बाद का जीव",
+    "ar": "مخلوق لاحق",
+    "bn": "পরবর্তী প্রাণী",
+    "ru": "Позднее существо",
+    "ja": "後のクリーチャー",
+    "id": "Makhluk tahap lanjut"
+  },
+  "Assumed once you have killed {name}.": {
+    "en": "Assumed once you have killed {name}.",
+    "cs": "Předpoklad: už jsi porazil {name}.",
+    "de": "Annahme: Du hast {name} getötet.",
+    "es": "Se supone que has matado a {name}.",
+    "fr": "On suppose que vous avez tué {name}.",
+    "pt": "Supõe-se que você matou {name}.",
+    "zh": "假定你已击杀 {name}。",
+    "hi": "मान लिया गया है कि आपने {name} को मारा है।",
+    "ar": "يفترض أنك قتلت {name}.",
+    "bn": "ধরা হয়েছে আপনি {name} মেরেছেন।",
+    "ru": "Предполагается, что вы убили {name}.",
+    "ja": "{name}を倒したと仮定します。",
+    "id": "Diasumsikan kamu telah membunuh {name}."
+  },
+  "After the fight": {
+    "en": "After the fight",
+    "cs": "Po boji",
+    "de": "Nach dem Kampf",
+    "es": "Después de la lucha",
+    "fr": "Après le combat",
+    "pt": "Após a luta",
+    "zh": "战斗后",
+    "hi": "लड़ाई के बाद",
+    "ar": "بعد القتال",
+    "bn": "লড়াইয়ের পরে",
+    "ru": "После боя",
+    "ja": "戦闘後",
+    "id": "Setelah pertarungan"
+  },
+  "After you defeat {name}": {
+    "en": "After you defeat {name}",
+    "cs": "Po porážce {name}",
+    "de": "Nach dem Sieg über {name}",
+    "es": "Después de derrotar a {name}",
+    "fr": "Après avoir vaincu {name}",
+    "pt": "Após derrotar {name}",
+    "zh": "击败 {name} 后",
+    "hi": "{name} को हराने के बाद",
+    "ar": "بعد هزيمة {name}",
+    "bn": "{name} হারানোর পরে",
+    "ru": "После победы над {name}",
+    "ja": "{name}を倒した後",
+    "id": "Setelah mengalahkan {name}"
+  },
+  "World-based raid rules": {
+    "en": "World-based raid rules",
+    "cs": "Pravidla světových nájezdů",
+    "de": "Regeln für weltbasierte Raids",
+    "es": "Reglas de incursiones del mundo",
+    "fr": "Règles des raids du monde",
+    "pt": "Regras de incursões do mundo",
+    "zh": "世界袭击规则",
+    "hi": "दुनिया आधारित छापे के नियम",
+    "ar": "قواعد غارات العالم",
+    "bn": "বিশ্বভিত্তিক অভিযানের নিয়ম",
+    "ru": "Правила мировых набегов",
+    "ja": "ワールド基準の襲撃ルール",
+    "id": "Aturan raid berbasis dunia"
+  },
+  "Stay in the event area until the timer runs out; it pauses without players, except during the hunted event.": {
+    "en": "Stay in the event area until the timer runs out; it pauses without players, except during the hunted event.",
+    "cs": "Zůstaň v oblasti do vypršení času; bez hráčů se čas zastaví, kromě hunted event.",
+    "de": "Bleibe im Ereignisgebiet bis zum Ablauf; ohne Spieler pausiert die Zeit, außer beim Jagdereignis.",
+    "es": "Quédate en el área hasta que termine el tiempo; se pausa sin jugadores, salvo en el evento de caza.",
+    "fr": "Restez dans la zone jusqu’à la fin ; le temps s’arrête sans joueurs, sauf pendant la chasse.",
+    "pt": "Fique na área até o tempo acabar; ele pausa sem jogadores, exceto na caçada.",
+    "zh": "留在事件区域直到计时结束；无人时计时暂停，被猎杀事件除外。",
+    "hi": "समय खत्म होने तक क्षेत्र में रहें; खिलाड़ियों के बिना समय रुकता है, शिकार घटना को छोड़कर।",
+    "ar": "ابق في المنطقة حتى ينتهي الوقت؛ يتوقف دون لاعبين باستثناء حدث الصيد.",
+    "bn": "সময় শেষ হওয়া পর্যন্ত এলাকায় থাকুন; খেলোয়াড় না থাকলে থামে, শিকার ঘটনা ছাড়া।",
+    "ru": "Оставайтесь в зоне до конца таймера; без игроков он останавливается, кроме события охоты.",
+    "ja": "時間切れまでエリアに留まりましょう。狩りのイベント以外は無人でタイマーが止まります。",
+    "id": "Tetap di area sampai waktu habis; waktu berhenti tanpa pemain kecuali peristiwa perburuan."
+  },
+  "Player-based raids use different requirements and are not calculated here.": {
+    "en": "Player-based raids use different requirements and are not calculated here.",
+    "cs": "Player-based raids mají jiné podmínky a zde se nepočítají.",
+    "de": "Spielerbasierte Raids haben andere Bedingungen und werden hier nicht berechnet.",
+    "es": "Las incursiones por jugador tienen otros requisitos y no se calculan aquí.",
+    "fr": "Les raids par joueur ont d’autres conditions et ne sont pas calculés ici.",
+    "pt": "Incursões por jogador usam outros requisitos e não são calculadas aqui.",
+    "zh": "玩家袭击使用不同条件，此处不计算。",
+    "hi": "खिलाड़ी आधारित छापे की शर्तें अलग हैं और यहाँ नहीं गिने जाते।",
+    "ar": "غارات اللاعبين لها شروط مختلفة ولا تحسب هنا.",
+    "bn": "খেলোয়াড়ভিত্তিক অভিযানের শর্ত আলাদা; এখানে গণনা হয় না।",
+    "ru": "Набеги по игроку имеют другие условия и здесь не рассчитываются.",
+    "ja": "プレイヤー基準の襲撃は条件が異なり、ここでは計算しません。",
+    "id": "Raid berbasis pemain memiliki syarat berbeda dan tidak dihitung di sini."
+  },
+  "Nonboss conditions are assumed when their biome is revealed.": {
+    "en": "Nonboss conditions are assumed when their biome is revealed.",
+    "cs": "Nebossové podmínky považujeme za splněné po odhalení biomu.",
+    "de": "Nichtboss-Bedingungen gelten als erfüllt, sobald ihr Biom aufgedeckt ist.",
+    "es": "Las condiciones sin jefe se suponen cumplidas al revelar su bioma.",
+    "fr": "Les conditions hors boss sont supposées remplies lorsque leur biome est révélé.",
+    "pt": "Condições sem chefe são consideradas cumpridas ao revelar o bioma.",
+    "zh": "生物群系揭示后，假定非首领条件已满足。",
+    "hi": "बायोम खुलने पर गैर-बॉस शर्तें पूरी मानी जाती हैं।",
+    "ar": "يفترض تحقق شروط غير الزعماء عند كشف منطقتهم.",
+    "bn": "বায়োম প্রকাশ পেলে বস ছাড়া অন্য শর্ত পূরণ ধরা হয়।",
+    "ru": "Условия без боссов считаются выполненными после открытия биома.",
+    "ja": "バイオーム公開後はボス以外の条件を満たしたと仮定します。",
+    "id": "Syarat nonbos dianggap terpenuhi saat biomanya terungkap."
+  },
+  "Later raids": {
+    "en": "Later raids",
+    "cs": "Pozdější nájezdy",
+    "de": "Spätere Raids",
+    "es": "Incursiones posteriores",
+    "fr": "Raids ultérieurs",
+    "pt": "Incursões futuras",
+    "zh": "后期袭击",
+    "hi": "बाद के छापे",
+    "ar": "غارات لاحقة",
+    "bn": "পরবর্তী অভিযান",
+    "ru": "Поздние набеги",
+    "ja": "後の襲撃",
+    "id": "Raid tahap lanjut"
+  },
+  "A later raid": {
+    "en": "A later raid",
+    "cs": "Pozdější nájezd",
+    "de": "Ein späterer Raid",
+    "es": "Una incursión posterior",
+    "fr": "Un raid ultérieur",
+    "pt": "Uma incursão futura",
+    "zh": "后期袭击",
+    "hi": "बाद का छापा",
+    "ar": "غارة لاحقة",
+    "bn": "পরবর্তী অভিযান",
+    "ru": "Поздний набег",
+    "ja": "後の襲撃",
+    "id": "Raid tahap lanjut"
+  },
+  "Reveal the biome to prepare for this boss.": {
+    "en": "Reveal the biome to prepare for this boss.",
+    "cs": "Odhal biom pro přípravu na tohoto bosse.",
+    "de": "Decke das Biom auf, um dich auf diesen Boss vorzubereiten.",
+    "es": "Revela el bioma para prepararte para este jefe.",
+    "fr": "Révélez le biome pour préparer ce boss.",
+    "pt": "Revele o bioma para preparar este chefe.",
+    "zh": "揭示生物群系以准备此首领战。",
+    "hi": "इस बॉस की तैयारी के लिए बायोम खोलें।",
+    "ar": "اكشف المنطقة لتجهيز هذا الزعيم.",
+    "bn": "এই বসের প্রস্তুতির জন্য বায়োম প্রকাশ করুন।",
+    "ru": "Откройте биом для подготовки к этому боссу.",
+    "ja": "このボスの準備にはバイオームを公開してください。",
+    "id": "Ungkap bioma untuk mempersiapkan bos ini."
+  },
+  "Loading preparation data…": {
+    "en": "Loading preparation data…",
+    "cs": "Načítám data přípravy…",
+    "de": "Vorbereitungsdaten werden geladen…",
+    "es": "Cargando datos de preparación…",
+    "fr": "Chargement de la préparation…",
+    "pt": "Carregando dados de preparação…",
+    "zh": "正在加载准备数据…",
+    "hi": "तैयारी डेटा लोड हो रहा है…",
+    "ar": "جار تحميل بيانات التجهيز…",
+    "bn": "প্রস্তুতির তথ্য লোড হচ্ছে…",
+    "ru": "Загрузка данных подготовки…",
+    "ja": "準備データを読み込み中…",
+    "id": "Memuat data persiapan…"
+  },
+  "Could not load preparation data.": {
+    "en": "Could not load preparation data.",
+    "cs": "Data přípravy se nepodařilo načíst.",
+    "de": "Vorbereitungsdaten konnten nicht geladen werden.",
+    "es": "No se pudieron cargar los datos.",
+    "fr": "Impossible de charger les données.",
+    "pt": "Não foi possível carregar os dados.",
+    "zh": "无法加载准备数据。",
+    "hi": "तैयारी डेटा लोड नहीं हुआ।",
+    "ar": "تعذر تحميل بيانات التجهيز.",
+    "bn": "প্রস্তুতির তথ্য লোড হয়নি।",
+    "ru": "Не удалось загрузить данные.",
+    "ja": "準備データを読み込めませんでした。",
+    "id": "Gagal memuat data persiapan."
+  },
+  "Retry": {
+    "en": "Retry",
+    "cs": "Zkusit znovu",
+    "de": "Erneut versuchen",
+    "es": "Reintentar",
+    "fr": "Réessayer",
+    "pt": "Tentar novamente",
+    "zh": "重试",
+    "hi": "पुनः प्रयास",
+    "ar": "إعادة المحاولة",
+    "bn": "আবার চেষ্টা",
+    "ru": "Повторить",
+    "ja": "再試行",
+    "id": "Coba lagi"
+  },
+  "Raids": {
+    "en": "Raids",
+    "cs": "Nájezdy",
+    "de": "Raids",
+    "es": "Incursiones",
+    "fr": "Raids",
+    "pt": "Incursões",
+    "zh": "袭击",
+    "hi": "छापे",
+    "ar": "الغارات",
+    "bn": "অভিযান",
+    "ru": "Набеги",
+    "ja": "襲撃",
+    "id": "Raid"
+  },
+  "Starts": {
+    "en": "Starts",
+    "cs": "Začne",
+    "de": "Beginnt",
+    "es": "Comienza",
+    "fr": "Commence",
+    "pt": "Começa",
+    "zh": "开始",
+    "hi": "शुरू",
+    "ar": "يبدأ",
+    "bn": "শুরু",
+    "ru": "Начинается",
+    "ja": "開始",
+    "id": "Dimulai"
+  },
+  "Ends": {
+    "en": "Ends",
+    "cs": "Skončí",
+    "de": "Endet",
+    "es": "Termina",
+    "fr": "Se termine",
+    "pt": "Termina",
+    "zh": "结束",
+    "hi": "खत्म",
+    "ar": "ينتهي",
+    "bn": "শেষ",
+    "ru": "Заканчивается",
+    "ja": "終了",
+    "id": "Berakhir"
+  },
+  "Can happen now": {
+    "en": "Can happen now",
+    "cs": "Může přijít teď",
+    "de": "Kann jetzt auftreten",
+    "es": "Puede ocurrir ahora",
+    "fr": "Peut arriver maintenant",
+    "pt": "Pode ocorrer agora",
+    "zh": "现在可能发生",
+    "hi": "अभी हो सकता है",
+    "ar": "يمكن أن يحدث الآن",
+    "bn": "এখন হতে পারে",
+    "ru": "Может случиться сейчас",
+    "ja": "現在発生する襲撃",
+    "id": "Bisa terjadi sekarang"
+  },
+  "Ended": {
+    "en": "Ended",
+    "cs": "Skončené",
+    "de": "Beendet",
+    "es": "Finalizadas",
+    "fr": "Terminés",
+    "pt": "Encerradas",
+    "zh": "已结束",
+    "hi": "समाप्त",
+    "ar": "انتهت",
+    "bn": "সমাপ্ত",
+    "ru": "Завершены",
+    "ja": "終了済み",
+    "id": "Berakhir"
+  },
+  "Coming next": {
+    "en": "Coming next",
+    "cs": "Přijdou po dalším bossovi",
+    "de": "Als Nächstes",
+    "es": "Próximas",
+    "fr": "À venir",
+    "pt": "A seguir",
+    "zh": "接下来",
+    "hi": "अगला",
+    "ar": "القادمة",
+    "bn": "এরপরে",
+    "ru": "Следующие",
+    "ja": "次に発生",
+    "id": "Berikutnya"
+  },
+  "Every {count} minutes: {chance}% chance of a random event.": {
+    "en": {
+      "one": "Every {count} minutes: {chance}% chance of a random event.",
+      "other": "Every {count} minutes: {chance}% chance of a random event."
+    },
+    "cs": {
+      "one": "Každých {count} min: {chance}% šance na náhodnou událost.",
+      "few": "Každých {count} min: {chance}% šance na náhodnou událost.",
+      "many": "Každých {count} min: {chance}% šance na náhodnou událost.",
+      "other": "Každých {count} min: {chance}% šance na náhodnou událost."
+    },
+    "de": {
+      "one": "Alle {count} Min.: {chance}% Chance auf ein Zufallsereignis.",
+      "other": "Alle {count} Min.: {chance}% Chance auf ein Zufallsereignis."
+    },
+    "es": {
+      "one": "Cada {count} min: {chance}% de probabilidad de un evento aleatorio.",
+      "many": "Cada {count} min: {chance}% de probabilidad de un evento aleatorio.",
+      "other": "Cada {count} min: {chance}% de probabilidad de un evento aleatorio."
+    },
+    "fr": {
+      "one": "Toutes les {count} min : {chance}% de chance d’événement aléatoire.",
+      "many": "Toutes les {count} min : {chance}% de chance d’événement aléatoire.",
+      "other": "Toutes les {count} min : {chance}% de chance d’événement aléatoire."
+    },
+    "pt": {
+      "one": "A cada {count} min: {chance}% de chance de evento aleatório.",
+      "many": "A cada {count} min: {chance}% de chance de evento aleatório.",
+      "other": "A cada {count} min: {chance}% de chance de evento aleatório."
+    },
+    "zh": {
+      "other": "每 {count} 分钟：随机事件几率为 {chance}%。"
+    },
+    "hi": {
+      "one": "हर {count} मिनट: यादृच्छिक घटना की {chance}% संभावना।",
+      "other": "हर {count} मिनट: यादृच्छिक घटना की {chance}% संभावना।"
+    },
+    "ar": {
+      "zero": "كل {count} د: فرصة {chance}% لحدث عشوائي.",
+      "one": "كل {count} د: فرصة {chance}% لحدث عشوائي.",
+      "two": "كل {count} د: فرصة {chance}% لحدث عشوائي.",
+      "few": "كل {count} د: فرصة {chance}% لحدث عشوائي.",
+      "many": "كل {count} د: فرصة {chance}% لحدث عشوائي.",
+      "other": "كل {count} د: فرصة {chance}% لحدث عشوائي."
+    },
+    "bn": {
+      "one": "প্রতি {count} মিনিটে: এলোমেলো ঘটনার {chance}% সম্ভাবনা।",
+      "other": "প্রতি {count} মিনিটে: এলোমেলো ঘটনার {chance}% সম্ভাবনা।"
+    },
+    "ru": {
+      "one": "Каждые {count} мин: {chance}% вероятность события.",
+      "few": "Каждые {count} мин: {chance}% вероятность события.",
+      "many": "Каждые {count} мин: {chance}% вероятность события.",
+      "other": "Каждые {count} мин: {chance}% вероятность события."
+    },
+    "ja": {
+      "other": "{count} 分ごとにランダムイベントの確率 {chance}%。"
+    },
+    "id": {
+      "other": "Setiap {count} mnt: peluang {chance}% peristiwa acak."
+    }
+  },
+  "Within {count} m of at least {structures} base structures, outside dungeons. The hunted event is an exception.": {
+    "en": {
+      "one": "Within {count} m of at least {structures} base structures, outside dungeons. The hunted event is an exception.",
+      "other": "Within {count} m of at least {structures} base structures, outside dungeons. The hunted event is an exception."
+    },
+    "cs": {
+      "one": "Do {count} m od alespoň {structures} staveb základny, mimo dungeony. Hunted event je výjimkou.",
+      "few": "Do {count} m od alespoň {structures} staveb základny, mimo dungeony. Hunted event je výjimkou.",
+      "many": "Do {count} m od alespoň {structures} staveb základny, mimo dungeony. Hunted event je výjimkou.",
+      "other": "Do {count} m od alespoň {structures} staveb základny, mimo dungeony. Hunted event je výjimkou."
+    },
+    "de": {
+      "one": "Innerhalb von {count} m von mindestens {structures} Basisbauten, außerhalb von Dungeons. Das Jagdereignis ist ausgenommen.",
+      "other": "Innerhalb von {count} m von mindestens {structures} Basisbauten, außerhalb von Dungeons. Das Jagdereignis ist ausgenommen."
+    },
+    "es": {
+      "one": "A {count} m de al menos {structures} estructuras, fuera de mazmorras. El evento de caza es una excepción.",
+      "many": "A {count} m de al menos {structures} estructuras, fuera de mazmorras. El evento de caza es una excepción.",
+      "other": "A {count} m de al menos {structures} estructuras, fuera de mazmorras. El evento de caza es una excepción."
+    },
+    "fr": {
+      "one": "À moins de {count} m d’au moins {structures} structures, hors donjons. La chasse fait exception.",
+      "many": "À moins de {count} m d’au moins {structures} structures, hors donjons. La chasse fait exception.",
+      "other": "À moins de {count} m d’au moins {structures} structures, hors donjons. La chasse fait exception."
+    },
+    "pt": {
+      "one": "A {count} m de pelo menos {structures} estruturas, fora de masmorras. A caçada é exceção.",
+      "many": "A {count} m de pelo menos {structures} estruturas, fora de masmorras. A caçada é exceção.",
+      "other": "A {count} m de pelo menos {structures} estruturas, fora de masmorras. A caçada é exceção."
+    },
+    "zh": {
+      "other": "在至少 {structures} 个基地建筑的 {count} 米内，且不在地牢。被猎杀事件例外。"
+    },
+    "hi": {
+      "one": "कम से कम {structures} आधार संरचनाओं से {count} मी के भीतर, कालकोठरी के बाहर। शिकार घटना अपवाद है।",
+      "other": "कम से कम {structures} आधार संरचनाओं से {count} मी के भीतर, कालकोठरी के बाहर। शिकार घटना अपवाद है।"
+    },
+    "ar": {
+      "zero": "ضمن {count} م من {structures} مباني قاعدة على الأقل وخارج الأبراج. حدث الصيد مستثنى.",
+      "one": "ضمن {count} م من {structures} مباني قاعدة على الأقل وخارج الأبراج. حدث الصيد مستثنى.",
+      "two": "ضمن {count} م من {structures} مباني قاعدة على الأقل وخارج الأبراج. حدث الصيد مستثنى.",
+      "few": "ضمن {count} م من {structures} مباني قاعدة على الأقل وخارج الأبراج. حدث الصيد مستثنى.",
+      "many": "ضمن {count} م من {structures} مباني قاعدة على الأقل وخارج الأبراج. حدث الصيد مستثنى.",
+      "other": "ضمن {count} م من {structures} مباني قاعدة على الأقل وخارج الأبراج. حدث الصيد مستثنى."
+    },
+    "bn": {
+      "one": "অন্তত {structures} ঘাঁটির কাঠামোর {count} মিটারের মধ্যে, ডানজনের বাইরে। শিকার ঘটনা ব্যতিক্রম।",
+      "other": "অন্তত {structures} ঘাঁটির কাঠামোর {count} মিটারের মধ্যে, ডানজনের বাইরে। শিকার ঘটনা ব্যতিক্রম।"
+    },
+    "ru": {
+      "one": "В пределах {count} м от минимум {structures} построек базы, вне подземелий. Охота — исключение.",
+      "few": "В пределах {count} м от минимум {structures} построек базы, вне подземелий. Охота — исключение.",
+      "many": "В пределах {count} м от минимум {structures} построек базы, вне подземелий. Охота — исключение.",
+      "other": "В пределах {count} м от минимум {structures} построек базы, вне подземелий. Охота — исключение."
+    },
+    "ja": {
+      "other": "ダンジョン外で、少なくとも {structures} 個の拠点施設から {count} m以内。狩りのイベントは例外。"
+    },
+    "id": {
+      "other": "Dalam {count} m dari minimal {structures} bangunan markas, di luar dungeon. Perburuan adalah pengecualian."
+    }
+  },
+  "Prepare for this fight → Expedition": {
+    "en": "Prepare for this fight → Expedition",
+    "cs": "Připravit se na tento boj → Expedition",
+    "de": "Diesen Kampf vorbereiten → Expedition",
+    "es": "Preparar esta lucha → Expedition",
+    "fr": "Préparer ce combat → Expedition",
+    "pt": "Preparar esta luta → Expedition",
+    "zh": "准备此战 → Expedition",
+    "hi": "इस लड़ाई की तैयारी → Expedition",
+    "ar": "تجهيز هذه المعركة → Expedition",
+    "bn": "এই লড়াইয়ের প্রস্তুতি → Expedition",
+    "ru": "Подготовиться к бою → Expedition",
+    "ja": "この戦闘に備える → Expedition",
+    "id": "Siapkan pertarungan ini → Expedition"
+  },
+  "Prepare for the next boss and the raids that come after it — weapons, defenses, food, meads and the full packing list.": {
+    "en": "Prepare for the next boss and the raids that come after it — weapons, defenses, food, meads and the full packing list.",
+    "cs": "Připrav se na dalšího bosse a následné nájezdy — zbraně, obrana, jídlo, medoviny a kompletní balicí seznam.",
+    "de": "Bereite dich auf den nächsten Boss und folgende Raids vor — Waffen, Verteidigung, Nahrung, Met und die vollständige Packliste.",
+    "es": "Prepárate para el siguiente jefe y las incursiones posteriores: armas, defensas, comida, hidromiel y lista completa de equipaje.",
+    "fr": "Préparez le prochain boss et les raids suivants : armes, défense, nourriture, hydromels et liste complète de bagages.",
+    "pt": "Prepare-se para o próximo chefe e as incursões seguintes — armas, defesas, comida, hidroméis e a lista completa de bagagem.",
+    "zh": "为下一个首领和随后的袭击做好准备——武器、防御、食物、蜜酒及完整打包清单。",
+    "hi": "अगले बॉस और उसके बाद के छापों की तैयारी — हथियार, रक्षा, भोजन, मीड और पूरी सामान सूची।",
+    "ar": "استعد للزعيم التالي والغارات بعده — الأسلحة والدفاع والطعام والميد وقائمة التجهيز الكاملة.",
+    "bn": "পরবর্তী বস ও তার পরের অভিযানের প্রস্তুতি — অস্ত্র, প্রতিরক্ষা, খাবার, মীড ও সম্পূর্ণ প্যাকিং তালিকা।",
+    "ru": "Подготовьтесь к следующему боссу и набегам после него — оружие, защита, еда, медовуха и полный список снаряжения.",
+    "ja": "次のボスとその後の襲撃に備えましょう。武器、防御、食事、はちみつ酒、持ち物リストをまとめて確認。",
+    "id": "Siapkan bos berikutnya dan raid setelahnya — senjata, pertahanan, makanan, mead, dan daftar bawaan lengkap."
+  },
+  "Find Eikthyr’s Vegvisir at the Sacrificial Stones.": {
+    "en": "Find Eikthyr’s Vegvisir at the Sacrificial Stones.",
+    "cs": "Vegvisir pro Eikthyr hledej: Sacrificial Stones.",
+    "de": "Suche den Vegvisir für Eikthyr: Sacrificial Stones.",
+    "es": "Busca el Vegvisir de Eikthyr: Sacrificial Stones.",
+    "fr": "Cherchez le Vegvisir de Eikthyr : Sacrificial Stones.",
+    "pt": "Procure o Vegvisir de Eikthyr: Sacrificial Stones.",
+    "zh": "寻找 Eikthyr 的 Vegvisir：Sacrificial Stones。",
+    "hi": "Eikthyr का Vegvisir खोजें: Sacrificial Stones।",
+    "ar": "ابحث عن Vegvisir لـ Eikthyr: Sacrificial Stones.",
+    "bn": "Eikthyr-এর Vegvisir খুঁজুন: Sacrificial Stones।",
+    "ru": "Ищите Vegvisir для Eikthyr: Sacrificial Stones.",
+    "ja": "EikthyrのVegvisirを探す場所：Sacrificial Stones。",
+    "id": "Cari Vegvisir untuk Eikthyr: Sacrificial Stones."
+  },
+  "Bring Deer Trophy to the Forsaken Altar.": {
+    "en": "Bring Deer Trophy to the Forsaken Altar.",
+    "cs": "Přines Deer Trophy do Forsaken Altar.",
+    "de": "Bringe Deer Trophy zum Forsaken Altar.",
+    "es": "Lleva Deer Trophy al Forsaken Altar.",
+    "fr": "Apportez Deer Trophy au Forsaken Altar.",
+    "pt": "Leve Deer Trophy ao Forsaken Altar.",
+    "zh": "将 Deer Trophy 带到 Forsaken Altar。",
+    "hi": "Deer Trophy को Forsaken Altar पर लाएँ।",
+    "ar": "أحضر Deer Trophy إلى Forsaken Altar.",
+    "bn": "Deer Trophy Forsaken Altar-এ আনুন।",
+    "ru": "Принесите Deer Trophy к Forsaken Altar.",
+    "ja": "Deer TrophyをForsaken Altarへ持って行きましょう。",
+    "id": "Bawa Deer Trophy ke Forsaken Altar."
+  },
+  "Look for The Elder’s Vegvisir in Burial Chambers or ruined structures.": {
+    "en": "Look for The Elder’s Vegvisir in Burial Chambers or ruined structures.",
+    "cs": "Vegvisir pro The Elder hledej: Burial Chambers / Black Forest ruins.",
+    "de": "Suche den Vegvisir für The Elder: Burial Chambers / Black Forest ruins.",
+    "es": "Busca el Vegvisir de The Elder: Burial Chambers / Black Forest ruins.",
+    "fr": "Cherchez le Vegvisir de The Elder : Burial Chambers / Black Forest ruins.",
+    "pt": "Procure o Vegvisir de The Elder: Burial Chambers / Black Forest ruins.",
+    "zh": "寻找 The Elder 的 Vegvisir：Burial Chambers / Black Forest ruins。",
+    "hi": "The Elder का Vegvisir खोजें: Burial Chambers / Black Forest ruins।",
+    "ar": "ابحث عن Vegvisir لـ The Elder: Burial Chambers / Black Forest ruins.",
+    "bn": "The Elder-এর Vegvisir খুঁজুন: Burial Chambers / Black Forest ruins।",
+    "ru": "Ищите Vegvisir для The Elder: Burial Chambers / Black Forest ruins.",
+    "ja": "The ElderのVegvisirを探す場所：Burial Chambers / Black Forest ruins。",
+    "id": "Cari Vegvisir untuk The Elder: Burial Chambers / Black Forest ruins."
+  },
+  "Bring Ancient Seed to the Forsaken Altar.": {
+    "en": "Bring Ancient Seed to the Forsaken Altar.",
+    "cs": "Přines Ancient Seed do Forsaken Altar.",
+    "de": "Bringe Ancient Seed zum Forsaken Altar.",
+    "es": "Lleva Ancient Seed al Forsaken Altar.",
+    "fr": "Apportez Ancient Seed au Forsaken Altar.",
+    "pt": "Leve Ancient Seed ao Forsaken Altar.",
+    "zh": "将 Ancient Seed 带到 Forsaken Altar。",
+    "hi": "Ancient Seed को Forsaken Altar पर लाएँ।",
+    "ar": "أحضر Ancient Seed إلى Forsaken Altar.",
+    "bn": "Ancient Seed Forsaken Altar-এ আনুন।",
+    "ru": "Принесите Ancient Seed к Forsaken Altar.",
+    "ja": "Ancient SeedをForsaken Altarへ持って行きましょう。",
+    "id": "Bawa Ancient Seed ke Forsaken Altar."
+  },
+  "Look for Bonemass’ Vegvisir in Sunken Crypts or ruined structures.": {
+    "en": "Look for Bonemass’ Vegvisir in Sunken Crypts or ruined structures.",
+    "cs": "Vegvisir pro Bonemass hledej: Sunken Crypts / Swamp ruins.",
+    "de": "Suche den Vegvisir für Bonemass: Sunken Crypts / Swamp ruins.",
+    "es": "Busca el Vegvisir de Bonemass: Sunken Crypts / Swamp ruins.",
+    "fr": "Cherchez le Vegvisir de Bonemass : Sunken Crypts / Swamp ruins.",
+    "pt": "Procure o Vegvisir de Bonemass: Sunken Crypts / Swamp ruins.",
+    "zh": "寻找 Bonemass 的 Vegvisir：Sunken Crypts / Swamp ruins。",
+    "hi": "Bonemass का Vegvisir खोजें: Sunken Crypts / Swamp ruins।",
+    "ar": "ابحث عن Vegvisir لـ Bonemass: Sunken Crypts / Swamp ruins.",
+    "bn": "Bonemass-এর Vegvisir খুঁজুন: Sunken Crypts / Swamp ruins।",
+    "ru": "Ищите Vegvisir для Bonemass: Sunken Crypts / Swamp ruins.",
+    "ja": "BonemassのVegvisirを探す場所：Sunken Crypts / Swamp ruins。",
+    "id": "Cari Vegvisir untuk Bonemass: Sunken Crypts / Swamp ruins."
+  },
+  "Bring Withered Bone to the Forsaken Altar.": {
+    "en": "Bring Withered Bone to the Forsaken Altar.",
+    "cs": "Přines Withered Bone do Forsaken Altar.",
+    "de": "Bringe Withered Bone zum Forsaken Altar.",
+    "es": "Lleva Withered Bone al Forsaken Altar.",
+    "fr": "Apportez Withered Bone au Forsaken Altar.",
+    "pt": "Leve Withered Bone ao Forsaken Altar.",
+    "zh": "将 Withered Bone 带到 Forsaken Altar。",
+    "hi": "Withered Bone को Forsaken Altar पर लाएँ।",
+    "ar": "أحضر Withered Bone إلى Forsaken Altar.",
+    "bn": "Withered Bone Forsaken Altar-এ আনুন।",
+    "ru": "Принесите Withered Bone к Forsaken Altar.",
+    "ja": "Withered BoneをForsaken Altarへ持って行きましょう。",
+    "id": "Bawa Withered Bone ke Forsaken Altar."
+  },
+  "Look for Moder’s Vegvisir in ruined structures in the Mountains.": {
+    "en": "Look for Moder’s Vegvisir in ruined structures in the Mountains.",
+    "cs": "Vegvisir pro Moder hledej: Mountain ruins.",
+    "de": "Suche den Vegvisir für Moder: Mountain ruins.",
+    "es": "Busca el Vegvisir de Moder: Mountain ruins.",
+    "fr": "Cherchez le Vegvisir de Moder : Mountain ruins.",
+    "pt": "Procure o Vegvisir de Moder: Mountain ruins.",
+    "zh": "寻找 Moder 的 Vegvisir：Mountain ruins。",
+    "hi": "Moder का Vegvisir खोजें: Mountain ruins।",
+    "ar": "ابحث عن Vegvisir لـ Moder: Mountain ruins.",
+    "bn": "Moder-এর Vegvisir খুঁজুন: Mountain ruins।",
+    "ru": "Ищите Vegvisir для Moder: Mountain ruins.",
+    "ja": "ModerのVegvisirを探す場所：Mountain ruins。",
+    "id": "Cari Vegvisir untuk Moder: Mountain ruins."
+  },
+  "Bring Dragon Egg to the Forsaken Altar.": {
+    "en": "Bring Dragon Egg to the Forsaken Altar.",
+    "cs": "Přines Dragon Egg do Forsaken Altar.",
+    "de": "Bringe Dragon Egg zum Forsaken Altar.",
+    "es": "Lleva Dragon Egg al Forsaken Altar.",
+    "fr": "Apportez Dragon Egg au Forsaken Altar.",
+    "pt": "Leve Dragon Egg ao Forsaken Altar.",
+    "zh": "将 Dragon Egg 带到 Forsaken Altar。",
+    "hi": "Dragon Egg को Forsaken Altar पर लाएँ।",
+    "ar": "أحضر Dragon Egg إلى Forsaken Altar.",
+    "bn": "Dragon Egg Forsaken Altar-এ আনুন।",
+    "ru": "Принесите Dragon Egg к Forsaken Altar.",
+    "ja": "Dragon EggをForsaken Altarへ持って行きましょう。",
+    "id": "Bawa Dragon Egg ke Forsaken Altar."
+  },
+  "Look for Yagluth’s Vegvisir at Stonehenge structures.": {
+    "en": "Look for Yagluth’s Vegvisir at Stonehenge structures.",
+    "cs": "Vegvisir pro Yagluth hledej: Stonehenge.",
+    "de": "Suche den Vegvisir für Yagluth: Stonehenge.",
+    "es": "Busca el Vegvisir de Yagluth: Stonehenge.",
+    "fr": "Cherchez le Vegvisir de Yagluth : Stonehenge.",
+    "pt": "Procure o Vegvisir de Yagluth: Stonehenge.",
+    "zh": "寻找 Yagluth 的 Vegvisir：Stonehenge。",
+    "hi": "Yagluth का Vegvisir खोजें: Stonehenge।",
+    "ar": "ابحث عن Vegvisir لـ Yagluth: Stonehenge.",
+    "bn": "Yagluth-এর Vegvisir খুঁজুন: Stonehenge।",
+    "ru": "Ищите Vegvisir для Yagluth: Stonehenge.",
+    "ja": "YagluthのVegvisirを探す場所：Stonehenge。",
+    "id": "Cari Vegvisir untuk Yagluth: Stonehenge."
+  },
+  "Bring Fuling Totem to the Forsaken Altar.": {
+    "en": "Bring Fuling Totem to the Forsaken Altar.",
+    "cs": "Přines Fuling Totem do Forsaken Altar.",
+    "de": "Bringe Fuling Totem zum Forsaken Altar.",
+    "es": "Lleva Fuling Totem al Forsaken Altar.",
+    "fr": "Apportez Fuling Totem au Forsaken Altar.",
+    "pt": "Leve Fuling Totem ao Forsaken Altar.",
+    "zh": "将 Fuling Totem 带到 Forsaken Altar。",
+    "hi": "Fuling Totem को Forsaken Altar पर लाएँ।",
+    "ar": "أحضر Fuling Totem إلى Forsaken Altar.",
+    "bn": "Fuling Totem Forsaken Altar-এ আনুন।",
+    "ru": "Принесите Fuling Totem к Forsaken Altar.",
+    "ja": "Fuling TotemをForsaken Altarへ持って行きましょう。",
+    "id": "Bawa Fuling Totem ke Forsaken Altar."
+  },
+  "Look for The Queen’s Vegvisir in Infested Mines.": {
+    "en": "Look for The Queen’s Vegvisir in Infested Mines.",
+    "cs": "Vegvisir pro The Queen hledej: Infested Mines.",
+    "de": "Suche den Vegvisir für The Queen: Infested Mines.",
+    "es": "Busca el Vegvisir de The Queen: Infested Mines.",
+    "fr": "Cherchez le Vegvisir de The Queen : Infested Mines.",
+    "pt": "Procure o Vegvisir de The Queen: Infested Mines.",
+    "zh": "寻找 The Queen 的 Vegvisir：Infested Mines。",
+    "hi": "The Queen का Vegvisir खोजें: Infested Mines।",
+    "ar": "ابحث عن Vegvisir لـ The Queen: Infested Mines.",
+    "bn": "The Queen-এর Vegvisir খুঁজুন: Infested Mines।",
+    "ru": "Ищите Vegvisir для The Queen: Infested Mines.",
+    "ja": "The QueenのVegvisirを探す場所：Infested Mines。",
+    "id": "Cari Vegvisir untuk The Queen: Infested Mines."
+  },
+  "Look for Fader’s Vegvisir in the central tower of Charred Fortresses.": {
+    "en": "Look for Fader’s Vegvisir in the central tower of Charred Fortresses.",
+    "cs": "Vegvisir pro Fader hledej: Charred Fortress — central tower.",
+    "de": "Suche den Vegvisir für Fader: Charred Fortress — central tower.",
+    "es": "Busca el Vegvisir de Fader: Charred Fortress — central tower.",
+    "fr": "Cherchez le Vegvisir de Fader : Charred Fortress — central tower.",
+    "pt": "Procure o Vegvisir de Fader: Charred Fortress — central tower.",
+    "zh": "寻找 Fader 的 Vegvisir：Charred Fortress — central tower。",
+    "hi": "Fader का Vegvisir खोजें: Charred Fortress — central tower।",
+    "ar": "ابحث عن Vegvisir لـ Fader: Charred Fortress — central tower.",
+    "bn": "Fader-এর Vegvisir খুঁজুন: Charred Fortress — central tower।",
+    "ru": "Ищите Vegvisir для Fader: Charred Fortress — central tower.",
+    "ja": "FaderのVegvisirを探す場所：Charred Fortress — central tower。",
+    "id": "Cari Vegvisir untuk Fader: Charred Fortress — central tower."
+  },
+  "Use Sealbreaker to enter the Infested Citadel.": {
+    "en": "Use Sealbreaker to enter the Infested Citadel.",
+    "cs": "Použij Sealbreaker pro vstup do Infested Citadel.",
+    "de": "Nutze Sealbreaker, um die Infested Citadel zu betreten.",
+    "es": "Usa Sealbreaker para entrar en Infested Citadel.",
+    "fr": "Utilisez Sealbreaker pour entrer dans Infested Citadel.",
+    "pt": "Use Sealbreaker para entrar na Infested Citadel.",
+    "zh": "用 Sealbreaker 进入 Infested Citadel。",
+    "hi": "Infested Citadel में प्रवेश के लिए Sealbreaker उपयोग करें।",
+    "ar": "استخدم Sealbreaker لدخول Infested Citadel.",
+    "bn": "Infested Citadel-এ ঢুকতে Sealbreaker ব্যবহার করুন।",
+    "ru": "Используйте Sealbreaker для входа в Infested Citadel.",
+    "ja": "SealbreakerでInfested Citadelに入りましょう。",
+    "id": "Gunakan Sealbreaker untuk memasuki Infested Citadel."
+  },
+  "Craft Bell from Bell Fragment before visiting the altar.": {
+    "en": "Craft Bell from Bell Fragment before visiting the altar.",
+    "cs": "Před návštěvou oltáře vyrob Bell z Bell Fragment.",
+    "de": "Fertige Bell aus Bell Fragment vor dem Altarbesuch.",
+    "es": "Fabrica Bell con Bell Fragment antes de visitar el altar.",
+    "fr": "Fabriquez Bell avec Bell Fragment avant de visiter l’autel.",
+    "pt": "Fabrique Bell com Bell Fragment antes de visitar o altar.",
+    "zh": "去祭坛前用 Bell Fragment 制作 Bell。",
+    "hi": "वेदी जाने से पहले Bell Fragment से Bell बनाएँ।",
+    "ar": "اصنع Bell من Bell Fragment قبل زيارة المذبح.",
+    "bn": "বেদিতে যাওয়ার আগে Bell Fragment থেকে Bell তৈরি করুন।",
+    "ru": "Создайте Bell из Bell Fragment до посещения алтаря.",
+    "ja": "祭壇を訪れる前にBell FragmentからBellを作りましょう。",
+    "id": "Buat Bell dari Bell Fragment sebelum mengunjungi altar."
+  },
+  "Reach The Prison through the Aesir Passage.": {
+    "en": "Reach The Prison through the Aesir Passage.",
+    "cs": "Do The Prison se dostaneš přes Aesir Passage.",
+    "de": "Erreiche The Prison über Aesir Passage.",
+    "es": "Llega a The Prison por Aesir Passage.",
+    "fr": "Rejoignez The Prison par Aesir Passage.",
+    "pt": "Chegue a The Prison pelo Aesir Passage.",
+    "zh": "通过 Aesir Passage 到达 The Prison。",
+    "hi": "Aesir Passage से The Prison पहुँचें।",
+    "ar": "صل إلى The Prison عبر Aesir Passage.",
+    "bn": "Aesir Passage দিয়ে The Prison-এ পৌঁছান।",
+    "ru": "Попадите в The Prison через Aesir Passage.",
+    "ja": "Aesir Passageを通ってThe Prisonへ進みましょう。",
+    "id": "Capai The Prison melalui Aesir Passage."
+  },
+  "Offer Malicious Blood at the Strange Bowl.": {
+    "en": "Offer Malicious Blood at the Strange Bowl.",
+    "cs": "Obětuj Malicious Blood u Strange Bowl.",
+    "de": "Opfere Malicious Blood an der Strange Bowl.",
+    "es": "Ofrece Malicious Blood en Strange Bowl.",
+    "fr": "Offrez Malicious Blood à Strange Bowl.",
+    "pt": "Ofereça Malicious Blood em Strange Bowl.",
+    "zh": "在 Strange Bowl 献上 Malicious Blood。",
+    "hi": "Strange Bowl पर Malicious Blood चढ़ाएँ।",
+    "ar": "قدم Malicious Blood عند Strange Bowl.",
+    "bn": "Strange Bowl-এ Malicious Blood উৎসর্গ করুন।",
+    "ru": "Принесите Malicious Blood в Strange Bowl.",
+    "ja": "Strange BowlにMalicious Bloodを捧げましょう。",
+    "id": "Persembahkan Malicious Blood di Strange Bowl."
+  },
+  "World-based events are the default mode.": {
+    "en": "World-based events are the default mode.",
+    "cs": "Výchozí režim má události podle světa.",
+    "de": "Weltbasierte Ereignisse sind der Standardmodus.",
+    "es": "Los eventos por mundo son el modo predeterminado.",
+    "fr": "Les événements du monde sont le mode par défaut.",
+    "pt": "Eventos por mundo são o modo padrão.",
+    "zh": "世界事件是默认模式。",
+    "hi": "दुनिया आधारित घटनाएँ डिफ़ॉल्ट मोड हैं।",
+    "ar": "أحداث العالم هي الوضع الافتراضي.",
+    "bn": "বিশ্বভিত্তিক ঘটনা ডিফল্ট মোড।",
+    "ru": "События по миру — режим по умолчанию.",
+    "ja": "ワールド基準のイベントが標準モードです。",
+    "id": "Peristiwa berbasis dunia adalah mode bawaan."
+  },
+  "Raids do not start while the player is in a dungeon.": {
+    "en": "Raids do not start while the player is in a dungeon.",
+    "cs": "Nájezdy nezačnou, když je hráč v dungeonu.",
+    "de": "Raids starten nicht, wenn der Spieler in einem Dungeon ist.",
+    "es": "Las incursiones no empiezan si el jugador está en una mazmorra.",
+    "fr": "Les raids ne commencent pas si le joueur est dans un donjon.",
+    "pt": "Incursões não começam quando o jogador está em uma masmorra.",
+    "zh": "玩家在地牢时不会开始袭击。",
+    "hi": "खिलाड़ी कालकोठरी में हो तो छापे शुरू नहीं होते।",
+    "ar": "لا تبدأ الغارات واللاعب داخل برج محصن.",
+    "bn": "খেলোয়াড় ডানজনে থাকলে অভিযান শুরু হয় না।",
+    "ru": "Набеги не начинаются, пока игрок в подземелье.",
+    "ja": "プレイヤーがダンジョン内にいる間は襲撃が始まりません。",
+    "id": "Raid tidak dimulai saat pemain berada di dungeon."
+  },
+  "The biome check uses the exact biome at your position.": {
+    "en": "The biome check uses the exact biome at your position.",
+    "cs": "Kontrola biomu používá přesný biom na tvé pozici.",
+    "de": "Die Biomprüfung nutzt das genaue Biom an deiner Position.",
+    "es": "La comprobación usa el bioma exacto en tu posición.",
+    "fr": "Le contrôle utilise le biome exact à votre position.",
+    "pt": "A verificação usa o bioma exato na sua posição.",
+    "zh": "检查采用你所在位置的确切生物群系。",
+    "hi": "जाँच आपकी स्थिति के सटीक बायोम का उपयोग करती है।",
+    "ar": "الفحص يستخدم المنطقة الدقيقة في موقعك.",
+    "bn": "পরীক্ষায় আপনার অবস্থানের সঠিক বায়োম ব্যবহৃত হয়।",
+    "ru": "Проверка использует точный биом в вашей позиции.",
+    "ja": "判定は現在位置の正確なバイオームを使います。",
+    "id": "Pemeriksaan memakai bioma tepat di posisimu."
+  },
+  "Environmental deaths can also unlock creature-based events.": {
+    "en": "Environmental deaths can also unlock creature-based events.",
+    "cs": "I úmrtí způsobená prostředím mohou odemknout události.",
+    "de": "Auch Umwelttode können Kreaturereignisse freischalten.",
+    "es": "Las muertes ambientales también pueden desbloquear eventos.",
+    "fr": "Les morts dues à l’environnement peuvent aussi débloquer des événements.",
+    "pt": "Mortes ambientais também podem desbloquear eventos.",
+    "zh": "环境造成的死亡也可解锁生物事件。",
+    "hi": "पर्यावरण से हुई मृत्यु भी जीव आधारित घटनाएँ खोल सकती है।",
+    "ar": "قد تفتح الوفيات البيئية أحداث المخلوقات أيضاً.",
+    "bn": "পরিবেশের কারণে মৃত্যুও প্রাণীভিত্তিক ঘটনা খুলতে পারে।",
+    "ru": "Гибель от окружения также открывает события.",
+    "ja": "環境による死亡でもイベントが解禁される場合があります。",
+    "id": "Kematian akibat lingkungan juga dapat membuka peristiwa makhluk."
+  },
+  "Protect tamed creatures during raids.": {
+    "en": "Protect tamed creatures during raids.",
+    "cs": "Během nájezdů chraň ochočené jednotky.",
+    "de": "Schütze gezähmte Kreaturen während Raids.",
+    "es": "Protege a las criaturas domesticadas durante las incursiones.",
+    "fr": "Protégez les créatures apprivoisées pendant les raids.",
+    "pt": "Proteja criaturas domesticadas durante incursões.",
+    "zh": "袭击时保护驯服的生物。",
+    "hi": "छापों के दौरान पालतू जीवों की रक्षा करें।",
+    "ar": "احم المخلوقات المروضة أثناء الغارات.",
+    "bn": "অভিযানে পোষা প্রাণীদের রক্ষা করুন।",
+    "ru": "Защищайте приручённых существ при набегах.",
+    "ja": "襲撃中は飼いならした動物を守りましょう。",
+    "id": "Lindungi makhluk jinak saat raid."
+  },
+  "weak": {
+    "en": "Weak",
+    "cs": "Zranitelný",
+    "de": "Anfällig",
+    "es": "Vulnerable",
+    "fr": "Vulnérable",
+    "pt": "Vulnerável",
+    "zh": "弱点",
+    "hi": "कमज़ोर",
+    "ar": "ضعيف",
+    "bn": "দুর্বল",
+    "ru": "Уязвимость",
+    "ja": "弱点",
+    "id": "Lemah"
+  },
+  "resistant": {
+    "en": "Resistant",
+    "cs": "Odolný",
+    "de": "Resistent",
+    "es": "Resistente",
+    "fr": "Résistant",
+    "pt": "Resistente",
+    "zh": "抗性",
+    "hi": "प्रतिरोधी",
+    "ar": "مقاوم",
+    "bn": "প্রতিরোধী",
+    "ru": "Сопротивление",
+    "ja": "耐性",
+    "id": "Tahan"
+  },
+  "immune": {
+    "en": "Immune",
+    "cs": "Imunní",
+    "de": "Immun",
+    "es": "Inmune",
+    "fr": "Immunisé",
+    "pt": "Imune",
+    "zh": "免疫",
+    "hi": "प्रतिरक्षित",
+    "ar": "محصّن",
+    "bn": "অনাক্রম্য",
+    "ru": "Иммунитет",
+    "ja": "無効",
+    "id": "Kebal"
+  },
+  "veryweak": {
+    "en": "Very weak",
+    "cs": "Velmi slabý",
+    "de": "Sehr schwach",
+    "es": "Muy débil",
+    "fr": "Très faible",
+    "pt": "Muito fraco",
+    "zh": "非常弱",
+    "hi": "बहुत कमजोर",
+    "ar": "ضعيف جداً",
+    "bn": "খুব দুর্বল",
+    "ru": "Очень уязвим",
+    "ja": "非常に弱い",
+    "id": "Sangat lemah"
+  },
+  "slightlyweak": {
+    "en": "Slightly weak",
+    "cs": "Mírně slabý",
+    "de": "Leicht schwach",
+    "es": "Algo débil",
+    "fr": "Un peu faible",
+    "pt": "Um pouco fraco",
+    "zh": "略弱",
+    "hi": "थोड़ा कमजोर",
+    "ar": "ضعيف قليلاً",
+    "bn": "একটু দুর্বল",
+    "ru": "Слегка уязвим",
+    "ja": "やや弱い",
+    "id": "Agak lemah"
+  },
+  "slightlyresistant": {
+    "en": "Slightly resistant",
+    "cs": "Mírně odolný",
+    "de": "Leicht resistent",
+    "es": "Algo resistente",
+    "fr": "Un peu résistant",
+    "pt": "Um pouco resistente",
+    "zh": "略抗性",
+    "hi": "थोड़ा प्रतिरोधी",
+    "ar": "مقاوم قليلاً",
+    "bn": "একটু প্রতিরোধী",
+    "ru": "Слегка устойчив",
+    "ja": "やや耐性",
+    "id": "Agak tahan"
+  },
+  "veryresistant": {
+    "en": "Very resistant",
+    "cs": "Velmi odolný",
+    "de": "Sehr resistent",
+    "es": "Muy resistente",
+    "fr": "Très résistant",
+    "pt": "Muito resistente",
+    "zh": "强抗性",
+    "hi": "बहुत प्रतिरोधी",
+    "ar": "مقاوم جداً",
+    "bn": "খুব প্রতিরোধী",
+    "ru": "Очень устойчив",
+    "ja": "強い耐性",
+    "id": "Sangat tahan"
+  },
+  "blunt": {
+    "en": "Blunt",
+    "cs": "Blunt",
+    "de": "Blunt",
+    "es": "Blunt",
+    "fr": "Blunt",
+    "pt": "Blunt",
+    "zh": "Blunt",
+    "hi": "Blunt",
+    "ar": "Blunt",
+    "bn": "Blunt",
+    "ru": "Blunt",
+    "ja": "Blunt",
+    "id": "Blunt"
+  },
+  "slash": {
+    "en": "Slash",
+    "cs": "Slash",
+    "de": "Slash",
+    "es": "Slash",
+    "fr": "Slash",
+    "pt": "Slash",
+    "zh": "Slash",
+    "hi": "Slash",
+    "ar": "Slash",
+    "bn": "Slash",
+    "ru": "Slash",
+    "ja": "Slash",
+    "id": "Slash"
+  },
+  "pierce": {
+    "en": "Pierce",
+    "cs": "Pierce",
+    "de": "Pierce",
+    "es": "Pierce",
+    "fr": "Pierce",
+    "pt": "Pierce",
+    "zh": "Pierce",
+    "hi": "Pierce",
+    "ar": "Pierce",
+    "bn": "Pierce",
+    "ru": "Pierce",
+    "ja": "Pierce",
+    "id": "Pierce"
+  },
+  "fire": {
+    "en": "Fire",
+    "cs": "Fire",
+    "de": "Fire",
+    "es": "Fire",
+    "fr": "Fire",
+    "pt": "Fire",
+    "zh": "Fire",
+    "hi": "Fire",
+    "ar": "Fire",
+    "bn": "Fire",
+    "ru": "Fire",
+    "ja": "Fire",
+    "id": "Fire"
+  },
+  "frost": {
+    "en": "Frost",
+    "cs": "Frost",
+    "de": "Frost",
+    "es": "Frost",
+    "fr": "Frost",
+    "pt": "Frost",
+    "zh": "Frost",
+    "hi": "Frost",
+    "ar": "Frost",
+    "bn": "Frost",
+    "ru": "Frost",
+    "ja": "Frost",
+    "id": "Frost"
+  },
+  "poison": {
+    "en": "Poison",
+    "cs": "Poison",
+    "de": "Poison",
+    "es": "Poison",
+    "fr": "Poison",
+    "pt": "Poison",
+    "zh": "Poison",
+    "hi": "Poison",
+    "ar": "Poison",
+    "bn": "Poison",
+    "ru": "Poison",
+    "ja": "Poison",
+    "id": "Poison"
+  },
+  "lightning": {
+    "en": "Lightning",
+    "cs": "Lightning",
+    "de": "Lightning",
+    "es": "Lightning",
+    "fr": "Lightning",
+    "pt": "Lightning",
+    "zh": "Lightning",
+    "hi": "Lightning",
+    "ar": "Lightning",
+    "bn": "Lightning",
+    "ru": "Lightning",
+    "ja": "Lightning",
+    "id": "Lightning"
+  },
+  "spirit": {
+    "en": "Spirit",
+    "cs": "Spirit",
+    "de": "Spirit",
+    "es": "Spirit",
+    "fr": "Spirit",
+    "pt": "Spirit",
+    "zh": "Spirit",
+    "hi": "Spirit",
+    "ar": "Spirit",
+    "bn": "Spirit",
+    "ru": "Spirit",
+    "ja": "Spirit",
+    "id": "Spirit"
+  },
+  "{station} · level {count}": {
+    "en": {
+      "one": "{station} · level {count}",
+      "other": "{station} · level {count}"
+    },
+    "cs": {
+      "one": "{station} · úroveň {count}",
+      "few": "{station} · úroveň {count}",
+      "many": "{station} · úroveň {count}",
+      "other": "{station} · úroveň {count}"
+    },
+    "de": {
+      "one": "{station} · Stufe {count}",
+      "other": "{station} · Stufe {count}"
+    },
+    "es": {
+      "one": "{station} · nivel {count}",
+      "many": "{station} · nivel {count}",
+      "other": "{station} · nivel {count}"
+    },
+    "fr": {
+      "one": "{station} · niveau {count}",
+      "many": "{station} · niveau {count}",
+      "other": "{station} · niveau {count}"
+    },
+    "pt": {
+      "one": "{station} · nível {count}",
+      "many": "{station} · nível {count}",
+      "other": "{station} · nível {count}"
+    },
+    "zh": {
+      "other": "{station} · 等级 {count}"
+    },
+    "hi": {
+      "one": "{station} · स्तर {count}",
+      "other": "{station} · स्तर {count}"
+    },
+    "ar": {
+      "zero": "{station} · مستوى {count}",
+      "one": "{station} · مستوى {count}",
+      "two": "{station} · مستوى {count}",
+      "few": "{station} · مستوى {count}",
+      "many": "{station} · مستوى {count}",
+      "other": "{station} · مستوى {count}"
+    },
+    "bn": {
+      "one": "{station} · স্তর {count}",
+      "other": "{station} · স্তর {count}"
+    },
+    "ru": {
+      "one": "{station} · уровень {count}",
+      "few": "{station} · уровень {count}",
+      "many": "{station} · уровень {count}",
+      "other": "{station} · уровень {count}"
+    },
+    "ja": {
+      "other": "{station} · レベル {count}"
+    },
+    "id": {
+      "other": "{station} · tingkat {count}"
+    }
+  },
+  "Next boss (auto)": {
+    "en": "Next boss (auto)",
+    "cs": "Další boss (automaticky)",
+    "de": "Nächster Boss (automatisch)",
+    "es": "Siguiente jefe (automático)",
+    "fr": "Prochain boss (automatique)",
+    "pt": "Próximo chefe (automático)",
+    "zh": "下一个首领（自动）",
+    "hi": "अगला बॉस (स्वचालित)",
+    "ar": "الزعيم التالي (تلقائي)",
+    "bn": "পরবর্তী বস (স্বয়ংক্রিয়)",
+    "ru": "Следующий босс (автоматически)",
+    "ja": "次のボス（自動）",
+    "id": "Bos berikutnya (otomatis)"
+  }
+}

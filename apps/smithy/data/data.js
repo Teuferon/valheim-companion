@@ -28591,6 +28591,34 @@ window.VA_DATA = {
       }
     },
     {
+      "id": "galdr-table",
+      "name": "Galdr Table",
+      "names": {},
+      "type": "crafting",
+      "addedBy": "expedition",
+      "materials": [
+        {
+          "item": "black-metal",
+          "amount": 10
+        },
+        {
+          "item": "yggdrasil-wood",
+          "amount": 20
+        },
+        {
+          "item": "black-core",
+          "amount": 5
+        },
+        {
+          "item": "refined-eitr",
+          "amount": 5
+        }
+      ],
+      "biome": "mistlands",
+      "tier": 7,
+      "wiki": "https://valheim.weirdgloop.org/w/Galdr_Table"
+    },
+    {
       "id": "cauldron",
       "name": "Cauldron",
       "names": {
@@ -29108,6 +29136,32 @@ window.VA_DATA = {
         "ru": "Древняя кора"
       }
     },
+    "ancient-seed": {
+      "id": "ancient-seed",
+      "name": "Ancient Seed",
+      "addedBy": "expedition",
+      "names": {},
+      "image": null,
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Greydwarf Brute",
+          "kind": "creature",
+          "creatureId": "greydwarf-brute",
+          "biomes": [
+            "black-forest"
+          ]
+        },
+        {
+          "text": "Greydwarf Nest",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "teleportable": true,
+      "wiki": "https://valheim.weirdgloop.org/w/Ancient_Seed"
+    },
     "anglerfish": {
       "id": "anglerfish",
       "name": "Anglerfish",
@@ -29459,6 +29513,52 @@ window.VA_DATA = {
         "cs": "Trofeje",
         "ru": "Категория:Трофеи"
       }
+    },
+    "bell": {
+      "id": "bell",
+      "name": "Bell",
+      "addedBy": "expedition",
+      "names": {},
+      "image": null,
+      "biome": "ashlands",
+      "tier": 8,
+      "sources": [
+        {
+          "text": "Black Forge",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Black Forge",
+        "stationLevel": 1,
+        "materials": [
+          {
+            "item": "bell-fragment",
+            "amount": 3
+          }
+        ],
+        "yields": 1
+      },
+      "teleportable": true,
+      "wiki": "https://valheim.weirdgloop.org/w/Bell"
+    },
+    "bell-fragment": {
+      "id": "bell-fragment",
+      "name": "Bell Fragment",
+      "addedBy": "expedition",
+      "names": {},
+      "image": null,
+      "biome": "ashlands",
+      "tier": 8,
+      "sources": [
+        {
+          "text": "Charred Fortress",
+          "kind": "location"
+        }
+      ],
+      "recipe": null,
+      "teleportable": true,
+      "wiki": "https://valheim.weirdgloop.org/w/Bell_Fragment"
     },
     "berserkir-axes": {
       "id": "berserkir-axes",
@@ -31718,6 +31818,24 @@ window.VA_DATA = {
         "ru": "Категория:Трофеи"
       }
     },
+    "dragon-egg": {
+      "id": "dragon-egg",
+      "name": "Dragon Egg",
+      "addedBy": "expedition",
+      "names": {},
+      "image": null,
+      "biome": "mountain",
+      "tier": 5,
+      "sources": [
+        {
+          "text": "Drake Nest",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "teleportable": false,
+      "wiki": "https://valheim.weirdgloop.org/w/Dragon_Egg"
+    },
     "drake-trophy": {
       "id": "drake-trophy",
       "name": "Drake Trophy",
@@ -32372,6 +32490,32 @@ window.VA_DATA = {
       "recipe": null,
       "wiki": "https://valheim.weirdgloop.org/w/Frozen_Branch",
       "names": {}
+    },
+    "fuling-totem": {
+      "id": "fuling-totem",
+      "name": "Fuling Totem",
+      "addedBy": "expedition",
+      "names": {},
+      "image": null,
+      "biome": "plains",
+      "tier": 6,
+      "sources": [
+        {
+          "text": "Fuling Village",
+          "kind": "location"
+        },
+        {
+          "text": "Fuling Berserker",
+          "kind": "creature",
+          "creatureId": "fuling-berserker",
+          "biomes": [
+            "plains"
+          ]
+        }
+      ],
+      "recipe": null,
+      "teleportable": true,
+      "wiki": "https://valheim.weirdgloop.org/w/Fuling_Totem"
     },
     "giant-herring": {
       "id": "giant-herring",
@@ -33081,6 +33225,24 @@ window.VA_DATA = {
         "fr": "Poisson-magma",
         "ru": "Магмарыбка"
       }
+    },
+    "malicious-blood": {
+      "id": "malicious-blood",
+      "name": "Malicious Blood",
+      "addedBy": "expedition",
+      "names": {},
+      "image": null,
+      "biome": "deep-north",
+      "tier": 9,
+      "sources": [
+        {
+          "text": "Mörkhalla",
+          "kind": "other"
+        }
+      ],
+      "recipe": null,
+      "teleportable": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Malicious_Blood"
     },
     "mandible": {
       "id": "mandible",
@@ -35596,6 +35758,42 @@ window.VA_DATA = {
         "ru": "Щука"
       }
     },
+    "portal": {
+      "id": "portal",
+      "name": "Portal",
+      "addedBy": "expedition",
+      "names": {},
+      "image": null,
+      "biome": "black-forest",
+      "tier": 2,
+      "sources": [
+        {
+          "text": "Workbench",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Workbench",
+        "stationLevel": 1,
+        "materials": [
+          {
+            "item": "greydwarf-eye",
+            "amount": 10
+          },
+          {
+            "item": "finewood",
+            "amount": 20
+          },
+          {
+            "item": "surtling-core",
+            "amount": 2
+          }
+        ],
+        "yields": 1
+      },
+      "teleportable": null,
+      "wiki": "https://valheim.weirdgloop.org/w/Portal"
+    },
     "poteitr": {
       "id": "poteitr",
       "name": "Poteitr",
@@ -36280,6 +36478,52 @@ window.VA_DATA = {
       "recipe": null,
       "wiki": "https://valheim.weirdgloop.org/w/Seal_Pelt",
       "names": {}
+    },
+    "sealbreaker": {
+      "id": "sealbreaker",
+      "name": "Sealbreaker",
+      "addedBy": "expedition",
+      "names": {},
+      "image": null,
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Galdr Table",
+          "kind": "station"
+        }
+      ],
+      "recipe": {
+        "station": "Galdr Table",
+        "stationLevel": 1,
+        "materials": [
+          {
+            "item": "sealbreaker-fragment",
+            "amount": 9
+          }
+        ],
+        "yields": 1
+      },
+      "teleportable": true,
+      "wiki": "https://valheim.weirdgloop.org/w/Sealbreaker"
+    },
+    "sealbreaker-fragment": {
+      "id": "sealbreaker-fragment",
+      "name": "Sealbreaker Fragment",
+      "addedBy": "expedition",
+      "names": {},
+      "image": null,
+      "biome": "mistlands",
+      "tier": 7,
+      "sources": [
+        {
+          "text": "Infested Mines",
+          "kind": "location"
+        }
+      ],
+      "recipe": null,
+      "teleportable": true,
+      "wiki": "https://valheim.weirdgloop.org/w/Sealbreaker_Fragment"
     },
     "seasoning-of-the-gourd": {
       "id": "seasoning-of-the-gourd",
@@ -37499,6 +37743,28 @@ window.VA_DATA = {
         "cs": "Dušička",
         "ru": "Светлячок"
       }
+    },
+    "withered-bone": {
+      "id": "withered-bone",
+      "name": "Withered Bone",
+      "addedBy": "expedition",
+      "names": {},
+      "image": null,
+      "biome": "swamp",
+      "tier": 4,
+      "sources": [
+        {
+          "text": "Muddy Scrap Piles",
+          "kind": "location"
+        },
+        {
+          "text": "Sunken Crypts",
+          "kind": "location"
+        }
+      ],
+      "recipe": null,
+      "teleportable": true,
+      "wiki": "https://valheim.weirdgloop.org/w/Withered_Bone"
     },
     "wolf-fang": {
       "id": "wolf-fang",

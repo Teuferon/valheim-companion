@@ -3,6 +3,11 @@
 
 (function () {
   const SECTIONS = {
+    expedition: {
+      title: 'EXPEDITION', sub: 'Valheim Companion',
+      desc: 'Prepare for the next boss and the raids that come after it — weapons, defenses, food, meads and the full packing list.',
+      bg: '../../bestiary/img/biomes/swamp.png',
+    },
     comfort: {
       title: 'COMFORT PLANNER', sub: 'Valheim Companion',
       desc: 'Build the coziest base you can right now — comfort, Rested time and the full shopping list.',

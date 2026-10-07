@@ -318,6 +318,34 @@
     "wiki": "https://valheim.weirdgloop.org/w/Workbench"
   },
   {
+    "id": "galdr-table",
+    "name": "Galdr Table",
+    "names": {},
+    "type": "crafting",
+    "addedBy": "expedition",
+    "materials": [
+      {
+        "item": "black-metal",
+        "amount": 10
+      },
+      {
+        "item": "yggdrasil-wood",
+        "amount": 20
+      },
+      {
+        "item": "black-core",
+        "amount": 5
+      },
+      {
+        "item": "refined-eitr",
+        "amount": 5
+      }
+    ],
+    "biome": "mistlands",
+    "tier": 7,
+    "wiki": "https://valheim.weirdgloop.org/w/Galdr_Table"
+  },
+  {
     "id": "cauldron",
     "name": "Cauldron",
     "names": {

@@ -754,5 +754,50 @@
     "ru": "Мебель",
     "ja": "家具",
     "id": "Perabot"
+  },
+  "Prepare for the next boss and the raids that come after it — weapons, defenses, food, meads and the full packing list.": {
+    "en": "Prepare for the next boss and the raids that come after it — weapons, defenses, food, meads and the full packing list.",
+    "cs": "Připrav se na dalšího bosse a následné nájezdy — zbraně, obrana, jídlo, medoviny a kompletní balicí seznam.",
+    "de": "Bereite dich auf den nächsten Boss und folgende Raids vor — Waffen, Verteidigung, Nahrung, Met und die vollständige Packliste.",
+    "es": "Prepárate para el siguiente jefe y las incursiones posteriores: armas, defensas, comida, hidromiel y lista completa de equipaje.",
+    "fr": "Préparez le prochain boss et les raids suivants : armes, défense, nourriture, hydromels et liste complète de bagages.",
+    "pt": "Prepare-se para o próximo chefe e as incursões seguintes — armas, defesas, comida, hidroméis e a lista completa de bagagem.",
+    "zh": "为下一个首领和随后的袭击做好准备——武器、防御、食物、蜜酒及完整打包清单。",
+    "hi": "अगले बॉस और उसके बाद के छापों की तैयारी — हथियार, रक्षा, भोजन, मीड और पूरी सामान सूची।",
+    "ar": "استعد للزعيم التالي والغارات بعده — الأسلحة والدفاع والطعام والميد وقائمة التجهيز الكاملة.",
+    "bn": "পরবর্তী বস ও তার পরের অভিযানের প্রস্তুতি — অস্ত্র, প্রতিরক্ষা, খাবার, মীড ও সম্পূর্ণ প্যাকিং তালিকা।",
+    "ru": "Подготовьтесь к следующему боссу и набегам после него — оружие, защита, еда, медовуха и полный список снаряжения.",
+    "ja": "次のボスとその後の襲撃に備えましょう。武器、防御、食事、はちみつ酒、持ち物リストをまとめて確認。",
+    "id": "Siapkan bos berikutnya dan raid setelahnya — senjata, pertahanan, makanan, mead, dan daftar bawaan lengkap."
+  },
+  "Open Expedition →": {
+    "en": "Open Expedition →",
+    "cs": "Otevřít Expedition →",
+    "de": "Expedition öffnen →",
+    "es": "Abrir Expedition →",
+    "fr": "Ouvrir Expedition →",
+    "pt": "Abrir Expedition →",
+    "zh": "打开 Expedition →",
+    "hi": "Expedition खोलें →",
+    "ar": "افتح Expedition →",
+    "bn": "Expedition খুলুন →",
+    "ru": "Открыть Expedition →",
+    "ja": "Expedition を開く →",
+    "id": "Buka Expedition →"
+  },
+  "Expedition": {
+    "en": "Expedition",
+    "cs": "Expedition",
+    "de": "Expedition",
+    "es": "Expedition",
+    "fr": "Expedition",
+    "pt": "Expedition",
+    "zh": "Expedition",
+    "hi": "Expedition",
+    "ar": "Expedition",
+    "bn": "Expedition",
+    "ru": "Expedition",
+    "ja": "Expedition",
+    "id": "Expedition"
   }
 }
