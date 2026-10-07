@@ -4,6 +4,10 @@
   const bosses = data => [...(Array.isArray(data.expedition) ? data.expedition : data.expedition?.bosses || [])].sort((a,b)=>a.order-b.order);
   const defeated = progress => progress?.defeated || {};
   function nextBoss(progress, data) { return bosses(data).find(b=>!defeated(progress)[b.id]) || null; }
+  function targetBoss(prep, progress, data) {
+    const manual = prep?.auto === false && bosses(data).find(b => b.id === prep.boss);
+    return manual || nextBoss(progress, data);
+  }
   function revealed(progress, data) {
     const ordered = bosses(data), done = ordered.filter(b=>defeated(progress)[b.id]);
     const last = done.length ? Math.max(...done.map(b=>b.order)) : 0;
@@ -54,6 +58,10 @@
     }
     return Object.entries(totals).map(([type,amount])=>({type,amount})).sort((a,b)=>b.amount-a.amount||a.type.localeCompare(b.type));
   }
+  function meadQuantity(mead, minutes = 30) {
+    const interval = Math.max(Number(mead.duration) || 0, Number(mead.cooldown) || 0);
+    return interval > 0 ? Math.ceil(minutes * 60 / interval) + 1 : 1;
+  }
   function packingList(prep, ctx = {}) {
     const minutes=Number.isFinite(prep.minutes)&&prep.minutes>0 ? Math.min(240,prep.minutes) : 30;
     const lines=new Map();
@@ -66,7 +74,7 @@
     for(const food of ctx.foods || []) add(food.id,Math.ceil(minutes*60/Math.max(food.duration||1,1)),'food');
     for(const entry of ctx.meads || []) {
       const mead=entry.mead || entry;
-      add(mead.id,Math.ceil(minutes*60/Math.max(mead.duration||mead.cooldown||1,1))+1,'mead');
+      add(mead.id,meadQuantity(mead, minutes),'mead');
     }
     if(prep.portal && ctx.items?.portal?.recipe?.materials?.length) add('portal',1,'portal');
     return [...lines.values()];
@@ -74,7 +82,7 @@
   const clamp=(v,min,max,fallback)=>typeof v==='number'&&Number.isFinite(v)?Math.min(max,Math.max(min,Math.round(v))):fallback;
   function sanitize(value, data) {
     const source=value&&typeof value==='object'&&!Array.isArray(value)?value:{};
-    return {version:1,boss:bosses(data).some(b=>b.id===source.boss)?source.boss:null,
+    return {version:1,auto:source.auto!==false,boss:bosses(data).some(b=>b.id===source.boss)?source.boss:null,
       players:clamp(source.players,1,5,1),minutes:clamp(source.minutes,5,240,30),portal:source.portal===true,
       checked:Array.isArray(source.checked)?[...new Set(source.checked.filter(id=>typeof id==='string'&&/^[a-z0-9-]{1,100}$/.test(id)))].slice(0,100):[],breakdown:source.breakdown!==false};
   }
@@ -92,5 +100,5 @@
       return sanitize(value,data);
     } catch {return null;}
   }
-  root.VCExpedition=Object.freeze({nextBoss,raidStates,afterDefeating,incomingDamage,packingList,encodePrep,decodePrep,sanitize,revealed,hidden});
+  root.VCExpedition=Object.freeze({nextBoss,targetBoss,meadQuantity,raidStates,afterDefeating,incomingDamage,packingList,encodePrep,decodePrep,sanitize,revealed,hidden});
 })(globalThis);

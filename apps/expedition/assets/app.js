@@ -14,15 +14,15 @@ const section = (title,cls='') => {const n=el('section','card '+cls);n.append(el
 const check = (text,checked,action,id) => {const n=el('label','check-control'),input=el('input');input.type='checkbox';input.checked=checked;if(id)input.id=id;input.addEventListener('change',()=>action(input.checked));n.append(input,el('span','',text));return n;};
 const read = () => {try{return JSON.parse(localStorage.getItem('vx.prep'));}catch{return null;}};
 let state=core.decodePrep(location.hash,data) ?? core.sanitize(read(),data);
-let player=readPlayerState().player, selectedManually=!!state.boss, tab=location.hash==='#raids'?'raids':'boss';
+let player=readPlayerState().player, tab=location.hash==='#raids'?'raids':'boss';
 if(core.decodePrep(location.hash,data)) player=sanitizePlayer({...player,players:state.players});
 else state.players=player.players;
 let dependencies, loaded=false, busy=false, renderVersion=0;
 const biomes=()=>preparations.map(b=>({id:b.biome,order:b.order,creatures:{boss:[b.id]}})).concat([{id:'ocean',order:3,creatures:{boss:[]}}]);
 const revealed=()=>VCProgress.revealedBiomes(biomes());
 const eligible=prep=>revealed().includes(prep.biome);
-const current=()=>preparations.find(b=>b.id===state.boss) ?? core.nextBoss(VCProgress.get(),data) ?? preparations.at(-1);
-function save(){state.players=player.players;try{localStorage.setItem('vx.prep',JSON.stringify(state));}catch{/* In-memory prep remains usable. */}}
+const current=()=>core.targetBoss(state,VCProgress.get(),data) ?? preparations.at(-1);
+function save(){state.players=player.players;try{localStorage.setItem('vx.prep',JSON.stringify({...state,boss:state.auto?null:state.boss}));}catch{/* In-memory prep remains usable. */}}
 function notice(key){document.getElementById('notice').textContent=t(key);}
 function script(src){return new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=src;s.onload=resolve;s.onerror=()=>{s.remove();reject(new Error(src));};document.head.append(s);});}
 async function loadDependencies(){
@@ -38,8 +38,9 @@ function setPlayer(count){player=sanitizePlayer({...player,players:count});state
 function renderControls(){
   const parent=document.getElementById('boss-controls');parent.replaceChildren();
   const select=el('select');select.id='boss-select';
+  const automatic=el('option','',t('Next boss (auto)'));automatic.value='';select.append(automatic);
   for(const [index,prep] of preparations.entries()) {const opt=el('option','',eligible(prep)?prep.name:tn('🔒 Boss {count}',index+1));opt.value=prep.id;select.append(opt);}
-  select.value=current().id;select.addEventListener('change',()=>{state.boss=select.value;state.checked=[];selectedManually=true;history.replaceState(null,'','#boss='+state.boss);render();});
+  select.value=state.auto?'':current().id;select.addEventListener('change',()=>{state.boss=select.value||null;state.auto=!select.value;state.checked=[];history.replaceState(null,'',state.auto?'#':'#boss='+state.boss);render();});
   parent.append(control('Target',select));
   if(!eligible(current())) parent.append(button(t('Reveal'),()=>VCProgress.visit(current().biome,true),'reveal-boss'));
   const players=el('input');players.id='players';players.type='number';players.min='1';players.max='5';players.value=player.players;players.addEventListener('change',()=>{setPlayer(Number(players.value));render();});parent.append(control('Players nearby',players));
@@ -112,7 +113,7 @@ function renderDefense(ctx){
 }
 function renderFood(ctx){
   const n=section('Food and meads'),grid=el('div','recommendations');for(const food of ctx.foods){const card=el('article','recommendation');card.append(el('strong','',food.name),el('p','hint',tn('HP {count}',food.health)),el('p','hint',tn('Stamina {count}',food.stamina)),el('p','hint',tn('{count} min',food.duration/60)));grid.append(card);}n.append(grid);
-  const loadout={foods:ctx.foods.map(f=>f.id),hours:state.minutes/60,meads:ctx.meads.map(p=>({id:p.mead.id,mode:'demand',quantity:Math.ceil(state.minutes*60/Math.max(p.mead.duration||p.mead.cooldown||1,1))+1}))};
+  const loadout={foods:ctx.foods.map(f=>f.id),hours:state.minutes/60,meads:ctx.meads.map(p=>({id:p.mead.id,mode:'demand',quantity:core.meadQuantity(p.mead,state.minutes)}))};
   n.append(link(t('Open in Provisions'),'/provisions/#l='+VPPlanner.encode(loadout,VPR_DATA)));return n;
 }
 function renderPacking(prep,ctx){
@@ -160,7 +161,7 @@ function renderRaids(){
 }
 async function render(){
   const version=++renderVersion,focusId=document.activeElement?.id;
-  if(!selectedManually)state.boss=core.nextBoss(VCProgress.get(),data)?.id ?? preparations.at(-1).id;
+  if(state.auto)state.boss=core.nextBoss(VCProgress.get(),data)?.id ?? preparations.at(-1).id;
   save();VCI18n.apply();const picker=document.querySelector('.vc-language-picker');if(picker){picker.setAttribute('aria-label',t('Language'));picker.options[0].textContent=t('Auto (browser)');}
   for(const id of ['boss','raids']){const tabButton=document.getElementById('tab-'+id);tabButton.setAttribute('aria-selected',String(id===tab));tabButton.tabIndex=id===tab?0:-1;document.getElementById(id==='boss'?'boss-panel':'raids-panel').hidden=id!==tab;}
   if(tab==='raids'){renderRaids();return;}
@@ -170,8 +171,8 @@ async function render(){
   const ctx=recommendationContext(prep),layout=el('div','layout'),main=el('div'),packing=renderPacking(prep,ctx);
   main.append(renderBoss(prep),renderWeapons(ctx),renderDefense(ctx),renderFood(ctx),packing.node,renderAfter(prep),renderTips(prep));layout.append(main,renderShopping(packing.lines,ctx));parent.replaceChildren(layout);if(focusId)document.getElementById(focusId)?.focus({preventScroll:true});
 }
-function hash(){const imported=core.decodePrep(location.hash,data);if(imported){state=imported;selectedManually=true;setPlayer(state.players);tab='boss';}else if(location.hash==='#raids')tab='raids';else{const id=new URLSearchParams(location.hash.slice(1)).get('boss');if(preparations.some(b=>b.id===id)){state.boss=id;selectedManually=true;tab='boss';}}render();}
-for(const id of ['boss','raids'])document.getElementById('tab-'+id).addEventListener('click',()=>{tab=id;history.replaceState(null,'',id==='raids'?'#raids':'#boss='+current().id);render();});
+function hash(){const imported=core.decodePrep(location.hash,data);if(imported){state=imported;state.auto=false;setPlayer(state.players);tab='boss';}else if(location.hash==='#raids')tab='raids';else{const id=new URLSearchParams(location.hash.slice(1)).get('boss');if(preparations.some(b=>b.id===id)){state.boss=id;state.auto=false;tab='boss';}}render();}
+for(const id of ['boss','raids'])document.getElementById('tab-'+id).addEventListener('click',()=>{tab=id;history.replaceState(null,'',id==='raids'?'#raids':state.auto?'#':'#boss='+current().id);render();});
 document.getElementById('tabs').addEventListener('keydown',event=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){event.preventDefault();const id=event.key==='Home'?'boss':event.key==='End'?'raids':tab==='boss'?'raids':'boss';document.getElementById('tab-'+id).click();document.getElementById('tab-'+id).focus();}});
 window.addEventListener('hashchange',hash);VCProgress.onChange(render);VCI18n.onChange(render);
 window.addEventListener('storage',event=>{if(event.key===PLAYER_STORAGE_KEY||event.key===null){player=readPlayerState().player;render();}});

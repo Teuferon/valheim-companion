@@ -39,7 +39,7 @@ test('packing food servings, resistance meads, portal and summon costs',()=>{
   assert.equal(list(30)['withered-bone'],10);assert.equal(list(30)['bronze-mace'],1);assert.equal(list(30).portal,1);
 });
 test('prep round trip and hostile hashes',()=>{
-  const state=core.sanitize({boss:'bonemass',players:3,minutes:60,portal:true,checked:['food']},data);
+  const state=core.sanitize({auto:false,boss:'bonemass',players:3,minutes:60,portal:true,checked:['food']},data);
   assert.deepEqual(core.decodePrep('#x='+core.encodePrep(state,data),data),state);
   for(const hash of ['#x=???','#x=abc','#x='+btoa('{}'),'#x='+btoa('null'),'#x='+ 'a'.repeat(17000),'#boss=bonemass']) assert.equal(core.decodePrep(hash,data),null);
   assert.equal(core.sanitize({players:Infinity,minutes:-5,checked:['__proto__',null]},data).players,1);
@@ -63,4 +63,27 @@ test('Expedition search keeps dedicated destinations and prerequisite biome meta
   assert.ok(index.find(i=>i.name==='The ground is shaking.').requiredBiomes.includes('black-forest'));
   assert.deepEqual([...index.find(i=>i.name==='The Jotun have found you.').requiredBiomes],['deep-north']);
   assert.ok(!context.VC_SEARCH_INDEX.some(i=>i.type==='expedition'));
+});
+
+test('automatic targets follow saved progress and can replace a manual choice',()=>{
+  const fresh=core.sanitize(null,data);
+  assert.equal(fresh.auto,true);
+  assert.equal(core.targetBoss(fresh,{},data).id,'eikthyr');
+  const saved=JSON.parse(JSON.stringify({...fresh,boss:null}));
+  const progress={defeated:{eikthyr:true,'the-elder':true}};
+  assert.equal(core.targetBoss(core.sanitize(saved,data),progress,data).id,'bonemass');
+  const legacy=core.sanitize({boss:'eikthyr'},data);
+  assert.equal(core.targetBoss(legacy,progress,data).id,'bonemass');
+  const manual=core.sanitize({auto:false,boss:'eikthyr'},data);
+  assert.equal(core.targetBoss(manual,progress,data).id,'eikthyr');
+  assert.equal(core.targetBoss({...manual,auto:true},progress,data).id,'bonemass');
+});
+test('mead demand respects effect duration and cooldown, with one unknown reserve',()=>{
+  const healing=load('meads').find(m=>m.id==='medium-healing-mead');
+  const list=minutes=>core.packingList({minutes},{meads:[healing]})[0].quantity;
+  assert.equal(list(30),16);
+  assert.equal(list(60),31);
+  assert.equal(core.meadQuantity({duration:600,cooldown:120},30),4);
+  assert.equal(core.meadQuantity({},30),1);
+  assert.equal(core.packingList({minutes:30},{meads:[{id:'unknown'}]})[0].quantity,1);
 });

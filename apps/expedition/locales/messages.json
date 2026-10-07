@@ -2381,5 +2381,20 @@
     "id": {
       "other": "{station} · tingkat {count}"
     }
+  },
+  "Next boss (auto)": {
+    "en": "Next boss (auto)",
+    "cs": "Další boss (automaticky)",
+    "de": "Nächster Boss (automatisch)",
+    "es": "Siguiente jefe (automático)",
+    "fr": "Prochain boss (automatique)",
+    "pt": "Próximo chefe (automático)",
+    "zh": "下一个首领（自动）",
+    "hi": "अगला बॉस (स्वचालित)",
+    "ar": "الزعيم التالي (تلقائي)",
+    "bn": "পরবর্তী বস (স্বয়ংক্রিয়)",
+    "ru": "Следующий босс (автоматически)",
+    "ja": "次のボス（自動）",
+    "id": "Bos berikutnya (otomatis)"
   }
 }
