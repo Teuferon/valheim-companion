@@ -776,5 +776,32 @@
     "stationLevel": 1,
     "levelIncrement": 1,
     "progressionLevel": 7
+  },
+  {
+    "id": "galdr-table",
+    "name": "Galdr Table",
+    "names": {},
+    "type": "expedition",
+    "materials": [
+      {
+        "item": "black-metal",
+        "amount": 10
+      },
+      {
+        "item": "yggdrasil-wood",
+        "amount": 20
+      },
+      {
+        "item": "black-core",
+        "amount": 5
+      },
+      {
+        "item": "refined-eitr",
+        "amount": 5
+      }
+    ],
+    "biome": "mistlands",
+    "tier": 7,
+    "wiki": "https://valheim.weirdgloop.org/w/Galdr_Table"
   }
 ]

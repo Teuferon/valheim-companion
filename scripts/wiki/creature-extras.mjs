@@ -66,22 +66,27 @@ export function enrichCreatures(creatures, pages) {
     }
   }
 
-  for (const table of parseWikiTables(pages.Events ?? '')) {
-    const columns = headers(table);
-    if (!columns.includes('creatures') || !columns.includes('event name')) continue;
-    for (const row of table.rows) {
-      const raid = {
-        event: cleanText(row[columns.indexOf('event name')]),
-        name: cleanText(row[columns.indexOf('start message')]).replace(/^"|"$/g, ''),
-        enabledBy: links(row[columns.indexOf('enabled by')] ?? row[columns.indexOf('started by')]),
-        disabledBy: links(row[columns.indexOf('disabled by')] ?? row[columns.indexOf('ended by')]),
-        biomes: links(row[columns.indexOf('biome(s)')]),
-      };
-      for (const target of [...new Set(links(withoutRefs(row[columns.indexOf('creatures')])))] ) {
-        const creature = match(target, `Events/${raid.event}`);
-        if (creature) creature.raids.push({ ...raid });
-      }
+  for (const row of eventRows(pages.Events ?? "")) {
+    const raid = { event: cleanText(row.event), name: cleanText(row.start).replace(/^"|"$/g, ""),
+      enabledBy: links(row.enabled), disabledBy: links(row.disabled), biomes: links(row.biomes) };
+    for (const target of [...new Set(links(withoutRefs(row.creatures)))]) {
+      const creature = match(target, `Events/${raid.event}`);
+      if (creature) creature.raids.push({ ...raid });
     }
   }
   return [...new Set(unmatched)].sort();
+}
+
+// One Events table reader, retaining the legacy Bestiary table selection.
+export function eventRows(wikitext, worldOnly = false) {
+  const section = worldOnly ? String(wikitext).split(/=== World-based event requirements ===/i)[1]?.split(/\n===/)[0] ?? "" : wikitext;
+  return parseWikiTables(section).flatMap(table => {
+    const columns = headers(table);
+    if (!columns.includes("creatures") || !columns.includes("event name")) return [];
+    const cell = (row, name, fallback) => row[columns.indexOf(name)] ?? row[columns.indexOf(fallback)] ?? "";
+    return table.rows.map(row => ({ event: cell(row, "event name"), start: cell(row, "start message"),
+      end: cell(row, "end message"), creatures: cell(row, "creatures"),
+      enabled: cell(row, "enabled by", "started by"), disabled: cell(row, "disabled by", "ended by"),
+      biomes: cell(row, "biome(s)"), duration: cell(row, "duration (seconds)") }));
+  });
 }

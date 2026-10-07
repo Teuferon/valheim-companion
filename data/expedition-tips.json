@@ -1,0 +1,128 @@
+[
+  {
+    "id": "eikthyr-0",
+    "boss": "eikthyr",
+    "text": "Find Eikthyr’s Vegvisir at the Sacrificial Stones.",
+    "source": "https://valheim.weirdgloop.org/w/Eikthyr"
+  },
+  {
+    "id": "eikthyr-1",
+    "boss": "eikthyr",
+    "text": "Bring Deer Trophy to the Forsaken Altar.",
+    "source": "https://valheim.weirdgloop.org/w/Eikthyr"
+  },
+  {
+    "id": "the-elder-0",
+    "boss": "the-elder",
+    "text": "Look for The Elder’s Vegvisir in Burial Chambers or ruined structures.",
+    "source": "https://valheim.weirdgloop.org/w/The_Elder"
+  },
+  {
+    "id": "the-elder-1",
+    "boss": "the-elder",
+    "text": "Bring Ancient Seed to the Forsaken Altar.",
+    "source": "https://valheim.weirdgloop.org/w/The_Elder"
+  },
+  {
+    "id": "bonemass-0",
+    "boss": "bonemass",
+    "text": "Look for Bonemass’ Vegvisir in Sunken Crypts or ruined structures.",
+    "source": "https://valheim.weirdgloop.org/w/Bonemass"
+  },
+  {
+    "id": "bonemass-1",
+    "boss": "bonemass",
+    "text": "Bring Withered Bone to the Forsaken Altar.",
+    "source": "https://valheim.weirdgloop.org/w/Bonemass"
+  },
+  {
+    "id": "moder-0",
+    "boss": "moder",
+    "text": "Look for Moder’s Vegvisir in ruined structures in the Mountains.",
+    "source": "https://valheim.weirdgloop.org/w/Moder"
+  },
+  {
+    "id": "moder-1",
+    "boss": "moder",
+    "text": "Bring Dragon Egg to the Forsaken Altar.",
+    "source": "https://valheim.weirdgloop.org/w/Moder"
+  },
+  {
+    "id": "yagluth-0",
+    "boss": "yagluth",
+    "text": "Look for Yagluth’s Vegvisir at Stonehenge structures.",
+    "source": "https://valheim.weirdgloop.org/w/Yagluth"
+  },
+  {
+    "id": "yagluth-1",
+    "boss": "yagluth",
+    "text": "Bring Fuling Totem to the Forsaken Altar.",
+    "source": "https://valheim.weirdgloop.org/w/Yagluth"
+  },
+  {
+    "id": "the-queen-0",
+    "boss": "the-queen",
+    "text": "Look for The Queen’s Vegvisir in Infested Mines.",
+    "source": "https://valheim.weirdgloop.org/w/The_Queen"
+  },
+  {
+    "id": "the-queen-1",
+    "boss": "the-queen",
+    "text": "Use Sealbreaker to enter the Infested Citadel.",
+    "source": "https://valheim.weirdgloop.org/w/The_Queen"
+  },
+  {
+    "id": "fader-0",
+    "boss": "fader",
+    "text": "Look for Fader’s Vegvisir in the central tower of Charred Fortresses.",
+    "source": "https://valheim.weirdgloop.org/w/Fader"
+  },
+  {
+    "id": "fader-1",
+    "boss": "fader",
+    "text": "Craft Bell from Bell Fragment before visiting the altar.",
+    "source": "https://valheim.weirdgloop.org/w/Fader"
+  },
+  {
+    "id": "kall-fimbulbringer-0",
+    "boss": "kall-fimbulbringer",
+    "text": "Reach The Prison through the Aesir Passage.",
+    "source": "https://valheim.weirdgloop.org/w/Kall_Fimbulbringer"
+  },
+  {
+    "id": "kall-fimbulbringer-1",
+    "boss": "kall-fimbulbringer",
+    "text": "Offer Malicious Blood at the Strange Bowl.",
+    "source": "https://valheim.weirdgloop.org/w/Kall_Fimbulbringer"
+  },
+  {
+    "id": "world",
+    "text": "World-based events are the default mode.",
+    "source": "https://valheim.weirdgloop.org/w/Events"
+  },
+  {
+    "id": "dungeon",
+    "text": "Raids do not start while the player is in a dungeon.",
+    "source": "https://valheim.weirdgloop.org/w/Events"
+  },
+  {
+    "id": "timer",
+    "text": "Stay in the event area until the timer runs out; it pauses without players, except during the hunted event.",
+    "source": "https://valheim.weirdgloop.org/w/Events"
+  },
+  {
+    "id": "biome",
+    "text": "The biome check uses the exact biome at your position.",
+    "source": "https://valheim.weirdgloop.org/w/Events"
+  },
+  {
+    "id": "deaths",
+    "text": "Environmental deaths can also unlock creature-based events.",
+    "source": "https://valheim.weirdgloop.org/w/Events"
+  },
+  {
+    "id": "pets",
+    "text": "Protect tamed creatures during raids.",
+    "source": "https://valheim.weirdgloop.org/w/Events"
+  }
+]

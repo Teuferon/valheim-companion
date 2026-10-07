@@ -84,5 +84,17 @@
         "reason": "Turnip wiki: seeds first found in Swamp. Preserve the existing Provisions item record and use its actual acquisition tier for Jack-O-Turnip."
       }
     }
+  },
+  "expedition": {
+    "materials": {
+      "bell-fragment": {
+        "biome": "ashlands",
+        "reason": "Bell page: fragments in Charred Fortresses."
+      },
+      "sealbreaker-fragment": {
+        "biome": "mistlands",
+        "reason": "Sealbreaker page: fragments in Infested Mines."
+      }
+    }
   }
 }
