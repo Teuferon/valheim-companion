@@ -3695,5 +3695,20 @@
     "id": {
       "other": "Ikan ({count})"
     }
+  },
+  "Prepare for this fight → Expedition": {
+    "en": "Prepare for this fight → Expedition",
+    "cs": "Připravit se na tento boj → Expedition",
+    "de": "Diesen Kampf vorbereiten → Expedition",
+    "es": "Preparar esta lucha → Expedition",
+    "fr": "Préparer ce combat → Expedition",
+    "pt": "Preparar esta luta → Expedition",
+    "zh": "准备此战 → Expedition",
+    "hi": "इस लड़ाई की तैयारी → Expedition",
+    "ar": "تجهيز هذه المعركة → Expedition",
+    "bn": "এই লড়াইয়ের প্রস্তুতি → Expedition",
+    "ru": "Подготовиться к бою → Expedition",
+    "ja": "この戦闘に備える → Expedition",
+    "id": "Siapkan pertarungan ini → Expedition"
   }
 }

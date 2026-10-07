@@ -42,6 +42,7 @@
     { type: 'material', label: 'Materials' },
     { type: 'food', label: 'Food & Mead' },
     { type: 'comfort', label: 'Furniture' },
+    { type: 'expedition', label: 'Expedition' },
   ];
 
   function initSearch() {
@@ -53,7 +54,8 @@
     let selectedIndex = -1;
 
     function getIndex() {
-      return Array.isArray(globalThis.VC_SEARCH_INDEX) ? globalThis.VC_SEARCH_INDEX : [];
+      return [...(Array.isArray(globalThis.VC_SEARCH_INDEX) ? globalThis.VC_SEARCH_INDEX : []),
+        ...(Array.isArray(globalThis.VC_EXPEDITION_SEARCH_INDEX) ? globalThis.VC_EXPEDITION_SEARCH_INDEX : [])];
     }
 
     function hideResults() {
@@ -110,7 +112,10 @@
       const groups = {};
 
       for (const item of matches) {
-        const isLocked = item.biome && !openBiomes.has(item.biome);
+        const requirements = item.requiredBiomes || [];
+        const conditionsLocked = requirements.length && (item.conditionMode === 'any'
+          ? !requirements.some(id => openBiomes.has(id)) : requirements.some(id => !openBiomes.has(id)));
+        const isLocked = item.biome && !openBiomes.has(item.biome) || conditionsLocked;
         if (isLocked) {
           lockedCount++;
         } else {
@@ -167,6 +172,10 @@
           nameSpan.className = 'hub-search-item-name';
           nameSpan.textContent = VCI18n.name(item);
           infoDiv.appendChild(nameSpan);
+          if (item.section) {
+            const tool = document.createElement('span');
+            tool.className = 'hub-search-group-title'; tool.textContent = item.section; infoDiv.appendChild(tool);
+          }
 
           a.appendChild(infoDiv);
           itemsDiv.appendChild(a);

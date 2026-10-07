@@ -8,6 +8,7 @@ Tools for your Valheim journey:
 - **Damage Calculator**: Pick a target and a weapon, set the upgrade level and see the damage that actually lands — resistances applied, with DPS, time-to-kill and a biome progression slider.
 - **Progress Tracker**: Track visited biomes, defeated bosses and non-trophy boss drops. Locked biomes hide spoilers; share your checklist between devices with a URL. Available in 13 languages.
 - **Provisions**: Plan three different foods and up to four meads for a trip. Compare health, stamina and eitr, calculate servings for 0.5–10 hours, and get a shopping list with ingredient sources, crafting stations and missing Cauldron upgrades. Follows your progress and supports all 13 languages.
+- **Expedition**: Boss preparation, weapons, defenses, food, meads and a packing/shopping list; world-based raids react to your shared progress.
 - **Comfort Planner**: Plan furniture for your current progress, compare comfort and Rested duration, pick the best affordable pieces and see upgrades and a shopping list. Seasonal bonuses are optional; all 13 languages are supported.
 - **Sign Editor (Runopis)**: Rich-text editor for Valheim signs with colors, formatting, live preview and copy to game in 13 languages.
 
@@ -19,6 +20,7 @@ Tools for your Valheim journey:
 - `apps/damage-calculator/`: Damage calculator SPA (`/damage-calculator/`)
 - `apps/progress/`: Progress Tracker static application (`/progress/`)
 - `apps/provisions/`: Food, feast and mead planner (`/provisions/`)
+- `apps/expedition/`: Boss and raid preparation (`/expedition/`)
 - `apps/comfort/`: Comfort and Rested planner (`/comfort/`)
 - `shared/shopping/`: Pure shopping-list calculations shared by Smithy, Provisions and Comfort Planner (`VCShopping`)
 - `shared/progress/`: Classic-script progress API (`VCProgress`), versioned state in `vc.progress`
@@ -67,7 +69,7 @@ Locally:
 docker compose up --build -d   # http://localhost:8080
 ```
 
-`deploy/nginx.conf` sets strict security headers and location routing for `/`, `/bestiary/`, `/damage-calculator/`, `/smithy/`, `/progress/`, `/provisions/`, `/comfort/` and `/signs/`.
+`deploy/nginx.conf` sets strict security headers and location routing for `/`, `/bestiary/`, `/damage-calculator/`, `/smithy/`, `/progress/`, `/provisions/`, `/comfort/`, `/expedition/` and `/signs/`.
 
 ## Data
 
@@ -128,3 +130,11 @@ Open Graph preview cards, Twitter cards, PWA icons and web manifests are configu
 - `docs/DATA-SCHEMA.md`: data format
 - `docs/NAVRHY-NASTROJU.md`: proposals for further tools
 - `docs/zadani/`: task specs for the worker agents (VC-1 …)
+
+## Expedition
+
+Regenerate with `node scripts/wiki/fetch-expedition.mjs` and `node scripts/build-expedition-data.mjs`. The shared Events reader in `creature-extras.mjs` preserves Bestiary output. Only the World-based event requirements table is calculated. `data/report-expedition.md` documents progression counts, unknown fields and nonboss approximations. Boss pages and Forsaken power supply altar, summon and power metadata; undocumented values remain null.
+
+The `window.VCX_DATA` bundle contains only the events, expedition and tips groups. The expedition group holds boss preparation metadata plus only the new summon/Portal materials and Galdr Table, supplementing the unchanged host bundles. Boss prep lazily loads existing Bestiary and Provisions bundles and their calculation scripts; recommendations are never duplicated. `vx.prep` stores the target, players, fight duration, checked items and Portal preference. `/expedition/#boss=<id>`, `#raids` and `#x=<base64url>` support deep links and sharing. Imported locked bosses remain hidden until revealed. Nonboss kills and Hildir chest conditions are explicitly marked as assumptions based on revealed biomes, not guaranteed world state. Player-based raids and player-initiated Jotun Invasion are excluded.
+
+Run `node --test scripts/wiki/expedition.test.mjs scripts/expedition-planner.test.mjs` for the parser and pure planner. The plural suite and mobile checker also cover Expedition in all thirteen languages.

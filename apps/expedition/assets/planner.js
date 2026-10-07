@@ -1,7 +1,7 @@
 // Pure classic-script core: no DOM, storage, or copied recommendation logic.
 (function (root) {
   'use strict';
-  const bosses = data => [...(data.expedition || [])].sort((a,b)=>a.order-b.order);
+  const bosses = data => [...(Array.isArray(data.expedition) ? data.expedition : data.expedition?.bosses || [])].sort((a,b)=>a.order-b.order);
   const defeated = progress => progress?.defeated || {};
   function nextBoss(progress, data) { return bosses(data).find(b=>!defeated(progress)[b.id]) || null; }
   function revealed(progress, data) {
@@ -12,7 +12,9 @@
       ...(end>=4 ? ['ocean'] : []), ...(progress?.visited || [])])];
   }
   function hidden(event, data, open) {
-    return event.conditions.some(c=>c.boss && !c.biomes.some(b=>open.includes(b)));
+    const conditions=event.conditions || [];
+    const locked=c=>!c.biomes.some(b=>open.includes(b));
+    return conditions.length>0 && (event.enabledBy.mode==='any' ? conditions.every(locked) : conditions.some(locked));
   }
   function enabled(event, progress, open) {
     const done = defeated(progress);

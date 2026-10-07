@@ -1221,6 +1221,12 @@ import { PLAYER_STORAGE_KEY, defaultPlayer, sanitizePlayer, readPlayerState } fr
     };
     updateStarView();
 
+    if (creature.kind === 'boss') {
+      const expeditionLink = el('a', 'card-expedition-link', t('Prepare for this fight → Expedition'));
+      expeditionLink.href = '/expedition/#boss=' + encodeURIComponent(creature.id);
+      card.appendChild(expeditionLink);
+    }
+
     // Weaknesses & Resistances
     const modifiers = window.VCRank
       ? window.VCRank.effectiveModifiers(creature)

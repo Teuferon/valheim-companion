@@ -107,7 +107,8 @@
         "biomes": [
           "meadows"
         ],
-        "boss": true
+        "boss": true,
+        "miniboss": false
       }
     ],
     "disabledBy": [
@@ -175,7 +176,8 @@
         "biomes": [
           "black-forest"
         ],
-        "boss": true
+        "boss": true,
+        "miniboss": false
       }
     ],
     "disabledBy": [
@@ -226,7 +228,8 @@
         "biomes": [
           "swamp"
         ],
-        "boss": true
+        "boss": true,
+        "miniboss": false
       }
     ],
     "disabledBy": [
@@ -299,7 +302,8 @@
         "biomes": [
           "mountain"
         ],
-        "boss": true
+        "boss": true,
+        "miniboss": false
       }
     ],
     "disabledBy": [
@@ -359,7 +363,8 @@
         "biomes": [
           "plains"
         ],
-        "boss": true
+        "boss": true,
+        "miniboss": false
       }
     ],
     "disabledBy": [
@@ -435,7 +440,8 @@
         "biomes": [
           "plains"
         ],
-        "boss": true
+        "boss": true,
+        "miniboss": false
       }
     ],
     "disabledBy": [
@@ -515,7 +521,8 @@
         "biomes": [
           "mistlands"
         ],
-        "boss": true
+        "boss": true,
+        "miniboss": false
       }
     ],
     "disabledBy": [
@@ -551,7 +558,8 @@
         "biomes": [
           "mistlands"
         ],
-        "boss": true
+        "boss": true,
+        "miniboss": false
       }
     ],
     "disabledBy": [
@@ -620,7 +628,8 @@
         "biomes": [
           "deep-north"
         ],
-        "boss": false
+        "boss": false,
+        "miniboss": false
       },
       {
         "id": "hexen",
@@ -628,7 +637,8 @@
         "biomes": [
           "deep-north"
         ],
-        "boss": false
+        "boss": false,
+        "miniboss": false
       }
     ],
     "disabledBy": [
@@ -693,7 +703,8 @@
         "biomes": [
           "deep-north"
         ],
-        "boss": false
+        "boss": false,
+        "miniboss": false
       }
     ],
     "disabledBy": [
@@ -741,7 +752,8 @@
         "biomes": [
           "black-forest"
         ],
-        "boss": false
+        "boss": false,
+        "miniboss": false
       },
       {
         "id": "the-elder",
@@ -749,7 +761,8 @@
         "biomes": [
           "black-forest"
         ],
-        "boss": true
+        "boss": true,
+        "miniboss": false
       }
     ],
     "disabledBy": [],
@@ -818,7 +831,8 @@
         "biomes": [
           "swamp"
         ],
-        "boss": true
+        "boss": true,
+        "miniboss": false
       }
     ],
     "disabledBy": [],
@@ -885,7 +899,8 @@
         "biomes": [
           "swamp"
         ],
-        "boss": true
+        "boss": true,
+        "miniboss": false
       }
     ],
     "disabledBy": [],
@@ -954,7 +969,8 @@
         "biomes": [
           "swamp"
         ],
-        "boss": true
+        "boss": true,
+        "miniboss": false
       }
     ],
     "disabledBy": [],
@@ -1006,7 +1022,8 @@
         "biomes": [
           "swamp"
         ],
-        "boss": false
+        "boss": false,
+        "miniboss": false
       },
       {
         "id": "bonemass",
@@ -1014,7 +1031,8 @@
         "biomes": [
           "swamp"
         ],
-        "boss": true
+        "boss": true,
+        "miniboss": false
       }
     ],
     "disabledBy": [],
@@ -1060,7 +1078,8 @@
         "biomes": [
           "swamp"
         ],
-        "boss": true
+        "boss": true,
+        "miniboss": false
       }
     ],
     "disabledBy": [],
@@ -1111,7 +1130,8 @@
         "biomes": [
           "mountain"
         ],
-        "boss": false
+        "boss": false,
+        "miniboss": false
       },
       {
         "id": "bonemass",
@@ -1119,7 +1139,8 @@
         "biomes": [
           "swamp"
         ],
-        "boss": true
+        "boss": true,
+        "miniboss": false
       }
     ],
     "disabledBy": [],
@@ -1207,7 +1228,8 @@
         "biomes": [
           "black-forest"
         ],
-        "boss": false
+        "boss": false,
+        "miniboss": true
       }
     ],
     "disabledBy": [],
@@ -1285,7 +1307,8 @@
         "biomes": [
           "mountain"
         ],
-        "boss": false
+        "boss": false,
+        "miniboss": true
       }
     ],
     "disabledBy": [],
@@ -1360,7 +1383,8 @@
         "biomes": [
           "plains"
         ],
-        "boss": false
+        "boss": false,
+        "miniboss": true
       }
     ],
     "disabledBy": [],

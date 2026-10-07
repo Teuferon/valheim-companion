@@ -40,7 +40,7 @@ export function parseEvents(wt, creatures) {
     const chest = /Brass Chest/i.test(row.enabled) ? 'brenna' : /Silver Chest/i.test(row.enabled) ? 'geirrhafa' : /Bronze Chest/i.test(row.enabled) ? 'zil-thungr' : null;
     if (chest && byId.has(chest)) enabled.push(byId.get(chest));
     if (chest || (!enabled.length && !/Start of the world/i.test(row.enabled))) notes.push(plain(row.enabled));
-    const conditions = enabled.map(c => ({ id: c.id, name: c.name, biomes: c.biomes, boss: c.kind === 'boss' }));
+    const conditions = enabled.map(c => ({ id: c.id, name: c.name, biomes: c.biomes, boss: c.kind === 'boss', miniboss: c.kind === 'miniboss' }));
     return { id, startMessage: plain(row.start), endMessage: plain(row.end), creatures: [...new Set(creatureIds)],
       creatureDetails: [...new Set(creatureIds)].map(id => { const c = byId.get(id); return { id, name: c.name, biomes: c.biomes, modifiers: c.modifiers }; }),
       enabledBy: { mode: /Start of the world/i.test(row.enabled) ? 'start' : /\bor\b/i.test(plain(row.enabled)) ? 'any' : 'all', ids: [...new Set(enabled.map(c => c.id))] },
@@ -65,7 +65,7 @@ export function parseBoss(boss, wt, powers) {
   const cooldown = /20-minute cooldown/.test(powers ?? '') ? 1200 : null;
   return { id: boss.id, name: boss.name, biome: boss.biomes[0], order: BIOMES.find(b => b.id === boss.biomes[0]).order,
     altar: altarName ? { name: altarName, howToFind: paragraph ? plain(paragraph) : null } : null,
-    summonItems, forsakenPower: effect ? { name: boss.name + ' Power', effect: plain(effect), cooldownSeconds: cooldown } : null, source: wiki(boss.name) };
+    summonItems, forsakenPower: effect ? { name: plain(powerSection.split('\n')[0].replace(/=+/g, '')), effect: plain(effect), cooldownSeconds: cooldown } : null, source: wiki(boss.name) };
 }
 
 export async function fetchExpedition() {
@@ -102,7 +102,7 @@ export async function fetchExpedition() {
     const boss = expedition.find(b => b.summonItems.some(m => m.id === id));
     const override = load('overrides').expedition?.materials?.[id];
     const biome = override?.biome ?? boss?.biome ?? (id === 'portal' ? 'black-forest' : null);
-    additions.push({ id, name, names: {}, image: null, biome, tier: BIOMES.find(b => b.id === biome)?.order ?? null,
+    additions.push({ id, name, expedition: true, names: {}, image: null, biome, tier: BIOMES.find(b => b.id === biome)?.order ?? null,
       sources: parseSources(box.source, new Map(creatures.map(c => [c.id,c]))),
       recipe: materials.length ? { station: plain(box.source) || null, stationLevel: Number(box['crafting level']) || 1, materials, yields: Number(box.quantity) || 1 } : null,
       teleportable: /^no$/i.test(plain(box.teleport)) ? false : box.teleport ? true : null, wiki: wiki(name) });
@@ -149,6 +149,7 @@ export async function fetchExpedition() {
   lines.push('', '## Unmatched links', '', ...unmatched.map(x=>'- '+x), '', '## Missing boss fields', '',
     '- Missing altar: ' + (expedition.filter(b=>!b.altar).map(b=>b.name).join(', ') || 'None') + '.',
     '- Missing power: ' + (expedition.filter(b=>!b.forsakenPower).map(b=>b.name).join(', ') || 'None') + '.', '', '## Open questions', '',
+    '- Coming next counts potential additions after the next boss opens its following biome. The UI still hides raids whose prerequisite creatures are currently locked.',
     '- Player-based raids and player-initiated Jotun Invasion are excluded from calculations.',
     '- Hildir chest returns are approximated by the associated miniboss biome. A revealed biome cannot prove that the chest was returned; exact requirements remain in notes.',
     '- Nonboss kills are assumed once their biome is revealed; visiting a biome does not prove a kill.',

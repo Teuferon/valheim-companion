@@ -78,7 +78,8 @@
     ],
     "recipe": null,
     "teleportable": true,
-    "wiki": "https://valheim.weirdgloop.org/w/Ancient_Seed"
+    "wiki": "https://valheim.weirdgloop.org/w/Ancient_Seed",
+    "expedition": true
   },
   {
     "id": "anglerfish",
@@ -557,7 +558,8 @@
       "yields": 1
     },
     "teleportable": true,
-    "wiki": "https://valheim.weirdgloop.org/w/Bell"
+    "wiki": "https://valheim.weirdgloop.org/w/Bell",
+    "expedition": true
   },
   {
     "id": "bell-fragment",
@@ -574,7 +576,8 @@
     ],
     "recipe": null,
     "teleportable": true,
-    "wiki": "https://valheim.weirdgloop.org/w/Bell_Fragment"
+    "wiki": "https://valheim.weirdgloop.org/w/Bell_Fragment",
+    "expedition": true
   },
   {
     "id": "berserkir-axes",
@@ -2971,7 +2974,8 @@
     ],
     "recipe": null,
     "teleportable": false,
-    "wiki": "https://valheim.weirdgloop.org/w/Dragon_Egg"
+    "wiki": "https://valheim.weirdgloop.org/w/Dragon_Egg",
+    "expedition": true
   },
   {
     "id": "dragon-tear",
@@ -3741,7 +3745,8 @@
     ],
     "recipe": null,
     "teleportable": true,
-    "wiki": "https://valheim.weirdgloop.org/w/Fuling_Totem"
+    "wiki": "https://valheim.weirdgloop.org/w/Fuling_Totem",
+    "expedition": true
   },
   {
     "id": "giant-herring",
@@ -4538,7 +4543,8 @@
     ],
     "recipe": null,
     "teleportable": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Malicious_Blood"
+    "wiki": "https://valheim.weirdgloop.org/w/Malicious_Blood",
+    "expedition": true
   },
   {
     "id": "mandible",
@@ -7110,7 +7116,8 @@
       "yields": 1
     },
     "teleportable": null,
-    "wiki": "https://valheim.weirdgloop.org/w/Portal"
+    "wiki": "https://valheim.weirdgloop.org/w/Portal",
+    "expedition": true
   },
   {
     "id": "pot-shard",
@@ -7869,7 +7876,8 @@
       "yields": 1
     },
     "teleportable": true,
-    "wiki": "https://valheim.weirdgloop.org/w/Sealbreaker"
+    "wiki": "https://valheim.weirdgloop.org/w/Sealbreaker",
+    "expedition": true
   },
   {
     "id": "sealbreaker-fragment",
@@ -7886,7 +7894,8 @@
     ],
     "recipe": null,
     "teleportable": true,
-    "wiki": "https://valheim.weirdgloop.org/w/Sealbreaker_Fragment"
+    "wiki": "https://valheim.weirdgloop.org/w/Sealbreaker_Fragment",
+    "expedition": true
   },
   {
     "id": "seasoning-of-the-gourd",
@@ -9182,7 +9191,8 @@
     ],
     "recipe": null,
     "teleportable": true,
-    "wiki": "https://valheim.weirdgloop.org/w/Withered_Bone"
+    "wiki": "https://valheim.weirdgloop.org/w/Withered_Bone",
+    "expedition": true
   },
   {
     "id": "wolf-fang",

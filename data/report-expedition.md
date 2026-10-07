@@ -35,6 +35,7 @@ World events: 21. Bosses: 8.
 
 ## Open questions
 
+- Coming next counts potential additions after the next boss opens its following biome. The UI still hides raids whose prerequisite creatures are currently locked.
 - Player-based raids and player-initiated Jotun Invasion are excluded from calculations.
 - Hildir chest returns are approximated by the associated miniboss biome. A revealed biome cannot prove that the chest was returned; exact requirements remain in notes.
 - Nonboss kills are assumed once their biome is revealed; visiting a biome does not prove a kill.

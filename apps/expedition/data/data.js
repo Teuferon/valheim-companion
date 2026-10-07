@@ -108,7 +108,8 @@ window.VCX_DATA = {
           "biomes": [
             "meadows"
           ],
-          "boss": true
+          "boss": true,
+          "miniboss": false
         }
       ],
       "disabledBy": [
@@ -176,7 +177,8 @@ window.VCX_DATA = {
           "biomes": [
             "black-forest"
           ],
-          "boss": true
+          "boss": true,
+          "miniboss": false
         }
       ],
       "disabledBy": [
@@ -227,7 +229,8 @@ window.VCX_DATA = {
           "biomes": [
             "swamp"
           ],
-          "boss": true
+          "boss": true,
+          "miniboss": false
         }
       ],
       "disabledBy": [
@@ -300,7 +303,8 @@ window.VCX_DATA = {
           "biomes": [
             "mountain"
           ],
-          "boss": true
+          "boss": true,
+          "miniboss": false
         }
       ],
       "disabledBy": [
@@ -360,7 +364,8 @@ window.VCX_DATA = {
           "biomes": [
             "plains"
           ],
-          "boss": true
+          "boss": true,
+          "miniboss": false
         }
       ],
       "disabledBy": [
@@ -436,7 +441,8 @@ window.VCX_DATA = {
           "biomes": [
             "plains"
           ],
-          "boss": true
+          "boss": true,
+          "miniboss": false
         }
       ],
       "disabledBy": [
@@ -516,7 +522,8 @@ window.VCX_DATA = {
           "biomes": [
             "mistlands"
           ],
-          "boss": true
+          "boss": true,
+          "miniboss": false
         }
       ],
       "disabledBy": [
@@ -552,7 +559,8 @@ window.VCX_DATA = {
           "biomes": [
             "mistlands"
           ],
-          "boss": true
+          "boss": true,
+          "miniboss": false
         }
       ],
       "disabledBy": [
@@ -621,7 +629,8 @@ window.VCX_DATA = {
           "biomes": [
             "deep-north"
           ],
-          "boss": false
+          "boss": false,
+          "miniboss": false
         },
         {
           "id": "hexen",
@@ -629,7 +638,8 @@ window.VCX_DATA = {
           "biomes": [
             "deep-north"
           ],
-          "boss": false
+          "boss": false,
+          "miniboss": false
         }
       ],
       "disabledBy": [
@@ -694,7 +704,8 @@ window.VCX_DATA = {
           "biomes": [
             "deep-north"
           ],
-          "boss": false
+          "boss": false,
+          "miniboss": false
         }
       ],
       "disabledBy": [
@@ -742,7 +753,8 @@ window.VCX_DATA = {
           "biomes": [
             "black-forest"
           ],
-          "boss": false
+          "boss": false,
+          "miniboss": false
         },
         {
           "id": "the-elder",
@@ -750,7 +762,8 @@ window.VCX_DATA = {
           "biomes": [
             "black-forest"
           ],
-          "boss": true
+          "boss": true,
+          "miniboss": false
         }
       ],
       "disabledBy": [],
@@ -819,7 +832,8 @@ window.VCX_DATA = {
           "biomes": [
             "swamp"
           ],
-          "boss": true
+          "boss": true,
+          "miniboss": false
         }
       ],
       "disabledBy": [],
@@ -886,7 +900,8 @@ window.VCX_DATA = {
           "biomes": [
             "swamp"
           ],
-          "boss": true
+          "boss": true,
+          "miniboss": false
         }
       ],
       "disabledBy": [],
@@ -955,7 +970,8 @@ window.VCX_DATA = {
           "biomes": [
             "swamp"
           ],
-          "boss": true
+          "boss": true,
+          "miniboss": false
         }
       ],
       "disabledBy": [],
@@ -1007,7 +1023,8 @@ window.VCX_DATA = {
           "biomes": [
             "swamp"
           ],
-          "boss": false
+          "boss": false,
+          "miniboss": false
         },
         {
           "id": "bonemass",
@@ -1015,7 +1032,8 @@ window.VCX_DATA = {
           "biomes": [
             "swamp"
           ],
-          "boss": true
+          "boss": true,
+          "miniboss": false
         }
       ],
       "disabledBy": [],
@@ -1061,7 +1079,8 @@ window.VCX_DATA = {
           "biomes": [
             "swamp"
           ],
-          "boss": true
+          "boss": true,
+          "miniboss": false
         }
       ],
       "disabledBy": [],
@@ -1112,7 +1131,8 @@ window.VCX_DATA = {
           "biomes": [
             "mountain"
           ],
-          "boss": false
+          "boss": false,
+          "miniboss": false
         },
         {
           "id": "bonemass",
@@ -1120,7 +1140,8 @@ window.VCX_DATA = {
           "biomes": [
             "swamp"
           ],
-          "boss": true
+          "boss": true,
+          "miniboss": false
         }
       ],
       "disabledBy": [],
@@ -1208,7 +1229,8 @@ window.VCX_DATA = {
           "biomes": [
             "black-forest"
           ],
-          "boss": false
+          "boss": false,
+          "miniboss": true
         }
       ],
       "disabledBy": [],
@@ -1286,7 +1308,8 @@ window.VCX_DATA = {
           "biomes": [
             "mountain"
           ],
-          "boss": false
+          "boss": false,
+          "miniboss": true
         }
       ],
       "disabledBy": [],
@@ -1361,7 +1384,8 @@ window.VCX_DATA = {
           "biomes": [
             "plains"
           ],
-          "boss": false
+          "boss": false,
+          "miniboss": true
         }
       ],
       "disabledBy": [],
@@ -1383,180 +1407,451 @@ window.VCX_DATA = {
       "source": "https://valheim.weirdgloop.org/w/Events"
     }
   ],
-  "expedition": [
-    {
-      "id": "eikthyr",
-      "name": "Eikthyr",
-      "biome": "meadows",
-      "order": 1,
-      "altar": {
-        "name": "Forsaken Altar",
-        "howToFind": "Eikthyr's Forsaken Altar is located in the Meadows. To the left of his Sacrificial Stone is a small glowing Runestone called a Vegvisir; interacting with it will add his closest summoning location on the map."
+  "expedition": {
+    "bosses": [
+      {
+        "id": "eikthyr",
+        "name": "Eikthyr",
+        "biome": "meadows",
+        "order": 1,
+        "altar": {
+          "name": "Forsaken Altar",
+          "howToFind": "Eikthyr's Forsaken Altar is located in the Meadows. To the left of his Sacrificial Stone is a small glowing Runestone called a Vegvisir; interacting with it will add his closest summoning location on the map."
+        },
+        "summonItems": [
+          {
+            "id": "deer-trophy",
+            "count": 2
+          }
+        ],
+        "forsakenPower": {
+          "name": "Eikthyr Power",
+          "effect": "60% reduced stamina usage for running, jumping, and swimming.",
+          "cooldownSeconds": 1200
+        },
+        "source": "https://valheim.weirdgloop.org/w/Eikthyr"
       },
-      "summonItems": [
-        {
-          "id": "deer-trophy",
-          "count": 2
-        }
-      ],
-      "forsakenPower": {
-        "name": "Eikthyr Power",
-        "effect": "60% reduced stamina usage for running, jumping, and swimming.",
-        "cooldownSeconds": 1200
+      {
+        "id": "the-elder",
+        "name": "The Elder",
+        "biome": "black-forest",
+        "order": 2,
+        "altar": {
+          "name": "Forsaken Altar",
+          "howToFind": "The Elder's Forsaken Altar is located in Black Forests. His location can be revealed when visiting Burial Chambers and sometimes ruined structures around Black Forests, where a Vegvisir will reveal his nearest summoning location on the map."
+        },
+        "summonItems": [
+          {
+            "id": "ancient-seed",
+            "count": 3
+          }
+        ],
+        "forsakenPower": {
+          "name": "The Elder Power",
+          "effect": "+60% Chop and Pickaxe damage increase, +30% health regeneration increase.",
+          "cooldownSeconds": 1200
+        },
+        "source": "https://valheim.weirdgloop.org/w/The_Elder"
       },
-      "source": "https://valheim.weirdgloop.org/w/Eikthyr"
+      {
+        "id": "bonemass",
+        "name": "Bonemass",
+        "biome": "swamp",
+        "order": 4,
+        "altar": {
+          "name": "Forsaken Altar",
+          "howToFind": "Bonemass' Forsaken Altar is located in Swamps. His location can be found when visiting Sunken Crypts and sometimes ruined structures, where a Vegvisir will reveal his nearest summoning location on the map."
+        },
+        "summonItems": [
+          {
+            "id": "withered-bone",
+            "count": 10
+          }
+        ],
+        "forsakenPower": {
+          "name": "Bonemass Power",
+          "effect": "Slightly resistant (-25%) VS pierce, slash, and blunt damage, -100% block stamina cost, +5 stamina returned per block.",
+          "cooldownSeconds": 1200
+        },
+        "source": "https://valheim.weirdgloop.org/w/Bonemass"
+      },
+      {
+        "id": "moder",
+        "name": "Moder",
+        "biome": "mountain",
+        "order": 5,
+        "altar": {
+          "name": "Forsaken Altar",
+          "howToFind": "Moder's Forsaken Altar is located in the Mountains. Her location can be found when visiting specific ruined structures, typically at the top, where a Vegvisir will reveal her nearest summoning location on the map."
+        },
+        "summonItems": [
+          {
+            "id": "dragon-egg",
+            "count": 3
+          }
+        ],
+        "forsakenPower": {
+          "name": "Moder Power",
+          "effect": "Always tailwind when sailing, +300.0 increased carry weight, +10% increased movement speed, Resistant (-50%) vs frost.",
+          "cooldownSeconds": 1200
+        },
+        "source": "https://valheim.weirdgloop.org/w/Moder"
+      },
+      {
+        "id": "yagluth",
+        "name": "Yagluth",
+        "biome": "plains",
+        "order": 6,
+        "altar": {
+          "name": "Forsaken Altar",
+          "howToFind": "Yagluth's Forsaken Altar is located in the Plains. His location can be found when visiting Stonehenge structures, where a Vegvisir will reveal his nearest summoning location on the map."
+        },
+        "summonItems": [
+          {
+            "id": "fuling-totem",
+            "count": 5
+          }
+        ],
+        "forsakenPower": {
+          "name": "Yagluth Power",
+          "effect": "Resistant (-50%) vs lightning, +25 Farming (skill), and +10% increased damage.",
+          "cooldownSeconds": 1200
+        },
+        "source": "https://valheim.weirdgloop.org/w/Yagluth"
+      },
+      {
+        "id": "the-queen",
+        "name": "The Queen",
+        "biome": "mistlands",
+        "order": 7,
+        "altar": {
+          "name": "Infested Citadel",
+          "howToFind": "The Queen's Forsaken Altar rests in the Mistlands. Unlike all previous bosses, she must be fought in a dungeon, the Infested Citadel, and her first fight requires no sacrifice. The nearest Infested Citadel can be located by Vegvisirs found in Infested Mines, but entry requires a Sealbreaker, which can be constructed from fragments also found in the mines."
+        },
+        "summonItems": [
+          {
+            "id": "sealbreaker",
+            "count": 1
+          }
+        ],
+        "forsakenPower": {
+          "name": "The Queen's Power",
+          "effect": "+100% Eitr regeneration increase, -100% sneak stamina usage, and resistant (-50%) vs poison.",
+          "cooldownSeconds": 1200
+        },
+        "source": "https://valheim.weirdgloop.org/w/The_Queen"
+      },
+      {
+        "id": "fader",
+        "name": "Fader",
+        "biome": "ashlands",
+        "order": 8,
+        "altar": {
+          "name": "Summoning altar",
+          "howToFind": "The Emerald Flame's summoning altar can be found in a coliseum-like structure in the Ashlands. The Vegvisir can be found in the central tower of Charred Fortresses and very rarely on top of Charred Ruins, revealing the nearest summoning altar on the map. Fader can be summoned by placing three Bells around the coliseum. It takes three Bell Fragments to craft one bell. Bell fragments can be found in charred fortresses around the Ashlands."
+        },
+        "summonItems": [
+          {
+            "id": "bell",
+            "count": 3
+          }
+        ],
+        "forsakenPower": {
+          "name": "Fader Power",
+          "effect": "+100% Adrenaline increase, 50% reduced stagger meter modifier, and resistant (-50%) vs fire.",
+          "cooldownSeconds": 1200
+        },
+        "source": "https://valheim.weirdgloop.org/w/Fader"
+      },
+      {
+        "id": "kall-fimbulbringer",
+        "name": "Kall Fimbulbringer",
+        "biome": "deep-north",
+        "order": 9,
+        "altar": {
+          "name": "Strange Bowl",
+          "howToFind": "Kall Fimbulbringer is imprisoned in The Prison, reached through the Aesir Passage. He is summoned by offering three Malicious Blood at the Strange Bowl in his boss room. He appears 12 seconds after the offering."
+        },
+        "summonItems": [
+          {
+            "id": "malicious-blood",
+            "count": 3
+          }
+        ],
+        "forsakenPower": null,
+        "source": "https://valheim.weirdgloop.org/w/Kall_Fimbulbringer"
+      }
+    ],
+    "items": {
+      "ancient-seed": {
+        "id": "ancient-seed",
+        "name": "Ancient Seed",
+        "names": {},
+        "image": null,
+        "biome": "black-forest",
+        "tier": 2,
+        "sources": [
+          {
+            "text": "*Greydwarf Brute",
+            "kind": "creature",
+            "creatureId": "greydwarf-brute",
+            "biomes": [
+              "black-forest"
+            ]
+          },
+          {
+            "text": "*Greydwarf Nest",
+            "kind": "other"
+          }
+        ],
+        "recipe": null,
+        "teleportable": true,
+        "wiki": "https://valheim.weirdgloop.org/w/Ancient_Seed",
+        "expedition": true
+      },
+      "bell": {
+        "id": "bell",
+        "name": "Bell",
+        "names": {},
+        "image": null,
+        "biome": "ashlands",
+        "tier": 8,
+        "sources": [
+          {
+            "text": "Black Forge",
+            "kind": "station"
+          }
+        ],
+        "recipe": {
+          "station": "Black Forge",
+          "stationLevel": 1,
+          "materials": [
+            {
+              "item": "bell-fragment",
+              "amount": 3
+            }
+          ],
+          "yields": 1
+        },
+        "teleportable": true,
+        "wiki": "https://valheim.weirdgloop.org/w/Bell",
+        "expedition": true
+      },
+      "bell-fragment": {
+        "id": "bell-fragment",
+        "name": "Bell Fragment",
+        "names": {},
+        "image": null,
+        "biome": "ashlands",
+        "tier": 8,
+        "sources": [
+          {
+            "text": "Charred Fortress",
+            "kind": "location"
+          }
+        ],
+        "recipe": null,
+        "teleportable": true,
+        "wiki": "https://valheim.weirdgloop.org/w/Bell_Fragment",
+        "expedition": true
+      },
+      "dragon-egg": {
+        "id": "dragon-egg",
+        "name": "Dragon Egg",
+        "names": {},
+        "image": null,
+        "biome": "mountain",
+        "tier": 5,
+        "sources": [
+          {
+            "text": "Drake Nest",
+            "kind": "other"
+          }
+        ],
+        "recipe": null,
+        "teleportable": false,
+        "wiki": "https://valheim.weirdgloop.org/w/Dragon_Egg",
+        "expedition": true
+      },
+      "fuling-totem": {
+        "id": "fuling-totem",
+        "name": "Fuling Totem",
+        "names": {},
+        "image": null,
+        "biome": "plains",
+        "tier": 6,
+        "sources": [
+          {
+            "text": "Fuling Village",
+            "kind": "location"
+          },
+          {
+            "text": "Fuling Berserker",
+            "kind": "creature",
+            "creatureId": "fuling-berserker",
+            "biomes": [
+              "plains"
+            ]
+          }
+        ],
+        "recipe": null,
+        "teleportable": true,
+        "wiki": "https://valheim.weirdgloop.org/w/Fuling_Totem",
+        "expedition": true
+      },
+      "malicious-blood": {
+        "id": "malicious-blood",
+        "name": "Malicious Blood",
+        "names": {},
+        "image": null,
+        "biome": "deep-north",
+        "tier": 9,
+        "sources": [
+          {
+            "text": "Mörkhalla",
+            "kind": "other"
+          }
+        ],
+        "recipe": null,
+        "teleportable": null,
+        "wiki": "https://valheim.weirdgloop.org/w/Malicious_Blood",
+        "expedition": true
+      },
+      "portal": {
+        "id": "portal",
+        "name": "Portal",
+        "names": {},
+        "image": null,
+        "biome": "black-forest",
+        "tier": 2,
+        "sources": [
+          {
+            "text": "Workbench",
+            "kind": "station"
+          }
+        ],
+        "recipe": {
+          "station": "Workbench",
+          "stationLevel": 1,
+          "materials": [
+            {
+              "item": "greydwarf-eye",
+              "amount": 10
+            },
+            {
+              "item": "finewood",
+              "amount": 20
+            },
+            {
+              "item": "surtling-core",
+              "amount": 2
+            }
+          ],
+          "yields": 1
+        },
+        "teleportable": null,
+        "wiki": "https://valheim.weirdgloop.org/w/Portal",
+        "expedition": true
+      },
+      "sealbreaker": {
+        "id": "sealbreaker",
+        "name": "Sealbreaker",
+        "names": {},
+        "image": null,
+        "biome": "mistlands",
+        "tier": 7,
+        "sources": [
+          {
+            "text": "Galdr Table",
+            "kind": "station"
+          }
+        ],
+        "recipe": {
+          "station": "Galdr Table",
+          "stationLevel": 1,
+          "materials": [
+            {
+              "item": "sealbreaker-fragment",
+              "amount": 9
+            }
+          ],
+          "yields": 1
+        },
+        "teleportable": true,
+        "wiki": "https://valheim.weirdgloop.org/w/Sealbreaker",
+        "expedition": true
+      },
+      "sealbreaker-fragment": {
+        "id": "sealbreaker-fragment",
+        "name": "Sealbreaker Fragment",
+        "names": {},
+        "image": null,
+        "biome": "mistlands",
+        "tier": 7,
+        "sources": [
+          {
+            "text": "Infested Mines",
+            "kind": "location"
+          }
+        ],
+        "recipe": null,
+        "teleportable": true,
+        "wiki": "https://valheim.weirdgloop.org/w/Sealbreaker_Fragment",
+        "expedition": true
+      },
+      "withered-bone": {
+        "id": "withered-bone",
+        "name": "Withered Bone",
+        "names": {},
+        "image": null,
+        "biome": "swamp",
+        "tier": 4,
+        "sources": [
+          {
+            "text": "Muddy Scrap Piles",
+            "kind": "location"
+          },
+          {
+            "text": "Sunken Crypts",
+            "kind": "location"
+          }
+        ],
+        "recipe": null,
+        "teleportable": true,
+        "wiki": "https://valheim.weirdgloop.org/w/Withered_Bone",
+        "expedition": true
+      }
     },
-    {
-      "id": "the-elder",
-      "name": "The Elder",
-      "biome": "black-forest",
-      "order": 2,
-      "altar": {
-        "name": "Forsaken Altar",
-        "howToFind": "The Elder's Forsaken Altar is located in Black Forests. His location can be revealed when visiting Burial Chambers and sometimes ruined structures around Black Forests, where a Vegvisir will reveal his nearest summoning location on the map."
-      },
-      "summonItems": [
-        {
-          "id": "ancient-seed",
-          "count": 3
-        }
-      ],
-      "forsakenPower": {
-        "name": "The Elder Power",
-        "effect": "+60% Chop and Pickaxe damage increase, +30% health regeneration increase.",
-        "cooldownSeconds": 1200
-      },
-      "source": "https://valheim.weirdgloop.org/w/The_Elder"
-    },
-    {
-      "id": "bonemass",
-      "name": "Bonemass",
-      "biome": "swamp",
-      "order": 4,
-      "altar": {
-        "name": "Forsaken Altar",
-        "howToFind": "Bonemass' Forsaken Altar is located in Swamps. His location can be found when visiting Sunken Crypts and sometimes ruined structures, where a Vegvisir will reveal his nearest summoning location on the map."
-      },
-      "summonItems": [
-        {
-          "id": "withered-bone",
-          "count": 10
-        }
-      ],
-      "forsakenPower": {
-        "name": "Bonemass Power",
-        "effect": "Slightly resistant (-25%) VS pierce, slash, and blunt damage, -100% block stamina cost, +5 stamina returned per block.",
-        "cooldownSeconds": 1200
-      },
-      "source": "https://valheim.weirdgloop.org/w/Bonemass"
-    },
-    {
-      "id": "moder",
-      "name": "Moder",
-      "biome": "mountain",
-      "order": 5,
-      "altar": {
-        "name": "Forsaken Altar",
-        "howToFind": "Moder's Forsaken Altar is located in the Mountains. Her location can be found when visiting specific ruined structures, typically at the top, where a Vegvisir will reveal her nearest summoning location on the map."
-      },
-      "summonItems": [
-        {
-          "id": "dragon-egg",
-          "count": 3
-        }
-      ],
-      "forsakenPower": {
-        "name": "Moder Power",
-        "effect": "Always tailwind when sailing, +300.0 increased carry weight, +10% increased movement speed, Resistant (-50%) vs frost.",
-        "cooldownSeconds": 1200
-      },
-      "source": "https://valheim.weirdgloop.org/w/Moder"
-    },
-    {
-      "id": "yagluth",
-      "name": "Yagluth",
-      "biome": "plains",
-      "order": 6,
-      "altar": {
-        "name": "Forsaken Altar",
-        "howToFind": "Yagluth's Forsaken Altar is located in the Plains. His location can be found when visiting Stonehenge structures, where a Vegvisir will reveal his nearest summoning location on the map."
-      },
-      "summonItems": [
-        {
-          "id": "fuling-totem",
-          "count": 5
-        }
-      ],
-      "forsakenPower": {
-        "name": "Yagluth Power",
-        "effect": "Resistant (-50%) vs lightning, +25 Farming (skill), and +10% increased damage.",
-        "cooldownSeconds": 1200
-      },
-      "source": "https://valheim.weirdgloop.org/w/Yagluth"
-    },
-    {
-      "id": "the-queen",
-      "name": "The Queen",
-      "biome": "mistlands",
-      "order": 7,
-      "altar": {
-        "name": "Infested Citadel",
-        "howToFind": "The Queen's Forsaken Altar rests in the Mistlands. Unlike all previous bosses, she must be fought in a dungeon, the Infested Citadel, and her first fight requires no sacrifice. The nearest Infested Citadel can be located by Vegvisirs found in Infested Mines, but entry requires a Sealbreaker, which can be constructed from fragments also found in the mines."
-      },
-      "summonItems": [
-        {
-          "id": "sealbreaker",
-          "count": 1
-        }
-      ],
-      "forsakenPower": {
-        "name": "The Queen Power",
-        "effect": "+100% Eitr regeneration increase, -100% sneak stamina usage, and resistant (-50%) vs poison.",
-        "cooldownSeconds": 1200
-      },
-      "source": "https://valheim.weirdgloop.org/w/The_Queen"
-    },
-    {
-      "id": "fader",
-      "name": "Fader",
-      "biome": "ashlands",
-      "order": 8,
-      "altar": {
-        "name": "Summoning altar",
-        "howToFind": "The Emerald Flame's summoning altar can be found in a coliseum-like structure in the Ashlands. The Vegvisir can be found in the central tower of Charred Fortresses and very rarely on top of Charred Ruins, revealing the nearest summoning altar on the map. Fader can be summoned by placing three Bells around the coliseum. It takes three Bell Fragments to craft one bell. Bell fragments can be found in charred fortresses around the Ashlands."
-      },
-      "summonItems": [
-        {
-          "id": "bell",
-          "count": 3
-        }
-      ],
-      "forsakenPower": {
-        "name": "Fader Power",
-        "effect": "+100% Adrenaline increase, 50% reduced stagger meter modifier, and resistant (-50%) vs fire.",
-        "cooldownSeconds": 1200
-      },
-      "source": "https://valheim.weirdgloop.org/w/Fader"
-    },
-    {
-      "id": "kall-fimbulbringer",
-      "name": "Kall Fimbulbringer",
-      "biome": "deep-north",
-      "order": 9,
-      "altar": {
-        "name": "Strange Bowl",
-        "howToFind": "Kall Fimbulbringer is imprisoned in The Prison, reached through the Aesir Passage. He is summoned by offering three Malicious Blood at the Strange Bowl in his boss room. He appears 12 seconds after the offering."
-      },
-      "summonItems": [
-        {
-          "id": "malicious-blood",
-          "count": 3
-        }
-      ],
-      "forsakenPower": null,
-      "source": "https://valheim.weirdgloop.org/w/Kall_Fimbulbringer"
-    }
-  ],
+    "stations": [
+      {
+        "id": "galdr-table",
+        "name": "Galdr Table",
+        "names": {},
+        "type": "expedition",
+        "materials": [
+          {
+            "item": "black-metal",
+            "amount": 10
+          },
+          {
+            "item": "yggdrasil-wood",
+            "amount": 20
+          },
+          {
+            "item": "black-core",
+            "amount": 5
+          },
+          {
+            "item": "refined-eitr",
+            "amount": 5
+          }
+        ],
+        "biome": "mistlands",
+        "tier": 7,
+        "wiki": "https://valheim.weirdgloop.org/w/Galdr_Table"
+      }
+    ]
+  },
   "tips": [
     {
       "id": "eikthyr-0",

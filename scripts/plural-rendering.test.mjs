@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import vm from 'node:vm';
 import { fixture } from './lib/progress-dom.mjs';
 import { calculator, staticApp, Element } from './lib/render-apps.mjs';
+import { defaultPlayer, sanitizePlayer, PLAYER_STORAGE_KEY } from '../shared/player/core.js';
 
 const read = path => readFileSync(path, 'utf8');
 const json = path => JSON.parse(read(path));
@@ -14,6 +15,7 @@ const paths = [
   'apps/bestiary/locales/messages.json', 'apps/smithy/locales/messages.json',
   'apps/progress/locales/messages.json', 'apps/provisions/locales/messages.json',
   'apps/comfort/locales/messages.json',
+  'apps/expedition/locales/messages.json',
   'apps/damage-calculator/src/locales/messages.json', 'apps/signs/lib/locales/messages.json',
   'shared/progress/messages.json', 'shared/analytics/messages.json',
 ];
@@ -96,6 +98,25 @@ function comfort(locale) {
   return { context, nodes };
 }
 
+function expedition(locale) {
+  class ExpeditionElement extends Element {
+    replaceChildren(...children) { this.textContent = ''; this.append(...children); }
+  }
+  const values = new Map([['vc.language', locale]]);
+  const context = vm.createContext({ console, URLSearchParams, TextEncoder, TextDecoder, atob, btoa,
+    location: { hash: '' }, localStorage: { getItem: key => values.get(key) ?? null },
+    readPlayerState: () => ({ player: defaultPlayer() }), sanitizePlayer, PLAYER_STORAGE_KEY,
+    document: { documentElement: new ExpeditionElement('html'), createElement: tag => new ExpeditionElement(tag) },
+  });
+  context.window = context; context.addEventListener = () => {};
+  for (const path of ['shared/i18n/core.js', 'shared/shopping/core.js', 'shared/progress/core.js',
+    'apps/expedition/data/data.js', 'apps/expedition/locales/messages.js', 'apps/expedition/assets/planner.js']) vm.runInContext(read(path), context);
+  const source = read('apps/expedition/assets/app.js').replace(/^import[^\n]+\n/, '')
+    .split("for(const id of ['boss','raids'])document.getElementById")[0];
+  vm.runInContext(source + '\nglobalThis.renderers = { renderPacking, raidCard };', context);
+  return context;
+}
+
 for (const { code } of languages) {
   test(`production UI renders independent counts (${code}: 0/1/2/5/21)`, () => {
     const calc = calculator(code);
@@ -106,12 +127,20 @@ for (const { code } of languages) {
     const formatted = value => new Intl.NumberFormat(code).format(value);
     const provision = provisions(code);
     const cozy = comfort(code);
+    const trip = expedition(code);
     const feast = provision.VPR_DATA.food.find(food => food.isFeast);
     assert.ok(feast);
     const bestiary = staticApp('bestiary', code, { playerCount: 1 });
     const smithy = staticApp('smithy', code);
     for (const [index, count] of counts.entries()) {
       const bossCount = counts[(index + 1) % counts.length];
+      const tripPacking = trip.renderers.renderPacking({ summonItems: [{ id: 'wood', count }] }, { items: {wood:{name:'Wood'}}, recommendations: [] });
+      clean(tripPacking.node.textContent, `expedition packing ${code}/${count}`);
+      if (count > 0) assert.ok(tripPacking.node.textContent.includes(trip.VCI18n.tn(trip.VC_MESSAGES, '{count}× {name}', count, {count:formatted(count),name:'Wood'})));
+      const event = { durationSeconds: count, startMessage:'The ground is shaking.', biomes:['meadows'], creatureDetails:[], conditions:[], notes:[], source:'https://valheim.weirdgloop.org/w/Events' };
+      const raid = trip.renderers.raidCard(event);
+      clean(raid.textContent, `expedition raid ${code}/${count}`);
+      assert.ok(raid.textContent.includes(trip.VCI18n.tn(trip.VC_MESSAGES, '{count} seconds', count, {count:formatted(count)})));
       const materialText = cozy.context.renderers.materialList([{ item: 'wood', amount: count }]);
       clean(materialText, `comfort materials ${code}/${count}`);
       assert.equal(materialText, cozy.context.VCI18n.tn(cozy.context.VC_MESSAGES, '{count}× {name}', count, { count: formatted(count), name: 'Wood' }));

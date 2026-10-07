@@ -1,6 +1,9 @@
 import { readPlayerState, sanitizePlayer, PLAYER_STORAGE_KEY } from '../../../shared/player/core.js';
 
 const data = globalThis.VCX_DATA, core = globalThis.VCExpedition;
+const preparations = Array.isArray(data.expedition) ? data.expedition : data.expedition.bosses;
+const supplementalItems = data.expedition.items || {};
+const supplementalStations = data.expedition.stations || [];
 const t = (key, values) => VCI18n.t(VC_MESSAGES, key, values);
 const number = value => new Intl.NumberFormat(VCI18n.locale(), {maximumFractionDigits:1}).format(value);
 const tn = (key,count,values) => VCI18n.tn(VC_MESSAGES,key,count,{count:number(count),...values});
@@ -15,10 +18,10 @@ let player=readPlayerState().player, selectedManually=!!state.boss, tab=location
 if(core.decodePrep(location.hash,data)) player=sanitizePlayer({...player,players:state.players});
 else state.players=player.players;
 let dependencies, loaded=false, busy=false, renderVersion=0;
-const biomes=()=>data.expedition.map(b=>({id:b.biome,order:b.order,creatures:{boss:[b.id]}})).concat([{id:'ocean',order:3,creatures:{boss:[]}}]);
+const biomes=()=>preparations.map(b=>({id:b.biome,order:b.order,creatures:{boss:[b.id]}})).concat([{id:'ocean',order:3,creatures:{boss:[]}}]);
 const revealed=()=>VCProgress.revealedBiomes(biomes());
 const eligible=prep=>revealed().includes(prep.biome);
-const current=()=>data.expedition.find(b=>b.id===state.boss) ?? core.nextBoss(VCProgress.get(),data) ?? data.expedition.at(-1);
+const current=()=>preparations.find(b=>b.id===state.boss) ?? core.nextBoss(VCProgress.get(),data) ?? preparations.at(-1);
 function save(){state.players=player.players;try{localStorage.setItem('vx.prep',JSON.stringify(state));}catch{/* In-memory prep remains usable. */}}
 function notice(key){document.getElementById('notice').textContent=t(key);}
 function script(src){return new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=src;s.onload=resolve;s.onerror=()=>{s.remove();reject(new Error(src));};document.head.append(s);});}
@@ -26,7 +29,7 @@ async function loadDependencies(){
   if(!dependencies) dependencies=(async()=>{
     await script('/bestiary/data/data.js');await import('../../bestiary/assets/rank.js');
     await script('/provisions/data/data.js');await script('/provisions/assets/advisor.js');await script('/provisions/assets/planner.js');
-    await script('/smithy/data/data.js');loaded=true;
+    loaded=true;
   })().catch(error=>{dependencies=null;throw error;});
   return dependencies;
 }
@@ -35,7 +38,7 @@ function setPlayer(count){player=sanitizePlayer({...player,players:count});state
 function renderControls(){
   const parent=document.getElementById('boss-controls');parent.replaceChildren();
   const select=el('select');select.id='boss-select';
-  for(const [index,prep] of data.expedition.entries()) {const opt=el('option','',eligible(prep)?prep.name:tn('🔒 Boss {count}',index+1));opt.value=prep.id;select.append(opt);}
+  for(const [index,prep] of preparations.entries()) {const opt=el('option','',eligible(prep)?prep.name:tn('🔒 Boss {count}',index+1));opt.value=prep.id;select.append(opt);}
   select.value=current().id;select.addEventListener('change',()=>{state.boss=select.value;state.checked=[];selectedManually=true;history.replaceState(null,'','#boss='+state.boss);render();});
   parent.append(control('Target',select));
   if(!eligible(current())) parent.append(button(t('Reveal'),()=>VCProgress.visit(current().biome,true),'reveal-boss'));
@@ -65,7 +68,7 @@ function renderBoss(prep){
   const img=el('img');img.src='/bestiary/'+boss.stars[0].image;img.alt='';heading.append(img,el('h2','',boss.name));card.replaceChildren(heading);
   const metrics=el('div','metrics');metrics.append(el('span','',tn('HP {count}',VCRank.creatureHp(boss,0,prep.biome,player))),el('span','',VC_DATA.biomes.find(b=>b.id===prep.biome)?.name||prep.biome));card.append(metrics);
   const altar=el('details');altar.append(el('summary','',t('Altar and summoning')),el('h3','',prep.altar?.name||t('Not documented on the wiki.')),el('p','hint',prep.altar?.howToFind||t('Not documented on the wiki.')));
-  for(const item of prep.summonItems) altar.append(el('p','',tn('{count}× {name}',item.count,{name:VPR_DATA.items[item.id]?.name||item.id})));
+  for(const item of prep.summonItems) altar.append(el('p','',tn('{count}× {name}',item.count,{name:(supplementalItems[item.id] || VPR_DATA.items[item.id])?.name||item.id})));
   altar.append(link(t('Source'),prep.source));card.append(altar);
   const attacks=el('details');attacks.append(el('summary','',t('Attacks and resistances')));
   for(const attack of boss.stars[0].attacks || []){attacks.append(el('h3','',attack.name));for(const [type,amount] of Object.entries(attack.damage))if(!['chop','pickaxe'].includes(type))attacks.append(el('p','hint',tn('{count} {type} damage',amount,{type:t(type)})));}
@@ -89,7 +92,8 @@ function recommendationContext(prep){
   for(const element of elements){const context={poison:'bonemass',frost:'moder',fire:'fader'}[element.type];if(context)for(const pick of VPAdvisor.recommendMeads(VPR_DATA.meads,'boss',{id:context,unlockedBiomes:open}).filter(p=>p.mead.effect?.resistances?.some(r=>r.type.toLowerCase()===element.type&&r.multiplier<1)))if(!meads.some(p=>p.mead.id===pick.mead.id))meads.unshift(pick);}
   // Keep one strongest available healing mead and all relevant resistances.
   const chosen=meads.filter(p=>p.priority>=10000);const healing=meads.find(p=>p.priority<10000);if(healing)chosen.push(healing);
-  const items={...VPPlanner.definitions(VPR_DATA),...Object.fromEntries(Object.values(VC_DATA.weapons).map(w=>[w.id,{...w,recipe:w.levels?.[0]?{station:w.station||'Workbench',stationLevel:w.levels[0].stationLevel,materials:w.levels.filter(l=>l.quality<=(player.quality==='max'?w.maxQuality:player.quality)).flatMap(l=>l.materials),yields:1}:null}]))};
+  const items={...VPPlanner.definitions(VPR_DATA),...supplementalItems,...Object.fromEntries(Object.values(VC_DATA.weapons).map(w=>[w.id,{...w,recipe:w.levels?.[0]?{station:w.station||'Workbench',stationLevel:Math.max(...w.levels.filter(l=>l.quality<=(player.quality==='max'?w.maxQuality:player.quality)).map(l=>l.stationLevel||1)),materials:w.levels.filter(l=>l.quality<=(player.quality==='max'?w.maxQuality:player.quality)).flatMap(l=>l.materials),yields:1}:null}]))};
+  for (const food of foods) if(food.isFeast && items[food.id]?.recipe) items[food.id].recipe={...items[food.id].recipe,yields:(food.yields||1)*(food.servings||1)};
   return {boss,rec,recommendations,foods,meads:chosen,damage,elements,items};
 }
 function renderWeapons(ctx){
@@ -101,7 +105,7 @@ function renderDefense(ctx){
   const n=section('Defenses');for(const damage of ctx.damage)n.append(el('p','',tn('{count} {type} damage',damage.amount,{type:t(damage.type)})));
   n.append(el('p','hint',t('Damage totals add attack types; they are not damage per second.')));
   for(const {mead} of ctx.meads)n.append(link(mead.name,'/provisions/#item='+mead.id),el('p','hint',mead.effect?.text || ''));
-  for(const armor of VA_DATA.armor.filter(a=>revealed().includes(a.biome))){
+  for(const armor of VC_DATA.armor.filter(a=>revealed().includes(a.biome))){
     const pieces=(armor.pieces || []).filter(p=>ctx.elements.some(d=>(p.resistances||[]).some(r=>typeof r==='string'&&r.toLowerCase().includes(d.type)&&/resistant|immune/i.test(r)&&!/^weak/i.test(r))));
     for(const p of pieces)n.append(el('p','',p.name),link(t('Open in Smithy'),'/smithy/#set='+armor.id));
   }return n;
@@ -113,8 +117,9 @@ function renderFood(ctx){
 }
 function renderPacking(prep,ctx){
   const n=section('Packing list');
-  n.append(check(t('Include a Portal'),state.portal,value=>{state.portal=value;render();},'include-portal'));
-  const lines=core.packingList(state,{...ctx,bossPrep:prep,weapon:ctx.recommendations[0]});
+  const portalControl=check(t('Include a Portal'),state.portal && revealed().includes(ctx.items.portal?.biome),value=>{state.portal=value;render();},'include-portal');
+  portalControl.querySelector('input').disabled=!revealed().includes(ctx.items.portal?.biome);n.append(portalControl);
+  const lines=core.packingList({...state,portal:state.portal && revealed().includes(ctx.items.portal?.biome)},{...ctx,bossPrep:prep,weapon:ctx.recommendations[0]});
   for(const line of lines)n.append(check(tn('{count}× {name}',line.quantity,{name:ctx.items[line.id]?.name||line.id}),state.checked.includes(line.id),value=>{state.checked=value?[...state.checked,line.id]:state.checked.filter(id=>id!==line.id);render();},'pack-'+line.id));
   return {node:n,lines};
 }
@@ -126,7 +131,7 @@ function renderShopping(lines,ctx){
   for(const m of materials){const row=el('div','row');row.append(el('strong','',text([m])[0]));const sources=el('details');sources.append(el('summary','',t('Sources')),safeSources(ctx.items[m.item]));row.append(sources);n.append(row);}
   const blocked=products.concat(full.materials).filter(m=>ctx.items[m.item]?.teleportable===false);if(blocked.length)n.append(el('p','warning',t("Can't be teleported")+': '+[...new Set(blocked.map(m=>ctx.items[m.item].name))].join(', ')));
   const stations=[...new Set(full.steps.map(s=>s.station))];
-  if(stations.length){n.append(el('h3','',t('Required stations')));for(const name of stations){const station=[...VPR_DATA.stations,...VA_DATA.stations].find(s=>s.name===name||s.id===name),details=el('details');details.append(el('summary','',name));if(station?.materials)details.append(el('p','hint',text(station.materials).join(', ')));if(station?.wiki)details.append(link(t('Source'),station.wiki));n.append(details);}n.append(el('p','hint',t('Station building materials are shown separately.')));}
+  if(stations.length){n.append(el('h3','',t('Required stations')));for(const name of stations){const station=[...VPR_DATA.stations,...supplementalStations].find(s=>s.name===name||s.id===name),details=el('details');const level=Math.max(1,...full.steps.filter(s=>s.station===name).map(s=>ctx.items[s.product]?.recipe?.stationLevel||1));details.append(el('summary','',tn('{station} · level {count}',level,{station:name}))); if(station?.materials)details.append(el('p','hint',text(station.materials).join(', ')));details.append(link(t('Source'),station?.wiki || 'https://valheim.weirdgloop.org/w/'+encodeURIComponent(name.replaceAll(' ','_'))));n.append(details);}n.append(el('p','hint',t('Station building materials are shown separately.')));}
   if(full.steps.length){const details=el('details');details.append(el('summary','',t('Station steps')));for(const s of full.steps)details.append(el('p','hint',tn('{count}× {name} at {station}',s.amount,{name:s.productName,station:s.station})));n.append(details);}
   n.append(button(t('Copy list'),()=>copy(['Expedition',t('Shopping list'),...text(materials),t('Required stations'),...stations].join('\n'),n),'copy-list'));return n;
 }
@@ -155,7 +160,7 @@ function renderRaids(){
 }
 async function render(){
   const version=++renderVersion,focusId=document.activeElement?.id;
-  if(!selectedManually)state.boss=core.nextBoss(VCProgress.get(),data)?.id ?? data.expedition.at(-1).id;
+  if(!selectedManually)state.boss=core.nextBoss(VCProgress.get(),data)?.id ?? preparations.at(-1).id;
   save();VCI18n.apply();const picker=document.querySelector('.vc-language-picker');if(picker){picker.setAttribute('aria-label',t('Language'));picker.options[0].textContent=t('Auto (browser)');}
   for(const id of ['boss','raids']){const tabButton=document.getElementById('tab-'+id);tabButton.setAttribute('aria-selected',String(id===tab));tabButton.tabIndex=id===tab?0:-1;document.getElementById(id==='boss'?'boss-panel':'raids-panel').hidden=id!==tab;}
   if(tab==='raids'){renderRaids();return;}
@@ -163,9 +168,9 @@ async function render(){
   const prep=current();if(!eligible(prep)){parent.append(el('p','locked',t('Reveal the biome to prepare for this boss.')));return;}
   if(!loaded){parent.append(el('p','empty',t('Loading preparation data…')));try{busy=true;await loadDependencies();}catch{busy=false;parent.replaceChildren(el('p','warning',t('Could not load preparation data.')),button(t('Retry'),render));return;}busy=false;if(version!==renderVersion)return;}
   const ctx=recommendationContext(prep),layout=el('div','layout'),main=el('div'),packing=renderPacking(prep,ctx);
-  main.append(renderBoss(prep),renderWeapons(ctx),renderDefense(ctx),renderFood(ctx),packing.node,renderAfter(prep),renderTips(prep));layout.append(main,renderShopping(packing.lines,ctx));parent.append(layout);if(focusId)document.getElementById(focusId)?.focus({preventScroll:true});
+  main.append(renderBoss(prep),renderWeapons(ctx),renderDefense(ctx),renderFood(ctx),packing.node,renderAfter(prep),renderTips(prep));layout.append(main,renderShopping(packing.lines,ctx));parent.replaceChildren(layout);if(focusId)document.getElementById(focusId)?.focus({preventScroll:true});
 }
-function hash(){const imported=core.decodePrep(location.hash,data);if(imported){state=imported;selectedManually=true;setPlayer(state.players);tab='boss';}else if(location.hash==='#raids')tab='raids';else{const id=new URLSearchParams(location.hash.slice(1)).get('boss');if(data.expedition.some(b=>b.id===id)){state.boss=id;selectedManually=true;tab='boss';}}render();}
+function hash(){const imported=core.decodePrep(location.hash,data);if(imported){state=imported;selectedManually=true;setPlayer(state.players);tab='boss';}else if(location.hash==='#raids')tab='raids';else{const id=new URLSearchParams(location.hash.slice(1)).get('boss');if(preparations.some(b=>b.id===id)){state.boss=id;selectedManually=true;tab='boss';}}render();}
 for(const id of ['boss','raids'])document.getElementById('tab-'+id).addEventListener('click',()=>{tab=id;history.replaceState(null,'',id==='raids'?'#raids':'#boss='+current().id);render();});
 document.getElementById('tabs').addEventListener('keydown',event=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){event.preventDefault();const id=event.key==='Home'?'boss':event.key==='End'?'raids':tab==='boss'?'raids':'boss';document.getElementById('tab-'+id).click();document.getElementById('tab-'+id).focus();}});
 window.addEventListener('hashchange',hash);VCProgress.onChange(render);VCI18n.onChange(render);

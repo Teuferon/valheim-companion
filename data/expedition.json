@@ -125,7 +125,7 @@
       }
     ],
     "forsakenPower": {
-      "name": "The Queen Power",
+      "name": "The Queen's Power",
       "effect": "+100% Eitr regeneration increase, -100% sneak stamina usage, and resistant (-50%) vs poison.",
       "cooldownSeconds": 1200
     },
