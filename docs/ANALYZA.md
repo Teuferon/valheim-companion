@@ -402,6 +402,7 @@ Vychází z `docs/NAVRHY-NASTROJU.md` § „Menší vylepšení“. Platí zása
 | Damage Calculator | `/damage-calculator/?biome=<biomeId>&target=<slug>` (+ volitelně `weapon`, `class`, `level`, `skill`, `roll`, `attack`, `state`; formát `src/lib/view-url.ts`) | karty Bestiary (VC-30), hledání |
 | Sign Editor | `/signs/#sign=<base64url>` | sdílení cedule (VC-26) |
 | Comfort Planner | `/comfort/#b=<base64url>`, `#item=<id>` | sdílení stavby, hledání, tip v Provisions (VC-35) |
+| Expedition | `/expedition/#boss=<id>`, `#raids`, `#x=<base64url>` | hledání, karta bosse v Bestiary (VC-36) |
 
 - Id biomů a jednotek jsou ve všech nástrojích stejná (`creature.id` v Bestiary = `slug` v kalkulačce). Bestiary odkazuje do kalkulačky jen u jednotek, které kalkulačka zná (`calculatorSlug` v bundlu); dnes je to 78 ze 106.
 - Z Bestiary do kalkulačky se posílá **jen `biome` a `target`**. Zbraň, úroveň a skill si kalkulačka vezme z profilu hráče (VC-25) a návštěvník je doladí sám (návrh od Teuferona, 6. 10. 2026).
@@ -482,3 +483,37 @@ Nová sekce `/comfort/` (`apps/comfort/`, statická, vanilla JS jako Provisions)
   - uložení `vco.build`, sdílení `#b=<base64url>`, deep link `#item=<id>` (hledání v rozcestníku)
 - **Vazby:** karta v rozcestníku mezi Provisions a Sign Editor (štítek „Follows your progress“), řádek „Unlocks spoilers in:“ na kartě Progress, položky v hledání rozcestníku, odkaz z tipu o Rested v Provisions.
 - Název nástroje **Comfort Planner** se nepřekládá (doplnění zásady v § 20).
+
+## 25. Expedition: Boss & Raid Prep (VC-36, Pavel 7. 10. 2026)
+
+Nová sekce `/expedition/` (`apps/expedition/`, statická, vanilla JS jako Comfort Planner). Hráč si vybere bosse a dostane kompletní přípravu na boj: co ho vyvolá, čím ho bít, proti čemu se chránit, co sníst a vypít, co sbalit a co nakoupit. Druhá záložka ukáže, jaké nájezdy mu teď můžou přijít na základnu a co se změní po dalším bossovi.
+
+- **Pravidla nájezdů** (ověřeno na wiki *Events* 7. 10. 2026):
+  - Každých **46 minut je 20% šance** na náhodnou událost.
+  - Dostupné události závisí na tom, které jednotky byly ve světě poraženy (sloupce *Enabled by* a *Disabled by*). Událost se dvěma jednotkami (např. Troll a The Elder) potřebuje obě.
+  - Hráč musí být v biomu události, ne v dungeonu a **do 40 m od aspoň 3 staveb základny** (neplatí pro „You are being hunted…“).
+  - Pro konec události musí hráč zůstat v oblasti, dokud nevyprší čas. Bez hráčů v oblasti se čas zastaví.
+  - Výchozí jsou nájezdy podle světa. Modifikátor „player-based raids“ je řídí podle Forsaken powers a surovin hráče: v nástroji jen poznámka, nepočítá se.
+- **Data:**
+  - `data/events.json` z tabulky „World-based event requirements“ na stránce *Events*: `id` (`army_eikthyr`), `startMessage`, `endMessage`, `creatures` (id z `creatures.json`), `enabledBy` (seznam id, `all` nebo `any` podle „and“ / „or“), `disabledBy`, `biomes`, `durationSeconds`, `notes` (např. Freezing u `army_moder`, Monument of Torment).
+  - Bossové jsou už v `creatures.json` (`kind: "boss"`, `summon`, `drops`, `stars[0].attacks`, `modifiers`). Doplní se `data/expedition.json` jen s tím, co chybí: `altar` (název a jak ho najít, z wiki stránky bosse), `summonItems` (id, počet, odkud), `forsakenPower` (název a efekt). The Queen nemá oběť, ale Sealbreaker (klíč do Infested Citadel).
+  - Předměty k vyvolání (Ancient Seed, Withered Bone, Dragon Egg, Fuling Totem, Bell, Malicious Blood, Sealbreaker) se doplní do `data/items.json` se `sources`, ať je umí košík.
+  - ⛔ Data se nekopírují: zbraně, doporučení a profil hráče se berou z bundlu Bestiary (`/bestiary/data/data.js` + `rank.js`), jídla a medoviny z bundlu Provisions (`/provisions/data/data.js` + `VPAdvisor`). Vlastní bundle `/expedition/data/data.js` má jen events, expedition a tipy.
+- **Záložka Boss prep:**
+  - **Cíl:** výchozí je první neporažený boss podle `VCProgress` (pořadí biomů § 14). Select ukáže jen bosse z odemčených biomů, ostatní jako „🔒 Boss N“ s „Reveal“. Deep link `#boss=<id>`.
+  - **Karta bosse:** obrázek, HP podle počtu hráčů (stejný vzorec jako Bestiary `creatureHp`: `HP × (1 + 0.3 × (min(hráči, 5) − 1))`), biom, oltář a jak ho najít, vyvolání, útoky s typy poškození, slabiny a odolnosti, imunita na stagger, odkaz do Bestiary (`#c=`) a do kalkulačky (`calculatorSlug`).
+  - **Zbraně:** top 3 z `recommend()` z Bestiary s profilem hráče `vc.player` (DPS, čas do zabití), jen z odemčených biomů. Počet hráčů jde změnit přímo tady a zapisuje se do `vc.player.players`.
+  - **Obrana:** příchozí poškození podle typů (součet z útoků bosse, chop/pickaxe se ignoruje). Pro dva nejsilnější elementální typy (fire, frost, poison, lightning, spirit) doporučí medovinu odolnosti (`VPAdvisor.recommendMeads` s kontextem bosse) a kusy brnění s touto odolností (`armor.json` → `resistances`, jen odemčené, odkaz do Smithy `#set=`).
+  - **Jídlo:** nejlepší trojice pro činnost „Boss fight“ (`VPAdvisor.bestCombos`) z odemčených biomů, s odkazem „Open in Provisions“ (`/provisions/#l=` přes `VPPlanner.encode`).
+  - **Balicí seznam** (zaškrtávací, ukládá se): předměty k vyvolání, doporučená zbraň, jídlo na zvolenou délku boje (výchozí 30 min, porce podle `duration`), medoviny (1 kus na každých `duration` + rezerva 1), volitelně materiál na portál (recept *Portal* z `items.json`).
+  - **Nákupní seznam** přes `VCShopping` pro nezaškrtnuté položky: rozpad, stanice, zdroje s odkazy do Bestiary, „Copy list“, varování o neteleportovatelných surovinách.
+  - **Tipy:** `data/expedition-tips.json`, ke každému bossovi 2–3 a 5–8 obecných, každý se `source` na valheim.weirdgloop.org. ⛔ Nedoložená tvrzení.
+- **Záložka Raids:**
+  - Podle `VCProgress.defeated` rozdělí události na **Can happen now**, **Ended** (vypnul je poražený boss) a **Coming next** (zapne je další boss). Každá událost: startovní hláška (podle ní hráč pozná, co přichází), jednotky s odkazy do Bestiary a jejich slabiny, biomy, délka.
+  - Podmínky, které nejsou bossové (Troll, Krigen, Hexen, Eyeless One, Bat…), se považují za splněné, když je jejich biom odemčený, a u události je poznámka „once you have killed a Troll“.
+  - **„After you defeat <boss>“:** které události přibudou a které skončí. Je i na záložce Boss prep pod kartou bosse.
+  - Rámeček s pravidly nájezdů (výše) a s tím, jak se bránit: stavět mimo dosah (40 m, 3 stavby), zůstat v oblasti do konce. Jen fakta z wiki.
+  - Spoilery: událost spouštěná bossem ze zamčeného biomu je „A later raid“ bez jmen (stejně jako `VCExtras.raidIsHidden` v Bestiary).
+- **Vazby:** karta v rozcestníku za Comfort Planner (štítek „Follows your progress“), „Unlocks spoilers in:“ na kartě Progress, hledání v rozcestníku (bossové → `/expedition/#boss=<id>`, události → `/expedition/#raids`), na kartě bosse v Bestiary odkaz „Prepare for this fight → Expedition“.
+- URL: `/expedition/#boss=<id>`, `#raids`, sdílení přípravy `#x=<base64url>` (boss, počet hráčů, délka boje, zaškrtnuté položky). Uložení `vx.prep`.
+- Název nástroje **Expedition** se nepřekládá (doplnění zásady v § 20).
