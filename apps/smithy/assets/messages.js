@@ -2261,5 +2261,127 @@ globalThis.VC_MESSAGES = {
     "ru": "Сбрасываются только биомы, открытые вручную. Сохранённый прогресс можно изменить на странице Progress.",
     "ja": "手動で公開したバイオームのみリセットします。記録した進行状況は Progress ページで管理してください。",
     "id": "Hanya bioma yang dibuka secara manual yang direset. Kelola progres tersimpan di halaman Progress."
+  },
+  "Sources": {
+    "en": "Sources",
+    "cs": "Zdroje",
+    "de": "Quellen",
+    "es": "Fuentes",
+    "fr": "Sources",
+    "pt": "Fontes",
+    "zh": "来源",
+    "hi": "स्रोत",
+    "ar": "المصادر",
+    "bn": "উৎস",
+    "ru": "Источники",
+    "ja": "入手先",
+    "id": "Sumber"
+  },
+  "Close": {
+    "en": "Close",
+    "cs": "Zavřít",
+    "de": "Schließen",
+    "es": "Cerrar",
+    "fr": "Fermer",
+    "pt": "Fechar",
+    "zh": "关闭",
+    "hi": "बंद करें",
+    "ar": "إغلاق",
+    "bn": "বন্ধ করুন",
+    "ru": "Закрыть",
+    "ja": "閉じる",
+    "id": "Tutup"
+  },
+  "Used in": {
+    "en": "Used in",
+    "cs": "Použití",
+    "de": "Verwendet in",
+    "es": "Se usa en",
+    "fr": "Utilisé dans",
+    "pt": "Usado em",
+    "zh": "用于",
+    "hi": "इनमें उपयोग",
+    "ar": "يُستخدم في",
+    "bn": "এতে ব্যবহৃত",
+    "ru": "Используется в",
+    "ja": "使用先",
+    "id": "Digunakan dalam"
+  },
+  "Material details": {
+    "en": "Material details",
+    "cs": "Podrobnosti suroviny",
+    "de": "Materialdetails",
+    "es": "Detalles del material",
+    "fr": "Détails du matériau",
+    "pt": "Detalhes do material",
+    "zh": "材料详情",
+    "hi": "सामग्री का विवरण",
+    "ar": "تفاصيل المادة",
+    "bn": "উপাদানের বিবরণ",
+    "ru": "Сведения о материале",
+    "ja": "素材の詳細",
+    "id": "Detail bahan"
+  },
+  "{count} more in locked biomes": {
+    "en": {
+      "one": "{count} more in locked biomes",
+      "other": "{count} more in locked biomes"
+    },
+    "cs": {
+      "one": "Dalších {count} v zamčených biomech",
+      "few": "Dalších {count} v zamčených biomech",
+      "many": "Dalších {count} v zamčených biomech",
+      "other": "Dalších {count} v zamčených biomech"
+    },
+    "de": {
+      "one": "{count} weitere in gesperrten Biomen",
+      "other": "{count} weitere in gesperrten Biomen"
+    },
+    "es": {
+      "one": "{count} más en biomas bloqueados",
+      "many": "{count} más en biomas bloqueados",
+      "other": "{count} más en biomas bloqueados"
+    },
+    "fr": {
+      "one": "{count} de plus dans les biomes verrouillés",
+      "many": "{count} de plus dans les biomes verrouillés",
+      "other": "{count} de plus dans les biomes verrouillés"
+    },
+    "pt": {
+      "one": "Mais {count} em biomas bloqueados",
+      "many": "Mais {count} em biomas bloqueados",
+      "other": "Mais {count} em biomas bloqueados"
+    },
+    "zh": {
+      "other": "锁定生物群系中还有 {count} 项"
+    },
+    "hi": {
+      "one": "बंद बायोम में {count} और",
+      "other": "बंद बायोम में {count} और"
+    },
+    "ar": {
+      "zero": "{count} إضافية في المناطق المقفلة",
+      "one": "{count} إضافية في المناطق المقفلة",
+      "two": "{count} إضافية في المناطق المقفلة",
+      "few": "{count} إضافية في المناطق المقفلة",
+      "many": "{count} إضافية في المناطق المقفلة",
+      "other": "{count} إضافية في المناطق المقفلة"
+    },
+    "bn": {
+      "one": "লক করা বায়োমে আরও {count}টি",
+      "other": "লক করা বায়োমে আরও {count}টি"
+    },
+    "ru": {
+      "one": "Ещё {count} в закрытых биомах",
+      "few": "Ещё {count} в закрытых биомах",
+      "many": "Ещё {count} в закрытых биомах",
+      "other": "Ещё {count} в закрытых биомах"
+    },
+    "ja": {
+      "other": "未解放のバイオームにあと {count} 件"
+    },
+    "id": {
+      "other": "{count} lagi di bioma terkunci"
+    }
   }
 };

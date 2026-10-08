@@ -1437,3 +1437,15 @@ body {
 .raw-materials-help { font-size: .8rem; line-height: 1.4; color: var(--text-muted, #a8adb5); margin: .4rem 0; }
 .toggle-control:has(input:disabled) { opacity: .6; cursor: default; }
 button.badge-source-locked { cursor: pointer; font: inherit; text-align: start; }
+
+
+.material-card {
+  margin-block: 1rem;
+  padding: 1.25rem;
+  border: 1px solid var(--accent-gold);
+  border-radius: 12px;
+  overflow-wrap: anywhere;
+}
+.material-card-image { object-fit: contain; }
+.material-card .material-sources { display: flex; flex-wrap: wrap; gap: .5rem; }
+.material-uses { padding-inline-start: 1.25rem; }
