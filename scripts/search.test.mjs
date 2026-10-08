@@ -184,3 +184,42 @@ test('hub message catalog covers all 13 languages with zero missing translations
   vm.runInNewContext(readFileSync('apps/hub/locales/messages.js', 'utf8'), bundle);
   assert.equal(JSON.stringify(bundle.VC_MESSAGES), JSON.stringify(catalog));
 });
+
+
+test('search uses Provisions acquisition biomes for every food and material', () => {
+  const context = vm.createContext({});
+  context.window = context;
+  for (const file of ['apps/provisions/data/data.js', 'apps/provisions/assets/advisor.js']) {
+    vm.runInContext(readFileSync(file, 'utf8'), context);
+  }
+  const index = buildSearchIndex();
+  const definitions = { food: context.VPR_DATA.food, material: Object.values(context.VPR_DATA.items) };
+  const mismatches = [];
+  for (const entry of index.filter(item => definitions[item.type])) {
+    const id = decodeURIComponent(entry.url.split('=')[1]);
+    const definition = definitions[entry.type].find(item => item.id === id);
+    assert.ok(definition, entry.url);
+    if (entry.biome !== (context.VPAdvisor.availableBiome(definition) || null)) mismatches.push(entry.url);
+  }
+  assert.deepEqual(mismatches, []);
+  for (const type of ['food', 'material']) {
+    assert.equal(index.find(item => item.type === type && item.name === 'Oats').biome, 'deep-north');
+
+  }
+  assert.ok(index.filter(item => item.url.endsWith('=bukeperries')).length);
+  for (const item of index.filter(item => item.url.endsWith('=bukeperries'))) assert.equal(item.biome, 'black-forest');
+});
+
+test('armor search names are unique and single-piece sets retain the set link', () => {
+  const armor = buildSearchIndex().filter(item => item.type === 'armor');
+  const groups = new Map();
+  for (const item of armor) {
+    const key = item.name.trim().toLowerCase();
+    groups.set(key, [...(groups.get(key) || []), item.url]);
+  }
+  const duplicates = [...groups].filter(([, urls]) => urls.length > 1);
+  assert.deepEqual(duplicates, [], 'Duplicate armor names: ' + JSON.stringify(duplicates));
+  const hats = armor.filter(item => item.name === 'Yule Hat');
+  assert.equal(hats.length, 1);
+  assert.equal(hats[0].url, '/smithy/#set=yule-hat');
+});

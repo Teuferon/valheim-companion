@@ -4,6 +4,7 @@
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
+import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -43,6 +44,9 @@ export function buildSearchIndex() {
     return { biome: bestBiome, order: bestOrder };
   }
 
+  const advisorContext = vm.createContext({});
+  vm.runInContext(readFileSync(path.join(REPO_ROOT, 'apps/provisions/assets/advisor.js'), 'utf8'), advisorContext);
+  const availableBiome = advisorContext.VPAdvisor.availableBiome;
   const index = [];
 
   // 1. Creatures (/bestiary/#c=<id>)
@@ -115,6 +119,7 @@ export function buildSearchIndex() {
 
       for (const p of (a.pieces || [])) {
         if (!p || !p.id || !p.name) continue;
+        if (p.name.trim().toLowerCase() === a.name.trim().toLowerCase()) continue;
         const pb = p.biome || b;
         const po = pb ? (biomeOrder[pb] || 99) : 99;
         const pImg = p.image ? `/smithy/${p.image}` : null;
@@ -139,7 +144,7 @@ export function buildSearchIndex() {
     const itemsList = Array.isArray(rawItems) ? rawItems : Object.values(rawItems);
     for (const it of itemsList) {
       if (!it || !it.id || !it.name || it.comfort) continue;
-      const b = it.biome || null;
+      const b = availableBiome(it) || null;
       const o = b ? (biomeOrder[b] || 99) : 99;
       const itImg = it.image ? `/smithy/${it.image}` : null;
 
@@ -164,7 +169,7 @@ export function buildSearchIndex() {
     const foodList = Array.isArray(rawFood) ? rawFood : Object.values(rawFood);
     for (const f of foodList) {
       if (!f || !f.id || !f.name) continue;
-      const b = f.biome || null;
+      const b = availableBiome(f) || null;
       const o = b ? (biomeOrder[b] || 99) : 99;
       const fImg = f.image ? `/provisions/${f.image}` : null;
 
