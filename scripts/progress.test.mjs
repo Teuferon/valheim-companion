@@ -133,3 +133,60 @@ test('All progress messages cover 13 locales and preserve placeholders', () => {
   keys.push(...[...app.matchAll(/\bt\('([^']+)'/g)].map(match => match[1]));
   for (const key of keys) assert.ok(catalog[key], `Missing message: ${key}`);
 });
+
+test('Saga reach follows bosses and visits, ignoring manual spoilers', () => {
+  const { core, localStorage } = setup();
+  assert.equal(core.reach(biomes), 1);
+  assert.equal(core.minReach(biomes), 1);
+  core.defeat('eikthyr', true);
+  assert.equal(core.reach(biomes), 2);
+  core.defeat('the-elder', true);
+  assert.equal(core.reach(biomes), 4);
+  assert.equal(core.minReach(biomes), 4);
+  core.milestone('forge', true);
+  let notifications = 0;
+  const off = core.onChange(() => notifications++);
+  const updated = core.setReach(6, biomes);
+  assert.equal(notifications, 1);
+  assert.equal(updated.visited.length, 6);
+  assert.deepEqual(plain(updated.visited), biomes.filter(b => b.order <= 6).map(b => b.id));
+  assert.ok(core.revealedBiomes(biomes).includes('plains'));
+  core.setReach(1, biomes);
+  assert.equal(core.reach(biomes), 4);
+  assert.equal(core.get().visited.length, 4);
+  localStorage.setItem('vc.openBiomes', '["deep-north"]');
+  assert.equal(core.reach(biomes), 4);
+  assert.equal(core.minReach(biomes), 4);
+  core.setReach(99, biomes);
+  assert.equal(core.reach(biomes), 9);
+  const before = plain(core.get());
+  const count = notifications;
+  core.setReach('x', biomes); core.setReach(NaN, biomes);
+  assert.deepEqual(plain(core.get()), before);
+  assert.equal(notifications, count);
+  const target = setup().core;
+  assert.equal(target.importFromUrl(core.exportToUrl()), true);
+  assert.equal(target.reach(biomes), 9);
+  assert.deepEqual(plain(target.get().milestones), { forge: true });
+  off();
+});
+
+test('Saga image paths are local WebP assets within both download budgets', () => {
+  const context = vm.createContext({ window: {} });
+  vm.runInContext(readFileSync(new URL('../apps/progress/data/data.js', import.meta.url), 'utf8'), context);
+  let drawerBytes = 0, artBytes = 0;
+  const size = file => {
+    assert.match(file, /^img\/(biomes|bosses)\/[a-z-]+\.webp$/);
+    const bytes = readFileSync(new URL('../apps/progress/' + file, import.meta.url));
+    assert.equal(bytes.toString('ascii', 0, 4), 'RIFF');
+    assert.equal(bytes.toString('ascii', 8, 12), 'WEBP');
+    return bytes.length;
+  };
+  for (const biome of context.window.VP_DATA.biomes) {
+    artBytes += size(biome.art);
+    drawerBytes += size(biome.thumb);
+    for (const boss of [...biome.bosses, ...biome.minibosses]) drawerBytes += size(boss.portrait);
+  }
+  assert.ok(drawerBytes <= 250000, `${drawerBytes} drawer bytes`);
+  assert.ok(artBytes <= 500000, `${artBytes} artwork bytes`);
+});

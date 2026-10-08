@@ -35,10 +35,10 @@ test('drawer mounts outside the app, loads checklist once on demand and updates 
   c.VCProgressDrawer.close(); c.VCProgressDrawer.open();
   assert.equal(d.head.querySelectorAll('script').length, 1);
   c.VP_DATA = data; script.onload(); await settle();
-  assert.equal(panel.querySelectorAll('.biome').length, 9);
+  assert.equal(panel.querySelectorAll('.saga-row').length, 1);
   c.VCProgress.defeat('eikthyr', true);
   assert.equal(trigger.getAttribute('aria-label'), '⛓ Progress 2/9');
-  assert.equal(panel.querySelectorAll('.locked').length, 7);
+  assert.equal(panel.querySelectorAll('.is-locked').length, 7);
   c.VCProgressDrawer.close(); c.VCProgressDrawer.open();
   assert.equal(d.head.querySelectorAll('script').length, 1);
 });
@@ -81,7 +81,7 @@ test('failed lazy loading can be retried, React language changes rerender the ch
   assert.ok(d.querySelector('.vc-progress-error'));
   d.querySelector('.vc-progress-retry').dispatch('click');
   const script = d.head.querySelector('script'); c.VP_DATA = data; script.onload(); await settle();
-  assert.ok(d.querySelector('.biome'));
+  assert.ok(d.querySelector('.saga-row'));
   values.set('vc.language', 'ar'); f.fire('storage', { key: 'vc.language' });
   assert.equal(d.querySelector('.vc-progress-panel').getAttribute('dir'), 'rtl');
   assert.equal(d.querySelector('.vc-progress-close').getAttribute('aria-label'), 'إغلاق Progress');
@@ -95,7 +95,7 @@ test('trigger ladder agrees with canonical biomes for every boss without fetchin
   const f = fixture(); f.run('shared/progress/drawer.js');
   for (const biome of canonical) for (const boss of biome.creatures.boss) {
     f.context.VCProgress.reset(); f.context.VCProgress.defeat(boss, true);
-    const expected = f.context.VCProgress.revealedBiomes(canonical).length;
+    const expected = f.context.VCProgress.reach(canonical);
     assert.equal(f.document.querySelector('.vc-progress-trigger').getAttribute('aria-label'), `⛓ Progress ${expected}/9`);
   }
   assert.equal(f.document.head.querySelector('script'), null);

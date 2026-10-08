@@ -156,14 +156,14 @@ for (const { code } of languages) {
       const progress = fixture();
       progress.context.VCI18n.setPreference(code);
       const biomes = Array.from({ length: 25 }, (_, i) => ({ id: `biome-${i}`, order: i + 1, name: `Biome ${i + 1}`, bosses: [], minibosses: [], milestones: [] }));
-      progress.context.VCProgress.revealedBiomes = () => biomes.slice(0, count).map(biome => biome.id);
+      progress.context.VCProgress.reach = () => count;
       biomes[0].bosses = Array.from({ length: bossCount }, (_, i) => ({ id: `boss-${i}`, name: `Boss ${i + 1}` }));
       progress.context.VCProgress.get = () => ({ visited: [], defeated: Object.fromEntries(biomes[0].bosses.map(boss => [boss.id, true])), milestones: {} });
       const summary = progress.document.createElement('main');
       progress.context.VCProgressUI.render(summary, { biomes });
       const summaryText = summary.querySelector('.summary-text').textContent;
       clean(summaryText, `progress ${code}/${count}`);
-      assert.equal(summaryText, progress.context.VCProgressUI.tn('{count} / {total} biomes revealed', count, { total: 25 }) + ' · ' + progress.context.VCProgressUI.tn('{count} bosses defeated', bossCount));
+      assert.equal(summaryText, progress.context.VCProgressUI.tn('Biome {count} of {total}', count, { total: 25 }) + ' · ' + progress.context.VCProgressUI.tn('{count} of {total} bosses', bossCount, { total: bossCount }) + ' · ' + progress.context.VCProgressUI.tn('{count} of {total} minibosses', 0, { total: 0 }));
 
       bestiary.context.renderers.setPlayerCount(count);
       const panel = new Element('div');

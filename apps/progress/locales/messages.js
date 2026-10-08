@@ -120,81 +120,6 @@ globalThis.VC_MESSAGES = {
     "ja": "キャンセル",
     "id": "Batal"
   },
-  "Reveal": {
-    "en": "Reveal",
-    "cs": "Odhalit",
-    "de": "Enthüllen",
-    "es": "Revelar",
-    "fr": "Révéler",
-    "pt": "Revelar",
-    "zh": "揭示",
-    "hi": "दिखाएँ",
-    "ar": "كشف",
-    "bn": "প্রকাশ করুন",
-    "ru": "Показать",
-    "ja": "表示",
-    "id": "Ungkap"
-  },
-  "Visited": {
-    "en": "Visited",
-    "cs": "Navštíveno",
-    "de": "Besucht",
-    "es": "Visitado",
-    "fr": "Visité",
-    "pt": "Visitado",
-    "zh": "已到访",
-    "hi": "दौरा किया",
-    "ar": "تمت الزيارة",
-    "bn": "পরিদর্শিত",
-    "ru": "Посещено",
-    "ja": "訪問済み",
-    "id": "Dikunjungi"
-  },
-  "Defeated": {
-    "en": "Defeated",
-    "cs": "Poražen",
-    "de": "Besiegt",
-    "es": "Derrotado",
-    "fr": "Vaincu",
-    "pt": "Derrotado",
-    "zh": "已击败",
-    "hi": "पराजित",
-    "ar": "مهزوم",
-    "bn": "পরাজিত",
-    "ru": "Побеждён",
-    "ja": "討伐済み",
-    "id": "Dikalahkan"
-  },
-  "Boss": {
-    "en": "Boss",
-    "cs": "Boss",
-    "de": "Boss",
-    "es": "Jefe",
-    "fr": "Boss",
-    "pt": "Chefe",
-    "zh": "首领",
-    "hi": "बॉस",
-    "ar": "زعيم",
-    "bn": "বস",
-    "ru": "Босс",
-    "ja": "ボス",
-    "id": "Bos"
-  },
-  "Miniboss": {
-    "en": "Miniboss",
-    "cs": "Miniboss",
-    "de": "Miniboss",
-    "es": "Minijefe",
-    "fr": "Mini-boss",
-    "pt": "Minichefe",
-    "zh": "小首领",
-    "hi": "मिनी बॉस",
-    "ar": "زعيم صغير",
-    "bn": "মিনি বস",
-    "ru": "Мини-босс",
-    "ja": "ミニボス",
-    "id": "Bos mini"
-  },
   "Data:": {
     "en": "Data:",
     "cs": "Data:",
@@ -209,51 +134,6 @@ globalThis.VC_MESSAGES = {
     "ru": "Данные:",
     "ja": "データ：",
     "id": "Data:"
-  },
-  "Your journey through Valheim, one discovery at a time.": {
-    "en": "Your journey through Valheim, one discovery at a time.",
-    "cs": "Tvá cesta Valheimem, jeden objev za druhým.",
-    "de": "Deine Reise durch Valheim, eine Entdeckung nach der anderen.",
-    "es": "Tu viaje por Valheim, un descubrimiento a la vez.",
-    "fr": "Votre voyage dans Valheim, une découverte à la fois.",
-    "pt": "Sua jornada por Valheim, uma descoberta de cada vez.",
-    "zh": "探索英灵神殿，一步一个新发现。",
-    "hi": "वाल्हेम में आपकी यात्रा, एक समय में एक नई खोज।",
-    "ar": "رحلتك في فالهايم، اكتشافًا تلو الآخر.",
-    "bn": "ভালহেইমে আপনার যাত্রা, একবারে একটি নতুন আবিষ্কার।",
-    "ru": "Ваш путь по Вальхейму, открытие за открытием.",
-    "ja": "Valheimの旅、一つずつ新たな発見を。",
-    "id": "Perjalananmu di Valheim, satu penemuan setiap saat."
-  },
-  "Progress summary": {
-    "en": "Progress summary",
-    "cs": "Souhrn postupu",
-    "de": "Fortschrittsübersicht",
-    "es": "Resumen del progreso",
-    "fr": "Résumé de la progression",
-    "pt": "Resumo do progresso",
-    "zh": "进度概览",
-    "hi": "प्रगति का सारांश",
-    "ar": "ملخص التقدم",
-    "bn": "অগ্রগতির সারাংশ",
-    "ru": "Обзор прогресса",
-    "ja": "進行状況の概要",
-    "id": "Ringkasan kemajuan"
-  },
-  "Biomes revealed": {
-    "en": "Biomes revealed",
-    "cs": "Odhalené biomy",
-    "de": "Aufgedeckte Biome",
-    "es": "Biomas revelados",
-    "fr": "Biomes révélés",
-    "pt": "Biomas revelados",
-    "zh": "已揭示的生物群系",
-    "hi": "प्रकट हुए बायोम",
-    "ar": "المناطق المكشوفة",
-    "bn": "উন্মোচিত বায়োম",
-    "ru": "Открытые биомы",
-    "ja": "公開したバイオーム",
-    "id": "Bioma terungkap"
   },
   "Share / transfer progress": {
     "en": "Share / transfer progress",
@@ -314,51 +194,6 @@ globalThis.VC_MESSAGES = {
     "ru": "Если проект помог вам в игре, можете угостить меня кофе.",
     "ja": "冒険に役立ったら、コーヒーをご馳走していただけます。",
     "id": "Jika membantu petualanganmu, kamu bisa mentraktirku kopi."
-  },
-  "Summon: {items}": {
-    "en": "Summon: {items}",
-    "cs": "Vyvolání: {items}",
-    "de": "Beschwörung: {items}",
-    "es": "Invocación: {items}",
-    "fr": "Invocation : {items}",
-    "pt": "Invocação: {items}",
-    "zh": "召唤：{items}",
-    "hi": "आह्वान: {items}",
-    "ar": "الاستدعاء: {items}",
-    "bn": "আহ্বান: {items}",
-    "ru": "Призыв: {items}",
-    "ja": "召喚：{items}",
-    "id": "Pemanggilan: {items}"
-  },
-  "Biome {number}": {
-    "en": "Biome {number}",
-    "cs": "Biom {number}",
-    "de": "Biom {number}",
-    "es": "Bioma {number}",
-    "fr": "Biome {number}",
-    "pt": "Bioma {number}",
-    "zh": "生物群系 {number}",
-    "hi": "बायोम {number}",
-    "ar": "المنطقة {number}",
-    "bn": "বায়োম {number}",
-    "ru": "Биом {number}",
-    "ja": "バイオーム {number}",
-    "id": "Bioma {number}"
-  },
-  "Key drops": {
-    "en": "Key drops",
-    "cs": "Klíčové dropy",
-    "de": "Wichtige Beute",
-    "es": "Botín clave",
-    "fr": "Butin essentiel",
-    "pt": "Saques essenciais",
-    "zh": "关键掉落",
-    "hi": "मुख्य लूट",
-    "ar": "الغنائم الأساسية",
-    "bn": "গুরুত্বপূর্ণ লুট",
-    "ru": "Ключевая добыча",
-    "ja": "重要なドロップ",
-    "id": "Jarahan penting"
   },
   "Reset progress?": {
     "en": "Reset progress?",
@@ -525,128 +360,616 @@ globalThis.VC_MESSAGES = {
     "ja": "進行状況のURLをコピーしました。",
     "id": "URL kemajuan disalin."
   },
-  "{count} / {total} biomes revealed": {
+  "Miniboss": {
+    "en": "Miniboss",
+    "cs": "Miniboss",
+    "de": "Miniboss",
+    "es": "Minijefe",
+    "fr": "Mini-boss",
+    "pt": "Minichefe",
+    "zh": "小首领",
+    "hi": "मिनी बॉस",
+    "ar": "زعيم صغير",
+    "bn": "মিনি বস",
+    "ru": "Мини-босс",
+    "ja": "ミニボス",
+    "id": "Bos mini"
+  },
+  "Summon: {items}": {
+    "en": "Summon: {items}",
+    "cs": "Vyvolání: {items}",
+    "de": "Beschwörung: {items}",
+    "es": "Invocación: {items}",
+    "fr": "Invocation : {items}",
+    "pt": "Invocação: {items}",
+    "zh": "召唤：{items}",
+    "hi": "आह्वान: {items}",
+    "ar": "الاستدعاء: {items}",
+    "bn": "আহ্বান: {items}",
+    "ru": "Призыв: {items}",
+    "ja": "召喚：{items}",
+    "id": "Pemanggilan: {items}"
+  },
+  "Defeated": {
+    "en": "Defeated",
+    "cs": "Poražen",
+    "de": "Besiegt",
+    "es": "Derrotado",
+    "fr": "Vaincu",
+    "pt": "Derrotado",
+    "zh": "已击败",
+    "hi": "पराजित",
+    "ar": "مهزوم",
+    "bn": "পরাজিত",
+    "ru": "Побеждён",
+    "ja": "討伐済み",
+    "id": "Dikalahkan"
+  },
+  "Open full tracker →": {
+    "en": "Open full tracker →",
+    "cs": "Otevřít celý tracker →",
+    "de": "Vollständigen Tracker öffnen →",
+    "es": "Abrir el tracker completo →",
+    "fr": "Ouvrir le tracker complet →",
+    "pt": "Abrir o tracker completo →",
+    "zh": "打开完整追踪器 →",
+    "hi": "पूरा ट्रैकर खोलें →",
+    "ar": "فتح المتتبّع الكامل →",
+    "bn": "সম্পূর্ণ ট্র্যাকার খুলুন →",
+    "ru": "Открыть полный трекер →",
+    "ja": "トラッカー全体を開く →",
+    "id": "Buka tracker lengkap →"
+  },
+  "Close progress": {
+    "en": "Close Progress",
+    "cs": "Zavřít Progress",
+    "de": "Progress schließen",
+    "es": "Cerrar Progress",
+    "fr": "Fermer Progress",
+    "pt": "Fechar Progress",
+    "zh": "关闭 Progress",
+    "hi": "Progress बंद करें",
+    "ar": "إغلاق Progress",
+    "bn": "Progress বন্ধ করুন",
+    "ru": "Закрыть Progress",
+    "ja": "Progress を閉じる",
+    "id": "Tutup Progress"
+  },
+  "Loading progress…": {
+    "en": "Loading progress…",
+    "cs": "Načítání postupu…",
+    "de": "Fortschritt wird geladen…",
+    "es": "Cargando progreso…",
+    "fr": "Chargement de la progression…",
+    "pt": "Carregando progresso…",
+    "zh": "正在加载进度…",
+    "hi": "प्रगति लोड हो रही है…",
+    "ar": "جارٍ تحميل التقدم…",
+    "bn": "অগ্রগতি লোড হচ্ছে…",
+    "ru": "Загрузка прогресса…",
+    "ja": "進捗を読み込み中…",
+    "id": "Memuat progres…"
+  },
+  "Could not load progress.": {
+    "en": "Could not load progress.",
+    "cs": "Postup se nepodařilo načíst.",
+    "de": "Fortschritt konnte nicht geladen werden.",
+    "es": "No se pudo cargar el progreso.",
+    "fr": "Impossible de charger la progression.",
+    "pt": "Não foi possível carregar o progresso.",
+    "zh": "无法加载进度。",
+    "hi": "प्रगति लोड नहीं हो सकी।",
+    "ar": "تعذّر تحميل التقدم.",
+    "bn": "অগ্রগতি লোড করা যায়নি।",
+    "ru": "Не удалось загрузить прогресс.",
+    "ja": "進捗を読み込めませんでした。",
+    "id": "Tidak dapat memuat progres."
+  },
+  "Retry": {
+    "en": "Retry",
+    "cs": "Zkusit znovu",
+    "de": "Erneut versuchen",
+    "es": "Reintentar",
+    "fr": "Réessayer",
+    "pt": "Tentar novamente",
+    "zh": "重试",
+    "hi": "फिर कोशिश करें",
+    "ar": "إعادة المحاولة",
+    "bn": "আবার চেষ্টা করুন",
+    "ru": "Повторить",
+    "ja": "再試行",
+    "id": "Coba lagi"
+  },
+  "Not defeated": {
+    "en": "Not defeated",
+    "cs": "Neporažen",
+    "de": "Nicht besiegt",
+    "es": "Sin derrotar",
+    "fr": "Non vaincu",
+    "pt": "Não derrotado",
+    "zh": "未击败",
+    "hi": "पराजित नहीं",
+    "ar": "لم يُهزم",
+    "bn": "পরাজিত নয়",
+    "ru": "Не побеждён",
+    "ja": "未討伐",
+    "id": "Belum dikalahkan"
+  },
+  "Next up": {
+    "en": "Next up",
+    "cs": "Další na řadě",
+    "de": "Als Nächstes",
+    "es": "A continuación",
+    "fr": "À suivre",
+    "pt": "A seguir",
+    "zh": "下一个目标",
+    "hi": "अगला लक्ष्य",
+    "ar": "التالي",
+    "bn": "পরবর্তী লক্ষ্য",
+    "ru": "Следующая цель",
+    "ja": "次の目標",
+    "id": "Berikutnya"
+  },
+  "Your journey": {
+    "en": "Your journey",
+    "cs": "Tvá cesta",
+    "de": "Deine Reise",
+    "es": "Tu viaje",
+    "fr": "Votre voyage",
+    "pt": "Sua jornada",
+    "zh": "你的旅程",
+    "hi": "आपकी यात्रा",
+    "ar": "رحلتك",
+    "bn": "তোমার যাত্রা",
+    "ru": "Твой путь",
+    "ja": "あなたの旅",
+    "id": "Perjalananmu"
+  },
+  "You've reached: {biome}": {
+    "en": "You've reached: {biome}",
+    "cs": "Došel jsi do: {biome}",
+    "de": "Du hast erreicht: {biome}",
+    "es": "Has llegado a: {biome}",
+    "fr": "Vous avez atteint : {biome}",
+    "pt": "Você chegou a: {biome}",
+    "zh": "已到达：{biome}",
+    "hi": "आप यहाँ पहुँचे हैं: {biome}",
+    "ar": "لقد وصلت إلى: {biome}",
+    "bn": "তুমি পৌঁছেছ: {biome}",
+    "ru": "Ты достиг: {biome}",
+    "ja": "到達地点：{biome}",
+    "id": "Kamu telah mencapai: {biome}"
+  },
+  "Unmark bosses to go back": {
+    "en": "Unmark bosses to go back",
+    "cs": "Pro návrat zruš označení poražených bossů",
+    "de": "Entferne besiegte Bosse, um zurückzugehen",
+    "es": "Desmarca los jefes para retroceder",
+    "fr": "Décochez les boss pour revenir en arrière",
+    "pt": "Desmarque os chefes para voltar",
+    "zh": "取消标记首领以返回",
+    "hi": "पीछे जाने के लिए बॉस का निशान हटाएँ",
+    "ar": "ألغِ تحديد الزعماء للعودة",
+    "bn": "পিছনে যেতে বসের চিহ্ন সরাও",
+    "ru": "Сними отметки с боссов, чтобы вернуться",
+    "ja": "戻るにはボスの討伐マークを外してください",
+    "id": "Hapus tanda bos untuk kembali"
+  },
+  "Travel on — move the slider when you reach the next biome.": {
+    "en": "Travel on — move the slider when you reach the next biome.",
+    "cs": "Pokračuj v cestě — až dorazíš do dalšího biomu, posuň jezdec.",
+    "de": "Reise weiter — verschiebe den Regler, sobald du das nächste Biom erreichst.",
+    "es": "Sigue viajando: mueve el control al llegar al siguiente bioma.",
+    "fr": "Poursuivez le voyage — déplacez le curseur en atteignant le prochain biome.",
+    "pt": "Continue a viagem — mova o controle ao chegar ao próximo bioma.",
+    "zh": "继续旅行——到达下一个生物群系时移动滑块。",
+    "hi": "यात्रा जारी रखें — अगले बायोम तक पहुँचने पर स्लाइडर खिसकाएँ।",
+    "ar": "واصل رحلتك — حرّك المؤشر عند الوصول إلى المنطقة التالية.",
+    "bn": "যাত্রা চালিয়ে যাও — পরের বায়োমে পৌঁছে স্লাইডার সরাও।",
+    "ru": "Продолжай путь — передвинь ползунок, когда достигнешь следующего биома.",
+    "ja": "旅を続けよう。次のバイオームに到達したらスライダーを動かしてください。",
+    "id": "Lanjutkan perjalanan — geser pengatur saat mencapai bioma berikutnya."
+  },
+  "Saga complete": {
+    "en": "Saga complete",
+    "cs": "Sága dokončena",
+    "de": "Saga abgeschlossen",
+    "es": "Saga completada",
+    "fr": "Saga achevée",
+    "pt": "Saga concluída",
+    "zh": "传奇已完成",
+    "hi": "गाथा पूरी हुई",
+    "ar": "اكتملت الملحمة",
+    "bn": "গাথা সম্পূর্ণ",
+    "ru": "Сага завершена",
+    "ja": "サーガ完了",
+    "id": "Saga selesai"
+  },
+  "Biome {count}": {
     "en": {
-      "one": "{count} / {total} biome revealed",
-      "other": "{count} / {total} biomes revealed"
+      "one": "Biome {count}",
+      "other": "Biome {count}"
     },
     "cs": {
-      "one": "Odhaleno: {count} biom / {total}",
-      "few": "Odhaleno: {count} biomy / {total}",
-      "many": "Odhaleno: {count} biomu / {total}",
-      "other": "Odhaleno: {count} biomů / {total}"
+      "one": "Biom {count}",
+      "few": "Biom {count}",
+      "many": "Biom {count}",
+      "other": "Biom {count}"
     },
     "de": {
-      "one": "{count} / {total} Biom aufgedeckt",
-      "other": "{count} / {total} Biome aufgedeckt"
+      "one": "Biom {count}",
+      "other": "Biom {count}"
     },
     "es": {
-      "one": "{count} / {total} bioma revelado",
-      "many": "{count} / {total} biomas revelados",
-      "other": "{count} / {total} biomas revelados"
+      "one": "Bioma {count}",
+      "many": "Bioma {count}",
+      "other": "Bioma {count}"
     },
     "fr": {
-      "one": "{count} / {total} biome révélé",
-      "many": "{count} / {total} biomes révélés",
-      "other": "{count} / {total} biomes révélés"
+      "one": "Biome {count}",
+      "many": "Biome {count}",
+      "other": "Biome {count}"
     },
     "pt": {
-      "one": "{count} / {total} bioma revelado",
-      "many": "{count} / {total} biomas revelados",
-      "other": "{count} / {total} biomas revelados"
+      "one": "Bioma {count}",
+      "many": "Bioma {count}",
+      "other": "Bioma {count}"
     },
     "zh": {
-      "other": "已揭示 {count} / {total} 个生物群系"
+      "other": "生物群系 {count}"
     },
     "hi": {
-      "one": "{count} / {total} बायोम प्रकट",
-      "other": "{count} / {total} बायोम प्रकट"
+      "one": "बायोम {count}",
+      "other": "बायोम {count}"
     },
     "ar": {
-      "zero": "المناطق المكشوفة: {count} مناطق / {total}",
-      "one": "المناطق المكشوفة: {count} منطقة / {total}",
-      "two": "المناطق المكشوفة: {count} منطقتان / {total}",
-      "few": "المناطق المكشوفة: {count} مناطق / {total}",
-      "many": "المناطق المكشوفة: {count} منطقةً / {total}",
-      "other": "المناطق المكشوفة: {count} منطقة / {total}"
+      "zero": "المنطقة {count}",
+      "one": "المنطقة {count}",
+      "two": "المنطقة {count}",
+      "few": "المنطقة {count}",
+      "many": "المنطقة {count}",
+      "other": "المنطقة {count}"
     },
     "bn": {
-      "one": "{count} / {total} বায়োম উন্মোচিত",
-      "other": "{count} / {total} বায়োম উন্মোচিত"
+      "one": "বায়োম {count}",
+      "other": "বায়োম {count}"
     },
     "ru": {
-      "one": "Открыто: {count} биом / {total}",
-      "few": "Открыто: {count} биома / {total}",
-      "many": "Открыто: {count} биомов / {total}",
-      "other": "Открыто: {count} биома / {total}"
+      "one": "Биом {count}",
+      "few": "Биом {count}",
+      "many": "Биом {count}",
+      "other": "Биом {count}"
     },
     "ja": {
-      "other": "{count} / {total} バイオーム公開"
+      "other": "バイオーム {count}"
     },
     "id": {
-      "other": "{count} / {total} bioma terungkap"
+      "other": "Bioma {count}"
     }
   },
-  "{count} bosses defeated": {
+  "Biome {count} of {total}": {
     "en": {
-      "one": "{count} boss defeated",
-      "other": "{count} bosses defeated"
+      "one": "Biome {count} of {total}",
+      "other": "Biome {count} of {total}"
     },
     "cs": {
-      "one": "Poraženo: {count} boss",
-      "few": "Poraženo: {count} bossové",
-      "many": "Poraženo: {count} bosse",
-      "other": "Poraženo: {count} bossů"
+      "one": "Biom {count} z {total}",
+      "few": "Biom {count} z {total}",
+      "many": "Biom {count} z {total}",
+      "other": "Biom {count} z {total}"
     },
     "de": {
-      "one": "{count} Boss besiegt",
-      "other": "{count} Bosse besiegt"
+      "one": "Biom {count} von {total}",
+      "other": "Biom {count} von {total}"
     },
     "es": {
-      "one": "{count} jefe derrotado",
-      "many": "{count} jefes derrotados",
-      "other": "{count} jefes derrotados"
+      "one": "Bioma {count} de {total}",
+      "many": "Bioma {count} de {total}",
+      "other": "Bioma {count} de {total}"
     },
     "fr": {
-      "one": "{count} boss vaincu",
-      "many": "{count} boss vaincus",
-      "other": "{count} boss vaincus"
+      "one": "Biome {count} sur {total}",
+      "many": "Biome {count} sur {total}",
+      "other": "Biome {count} sur {total}"
     },
     "pt": {
-      "one": "{count} chefe derrotado",
-      "many": "{count} chefes derrotados",
-      "other": "{count} chefes derrotados"
+      "one": "Bioma {count} de {total}",
+      "many": "Bioma {count} de {total}",
+      "other": "Bioma {count} de {total}"
     },
     "zh": {
-      "other": "已击败 {count} 个首领"
+      "other": "生物群系 {count} / {total}"
     },
     "hi": {
-      "one": "{count} बॉस पराजित",
-      "other": "{count} बॉस पराजित"
+      "one": "बायोम {count} / {total}",
+      "other": "बायोम {count} / {total}"
     },
     "ar": {
-      "zero": "الزعماء المهزومون: {count} زعماء",
-      "one": "الزعماء المهزومون: {count} زعيم",
-      "two": "الزعماء المهزومون: {count} زعيمان",
-      "few": "الزعماء المهزومون: {count} زعماء",
-      "many": "الزعماء المهزومون: {count} زعيمًا",
-      "other": "الزعماء المهزومون: {count} زعيم"
+      "zero": "المنطقة {count} من {total}",
+      "one": "المنطقة {count} من {total}",
+      "two": "المنطقة {count} من {total}",
+      "few": "المنطقة {count} من {total}",
+      "many": "المنطقة {count} من {total}",
+      "other": "المنطقة {count} من {total}"
     },
     "bn": {
-      "one": "{count} বস পরাজিত",
-      "other": "{count} বস পরাজিত"
+      "one": "বায়োম {count} / {total}",
+      "other": "বায়োম {count} / {total}"
     },
     "ru": {
-      "one": "Побеждено: {count} босс",
-      "few": "Побеждено: {count} босса",
-      "many": "Побеждено: {count} боссов",
-      "other": "Побеждено: {count} босса"
+      "one": "Биом {count} из {total}",
+      "few": "Биом {count} из {total}",
+      "many": "Биом {count} из {total}",
+      "other": "Биом {count} из {total}"
     },
     "ja": {
-      "other": "{count} ボス討伐"
+      "other": "バイオーム {count} / {total}"
     },
     "id": {
-      "other": "{count} bos dikalahkan"
+      "other": "Bioma {count} dari {total}"
     }
+  },
+  "Biome {count} of {total}: {biome}": {
+    "en": {
+      "one": "Biome {count} of {total}: {biome}",
+      "other": "Biome {count} of {total}: {biome}"
+    },
+    "cs": {
+      "one": "Biom {count} z {total}: {biome}",
+      "few": "Biom {count} z {total}: {biome}",
+      "many": "Biom {count} z {total}: {biome}",
+      "other": "Biom {count} z {total}: {biome}"
+    },
+    "de": {
+      "one": "Biom {count} von {total}: {biome}",
+      "other": "Biom {count} von {total}: {biome}"
+    },
+    "es": {
+      "one": "Bioma {count} de {total}: {biome}",
+      "many": "Bioma {count} de {total}: {biome}",
+      "other": "Bioma {count} de {total}: {biome}"
+    },
+    "fr": {
+      "one": "Biome {count} sur {total} : {biome}",
+      "many": "Biome {count} sur {total} : {biome}",
+      "other": "Biome {count} sur {total} : {biome}"
+    },
+    "pt": {
+      "one": "Bioma {count} de {total}: {biome}",
+      "many": "Bioma {count} de {total}: {biome}",
+      "other": "Bioma {count} de {total}: {biome}"
+    },
+    "zh": {
+      "other": "生物群系 {count} / {total}：{biome}"
+    },
+    "hi": {
+      "one": "बायोम {count} / {total}: {biome}",
+      "other": "बायोम {count} / {total}: {biome}"
+    },
+    "ar": {
+      "zero": "المنطقة {count} من {total}: {biome}",
+      "one": "المنطقة {count} من {total}: {biome}",
+      "two": "المنطقة {count} من {total}: {biome}",
+      "few": "المنطقة {count} من {total}: {biome}",
+      "many": "المنطقة {count} من {total}: {biome}",
+      "other": "المنطقة {count} من {total}: {biome}"
+    },
+    "bn": {
+      "one": "বায়োম {count} / {total}: {biome}",
+      "other": "বায়োম {count} / {total}: {biome}"
+    },
+    "ru": {
+      "one": "Биом {count} из {total}: {biome}",
+      "few": "Биом {count} из {total}: {biome}",
+      "many": "Биом {count} из {total}: {biome}",
+      "other": "Биом {count} из {total}: {biome}"
+    },
+    "ja": {
+      "other": "バイオーム {count} / {total}：{biome}"
+    },
+    "id": {
+      "other": "Bioma {count} dari {total}: {biome}"
+    }
+  },
+  "{count} of {total} bosses": {
+    "en": {
+      "one": "{count} of {total} bosses",
+      "other": "{count} of {total} bosses"
+    },
+    "cs": {
+      "one": "{count} z {total} bossů",
+      "few": "{count} z {total} bossů",
+      "many": "{count} z {total} bossů",
+      "other": "{count} z {total} bossů"
+    },
+    "de": {
+      "one": "{count} von {total} Bossen",
+      "other": "{count} von {total} Bossen"
+    },
+    "es": {
+      "one": "{count} de {total} jefes",
+      "many": "{count} de {total} jefes",
+      "other": "{count} de {total} jefes"
+    },
+    "fr": {
+      "one": "{count} boss sur {total}",
+      "many": "{count} boss sur {total}",
+      "other": "{count} boss sur {total}"
+    },
+    "pt": {
+      "one": "{count} de {total} chefes",
+      "many": "{count} de {total} chefes",
+      "other": "{count} de {total} chefes"
+    },
+    "zh": {
+      "other": "首领 {count} / {total}"
+    },
+    "hi": {
+      "one": "बॉस {count} / {total}",
+      "other": "बॉस {count} / {total}"
+    },
+    "ar": {
+      "zero": "الزعماء {count} من {total}",
+      "one": "الزعماء {count} من {total}",
+      "two": "الزعماء {count} من {total}",
+      "few": "الزعماء {count} من {total}",
+      "many": "الزعماء {count} من {total}",
+      "other": "الزعماء {count} من {total}"
+    },
+    "bn": {
+      "one": "বস {count} / {total}",
+      "other": "বস {count} / {total}"
+    },
+    "ru": {
+      "one": "Боссы: {count} из {total}",
+      "few": "Боссы: {count} из {total}",
+      "many": "Боссы: {count} из {total}",
+      "other": "Боссы: {count} из {total}"
+    },
+    "ja": {
+      "other": "ボス {count} / {total}"
+    },
+    "id": {
+      "other": "{count} dari {total} bos"
+    }
+  },
+  "{count} of {total} minibosses": {
+    "en": {
+      "one": "{count} of {total} minibosses",
+      "other": "{count} of {total} minibosses"
+    },
+    "cs": {
+      "one": "{count} z {total} minibossů",
+      "few": "{count} z {total} minibossů",
+      "many": "{count} z {total} minibossů",
+      "other": "{count} z {total} minibossů"
+    },
+    "de": {
+      "one": "{count} von {total} Minibossen",
+      "other": "{count} von {total} Minibossen"
+    },
+    "es": {
+      "one": "{count} de {total} minijefes",
+      "many": "{count} de {total} minijefes",
+      "other": "{count} de {total} minijefes"
+    },
+    "fr": {
+      "one": "{count} mini-boss sur {total}",
+      "many": "{count} mini-boss sur {total}",
+      "other": "{count} mini-boss sur {total}"
+    },
+    "pt": {
+      "one": "{count} de {total} minichefes",
+      "many": "{count} de {total} minichefes",
+      "other": "{count} de {total} minichefes"
+    },
+    "zh": {
+      "other": "小首领 {count} / {total}"
+    },
+    "hi": {
+      "one": "मिनीबॉस {count} / {total}",
+      "other": "मिनीबॉस {count} / {total}"
+    },
+    "ar": {
+      "zero": "الزعماء الصغار {count} من {total}",
+      "one": "الزعماء الصغار {count} من {total}",
+      "two": "الزعماء الصغار {count} من {total}",
+      "few": "الزعماء الصغار {count} من {total}",
+      "many": "الزعماء الصغار {count} من {total}",
+      "other": "الزعماء الصغار {count} من {total}"
+    },
+    "bn": {
+      "one": "মিনিবস {count} / {total}",
+      "other": "মিনিবস {count} / {total}"
+    },
+    "ru": {
+      "one": "Мини-боссы: {count} из {total}",
+      "few": "Мини-боссы: {count} из {total}",
+      "many": "Мини-боссы: {count} из {total}",
+      "other": "Мини-боссы: {count} из {total}"
+    },
+    "ja": {
+      "other": "ミニボス {count} / {total}"
+    },
+    "id": {
+      "other": "{count} dari {total} bos mini"
+    }
+  },
+  "⛓ Progress {count}/{total}": {
+    "en": {
+      "one": "⛓ Progress {count}/{total}",
+      "other": "⛓ Progress {count}/{total}"
+    },
+    "cs": {
+      "one": "⛓ Progress {count}/{total}",
+      "few": "⛓ Progress {count}/{total}",
+      "many": "⛓ Progress {count}/{total}",
+      "other": "⛓ Progress {count}/{total}"
+    },
+    "de": {
+      "one": "⛓ Progress {count}/{total}",
+      "other": "⛓ Progress {count}/{total}"
+    },
+    "es": {
+      "one": "⛓ Progress {count}/{total}",
+      "many": "⛓ Progress {count}/{total}",
+      "other": "⛓ Progress {count}/{total}"
+    },
+    "fr": {
+      "one": "⛓ Progress {count}/{total}",
+      "many": "⛓ Progress {count}/{total}",
+      "other": "⛓ Progress {count}/{total}"
+    },
+    "pt": {
+      "one": "⛓ Progress {count}/{total}",
+      "many": "⛓ Progress {count}/{total}",
+      "other": "⛓ Progress {count}/{total}"
+    },
+    "zh": {
+      "other": "⛓ Progress {count}/{total}"
+    },
+    "hi": {
+      "one": "⛓ Progress {count}/{total}",
+      "other": "⛓ Progress {count}/{total}"
+    },
+    "ar": {
+      "zero": "⛓ Progress {count}/{total}",
+      "one": "⛓ Progress {count}/{total}",
+      "two": "⛓ Progress {count}/{total}",
+      "few": "⛓ Progress {count}/{total}",
+      "many": "⛓ Progress {count}/{total}",
+      "other": "⛓ Progress {count}/{total}"
+    },
+    "bn": {
+      "one": "⛓ Progress {count}/{total}",
+      "other": "⛓ Progress {count}/{total}"
+    },
+    "ru": {
+      "one": "⛓ Progress {count}/{total}",
+      "few": "⛓ Progress {count}/{total}",
+      "many": "⛓ Progress {count}/{total}",
+      "other": "⛓ Progress {count}/{total}"
+    },
+    "ja": {
+      "other": "⛓ Progress {count}/{total}"
+    },
+    "id": {
+      "other": "⛓ Progress {count}/{total}"
+    }
+  },
+  "Move the slider as you explore. Select a portrait to mark a victory.": {
+    "en": "Move the slider as you explore. Select a portrait to mark a victory.",
+    "cs": "Posouvej jezdec, jak objevuješ svět. Kliknutím na portrét označ vítězství.",
+    "de": "Bewege den Regler beim Erkunden. Wähle ein Porträt, um einen Sieg zu markieren.",
+    "es": "Mueve el control al explorar. Selecciona un retrato para marcar una victoria.",
+    "fr": "Déplacez le curseur au fil de vos découvertes. Sélectionnez un portrait pour marquer une victoire.",
+    "pt": "Mova o controle conforme explora. Selecione um retrato para marcar uma vitória.",
+    "zh": "探索时移动滑块。点击头像标记胜利。",
+    "hi": "खोज करते हुए स्लाइडर खिसकाएँ। जीत दर्ज करने के लिए चित्र चुनें।",
+    "ar": "حرّك المؤشر أثناء الاستكشاف. اختر صورة لتسجيل انتصار.",
+    "bn": "অন্বেষণের সাথে স্লাইডার সরাও। জয় চিহ্নিত করতে প্রতিকৃতি বেছে নাও।",
+    "ru": "Передвигай ползунок по мере исследования мира. Нажми на портрет, чтобы отметить победу.",
+    "ja": "探索に合わせてスライダーを動かしましょう。ポートレートを選ぶと勝利を記録できます。",
+    "id": "Geser pengatur saat menjelajah. Pilih potret untuk menandai kemenangan."
   }
 };

@@ -13,6 +13,8 @@ window.VP_DATA = {
         "zh": "草原"
       },
       "order": 1,
+      "art": "img/biomes/meadows.webp",
+      "thumb": "img/biomes/meadows-s.webp",
       "bosses": [
         {
           "id": "eikthyr",
@@ -24,6 +26,7 @@ window.VP_DATA = {
             "ru": "Эйктюр"
           },
           "image": "../bestiary/img/creatures/eikthyr-0.png",
+          "portrait": "img/bosses/eikthyr.webp",
           "summon": "Deer Trophy x2",
           "drops": [
             "Eikthyr Trophy",
@@ -67,6 +70,8 @@ window.VP_DATA = {
         "ru": "Черный лес"
       },
       "order": 2,
+      "art": "img/biomes/black-forest.webp",
+      "thumb": "img/biomes/black-forest-s.webp",
       "bosses": [
         {
           "id": "the-elder",
@@ -78,6 +83,7 @@ window.VP_DATA = {
             "ru": "Древний"
           },
           "image": "../bestiary/img/creatures/the-elder-0.png",
+          "portrait": "img/bosses/the-elder.webp",
           "summon": "Ancient Seed x3",
           "drops": [
             "The Elder Trophy",
@@ -97,6 +103,7 @@ window.VP_DATA = {
             "ru": "Бренна"
           },
           "image": "../bestiary/img/creatures/brenna-0.png",
+          "portrait": "img/bosses/brenna.webp",
           "summon": null,
           "drops": [
             "Hildir's brass chest",
@@ -134,6 +141,8 @@ window.VP_DATA = {
         "zh": "海洋"
       },
       "order": 3,
+      "art": "img/biomes/ocean.webp",
+      "thumb": "img/biomes/ocean-s.webp",
       "bosses": [],
       "minibosses": [],
       "milestones": []
@@ -149,6 +158,8 @@ window.VP_DATA = {
         "zh": "沼澤"
       },
       "order": 4,
+      "art": "img/biomes/swamp.webp",
+      "thumb": "img/biomes/swamp-s.webp",
       "bosses": [
         {
           "id": "bonemass",
@@ -160,6 +171,7 @@ window.VP_DATA = {
             "ru": "Масса костей"
           },
           "image": "../bestiary/img/creatures/bonemass-0.png",
+          "portrait": "img/bosses/bonemass.webp",
           "summon": "Withered Bone x10",
           "drops": [
             "Bonemass Trophy",
@@ -198,6 +210,8 @@ window.VP_DATA = {
         "zh": "雪山"
       },
       "order": 5,
+      "art": "img/biomes/mountain.webp",
+      "thumb": "img/biomes/mountain-s.webp",
       "bosses": [
         {
           "id": "moder",
@@ -208,6 +222,7 @@ window.VP_DATA = {
             "ru": "Матерь"
           },
           "image": "../bestiary/img/creatures/moder-0.png",
+          "portrait": "img/bosses/moder.webp",
           "summon": "Dragon Egg x3",
           "drops": [
             "Dragon Tear",
@@ -225,6 +240,7 @@ window.VP_DATA = {
             "ru": "Гейрафа"
           },
           "image": "../bestiary/img/creatures/geirrhafa-0.png",
+          "portrait": "img/bosses/geirrhafa.webp",
           "summon": null,
           "drops": [
             "Hildir's silver chest",
@@ -264,6 +280,8 @@ window.VP_DATA = {
         "zh": "平原"
       },
       "order": 6,
+      "art": "img/biomes/plains.webp",
+      "thumb": "img/biomes/plains-s.webp",
       "bosses": [
         {
           "id": "yagluth",
@@ -274,6 +292,7 @@ window.VP_DATA = {
             "ru": "Яглут"
           },
           "image": "../bestiary/img/creatures/yagluth-0.png",
+          "portrait": "img/bosses/yagluth.webp",
           "summon": "Fuling Totem x5",
           "drops": [
             "Yagluth Trophy",
@@ -291,6 +310,7 @@ window.VP_DATA = {
             "ru": "Зил и Тангр"
           },
           "image": "../bestiary/img/creatures/zil-thungr-0.png",
+          "portrait": "img/bosses/zil-thungr.webp",
           "summon": null,
           "drops": [
             "Hildir's bronze chest",
@@ -326,6 +346,8 @@ window.VP_DATA = {
         "ru": "Туманные земли"
       },
       "order": 7,
+      "art": "img/biomes/mistlands.webp",
+      "thumb": "img/biomes/mistlands-s.webp",
       "bosses": [
         {
           "id": "the-queen",
@@ -335,6 +357,7 @@ window.VP_DATA = {
             "ru": "Королева"
           },
           "image": "../bestiary/img/creatures/the-queen-0.png",
+          "portrait": "img/bosses/the-queen.webp",
           "summon": null,
           "drops": [
             "Majestic Carapace",
@@ -371,6 +394,8 @@ window.VP_DATA = {
         "ru": "Пепельные земли"
       },
       "order": 8,
+      "art": "img/biomes/ashlands.webp",
+      "thumb": "img/biomes/ashlands-s.webp",
       "bosses": [
         {
           "id": "fader",
@@ -379,6 +404,7 @@ window.VP_DATA = {
             "ru": "Прародитель"
           },
           "image": "../bestiary/img/creatures/fader-0.png",
+          "portrait": "img/bosses/fader.webp",
           "summon": "Bell x3",
           "drops": [
             "Kindled Ribs",
@@ -394,6 +420,7 @@ window.VP_DATA = {
             "ru": "Владыка Рето"
           },
           "image": "../bestiary/img/creatures/lord-reto-2.png",
+          "portrait": "img/bosses/lord-reto.webp",
           "summon": null,
           "drops": []
         }
@@ -417,12 +444,15 @@ window.VP_DATA = {
         "ru": "Дальний север"
       },
       "order": 9,
+      "art": "img/biomes/deep-north.webp",
+      "thumb": "img/biomes/deep-north-s.webp",
       "bosses": [
         {
           "id": "kall-fimbulbringer",
           "name": "Kall Fimbulbringer",
           "names": {},
           "image": "../bestiary/img/creatures/kall-fimbulbringer-0.png",
+          "portrait": "img/bosses/kall-fimbulbringer.webp",
           "summon": "Malicious Blood x3",
           "drops": [
             "Sacrificial Blood",

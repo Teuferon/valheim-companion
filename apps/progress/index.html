@@ -47,20 +47,16 @@
       <nav class="hub-nav" aria-label="Navigation" data-i18n-attr="aria-label:Navigation">
         <a href="../" data-i18n="← Valheim Companion">← Valheim Companion</a>
       </nav>
-      <h1>Progress</h1>
-      <p class="subtitle" data-i18n="Your journey through Valheim, one discovery at a time.">Your journey through Valheim, one discovery at a time.</p>
+      <h1>Progress Tracker</h1>
+      <p class="subtitle" data-i18n="Move the slider as you explore. Select a portrait to mark a victory.">Move the slider as you explore. Select a portrait to mark a victory.</p>
     </header>
     <main>
-      <section class="summary" aria-label="Progress summary" data-i18n-attr="aria-label:Progress summary">
-        <p id="summary-text" aria-live="polite"></p>
-        <progress id="progress-meter" max="9" value="1" aria-label="Biomes revealed" data-i18n-attr="aria-label:Biomes revealed"></progress>
-        <div class="actions">
-          <button id="share" type="button" data-i18n="Share / transfer progress">Share / transfer progress</button>
-          <button id="reset" class="danger" type="button" data-i18n="Reset progress">Reset progress</button>
-        </div>
-        <p id="status" role="status"></p>
-      </section>
-      <div id="biomes" class="biomes"></div>
+      <div id="saga"></div>
+      <div class="actions tracker-actions">
+        <button id="share" type="button" data-i18n="Share / transfer progress">Share / transfer progress</button>
+        <button id="reset" class="danger" type="button" data-i18n="Reset progress">Reset progress</button>
+      </div>
+      <p id="status" role="status"></p>
     </main>
     <footer class="page-footer">
       <p><span data-i18n="Data:">Data:</span> <a href="https://valheim.weirdgloop.org" target="_blank" rel="noopener noreferrer">Valheim Wiki</a> · CC BY-SA 4.0</p>

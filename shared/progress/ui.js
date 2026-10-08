@@ -1,4 +1,4 @@
-// Shared checklist renderer for the full tracker and the companion drawer.
+// Shared Saga renderer for the full tracker and the companion drawer.
 (function () {
   'use strict';
   const mounts = new WeakMap();
@@ -22,129 +22,143 @@
   function render(container, data, { compact = false } = {}) {
     if (mounts.has(container)) { const mounted = mounts.get(container); mounted.update(); return mounted; }
     const P = globalThis.VCProgress;
-    const biomes = data.biomes;
-    const t = translate;
-    const temporaryReveals = new Set();
+    const biomes = [...data.biomes].sort((a, b) => a.order - b.order);
+    const t = translate, tn = translateNumber;
+    const bosses = biomes.flatMap(b => b.bosses);
+    const minibosses = biomes.flatMap(b => b.minibosses);
+    let timer, celebrated = null;
     container.classList.add('vc-progress-ui');
     if (compact) container.classList.add('vc-progress-compact');
-    let summaryText = container.querySelector('#summary-text');
-    let meter = container.querySelector('#progress-meter');
-    let biomeContainer = container.querySelector('#biomes');
-    if (!summaryText) {
-      const summary = element('section', 'summary');
-      summary.setAttribute('aria-label', t('Progress summary'));
-      summaryText = element('p', 'summary-text'); summaryText.setAttribute('aria-live', 'polite');
-      meter = element('progress');
-      meter.setAttribute('aria-label', t('Biomes revealed'));
-      summary.append(summaryText, meter);
-      biomeContainer = element('div', 'biomes');
-      container.append(summary, biomeContainer);
-    }
     function element(tag, className, text) {
       const node = document.createElement(tag);
       if (className) node.className = className;
       if (text !== undefined) node.textContent = text;
       return node;
     }
-    function checkbox(field, id, text, checked) {
-      const label = element('label', 'check');
-      const input = element('input');
-      input.type = 'checkbox'; input.checked = checked;
-      input.dataset.key = field + ':' + id;
-      input.addEventListener('change', () => P[field](id, input.checked));
-      label.append(input, element('span', '', text));
-      return label;
-    }
-    function image(value) {
-      if (!value.image) return null;
-      const img = element('img');
-      img.src = compact ? '/progress/' + value.image : value.image; img.alt = ''; img.loading = 'lazy';
+    function image(path, className) {
+      const img = element('img', className);
+      img.src = '/progress/' + path; img.alt = ''; img.loading = 'lazy';
       return img;
     }
-    function creatureCard(value, biome, kind, state) {
-      const card = element('article', 'creature');
-      card.append(image(value) ?? element('span'));
-      const content = element('div', 'creature-content');
-      content.append(element('p', 'tag', t(kind)), element('h3', '', value.name));
-      if (value.summon) content.append(element('p', 'summon', t('Summon: {items}', { items: value.summon })));
-      const links = element('div', 'links');
-      const bestiary = element('a', '', 'Bestiary');
-      bestiary.href = '/bestiary/#c=' + encodeURIComponent(value.id);
-      const calculator = element('a', '', 'Damage Calculator');
-      calculator.href = '/damage-calculator/?' + new URLSearchParams({ biome: biome.id, target: value.id });
-      links.append(bestiary, calculator); content.append(links);
-      const defeated = checkbox('defeat', value.id, t('Defeated'), state.defeated[value.id] === true);
-      defeated.querySelector('input').setAttribute('aria-label', value.name + ' · ' + t('Defeated'));
-      card.append(content, defeated);
-      return card;
+    const summary = element('p', 'summary-text'); summary.setAttribute('aria-live', 'polite');
+    const viewport = element('div', 'saga-viewport');
+    const track = element('div', 'saga-track');
+    const tiles = element('div', 'saga-tiles');
+    const path = element('div', 'saga-path');
+    const slider = element('input', 'saga-slider');
+    slider.type = 'range'; slider.min = 1; slider.max = biomes.length; slider.step = 1; slider.dataset.key = 'reach';
+    const stops = element('div', 'saga-stops'); stops.setAttribute('aria-hidden', 'true');
+    for (const biome of biomes) stops.append(element('span', '', String(biome.order)));
+    path.append(stops, slider); track.append(tiles, path); viewport.append(track);
+    const caption = element('p', 'saga-caption');
+    const hint = element('p', 'saga-hint'); hint.setAttribute('role', 'status');
+    const details = element('div', compact ? 'saga-rows' : 'saga-next');
+    container.append(summary, viewport, caption, hint, details);
+    track.style.setProperty('--saga-count', biomes.length);
+    function scrollTo(order) {
+      const tile = [...tiles.children].find(node => Number(node.dataset.order) === order);
+      if (tile && viewport.scrollTo) viewport.scrollTo({ left: tile.offsetLeft - (viewport.clientWidth - tile.offsetWidth) / 2, behavior: 'instant' });
     }
-    function reveal(id) {
-      let opened = [];
-      try {
-        const raw = JSON.parse(localStorage.getItem('vc.openBiomes'));
-        if (Array.isArray(raw)) opened = raw.filter(value => typeof value === 'string');
-      } catch { /* Continue with an empty legacy state. */ }
-      try {
-        localStorage.setItem('vc.openBiomes', JSON.stringify([...new Set([...opened, ...temporaryReveals, id])]));
-        temporaryReveals.clear();
-      } catch { temporaryReveals.add(id); }
-      P.set({});
+    function portrait(value, small, state) {
+      const done = state.defeated[value.id] === true;
+      const button = element('button', 'saga-portrait' + (small ? ' saga-miniboss' : '') + (done ? ' is-defeated' : '') + (celebrated === value.id ? ' saga-celebrate' : ''));
+      button.type = 'button'; button.dataset.key = 'defeat:' + value.id;
+      button.setAttribute('aria-pressed', String(done));
+      button.setAttribute('aria-label', value.name + ' · ' + t(done ? 'Defeated' : 'Not defeated'));
+      const frame = element('span', 'saga-portrait-frame');
+      if (value.portrait) frame.append(image(value.portrait));
+      if (done) { const seal = element('span', 'saga-seal', '✓'); seal.setAttribute('aria-hidden', 'true'); frame.append(seal); }
+      button.append(frame, element('span', 'saga-name', value.name));
+      if (small) button.append(element('span', 'saga-tag', t('Miniboss')));
+      button.addEventListener('click', () => { celebrated = done ? null : value.id; P.defeat(value.id, !done); celebrated = null; });
+      return button;
     }
+    function portraits(biome, state) {
+      const group = element('div', 'saga-portraits');
+      for (const boss of biome.bosses) group.append(portrait(boss, false, state));
+      for (const boss of biome.minibosses) group.append(portrait(boss, true, state));
+      return group;
+    }
+    function preview(n) {
+      const current = P.reach(biomes);
+      for (const tile of tiles.children) tile.classList.toggle('is-preview', Number(tile.dataset.order) === n);
+      slider.value = n;
+      slider.style.setProperty('--saga-fill', ((n - 1) / (biomes.length - 1) * 100) + '%');
+      const name = biomes.find(b => b.order === n)?.name;
+      const safeName = n <= current ? name : tn('Biome {count}', n);
+      caption.textContent = t("You've reached: {biome}", { biome: safeName });
+      slider.setAttribute('aria-label', t('Your journey'));
+      slider.setAttribute('aria-valuetext', n <= current
+        ? tn('Biome {count} of {total}: {biome}', n, { total: biomes.length, biome: name })
+        : tn('Biome {count} of {total}', n, { total: biomes.length }));
+    }
+    function boundedValue() {
+      const value = Number(slider.value), minimum = P.minReach(biomes);
+      if (value < minimum) {
+        hint.textContent = t('Unmark bosses to go back');
+        clearTimeout(timer); timer = setTimeout(() => { hint.textContent = ''; }, 3500);
+      }
+      return Math.max(minimum, value);
+    }
+    slider.addEventListener('input', () => preview(boundedValue()));
+    slider.addEventListener('change', () => { const value = boundedValue(); P.setReach(value, biomes); scrollTo(value); });
     function update() {
-      if (compact) {
-        summaryText.parentElement.setAttribute('aria-label', t('Progress summary'));
-        meter.setAttribute('aria-label', t('Biomes revealed'));
-      }
       const focusKey = container.contains(document.activeElement) ? document.activeElement?.dataset.key : null;
-      const state = P.get();
-      const revealed = new Set([...P.revealedBiomes(biomes), ...temporaryReveals]);
-      const defeated = biomes.flatMap(b => b.bosses).filter(boss => state.defeated[boss.id]).length;
-      summaryText.textContent = translateNumber('{count} / {total} biomes revealed', revealed.size, { total: biomes.length })
-        + ' · ' + translateNumber('{count} bosses defeated', defeated);
-      meter.max = biomes.length;
-      meter.value = revealed.size;
-      biomeContainer.replaceChildren();
+      const previousScroll = viewport.scrollLeft;
+      const state = P.get(), current = P.reach(biomes);
+      const revealed = new Set(P.revealedBiomes(biomes));
+      summary.textContent = tn('Biome {count} of {total}', current, { total: biomes.length })
+        + ' · ' + tn('{count} of {total} bosses', bosses.filter(b => state.defeated[b.id]).length, { total: bosses.length })
+        + ' · ' + tn('{count} of {total} minibosses', minibosses.filter(b => state.defeated[b.id]).length, { total: minibosses.length });
+      tiles.replaceChildren(); details.replaceChildren();
       for (const biome of biomes) {
-        const section = element('section', 'biome' + (revealed.has(biome.id) ? '' : ' locked'));
-        const header = element('div', 'biome-header');
-        if (!revealed.has(biome.id)) {
-          header.append(element('h2', '', '🔒 ' + t('Biome {number}', { number: biome.order })));
-          const button = element('button', '', t('Reveal'));
-          button.type = 'button'; button.dataset.key = 'reveal:' + biome.id;
-          button.addEventListener('click', () => reveal(biome.id));
-          header.append(button); section.append(header); biomeContainer.append(section);
-          continue;
+        const reached = biome.order <= current;
+        const named = reached || (!compact && revealed.has(biome.id));
+        const tile = element('section', 'saga-tile' + (reached ? ' is-reached' : ' is-locked') + (biome.order === current ? ' is-current' : '') + (!reached && named ? ' is-revealed' : ''));
+        tile.dataset.order = biome.order;
+        if (compact ? biome.thumb : biome.art) tile.append(image(compact ? biome.thumb : biome.art, 'saga-art'));
+        const button = element('button', 'saga-select'); button.type = 'button'; button.dataset.key = 'biome:' + biome.order;
+        button.setAttribute('aria-label', named ? tn('Biome {count} of {total}: {biome}', biome.order, { total: biomes.length, biome: biome.name }) : tn('Biome {count} of {total}', biome.order, { total: biomes.length }));
+        if (biome.order === current) button.setAttribute('aria-current', 'step');
+        const number = element('span', 'saga-number', String(biome.order)); number.setAttribute('aria-hidden', 'true');
+        button.append(number);
+        if (!compact) button.append(element('span', 'saga-biome-name', named ? biome.name : '🔒 ' + tn('Biome {count}', biome.order)));
+        else if (!reached) button.append(element('span', 'saga-lock', '🔒'));
+        button.addEventListener('click', () => { if (biome.order > P.reach(biomes)) P.setReach(biome.order, biomes); scrollTo(biome.order); });
+        tile.append(button);
+        if (reached && !compact) tile.append(portraits(biome, state));
+        tiles.append(tile);
+      }
+      if (compact) {
+        for (const biome of biomes.filter(b => b.order <= current).reverse()) {
+          const row = element('section', 'saga-row' + (biome.order === current ? ' is-current' : ''));
+          row.append(element('h3', '', biome.name), portraits(biome, state)); details.append(row);
         }
-        header.append(element('h2', '', biome.order + ' · ' + biome.name), checkbox('visit', biome.id, t('Visited'), state.visited.includes(biome.id)));
-        section.append(header);
-        for (const boss of biome.bosses) section.append(creatureCard(boss, biome, 'Boss', state));
-        for (const boss of biome.minibosses) section.append(creatureCard(boss, biome, 'Miniboss', state));
-        if (biome.milestones.length) {
-          const group = element('div', 'milestones');
-          group.append(element('h3', '', t('Key drops')));
-          const list = element('div', 'milestone-list');
-          for (const value of biome.milestones) {
-            const label = checkbox('milestone', value.id, value.name, state.milestones[value.id] === true);
-            label.classList.add('milestone');
-            const img = image(value);
-            if (img) label.insertBefore(img, label.lastChild);
-            list.append(label);
+      } else {
+        details.append(element('h2', '', t('Next up')));
+        const biome = biomes.find(b => b.order <= current && b.bosses.some(boss => !state.defeated[boss.id]));
+        const boss = biome?.bosses.find(b => !state.defeated[b.id]);
+        if (boss) {
+          const card = element('div', 'saga-next-card');
+          if (boss.portrait) card.append(image(boss.portrait));
+          const body = element('div'); body.append(element('h3', '', boss.name));
+          if (boss.summon) body.append(element('p', 'saga-summon', t('Summon: {items}', { items: boss.summon })));
+          const links = element('div', 'saga-links');
+          for (const [label, url] of [['Bestiary', '/bestiary/#c=' + encodeURIComponent(boss.id)], ['Expedition', '/expedition/#boss=' + encodeURIComponent(boss.id)], ['Damage Calculator', '/damage-calculator/?' + new URLSearchParams({ biome: biome.id, target: boss.id })]]) {
+            const link = element('a', '', label); link.href = url; links.append(link);
           }
-          group.append(list); section.append(group);
-        }
-        biomeContainer.append(section);
+          body.append(links); card.append(body); details.append(card);
+        } else details.append(element('p', '', t(bosses.every(b => state.defeated[b.id]) ? 'Saga complete' : 'Travel on — move the slider when you reach the next biome.')));
       }
-      if (focusKey) {
-        const targetKey = focusKey.startsWith('reveal:') ? focusKey.replace('reveal:', 'visit:') : focusKey;
-        [...biomeContainer.querySelectorAll('[data-key]')].find(node => node.dataset.key === targetKey)?.focus({ preventScroll: true });
-      }
+      preview(current);
+      viewport.scrollLeft = previousScroll;
+      if (focusKey) [...container.querySelectorAll('[data-key]')].find(node => node.dataset.key === focusKey)?.focus({ preventScroll: true });
     }
-
     const off = P.onChange(update);
     const offLanguage = globalThis.VCI18n?.onChange(update);
-    const mounted = { update, clearReveals() { temporaryReveals.clear(); }, destroy() { off(); offLanguage?.(); mounts.delete(container); } };
+    const mounted = { update, destroy() { off(); offLanguage?.(); clearTimeout(timer); mounts.delete(container); } };
     mounts.set(container, mounted);
-    update();
+    update(); scrollTo(P.reach(biomes));
     return mounted;
   }
   const api = { render, locale, t: translate, tn: translateNumber, messages: null };

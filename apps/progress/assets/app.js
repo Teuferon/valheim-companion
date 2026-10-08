@@ -1,4 +1,4 @@
-/* Per-biome progress checklist. Game names always use the shared naming API. */
+/* Full Saga tracker: sharing, imports and reset. */
 (function () {
   'use strict';
   const P = globalThis.VCProgress;
@@ -9,7 +9,7 @@
   let pendingHash = null;
   let statusKey = '';
   const dialog = find('action-dialog');
-  const checklist = globalThis.VCProgressUI.render(document.querySelector('main'), globalThis.VP_DATA, { compact: false });
+  const checklist = globalThis.VCProgressUI.render(find('saga'), globalThis.VP_DATA, { compact: false });
   function render() {
     I.apply();
     const picker = document.querySelector('.vc-language-picker');
@@ -40,7 +40,7 @@
   dialog.addEventListener('close', () => {
     if (dialog.returnValue === 'accept') {
       if (pendingAction === 'reset') {
-        checklist.clearReveals(); P.reset(); statusKey = 'Progress reset.';
+        P.reset(); statusKey = 'Progress reset.';
       } else if (pendingAction === 'import') {
         const success = P.importFromUrl(pendingHash);
         statusKey = success ? 'Progress imported.' : 'Invalid progress URL.';

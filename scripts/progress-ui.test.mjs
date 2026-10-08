@@ -5,42 +5,73 @@ import { readFileSync } from 'node:fs';
 
 const read = path => readFileSync(new URL('../' + path, import.meta.url), 'utf8');
 
-test('shared checklist renders summary, locks spoilers, and reacts to checkbox changes', () => {
+const textTree = node => [node.textContent, ...Object.values(node.attrs), ...node.children.map(textTree)].join(' ');
+const key = (container, id) => container.querySelectorAll('[data-key]').find(node => node.dataset.key === id);
+test('Saga hides spoilers, shares reach controls, preserves focus and offers the next boss', () => {
   const { context: c, document: d, data } = fixture();
   const container = d.createElement('main'); d.body.append(container);
-  const mounted = c.VCProgressUI.render(container, data, { compact: false });
-  assert.equal(container.querySelector('.summary-text').textContent, '1 / 9 biome revealed · 0 bosses defeated');
-  assert.equal(container.querySelectorAll('.biome').length, 9);
-  assert.equal(container.querySelectorAll('.locked').length, 8);
-  assert.ok(container.querySelectorAll('h2').some(node => node.textContent === '🔒 Biome 2'));
-  assert.ok(!container.querySelectorAll('h3').some(node => node.textContent === 'The Elder'));
-  const key = id => container.querySelectorAll('[data-key]').find(node => node.dataset.key === id);
-  key('defeat:eikthyr').checked = true; key('defeat:eikthyr').dispatch('change');
+  const mounted = c.VCProgressUI.render(container, data);
+  assert.equal(container.querySelector('.summary-text').textContent, 'Biome 1 of 9 · 0 of 8 bosses · 0 of 4 minibosses');
+  assert.equal(container.querySelectorAll('.saga-tile').length, 9);
+  assert.equal(container.querySelectorAll('.is-reached').length, 1);
+  assert.equal(container.querySelectorAll('.is-locked').length, 8);
+  for (const biome of data.biomes.slice(1)) for (const boss of [...biome.bosses, ...biome.minibosses]) assert.ok(!textTree(container).includes(boss.name), boss.name);
+  assert.ok(textTree(container.querySelector('.saga-next')).includes('Eikthyr'));
+  assert.equal(container.querySelectorAll('input[type=checkbox]').length, 0);
+  key(container, 'defeat:eikthyr').focus(); key(container, 'defeat:eikthyr').dispatch('click');
   assert.equal(c.VCProgress.get().defeated.eikthyr, true);
-  assert.equal(container.querySelectorAll('.locked').length, 7);
-  assert.equal(d.activeElement, null);
-  key('milestone:hard-antler').checked = true; key('milestone:hard-antler').dispatch('change');
-  assert.equal(c.VCProgress.get().milestones['hard-antler'], true);
-  key('visit:black-forest').checked = true; key('visit:black-forest').dispatch('change');
-  assert.ok(c.VCProgress.get().visited.includes('black-forest'));
-  key('reveal:swamp').focus(); key('reveal:swamp').dispatch('click');
-  assert.equal(d.activeElement.dataset.key, 'visit:swamp');
-  assert.ok(c.VCProgress.revealedBiomes(data.biomes).includes('swamp'));
+  assert.equal(c.VCProgress.reach(data.biomes), 2);
+  assert.equal(container.querySelectorAll('.is-reached').length, 2);
+  assert.equal(d.activeElement.dataset.key, 'defeat:eikthyr');
+  assert.equal(d.activeElement.getAttribute('aria-pressed'), 'true');
+  assert.ok(textTree(container.querySelector('.saga-next')).includes('The Elder'));
+  const slider = key(container, 'reach'); slider.focus(); slider.value = 6; slider.dispatch('input');
+  assert.equal(c.VCProgress.reach(data.biomes), 2, 'preview must not save');
+  assert.ok(!slider.getAttribute('aria-valuetext').includes('Plains'));
+  slider.dispatch('change');
+  assert.equal(c.VCProgress.get().visited.length, 6);
+  assert.equal(c.VCProgress.reach(data.biomes), 6);
+  assert.equal(d.activeElement.dataset.key, 'reach');
+  slider.value = 1; slider.dispatch('change');
+  assert.equal(Number(slider.value), 2);
+  assert.equal(c.VCProgress.reach(data.biomes), 2);
+  assert.equal(container.querySelector('.saga-hint').textContent, 'Unmark bosses to go back');
+  key(container, 'biome:7').dispatch('click');
+  assert.equal(c.VCProgress.reach(data.biomes), 7);
+  key(container, 'biome:1').dispatch('click');
+  assert.equal(c.VCProgress.reach(data.biomes), 7, 'reached tiles do not lower reach');
   assert.equal(c.VCProgressUI.render(container, data), mounted);
   mounted.destroy();
 });
 
-test('compact UI uses host-independent links and images, English game names and React locale fallback', () => {
+test('legacy reveals never expose portraits or change reach; compact rows show current first', () => {
   const { context: c, document: d, data, values } = fixture('/signs/');
+  values.set('vc.openBiomes', '["plains"]');
+  const page = d.createElement('main'); c.VCProgressUI.render(page, data);
+  assert.ok(textTree(page).includes('Plains'));
+  assert.ok(!textTree(page).includes('Yagluth'));
+  assert.equal(c.VCProgress.reach(data.biomes), 1);
   values.set('vc.language', 'cs'); c.VCProgress.defeat('eikthyr', true);
-  data.biomes[0].names = { cs: 'not the game name' };
-  const container = d.createElement('div');
-  c.VCProgressUI.render(container, data, { compact: true });
-  assert.ok(container.classList.contains('vc-progress-compact'));
-  assert.equal(container.querySelector('h2').textContent, '1 · Meadows');
-  assert.equal(container.querySelector('a').href, '/bestiary/#c=eikthyr');
-  assert.ok(container.querySelector('img').src.startsWith('/progress/'));
-  assert.ok(container.querySelectorAll('span').some(node => node.textContent === 'Poražen'));
+  const container = d.createElement('div'); c.VCProgressUI.render(container, data, { compact: true });
+  assert.equal(container.querySelectorAll('.saga-row').length, 2);
+  assert.equal(container.querySelector('h3').textContent, 'Black Forest');
+  assert.ok(!textTree(container).includes('Plains'));
+  assert.ok(!textTree(container).includes('Yagluth'));
+  assert.ok(container.querySelector('img').src.startsWith('/progress/img/'));
+  assert.equal(key(container, 'defeat:eikthyr').getAttribute('aria-label'), 'Eikthyr · Poražen');
+});
+
+test('Next up handles travel, completion and host-independent links', () => {
+  const { context: c, document: d, data } = fixture();
+  const container = d.createElement('div'); c.VCProgressUI.render(container, data);
+  const links = container.querySelectorAll('a');
+  assert.deepEqual(links.map(x => x.href), ['/bestiary/#c=eikthyr', '/expedition/#boss=eikthyr', '/damage-calculator/?biome=meadows&target=eikthyr']);
+  // A visited bossless biome with no eligible boss exercises the travel message.
+  const travel = d.createElement('div');
+  c.VCProgressUI.render(travel, { biomes: data.biomes.map((b, i) => i === 0 ? { ...b, bosses: [] } : b) });
+  assert.ok(textTree(travel).includes('Travel on'));
+  for (const b of data.biomes) for (const boss of b.bosses) c.VCProgress.defeat(boss.id, true);
+  assert.ok(textTree(container.querySelector('.saga-next')).includes('Saga complete'));
 });
 
 test('shared checklist catalog covers all locales and preserves placeholders', () => {
