@@ -41,6 +41,7 @@
     try { return JSON.parse(localStorage.getItem('vp.loadout')); } catch { return null; }
   }
   let state = VPPlanner.decode(location.hash, data) || VPPlanner.sanitize(readStored(), data);
+  const highlightTimers = new WeakMap();
   function focusItem(id) {
     const target = VPPlanner.itemTarget(id, data, VCProgress.revealedBiomes(data.biomes));
     const node = target.kind === 'card'
@@ -51,7 +52,8 @@
     if (details) details.open = true;
     node.scrollIntoView({ block: 'center' });
     node.classList.add('deep-link-highlight');
-    setTimeout(() => node.classList.remove('deep-link-highlight'), 2200);
+    clearTimeout(highlightTimers.get(node));
+    highlightTimers.set(node, setTimeout(() => node.classList.remove('deep-link-highlight'), 2200));
   }
   function focusHashItem() {
     if (!location.hash.startsWith('#item=')) return;
@@ -227,7 +229,7 @@
     const hours = el('label', 'hours-control');
     const hoursLabel = el('span', '', t('Hours of play'));
     const output = el('output', '', number(state.hours)); output.htmlFor = 'hours';
-    const range = el('input'); range.type = 'range'; range.id = 'hours'; range.min = .5; range.max = 10; range.step = .5; range.value = state.hours;
+    const range = el('input'); range.type = 'range'; range.id = 'hours'; range.min = .25; range.max = 10; range.step = .25; range.value = state.hours;
     range.setAttribute('aria-label', t('Hours of play'));
     range.addEventListener('input', () => { state.hours = Number(range.value); renderLoadout(); });
     hours.append(hoursLabel, output, range);
@@ -496,6 +498,7 @@
     }
     if (picks.length) container.append(grid);
     else container.append(el('p', 'hint', t('No matching meads unlocked.')));
+    focusHashItem();
     renderTips();
   }
   function tipRow(text, source) {
@@ -565,6 +568,7 @@
   document.getElementById('focus').addEventListener('change', event => { focus = event.target.value; renderCatalog(); });
   VCI18n.onChange(render);
   VCProgress.onChange(update);
+  window.addEventListener('load', focusHashItem);
   window.addEventListener('hashchange', () => {
     if (location.hash.startsWith('#item=')) { focusHashItem(); return; }
     const imported = VPPlanner.decode(location.hash, data);

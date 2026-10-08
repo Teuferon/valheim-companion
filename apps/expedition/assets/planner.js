@@ -130,6 +130,18 @@
     return interval > 0 ? Math.ceil(minutes * 60 / interval) + 1 : 1;
   }
 
+  function provisionsLoadout(prep, ctx = {}) {
+    const minutes = Math.round(clamp(prep.minutes, 15, 240, 30) / 15) * 15;
+    return {
+      foods: (ctx.foods || []).map(food => food.id),
+      hours: minutes / 60,
+      meads: (ctx.meads || []).map(entry => {
+        const mead = entry.mead || entry;
+        return { id: mead.id, mode: 'demand', quantity: meadQuantity(mead, minutes) };
+      }),
+    };
+  }
+
   function packingList(prep, ctx = {}) {
     const minutes = Number.isFinite(prep.minutes) && prep.minutes > 0 ? Math.min(240, prep.minutes) : 30;
     const lines = new Map();
@@ -175,7 +187,7 @@
       auto: source.auto !== false,
       boss: bosses(data).some(b => b.id === source.boss) ? source.boss : null,
       players: clamp(source.players, 1, 5, 1),
-      minutes: clamp(source.minutes, 5, 240, 30),
+      minutes: Math.round(clamp(source.minutes, 15, 240, 30) / 15) * 15,
       portal: source.portal === true,
       checked: Array.isArray(source.checked)
         ? [...new Set(source.checked.filter(id =>
@@ -218,6 +230,7 @@
     afterDefeating,
     incomingDamage,
     packingList,
+    provisionsLoadout,
     encodePrep,
     decodePrep,
     sanitize,

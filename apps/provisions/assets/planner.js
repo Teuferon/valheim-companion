@@ -26,7 +26,7 @@
       seen.add(line.id);
       return true;
     }).slice(0, 4).map(line => ({ id: line.id, mode: line.mode === 'continuous' ? 'continuous' : 'demand', quantity: Math.floor(clamp(line.quantity, 0, 999, 3)) }));
-    return { version: 1, foods, meads, hours: Math.round(clamp(source.hours, .5, 10, 2) * 2) / 2,
+    return { version: 1, foods, meads, hours: Math.round(clamp(source.hours, .25, 10, 2) * 4) / 4,
       breakdown: source.breakdown === true, cauldronLevel: Math.floor(clamp(source.cauldronLevel, 0, 7, 1)) };
   }
   function calculate(value, data) {
