@@ -71,7 +71,7 @@ try {
                 throw new Error('Progress trigger overlaps the consent banner');
               }
               trigger.click();
-              for (let attempt = 0; !document.querySelector('.vc-progress-panel .biome'); attempt++) {
+              for (let attempt = 0; !document.querySelector('.vc-progress-panel .saga-row'); attempt++) {
                 if (attempt === 100) throw new Error('Progress drawer did not load');
                 await new Promise(resolve => setTimeout(resolve, 50));
               }
@@ -79,7 +79,10 @@ try {
               await new Promise(resolve => setTimeout(resolve, 350));
               await document.fonts.ready;
             })();`);
-          } else if (page === '/progress/' && await evaluate(cdp, `return !!document.querySelector('.vc-progress-trigger');`)) {
+          } else if (page === '/progress/') {
+            await evaluate(cdp, `VCProgress.setReach(9, VP_DATA.biomes);`);
+          }
+          if (page === '/progress/' && await evaluate(cdp, `return !!document.querySelector('.vc-progress-trigger');`)) {
             throw new Error('Full Progress page must not show a drawer trigger');
           }
           const result = await evaluate(cdp, `

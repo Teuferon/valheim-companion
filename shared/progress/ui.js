@@ -56,9 +56,8 @@
     container.append(summary, viewport, caption, hint, details);
     track.style.setProperty('--saga-count', biomes.length);
     function scrollTo(order) {
-      const tile = tiles.children.find ? tiles.children.find(node => Number(node.dataset.order) === order)
-        : [...tiles.children].find(node => Number(node.dataset.order) === order);
-      if (tile && viewport.scrollTo) viewport.scrollTo({ left: tile.offsetLeft - viewport.offsetLeft - (viewport.clientWidth - tile.offsetWidth) / 2, behavior: 'instant' });
+      const tile = [...tiles.children].find(node => Number(node.dataset.order) === order);
+      if (tile && viewport.scrollTo) viewport.scrollTo({ left: tile.offsetLeft - (viewport.clientWidth - tile.offsetWidth) / 2, behavior: 'instant' });
     }
     function portrait(value, small, state) {
       const done = state.defeated[value.id] === true;

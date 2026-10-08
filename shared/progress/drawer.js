@@ -91,6 +91,7 @@
     if (!trigger || opened) return;
     opened = true;
     overlay.hidden = false;
+    panel.scrollTop = 0;
     trigger.setAttribute('aria-expanded', 'true');
     overflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';

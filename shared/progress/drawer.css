@@ -70,7 +70,7 @@
 }
 .vc-progress-ui * { box-sizing: border-box; }
 .vc-progress-ui .summary-text { color: var(--saga-muted); margin: 0 0 22px; font-size: .9rem; line-height: 1.7; }
-.vc-progress-ui .saga-viewport { overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-color: #79633e #171a1d; scrollbar-width: thin; padding: 8px 4px 0; position: relative; }
+.vc-progress-ui .saga-viewport { direction: ltr; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-color: #79633e #171a1d; scrollbar-width: thin; padding: 8px 4px 0; position: relative; }
 .vc-progress-ui .saga-track { width: 100%; min-width: 0; }
 .vc-progress-ui .saga-tiles, .vc-progress-ui .saga-stops { display: grid; grid-template-columns: repeat(var(--saga-count), minmax(0, 1fr)); gap: var(--saga-gap); }
 .vc-progress-ui .saga-tile {

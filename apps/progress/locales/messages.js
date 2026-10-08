@@ -135,21 +135,6 @@ globalThis.VC_MESSAGES = {
     "ja": "データ：",
     "id": "Data:"
   },
-  "Your journey through Valheim, one discovery at a time.": {
-    "en": "Your journey through Valheim, one discovery at a time.",
-    "cs": "Tvá cesta Valheimem, jeden objev za druhým.",
-    "de": "Deine Reise durch Valheim, eine Entdeckung nach der anderen.",
-    "es": "Tu viaje por Valheim, un descubrimiento a la vez.",
-    "fr": "Votre voyage dans Valheim, une découverte à la fois.",
-    "pt": "Sua jornada por Valheim, uma descoberta de cada vez.",
-    "zh": "探索英灵神殿，一步一个新发现。",
-    "hi": "वाल्हेम में आपकी यात्रा, एक समय में एक नई खोज।",
-    "ar": "رحلتك في فالهايم، اكتشافًا تلو الآخر.",
-    "bn": "ভালহেইমে আপনার যাত্রা, একবারে একটি নতুন আবিষ্কার।",
-    "ru": "Ваш путь по Вальхейму, открытие за открытием.",
-    "ja": "Valheimの旅、一つずつ新たな発見を。",
-    "id": "Perjalananmu di Valheim, satu penemuan setiap saat."
-  },
   "Share / transfer progress": {
     "en": "Share / transfer progress",
     "cs": "Sdílet / přenést postup",
@@ -971,5 +956,20 @@ globalThis.VC_MESSAGES = {
     "id": {
       "other": "⛓ Progress {count}/{total}"
     }
+  },
+  "Move the slider as you explore. Select a portrait to mark a victory.": {
+    "en": "Move the slider as you explore. Select a portrait to mark a victory.",
+    "cs": "Posouvej jezdec, jak objevuješ svět. Kliknutím na portrét označ vítězství.",
+    "de": "Bewege den Regler beim Erkunden. Wähle ein Porträt, um einen Sieg zu markieren.",
+    "es": "Mueve el control al explorar. Selecciona un retrato para marcar una victoria.",
+    "fr": "Déplacez le curseur au fil de vos découvertes. Sélectionnez un portrait pour marquer une victoire.",
+    "pt": "Mova o controle conforme explora. Selecione um retrato para marcar uma vitória.",
+    "zh": "探索时移动滑块。点击头像标记胜利。",
+    "hi": "खोज करते हुए स्लाइडर खिसकाएँ। जीत दर्ज करने के लिए चित्र चुनें।",
+    "ar": "حرّك المؤشر أثناء الاستكشاف. اختر صورة لتسجيل انتصار.",
+    "bn": "অন্বেষণের সাথে স্লাইডার সরাও। জয় চিহ্নিত করতে প্রতিকৃতি বেছে নাও।",
+    "ru": "Передвигай ползунок по мере исследования мира. Нажми на портрет, чтобы отметить победу.",
+    "ja": "探索に合わせてスライダーを動かしましょう。ポートレートを選ぶと勝利を記録できます。",
+    "id": "Geser pengatur saat menjelajah. Pilih potret untuk menandai kemenangan."
   }
 };

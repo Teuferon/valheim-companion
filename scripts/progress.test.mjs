@@ -170,3 +170,23 @@ test('Saga reach follows bosses and visits, ignoring manual spoilers', () => {
   assert.deepEqual(plain(target.get().milestones), { forge: true });
   off();
 });
+
+test('Saga image paths are local WebP assets within both download budgets', () => {
+  const context = vm.createContext({ window: {} });
+  vm.runInContext(readFileSync(new URL('../apps/progress/data/data.js', import.meta.url), 'utf8'), context);
+  let drawerBytes = 0, artBytes = 0;
+  const size = file => {
+    assert.match(file, /^img\/(biomes|bosses)\/[a-z-]+\.webp$/);
+    const bytes = readFileSync(new URL('../apps/progress/' + file, import.meta.url));
+    assert.equal(bytes.toString('ascii', 0, 4), 'RIFF');
+    assert.equal(bytes.toString('ascii', 8, 12), 'WEBP');
+    return bytes.length;
+  };
+  for (const biome of context.window.VP_DATA.biomes) {
+    artBytes += size(biome.art);
+    drawerBytes += size(biome.thumb);
+    for (const boss of [...biome.bosses, ...biome.minibosses]) drawerBytes += size(boss.portrait);
+  }
+  assert.ok(drawerBytes <= 250000, `${drawerBytes} drawer bytes`);
+  assert.ok(artBytes <= 500000, `${artBytes} artwork bytes`);
+});
