@@ -517,3 +517,13 @@ Nová sekce `/expedition/` (`apps/expedition/`, statická, vanilla JS jako Comfo
 - **Vazby:** karta v rozcestníku za Comfort Planner (štítek „Follows your progress“), „Unlocks spoilers in:“ na kartě Progress, hledání v rozcestníku (bossové → `/expedition/#boss=<id>`, události → `/expedition/#raids`), na kartě bosse v Bestiary odkaz „Prepare for this fight → Expedition“.
 - URL: `/expedition/#boss=<id>`, `#raids`, sdílení přípravy `#x=<base64url>` (boss, počet hráčů, délka boje, zaškrtnuté položky). Uložení `vx.prep`.
 - Název nástroje **Expedition** se nepřekládá (doplnění zásady v § 20).
+
+## 26. Progress Tracker: Saga — dlaždice biomů a slider (VC-38, Pavel 8. 10. 2026)
+
+> **Pavel 8. 10. 2026:** *„je to takové těžko pochopitelné a hodně klikání, chtěl bych to udělat nějak přehlednější a jasnější, třeba jen tím, že budou hezky zobrazené biomy a v nich bossové a ty přes to budeš přejíždět nějakým pěkným grafickým sliderem … dozaškrtávat si tam budeš jen zabití bossů a minibossů."*
+
+- **Formát `vc.progress` se nemění** (verze 1, `defeated`, `visited`, `milestones`). `revealedBiomes()` se chová stejně, ostatní nástroje se nemění.
+- **Dosah („kam jsem došel“)** = jedno číslo 1–9: nejvyšší `order` z `visited` a z biomů odemčených poraženými bossy (bez `vc.openBiomes`). `setReach(n)` zapíše `visited` = všechny biomy s `order ≤ n`. Dosah nejde stáhnout pod minimum dané poraženými bossy (slider se zastaví, nápověda „Unmark bosses to go back“). Poražený boss v biomu za dosahem dosah posune.
+- **Ovládání:** jen tři věci. ① **slider** pod řadou biomů (nativní `input type=range`, klávesnice funguje), ② **klik na dlaždici** biomu = „došel jsem sem“ (totéž co slider), ③ **klik na portrét** bosse nebo minibosse = poražen / neporažen (`button aria-pressed`). Pryč jsou checkboxy „Visited“, „Key drops“ (stav `milestones` zůstává kvůli kompatibilitě, jen se neukazuje) a tlačítka „Reveal“ (nahrazuje je slider).
+- **Vzhled:** dlaždice s artworkem biomu (zmenšeniny z `apps/bestiary/img/biomes/`), číslo biomu, název, portréty bossů (velké) a minibossů (menší). Neporažený = odbarvený, poražený = barevný se zlatým okrajem a pečetí ✓. Biom za dosahem = tmavý, rozmazaný artwork, 🔒 „Biome N“, bez názvu a portrétů (spoiler). Pod řadou karta **Next up** (první neporažený boss v dosahu: vyvolání, odkazy Bestiary / Expedition / Damage Calculator), souhrn „Biome 4 of 9 · 3 of 8 bosses · 1 of 4 minibosses“, sdílení a reset.
+- **Panel (overlay)** používá stejný `VCProgressUI.render(…, { compact: true })`: souhrn, malá řada 9 čipů biomů se sliderem a pod ní dosažené biomy (aktuální nahoře) s portréty k odškrtnutí, odkaz na plný tracker.
