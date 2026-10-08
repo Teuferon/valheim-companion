@@ -1,7 +1,7 @@
 # Stav projektu Valheim Companion
 
 > **Živý dokument.** Orchestrátor ho aktualizuje po každé přejímce, merge nebo změně fronty. Nová session začíná tady.
-> Poslední aktualizace: **7. 10. 2026**
+> Poslední aktualizace: **8. 10. 2026**
 
 - Web: https://valheim-companion.teuferon.click (EasyPanel, deploy webhookem při každém pushi do repa)
 - Repo: https://github.com/pawlig/valheim-companion (public), lokálně `~/gameroot/valheim-units`
@@ -67,6 +67,7 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | VC-34 | Provisions: plánovač podle činnosti (top 3 kombinace, medoviny podle biomu/bosse, 13 ověřených tipů) | Sol | ✅ |
 | VC-35 | **Comfort Planner** `/comfort/` (ANALYZA § 24): comfort, Rested, Best I can build, Next upgrades, nákupní seznam | Sol | ✅ (+ oprava: celé dávky výroby ve sdíleném košíku, záložka Progress nepřekrývá obsah) |
 | VC-36 | **Expedition** `/expedition/` (ANALYZA § 25): příprava na bosse (zbraně, obrana, jídlo, balicí a nákupní seznam) a nájezdy podle postupu | Sol | ✅ (po vrácení: auto výběr bosse, počet medovin podle cooldownu, bundly, formát) |
+| VC-37 | oprava 5 chyb z reportu Teuferona 8. 10.: biomy jídel v hledání, duplicitní brnění, deep link suroviny ve Smithy, `#item=` v Provisions, 15min boj z Expedition → Provisions (čtvrthodiny) | Sol | 🔄 běží (worktree `valheim-units-CS`, větev `prace/VC-37`, dashboard #135) |
 
 ### Po frontě
 Pracovníci od 6. 10.: agy je vyčerpaný (týden 4 %, obnova 8. 10.), práci dělá **Codex Sol**. Pavel 6. 10. schválil pořadí: překlady (VC-16 až VC-18), **vylepšení stávajících nástrojů** (VC-23 až VC-27), potom **Progress Tracker** a **Provisions** (VC-19 až VC-22). Další kandidáti z [`NAVRHY-NASTROJU.md`](NAVRHY-NASTROJU.md): **Comfort Planner schválen 6. 10. (VC-35)**, **Expedition schválen 7. 10. (VC-36)**. Trader Ledger, Fishing a Taming zatím schválené nejsou.
