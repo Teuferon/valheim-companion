@@ -10,6 +10,7 @@ export function buildProgressData() {
   const items = [...read('data/materials.json'), ...read('data/items.json')];
   const creature = value => ({ id: value.id, name: value.name, names: value.names ?? {},
     image: value.stars?.[0]?.image ? '../bestiary/' + value.stars[0].image : null,
+    portrait: 'img/bosses/' + value.id + '.webp',
     summon: value.summon, drops: value.drops ?? [] });
   const biomes = read('data/biomes.json').sort((a, b) => a.order - b.order).map(biome => {
     const bosses = creatures.filter(value => value.kind === 'boss' && biome.creatures.boss.includes(value.id));
@@ -22,6 +23,7 @@ export function buildProgressData() {
       return { id, name, names: item?.names ?? {}, image, bossId: boss.id, drop };
     }));
     return { id: biome.id, name: biome.name, names: biome.names ?? {}, order: biome.order,
+      art: 'img/biomes/' + biome.id + '.webp', thumb: 'img/biomes/' + biome.id + '-s.webp',
       bosses: bosses.map(creature), minibosses: minibosses.map(creature), milestones };
   });
   const output = path.join(root, 'apps/progress/data');
