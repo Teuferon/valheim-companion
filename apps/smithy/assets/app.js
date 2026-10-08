@@ -277,28 +277,28 @@
   function formatMaterialSources(itemData, data, { openBiomes, showAll, breakdown = false }) {
     const biomesByOrder = new Map(data.biomes.map(biome => [biome.id, biome]));
     const sourceOrder = src => Math.min(...(src.biomes || []).map(id => biomesByOrder.get(id)?.order ?? 99), 99);
-      const rawSources = [...(itemData?.sources || [])].sort((a, b) => sourceOrder(a) - sourceOrder(b));
-      const visibleSources = rawSources.filter(src => src.kind !== 'creature' || showAll || (src.biomes || []).some(id => openBiomes.has(id)));
-      let formattedSources = [];
-      if (itemData?.recipe && !breakdown) {
-        formattedSources = [{ text: t('Crafted at {station}', { station: stationName(itemData.recipe.station) }), kind: 'station', locked: false }];
-      } else if (visibleSources.length) {
-        formattedSources = visibleSources.map(src => {
-          if (src.kind !== 'creature') return { text: src.text, kind: src.kind || 'other', locked: false };
-          const visibleBiomes = (src.biomes || []).filter(id => showAll || openBiomes.has(id))
-            .sort((a, b) => (biomesByOrder.get(a)?.order ?? 99) - (biomesByOrder.get(b)?.order ?? 99));
-          const creature = data.creatures?.[src.creatureId];
-          const sourceName = creature ? entityName(creature) : src.text;
-          const biomeNames = visibleBiomes.map(id => biomeName(biomesByOrder.get(id))).join(', ');
-          return { text: sourceName + (biomeNames ? ' (' + biomeNames + ')' : ''), kind: 'creature', locked: false };
-        });
-      } else if (rawSources.length) {
-        const biomeId = [...(rawSources[0].biomes || [])].sort((a, b) => (biomesByOrder.get(a)?.order ?? 99) - (biomesByOrder.get(b)?.order ?? 99))[0];
-        formattedSources = [{
-          text: t('🔒 a creature from the {biome}', { biome: biomeName(biomesByOrder.get(biomeId)) }),
-          kind: 'creature', locked: true, biomeId,
-        }];
-      }
+    const rawSources = [...(itemData?.sources || [])].sort((a, b) => sourceOrder(a) - sourceOrder(b));
+    const visibleSources = rawSources.filter(src => src.kind !== 'creature' || showAll || (src.biomes || []).some(id => openBiomes.has(id)));
+    let formattedSources = [];
+    if (itemData?.recipe && !breakdown) {
+      formattedSources = [{ text: t('Crafted at {station}', { station: stationName(itemData.recipe.station) }), kind: 'station', locked: false }];
+    } else if (visibleSources.length) {
+      formattedSources = visibleSources.map(src => {
+        if (src.kind !== 'creature') return { text: src.text, kind: src.kind || 'other', locked: false };
+        const visibleBiomes = (src.biomes || []).filter(id => showAll || openBiomes.has(id))
+          .sort((a, b) => (biomesByOrder.get(a)?.order ?? 99) - (biomesByOrder.get(b)?.order ?? 99));
+        const creature = data.creatures?.[src.creatureId];
+        const sourceName = creature ? entityName(creature) : src.text;
+        const biomeNames = visibleBiomes.map(id => biomeName(biomesByOrder.get(id))).join(', ');
+        return { text: sourceName + (biomeNames ? ' (' + biomeNames + ')' : ''), kind: 'creature', locked: false };
+      });
+    } else if (rawSources.length) {
+      const biomeId = [...(rawSources[0].biomes || [])].sort((a, b) => (biomesByOrder.get(a)?.order ?? 99) - (biomesByOrder.get(b)?.order ?? 99))[0];
+      formattedSources = [{
+        text: t('🔒 a creature from the {biome}', { biome: biomeName(biomesByOrder.get(biomeId)) }),
+        kind: 'creature', locked: true, biomeId,
+      }];
+    }
     return formattedSources;
   }
 
@@ -2165,7 +2165,8 @@
           const link = el('a', null, use.name); link.href = use.hash;
           row.appendChild(link); list.appendChild(row);
         }
-        card.appendChild(list);
+        if (uses.length) card.appendChild(list);
+        else card.appendChild(el('p', 'material-uses-empty', t('Not used in any Smithy recipe.')));
         if (locked) card.appendChild(el('p', null, tn('{count} more in locked biomes', locked, { count: locked })));
       }
       const close = el('button', 'action-btn', t('Close')); close.type = 'button';

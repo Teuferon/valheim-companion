@@ -6,6 +6,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
+import { hasCraftingCost } from './build-armourer-data.mjs';
 
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_DIR = path.join(REPO_ROOT, 'data');
@@ -80,6 +81,7 @@ export function buildSearchIndex() {
     const weaponsList = Array.isArray(rawWeapons) ? rawWeapons : Object.values(rawWeapons);
     for (const w of weaponsList) {
       if (!w || !w.id || !w.name) continue;
+      if (!hasCraftingCost(w)) continue;
       const b = w.biome || null;
       const o = b ? (biomeOrder[b] || 99) : 99;
       const img = w.image ? `/bestiary/${w.image}` : null;

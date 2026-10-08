@@ -2383,5 +2383,20 @@ globalThis.VC_MESSAGES = {
     "id": {
       "other": "{count} lagi di bioma terkunci"
     }
+  },
+  "Not used in any Smithy recipe.": {
+    "en": "Not used in any Smithy recipe.",
+    "cs": "Nepoužívá se v žádném receptu ve Smithy.",
+    "de": "Wird in keinem Rezept in Smithy verwendet.",
+    "es": "No se usa en ninguna receta de Smithy.",
+    "fr": "Utilisé dans aucune recette de Smithy.",
+    "pt": "Não é usado em nenhuma receita do Smithy.",
+    "zh": "未用于 Smithy 的任何配方。",
+    "hi": "Smithy की किसी भी रेसिपी में उपयोग नहीं होता।",
+    "ar": "لا يُستخدم في أي وصفة في Smithy.",
+    "bn": "Smithy-এর কোনো রেসিপিতে ব্যবহৃত হয় না।",
+    "ru": "Не используется ни в одном рецепте Smithy.",
+    "ja": "Smithy のどのレシピにも使われません。",
+    "id": "Tidak digunakan dalam resep Smithy mana pun."
   }
 };

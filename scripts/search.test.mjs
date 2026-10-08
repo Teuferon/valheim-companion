@@ -223,3 +223,25 @@ test('armor search names are unique and single-piece sets retain the set link', 
   assert.equal(hats.length, 1);
   assert.equal(hats[0].url, '/smithy/#set=yule-hat');
 });
+
+
+test('every Smithy item search link targets visible gear or an item', () => {
+  const index = buildSearchIndex();
+  const context = vm.createContext({});
+  context.window = context;
+  vm.runInContext(readFileSync('apps/smithy/data/data.js', 'utf8'), context);
+  const smithy = context.VA_DATA;
+  const items = JSON.parse(readFileSync('data/items.json', 'utf8'));
+  const targets = new Set([
+    ...smithy.weapons.map(weapon => weapon.id),
+    ...smithy.armor.flatMap(set => set.pieces.map(piece => piece.id)),
+    ...Object.values(items).map(item => item.id),
+  ]);
+  const missing = index.filter(item => item.url.startsWith('/smithy/#item=') &&
+    !targets.has(decodeURIComponent(item.url.split('=')[1])));
+  assert.deepEqual(missing, [], 'Smithy links without a target: ' + JSON.stringify(missing));
+  const visibleWeapons = new Set(smithy.weapons.map(weapon => weapon.id));
+  for (const item of index.filter(item => item.type === 'weapon')) {
+    assert.ok(visibleWeapons.has(decodeURIComponent(item.url.split('=')[1])), item.url);
+  }
+});

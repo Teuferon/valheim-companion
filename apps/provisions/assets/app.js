@@ -41,6 +41,8 @@
     try { return JSON.parse(localStorage.getItem('vp.loadout')); } catch { return null; }
   }
   let state = VPPlanner.decode(location.hash, data) || VPPlanner.sanitize(readStored(), data);
+  let pendingFocus = location.hash.startsWith('#item=');
+  let linkedTarget = null;
   const highlightTimers = new WeakMap();
   function focusItem(id) {
     const target = VPPlanner.itemTarget(id, data, VCProgress.revealedBiomes(data.biomes));
@@ -54,10 +56,15 @@
     node.classList.add('deep-link-highlight');
     clearTimeout(highlightTimers.get(node));
     highlightTimers.set(node, setTimeout(() => node.classList.remove('deep-link-highlight'), 2200));
+    return target;
   }
   function focusHashItem() {
-    if (!location.hash.startsWith('#item=')) return;
-    try { focusItem(decodeURIComponent(location.hash.slice(6))); } catch { /* Ignore malformed links. */ }
+    if (!pendingFocus || !location.hash.startsWith('#item=')) return;
+    if (document.readyState !== 'complete' || (advisorCombos === null && !advisorFailed)) return;
+    try {
+      const target = focusItem(decodeURIComponent(location.hash.slice(6)));
+      if (target) { linkedTarget = target; pendingFocus = false; }
+    } catch { pendingFocus = false; /* Ignore malformed links. */ }
   }
   function save() {
     try { localStorage.setItem('vp.loadout', JSON.stringify(state)); } catch { /* Keep working when storage is unavailable. */ }
@@ -498,8 +505,8 @@
     }
     if (picks.length) container.append(grid);
     else container.append(el('p', 'hint', t('No matching meads unlocked.')));
-    focusHashItem();
     renderTips();
+    focusHashItem();
   }
   function tipRow(text, source) {
     const row = el('li'); row.append(el('span', '', text));
@@ -567,10 +574,21 @@
   VCI18n.mountPicker('#language-picker');
   document.getElementById('focus').addEventListener('change', event => { focus = event.target.value; renderCatalog(); });
   VCI18n.onChange(render);
-  VCProgress.onChange(update);
+  VCProgress.onChange(() => {
+    if (location.hash.startsWith('#item=')) {
+      try {
+        const target = VPPlanner.itemTarget(decodeURIComponent(location.hash.slice(6)), data, VCProgress.revealedBiomes(data.biomes));
+        if (linkedTarget?.kind === 'locked-biome' && target.kind === 'card') pendingFocus = true;
+        linkedTarget = target;
+      } catch { /* Ignore malformed links. */ }
+    }
+    update();
+  });
   window.addEventListener('load', focusHashItem);
   window.addEventListener('hashchange', () => {
-    if (location.hash.startsWith('#item=')) { focusHashItem(); return; }
+    pendingFocus = location.hash.startsWith('#item=');
+    linkedTarget = null;
+    if (pendingFocus) { focusHashItem(); return; }
     const imported = VPPlanner.decode(location.hash, data);
     if (imported) { state = imported; update(); }
   });
