@@ -8,6 +8,13 @@
     return ({ Health: food.health, Stamina: food.stamina, Eitr: food.eitr }[focus] || 0) / total;
   }
   const clamp = (value, low, high, fallback) => typeof value === 'number' && Number.isFinite(value) ? Math.min(high, Math.max(low, value)) : fallback;
+  function itemTarget(id, data, revealedBiomes) {
+    const item = [...data.food, ...data.meads].find(item => item.id === id);
+    if (!item) return { kind: 'none', id: null };
+    const biome = globalThis.VPAdvisor.availableBiome(item);
+    if (biome && !new Set(revealedBiomes).has(biome)) return { kind: 'locked-biome', id: biome };
+    return { kind: 'card', id: item.id };
+  }
   function sanitize(value, data) {
     const source = value && typeof value === 'object' && !Array.isArray(value) ? value : {};
     const foodIds = new Set(data.food.map(item => item.id));
@@ -19,7 +26,7 @@
       seen.add(line.id);
       return true;
     }).slice(0, 4).map(line => ({ id: line.id, mode: line.mode === 'continuous' ? 'continuous' : 'demand', quantity: Math.floor(clamp(line.quantity, 0, 999, 3)) }));
-    return { version: 1, foods, meads, hours: Math.round(clamp(source.hours, .5, 10, 2) * 2) / 2,
+    return { version: 1, foods, meads, hours: Math.round(clamp(source.hours, .25, 10, 2) * 4) / 4,
       breakdown: source.breakdown === true, cauldronLevel: Math.floor(clamp(source.cauldronLevel, 0, 7, 1)) };
   }
   function calculate(value, data) {
@@ -113,5 +120,5 @@
       return sanitize(value, data);
     } catch { return null; }
   }
-  globalThis.VPPlanner = { score, sanitize, calculate, definitions, shopping, encode, decode };
+  globalThis.VPPlanner = { itemTarget, score, sanitize, calculate, definitions, shopping, encode, decode };
 })();

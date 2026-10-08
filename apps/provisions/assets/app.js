@@ -41,6 +41,31 @@
     try { return JSON.parse(localStorage.getItem('vp.loadout')); } catch { return null; }
   }
   let state = VPPlanner.decode(location.hash, data) || VPPlanner.sanitize(readStored(), data);
+  let pendingFocus = location.hash.startsWith('#item=');
+  let linkedTarget = null;
+  const highlightTimers = new WeakMap();
+  function focusItem(id) {
+    const target = VPPlanner.itemTarget(id, data, VCProgress.revealedBiomes(data.biomes));
+    const node = target.kind === 'card'
+      ? [...document.querySelectorAll('[data-item]')].find(node => node.dataset.item === target.id)
+      : target.kind === 'locked-biome' ? document.getElementById(target.id) : null;
+    if (!node) return;
+    const details = node.closest('details');
+    if (details) details.open = true;
+    node.scrollIntoView({ block: 'center' });
+    node.classList.add('deep-link-highlight');
+    clearTimeout(highlightTimers.get(node));
+    highlightTimers.set(node, setTimeout(() => node.classList.remove('deep-link-highlight'), 2200));
+    return target;
+  }
+  function focusHashItem() {
+    if (!pendingFocus || !location.hash.startsWith('#item=')) return;
+    if (document.readyState !== 'complete' || (advisorCombos === null && !advisorFailed)) return;
+    try {
+      const target = focusItem(decodeURIComponent(location.hash.slice(6)));
+      if (target) { linkedTarget = target; pendingFocus = false; }
+    } catch { pendingFocus = false; /* Ignore malformed links. */ }
+  }
   function save() {
     try { localStorage.setItem('vp.loadout', JSON.stringify(state)); } catch { /* Keep working when storage is unavailable. */ }
   }
@@ -53,7 +78,7 @@
     clearTimeout(noticeTimer);
     noticeTimer = setTimeout(() => { notice.textContent = ''; }, 4000);
   }
-  function update() { renderCatalog(); renderLoadout(); renderActivityPlanner(); requestAdvice(); }
+  function update() { renderCatalog(); renderLoadout(); renderActivityPlanner(); requestAdvice(); focusHashItem(); }
   function addFood(food) {
     if (state.foods.includes(food.id) || state.foods.length >= 3) return;
     state.foods.push(food.id);
@@ -211,7 +236,7 @@
     const hours = el('label', 'hours-control');
     const hoursLabel = el('span', '', t('Hours of play'));
     const output = el('output', '', number(state.hours)); output.htmlFor = 'hours';
-    const range = el('input'); range.type = 'range'; range.id = 'hours'; range.min = .5; range.max = 10; range.step = .5; range.value = state.hours;
+    const range = el('input'); range.type = 'range'; range.id = 'hours'; range.min = .25; range.max = 10; range.step = .25; range.value = state.hours;
     range.setAttribute('aria-label', t('Hours of play'));
     range.addEventListener('input', () => { state.hours = Number(range.value); renderLoadout(); });
     hours.append(hoursLabel, output, range);
@@ -481,6 +506,7 @@
     if (picks.length) container.append(grid);
     else container.append(el('p', 'hint', t('No matching meads unlocked.')));
     renderTips();
+    focusHashItem();
   }
   function tipRow(text, source) {
     const row = el('li'); row.append(el('span', '', text));
@@ -548,8 +574,21 @@
   VCI18n.mountPicker('#language-picker');
   document.getElementById('focus').addEventListener('change', event => { focus = event.target.value; renderCatalog(); });
   VCI18n.onChange(render);
-  VCProgress.onChange(update);
+  VCProgress.onChange(() => {
+    if (location.hash.startsWith('#item=')) {
+      try {
+        const target = VPPlanner.itemTarget(decodeURIComponent(location.hash.slice(6)), data, VCProgress.revealedBiomes(data.biomes));
+        if (linkedTarget?.kind === 'locked-biome' && target.kind === 'card') pendingFocus = true;
+        linkedTarget = target;
+      } catch { /* Ignore malformed links. */ }
+    }
+    update();
+  });
+  window.addEventListener('load', focusHashItem);
   window.addEventListener('hashchange', () => {
+    pendingFocus = location.hash.startsWith('#item=');
+    linkedTarget = null;
+    if (pendingFocus) { focusHashItem(); return; }
     const imported = VPPlanner.decode(location.hash, data);
     if (imported) { state = imported; update(); }
   });

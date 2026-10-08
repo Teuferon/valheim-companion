@@ -274,6 +274,34 @@
    * Pure calculation function: calculates raw materials, breakdown,
    * intermediate steps, total armor, total weight and active set bonus.
    */
+  function formatMaterialSources(itemData, data, { openBiomes, showAll, breakdown = false }) {
+    const biomesByOrder = new Map(data.biomes.map(biome => [biome.id, biome]));
+    const sourceOrder = src => Math.min(...(src.biomes || []).map(id => biomesByOrder.get(id)?.order ?? 99), 99);
+    const rawSources = [...(itemData?.sources || [])].sort((a, b) => sourceOrder(a) - sourceOrder(b));
+    const visibleSources = rawSources.filter(src => src.kind !== 'creature' || showAll || (src.biomes || []).some(id => openBiomes.has(id)));
+    let formattedSources = [];
+    if (itemData?.recipe && !breakdown) {
+      formattedSources = [{ text: t('Crafted at {station}', { station: stationName(itemData.recipe.station) }), kind: 'station', locked: false }];
+    } else if (visibleSources.length) {
+      formattedSources = visibleSources.map(src => {
+        if (src.kind !== 'creature') return { text: src.text, kind: src.kind || 'other', locked: false };
+        const visibleBiomes = (src.biomes || []).filter(id => showAll || openBiomes.has(id))
+          .sort((a, b) => (biomesByOrder.get(a)?.order ?? 99) - (biomesByOrder.get(b)?.order ?? 99));
+        const creature = data.creatures?.[src.creatureId];
+        const sourceName = creature ? entityName(creature) : src.text;
+        const biomeNames = visibleBiomes.map(id => biomeName(biomesByOrder.get(id))).join(', ');
+        return { text: sourceName + (biomeNames ? ' (' + biomeNames + ')' : ''), kind: 'creature', locked: false };
+      });
+    } else if (rawSources.length) {
+      const biomeId = [...(rawSources[0].biomes || [])].sort((a, b) => (biomesByOrder.get(a)?.order ?? 99) - (biomesByOrder.get(b)?.order ?? 99))[0];
+      formattedSources = [{
+        text: t('🔒 a creature from the {biome}', { biome: biomeName(biomesByOrder.get(biomeId)) }),
+        kind: 'creature', locked: true, biomeId,
+      }];
+    }
+    return formattedSources;
+  }
+
   function calculateCartMaterials(cart, data, options) {
     const opts = options || {};
     if (!cart || !Array.isArray(cart) || !data) {
@@ -396,29 +424,7 @@
       const name = itemData ? entityName(itemData) : itemId;
       const image = itemData ? itemData.image : null;
 
-      const sourceOrder = src => Math.min(...(src.biomes || []).map(id => biomesByOrder.get(id)?.order ?? 99), 99);
-      const rawSources = [...(itemData?.sources || [])].sort((a, b) => sourceOrder(a) - sourceOrder(b));
-      const visibleSources = rawSources.filter(src => src.kind !== 'creature' || showAll || (src.biomes || []).some(id => openBiomes.has(id)));
-      let formattedSources = [];
-      if (itemData?.recipe && !breakdown) {
-        formattedSources = [{ text: t('Crafted at {station}', { station: stationName(itemData.recipe.station) }), kind: 'station', locked: false }];
-      } else if (visibleSources.length) {
-        formattedSources = visibleSources.map(src => {
-          if (src.kind !== 'creature') return { text: src.text, kind: src.kind || 'other', locked: false };
-          const visibleBiomes = (src.biomes || []).filter(id => showAll || openBiomes.has(id))
-            .sort((a, b) => (biomesByOrder.get(a)?.order ?? 99) - (biomesByOrder.get(b)?.order ?? 99));
-          const creature = data.creatures?.[src.creatureId];
-          const sourceName = creature ? entityName(creature) : src.text;
-          const biomeNames = visibleBiomes.map(id => biomeName(biomesByOrder.get(id))).join(', ');
-          return { text: sourceName + (biomeNames ? ' (' + biomeNames + ')' : ''), kind: 'creature', locked: false };
-        });
-      } else if (rawSources.length) {
-        const biomeId = [...(rawSources[0].biomes || [])].sort((a, b) => (biomesByOrder.get(a)?.order ?? 99) - (biomesByOrder.get(b)?.order ?? 99))[0];
-        formattedSources = [{
-          text: t('🔒 a creature from the {biome}', { biome: biomeName(biomesByOrder.get(biomeId)) }),
-          kind: 'creature', locked: true, biomeId,
-        }];
-      }
+      const formattedSources = formatMaterialSources(itemData, data, { openBiomes, showAll, breakdown });
 
       materials.push({
         item: itemId,
@@ -1839,21 +1845,7 @@
           right.appendChild(tpBadge);
         }
 
-        mat.sources.forEach(src => {
-          const srcClass = src.locked ? 'badge badge-source badge-source-locked' : 'badge badge-source';
-          const srcBadge = el(src.locked && src.biomeId ? 'button' : 'span', srcClass, src.text);
-          if (src.locked && src.biomeId) {
-            srcBadge.type = 'button';
-            srcBadge.addEventListener('click', () => {
-              const open = new Set(getManualOpenBiomes());
-              open.add(src.biomeId);
-              setStoredOpenBiomes([...open]);
-              renderCatalog();
-              renderCart();
-            });
-          }
-          right.appendChild(srcBadge);
-        });
+        renderMaterialSources(right, mat.sources);
 
         row.appendChild(right);
         matsList.appendChild(row);
@@ -2120,7 +2112,73 @@
     renderCatalog();
     renderCart();
 
+    function renderMaterialSources(parent, sources) {
+      sources.forEach(src => {
+          const srcClass = src.locked ? 'badge badge-source badge-source-locked' : 'badge badge-source';
+          const srcBadge = el(src.locked && src.biomeId ? 'button' : 'span', srcClass, src.text);
+          if (src.locked && src.biomeId) {
+            srcBadge.type = 'button';
+            srcBadge.addEventListener('click', () => {
+              const open = new Set(getManualOpenBiomes());
+              open.add(src.biomeId);
+              setStoredOpenBiomes([...open]);
+              renderCatalog();
+              renderCart();
+            });
+          }
+          parent.appendChild(srcBadge);
+        });
+    }
+
+    function showMaterialCard(item) {
+      const openBiomes = new Set(getStoredOpenBiomes());
+      const biome = data.biomes.find(b => b.id === item.biome);
+      const card = el('section', 'material-card deep-link-highlight');
+      card.setAttribute('aria-label', t('Material details'));
+      card.appendChild(el('h2', null, item.name));
+      if (item.biome && !showAll && !openBiomes.has(item.biome)) {
+        card.appendChild(el('p', 'locked-text', t('Biome {order} — open it in the Bestiary or reveal here', { order: biome?.order ?? 99 })));
+      } else {
+        if (item.image) {
+          const image = el('img', 'material-card-image');
+          image.src = item.image; image.alt = ''; image.width = 80; image.height = 80;
+          card.appendChild(image);
+        }
+        card.appendChild(el('p', null, biomeName(biome)));
+        card.appendChild(el('h3', null, t('Sources')));
+        const sources = el('div', 'material-sources');
+        renderMaterialSources(sources, formatMaterialSources(item, data, { openBiomes, showAll }));
+        card.appendChild(sources);
+        card.appendChild(el('h3', null, t('Used in')));
+        const contains = entity => (entity.levels || []).some(level =>
+          (level.materials || []).some(material => material.item === item.id));
+        const uses = [
+          ...(data.armor || []).filter(armor => (armor.pieces || []).some(contains)).map(armor => ({ ...armor, hash: '#set=' + armor.id })),
+          ...(data.weapons || []).filter(contains).map(weapon => ({ ...weapon, hash: '#item=' + weapon.id })),
+        ].sort((a, b) => (data.biomes.find(biome => biome.id === a.biome)?.order ?? 99) -
+          (data.biomes.find(biome => biome.id === b.biome)?.order ?? 99) || a.name.localeCompare(b.name));
+        const list = el('ul', 'material-uses');
+        let locked = 0;
+        for (const use of uses) {
+          if (use.biome && !showAll && !openBiomes.has(use.biome)) { locked++; continue; }
+          const row = el('li');
+          const link = el('a', null, use.name); link.href = use.hash;
+          row.appendChild(link); list.appendChild(row);
+        }
+        if (uses.length) card.appendChild(list);
+        else card.appendChild(el('p', 'material-uses-empty', t('Not used in any Smithy recipe.')));
+        if (locked) card.appendChild(el('p', null, tn('{count} more in locked biomes', locked, { count: locked })));
+      }
+      const close = el('button', 'action-btn', t('Close')); close.type = 'button';
+      close.addEventListener('click', () => { window.location.hash = ''; });
+      card.appendChild(close);
+      const catalog = viewArmor.parentElement;
+      catalog.insertBefore(card, catalog.firstChild);
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
     function handleDeepLink() {
+      document.querySelector('.material-card')?.remove();
       const hash = window.location.hash || '';
       if (!hash) return;
 
@@ -2134,6 +2192,10 @@
 
         switchCatalogTab('armor');
 
+        if (armor.biome && !showAll && !getStoredOpenBiomes().includes(armor.biome)) {
+          document.getElementById('biome-header-' + armor.biome)?.scrollIntoView({ block: 'center' });
+          return;
+        }
         if (armor.biome) {
           const open = new Set(getManualOpenBiomes());
           if (!getStoredOpenBiomes().includes(armor.biome)) {
@@ -2177,6 +2239,10 @@
         if (weapon) {
           switchCatalogTab('weapons');
 
+          if (weapon.biome && !showAll && !getStoredOpenBiomes().includes(weapon.biome)) {
+            document.getElementById('weapons-biome-header-' + weapon.biome)?.scrollIntoView({ block: 'center' });
+            return;
+          }
           if (weapon.biome) {
             const open = new Set(getManualOpenBiomes());
             if (!getStoredOpenBiomes().includes(weapon.biome)) {
@@ -2204,9 +2270,17 @@
         }
 
         const armorWithPiece = (data.armor || []).find(a => a.id === itemId || (a.pieces || []).some(p => p.id === itemId));
+        if (!armorWithPiece && data.items?.[itemId]) {
+          showMaterialCard(data.items[itemId]);
+          return;
+        }
         if (armorWithPiece) {
           switchCatalogTab('armor');
 
+          if (armorWithPiece.biome && !showAll && !getStoredOpenBiomes().includes(armorWithPiece.biome)) {
+            document.getElementById('biome-header-' + armorWithPiece.biome)?.scrollIntoView({ block: 'center' });
+            return;
+          }
           if (armorWithPiece.biome) {
             const open = new Set(getManualOpenBiomes());
             if (!getStoredOpenBiomes().includes(armorWithPiece.biome)) {
@@ -2248,6 +2322,12 @@
       }
     }
 
+    const refreshMaterialLink = () => {
+      const id = window.location.hash.match(/^#item=([a-zA-Z0-9_-]+)$/)?.[1];
+      if (id && data.items?.[id] && document.querySelector('.material-card')) handleDeepLink();
+    };
+    VCProgress.onChange(refreshMaterialLink);
+    VCI18n.onChange(refreshMaterialLink);
     window.addEventListener('hashchange', handleDeepLink);
     handleDeepLink();
   }

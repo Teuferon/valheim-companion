@@ -122,3 +122,14 @@ test('missing healing values never introduce NaN into scores or recommendations'
   assert.ok(top.foods.some(f => f.id === 'serpent-stew'));
   assert.ok(!top.foods.some(f => f.id === 'bukeperries'));
 });
+
+
+test('plans preserve quarter-hours and legacy two-hour links', () => {
+  assert.equal(p.sanitize({ hours: .25 }, data).hours, .25);
+  assert.equal(p.sanitize({ hours: .1 }, data).hours, .25);
+  assert.equal(p.sanitize({ hours: 1.3 }, data).hours, 1.25);
+  assert.equal(p.sanitize({ hours: 99 }, data).hours, 10);
+  Object.assign(context, { TextEncoder, TextDecoder, URLSearchParams, btoa, atob });
+  const legacy = p.encode({ hours: 2, foods: [data.food[0].id], meads: [] }, data);
+  assert.equal(p.decode('#l=' + legacy, data).hours, 2);
+});

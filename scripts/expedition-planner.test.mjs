@@ -88,3 +88,37 @@ test('mead demand respects effect duration and cooldown, with one unknown reserv
   assert.equal(core.meadQuantity({},30),1);
   assert.equal(core.packingList({minutes:30},{meads:[{id:'unknown'}]})[0].quantity,1);
 });
+
+
+test('saved and shared expedition durations use quarters of an hour', () => {
+  for (const [input, expected] of [[1, 15], [22, 15], [23, 30], [59, 60], [300, 240]]) {
+    assert.equal(core.sanitize({ minutes: input }, data).minutes, expected);
+    assert.equal(core.decodePrep('#x=' + core.encodePrep({ boss: 'eikthyr', minutes: input }, data), data).minutes, expected);
+  }
+});
+
+test('each boss packing list matches the Provisions loadout at every offered duration', async () => {
+  const context = vm.createContext({ TextEncoder, TextDecoder, URLSearchParams, btoa, atob });
+  context.window = context;
+  for (const file of ['apps/provisions/data/data.js', 'apps/provisions/assets/advisor.js', 'apps/provisions/assets/planner.js']) {
+    vm.runInContext(readFileSync(new URL('../' + file, import.meta.url), 'utf8'), context);
+  }
+  const { VPAdvisor: advisor, VPPlanner: planner, VPR_DATA: provisions } = context;
+  for (const boss of data.expedition) {
+    const unlockedBiomes = provisions.biomes.filter(biome => biome.order <= boss.order).map(biome => biome.id);
+    const ctx = {
+      bossPrep: boss,
+      foods: advisor.bestCombos(provisions.food, 'boss', { unlockedBiomes, items: planner.definitions(provisions) })[0]?.foods || [],
+      meads: advisor.recommendMeads(provisions.meads, 'boss', { id: boss.id, unlockedBiomes }),
+    };
+    assert.equal(ctx.foods.length, 3, boss.id);
+    for (const minutes of [15, 30, 60, 90, 120]) {
+      const loadout = core.provisionsLoadout({ minutes }, ctx);
+      const imported = planner.decode('#l=' + planner.encode(loadout, provisions), provisions);
+      assert.equal(imported.hours, minutes / 60);
+      const expected = core.packingList({ minutes }, ctx).filter(line => line.kind === 'food');
+      const actual = planner.calculate(imported, provisions).foods;
+      assert.deepEqual(JSON.parse(JSON.stringify(actual.map(line => [line.id, line.quantity]))), expected.map(line => [line.id, line.quantity]), boss.id + ': ' + minutes);
+    }
+  }
+});

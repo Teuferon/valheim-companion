@@ -482,15 +482,7 @@ function renderFood(ctx) {
     grid.append(card);
   }
   n.append(grid);
-  const loadout = {
-    foods: ctx.foods.map(f => f.id),
-    hours: state.minutes / 60,
-    meads: ctx.meads.map(p => ({
-      id: p.mead.id,
-      mode: 'demand',
-      quantity: core.meadQuantity(p.mead, state.minutes)
-    }))
-  };
+  const loadout = core.provisionsLoadout(state, ctx);
   n.append(link(t('Open in Provisions'), '/provisions/#l=' + VPPlanner.encode(loadout, VPR_DATA)));
   return n;
 }
