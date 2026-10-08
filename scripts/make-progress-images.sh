@@ -21,6 +21,8 @@ for (const biome of context.window.VP_DATA.biomes) {
 }
 JS
 while IFS=$'\t' read -r source output width; do
+  [ -f "$source" ] || { echo "Missing source image: $source" >&2; exit 1; }
+  rm -f "$scratch/resized.png"
   sips --resampleWidth "$width" "$source" --out "$scratch/resized.png" >/dev/null
   cwebp -quiet -q 72 "$scratch/resized.png" -o "$output"
 done < "$scratch/images.tsv"

@@ -119,7 +119,7 @@
 .vc-progress-ui .saga-slider::-moz-range-track { height: 6px; border-radius: 4px; background: #4a4d42; }
 .vc-progress-ui .saga-slider::-moz-range-progress { height: 6px; border-radius: 4px; background: var(--accent-gold); }
 .vc-progress-ui .saga-slider::-webkit-slider-thumb { appearance: none; width: 32px; height: 32px; margin-top: -13px; border: 3px double #ffe1a0; border-radius: 50%; background: radial-gradient(circle, #f8da88 0 13%, #8c6228 16% 23%, #d9a441 26% 60%, #73531e 65%); box-shadow: 0 2px 8px #000, 0 0 15px #d9a44155; }
-.vc-progress-ui .saga-slider::-moz-range-thumb { width: 26px; height: 26px; border: 3px double #ffe1a0; border-radius: 50%; background: radial-gradient(circle, #f8da88 0 13%, #8c6228 16% 23%, #d9a441 26% 60%, #73531e 65%); box-shadow: 0 2px 8px #000, 0 0 15px #d9a44155; }
+.vc-progress-ui .saga-slider::-moz-range-thumb { width: 32px; height: 32px; border: 3px double #ffe1a0; border-radius: 50%; background: radial-gradient(circle, #f8da88 0 13%, #8c6228 16% 23%, #d9a441 26% 60%, #73531e 65%); box-shadow: 0 2px 8px #000, 0 0 15px #d9a44155; }
 .vc-progress-ui .saga-caption { text-align: center; font: 1.05rem/1.5 Georgia, serif; color: var(--accent-gold); margin: 4px 0; }
 .vc-progress-ui .saga-hint { text-align: center; color: var(--saga-muted); font-size: .85rem; min-height: 24px; margin: 4px 0 18px; }
 .vc-progress-ui .saga-next { max-width: 680px; margin: 12px auto 0; padding: 22px 26px; border: 1px solid #625238; border-radius: 4px; background: repeating-linear-gradient(3deg, #70593209 0 1px, transparent 1px 7px), linear-gradient(110deg, #28271f, #161c1c); }
@@ -144,12 +144,12 @@
 }
 .vc-progress-compact { --saga-gap: 2px; }
 .vc-progress-compact .summary-text { font-size: .8rem; margin: 8px 0 12px; }
-.vc-progress-compact .saga-track { width: max(100%, 396px); }
+.vc-progress-compact .saga-track { width: 100%; }
 .vc-progress-compact .saga-tile { min-height: 44px; border-radius: 50%; border-color: transparent; background: transparent; overflow: visible; }
-.vc-progress-compact .saga-art { width: 36px; height: 36px; inset: 4px auto auto; border-radius: 50%; }
+.vc-progress-compact .saga-art { width: 34px; height: 34px; inset: 3px auto auto; border-radius: 50%; }
 .vc-progress-compact .saga-tile::after { display: none; }
 .vc-progress-compact .saga-tile.is-locked .saga-art { filter: blur(3px) brightness(.35); transform: none; }
-.vc-progress-compact button.saga-select { width: 44px; height: 44px; min-height: 44px; padding: 0; justify-content: center; gap: 0; }
+.vc-progress-compact button.saga-select { width: 100%; max-width: 44px; min-width: 0; height: 40px; min-height: 40px; padding: 0; justify-content: center; gap: 0; }
 .vc-progress-compact .saga-number { width: 24px; height: 24px; font-size: 12px; border: 0; }
 .vc-progress-compact .is-locked .saga-number { display: none; }
 .vc-progress-compact .saga-lock { font-size: 14px; }
