@@ -41,6 +41,22 @@
     try { return JSON.parse(localStorage.getItem('vp.loadout')); } catch { return null; }
   }
   let state = VPPlanner.decode(location.hash, data) || VPPlanner.sanitize(readStored(), data);
+  function focusItem(id) {
+    const target = VPPlanner.itemTarget(id, data, VCProgress.revealedBiomes(data.biomes));
+    const node = target.kind === 'card'
+      ? [...document.querySelectorAll('[data-item]')].find(node => node.dataset.item === target.id)
+      : target.kind === 'locked-biome' ? document.getElementById(target.id) : null;
+    if (!node) return;
+    const details = node.closest('details');
+    if (details) details.open = true;
+    node.scrollIntoView({ block: 'center' });
+    node.classList.add('deep-link-highlight');
+    setTimeout(() => node.classList.remove('deep-link-highlight'), 2200);
+  }
+  function focusHashItem() {
+    if (!location.hash.startsWith('#item=')) return;
+    try { focusItem(decodeURIComponent(location.hash.slice(6))); } catch { /* Ignore malformed links. */ }
+  }
   function save() {
     try { localStorage.setItem('vp.loadout', JSON.stringify(state)); } catch { /* Keep working when storage is unavailable. */ }
   }
@@ -53,7 +69,7 @@
     clearTimeout(noticeTimer);
     noticeTimer = setTimeout(() => { notice.textContent = ''; }, 4000);
   }
-  function update() { renderCatalog(); renderLoadout(); renderActivityPlanner(); requestAdvice(); }
+  function update() { renderCatalog(); renderLoadout(); renderActivityPlanner(); requestAdvice(); focusHashItem(); }
   function addFood(food) {
     if (state.foods.includes(food.id) || state.foods.length >= 3) return;
     state.foods.push(food.id);
@@ -550,6 +566,7 @@
   VCI18n.onChange(render);
   VCProgress.onChange(update);
   window.addEventListener('hashchange', () => {
+    if (location.hash.startsWith('#item=')) { focusHashItem(); return; }
     const imported = VPPlanner.decode(location.hash, data);
     if (imported) { state = imported; update(); }
   });

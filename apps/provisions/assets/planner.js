@@ -8,6 +8,13 @@
     return ({ Health: food.health, Stamina: food.stamina, Eitr: food.eitr }[focus] || 0) / total;
   }
   const clamp = (value, low, high, fallback) => typeof value === 'number' && Number.isFinite(value) ? Math.min(high, Math.max(low, value)) : fallback;
+  function itemTarget(id, data, revealedBiomes) {
+    const item = [...data.food, ...data.meads].find(item => item.id === id);
+    if (!item) return { kind: 'none', id: null };
+    const biome = globalThis.VPAdvisor.availableBiome(item);
+    if (biome && !new Set(revealedBiomes).has(biome)) return { kind: 'locked-biome', id: biome };
+    return { kind: 'card', id: item.id };
+  }
   function sanitize(value, data) {
     const source = value && typeof value === 'object' && !Array.isArray(value) ? value : {};
     const foodIds = new Set(data.food.map(item => item.id));
@@ -113,5 +120,5 @@
       return sanitize(value, data);
     } catch { return null; }
   }
-  globalThis.VPPlanner = { score, sanitize, calculate, definitions, shopping, encode, decode };
+  globalThis.VPPlanner = { itemTarget, score, sanitize, calculate, definitions, shopping, encode, decode };
 })();

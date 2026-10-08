@@ -115,3 +115,17 @@ summary { cursor: pointer; color: var(--gold); padding: 6px 0; }
 @media (max-width: 1200px) and (min-width: 1025px), (max-width: 700px) {
   .combo-grid { grid-template-columns: minmax(0, 1fr); }
 }
+
+
+@keyframes deepLinkPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(217, 164, 65, 0); }
+  35% { box-shadow: 0 0 0 8px rgba(217, 164, 65, .25); }
+}
+.deep-link-highlight {
+  animation: deepLinkPulse 1.8s ease-out;
+  outline: 2px solid var(--accent-gold, #d9a441);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .deep-link-highlight { animation: none; }
+}
