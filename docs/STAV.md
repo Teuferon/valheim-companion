@@ -17,7 +17,7 @@
 | `/bestiary/` | Bestiary | `apps/bestiary/` (vanilla JS) + `scripts/` + `data/` | ✅ 106 jednotek, 9 biomů, panel „Your character“ (skilly, sety, obtížnost, hráči, sneak/stagger, rankBy DPS/hit), DPS a čas do zabití, Armory (153 zbraní) |
 | `/smithy/` | Smithy | `apps/smithy/` (vanilla JS) | ✅ 68 setů a kusů, nákupní košík Have/Want, rozpad surovin, zdroje surovin, sekce Cosmetics a DLC & seasonal |
 | `/damage-calculator/` | Damage Calculator | `apps/damage-calculator/` (React + Vite, PR #1 od Teuferona) | ✅ zdroj pravdy pro poškození po kvalitách a časování útoků, parita s Bestiary hlídaná testem |
-| `/progress/` | Progress Tracker | `apps/progress/` + `shared/progress/` (panel na každé stránce) | ✅ sdílený stav `vc.progress`, odemyká spoilery ve všech nástrojích |
+| `/progress/` | Progress Tracker | `apps/progress/` + `shared/progress/` (panel na každé stránce) | ✅ „Saga“: dlaždice biomů, slider dosahu, portréty bossů; sdílený stav `vc.progress` odemyká spoilery ve všech nástrojích |
 | `/provisions/` | Provisions | `apps/provisions/` | ✅ jídla, medoviny, feasty, loadout, nákupní seznam |
 | `/comfort/` | Comfort Planner | `apps/comfort/` | ✅ comfort a Rested, Best I can build, Next upgrades, nákupní seznam, maxima po biomech sedí s wiki |
 | `/expedition/` | Expedition | `apps/expedition/` | ✅ Boss prep (zbraně z Bestiary, obrana, jídlo z Provisions, balicí a nákupní seznam) a Raids (teď / skončené / po dalším bossovi) |
@@ -68,7 +68,7 @@ Zadání jsou v [`docs/zadani/`](zadani/). Hotové úlohy jsou mergnuté do `mai
 | VC-35 | **Comfort Planner** `/comfort/` (ANALYZA § 24): comfort, Rested, Best I can build, Next upgrades, nákupní seznam | Sol | ✅ (+ oprava: celé dávky výroby ve sdíleném košíku, záložka Progress nepřekrývá obsah) |
 | VC-36 | **Expedition** `/expedition/` (ANALYZA § 25): příprava na bosse (zbraně, obrana, jídlo, balicí a nákupní seznam) a nájezdy podle postupu | Sol | ✅ (po vrácení: auto výběr bosse, počet medovin podle cooldownu, bundly, formát) |
 | VC-37 | oprava 5 chyb z reportu Teuferona 8. 10.: biomy jídel v hledání (31 → 0), duplicitní brnění (48 → 0), karta suroviny ve Smithy (`#item=`, zdroje a použití), `#item=` v Provisions (fokus jen jednou), 15min boj z Expedition → Provisions (čtvrthodiny), Bare Fists pryč z hledání | Sol | ✅ (po vrácení; přejímka Fable; deep link Smithy do zamčeného biomu už biom neodemyká, jen odroluje na hlavičku — anti-spoiler, přijato) |
-| VC-38 | **Progress Tracker „Saga“** (ANALYZA § 26): dlaždice biomů s artworkem, slider „kam jsem došel“, odškrtávají se jen bossové a minibossové (stránka i panel) | Astra | 🔄 běží (worktree `valheim-units-CS`, větev `prace/VC-38`, dashboard #137) |
+| VC-38 | **Progress Tracker „Saga“** (ANALYZA § 26): dlaždice biomů s artworkem, slider „kam jsem došel“, odškrtávají se jen bossové a minibossové (stránka i panel) | Astra | ✅ nasazeno 8. 10. na Pavlův pokyn (vzhled schválen v náhledu); Astra spadla na limit Codexu v kroku 4 (session `01a11d12-7f51-7ff1-b023-c78653e20952`), WIP commitnut; přejímka Fable dobíhá, nálezy jako navazující úkol |
 
 ### Po frontě
 Pracovníci od 6. 10.: agy je vyčerpaný (týden 4 %, obnova 8. 10.), práci dělá **Codex Sol**. Pavel 6. 10. schválil pořadí: překlady (VC-16 až VC-18), **vylepšení stávajících nástrojů** (VC-23 až VC-27), potom **Progress Tracker** a **Provisions** (VC-19 až VC-22). Další kandidáti z [`NAVRHY-NASTROJU.md`](NAVRHY-NASTROJU.md): **Comfort Planner schválen 6. 10. (VC-35)**, **Expedition schválen 7. 10. (VC-36)**. Trader Ledger, Fishing a Taming zatím schválené nejsou.
