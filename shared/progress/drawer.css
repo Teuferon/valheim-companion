@@ -1,34 +1,3 @@
-/* Shared checklist styles, scoped to avoid host application collisions. */
-.vc-progress-ui .summary { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 24px; }
-.vc-progress-ui :is(#summary-text, .summary-text) { font-size: 1.1rem; font-weight: 600; }
-.vc-progress-ui progress { display: block; width: 100%; height: 10px; margin: 16px 0 20px; border: 0; border-radius: 10px; overflow: hidden; accent-color: var(--gold); background: #2e3742; }
-.vc-progress-ui progress::-webkit-progress-bar { background: #2e3742; }
-.vc-progress-ui progress::-webkit-progress-value { background: var(--gold); }
-.vc-progress-ui progress::-moz-progress-bar { background: var(--gold); }
-.vc-progress-ui .biomes { display: grid; gap: 16px; }
-.vc-progress-ui .biome { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; min-width: 0; }
-.vc-progress-ui .biome-header { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; }
-.vc-progress-ui .biome-header h2 { color: var(--gold); }
-.vc-progress-ui .biome.locked { background: transparent; border-style: dashed; }
-.vc-progress-ui .locked h2 { font: 600 1rem/1.5 system-ui, sans-serif; color: var(--muted); }
-.vc-progress-ui .check { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; min-height: 44px; overflow-wrap: anywhere; }
-.vc-progress-ui input[type=checkbox] { width: 18px; height: 18px; accent-color: var(--gold); flex-shrink: 0; margin: 0; }
-.vc-progress-ui .creature { display: grid; grid-template-columns: 76px minmax(0, 1fr) auto; gap: 16px; align-items: center; border-top: 1px solid var(--border); padding: 18px 0; margin-top: 16px; }
-.vc-progress-ui .creature img { width: 76px; height: 76px; object-fit: contain; }
-.vc-progress-ui .creature-content { min-width: 0; overflow-wrap: anywhere; }
-.vc-progress-ui .tag { color: var(--muted); font-size: .8rem; margin-bottom: 2px; }
-.vc-progress-ui .summon { color: var(--muted); margin-top: 6px; font-size: .9rem; }
-.vc-progress-ui .links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 8px; font-size: .85rem; }
-.vc-progress-ui .milestones { border-top: 1px solid var(--border); padding-top: 16px; }
-.vc-progress-ui .milestone-list { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 8px; }
-.vc-progress-ui .milestone img { width: 32px; height: 32px; object-fit: contain; }
-@media (max-width: 600px) {
-  .vc-progress-ui .summary, .vc-progress-ui .biome { padding: 16px; }
-  .vc-progress-ui .creature { grid-template-columns: 56px minmax(0, 1fr); gap: 12px; }
-  .vc-progress-ui .creature img { width: 56px; height: 56px; }
-  .vc-progress-ui .creature > .check { grid-column: 2; }
-}
-
 .vc-progress-trigger, .vc-progress-panel {
   --bg: #0f1216; --card: #181d23; --border: #2e3742; --gold: #d9a441; --text: #e8e4da; --muted: #9ba3af;
   color-scheme: dark; color: var(--text); font: 15px/1.5 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -68,12 +37,6 @@
 .vc-progress-panel a { color: var(--gold); text-decoration: none; }
 .vc-progress-panel a:hover { text-decoration: underline; }
 .vc-progress-full-link { display: inline-block; margin-bottom: 20px; }
-.vc-progress-panel .vc-progress-compact .summary { padding: 16px; margin-bottom: 16px; }
-.vc-progress-panel .vc-progress-compact .biome { padding: 16px; }
-.vc-progress-panel .vc-progress-compact .creature { grid-template-columns: 48px minmax(0, 1fr); gap: 12px; }
-.vc-progress-panel .vc-progress-compact .creature img { width: 48px; height: 48px; }
-.vc-progress-panel .vc-progress-compact .creature > .check { grid-column: 2; }
-.vc-progress-panel .vc-progress-compact .links { gap: 8px 12px; }
 .vc-progress-panel .vc-progress-loading { display: flex; align-items: center; gap: 12px; }
 .vc-progress-loading::before {
   content: ''; width: 20px; height: 20px; flex-shrink: 0; border: 2px solid #2e3742;
@@ -97,20 +60,107 @@
   .vc-progress-panel, .vc-progress-loading::before { animation: none; }
 }
 
-/* Section pages (Bestiary, Smithy) style their own `.biome-header` accordion; keep the drawer independent. */
-.vc-progress-panel .biome-header {
-  position: static;
-  min-height: 0;
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--text);
-  cursor: default;
-}
-.vc-progress-panel .biome-header::before,
-.vc-progress-panel .biome-header::after {
-  content: none;
-  display: none;
-}
 /* Keep page content clear of the fixed desktop tab on the right edge (the tab stays right in RTL too). */
 @media (min-width: 640px) { body { padding-right: 46px; } }
+
+/* Saga: one visual language for the full journey and the compact drawer. */
+.vc-progress-ui {
+  --accent-gold: #d9a441; --saga-ink: #e8e4da; --saga-muted: #b1aca1; --saga-gap: 8px;
+  color: var(--saga-ink); min-width: 0; max-width: 100%;
+}
+.vc-progress-ui * { box-sizing: border-box; }
+.vc-progress-ui .summary-text { color: var(--saga-muted); margin: 0 0 22px; font-size: .9rem; line-height: 1.7; }
+.vc-progress-ui .saga-viewport { overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-color: #79633e #171a1d; scrollbar-width: thin; padding: 8px 4px 0; position: relative; }
+.vc-progress-ui .saga-track { width: 100%; min-width: 0; }
+.vc-progress-ui .saga-tiles, .vc-progress-ui .saga-stops { display: grid; grid-template-columns: repeat(var(--saga-count), minmax(0, 1fr)); gap: var(--saga-gap); }
+.vc-progress-ui .saga-tile {
+  position: relative; isolation: isolate; min-width: 0; min-height: 350px; scroll-snap-align: center;
+  display: flex; flex-direction: column; align-items: center; overflow: hidden;
+  border: 1px solid #4a4438; border-radius: 5px 5px 24px 24px; background: #191c1b;
+  box-shadow: inset 0 0 24px #0008;
+}
+.vc-progress-ui .saga-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+.vc-progress-ui .saga-tile::after { content: ''; position: absolute; inset: 0; background: linear-gradient(#070a0c26, #10141480 28%, #101311f5 72%); z-index: -1; pointer-events: none; }
+.vc-progress-ui .saga-tile.is-locked .saga-art { filter: blur(6px) brightness(.35); transform: scale(1.12); }
+.vc-progress-ui .saga-tile.is-locked::after { background: linear-gradient(#11171318, #111511b8); }
+.vc-progress-ui .saga-tile.is-current { border-color: var(--accent-gold); box-shadow: 0 0 16px #d9a44128, inset 0 0 0 1px #d9a44144; }
+.vc-progress-ui .saga-tile.is-preview { outline: 1px solid var(--accent-gold); outline-offset: 2px; }
+.vc-progress-ui button.saga-select {
+  display: flex; flex-direction: column; align-items: center; width: 100%; min-height: 128px;
+  padding: 18px 5px 14px; color: var(--saga-ink); background: none; border: 0; border-radius: 0;
+  cursor: pointer; font: inherit; gap: 14px; box-shadow: none;
+}
+.vc-progress-ui .is-locked .saga-select { flex: 1; color: #aaa99f; }
+.vc-progress-ui .is-revealed .saga-biome-name { color: #9c9b90; }
+.vc-progress-ui .saga-number { display: grid; place-items: center; width: 30px; height: 30px; flex-shrink: 0; border: 1px solid #d9a44180; border-radius: 50%; background: #101412b8; font: 16px Georgia, serif; color: var(--accent-gold); }
+.vc-progress-ui .saga-biome-name { font: bold 1.05rem/1.2 Georgia, serif; text-align: center; overflow-wrap: anywhere; }
+.vc-progress-ui .saga-portraits { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 12px 6px; padding: 6px 4px 18px; width: 100%; }
+.vc-progress-ui button.saga-portrait { display: flex; flex-direction: column; align-items: center; gap: 7px; width: 100%; min-width: 44px; min-height: 44px; padding: 3px; border: 0; background: none; border-radius: 4px; color: var(--saga-ink); cursor: pointer; font: inherit; line-height: 1.2; box-shadow: none; }
+.vc-progress-ui .saga-portrait-frame { position: relative; display: grid; place-items: center; width: 64px; height: 64px; border: 1px solid #7a786966; border-radius: 50%; background: radial-gradient(circle, #3f4438, #151a19 70%); }
+.vc-progress-ui .saga-portrait-frame img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; filter: grayscale(.9); opacity: .7; }
+.vc-progress-ui .saga-name { font-size: .8rem; overflow-wrap: anywhere; }
+.vc-progress-ui .saga-tag { font-size: .65rem; color: var(--saga-muted); }
+.vc-progress-ui .saga-miniboss .saga-portrait-frame { width: 44px; height: 44px; }
+.vc-progress-ui .is-defeated .saga-portrait-frame { border: 2px solid var(--accent-gold); box-shadow: 0 0 12px #d9a44130; }
+.vc-progress-ui .is-defeated img { opacity: 1; filter: none; }
+.vc-progress-ui .saga-seal { position: absolute; right: -5px; bottom: -3px; border-radius: 50%; background: var(--accent-gold); border: 2px solid #1b211e; color: #151711; width: 23px; height: 23px; display: grid; place-items: center; font-size: 14px; font-weight: bold; }
+.vc-progress-ui .saga-portrait:hover .saga-portrait-frame { border-color: var(--accent-gold); }
+.vc-progress-ui .saga-path { position: relative; height: 78px; padding-top: 16px; }
+.vc-progress-ui .saga-stops { position: absolute; inset: 25px 0 auto; pointer-events: none; }
+.vc-progress-ui .saga-stops span { display: flex; flex-direction: column; align-items: center; gap: 16px; font-size: 10px; color: var(--saga-muted); }
+.vc-progress-ui .saga-stops span::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-gold); box-shadow: 0 0 0 3px #141918; }
+.vc-progress-ui .saga-slider {
+  --saga-fill: 0%; appearance: none; display: block; direction: ltr;
+  width: calc(100% - (100% - (var(--saga-count) - 1) * var(--saga-gap)) / var(--saga-count) + 32px);
+  margin: 0 auto; height: 32px; border: 0; padding: 0; border-radius: 0;
+  background: transparent; cursor: pointer; position: relative;
+}
+.vc-progress-ui .saga-slider::-webkit-slider-runnable-track { height: 6px; border-radius: 4px; background: linear-gradient(to right, var(--accent-gold) var(--saga-fill), #4a4d42 var(--saga-fill)); box-shadow: 0 1px 0 #090d0b; }
+.vc-progress-ui .saga-slider::-moz-range-track { height: 6px; border-radius: 4px; background: #4a4d42; }
+.vc-progress-ui .saga-slider::-moz-range-progress { height: 6px; border-radius: 4px; background: var(--accent-gold); }
+.vc-progress-ui .saga-slider::-webkit-slider-thumb { appearance: none; width: 32px; height: 32px; margin-top: -13px; border: 3px double #ffe1a0; border-radius: 50%; background: radial-gradient(circle, #f8da88 0 13%, #8c6228 16% 23%, #d9a441 26% 60%, #73531e 65%); box-shadow: 0 2px 8px #000, 0 0 15px #d9a44155; }
+.vc-progress-ui .saga-slider::-moz-range-thumb { width: 26px; height: 26px; border: 3px double #ffe1a0; border-radius: 50%; background: radial-gradient(circle, #f8da88 0 13%, #8c6228 16% 23%, #d9a441 26% 60%, #73531e 65%); box-shadow: 0 2px 8px #000, 0 0 15px #d9a44155; }
+.vc-progress-ui .saga-caption { text-align: center; font: 1.05rem/1.5 Georgia, serif; color: var(--accent-gold); margin: 4px 0; }
+.vc-progress-ui .saga-hint { text-align: center; color: var(--saga-muted); font-size: .85rem; min-height: 24px; margin: 4px 0 18px; }
+.vc-progress-ui .saga-next { max-width: 680px; margin: 12px auto 0; padding: 22px 26px; border: 1px solid #625238; border-radius: 4px; background: repeating-linear-gradient(3deg, #70593209 0 1px, transparent 1px 7px), linear-gradient(110deg, #28271f, #161c1c); }
+.vc-progress-ui .saga-next h2 { font: 1rem/1.4 Georgia, serif; color: var(--accent-gold); margin: 0 0 14px; }
+.vc-progress-ui .saga-next h3 { font: bold 1.5rem/1.3 Georgia, serif; margin: 0; }
+.vc-progress-ui .saga-next-card { display: flex; gap: 22px; align-items: center; }
+.vc-progress-ui .saga-next-card > img { width: 88px; height: 88px; object-fit: contain; flex-shrink: 0; }
+.vc-progress-ui .saga-summon { color: var(--saga-muted); font-size: .85rem; margin: 5px 0 12px; }
+.vc-progress-ui .saga-links { display: flex; flex-wrap: wrap; gap: 10px 18px; font-size: .8rem; }
+.vc-progress-ui .saga-links a { color: var(--accent-gold); }
+.vc-progress-ui :focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 2px; }
+.vc-progress-ui .saga-select:focus-visible { outline-offset: -3px; }
+.vc-progress-ui .saga-celebrate .saga-portrait-frame { animation: saga-seal .35s ease-out; }
+@keyframes saga-seal { 50% { transform: scale(1.12); box-shadow: 0 0 22px #d9a44180; } }
+@media (max-width: 959px) {
+  .vc-progress-ui .saga-track { width: calc(var(--saga-count) * min(70vw, 270px) + (var(--saga-count) - 1) * var(--saga-gap)); }
+  .vc-progress-ui .saga-biome-name { font-size: 1.35rem; }
+  .vc-progress-ui .saga-tile { min-height: 340px; }
+  .vc-progress-ui .saga-next { padding: 18px; }
+  .vc-progress-ui .saga-next-card { gap: 12px; }
+  .vc-progress-ui .saga-next-card > img { width: 64px; height: 64px; }
+}
+.vc-progress-compact { --saga-gap: 2px; }
+.vc-progress-compact .summary-text { font-size: .8rem; margin: 8px 0 12px; }
+.vc-progress-compact .saga-track { width: max(100%, 396px); }
+.vc-progress-compact .saga-tile { min-height: 44px; border-radius: 50%; border-color: transparent; background: transparent; overflow: visible; }
+.vc-progress-compact .saga-art { width: 36px; height: 36px; inset: 4px auto auto; border-radius: 50%; }
+.vc-progress-compact .saga-tile::after { display: none; }
+.vc-progress-compact .saga-tile.is-locked .saga-art { filter: blur(3px) brightness(.35); transform: none; }
+.vc-progress-compact button.saga-select { width: 44px; height: 44px; min-height: 44px; padding: 0; justify-content: center; gap: 0; }
+.vc-progress-compact .saga-number { width: 24px; height: 24px; font-size: 12px; border: 0; }
+.vc-progress-compact .is-locked .saga-number { display: none; }
+.vc-progress-compact .saga-lock { font-size: 14px; }
+.vc-progress-compact .saga-path { height: 62px; }
+.vc-progress-compact .saga-caption { font-size: .95rem; }
+.vc-progress-compact .saga-hint { margin-bottom: 4px; }
+.vc-progress-compact .saga-row { border-top: 1px solid #383d35; padding: 16px 4px; }
+.vc-progress-compact .saga-row.is-current { border-color: #d9a44180; }
+.vc-progress-compact .saga-row h3 { font: bold 1.05rem/1.4 Georgia, serif; color: var(--accent-gold); }
+.vc-progress-compact .saga-portraits { padding: 12px 0 0; justify-content: flex-start; gap: 10px; }
+.vc-progress-compact button.saga-portrait { width: 76px; }
+.vc-progress-compact .saga-portrait-frame { width: 44px; height: 44px; }
+.vc-progress-full-link { margin-top: 16px; }
+@media (prefers-reduced-motion: reduce) { .vc-progress-ui .saga-celebrate .saga-portrait-frame { animation: none; } }

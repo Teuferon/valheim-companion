@@ -30,14 +30,14 @@
     if (text !== undefined) node.textContent = text;
     return node;
   }
-  function count() { return P.revealedBiomes(globalThis.VP_DATA?.biomes || ladder).length; }
+  function count() { return P.reach(globalThis.VP_DATA?.biomes || ladder); }
   function update() {
     if (!trigger) return;
-    const label = UI.tn('⛓ Progress {revealed}/9', count(), { revealed: count() });
+    const label = UI.tn('⛓ Progress {count}/{total}', count(), { total: ladder.length });
     trigger.setAttribute('aria-label', label);
     trigger.querySelector('.vc-progress-trigger-label').textContent = label;
     trigger.querySelector('.vc-progress-trigger-count').textContent = count() + '/9';
-    title.textContent = t('Progress');
+    title.textContent = 'Progress Tracker';
     closeButton.setAttribute('aria-label', t('Close progress'));
     fullLink.textContent = t('Open full tracker →');
     panel.setAttribute('lang', UI.locale());
@@ -154,7 +154,7 @@
     closeButton.addEventListener('click', close); header.append(title, closeButton);
     fullLink = element('a', 'vc-progress-full-link'); fullLink.href = '/progress/';
     content = element('div', 'vc-progress-panel-content');
-    panel.append(header, fullLink, content); overlay.append(panel); document.body.append(trigger, overlay);
+    panel.append(header, content, fullLink); overlay.append(panel); document.body.append(trigger, overlay);
     trigger.addEventListener('click', open);
     overlay.addEventListener('click', event => { if (event.target === overlay) close(); });
     document.addEventListener('keydown', keydown);

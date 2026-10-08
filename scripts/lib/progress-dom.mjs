@@ -8,7 +8,7 @@ export function fixture(pathname = '/bestiary/') {
   let document;
   class Node {
     constructor(tag) { this.tagName = tag; this.children = []; this.dataset = {}; this.attrs = {}; this.events = {}; this.style = { setProperty(key, value) { this[key] = value; } }; this.className = ''; this.textContent = ''; this.hidden = false; }
-    get classList() { return { add: (...names) => { this.className += ' ' + names.join(' '); }, contains: name => this.className.split(' ').includes(name) }; }
+    get classList() { return { add: (...names) => { this.className += ' ' + names.join(' '); }, contains: name => this.className.split(' ').includes(name), toggle: (name, force) => { const names = new Set(this.className.split(' ').filter(Boolean)); if (force ?? !names.has(name)) names.add(name); else names.delete(name); this.className = [...names].join(' '); } }; }
     append(...nodes) { for (const node of nodes) { node.parentElement = this; this.children.push(node); } }
     appendChild(node) { this.append(node); return node; }
     insertBefore(node, before) { node.parentElement = this; this.children.splice(this.children.indexOf(before), 0, node); }
@@ -26,6 +26,7 @@ export function fixture(pathname = '/bestiary/') {
     querySelectorAll(selector) {
       const match = node => selector.split(',').some(part => {
         part = part.trim();
+        if (part === 'input[type=checkbox]') return node.tagName === 'input' && node.type === 'checkbox';
         if (part === '[data-key]') return !!node.dataset.key;
         if (part.startsWith('#')) return node.id === part.slice(1);
         if (part.startsWith('.')) return node.classList.contains(part.slice(1));
@@ -45,7 +46,7 @@ export function fixture(pathname = '/bestiary/') {
   const window = { addEventListener: document.addEventListener };
   const context = vm.createContext({ document, window, location: { pathname }, navigator: { languages: ['en'] }, localStorage: {
     getItem: key => values.get(key) ?? null, setItem: (key, value) => values.set(key, value), removeItem: key => values.delete(key),
-  }, console, URLSearchParams, TextEncoder, TextDecoder, atob, btoa,
+  }, console, URLSearchParams, TextEncoder, TextDecoder, atob, btoa, setTimeout, clearTimeout,
     fetch: async () => ({ ok: true, json: async () => JSON.parse(read('shared/progress/messages.json')) }),
     MutationObserver: class { observe() {} }, ResizeObserver: class { observe() {} },
   });

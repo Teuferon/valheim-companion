@@ -1,7 +1,7 @@
-/* Progress — shared Nordic palette, native checklist controls. */
-:root { color-scheme: dark; --bg: #0f1216; --card: #181d23; --border: #2e3742; --gold: #d9a441; --text: #e8e4da; --muted: #9ba3af; }
+/* Progress Tracker — a journey across carved biome panels. */
+:root { color-scheme: dark; --bg: #0f1216; --card: #181d23; --border: #2e3742; --accent-gold: #d9a441; --gold: var(--accent-gold); --text: #e8e4da; --muted: #9ba3af; }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+body { margin: 0; background: radial-gradient(ellipse at 50% 0, #31302480, transparent 60%), var(--bg); color: var(--text); font: 15px/1.5 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 a { color: var(--gold); text-decoration: none; }
 a:hover { text-decoration: underline; }
 button, select, textarea { font: inherit; color: inherit; background: #21272f; border: 1px solid var(--border); border-radius: 6px; padding: .6rem .85rem; max-width: 100%; }
@@ -9,10 +9,10 @@ button { cursor: pointer; white-space: normal; overflow-wrap: anywhere; }
 button:hover { border-color: var(--gold); background: #262e37; }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 h1, h2, h3, p { margin: 0; }
-h1 { font: bold 2.5rem/1.1 Georgia, serif; color: var(--gold); letter-spacing: .04em; margin: 1rem 0 .5rem; }
+h1 { font: bold clamp(2rem, 4vw, 3.5rem)/1.1 Georgia, serif; color: var(--gold); letter-spacing: .04em; margin: 1rem 0 .5rem; }
 h2 { font: bold 1.5rem/1.3 Georgia, serif; }
 h3 { font-size: 1rem; }
-.page-wrapper { max-width: 1000px; padding: 24px 20px 60px; margin: auto; }
+.page-wrapper { max-width: 1600px; padding: 24px 20px 60px; margin: auto; }
 .language-picker { display: flex; justify-content: flex-end; margin-bottom: .75rem; }
 .vc-language-picker { max-width: 100%; padding: .4rem; }
 .subtitle, .page-footer { color: var(--muted); }
@@ -36,3 +36,8 @@ textarea { width: 100%; display: block; margin: 8px 0 20px; overflow-wrap: anywh
   .page-wrapper { padding: 16px 12px 40px; }
   .support { flex-direction: column; }
 }
+
+.page-header { padding-bottom: 20px; border-bottom: 1px solid #d9a44133; }
+.tracker-actions { justify-content: center; margin-top: 32px; }
+.tracker-actions button { background: transparent; font-size: .85rem; color: var(--muted); }
+main { min-width: 0; }
