@@ -19,6 +19,7 @@
 !apps/smithy/img/
 !apps/progress/index.html
 !apps/progress/assets/
+!apps/progress/img/
 !apps/progress/data/data.js
 !apps/progress/locales/messages.js
 !apps/provisions/index.html

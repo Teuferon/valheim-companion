@@ -103,7 +103,7 @@ export function buildSite() {
   // Progress static page, generated checklist and locale catalog.
   const progressDist = path.join(DIST_DIR, 'progress');
   mkdirSync(progressDist, { recursive: true });
-  for (const file of ['index.html', 'assets', 'data', 'locales']) {
+  for (const file of ['index.html', 'assets', 'data', 'locales', 'img']) {
     cpSync(path.join(REPO_ROOT, 'apps', 'progress', file), path.join(progressDist, file), { recursive: true });
   }
   const progressCoreDist = path.join(DIST_DIR, 'shared', 'progress');

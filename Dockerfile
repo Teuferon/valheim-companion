@@ -25,6 +25,7 @@ COPY shared/analytics/ /usr/share/nginx/html/shared/analytics/
 COPY shared/progress/ /usr/share/nginx/html/shared/progress/
 COPY apps/progress/index.html /usr/share/nginx/html/progress/
 COPY apps/progress/assets/ /usr/share/nginx/html/progress/assets/
+COPY apps/progress/img/ /usr/share/nginx/html/progress/img/
 COPY apps/progress/data/data.js /usr/share/nginx/html/progress/data/data.js
 COPY apps/progress/locales/messages.js /usr/share/nginx/html/progress/locales/messages.js
 COPY shared/player/core.js /usr/share/nginx/html/shared/player/core.js
