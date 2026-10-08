@@ -56,6 +56,29 @@
   function bossIds(biome) {
     return (biome.creatures?.boss ?? biome.bosses ?? []).map(boss => typeof boss === 'string' ? boss : boss.id);
   }
+  function orderedBiomes(biomes) {
+    return [...(biomes ?? globalThis.VP_DATA?.biomes ?? [])].sort((a, b) => a.order - b.order);
+  }
+  function minReach(biomes) {
+    const ordered = orderedBiomes(biomes);
+    let last = -1;
+    ordered.forEach((biome, index) => { if (bossIds(biome).some(id => state.defeated[id])) last = index; });
+    if (last < 0) return 1;
+    while (last + 1 < ordered.length) {
+      last++;
+      if (bossIds(ordered[last]).length) break;
+    }
+    return Math.min(9, Math.max(1, ordered[last].order));
+  }
+  function reach(biomes) {
+    return Math.min(9, Math.max(minReach(biomes), ...orderedBiomes(biomes)
+      .filter(biome => state.visited.includes(biome.id)).map(biome => biome.order)));
+  }
+  function setReach(n, biomes) {
+    if (typeof n !== 'number' || !Number.isFinite(n)) return get();
+    const end = Math.min(9, Math.max(minReach(biomes), Math.floor(n)));
+    return set({ visited: orderedBiomes(biomes).filter(biome => biome.order <= end).map(biome => biome.id) });
+  }
   function revealedBiomes(biomes) {
     const ordered = [...(biomes ?? globalThis.VP_DATA?.biomes ?? [])].sort((a, b) => a.order - b.order);
     // Read legacy reveals on each call so same-tab tools can still open biomes.
@@ -102,7 +125,7 @@
     if ([KEY, OPEN_KEY, null].includes(event.key)) notify();
   });
   globalThis.VCProgress = { get, set, defeat: (id, done) => toggle('defeated', id, done), visit,
-    milestone: (id, done) => toggle('milestones', id, done), revealedBiomes,
+    milestone: (id, done) => toggle('milestones', id, done), revealedBiomes, reach, minReach, setReach,
     onChange(cb) { if (typeof cb !== 'function') return () => {}; listeners.add(cb); return () => listeners.delete(cb); },
     exportToUrl, importFromUrl, reset };
 })();
